@@ -1,0 +1,307 @@
+{
+  "schema_id": "restaurant_007",
+  "domain": "restaurant",
+  "tables": [
+    {
+      "name": "menus",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "restaurant_id",
+          "type": "INT",
+          "foreign_key": "restaurants.id"
+        },
+        {
+          "name": "item_name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "price",
+          "type": "DECIMAL(8,2)",
+          "nullable": false
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(50)",
+          "enum_values": [
+            "appetizer",
+            "main",
+            "dessert",
+            "drink",
+            "side",
+            "special"
+          ]
+        },
+        {
+          "name": "is_gluten_free",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "is_vegan",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "is_available",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "calories",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "restaurant_id",
+          "type": "INT",
+          "foreign_key": "restaurants.id"
+        },
+        {
+          "name": "total_amount",
+          "type": "DECIMAL(10,2)",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "placed",
+            "preparing",
+            "ready",
+            "picked_up",
+            "delivered",
+            "cancelled"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "discount_amount",
+          "type": "DECIMAL(8,2)",
+          "default": 0
+        },
+        {
+          "name": "customer_phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "delivery_address",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "restaurants",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "cuisine_type",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "address",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "has_takeout",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "opening_time",
+          "type": "VARCHAR(10)",
+          "nullable": true
+        },
+        {
+          "name": "seating_capacity",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "rating",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "price_range",
+          "type": "VARCHAR(5)",
+          "enum_values": [
+            "$",
+            "$$",
+            "$$$",
+            "$$$$"
+          ]
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "has_delivery",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "delivery_drivers",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": false
+        },
+        {
+          "name": "is_available",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "reservations",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "restaurant_id",
+          "type": "INT",
+          "foreign_key": "restaurants.id"
+        },
+        {
+          "name": "customer_name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "party_size",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "reserved_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "customer_phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "reviews",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "restaurant_id",
+          "type": "INT",
+          "foreign_key": "restaurants.id"
+        },
+        {
+          "name": "rating",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "body",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "menus.restaurant_id",
+      "to": "restaurants.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "orders.restaurant_id",
+      "to": "restaurants.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "reservations.restaurant_id",
+      "to": "restaurants.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "reviews.restaurant_id",
+      "to": "restaurants.id",
+      "type": "many_to_one"
+    }
+  ]
+}

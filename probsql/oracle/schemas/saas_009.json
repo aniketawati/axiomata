@@ -1,0 +1,276 @@
+{
+  "schema_id": "saas_009",
+  "domain": "saas",
+  "tables": [
+    {
+      "name": "features",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "key",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "min_plan_tier",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "free",
+            "starter",
+            "pro",
+            "enterprise"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "plans",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "price_monthly",
+          "type": "DECIMAL(10,2)",
+          "nullable": false
+        },
+        {
+          "name": "price_annual",
+          "type": "DECIMAL(10,2)",
+          "nullable": true
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "max_users",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "max_storage_gb",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "admin",
+            "member",
+            "viewer",
+            "owner"
+          ]
+        },
+        {
+          "name": "avatar_url",
+          "type": "VARCHAR(500)",
+          "nullable": true
+        },
+        {
+          "name": "team_id",
+          "type": "INT",
+          "foreign_key": "teams.id"
+        }
+      ]
+    },
+    {
+      "name": "subscriptions",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "team_id",
+          "type": "INT",
+          "foreign_key": "teams.id"
+        },
+        {
+          "name": "plan_id",
+          "type": "INT",
+          "foreign_key": "plans.id"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "active",
+            "cancelled",
+            "past_due",
+            "trialing",
+            "expired"
+          ]
+        },
+        {
+          "name": "started_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "cancelled_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "usage_logs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "action",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "resource_id",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "duration_ms",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "teams",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "owner_id",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "member_count",
+          "type": "INT",
+          "default": 1
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "plan_id",
+          "type": "INT",
+          "foreign_key": "plans.id"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "users.team_id",
+      "to": "teams.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "subscriptions.team_id",
+      "to": "teams.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "subscriptions.plan_id",
+      "to": "plans.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "usage_logs.user_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "teams.plan_id",
+      "to": "plans.id",
+      "type": "many_to_one"
+    }
+  ]
+}

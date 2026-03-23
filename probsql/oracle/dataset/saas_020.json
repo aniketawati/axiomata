@@ -1,0 +1,506 @@
+{
+  "schema_id": "saas_020",
+  "domain": "saas",
+  "examples": [
+    {
+      "english": "Find all enabled features",
+      "target_table": "features",
+      "sql_where": "is_enabled = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_enabled"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show active plans",
+      "target_table": "plans",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get users in the admin role",
+      "target_table": "users",
+      "sql_where": "role = 'admin'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["role"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active subscriptions",
+      "target_table": "subscriptions",
+      "sql_where": "status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show plans in the enterprise tier",
+      "target_table": "plans",
+      "sql_where": "tier = 'enterprise'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["tier"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find teams with more than 10 members",
+      "target_table": "teams",
+      "sql_where": "member_count > 10",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["member_count"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get subscriptions with a monthly amount above 99 dollars",
+      "target_table": "subscriptions",
+      "sql_where": "monthly_amount > 99.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["monthly_amount"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show features required for the pro tier at minimum",
+      "target_table": "features",
+      "sql_where": "min_plan_tier = 'pro'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["min_plan_tier"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active plans in the pro or enterprise tier",
+      "target_table": "plans",
+      "sql_where": "is_active = TRUE AND (tier = 'pro' OR tier = 'enterprise')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "tier"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND/OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show active users in the admin role who belong to a team",
+      "target_table": "users",
+      "sql_where": "is_active = TRUE AND role = 'admin' AND team_id IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "role", "team_id"],
+        "operators_used": ["=", "=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get active subscriptions with a monthly amount between 50 and 300 dollars",
+      "target_table": "subscriptions",
+      "sql_where": "status = 'active' AND monthly_amount BETWEEN 50.00 AND 300.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "monthly_amount"],
+        "operators_used": ["=", "BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find enabled features requiring an enterprise plan minimum",
+      "target_table": "features",
+      "sql_where": "is_enabled = TRUE AND min_plan_tier = 'enterprise'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_enabled", "min_plan_tier"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show plans with storage between 20 and 500 GB in active status",
+      "target_table": "plans",
+      "sql_where": "is_active = TRUE AND max_storage_gb BETWEEN 20 AND 500",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "max_storage_gb"],
+        "operators_used": ["=", "BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find subscriptions on an active plan and teams with more than 5 members",
+      "target_table": "subscriptions",
+      "sql_where": "plans.is_active = TRUE AND teams.member_count > 5",
+      "requires_join": true,
+      "join_clause": "JOIN plans ON subscriptions.plan_id = plans.id JOIN teams ON subscriptions.team_id = teams.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["plans.is_active", "teams.member_count"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric"],
+        "ambiguity_notes": "two-table join"
+      }
+    },
+    {
+      "english": "Get admin users on teams with more than 5 members",
+      "target_table": "users",
+      "sql_where": "users.role = 'admin' AND teams.member_count > 5",
+      "requires_join": true,
+      "join_clause": "JOIN teams ON users.team_id = teams.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["users.role", "teams.member_count"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric"],
+        "ambiguity_notes": "join via team_id"
+      }
+    },
+    {
+      "english": "Show subscriptions that started in the past 60 days",
+      "target_table": "subscriptions",
+      "sql_where": "started_at >= '2024-11-16 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["started_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 60 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "relative to 2025-01-15"
+      }
+    },
+    {
+      "english": "Find teams created after September 2024",
+      "target_table": "teams",
+      "sql_where": "created_at > '2024-09-30 23:59:59'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "after September 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get users who registered in the second half of 2024",
+      "target_table": "users",
+      "sql_where": "created_at >= '2024-07-01 00:00:00' AND created_at < '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "second half of 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "half-year boundary"
+      }
+    },
+    {
+      "english": "Show subscriptions whose current period ends before February 2025",
+      "target_table": "subscriptions",
+      "sql_where": "current_period_end < '2025-02-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["current_period_end"],
+        "operators_used": ["<"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "before February 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users who have been on the platform for more than a year",
+      "target_table": "users",
+      "sql_where": "created_at < '2024-01-15 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": ["<"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "more than a year ago",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "relative to 2025-01-15"
+      }
+    },
+    {
+      "english": "Find features that are disabled",
+      "target_table": "features",
+      "sql_where": "is_enabled = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_enabled"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_enabled",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "negation via FALSE"
+      }
+    },
+    {
+      "english": "Show plans that are not in the free tier",
+      "target_table": "plans",
+      "sql_where": "tier != 'free'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["tier"],
+        "operators_used": ["!="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "tier",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get subscriptions that are not in active or trialing status",
+      "target_table": "subscriptions",
+      "sql_where": "status NOT IN ('active', 'trialing')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["NOT IN"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum"],
+        "ambiguity_notes": "NOT IN covers multiple values"
+      }
+    },
+    {
+      "english": "Find active users in the admin role on teams created in 2024 using a pro or enterprise plan with a subscription monthly amount over 100 dollars",
+      "target_table": "users",
+      "sql_where": "users.is_active = TRUE AND users.role = 'admin' AND teams.created_at >= '2024-01-01 00:00:00' AND teams.created_at < '2025-01-01 00:00:00' AND plans.tier IN ('pro', 'enterprise') AND subscriptions.monthly_amount > 100.00",
+      "requires_join": true,
+      "join_clause": "JOIN teams ON users.team_id = teams.id JOIN subscriptions ON subscriptions.team_id = teams.id JOIN plans ON subscriptions.plan_id = plans.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["users.is_active", "users.role", "teams.created_at", "plans.tier", "subscriptions.monthly_amount"],
+        "operators_used": ["=", "=", ">=", "<", "IN", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "timestamp", "enum", "numeric"],
+        "ambiguity_notes": "four-table join with IN operator and temporal"
+      }
+    },
+    {
+      "english": "Show enabled enterprise-level features that have a description and appear in active plans started in the past 90 days",
+      "target_table": "features",
+      "sql_where": "features.is_enabled = TRUE AND features.min_plan_tier = 'enterprise' AND features.description IS NOT NULL AND subscriptions.started_at >= '2024-10-17 00:00:00' AND plans.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN plans ON plans.tier >= features.min_plan_tier JOIN subscriptions ON subscriptions.plan_id = plans.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["features.is_enabled", "features.min_plan_tier", "features.description", "subscriptions.started_at", "plans.is_active"],
+        "operators_used": ["=", "=", "IS NOT NULL", ">=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 90 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "null_check", "timestamp", "boolean"],
+        "ambiguity_notes": "join logic on tier comparison is conceptual; temporal condition on subscription"
+      }
+    }
+  ]
+}

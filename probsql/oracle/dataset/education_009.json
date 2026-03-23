@@ -1,0 +1,486 @@
+{
+  "schema_id": "education_009",
+  "domain": "education",
+  "examples": [
+    {
+      "english": "Show all international students",
+      "target_table": "students",
+      "sql_where": "is_international = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_international"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find 500-level courses",
+      "target_table": "courses",
+      "sql_where": "level = '500'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["level"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "List students with a GPA above 3.0",
+      "target_table": "students",
+      "sql_where": "gpa > 3.0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["gpa"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show published assignments",
+      "target_table": "assignments",
+      "sql_where": "is_published = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_published"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find grades submitted late",
+      "target_table": "grades",
+      "sql_where": "is_late = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_late"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active students majoring in History or Sociology",
+      "target_table": "students",
+      "sql_where": "status = 'active' AND major IN ('History', 'Sociology')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "major"],
+        "operators_used": ["=", "IN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show 100-level or 200-level courses with their department listed",
+      "target_table": "courses",
+      "sql_where": "level IN ('100', '200') AND department IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["level", "department"],
+        "operators_used": ["IN", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get completed or enrolled fall semester enrollments",
+      "target_table": "enrollments",
+      "sql_where": "status IN ('completed', 'enrolled') AND semester = 'fall'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "semester"],
+        "operators_used": ["IN", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find students with a scholarship above $1000 and a GPA above 2.5",
+      "target_table": "students",
+      "sql_where": "scholarship_amount > 1000 AND gpa > 2.5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["scholarship_amount", "gpa"],
+        "operators_used": [">", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["decimal", "float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get published assignments with a max score between 50 and 100",
+      "target_table": "assignments",
+      "sql_where": "is_published = TRUE AND max_score BETWEEN 50 AND 100",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_published", "max_score"],
+        "operators_used": ["=", "BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find assignments with a due date in the spring of 2025",
+      "target_table": "assignments",
+      "sql_where": "due_date >= '2025-01-15' AND due_date < '2025-06-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["due_date"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "spring of 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "spring 2025 = Jan 15 to May 31"
+      }
+    },
+    {
+      "english": "Show students who enrolled in 2024",
+      "target_table": "students",
+      "sql_where": "enrolled_at >= '2024-01-01' AND enrolled_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["enrolled_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find assignments created in the past 3 months",
+      "target_table": "assignments",
+      "sql_where": "created_at >= '2024-10-15' AND created_at <= '2025-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 3 months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "3 months before 2025-01-15"
+      }
+    },
+    {
+      "english": "Get enrollments for the fall semester of 2022",
+      "target_table": "enrollments",
+      "sql_where": "semester = 'fall' AND year = 2022",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["semester", "year"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "fall semester of 2022",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "integer"],
+        "ambiguity_notes": "year is stored directly in enrollments"
+      }
+    },
+    {
+      "english": "Show students born between 1995 and 2000",
+      "target_table": "students",
+      "sql_where": "date_of_birth BETWEEN '1995-01-01' AND '2000-12-31'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["date_of_birth"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "between 1995 and 2000",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find students who have not withdrawn",
+      "target_table": "students",
+      "sql_where": "status != 'withdrawn'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status value",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show courses without a department listed",
+      "target_table": "courses",
+      "sql_where": "department IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["department"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "null check",
+        "value_types": ["string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find enrollments that have not been completed",
+      "target_table": "enrollments",
+      "sql_where": "status NOT IN ('completed')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["NOT IN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status value",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show international students with scholarships who are enrolled in spring 500-level courses taught by a professor",
+      "target_table": "students",
+      "sql_where": "s.is_international = TRUE AND s.scholarship_amount > 0 AND e.semester = 'spring' AND c.level = '500' AND i.title = 'professor'",
+      "requires_join": true,
+      "join_clause": "JOIN enrollments e ON s.id = e.student_id JOIN courses c ON e.course_id = c.id JOIN instructors i ON c.instructor_id = i.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["students.is_international", "students.scholarship_amount", "enrollments.semester", "courses.level", "instructors.title"],
+        "operators_used": ["=", ">", "=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "decimal", "enum", "enum", "enum"],
+        "ambiguity_notes": "4-table join chain"
+      }
+    },
+    {
+      "english": "Find late grades for courses without a listed department that were recorded in 2024",
+      "target_table": "grades",
+      "sql_where": "g.is_late = TRUE AND c.department IS NULL AND g.graded_at IS NULL",
+      "requires_join": true,
+      "join_clause": "JOIN enrollments e ON g.enrollment_id = e.id JOIN courses c ON e.course_id = c.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["grades.is_late", "courses.department", "grades.graded_at"],
+        "operators_used": ["=", "IS NULL", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "null checks",
+        "value_types": ["boolean", "string", "timestamp"],
+        "ambiguity_notes": "graded_at IS NULL used as proxy for ungraded in 2024 context"
+      }
+    },
+    {
+      "english": "Show 300-level courses in the Biology department with instructor rating above 4.0",
+      "target_table": "courses",
+      "sql_where": "c.level = '300' AND c.department = 'Biology' AND i.rating > 4.0",
+      "requires_join": true,
+      "join_clause": "JOIN instructors i ON c.instructor_id = i.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["courses.level", "courses.department", "instructors.rating"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string", "float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "List assignments with a weight higher than 0.25",
+      "target_table": "assignments",
+      "sql_where": "weight > 0.25",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["weight"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show grades with scores between 70 and 80",
+      "target_table": "grades",
+      "sql_where": "score BETWEEN 70 AND 80",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["score"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["float", "float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show active students with no phone number on file",
+      "target_table": "students",
+      "sql_where": "status = 'active' AND phone IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status", "phone"],
+        "operators_used": ["=", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "null check",
+        "value_types": ["enum", "string"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

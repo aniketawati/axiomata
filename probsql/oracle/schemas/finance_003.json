@@ -1,0 +1,252 @@
+{
+  "schema_id": "finance_003",
+  "domain": "finance",
+  "tables": [
+    {
+      "name": "accounts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "account_number",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "account_type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "checking",
+            "savings",
+            "investment",
+            "credit"
+          ]
+        },
+        {
+          "name": "balance",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "last_activity_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "is_verified",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "credit_limit",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR(3)",
+          "default": "USD"
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "beneficiaries",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "bank_name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_verified",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "account_number",
+          "type": "VARCHAR(30)",
+          "nullable": false
+        },
+        {
+          "name": "last_used_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "transactions",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "deposit",
+            "withdrawal",
+            "transfer",
+            "payment",
+            "fee",
+            "interest"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "reference_number",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "completed",
+            "failed",
+            "reversed"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(500)",
+          "nullable": true
+        },
+        {
+          "name": "merchant_name",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "is_recurring",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "holdings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "symbol",
+          "type": "VARCHAR(10)",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "DECIMAL(15,6)",
+          "nullable": false
+        },
+        {
+          "name": "purchase_price",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "asset_type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "stock",
+            "bond",
+            "etf",
+            "mutual_fund",
+            "crypto"
+          ]
+        },
+        {
+          "name": "unrealized_gain",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        },
+        {
+          "name": "current_price",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        },
+        {
+          "name": "purchased_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "beneficiaries.account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "transactions.account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "holdings.account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    }
+  ]
+}

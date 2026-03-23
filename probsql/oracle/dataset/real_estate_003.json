@@ -1,0 +1,506 @@
+{
+  "schema_id": "real_estate_003",
+  "domain": "real_estate",
+  "examples": [
+    {
+      "english": "Show all available properties",
+      "target_table": "properties",
+      "sql_where": "status = 'available'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find listings with more than 30 days on the market",
+      "target_table": "listings",
+      "sql_where": "days_on_market > 30",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["days_on_market"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show active tenants",
+      "target_table": "tenants",
+      "sql_where": "status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find properties with 4 or more bedrooms",
+      "target_table": "properties",
+      "sql_where": "bedrooms >= 4",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["bedrooms"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show properties in New York",
+      "target_table": "properties",
+      "sql_where": "state = 'New York'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["state"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find pending offers with cash payment",
+      "target_table": "offers",
+      "sql_where": "status = 'pending' AND is_cash_offer = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status", "is_cash_offer"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show featured properties",
+      "target_table": "properties",
+      "sql_where": "is_featured = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_featured"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find apartments with at least 2 bathrooms priced below $500,000",
+      "target_table": "properties",
+      "sql_where": "property_type = 'apartment' AND bathrooms >= 2 AND price < 500000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["property_type", "bathrooms", "price"],
+        "operators_used": ["=", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show high-interest viewings on featured listings",
+      "target_table": "viewings",
+      "sql_where": "v.interest_level = 'high' AND l.is_featured = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON viewings.listing_id = l.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["interest_level", "is_featured"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active listings with over 300 views and a listing price under $700,000",
+      "target_table": "listings",
+      "sql_where": "views_count > 300 AND listing_price < 700000 AND status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["views_count", "listing_price", "status"],
+        "operators_used": [">", "<", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "numeric", "enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show available houses or townhouses in Seattle with more than 1,500 square feet",
+      "target_table": "properties",
+      "sql_where": "status = 'available' AND property_type IN ('house', 'townhouse') AND city = 'Seattle' AND square_feet > 1500",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "property_type", "city", "square_feet"],
+        "operators_used": ["=", "IN", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum_list", "string", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find tenants with deposits over $3,000 on houses in Texas",
+      "target_table": "tenants",
+      "sql_where": "t.deposit_amount > 3000 AND p.property_type = 'house' AND p.state = 'Texas'",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON tenants.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["deposit_amount", "property_type", "state"],
+        "operators_used": [">", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "enum", "string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show accepted or countered offers on listings with more than 500 views",
+      "target_table": "offers",
+      "sql_where": "o.status IN ('accepted', 'countered') AND l.views_count > 500",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON offers.listing_id = l.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "views_count"],
+        "operators_used": ["IN", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_list", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find properties added to the database in the last 90 days",
+      "target_table": "properties",
+      "sql_where": "created_at >= '2024-10-17'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 90 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Current date 2025-01-15; 90 days prior is 2024-10-17"
+      }
+    },
+    {
+      "english": "Show viewings scheduled in the next two weeks",
+      "target_table": "viewings",
+      "sql_where": "scheduled_at >= '2025-01-15' AND scheduled_at < '2025-01-29'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["scheduled_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next two weeks",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find tenant leases that started in 2024",
+      "target_table": "tenants",
+      "sql_where": "lease_start >= '2024-01-01' AND lease_start < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["lease_start"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show offers expiring in the next 3 days",
+      "target_table": "offers",
+      "sql_where": "expires_at IS NOT NULL AND expires_at >= '2025-01-15' AND expires_at < '2025-01-18'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["expires_at"],
+        "operators_used": ["IS NOT NULL", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next 3 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "date"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show listings that are not featured",
+      "target_table": "listings",
+      "sql_where": "is_featured = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_featured"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_featured",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find properties that do not have a zip code on file",
+      "target_table": "properties",
+      "sql_where": "zip_code IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["zip_code"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "zip_code",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show tenants whose leases have not terminated",
+      "target_table": "tenants",
+      "sql_where": "status != 'terminated'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active featured listings on houses built after 2005 with at least 3 bedrooms and priced between $400,000 and $1,000,000",
+      "target_table": "listings",
+      "sql_where": "l.is_featured = TRUE AND l.status = 'active' AND p.property_type = 'house' AND p.year_built > 2005 AND p.bedrooms >= 3 AND l.listing_price BETWEEN 400000 AND 1000000",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON listings.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_featured", "status", "property_type", "year_built", "bedrooms", "listing_price"],
+        "operators_used": ["=", "=", "=", ">", ">=", "BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "after 2005",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "enum", "year", "numeric", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show high-interest viewings scheduled in the next 30 days for active listings that have been on the market fewer than 60 days",
+      "target_table": "viewings",
+      "sql_where": "v.interest_level = 'high' AND v.scheduled_at BETWEEN '2025-01-15' AND '2025-02-14' AND l.status = 'active' AND l.days_on_market < 60",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON viewings.listing_id = l.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["interest_level", "scheduled_at", "status", "days_on_market"],
+        "operators_used": ["=", "BETWEEN", "=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "date", "enum", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find all countered offers",
+      "target_table": "offers",
+      "sql_where": "status = 'countered'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show properties with a lot size greater than 0.5 acres",
+      "target_table": "properties",
+      "sql_where": "lot_size > 0.5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["lot_size"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "lot_size unit assumed to be acres"
+      }
+    },
+    {
+      "english": "Find listings posted in the last two weeks from agents with low commission rates",
+      "target_table": "listings",
+      "sql_where": "l.listed_at >= '2025-01-01' AND a.commission_rate < 0.03",
+      "requires_join": true,
+      "join_clause": "JOIN agents a ON listings.agent_id = a.id",
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["listed_at", "commission_rate"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last two weeks",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "numeric"],
+        "ambiguity_notes": "Two weeks before 2025-01-15 is 2025-01-01"
+      }
+    }
+  ]
+}

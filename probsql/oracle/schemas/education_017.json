@@ -1,0 +1,207 @@
+{
+  "schema_id": "education_017",
+  "domain": "education",
+  "tables": [
+    {
+      "name": "assignments",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "course_id",
+          "type": "INT",
+          "foreign_key": "courses.id"
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "due_date",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "weight",
+          "type": "FLOAT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "instructors",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "department",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "hired_at",
+          "type": "DATE",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "courses",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "code",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "credits",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "max_enrollment",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "department",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "semester",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "fall",
+            "spring",
+            "summer"
+          ]
+        },
+        {
+          "name": "level",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "100",
+            "200",
+            "300",
+            "400",
+            "500",
+            "600"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "students",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "enrolled_at",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "active",
+            "graduated",
+            "suspended",
+            "withdrawn"
+          ]
+        },
+        {
+          "name": "is_international",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "gpa",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "scholarship_amount",
+          "type": "DECIMAL(10,2)",
+          "default": 0
+        },
+        {
+          "name": "year",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "major",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "assignments.course_id",
+      "to": "courses.id",
+      "type": "many_to_one"
+    }
+  ]
+}

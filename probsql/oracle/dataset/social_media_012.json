@@ -1,0 +1,466 @@
+{
+  "schema_id": "social_media_012",
+  "domain": "social_media",
+  "examples": [
+    {
+      "english": "Find verified active users",
+      "target_table": "users",
+      "sql_where": "is_verified = TRUE AND is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified", "is_active"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get posts with more than 100 shares",
+      "target_table": "posts",
+      "sql_where": "share_count > 100",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["share_count"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show unread messages",
+      "target_table": "messages",
+      "sql_where": "is_read = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_read"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users with more than 500 followers",
+      "target_table": "users",
+      "sql_where": "follower_count > 500",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["follower_count"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages that have been read",
+      "target_table": "messages",
+      "sql_where": "is_read = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_read"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find private verified users with more than 100 posts",
+      "target_table": "users",
+      "sql_where": "is_private = TRUE AND is_verified = TRUE AND post_count > 100",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_private", "is_verified", "post_count"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show posts with between 50 and 500 shares",
+      "target_table": "posts",
+      "sql_where": "share_count BETWEEN 50 AND 500",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["share_count"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get read messages with a read timestamp from active users",
+      "target_table": "messages",
+      "sql_where": "messages.is_read = TRUE AND messages.read_at IS NOT NULL AND users.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users ON messages.sender_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["messages.is_read", "messages.read_at", "users.is_active"],
+        "operators_used": ["=", "IS NOT NULL", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "null_check", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find posts by verified users with more than 1000 followers",
+      "target_table": "posts",
+      "sql_where": "users.is_verified = TRUE AND users.follower_count > 1000",
+      "requires_join": true,
+      "join_clause": "JOIN users ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["users.is_verified", "users.follower_count"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show messages sent to active non-private users",
+      "target_table": "messages",
+      "sql_where": "users.is_active = TRUE AND users.is_private = FALSE",
+      "requires_join": true,
+      "join_clause": "JOIN users ON messages.receiver_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["users.is_active", "users.is_private"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users who joined in the last 6 months",
+      "target_table": "users",
+      "sql_where": "created_at >= '2024-07-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 6 months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get posts created this week",
+      "target_table": "posts",
+      "sql_where": "created_at >= '2025-01-13'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show messages read in the last 7 days",
+      "target_table": "messages",
+      "sql_where": "read_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["read_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users last active in December 2024",
+      "target_table": "users",
+      "sql_where": "last_active_at >= '2024-12-01' AND last_active_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["last_active_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "December 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages sent between January 5 and January 15 2025",
+      "target_table": "messages",
+      "sql_where": "created_at BETWEEN '2025-01-05' AND '2025-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "January 5 to January 15 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users who have not set a display name",
+      "target_table": "users",
+      "sql_where": "display_name IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["display_name"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_null",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages where the read timestamp is missing",
+      "target_table": "messages",
+      "sql_where": "read_at IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["read_at"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_null",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show users who are not private",
+      "target_table": "users",
+      "sql_where": "is_private = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_private"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "boolean_false",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active verified public users with more than 200 followers and 50 posts who joined in the last year and have a display name",
+      "target_table": "users",
+      "sql_where": "is_active = TRUE AND is_verified = TRUE AND is_private = FALSE AND follower_count > 200 AND post_count > 50 AND created_at >= '2024-01-15' AND display_name IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_active", "is_verified", "is_private", "follower_count", "post_count", "created_at", "display_name"],
+        "operators_used": ["=", "=", "=", ">", ">", ">=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "boolean", "integer", "integer", "date", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get posts from this month made by verified users with more than 1000 followers that have at least 100 shares",
+      "target_table": "posts",
+      "sql_where": "posts.created_at >= '2025-01-01' AND users.is_verified = TRUE AND users.follower_count > 1000 AND posts.share_count >= 100",
+      "requires_join": true,
+      "join_clause": "JOIN users ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["posts.created_at", "users.is_verified", "users.follower_count", "posts.share_count"],
+        "operators_used": [">=", "=", ">", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "boolean", "integer", "integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show messages sent this week from active verified users to other active users where the message has been read but not deleted",
+      "target_table": "messages",
+      "sql_where": "messages.created_at >= '2025-01-13' AND sender.is_active = TRUE AND sender.is_verified = TRUE AND receiver.is_active = TRUE AND messages.is_read = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users AS sender ON messages.sender_id = sender.id JOIN users AS receiver ON messages.receiver_id = receiver.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["messages.created_at", "sender.is_active", "sender.is_verified", "receiver.is_active", "messages.is_read"],
+        "operators_used": [">=", "=", "=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "boolean", "boolean", "boolean", "boolean"],
+        "ambiguity_notes": "aliased self-join on users"
+      }
+    },
+    {
+      "english": "Find posts by users who have a display name set that have more than 200 shares",
+      "target_table": "posts",
+      "sql_where": "posts.share_count > 200 AND users.display_name IS NOT NULL",
+      "requires_join": true,
+      "join_clause": "JOIN users ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["posts.share_count", "users.display_name"],
+        "operators_used": [">", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages between January 1 and January 10 2025 that have a read timestamp",
+      "target_table": "messages",
+      "sql_where": "created_at BETWEEN '2025-01-01' AND '2025-01-10' AND read_at IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["created_at", "read_at"],
+        "operators_used": ["BETWEEN", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "January 1 to January 10 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "schema_id": "social_media_015",
+  "domain": "social_media",
+  "examples": [
+    {
+      "english": "Find all verified users",
+      "target_table": "users",
+      "sql_where": "is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show close friend follows",
+      "target_table": "follows",
+      "sql_where": "is_close_friend = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_close_friend"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get pinned public posts",
+      "target_table": "posts",
+      "sql_where": "is_pinned = TRUE AND visibility = 'public'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_pinned", "visibility"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find deleted messages",
+      "target_table": "messages",
+      "sql_where": "is_deleted = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_deleted"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get edited comments",
+      "target_table": "comments",
+      "sql_where": "is_edited = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_edited"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active verified users from Seattle",
+      "target_table": "users",
+      "sql_where": "is_active = TRUE AND is_verified = TRUE AND location = 'Seattle'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "is_verified", "location"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get muted follows from users with followers-only pinned posts",
+      "target_table": "follows",
+      "sql_where": "follows.is_muted = TRUE AND posts.visibility = 'followers_only' AND posts.is_pinned = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users ON follows.follower_id = users.id JOIN posts ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["follows.is_muted", "posts.visibility", "posts.is_pinned"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum_string", "boolean"],
+        "ambiguity_notes": "indirect join path"
+      }
+    },
+    {
+      "english": "Show messages that are unread and not deleted",
+      "target_table": "messages",
+      "sql_where": "is_read = FALSE AND is_deleted = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_read", "is_deleted"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find likes on public pinned posts from verified users",
+      "target_table": "likes",
+      "sql_where": "posts.visibility = 'public' AND posts.is_pinned = TRUE AND users.is_verified = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON likes.post_id = posts.id JOIN users ON likes.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["posts.visibility", "posts.is_pinned", "users.is_verified"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string", "boolean", "boolean"],
+        "ambiguity_notes": "multi-table join"
+      }
+    },
+    {
+      "english": "Show edited comments on public posts from active users",
+      "target_table": "comments",
+      "sql_where": "comments.is_edited = TRUE AND posts.visibility = 'public' AND users.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON comments.post_id = posts.id JOIN users ON comments.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["comments.is_edited", "posts.visibility", "users.is_active"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum_string", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find follows created this year",
+      "target_table": "follows",
+      "sql_where": "created_at >= '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages sent in the last 7 days",
+      "target_table": "messages",
+      "sql_where": "created_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show likes placed in December 2024",
+      "target_table": "likes",
+      "sql_where": "created_at >= '2024-12-01' AND created_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "December 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users last active in the past week",
+      "target_table": "users",
+      "sql_where": "last_active_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["last_active_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages read in 2025",
+      "target_table": "messages",
+      "sql_where": "read_at >= '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["read_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users with no location",
+      "target_table": "users",
+      "sql_where": "location IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["location"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_null",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages that have never been read",
+      "target_table": "messages",
+      "sql_where": "read_at IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["read_at"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_null",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show follows that are not muted",
+      "target_table": "follows",
+      "sql_where": "is_muted = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_muted"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "boolean_false",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active verified users from Seattle who joined in 2024 and were active in the last week, who are not private and have likes on public posts",
+      "target_table": "users",
+      "sql_where": "users.is_active = TRUE AND users.is_verified = TRUE AND users.location = 'Seattle' AND users.created_at >= '2024-01-01' AND users.created_at < '2025-01-01' AND users.last_active_at >= '2025-01-08' AND users.is_private = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_active", "is_verified", "location", "created_at", "last_active_at", "is_private"],
+        "operators_used": ["=", "=", "=", ">=", "<", ">=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "joined in 2024 / active last week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "string", "date", "date", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show public or followers-only pinned posts from verified users from last month that have been liked",
+      "target_table": "likes",
+      "sql_where": "posts.visibility IN ('public', 'followers_only') AND posts.is_pinned = TRUE AND users.is_verified = TRUE AND likes.created_at >= '2024-12-15'",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON likes.post_id = posts.id JOIN users ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["posts.visibility", "posts.is_pinned", "users.is_verified", "likes.created_at"],
+        "operators_used": ["IN", "=", "=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string", "boolean", "boolean", "date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get close friend follows created in 2025 between active users from Seattle where neither is muted and the posts from either are pinned",
+      "target_table": "follows",
+      "sql_where": "follows.is_close_friend = TRUE AND follows.created_at >= '2025-01-01' AND follows.is_muted = FALSE AND follower.is_active = TRUE AND following.is_active = TRUE AND follower.location = 'Seattle'",
+      "requires_join": true,
+      "join_clause": "JOIN users AS follower ON follows.follower_id = follower.id JOIN users AS following ON follows.following_id = following.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["follows.is_close_friend", "follows.created_at", "follows.is_muted", "follower.is_active", "following.is_active", "follower.location"],
+        "operators_used": ["=", ">=", "=", "=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "2025",
+        "has_negation": true,
+        "negation_scope": "boolean_false",
+        "value_types": ["boolean", "date", "boolean", "boolean", "boolean", "string"],
+        "ambiguity_notes": "aliased self-join"
+      }
+    },
+    {
+      "english": "Find messages in the past month that have been read and not deleted between active users",
+      "target_table": "messages",
+      "sql_where": "messages.created_at >= '2024-12-15' AND messages.is_read = TRUE AND messages.is_deleted = FALSE AND sender.is_active = TRUE AND receiver.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users AS sender ON messages.sender_id = sender.id JOIN users AS receiver ON messages.receiver_id = receiver.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["messages.created_at", "messages.is_read", "messages.is_deleted", "sender.is_active", "receiver.is_active"],
+        "operators_used": [">=", "=", "=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past month",
+        "has_negation": true,
+        "negation_scope": "boolean_false",
+        "value_types": ["date", "boolean", "boolean", "boolean", "boolean"],
+        "ambiguity_notes": "aliased self-join"
+      }
+    },
+    {
+      "english": "Show edited comments on pinned posts this week",
+      "target_table": "comments",
+      "sql_where": "comments.is_edited = TRUE AND posts.is_pinned = TRUE AND comments.created_at >= '2025-01-13'",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON comments.post_id = posts.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["comments.is_edited", "posts.is_pinned", "comments.created_at"],
+        "operators_used": ["=", "=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "date"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

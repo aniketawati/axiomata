@@ -1,0 +1,199 @@
+{
+  "schema_id": "saas_017",
+  "domain": "saas",
+  "tables": [
+    {
+      "name": "usage_logs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "action",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "team_id",
+          "type": "INT",
+          "foreign_key": "teams.id"
+        },
+        {
+          "name": "ip_address",
+          "type": "VARCHAR(45)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "plans",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "price_monthly",
+          "type": "DECIMAL(10,2)",
+          "nullable": false
+        },
+        {
+          "name": "features",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "max_users",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "tier",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "free",
+            "starter",
+            "pro",
+            "enterprise"
+          ]
+        },
+        {
+          "name": "max_storage_gb",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "price_annual",
+          "type": "DECIMAL(10,2)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "teams",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "member_count",
+          "type": "INT",
+          "default": 1
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "admin",
+            "member",
+            "viewer",
+            "owner"
+          ]
+        },
+        {
+          "name": "avatar_url",
+          "type": "VARCHAR(500)",
+          "nullable": true
+        },
+        {
+          "name": "last_login_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "timezone",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "team_id",
+          "type": "INT",
+          "foreign_key": "teams.id"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "usage_logs.user_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "usage_logs.team_id",
+      "to": "teams.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "users.team_id",
+      "to": "teams.id",
+      "type": "many_to_one"
+    }
+  ]
+}

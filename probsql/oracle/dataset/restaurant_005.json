@@ -1,0 +1,466 @@
+{
+  "schema_id": "restaurant_005",
+  "domain": "restaurant",
+  "examples": [
+    {
+      "english": "Find restaurants with a rating of 4 or higher",
+      "target_table": "restaurants",
+      "sql_where": "rating >= 4.0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["rating"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show all delivery orders",
+      "target_table": "orders",
+      "sql_where": "order_type = 'delivery'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["order_type"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find verified reviews",
+      "target_table": "reviews",
+      "sql_where": "is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show me restaurants in Los Angeles",
+      "target_table": "restaurants",
+      "sql_where": "city = 'Los Angeles'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["city"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_literal"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find orders with a discount applied",
+      "target_table": "orders",
+      "sql_where": "discount_amount > 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["discount_amount"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show active restaurants in Seattle that offer delivery",
+      "target_table": "restaurants",
+      "sql_where": "is_active = TRUE AND city = 'Seattle' AND has_delivery = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "city", "has_delivery"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "string_literal", "boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find delivered orders with total above $75 and a tip",
+      "target_table": "orders",
+      "sql_where": "status = 'delivered' AND total_amount > 75.00 AND tip_amount > 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "total_amount", "tip_amount"],
+        "operators_used": ["=", ">", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show verified reviews with a food rating of 4 or higher",
+      "target_table": "reviews",
+      "sql_where": "is_verified = TRUE AND food_rating >= 4",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_verified", "food_rating"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show restaurants that open before 8am or close after 11pm",
+      "target_table": "restaurants",
+      "sql_where": "opening_time < '08:00' OR closing_time > '23:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["opening_time", "closing_time"],
+        "operators_used": ["<", ">"],
+        "conjunction_type": "OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["time_string", "time_string"],
+        "ambiguity_notes": "opening_time and closing_time are VARCHAR(10), compared as strings"
+      }
+    },
+    {
+      "english": "Find placed or preparing orders over $20 with no discount",
+      "target_table": "orders",
+      "sql_where": "status IN ('placed', 'preparing') AND total_amount > 20.00 AND discount_amount = 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "total_amount", "discount_amount"],
+        "operators_used": ["IN", ">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_list", "numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show orders placed in the last 48 hours",
+      "target_table": "orders",
+      "sql_where": "created_at >= '2025-01-13 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative_past",
+        "temporal_expression": "last 48 hours",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "48 hours before 2025-01-15"
+      }
+    },
+    {
+      "english": "Find restaurants that were created in 2024",
+      "target_table": "restaurants",
+      "sql_where": "created_at >= '2024-01-01 00:00:00' AND created_at < '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_year",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show reviews created yesterday",
+      "target_table": "reviews",
+      "sql_where": "created_at >= '2025-01-14 00:00:00' AND created_at < '2025-01-15 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_date",
+        "temporal_expression": "yesterday",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Yesterday is 2025-01-14"
+      }
+    },
+    {
+      "english": "Find orders estimated for delivery in the next 2 hours",
+      "target_table": "orders",
+      "sql_where": "estimated_delivery_at >= '2025-01-15 00:00:00' AND estimated_delivery_at <= '2025-01-15 02:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["estimated_delivery_at"],
+        "operators_used": [">=", "<="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_future",
+        "temporal_expression": "next 2 hours",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Approximate future window from 2025-01-15 00:00:00"
+      }
+    },
+    {
+      "english": "Find orders placed in the past month that were delivered late",
+      "target_table": "orders",
+      "sql_where": "created_at >= '2024-12-15 00:00:00' AND delivered_at > estimated_delivery_at",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at", "delivered_at", "estimated_delivery_at"],
+        "operators_used": [">=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_past",
+        "temporal_expression": "past month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "30 days before 2025-01-15; late = delivered_at > estimated_delivery_at"
+      }
+    },
+    {
+      "english": "Find restaurants that do not offer takeout",
+      "target_table": "restaurants",
+      "sql_where": "has_takeout = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["has_takeout"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "has_takeout",
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show reviews with no food rating",
+      "target_table": "reviews",
+      "sql_where": "food_rating IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["food_rating"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "food_rating",
+        "value_types": ["null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find orders that are neither delivered nor cancelled",
+      "target_table": "orders",
+      "sql_where": "status NOT IN ('delivered', 'cancelled')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["NOT IN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum_list"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find placed delivery orders from active restaurants in Seattle over $30 placed this week",
+      "target_table": "orders",
+      "sql_where": "o.order_type = 'delivery' AND o.status = 'placed' AND o.total_amount > 30.00 AND o.created_at >= '2025-01-13 00:00:00' AND r.is_active = TRUE AND r.city = 'Seattle'",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON o.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["order_type", "status", "total_amount", "created_at", "is_active", "city"],
+        "operators_used": ["=", "=", ">", ">=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_week",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum", "numeric", "timestamp", "boolean", "string_literal"],
+        "ambiguity_notes": "Cross-table filter; week starting 2025-01-13"
+      }
+    },
+    {
+      "english": "Show high-rated verified reviews from this year on active restaurants with delivery",
+      "target_table": "reviews",
+      "sql_where": "rev.rating >= 4 AND rev.is_verified = TRUE AND rev.created_at >= '2025-01-01 00:00:00' AND r.is_active = TRUE AND r.has_delivery = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON rev.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["rating", "is_verified", "created_at", "is_active", "has_delivery"],
+        "operators_used": [">=", "=", ">=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_year",
+        "temporal_expression": "this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "boolean", "timestamp", "boolean", "boolean"],
+        "ambiguity_notes": "Year 2025; cross-table filter on reviews and restaurants"
+      }
+    },
+    {
+      "english": "Find active restaurants in Chicago that close after 10pm and have seating for over 40",
+      "target_table": "restaurants",
+      "sql_where": "is_active = TRUE AND city = 'Chicago' AND closing_time > '22:00' AND seating_capacity > 40",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "city", "closing_time", "seating_capacity"],
+        "operators_used": ["=", "=", ">", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "string_literal", "time_string", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find customers who placed orders but provided no delivery address",
+      "target_table": "orders",
+      "sql_where": "order_type = 'delivery' AND delivery_address IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["order_type", "delivery_address"],
+        "operators_used": ["=", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "delivery_address",
+        "value_types": ["enum", "null_check"],
+        "ambiguity_notes": "delivery_address IS NULL despite being delivery type"
+      }
+    },
+    {
+      "english": "Show restaurants that have no closing time listed and are currently active",
+      "target_table": "restaurants",
+      "sql_where": "closing_time IS NULL AND is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["closing_time", "is_active"],
+        "operators_used": ["IS NULL", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "closing_time",
+        "value_types": ["null_check", "boolean"],
+        "ambiguity_notes": null
+      }
+    }
+  ]
+}

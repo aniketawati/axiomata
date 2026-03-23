@@ -1,0 +1,277 @@
+{
+  "schema_id": "education_013",
+  "domain": "education",
+  "tables": [
+    {
+      "name": "courses",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "code",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "credits",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "semester",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "fall",
+            "spring",
+            "summer"
+          ]
+        },
+        {
+          "name": "department",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "max_enrollment",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "instructors",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "department",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "hired_at",
+          "type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(50)",
+          "enum_values": [
+            "professor",
+            "associate_professor",
+            "assistant_professor",
+            "lecturer",
+            "adjunct"
+          ]
+        },
+        {
+          "name": "rating",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "is_tenured",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "enrollments",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "student_id",
+          "type": "INT",
+          "foreign_key": "students.id"
+        },
+        {
+          "name": "course_id",
+          "type": "INT",
+          "foreign_key": "courses.id"
+        },
+        {
+          "name": "enrolled_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "enrolled",
+            "dropped",
+            "completed",
+            "failed"
+          ]
+        },
+        {
+          "name": "grade",
+          "type": "VARCHAR(2)",
+          "nullable": true
+        },
+        {
+          "name": "semester",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "fall",
+            "spring",
+            "summer"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "assignments",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "course_id",
+          "type": "INT",
+          "foreign_key": "courses.id"
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "due_date",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_published",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "homework",
+            "quiz",
+            "midterm",
+            "final",
+            "project",
+            "lab"
+          ]
+        },
+        {
+          "name": "weight",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "name": "students",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "enrolled_at",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "active",
+            "graduated",
+            "suspended",
+            "withdrawn"
+          ]
+        },
+        {
+          "name": "gpa",
+          "type": "FLOAT",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "enrollments.student_id",
+      "to": "students.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "enrollments.course_id",
+      "to": "courses.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "assignments.course_id",
+      "to": "courses.id",
+      "type": "many_to_one"
+    }
+  ]
+}

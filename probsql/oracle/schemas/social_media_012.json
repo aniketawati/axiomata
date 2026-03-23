@@ -1,0 +1,155 @@
+{
+  "schema_id": "social_media_012",
+  "domain": "social_media",
+  "tables": [
+    {
+      "name": "users",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "username",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "is_verified",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "post_count",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "last_active_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "is_private",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "follower_count",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "display_name",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "posts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "content",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "share_count",
+          "type": "INT",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "messages",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "sender_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "receiver_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "content",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_read",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "read_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "posts.user_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "messages.sender_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "messages.receiver_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    }
+  ]
+}

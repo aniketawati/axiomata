@@ -1,0 +1,506 @@
+{
+  "schema_id": "healthcare_003",
+  "domain": "healthcare",
+  "examples": [
+    {
+      "english": "Show all abnormal lab results",
+      "target_table": "lab_results",
+      "sql_where": "is_abnormal = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_abnormal"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find lab results for a Lipid Panel test",
+      "target_table": "lab_results",
+      "sql_where": "test_name = 'Lipid Panel'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["test_name"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show doctors with a rating above 4",
+      "target_table": "doctors",
+      "sql_where": "rating > 4",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["rating"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find female patients",
+      "target_table": "patients",
+      "sql_where": "gender = 'female'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["gender"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show patients who have a recorded insurance ID",
+      "target_table": "patients",
+      "sql_where": "insurance_id IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["insurance_id"],
+        "operators_used": ["IS NOT NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find doctors who specialize in oncology",
+      "target_table": "doctors",
+      "sql_where": "specialization = 'Oncology'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["specialization"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show male patients registered in the system",
+      "target_table": "patients",
+      "sql_where": "gender = 'male'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["gender"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find abnormal lab results for a Glucose test",
+      "target_table": "lab_results",
+      "sql_where": "is_abnormal = TRUE AND test_name = 'Glucose'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_abnormal", "test_name"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show male patients born before 1970 who have known allergies",
+      "target_table": "patients",
+      "sql_where": "gender = 'male' AND date_of_birth < '1970-01-01' AND allergies IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["gender", "date_of_birth", "allergies"],
+        "operators_used": ["=", "<", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "date", "null_check"],
+        "ambiguity_notes": "date_of_birth as age proxy"
+      }
+    },
+    {
+      "english": "Find top-rated doctors who specialize in dermatology or cardiology",
+      "target_table": "doctors",
+      "sql_where": "(specialization = 'Dermatology' OR specialization = 'Cardiology') AND rating >= 4.5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["specialization", "rating"],
+        "operators_used": ["=", "=", ">="],
+        "conjunction_type": "AND/OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string", "float"],
+        "ambiguity_notes": "OR within specialization filter"
+      }
+    },
+    {
+      "english": "Show lab results with a result value that contains 'positive'",
+      "target_table": "lab_results",
+      "sql_where": "result_value LIKE '%positive%'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["result_value"],
+        "operators_used": ["LIKE"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string"],
+        "ambiguity_notes": "substring match"
+      }
+    },
+    {
+      "english": "Find female patients who have an emergency contact and were registered after 2020",
+      "target_table": "patients",
+      "sql_where": "gender = 'female' AND emergency_contact IS NOT NULL AND created_at >= '2020-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["gender", "emergency_contact", "created_at"],
+        "operators_used": ["=", "IS NOT NULL", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "null_check", "timestamp"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show lab results collected in the past 14 days",
+      "target_table": "lab_results",
+      "sql_where": "tested_at >= '2025-01-01' AND tested_at <= '2025-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["tested_at"],
+        "operators_used": [">=", "<="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_range",
+        "temporal_expression": "past 14 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "relative to 2025-01-15"
+      }
+    },
+    {
+      "english": "Find patients registered in 2023",
+      "target_table": "patients",
+      "sql_where": "created_at >= '2023-01-01' AND created_at < '2024-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "calendar_year",
+        "temporal_expression": "in 2023",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "explicit year"
+      }
+    },
+    {
+      "english": "Show lab results tested before the start of this year",
+      "target_table": "lab_results",
+      "sql_where": "tested_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["tested_at"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute_cutoff",
+        "temporal_expression": "before start of this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "this year = 2025"
+      }
+    },
+    {
+      "english": "Find lab results collected in Q4 2024",
+      "target_table": "lab_results",
+      "sql_where": "tested_at >= '2024-10-01' AND tested_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["tested_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "calendar_quarter",
+        "temporal_expression": "Q4 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "Q4 = Oct-Dec"
+      }
+    },
+    {
+      "english": "Find patients who have no recorded allergies",
+      "target_table": "patients",
+      "sql_where": "allergies IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["allergies"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_value",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "no allergies = allergies IS NULL"
+      }
+    },
+    {
+      "english": "Show lab results that are not abnormal",
+      "target_table": "lab_results",
+      "sql_where": "is_abnormal = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_abnormal"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "boolean_flag",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "not abnormal = is_abnormal = FALSE"
+      }
+    },
+    {
+      "english": "Find patients who have no emergency contact listed",
+      "target_table": "patients",
+      "sql_where": "emergency_contact IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["emergency_contact"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_value",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "no emergency contact = IS NULL"
+      }
+    },
+    {
+      "english": "Find patients with blood type AB-",
+      "target_table": "patients",
+      "sql_where": "blood_type = 'AB-'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["blood_type"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show male patients born after 1985 who have an insurance ID on file",
+      "target_table": "patients",
+      "sql_where": "gender = 'male' AND date_of_birth > '1985-01-01' AND insurance_id IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["gender", "date_of_birth", "insurance_id"],
+        "operators_used": ["=", ">", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "date", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find abnormal lab results for a Thyroid Function test",
+      "target_table": "lab_results",
+      "sql_where": "is_abnormal = TRUE AND test_name = 'Thyroid Function'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_abnormal", "test_name"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show lab results from the last 3 months of 2024",
+      "target_table": "lab_results",
+      "sql_where": "tested_at >= '2024-10-01' AND tested_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["tested_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "calendar_quarter",
+        "temporal_expression": "last 3 months of 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "Oct-Dec 2024"
+      }
+    },
+    {
+      "english": "Show abnormal lab results for female patients registered in the past year who have known allergies",
+      "target_table": "lab_results",
+      "sql_where": "lr.is_abnormal = TRUE AND p.gender = 'female' AND p.created_at >= '2024-01-15' AND p.allergies IS NOT NULL",
+      "requires_join": true,
+      "join_clause": "JOIN patients p ON lab_results.patient_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["lab_results.is_abnormal", "patients.gender", "patients.created_at", "patients.allergies"],
+        "operators_used": ["=", "=", ">=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_range",
+        "temporal_expression": "past year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "timestamp", "null_check"],
+        "ambiguity_notes": "multi-table join with temporal filter"
+      }
+    },
+    {
+      "english": "Find highly-rated dermatology doctors whose patients had abnormal Glucose lab results in the last 30 days",
+      "target_table": "lab_results",
+      "sql_where": "lr.is_abnormal = TRUE AND lr.test_name = 'Glucose' AND lr.tested_at >= '2024-12-16' AND d.specialization = 'Dermatology' AND d.rating >= 4.0",
+      "requires_join": true,
+      "join_clause": "JOIN patients p ON lab_results.patient_id = p.id JOIN doctors d ON d.id = (SELECT doctor_id FROM lab_results lr2 WHERE lr2.patient_id = p.id LIMIT 1)",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["lab_results.is_abnormal", "lab_results.test_name", "lab_results.tested_at", "doctors.specialization", "doctors.rating"],
+        "operators_used": ["=", "=", ">=", "=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_range",
+        "temporal_expression": "last 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "string", "timestamp", "string", "float"],
+        "ambiguity_notes": "doctor-patient relationship is indirect in this schema"
+      }
+    }
+  ]
+}

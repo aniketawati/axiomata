@@ -1,0 +1,261 @@
+{
+  "schema_id": "logistics_020",
+  "domain": "logistics",
+  "tables": [
+    {
+      "name": "inventory",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "warehouse_id",
+          "type": "INT",
+          "foreign_key": "warehouses.id"
+        },
+        {
+          "name": "sku",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "unit_cost",
+          "type": "DECIMAL(10,2)",
+          "nullable": true
+        },
+        {
+          "name": "max_quantity",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "tracking_events",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "shipment_id",
+          "type": "INT",
+          "foreign_key": "shipments.id"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_exception",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "carriers",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "ground",
+            "air",
+            "sea",
+            "rail"
+          ]
+        },
+        {
+          "name": "on_time_percentage",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "max_weight_kg",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "contact_email",
+          "type": "VARCHAR(255)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "warehouses",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "capacity",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "standard",
+            "cold_storage",
+            "hazmat",
+            "bulk"
+          ]
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "manager_name",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "shipments",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "tracking_number",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "origin",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "destination",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "created",
+            "picked_up",
+            "in_transit",
+            "out_for_delivery",
+            "delivered",
+            "returned"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_express",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "estimated_delivery",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "actual_delivery",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "weight_kg",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "shipping_cost",
+          "type": "DECIMAL(10,2)",
+          "nullable": true
+        },
+        {
+          "name": "warehouse_id",
+          "type": "INT",
+          "foreign_key": "warehouses.id"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "inventory.warehouse_id",
+      "to": "warehouses.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "tracking_events.shipment_id",
+      "to": "shipments.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "shipments.warehouse_id",
+      "to": "warehouses.id",
+      "type": "many_to_one"
+    }
+  ]
+}

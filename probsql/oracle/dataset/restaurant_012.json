@@ -1,0 +1,466 @@
+{
+  "schema_id": "restaurant_012",
+  "domain": "restaurant",
+  "examples": [
+    {
+      "english": "Find restaurants that offer takeout",
+      "target_table": "restaurants",
+      "sql_where": "has_takeout = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["has_takeout"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show verified reviews",
+      "target_table": "reviews",
+      "sql_where": "is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find available gluten-free menu items",
+      "target_table": "menus",
+      "sql_where": "is_available = TRUE AND is_gluten_free = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_available", "is_gluten_free"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show restaurants in New York",
+      "target_table": "restaurants",
+      "sql_where": "city = 'New York'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["city"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_literal"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find reservations with party sizes over 4",
+      "target_table": "reservations",
+      "sql_where": "party_size > 4",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["party_size"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find verified reviews with both food and service ratings of 4 or higher",
+      "target_table": "reviews",
+      "sql_where": "is_verified = TRUE AND food_rating >= 4 AND service_rating >= 4",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_verified", "food_rating", "service_rating"],
+        "operators_used": ["=", ">=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show low-calorie vegetarian items under $10 that are available",
+      "target_table": "menus",
+      "sql_where": "is_vegetarian = TRUE AND calories < 300 AND price < 10.00 AND is_available = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_vegetarian", "calories", "price", "is_available"],
+        "operators_used": ["=", "<", "<", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "numeric", "boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find restaurants that open before 9am and close after 10pm",
+      "target_table": "restaurants",
+      "sql_where": "opening_time < '09:00' AND closing_time > '22:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["opening_time", "closing_time"],
+        "operators_used": ["<", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["time_string", "time_string"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show reservations with email and phone both on file",
+      "target_table": "reservations",
+      "sql_where": "customer_email IS NOT NULL AND customer_phone IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["customer_email", "customer_phone"],
+        "operators_used": ["IS NOT NULL", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find reviews where all three ratings are above 3",
+      "target_table": "reviews",
+      "sql_where": "food_rating > 3 AND service_rating > 3 AND ambiance_rating > 3",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["food_rating", "service_rating", "ambiance_rating"],
+        "operators_used": [">", ">", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show reservations made this month",
+      "target_table": "reservations",
+      "sql_where": "created_at >= '2025-01-01 00:00:00' AND created_at < '2025-02-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_month",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "January 2025"
+      }
+    },
+    {
+      "english": "Find reviews posted today",
+      "target_table": "reviews",
+      "sql_where": "created_at >= '2025-01-15 00:00:00' AND created_at < '2025-01-16 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_date",
+        "temporal_expression": "today",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Today is 2025-01-15"
+      }
+    },
+    {
+      "english": "Show reservations scheduled for next week",
+      "target_table": "reservations",
+      "sql_where": "reserved_at >= '2025-01-20 00:00:00' AND reserved_at < '2025-01-27 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["reserved_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_future",
+        "temporal_expression": "next week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Next week starting 2025-01-20"
+      }
+    },
+    {
+      "english": "Find verified reviews from the past 60 days",
+      "target_table": "reviews",
+      "sql_where": "is_verified = TRUE AND created_at >= '2024-11-16 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["is_verified", "created_at"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_past",
+        "temporal_expression": "past 60 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "timestamp"],
+        "ambiguity_notes": "60 days before 2025-01-15"
+      }
+    },
+    {
+      "english": "Show reservations for parties booked in 2024",
+      "target_table": "reservations",
+      "sql_where": "created_at >= '2024-01-01 00:00:00' AND created_at < '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_year",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show restaurants with no closing time listed",
+      "target_table": "restaurants",
+      "sql_where": "closing_time IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["closing_time"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "closing_time",
+        "value_types": ["null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find reviews that are not verified",
+      "target_table": "reviews",
+      "sql_where": "is_verified = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_verified",
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show menu items that are not available",
+      "target_table": "menus",
+      "sql_where": "is_available = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_available"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_available",
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find verified high-ambiance reviews this year from restaurants in New York with takeout",
+      "target_table": "reviews",
+      "sql_where": "rev.is_verified = TRUE AND rev.ambiance_rating >= 4 AND rev.created_at >= '2025-01-01 00:00:00' AND r.city = 'New York' AND r.has_takeout = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON rev.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_verified", "ambiance_rating", "created_at", "city", "has_takeout"],
+        "operators_used": ["=", ">=", ">=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_year",
+        "temporal_expression": "this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "timestamp", "string_literal", "boolean"],
+        "ambiguity_notes": "Year 2025; cross-table"
+      }
+    },
+    {
+      "english": "Show quick-prep vegan gluten-free items under $10 at restaurants that close after 10pm",
+      "target_table": "menus",
+      "sql_where": "m.is_vegan = TRUE AND m.is_gluten_free = TRUE AND m.price < 10.00 AND m.preparation_time_min < 20 AND r.closing_time > '22:00'",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON m.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_vegan", "is_gluten_free", "price", "preparation_time_min", "closing_time"],
+        "operators_used": ["=", "=", "<", "<", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "numeric", "numeric", "time_string"],
+        "ambiguity_notes": "Cross-table filter on menus and restaurants"
+      }
+    },
+    {
+      "english": "Find large party reservations this month at restaurants that open before 8am",
+      "target_table": "reservations",
+      "sql_where": "res.party_size >= 6 AND res.created_at >= '2025-01-01 00:00:00' AND r.opening_time < '08:00'",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON res.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["party_size", "created_at", "opening_time"],
+        "operators_used": [">=", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_month",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "timestamp", "time_string"],
+        "ambiguity_notes": "January 2025; cross-table"
+      }
+    },
+    {
+      "english": "Find menu items with no calories listed",
+      "target_table": "menus",
+      "sql_where": "calories IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["calories"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "calories",
+        "value_types": ["null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show reservations with no special requests",
+      "target_table": "reservations",
+      "sql_where": "special_requests IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["special_requests"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "special_requests",
+        "value_types": ["null_check"],
+        "ambiguity_notes": null
+      }
+    }
+  ]
+}

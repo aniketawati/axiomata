@@ -1,0 +1,163 @@
+{
+  "schema_id": "finance_004",
+  "domain": "finance",
+  "tables": [
+    {
+      "name": "beneficiaries",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "bank_name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "account_number",
+          "type": "VARCHAR(30)",
+          "nullable": false
+        },
+        {
+          "name": "last_used_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "transfers",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "from_account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "to_account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "fee",
+          "type": "DECIMAL(10,2)",
+          "default": 0
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "completed",
+            "failed",
+            "cancelled"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "accounts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "account_number",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "account_type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "checking",
+            "savings",
+            "investment",
+            "credit"
+          ]
+        },
+        {
+          "name": "balance",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "last_activity_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "active",
+            "frozen",
+            "closed"
+          ]
+        },
+        {
+          "name": "interest_rate",
+          "type": "FLOAT",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "beneficiaries.account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "transfers.from_account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "transfers.to_account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    }
+  ]
+}

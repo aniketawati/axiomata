@@ -1,0 +1,132 @@
+{
+  "schema_id": "healthcare_003",
+  "domain": "healthcare",
+  "tables": [
+    {
+      "name": "lab_results",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "patient_id",
+          "type": "INT",
+          "foreign_key": "patients.id"
+        },
+        {
+          "name": "test_name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "result_value",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "tested_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_abnormal",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "doctors",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "specialization",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "rating",
+          "type": "FLOAT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "patients",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "gender",
+          "type": "VARCHAR(10)",
+          "enum_values": [
+            "male",
+            "female",
+            "other"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "emergency_contact",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "insurance_id",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "allergies",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "lab_results.patient_id",
+      "to": "patients.id",
+      "type": "many_to_one"
+    }
+  ]
+}

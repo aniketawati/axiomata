@@ -1,0 +1,177 @@
+{
+  "operator_rules": [
+    {
+      "pattern": "\\bbetween\\b.+\\band\\b",
+      "operator": "BETWEEN",
+      "priority": 10
+    },
+    {
+      "pattern": "\\bfrom\\b.+\\bto\\b",
+      "operator": "BETWEEN",
+      "priority": 10
+    },
+    {
+      "pattern": "\\bstarts?\\s+with\\b|\\bbeginning\\s+with\\b",
+      "operator": "LIKE",
+      "value_transform": "prefix_wildcard",
+      "priority": 9
+    },
+    {
+      "pattern": "\\bends?\\s+with\\b|\\bending\\s+with\\b",
+      "operator": "LIKE",
+      "value_transform": "suffix_wildcard",
+      "priority": 9
+    },
+    {
+      "pattern": "\\bcontains?\\b|\\bincludes?\\b|\\bmatching\\b|\\blike\\b",
+      "operator": "LIKE",
+      "value_transform": "contains_wildcard",
+      "priority": 8
+    },
+    {
+      "pattern": "\\bin\\s*\\[|\\bone\\s+of\\b|\\bany\\s+of\\b|\\beither\\b",
+      "operator": "IN",
+      "priority": 8
+    },
+    {
+      "pattern": "\\bmissing\\b|\\bempty\\b|\\bblank\\b|\\bnull\\b|\\bno\\s+\\w+\\s+set\\b|\\bnot\\s+set\\b|\\bnot\\s+provided\\b|\\bwithout\\b",
+      "operator": "IS NULL",
+      "priority": 7
+    },
+    {
+      "pattern": "\\bhas\\s+a\\b|\\bhas\\s+an\\b|\\bexists?\\b|\\bpresent\\b|\\bprovided\\b|\\bnot\\s+null\\b|\\bnot\\s+empty\\b|\\bhas\\s+\\w+\\b",
+      "operator": "IS NOT NULL",
+      "priority": 6
+    },
+    {
+      "pattern": "\\bexactly\\b|\\bequals?\\b|\\bis\\s+exactly\\b|\\bequal\\s+to\\b",
+      "operator": "=",
+      "priority": 5
+    },
+    {
+      "pattern": "\\bmore\\s+than\\b|\\bgreater\\s+than\\b|\\babove\\b|\\bover\\b|\\bexceeds?\\b|\\bhigher\\s+than\\b",
+      "operator": ">",
+      "priority": 4
+    },
+    {
+      "pattern": "\\bat\\s+least\\b|\\bminimum\\b|\\bno\\s+less\\s+than\\b|\\bor\\s+more\\b",
+      "operator": ">=",
+      "priority": 4
+    },
+    {
+      "pattern": "\\bless\\s+than\\b|\\bbelow\\b|\\bunder\\b|\\bfewer\\s+than\\b|\\blower\\s+than\\b",
+      "operator": "<",
+      "priority": 4
+    },
+    {
+      "pattern": "\\bat\\s+most\\b|\\bmaximum\\b|\\bno\\s+more\\s+than\\b|\\bor\\s+less\\b|\\bor\\s+fewer\\b",
+      "operator": "<=",
+      "priority": 4
+    },
+    {
+      "pattern": "\\bnot\\b|\\bisn'?t\\b|\\baren'?t\\b|\\bhasn'?t\\b|\\bhaven'?t\\b|\\bdoesn'?t\\b|\\bdon'?t\\b|\\bwithout\\b|\\bexcluding\\b|\\bexcept\\b|\\bother\\s+than\\b|\\bnon-",
+      "operator": "!=",
+      "priority": 3
+    }
+  ],
+  "operator_by_column_type": {
+    "BOOLEAN": {
+      "default_operator": "=",
+      "true_words": [
+        "is",
+        "are",
+        "has",
+        "have",
+        "active",
+        "verified",
+        "enabled",
+        "available",
+        "premium",
+        "featured"
+      ],
+      "false_words": [
+        "not",
+        "isn't",
+        "hasn't",
+        "no",
+        "inactive",
+        "disabled",
+        "unavailable"
+      ]
+    },
+    "ENUM": {
+      "default_operator": "=",
+      "fallback": "IN"
+    },
+    "TIMESTAMP": {
+      "default_operator": ">=",
+      "fallback": "BETWEEN"
+    },
+    "DATE": {
+      "default_operator": ">=",
+      "fallback": "BETWEEN"
+    },
+    "VARCHAR": {
+      "default_operator": "=",
+      "fallback": "LIKE"
+    },
+    "TEXT": {
+      "default_operator": "LIKE",
+      "fallback": "="
+    },
+    "INT": {
+      "default_operator": "=",
+      "comparison_operators": [
+        ">=",
+        "<=",
+        ">",
+        "<"
+      ]
+    },
+    "BIGINT": {
+      "default_operator": "=",
+      "comparison_operators": [
+        ">=",
+        "<=",
+        ">",
+        "<"
+      ]
+    },
+    "FLOAT": {
+      "default_operator": ">=",
+      "comparison_operators": [
+        ">=",
+        "<=",
+        ">",
+        "<"
+      ]
+    },
+    "DECIMAL": {
+      "default_operator": ">=",
+      "comparison_operators": [
+        ">=",
+        "<=",
+        ">",
+        "<"
+      ]
+    }
+  },
+  "operator_frequency": {
+    "=": 3369,
+    ">": 1397,
+    "IN": 296,
+    "IS NOT NULL": 412,
+    ">=": 1248,
+    "<": 794,
+    "BETWEEN": 233,
+    "IS NULL": 429,
+    "!=": 186,
+    "NOT IN": 62,
+    "<=": 56,
+    "EXISTS": 2,
+    "LIKE": 48,
+    "NOT EXISTS": 1,
+    "NOT LIKE": 3,
+    "NOT BETWEEN": 1
+  }
+}

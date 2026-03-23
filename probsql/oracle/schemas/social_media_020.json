@@ -1,0 +1,294 @@
+{
+  "schema_id": "social_media_020",
+  "domain": "social_media",
+  "tables": [
+    {
+      "name": "follows",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "follower_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "following_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_muted",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "messages",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "sender_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "receiver_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "content",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "read_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "is_deleted",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "is_read",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "likes",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT",
+          "foreign_key": "posts.id"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "post_id",
+          "type": "BIGINT",
+          "foreign_key": "posts.id"
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "content",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_edited",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "like_count",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "parent_id",
+          "type": "BIGINT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "username",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "is_private",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "bio",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "following_count",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "follower_count",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "post_count",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "is_verified",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "posts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "content",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "visibility",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "public",
+            "private",
+            "followers_only"
+          ]
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "follows.follower_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "follows.following_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "messages.sender_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "messages.receiver_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "likes.user_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "likes.post_id",
+      "to": "posts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "comments.post_id",
+      "to": "posts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "comments.user_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "posts.user_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "schema_id": "real_estate_019",
+  "domain": "real_estate",
+  "examples": [
+    {
+      "english": "Show all active agents",
+      "target_table": "agents",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find available properties",
+      "target_table": "properties",
+      "sql_where": "status = 'available'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show featured listings",
+      "target_table": "listings",
+      "sql_where": "is_featured = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_featured"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find high-interest viewings",
+      "target_table": "viewings",
+      "sql_where": "interest_level = 'high'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["interest_level"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show cash offers",
+      "target_table": "offers",
+      "sql_where": "is_cash_offer = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_cash_offer"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find agents with over 30 total sales",
+      "target_table": "agents",
+      "sql_where": "total_sales > 30",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["total_sales"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show properties with lot sizes over 1.5 acres",
+      "target_table": "properties",
+      "sql_where": "lot_size > 1.5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["lot_size"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active featured listings with over 200 views listed in the last 30 days priced under $700,000",
+      "target_table": "listings",
+      "sql_where": "status = 'active' AND is_featured = TRUE AND views_count > 200 AND listed_at >= '2024-12-16' AND listing_price < 700000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "is_featured", "views_count", "listed_at", "listing_price"],
+        "operators_used": ["=", "=", ">", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "numeric", "date", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show high-interest viewings handled by highly rated agents on active listings",
+      "target_table": "viewings",
+      "sql_where": "v.interest_level = 'high' AND a.rating >= 4.5 AND l.status = 'active'",
+      "requires_join": true,
+      "join_clause": "JOIN agents a ON viewings.agent_id = a.id JOIN listings l ON viewings.listing_id = l.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["interest_level", "rating", "status"],
+        "operators_used": ["=", ">=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find cash offers over $600,000 with contingencies on active listings",
+      "target_table": "offers",
+      "sql_where": "o.is_cash_offer = TRUE AND o.amount > 600000 AND o.contingencies IS NOT NULL AND l.status = 'active'",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON offers.listing_id = l.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_cash_offer", "amount", "contingencies", "status"],
+        "operators_used": ["=", ">", "IS NOT NULL", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "null_check", "enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show available houses built after 2000 in California with lot size over 0.75 acres",
+      "target_table": "properties",
+      "sql_where": "status = 'available' AND property_type = 'house' AND year_built > 2000 AND state = 'California' AND lot_size > 0.75",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "property_type", "year_built", "state", "lot_size"],
+        "operators_used": ["=", "=", ">", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "after 2000",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum", "year", "string", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active listings from experienced agents on featured available properties in major cities",
+      "target_table": "listings",
+      "sql_where": "l.status = 'active' AND a.total_sales > 20 AND a.is_active = TRUE AND p.is_featured = TRUE AND p.status = 'available' AND p.city IN ('Los Angeles', 'New York', 'Chicago', 'Houston', 'Phoenix')",
+      "requires_join": true,
+      "join_clause": "JOIN agents a ON listings.agent_id = a.id JOIN properties p ON listings.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "total_sales", "is_active", "is_featured", "status", "city"],
+        "operators_used": ["=", ">", "=", "=", "=", "IN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "boolean", "boolean", "enum", "string_list"],
+        "ambiguity_notes": "major cities interpreted as a fixed list"
+      }
+    },
+    {
+      "english": "Show listings posted in the past 7 days",
+      "target_table": "listings",
+      "sql_where": "listed_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["listed_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find offers submitted in Q3 2024",
+      "target_table": "offers",
+      "sql_where": "created_at >= '2024-07-01' AND created_at < '2024-10-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "Q3 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Q3 = Jul 1 to Sep 30"
+      }
+    },
+    {
+      "english": "Show agents who joined in the past 2 years",
+      "target_table": "agents",
+      "sql_where": "joined_at >= '2023-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["joined_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 2 years",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "2 years before 2025-01-15 is 2023-01-15"
+      }
+    },
+    {
+      "english": "Find viewings scheduled in the next month",
+      "target_table": "viewings",
+      "sql_where": "scheduled_at >= '2025-01-15' AND scheduled_at < '2025-02-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["scheduled_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Next 30 days from today"
+      }
+    },
+    {
+      "english": "Show properties not yet sold",
+      "target_table": "properties",
+      "sql_where": "status != 'sold'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find listings with no description",
+      "target_table": "listings",
+      "sql_where": "description IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["description"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "description",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show offers without contingencies",
+      "target_table": "offers",
+      "sql_where": "contingencies IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["contingencies"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "contingencies",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active highly rated agents who joined in the last 2 years with over 20 total sales handling high-interest viewings scheduled in the next 30 days on featured active listings on available houses in California",
+      "target_table": "viewings",
+      "sql_where": "a.is_active = TRUE AND a.rating >= 4.5 AND a.joined_at >= '2023-01-15' AND a.total_sales > 20 AND v.interest_level = 'high' AND v.scheduled_at >= '2025-01-15' AND v.scheduled_at < '2025-02-14' AND l.is_featured = TRUE AND l.status = 'active' AND p.status = 'available' AND p.property_type = 'house' AND p.state = 'California'",
+      "requires_join": true,
+      "join_clause": "JOIN agents a ON viewings.agent_id = a.id JOIN listings l ON viewings.listing_id = l.id JOIN properties p ON l.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_active", "rating", "joined_at", "total_sales", "interest_level", "scheduled_at", "is_featured", "status", "status", "property_type", "state"],
+        "operators_used": ["=", ">=", ">=", ">", "=", ">=", "<", "=", "=", "=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next 30 days / last 2 years",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "date", "numeric", "enum", "date", "boolean", "enum", "enum", "enum", "string"],
+        "ambiguity_notes": "Multiple temporal references"
+      }
+    },
+    {
+      "english": "Show cash offers over $750,000 with contingencies submitted in the last 30 days on active featured listings on available California properties built after 2008",
+      "target_table": "offers",
+      "sql_where": "o.is_cash_offer = TRUE AND o.amount > 750000 AND o.contingencies IS NOT NULL AND o.created_at >= '2024-12-16' AND l.status = 'active' AND l.is_featured = TRUE AND p.status = 'available' AND p.state = 'California' AND p.year_built > 2008",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON offers.listing_id = l.id JOIN properties p ON l.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_cash_offer", "amount", "contingencies", "created_at", "status", "is_featured", "status", "state", "year_built"],
+        "operators_used": ["=", ">", "IS NOT NULL", ">=", "=", "=", "=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "null_check", "date", "enum", "boolean", "enum", "string", "year"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find all commercial properties",
+      "target_table": "properties",
+      "sql_where": "property_type = 'commercial'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["property_type"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show listings with under 10 days on the market",
+      "target_table": "listings",
+      "sql_where": "days_on_market < 10",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["days_on_market"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    }
+  ]
+}

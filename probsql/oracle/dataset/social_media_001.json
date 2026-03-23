@@ -1,0 +1,506 @@
+{
+  "schema_id": "social_media_001",
+  "domain": "social_media",
+  "examples": [
+    {
+      "english": "Show me all verified users",
+      "target_table": "users",
+      "sql_where": "is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find all image posts",
+      "target_table": "posts",
+      "sql_where": "type = 'image'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["type"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get all unread messages",
+      "target_table": "messages",
+      "sql_where": "is_read = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_read"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users who have posted more than 50 times",
+      "target_table": "users",
+      "sql_where": "post_count > 50",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["post_count"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show comments that are replies to other comments",
+      "target_table": "comments",
+      "sql_where": "parent_id IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["parent_id"],
+        "operators_used": ["IS NOT NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get all active users who are also verified",
+      "target_table": "users",
+      "sql_where": "is_active = TRUE AND is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active", "is_verified"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find follows where the user has muted the person they follow but they are also a close friend",
+      "target_table": "follows",
+      "sql_where": "is_muted = TRUE AND is_close_friend = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_muted", "is_close_friend"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": "logically unusual combination"
+      }
+    },
+    {
+      "english": "Show posts that are either video or poll type",
+      "target_table": "posts",
+      "sql_where": "type IN ('video', 'poll')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["type"],
+        "operators_used": ["IN"],
+        "conjunction_type": "OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find messages that were deleted or have not been read yet",
+      "target_table": "messages",
+      "sql_where": "is_deleted = TRUE OR is_read = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_deleted", "is_read"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show me users who have a bio set and have posted at least 10 times",
+      "target_table": "users",
+      "sql_where": "bio IS NOT NULL AND post_count >= 10",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["bio", "post_count"],
+        "operators_used": ["IS NOT NULL", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get likes placed on posts by verified users in the last 7 days",
+      "target_table": "likes",
+      "sql_where": "likes.created_at >= '2025-01-08' AND users.is_verified = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON likes.post_id = posts.id JOIN users ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["likes.created_at", "users.is_verified"],
+        "operators_used": [">=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find comments posted in the past 30 days",
+      "target_table": "comments",
+      "sql_where": "created_at >= '2024-12-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show follows created this year",
+      "target_table": "follows",
+      "sql_where": "created_at >= '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages sent between January 1 and January 15, 2025",
+      "target_table": "messages",
+      "sql_where": "created_at BETWEEN '2025-01-01' AND '2025-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "between January 1 and January 15 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find posts created before 2025",
+      "target_table": "posts",
+      "sql_where": "created_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "before 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show me messages that have been read and were sent in the last 24 hours",
+      "target_table": "messages",
+      "sql_where": "is_read = TRUE AND created_at >= '2025-01-14'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["is_read", "created_at"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 24 hours",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users who have not set a display name",
+      "target_table": "users",
+      "sql_where": "display_name IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["display_name"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_null",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show comments that have never been edited",
+      "target_table": "comments",
+      "sql_where": "is_edited = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_edited"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "boolean_false",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages that were not deleted",
+      "target_table": "messages",
+      "sql_where": "is_deleted = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_deleted"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "boolean_false",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find all posts that are either pinned or are video type and were created in the last 14 days and belong to verified users",
+      "target_table": "posts",
+      "sql_where": "(posts.is_pinned = TRUE OR posts.type = 'video') AND posts.created_at >= '2025-01-01' AND users.is_verified = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["posts.is_pinned", "posts.type", "posts.created_at", "users.is_verified"],
+        "operators_used": ["=", "=", ">=", "="],
+        "conjunction_type": "AND/OR",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 14 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum_string", "date", "boolean"],
+        "ambiguity_notes": "nested OR within AND"
+      }
+    },
+    {
+      "english": "Show active users with more than 100 posts who have a bio and joined after January 1 2024 but are not verified",
+      "target_table": "users",
+      "sql_where": "is_active = TRUE AND post_count > 100 AND bio IS NOT NULL AND created_at >= '2024-01-01' AND is_verified = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_active", "post_count", "bio", "created_at", "is_verified"],
+        "operators_used": ["=", ">", "IS NOT NULL", ">=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "after January 1 2024",
+        "has_negation": true,
+        "negation_scope": "boolean_false",
+        "value_types": ["boolean", "integer", "null_check", "date", "boolean"],
+        "ambiguity_notes": "multiple conditions combined"
+      }
+    },
+    {
+      "english": "Get comments on video posts that are top-level and were posted this week by active users",
+      "target_table": "comments",
+      "sql_where": "comments.parent_id IS NULL AND comments.created_at >= '2025-01-13' AND posts.type = 'video' AND users.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON comments.post_id = posts.id JOIN users ON comments.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["comments.parent_id", "comments.created_at", "posts.type", "users.is_active"],
+        "operators_used": ["IS NULL", ">=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "date", "enum_string", "boolean"],
+        "ambiguity_notes": "multi-table join required"
+      }
+    },
+    {
+      "english": "Show me all follows added in the last month where the follower is an active user",
+      "target_table": "follows",
+      "sql_where": "follows.created_at >= '2024-12-15' AND users.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users ON follows.follower_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["follows.created_at", "users.is_active"],
+        "operators_used": [">=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find likes on posts that were not made by the post author",
+      "target_table": "likes",
+      "sql_where": "likes.user_id != posts.user_id",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON likes.post_id = posts.id",
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["likes.user_id", "posts.user_id"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "inequality",
+        "value_types": ["foreign_key"],
+        "ambiguity_notes": "cross-column comparison"
+      }
+    },
+    {
+      "english": "Show all posts with a username that contains the word 'tech'",
+      "target_table": "posts",
+      "sql_where": "users.username LIKE '%tech%'",
+      "requires_join": true,
+      "join_clause": "JOIN users ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["users.username"],
+        "operators_used": ["LIKE"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_pattern"],
+        "ambiguity_notes": "pattern match on joined table"
+      }
+    }
+  ]
+}

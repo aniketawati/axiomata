@@ -1,0 +1,325 @@
+{
+  "schema_id": "ecommerce_013",
+  "domain": "ecommerce",
+  "tables": [
+    {
+      "name": "products",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "price",
+          "type": "DECIMAL(10,2)",
+          "nullable": false
+        },
+        {
+          "name": "category_id",
+          "type": "INT",
+          "foreign_key": "categories.id"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "sku",
+          "type": "VARCHAR(50)",
+          "unique": true
+        },
+        {
+          "name": "rating",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "review_count",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "weight",
+          "type": "FLOAT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "customers",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "is_verified",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "active",
+            "inactive",
+            "suspended"
+          ]
+        },
+        {
+          "name": "lifetime_value",
+          "type": "DECIMAL(10,2)",
+          "default": 0
+        },
+        {
+          "name": "age",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "loyalty_points",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "referral_code",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "address",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "last_login_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "carts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "customer_id",
+          "type": "INT",
+          "foreign_key": "customers.id"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "customer_id",
+          "type": "INT",
+          "foreign_key": "customers.id"
+        },
+        {
+          "name": "total_amount",
+          "type": "DECIMAL(10,2)",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "processing",
+            "shipped",
+            "delivered",
+            "cancelled",
+            "refunded"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_gift",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "tracking_number",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "delivered_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "shipping_address",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "shipped_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "reviews",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "product_id",
+          "type": "INT",
+          "foreign_key": "products.id"
+        },
+        {
+          "name": "customer_id",
+          "type": "INT",
+          "foreign_key": "customers.id"
+        },
+        {
+          "name": "rating",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "helpful_count",
+          "type": "INT",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "categories",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "sort_order",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "parent_id",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "products.category_id",
+      "to": "categories.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "carts.customer_id",
+      "to": "customers.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "orders.customer_id",
+      "to": "customers.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "reviews.product_id",
+      "to": "products.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "reviews.customer_id",
+      "to": "customers.id",
+      "type": "many_to_one"
+    }
+  ]
+}

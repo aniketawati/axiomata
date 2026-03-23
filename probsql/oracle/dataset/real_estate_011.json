@@ -1,0 +1,486 @@
+{
+  "schema_id": "real_estate_011",
+  "domain": "real_estate",
+  "examples": [
+    {
+      "english": "Show all available properties",
+      "target_table": "properties",
+      "sql_where": "status = 'available'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find featured listings",
+      "target_table": "listings",
+      "sql_where": "is_featured = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_featured"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show properties built before 1980",
+      "target_table": "properties",
+      "sql_where": "year_built < 1980",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["year_built"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "before 1980",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["year"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active listings with over 200 views",
+      "target_table": "listings",
+      "sql_where": "status = 'active' AND views_count > 200",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status", "views_count"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show houses in Denver",
+      "target_table": "properties",
+      "sql_where": "property_type = 'house' AND city = 'Denver'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["property_type", "city"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find agents with more than 30 total sales",
+      "target_table": "agents",
+      "sql_where": "total_sales > 30",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["total_sales"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show properties with lot sizes over 0.75 acres",
+      "target_table": "properties",
+      "sql_where": "lot_size > 0.75",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["lot_size"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "lot_size in acres"
+      }
+    },
+    {
+      "english": "Find featured listings on available properties in Colorado priced under $800,000",
+      "target_table": "listings",
+      "sql_where": "l.is_featured = TRUE AND p.status = 'available' AND p.state = 'Colorado' AND l.listing_price < 800000",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON listings.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_featured", "status", "state", "listing_price"],
+        "operators_used": ["=", "=", "=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "string", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show active listings with views over 300 on houses with at least 4 bedrooms",
+      "target_table": "listings",
+      "sql_where": "l.status = 'active' AND l.views_count > 300 AND p.property_type = 'house' AND p.bedrooms >= 4",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON listings.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "views_count", "property_type", "bedrooms"],
+        "operators_used": ["=", ">", "=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "enum", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find featured properties with 3 or more bathrooms under $600,000 in Arizona",
+      "target_table": "properties",
+      "sql_where": "is_featured = TRUE AND bathrooms >= 3 AND price < 600000 AND state = 'Arizona'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_featured", "bathrooms", "price", "state"],
+        "operators_used": ["=", ">=", "<", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "numeric", "string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show active listings with expiry dates from experienced agents",
+      "target_table": "listings",
+      "sql_where": "l.status = 'active' AND l.expires_at IS NOT NULL AND a.total_sales > 15",
+      "requires_join": true,
+      "join_clause": "JOIN agents a ON listings.agent_id = a.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "expires_at", "total_sales"],
+        "operators_used": ["=", "IS NOT NULL", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "null_check", "numeric"],
+        "ambiguity_notes": "experienced interpreted as > 15 sales"
+      }
+    },
+    {
+      "english": "Find sold properties in Washington state built after 2010 with at least 3 bedrooms",
+      "target_table": "properties",
+      "sql_where": "status = 'sold' AND state = 'Washington' AND year_built > 2010 AND bedrooms >= 3",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "state", "year_built", "bedrooms"],
+        "operators_used": ["=", "=", ">", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "after 2010",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string", "year", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show listings posted in the last 7 days",
+      "target_table": "listings",
+      "sql_where": "listed_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["listed_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Current date 2025-01-15"
+      }
+    },
+    {
+      "english": "Find properties added in 2024",
+      "target_table": "properties",
+      "sql_where": "created_at >= '2024-01-01' AND created_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show viewings scheduled for this week",
+      "target_table": "viewings",
+      "sql_where": "scheduled_at >= '2025-01-13' AND scheduled_at < '2025-01-20'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["scheduled_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Week of Jan 13-19 2025"
+      }
+    },
+    {
+      "english": "Find listings that have expired",
+      "target_table": "listings",
+      "sql_where": "status = 'expired' OR (expires_at IS NOT NULL AND expires_at < '2025-01-15')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["status", "expires_at"],
+        "operators_used": ["=", "IS NOT NULL", "<"],
+        "conjunction_type": "OR",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "expired",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "null_check", "date"],
+        "ambiguity_notes": "Current date 2025-01-15"
+      }
+    },
+    {
+      "english": "Show properties that are not featured",
+      "target_table": "properties",
+      "sql_where": "is_featured = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_featured"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_featured",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find listings where no description has been provided",
+      "target_table": "listings",
+      "sql_where": "description IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["description"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "description",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show properties that are not townhouses or condos",
+      "target_table": "properties",
+      "sql_where": "property_type NOT IN ('townhouse', 'condo')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["property_type"],
+        "operators_used": ["NOT IN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "property_type",
+        "value_types": ["enum_list"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active featured listings on available houses built after 2000 in Colorado with at least 4 bedrooms, at least 2 bathrooms, square footage over 2,500 and priced under $900,000",
+      "target_table": "listings",
+      "sql_where": "l.status = 'active' AND l.is_featured = TRUE AND p.status = 'available' AND p.property_type = 'house' AND p.year_built > 2000 AND p.state = 'Colorado' AND p.bedrooms >= 4 AND p.bathrooms >= 2 AND p.square_feet > 2500 AND l.listing_price < 900000",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON listings.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["status", "is_featured", "status", "property_type", "year_built", "state", "bedrooms", "bathrooms", "square_feet", "listing_price"],
+        "operators_used": ["=", "=", "=", "=", ">", "=", ">=", ">=", ">", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "after 2000",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "enum", "enum", "year", "string", "numeric", "numeric", "numeric", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show viewings scheduled in the next 14 days on featured listings with agents who joined within the last year and have more than 10 total sales",
+      "target_table": "viewings",
+      "sql_where": "v.scheduled_at >= '2025-01-15' AND v.scheduled_at < '2025-01-29' AND l.is_featured = TRUE AND a.joined_at >= '2024-01-15' AND a.total_sales > 10",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON viewings.listing_id = l.id JOIN agents a ON l.agent_id = a.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["scheduled_at", "is_featured", "joined_at", "total_sales"],
+        "operators_used": [">=", "<", "=", ">=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next 14 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "boolean", "date", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find commercial properties in Nevada",
+      "target_table": "properties",
+      "sql_where": "property_type = 'commercial' AND state = 'Nevada'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["property_type", "state"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show agents who joined in 2023",
+      "target_table": "agents",
+      "sql_where": "joined_at >= '2023-01-01' AND joined_at < '2024-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["joined_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "in 2023",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find listings expiring in the next 30 days on properties not yet sold",
+      "target_table": "listings",
+      "sql_where": "expires_at >= '2025-01-15' AND expires_at < '2025-02-14' AND status != 'sold'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["expires_at", "status"],
+        "operators_used": [">=", "<", "!="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next 30 days",
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["date", "enum"],
+        "ambiguity_notes": "None"
+      }
+    }
+  ]
+}

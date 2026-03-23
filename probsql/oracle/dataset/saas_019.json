@@ -1,0 +1,506 @@
+{
+  "schema_id": "saas_019",
+  "domain": "saas",
+  "examples": [
+    {
+      "english": "Find all active users",
+      "target_table": "users",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show active plans",
+      "target_table": "plans",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get usage logs for the upload action",
+      "target_table": "usage_logs",
+      "sql_where": "action = 'upload'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["action"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users in the owner role",
+      "target_table": "users",
+      "sql_where": "role = 'owner'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["role"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show plans in the enterprise tier",
+      "target_table": "plans",
+      "sql_where": "tier = 'enterprise'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["tier"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active teams",
+      "target_table": "teams",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get plans with more than 100 max users",
+      "target_table": "plans",
+      "sql_where": "max_users > 100",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["max_users"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show users who are verified",
+      "target_table": "users",
+      "sql_where": "is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active verified users in the admin role",
+      "target_table": "users",
+      "sql_where": "is_active = TRUE AND is_verified = TRUE AND role = 'admin'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "is_verified", "role"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show active plans with storage over 50 GB and a pro or enterprise tier",
+      "target_table": "plans",
+      "sql_where": "is_active = TRUE AND max_storage_gb > 50 AND (tier = 'pro' OR tier = 'enterprise')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "max_storage_gb", "tier"],
+        "operators_used": ["=", ">", "=", "="],
+        "conjunction_type": "AND/OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get usage logs associated with a resource on a specific team",
+      "target_table": "usage_logs",
+      "sql_where": "resource_id IS NOT NULL AND resource_type IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["resource_id", "resource_type"],
+        "operators_used": ["IS NOT NULL", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active teams with a verified owner and at least 3 members",
+      "target_table": "teams",
+      "sql_where": "teams.is_active = TRUE AND users.is_verified = TRUE AND users.role = 'owner'",
+      "requires_join": true,
+      "join_clause": "JOIN users ON teams.owner_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["teams.is_active", "users.is_verified", "users.role"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "enum"],
+        "ambiguity_notes": "join via owner_id"
+      }
+    },
+    {
+      "english": "Show plans with annual pricing and more than 50 max users",
+      "target_table": "plans",
+      "sql_where": "price_annual IS NOT NULL AND max_users > 50",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["price_annual", "max_users"],
+        "operators_used": ["IS NOT NULL", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get usage logs from active users for the delete action",
+      "target_table": "usage_logs",
+      "sql_where": "usage_logs.action = 'delete' AND users.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users ON usage_logs.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["usage_logs.action", "users.is_active"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string", "boolean"],
+        "ambiguity_notes": "join via user_id"
+      }
+    },
+    {
+      "english": "Find verified admin users on active teams who have a phone number",
+      "target_table": "users",
+      "sql_where": "users.is_verified = TRUE AND users.role = 'admin' AND users.phone IS NOT NULL AND teams.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN teams ON users.team_id = teams.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["users.is_verified", "users.role", "users.phone", "teams.is_active"],
+        "operators_used": ["=", "=", "IS NOT NULL", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "null_check", "boolean"],
+        "ambiguity_notes": "join via team_id"
+      }
+    },
+    {
+      "english": "Show usage logs from the past 14 days",
+      "target_table": "usage_logs",
+      "sql_where": "created_at >= '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 14 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "relative to 2025-01-15"
+      }
+    },
+    {
+      "english": "Find teams created before July 2024",
+      "target_table": "teams",
+      "sql_where": "created_at < '2024-07-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": ["<"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "before July 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get users who joined in Q2 2024",
+      "target_table": "users",
+      "sql_where": "created_at >= '2024-04-01 00:00:00' AND created_at < '2024-07-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "Q2 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "quarter boundary"
+      }
+    },
+    {
+      "english": "Show users who last logged in within the past week",
+      "target_table": "users",
+      "sql_where": "last_login_at >= '2025-01-08 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["last_login_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "relative to 2025-01-15"
+      }
+    },
+    {
+      "english": "Find usage logs created between August and October 2024",
+      "target_table": "usage_logs",
+      "sql_where": "created_at >= '2024-08-01 00:00:00' AND created_at < '2024-11-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "between August and October 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "three-month range"
+      }
+    },
+    {
+      "english": "Get users who have no avatar set",
+      "target_table": "users",
+      "sql_where": "avatar_url IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["avatar_url"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "avatar_url",
+        "value_types": ["null"],
+        "ambiguity_notes": "IS NULL denotes absence"
+      }
+    },
+    {
+      "english": "Show plans that are not in the free tier",
+      "target_table": "plans",
+      "sql_where": "tier != 'free'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["tier"],
+        "operators_used": ["!="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "tier",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find teams that are inactive",
+      "target_table": "teams",
+      "sql_where": "is_active = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_active",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "negation via FALSE"
+      }
+    },
+    {
+      "english": "Find active verified admin users on active teams with an enterprise plan who joined in 2024 and last logged in within the past 30 days",
+      "target_table": "users",
+      "sql_where": "users.is_active = TRUE AND users.is_verified = TRUE AND users.role = 'admin' AND users.created_at >= '2024-01-01 00:00:00' AND users.created_at < '2025-01-01 00:00:00' AND users.last_login_at >= '2024-12-16 00:00:00' AND teams.is_active = TRUE AND plans.tier = 'enterprise'",
+      "requires_join": true,
+      "join_clause": "JOIN teams ON users.team_id = teams.id JOIN subscriptions ON subscriptions.team_id = teams.id JOIN plans ON subscriptions.plan_id = plans.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["users.is_active", "users.is_verified", "users.role", "users.created_at", "users.last_login_at", "teams.is_active", "plans.tier"],
+        "operators_used": ["=", "=", "=", ">=", "<", ">=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "enum", "timestamp", "timestamp", "boolean", "enum"],
+        "ambiguity_notes": "dual temporal conditions plus multi-table join"
+      }
+    },
+    {
+      "english": "Show usage logs from the past month from verified users on active teams with a resource type set",
+      "target_table": "usage_logs",
+      "sql_where": "usage_logs.created_at >= '2024-12-15 00:00:00' AND users.is_verified = TRUE AND teams.is_active = TRUE AND usage_logs.resource_type IS NOT NULL",
+      "requires_join": true,
+      "join_clause": "JOIN users ON usage_logs.user_id = users.id JOIN teams ON usage_logs.team_id = teams.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["usage_logs.created_at", "users.is_verified", "teams.is_active", "usage_logs.resource_type"],
+        "operators_used": [">=", "=", "=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "boolean", "boolean", "null_check"],
+        "ambiguity_notes": "temporal with multi-table join"
+      }
+    }
+  ]
+}

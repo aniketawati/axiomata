@@ -1,0 +1,506 @@
+{
+  "schema_id": "saas_001",
+  "domain": "saas",
+  "examples": [
+    {
+      "english": "active users",
+      "target_table": "users",
+      "sql_where": "users.is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["users.is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "team owners",
+      "target_table": "users",
+      "sql_where": "users.role = 'owner'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["users.role"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "verified users",
+      "target_table": "users",
+      "sql_where": "users.is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["users.is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "admin users",
+      "target_table": "users",
+      "sql_where": "users.role = 'admin'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["users.role"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active teams",
+      "target_table": "teams",
+      "sql_where": "teams.is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["teams.is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "enterprise features",
+      "target_table": "features",
+      "sql_where": "features.min_plan_tier = 'enterprise'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["features.min_plan_tier"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "large teams with more than 50 members",
+      "target_table": "teams",
+      "sql_where": "teams.member_count > 50",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["teams.member_count"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "threshold is inferred from context"
+      }
+    },
+    {
+      "english": "enabled features",
+      "target_table": "features",
+      "sql_where": "features.is_enabled = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["features.is_enabled"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active verified users who are admins",
+      "target_table": "users",
+      "sql_where": "users.is_active = TRUE AND users.is_verified = TRUE AND users.role = 'admin'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["users.is_active", "users.is_verified", "users.role"],
+        "operators_used": ["="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active teams on a pro or enterprise plan",
+      "target_table": "teams",
+      "sql_where": "teams.is_active = TRUE AND plans.name IN ('pro', 'enterprise')",
+      "requires_join": true,
+      "join_clause": "JOIN plans ON teams.plan_id = plans.id",
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["teams.is_active", "plans.name"],
+        "operators_used": ["=", "IN"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum"],
+        "ambiguity_notes": "plan tier inferred from plan name"
+      }
+    },
+    {
+      "english": "users who are viewers or members",
+      "target_table": "users",
+      "sql_where": "users.role IN ('viewer', 'member')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["users.role"],
+        "operators_used": ["IN"],
+        "conjunction_type": "or",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "teams with a billing email and more than 10 members",
+      "target_table": "teams",
+      "sql_where": "teams.billing_email IS NOT NULL AND teams.member_count > 10",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["teams.billing_email", "teams.member_count"],
+        "operators_used": ["IS NOT NULL", ">"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "features that are pro or enterprise tier and currently enabled",
+      "target_table": "features",
+      "sql_where": "features.min_plan_tier IN ('pro', 'enterprise') AND features.is_enabled = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["features.min_plan_tier", "features.is_enabled"],
+        "operators_used": ["IN", "="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "users who signed up in the last 30 days",
+      "target_table": "users",
+      "sql_where": "users.created_at >= '2024-12-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["users.created_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "last 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "teams created since the beginning of 2024",
+      "target_table": "teams",
+      "sql_where": "teams.created_at >= '2024-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["teams.created_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "absolute_date",
+        "temporal_expression": "since the beginning of 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "users who haven't logged in during the past 90 days",
+      "target_table": "users",
+      "sql_where": "users.last_login_at < '2024-10-17' OR users.last_login_at IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["users.last_login_at"],
+        "operators_used": ["<", "IS NULL"],
+        "conjunction_type": "or",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "past 90 days",
+        "has_negation": true,
+        "negation_scope": "clause",
+        "value_types": ["date", "null"],
+        "ambiguity_notes": "includes users who never logged in"
+      }
+    },
+    {
+      "english": "users who last logged in this month",
+      "target_table": "users",
+      "sql_where": "users.last_login_at >= '2025-01-01' AND users.last_login_at < '2025-02-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["users.last_login_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current month is January 2025"
+      }
+    },
+    {
+      "english": "teams created in the last week",
+      "target_table": "teams",
+      "sql_where": "teams.created_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["teams.created_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "last week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "users who are not active",
+      "target_table": "users",
+      "sql_where": "users.is_active = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["users.is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "users who are not yet verified",
+      "target_table": "users",
+      "sql_where": "users.is_verified = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["users.is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "teams without a billing email on record",
+      "target_table": "teams",
+      "sql_where": "teams.billing_email IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["teams.billing_email"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active users on active teams who joined in the last 60 days and have the admin role",
+      "target_table": "users",
+      "sql_where": "users.is_active = TRUE AND users.role = 'admin' AND users.created_at >= '2024-11-16' AND teams.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN teams ON users.team_id = teams.id",
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["users.is_active", "users.role", "users.created_at", "teams.is_active"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "last 60 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "teams with more than 20 members on a plan with max storage above 100GB, that are currently active",
+      "target_table": "teams",
+      "sql_where": "teams.is_active = TRUE AND teams.member_count > 20 AND plans.max_storage_gb > 100",
+      "requires_join": true,
+      "join_clause": "JOIN plans ON teams.plan_id = plans.id",
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["teams.is_active", "teams.member_count", "plans.max_storage_gb"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "users with gmail addresses",
+      "target_table": "users",
+      "sql_where": "users.email LIKE '%@gmail.com'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["users.email"],
+        "operators_used": ["LIKE"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_literal"],
+        "ambiguity_notes": "gmail inferred as @gmail.com domain"
+      }
+    },
+    {
+      "english": "plans priced between $10 and $50 per month",
+      "target_table": "plans",
+      "sql_where": "plans.price_monthly BETWEEN 10.00 AND 50.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["plans.price_monthly"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

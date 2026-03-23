@@ -1,0 +1,466 @@
+{
+  "schema_id": "restaurant_018",
+  "domain": "restaurant",
+  "examples": [
+    {
+      "english": "Find available active drivers",
+      "target_table": "delivery_drivers",
+      "sql_where": "is_active = TRUE AND is_available = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active", "is_available"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show verified reviews",
+      "target_table": "reviews",
+      "sql_where": "is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show paid orders",
+      "target_table": "orders",
+      "sql_where": "is_paid = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_paid"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find confirmed reservations",
+      "target_table": "reservations",
+      "sql_where": "status = 'confirmed'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show spicy menu items",
+      "target_table": "menus",
+      "sql_where": "spice_level IN ('hot', 'extra_hot')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["spice_level"],
+        "operators_used": ["IN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_list"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find verified reviews with food rating above 4 and body text",
+      "target_table": "reviews",
+      "sql_where": "is_verified = TRUE AND food_rating > 4 AND body IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_verified", "food_rating", "body"],
+        "operators_used": ["=", ">", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show active drivers with high ratings who use cars",
+      "target_table": "delivery_drivers",
+      "sql_where": "is_active = TRUE AND rating > 4.0 AND vehicle_type = 'car'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "rating", "vehicle_type"],
+        "operators_used": ["=", ">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find paid delivery orders over $40 with a discount",
+      "target_table": "orders",
+      "sql_where": "is_paid = TRUE AND order_type = 'delivery' AND total_amount > 40.00 AND discount_amount > 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_paid", "order_type", "total_amount", "discount_amount"],
+        "operators_used": ["=", "=", ">", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show spicy main courses under $20 from any restaurant",
+      "target_table": "menus",
+      "sql_where": "spice_level IN ('hot', 'extra_hot') AND category = 'main' AND price < 20.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["spice_level", "category", "price"],
+        "operators_used": ["IN", "=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_list", "enum", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find confirmed reservations for parties of 5 or more with special requests",
+      "target_table": "reservations",
+      "sql_where": "status = 'confirmed' AND party_size >= 5 AND special_requests IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "party_size", "special_requests"],
+        "operators_used": ["=", ">=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show orders placed today",
+      "target_table": "orders",
+      "sql_where": "created_at >= '2025-01-15 00:00:00' AND created_at < '2025-01-16 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_date",
+        "temporal_expression": "today",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Today is 2025-01-15"
+      }
+    },
+    {
+      "english": "Find reviews written in the past 30 days",
+      "target_table": "reviews",
+      "sql_where": "created_at >= '2024-12-16 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative_past",
+        "temporal_expression": "past 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "30 days before 2025-01-15"
+      }
+    },
+    {
+      "english": "Show reservations for this weekend",
+      "target_table": "reservations",
+      "sql_where": "reserved_at >= '2025-01-18 00:00:00' AND reserved_at < '2025-01-20 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["reserved_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_date",
+        "temporal_expression": "this weekend",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Saturday 2025-01-18 and Sunday 2025-01-19"
+      }
+    },
+    {
+      "english": "Find drivers who joined in the past 6 months",
+      "target_table": "delivery_drivers",
+      "sql_where": "joined_at >= '2024-07-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["joined_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative_past",
+        "temporal_expression": "past 6 months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "6 months before 2025-01-15; joined_at is DATE"
+      }
+    },
+    {
+      "english": "Show orders delivered this week",
+      "target_table": "orders",
+      "sql_where": "delivered_at >= '2025-01-13 00:00:00' AND delivered_at < '2025-01-20 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["delivered_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_week",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Week starting 2025-01-13"
+      }
+    },
+    {
+      "english": "Show inactive delivery drivers",
+      "target_table": "delivery_drivers",
+      "sql_where": "is_active = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_active",
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find reviews without a title",
+      "target_table": "reviews",
+      "sql_where": "title IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["title"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "title",
+        "value_types": ["null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show orders that are not paid and not cancelled",
+      "target_table": "orders",
+      "sql_where": "is_paid = FALSE AND status != 'cancelled'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_paid", "status"],
+        "operators_used": ["=", "!="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_paid AND status",
+        "value_types": ["boolean", "enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find verified five-star reviews this week with service and ambiance ratings above 4 from any restaurant",
+      "target_table": "reviews",
+      "sql_where": "rev.is_verified = TRUE AND rev.rating = 5 AND rev.service_rating > 4 AND rev.ambiance_rating > 4 AND rev.created_at >= '2025-01-13 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_verified", "rating", "service_rating", "ambiance_rating", "created_at"],
+        "operators_used": ["=", "=", ">", ">", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_week",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "numeric", "numeric", "timestamp"],
+        "ambiguity_notes": "Week starting 2025-01-13; no join needed"
+      }
+    },
+    {
+      "english": "Find paid delivery orders over $50 placed this month at restaurants that open before 10am",
+      "target_table": "orders",
+      "sql_where": "o.is_paid = TRUE AND o.order_type = 'delivery' AND o.total_amount > 50.00 AND o.created_at >= '2025-01-01 00:00:00' AND r.opening_time < '10:00'",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON o.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_paid", "order_type", "total_amount", "created_at", "opening_time"],
+        "operators_used": ["=", "=", ">", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_month",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "numeric", "timestamp", "time_string"],
+        "ambiguity_notes": "January 2025; cross-table"
+      }
+    },
+    {
+      "english": "Find confirmed large-party reservations this week at restaurants with opening time before 9am",
+      "target_table": "reservations",
+      "sql_where": "res.status = 'confirmed' AND res.party_size >= 5 AND res.reserved_at >= '2025-01-13 00:00:00' AND r.opening_time < '09:00'",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON res.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["status", "party_size", "reserved_at", "opening_time"],
+        "operators_used": ["=", ">=", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_week",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "timestamp", "time_string"],
+        "ambiguity_notes": "Week starting 2025-01-13; cross-table"
+      }
+    },
+    {
+      "english": "Show reviews with no reviewer name on record",
+      "target_table": "reviews",
+      "sql_where": "reviewer_name IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["reviewer_name"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "reviewer_name",
+        "value_types": ["null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find reservations without special requests that are confirmed",
+      "target_table": "reservations",
+      "sql_where": "special_requests IS NULL AND status = 'confirmed'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["special_requests", "status"],
+        "operators_used": ["IS NULL", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "special_requests",
+        "value_types": ["null_check", "enum"],
+        "ambiguity_notes": null
+      }
+    }
+  ]
+}

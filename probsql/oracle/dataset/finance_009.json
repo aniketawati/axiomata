@@ -1,0 +1,486 @@
+{
+  "schema_id": "finance_009",
+  "domain": "finance",
+  "examples": [
+    {
+      "english": "Recurring transactions",
+      "target_table": "transactions",
+      "sql_where": "is_recurring = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_recurring"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Crypto holdings",
+      "target_table": "holdings",
+      "sql_where": "asset_type = 'crypto'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["asset_type"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Frozen accounts",
+      "target_table": "accounts",
+      "sql_where": "status = 'frozen'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Verified beneficiaries",
+      "target_table": "beneficiaries",
+      "sql_where": "is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Transfers with amounts above $10,000",
+      "target_table": "transfers",
+      "sql_where": "amount > 10000.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["amount"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Recurring deposit transactions over $500",
+      "target_table": "transactions",
+      "sql_where": "type = 'deposit' AND is_recurring = TRUE AND amount > 500.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["type", "is_recurring", "amount"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Active verified savings accounts with balance over $5,000",
+      "target_table": "accounts",
+      "sql_where": "status = 'active' AND is_verified = TRUE AND account_type = 'savings' AND balance > 5000.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "is_verified", "account_type", "balance"],
+        "operators_used": ["=", "=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "enum", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Holdings in stocks or ETFs with an unrealized gain above $1,000",
+      "target_table": "holdings",
+      "sql_where": "asset_type IN ('stock', 'etf') AND unrealized_gain > 1000.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["asset_type", "unrealized_gain"],
+        "operators_used": ["IN", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Accounts with no activity in the past year",
+      "target_table": "accounts",
+      "sql_where": "last_activity_at IS NULL OR last_activity_at < '2024-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["last_activity_at"],
+        "operators_used": ["IS NULL", "<"],
+        "conjunction_type": "OR",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past year",
+        "has_negation": true,
+        "negation_scope": "no recent account activity",
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "current date 2025-01-15"
+      }
+    },
+    {
+      "english": "Beneficiaries that have never been used in a transfer",
+      "target_table": "beneficiaries",
+      "sql_where": "account_id NOT IN (SELECT to_account_id FROM transfers)",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["account_id"],
+        "operators_used": ["NOT IN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "beneficiary account never received a transfer",
+        "value_types": ["integer"],
+        "ambiguity_notes": "approximated via subquery on transfers table"
+      }
+    },
+    {
+      "english": "Transactions that have no merchant name",
+      "target_table": "transactions",
+      "sql_where": "merchant_name IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["merchant_name"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "no merchant on transaction",
+        "value_types": ["string"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Holdings purchased in the last 60 days",
+      "target_table": "holdings",
+      "sql_where": "purchased_at >= '2024-11-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["purchased_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 60 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "current date 2025-01-15"
+      }
+    },
+    {
+      "english": "Transfers made in Q1 2024",
+      "target_table": "transfers",
+      "sql_where": "created_at >= '2024-01-01' AND created_at < '2024-04-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "Q1 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Accounts created in the past 6 months",
+      "target_table": "accounts",
+      "sql_where": "created_at >= '2024-07-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 6 months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "current date 2025-01-15"
+      }
+    },
+    {
+      "english": "Beneficiaries created in Q4 2024",
+      "target_table": "beneficiaries",
+      "sql_where": "created_at >= '2024-10-01' AND created_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "Q4 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Transactions made in the first week of January 2025",
+      "target_table": "transactions",
+      "sql_where": "created_at >= '2025-01-01' AND created_at < '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "first week of January 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Active investment accounts with crypto holdings that have unrealized gains over $2,000 purchased since July 2024",
+      "target_table": "holdings",
+      "sql_where": "asset_type = 'crypto' AND unrealized_gain > 2000.00 AND purchased_at >= '2024-07-01'",
+      "requires_join": true,
+      "join_clause": "JOIN accounts ON holdings.account_id = accounts.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["asset_type", "unrealized_gain", "purchased_at", "accounts.account_type", "accounts.status"],
+        "operators_used": ["=", ">", ">=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "since July 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "timestamp", "enum", "enum"],
+        "ambiguity_notes": "join to accounts for account_type and status filter"
+      }
+    },
+    {
+      "english": "Unverified active credit accounts with a large credit limit over $15,000 and a transfer fee payment over $50 in the last 90 days",
+      "target_table": "transfers",
+      "sql_where": "fee > 50.00 AND created_at >= '2024-10-17'",
+      "requires_join": true,
+      "join_clause": "JOIN accounts ON transfers.from_account_id = accounts.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["fee", "created_at", "accounts.account_type", "accounts.is_verified", "accounts.credit_limit", "accounts.status"],
+        "operators_used": [">", ">=", "=", "=", ">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 90 days",
+        "has_negation": true,
+        "negation_scope": "unverified accounts",
+        "value_types": ["numeric", "timestamp", "enum", "boolean", "numeric", "enum"],
+        "ambiguity_notes": "join to accounts for account-level filters"
+      }
+    },
+    {
+      "english": "Interest or deposit transactions with a known category and amount above $100 from active accounts",
+      "target_table": "transactions",
+      "sql_where": "type IN ('interest', 'deposit') AND category IS NOT NULL AND amount > 100.00",
+      "requires_join": true,
+      "join_clause": "JOIN accounts ON transactions.account_id = accounts.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["type", "category", "amount", "accounts.status"],
+        "operators_used": ["IN", "IS NOT NULL", ">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string", "numeric", "enum"],
+        "ambiguity_notes": "join to accounts for status filter"
+      }
+    },
+    {
+      "english": "Transactions with no category and no merchant",
+      "target_table": "transactions",
+      "sql_where": "category IS NULL AND merchant_name IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["category", "merchant_name"],
+        "operators_used": ["IS NULL", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "transaction missing metadata",
+        "value_types": ["string", "string"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Active accounts with a balance over $20,000 and interest rate above 2%",
+      "target_table": "accounts",
+      "sql_where": "status = 'active' AND balance > 20000.00 AND interest_rate > 2.0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "balance", "interest_rate"],
+        "operators_used": ["=", ">", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Holdings purchased at a price under $100 with quantity over 1,000",
+      "target_table": "holdings",
+      "sql_where": "purchase_price < 100.00 AND quantity > 1000.000000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["purchase_price", "quantity"],
+        "operators_used": ["<", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Transfers with amounts between $1,000 and $5,000 and a fee above $0",
+      "target_table": "transfers",
+      "sql_where": "amount BETWEEN 1000.00 AND 5000.00 AND fee > 0.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["amount", "fee"],
+        "operators_used": ["BETWEEN", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Accounts not holding any investment products (non-investment type) with status active",
+      "target_table": "accounts",
+      "sql_where": "account_type != 'investment' AND status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["account_type", "status"],
+        "operators_used": ["!=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "non-investment accounts",
+        "value_types": ["enum", "enum"],
+        "ambiguity_notes": null
+      }
+    }
+  ]
+}

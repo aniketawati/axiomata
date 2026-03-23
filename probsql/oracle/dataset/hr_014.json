@@ -1,0 +1,486 @@
+{
+  "schema_id": "hr_014",
+  "domain": "hr",
+  "examples": [
+    {
+      "english": "List all active employees",
+      "target_table": "employees",
+      "sql_where": "status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find performance reviews with a rating above 4",
+      "target_table": "performance_reviews",
+      "sql_where": "rating > 4",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["rating"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show approved leave requests",
+      "target_table": "leave_requests",
+      "sql_where": "status = 'approved'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get departments with a budget over 350000",
+      "target_table": "departments",
+      "sql_where": "budget > 350000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["budget"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show current salary records",
+      "target_table": "salaries",
+      "sql_where": "is_current = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_current"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active roles",
+      "target_table": "roles",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get leave requests of sick type",
+      "target_table": "leave_requests",
+      "sql_where": "type = 'sick'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["type"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active employees with a pending leave request",
+      "target_table": "employees",
+      "sql_where": "employees.status = 'active'",
+      "requires_join": true,
+      "join_clause": "JOIN leave_requests ON leave_requests.employee_id = employees.id AND leave_requests.status = 'pending'",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "leave_requests.status"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum"],
+        "ambiguity_notes": "requires join to leave_requests"
+      }
+    },
+    {
+      "english": "Show performance reviews in Q4 with a rating above 4 where promotion was recommended and goals were met",
+      "target_table": "performance_reviews",
+      "sql_where": "period = 'Q4' AND rating > 4 AND promotion_recommended = TRUE AND goals_met = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["period", "rating", "promotion_recommended", "goals_met"],
+        "operators_used": ["=", ">", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "boolean", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get active lead or director roles in the Engineering department",
+      "target_table": "roles",
+      "sql_where": "roles.is_active = TRUE AND roles.level IN ('lead', 'director')",
+      "requires_join": true,
+      "join_clause": "JOIN departments ON roles.department_id = departments.id AND departments.name = 'Engineering'",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "level", "departments.name"],
+        "operators_used": ["=", "IN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "string"],
+        "ambiguity_notes": "requires join"
+      }
+    },
+    {
+      "english": "Find current monthly salary records with a bonus above 3000",
+      "target_table": "salaries",
+      "sql_where": "is_current = TRUE AND pay_frequency = 'monthly' AND bonus > 3000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_current", "pay_frequency", "bonus"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "numeric"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show approved leave requests for active employees over 5 days",
+      "target_table": "leave_requests",
+      "sql_where": "leave_requests.status = 'approved' AND leave_requests.days_count > 5 AND employees.status = 'active'",
+      "requires_join": true,
+      "join_clause": "JOIN employees ON leave_requests.employee_id = employees.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "days_count", "employees.status"],
+        "operators_used": ["=", ">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "enum"],
+        "ambiguity_notes": "requires join"
+      }
+    },
+    {
+      "english": "Show employees hired in the past 18 months",
+      "target_table": "employees",
+      "sql_where": "hired_at >= '2023-07-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["hired_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 18 months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "Find performance reviews conducted in 2024",
+      "target_table": "performance_reviews",
+      "sql_where": "review_date BETWEEN '2024-01-01' AND '2024-12-31'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["review_date"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get salary records effective after June 2024",
+      "target_table": "salaries",
+      "sql_where": "effective_date > '2024-06-30'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["effective_date"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "after June 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show leave requests that started in the last two months",
+      "target_table": "leave_requests",
+      "sql_where": "created_at >= '2024-11-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last two months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "Find employees not in the terminated status",
+      "target_table": "employees",
+      "sql_where": "status != 'terminated'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "row-level",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get performance reviews where goals were not met",
+      "target_table": "performance_reviews",
+      "sql_where": "goals_met = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["goals_met"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "row-level",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "negation via boolean false"
+      }
+    },
+    {
+      "english": "Show leave requests not cancelled",
+      "target_table": "leave_requests",
+      "sql_where": "status != 'cancelled'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "row-level",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active employees hired between 2022 and 2024 with a performance review recommending promotion and goals met in an active department with a budget over 300000",
+      "target_table": "employees",
+      "sql_where": "employees.status = 'active' AND employees.hired_at BETWEEN '2022-01-01' AND '2024-12-31' AND departments.budget > 300000",
+      "requires_join": true,
+      "join_clause": "JOIN departments ON employees.department_id = departments.id JOIN performance_reviews ON performance_reviews.employee_id = employees.id AND performance_reviews.promotion_recommended = TRUE AND performance_reviews.goals_met = TRUE",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["status", "hired_at", "departments.budget", "performance_reviews.promotion_recommended", "performance_reviews.goals_met"],
+        "operators_used": ["=", "BETWEEN", ">", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "between 2022 and 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "date", "numeric", "boolean", "boolean"],
+        "ambiguity_notes": "multi-table, multi-condition"
+      }
+    },
+    {
+      "english": "Get current salary records over 90000 in USD for active employees hired in the last 3 years in the Finance department at lead level or above",
+      "target_table": "salaries",
+      "sql_where": "salaries.is_current = TRUE AND salaries.amount > 90000 AND salaries.currency = 'USD' AND employees.status = 'active' AND employees.hired_at >= '2022-01-15'",
+      "requires_join": true,
+      "join_clause": "JOIN employees ON salaries.employee_id = employees.id JOIN departments ON employees.department_id = departments.id AND departments.name = 'Finance' JOIN roles ON roles.department_id = departments.id AND roles.level IN ('lead', 'principal', 'director', 'vp')",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_current", "amount", "currency", "employees.status", "employees.hired_at", "departments.name", "roles.level"],
+        "operators_used": ["=", ">", "=", "=", ">=", "IN"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 3 years",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "string", "enum", "date", "string", "enum"],
+        "ambiguity_notes": "multi-table join"
+      }
+    },
+    {
+      "english": "Show annual performance reviews from 2024 with a rating above 4 where goals were not met for employees in the Operations department",
+      "target_table": "performance_reviews",
+      "sql_where": "performance_reviews.period = 'annual' AND performance_reviews.review_date BETWEEN '2024-01-01' AND '2024-12-31' AND performance_reviews.rating > 4 AND performance_reviews.goals_met = FALSE AND employees.status = 'active'",
+      "requires_join": true,
+      "join_clause": "JOIN employees ON performance_reviews.employee_id = employees.id JOIN departments ON employees.department_id = departments.id AND departments.name = 'Operations'",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["period", "review_date", "rating", "goals_met", "employees.status", "departments.name"],
+        "operators_used": ["=", "BETWEEN", ">", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "2024",
+        "has_negation": true,
+        "negation_scope": "row-level",
+        "value_types": ["enum", "date", "numeric", "boolean", "enum", "string"],
+        "ambiguity_notes": "negation via boolean false in complex query"
+      }
+    },
+    {
+      "english": "Find employees not terminated who have no phone number on file and have been with the company for over 3 years",
+      "target_table": "employees",
+      "sql_where": "status != 'terminated' AND phone IS NULL AND hired_at < '2022-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status", "phone", "hired_at"],
+        "operators_used": ["!=", "IS NULL", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "over 3 years",
+        "has_negation": true,
+        "negation_scope": "row-level",
+        "value_types": ["enum", "null", "date"],
+        "ambiguity_notes": "two forms of negation with temporal"
+      }
+    },
+    {
+      "english": "Get leave requests not yet approved with no approver set and more than 3 days for active employees",
+      "target_table": "leave_requests",
+      "sql_where": "leave_requests.status != 'approved' AND leave_requests.approved_by IS NULL AND leave_requests.days_count > 3 AND employees.status = 'active'",
+      "requires_join": true,
+      "join_clause": "JOIN employees ON leave_requests.employee_id = employees.id",
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status", "approved_by", "days_count", "employees.status"],
+        "operators_used": ["!=", "IS NULL", ">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "row-level",
+        "value_types": ["enum", "null", "numeric", "enum"],
+        "ambiguity_notes": "two forms of negation"
+      }
+    }
+  ]
+}

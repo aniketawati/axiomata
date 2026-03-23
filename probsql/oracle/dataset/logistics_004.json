@@ -1,0 +1,506 @@
+{
+  "schema_id": "logistics_004",
+  "domain": "logistics",
+  "examples": [
+    {
+      "english": "Show all active warehouses",
+      "target_table": "warehouses",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find shipments that are in transit",
+      "target_table": "shipments",
+      "sql_where": "status = 'in_transit'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show tracking events flagged as exceptions",
+      "target_table": "tracking_events",
+      "sql_where": "is_exception = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_exception"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active carriers with an on-time percentage above 85",
+      "target_table": "carriers",
+      "sql_where": "is_active = TRUE AND on_time_percentage > 85",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "on_time_percentage"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find perishable inventory items",
+      "target_table": "inventory",
+      "sql_where": "is_perishable = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_perishable"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find express shipments heavier than 50 kg in active warehouses",
+      "target_table": "shipments",
+      "sql_where": "is_express = TRUE AND weight_kg > 50 AND warehouses.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN warehouses ON shipments.warehouse_id = warehouses.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_express", "weight_kg", "warehouses.is_active"],
+        "operators_used": ["=", ">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "float", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show inventory below minimum stock levels",
+      "target_table": "inventory",
+      "sql_where": "quantity < min_quantity",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["quantity", "min_quantity"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "column-to-column comparison"
+      }
+    },
+    {
+      "english": "Show shipments created or returned status",
+      "target_table": "shipments",
+      "sql_where": "status IN ('created', 'returned')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status"],
+        "operators_used": ["IN"],
+        "conjunction_type": "OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "List warehouses in Texas with capacity over 8000",
+      "target_table": "warehouses",
+      "sql_where": "location LIKE '%Texas%' AND capacity > 8000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["location", "capacity"],
+        "operators_used": ["LIKE", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string", "integer"],
+        "ambiguity_notes": "location is a free-text field"
+      }
+    },
+    {
+      "english": "Find shipments with weight between 10 and 200 kg",
+      "target_table": "shipments",
+      "sql_where": "weight_kg BETWEEN 10 AND 200",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["weight_kg"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show tracking events from the last 24 hours",
+      "target_table": "tracking_events",
+      "sql_where": "created_at >= '2025-01-14 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 24 hours",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "anchor 2025-01-15"
+      }
+    },
+    {
+      "english": "Find shipments with an estimated delivery before January 20th",
+      "target_table": "shipments",
+      "sql_where": "estimated_delivery < '2025-01-20 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["estimated_delivery"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "January 20th",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "year assumed 2025"
+      }
+    },
+    {
+      "english": "Show shipments created in the last 2 weeks",
+      "target_table": "shipments",
+      "sql_where": "created_at >= '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 2 weeks",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "2 weeks before 2025-01-15"
+      }
+    },
+    {
+      "english": "Find inventory restocked in the last 7 days",
+      "target_table": "inventory",
+      "sql_where": "last_restocked_at >= '2025-01-08 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["last_restocked_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show warehouses without active status",
+      "target_table": "warehouses",
+      "sql_where": "is_active = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_active",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find shipments that have never been delivered",
+      "target_table": "shipments",
+      "sql_where": "status NOT IN ('delivered', 'returned')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["NOT IN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum_string"],
+        "ambiguity_notes": "never delivered includes created, picked_up, in_transit, out_for_delivery"
+      }
+    },
+    {
+      "english": "Show tracking events with no location recorded",
+      "target_table": "tracking_events",
+      "sql_where": "location IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["location"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "location",
+        "value_types": ["string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find express shipments going to Seattle that weigh over 30 kg, were created in the last week, and are not yet delivered",
+      "target_table": "shipments",
+      "sql_where": "is_express = TRUE AND destination = 'Seattle' AND weight_kg > 30 AND created_at >= '2025-01-08 00:00:00' AND status != 'delivered'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_express", "destination", "weight_kg", "created_at", "status"],
+        "operators_used": ["=", "=", ">", ">=", "!="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last week",
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["boolean", "string", "float", "timestamp", "enum_string"],
+        "ambiguity_notes": "destination is free-text"
+      }
+    },
+    {
+      "english": "Show perishable inventory items in active warehouses that are below minimum quantity and have no restocking date recorded",
+      "target_table": "inventory",
+      "sql_where": "is_perishable = TRUE AND warehouses.is_active = TRUE AND quantity < min_quantity AND last_restocked_at IS NULL",
+      "requires_join": true,
+      "join_clause": "JOIN warehouses ON inventory.warehouse_id = warehouses.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_perishable", "warehouses.is_active", "quantity", "min_quantity", "last_restocked_at"],
+        "operators_used": ["=", "=", "<", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "last_restocked_at",
+        "value_types": ["boolean", "boolean", "integer", "timestamp"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active carriers that are not ground type",
+      "target_table": "carriers",
+      "sql_where": "is_active = TRUE AND type != 'ground'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "type"],
+        "operators_used": ["=", "!="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "type",
+        "value_types": ["boolean", "enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show shipments with estimated delivery this week from active warehouses with more than 5000 capacity",
+      "target_table": "shipments",
+      "sql_where": "estimated_delivery >= '2025-01-13 00:00:00' AND estimated_delivery < '2025-01-20 00:00:00' AND warehouses.is_active = TRUE AND warehouses.capacity > 5000",
+      "requires_join": true,
+      "join_clause": "JOIN warehouses ON shipments.warehouse_id = warehouses.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["estimated_delivery", "warehouses.is_active", "warehouses.capacity"],
+        "operators_used": [">=", "<", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "boolean", "integer"],
+        "ambiguity_notes": "this week = Jan 13-19 2025"
+      }
+    },
+    {
+      "english": "Find carriers with no rating",
+      "target_table": "carriers",
+      "sql_where": "rating IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["rating"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "rating",
+        "value_types": ["float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show inventory with unit cost above 50 dollars",
+      "target_table": "inventory",
+      "sql_where": "unit_cost > 50.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["unit_cost"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["decimal"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "List all shipments from warehouse 1 that are express",
+      "target_table": "shipments",
+      "sql_where": "warehouse_id = 1 AND is_express = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["warehouse_id", "is_express"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show rail carriers with a maximum weight capacity above 1000 kg",
+      "target_table": "carriers",
+      "sql_where": "type = 'rail' AND max_weight_kg > 1000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["type", "max_weight_kg"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string", "float"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

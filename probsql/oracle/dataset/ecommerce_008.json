@@ -1,0 +1,506 @@
+{
+  "schema_id": "ecommerce_008",
+  "domain": "ecommerce",
+  "examples": [
+    {
+      "english": "active categories",
+      "target_table": "categories",
+      "sql_where": "categories.is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["categories.is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "approved reviews",
+      "target_table": "reviews",
+      "sql_where": "reviews.status = 'approved'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["reviews.status"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "discounted products",
+      "target_table": "products",
+      "sql_where": "products.discount_percent > 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["products.discount_percent"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "gift orders",
+      "target_table": "orders",
+      "sql_where": "orders.is_gift = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["orders.is_gift"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "customers in Austin",
+      "target_table": "customers",
+      "sql_where": "customers.city = 'Austin'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["customers.city"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_literal"],
+        "ambiguity_notes": "city name is an example"
+      }
+    },
+    {
+      "english": "reviews with a high helpful count",
+      "target_table": "reviews",
+      "sql_where": "reviews.helpful_count >= 10",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["reviews.helpful_count"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "high is subjective; 10 used"
+      }
+    },
+    {
+      "english": "active products with a description",
+      "target_table": "products",
+      "sql_where": "products.is_active = TRUE AND products.description IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["products.is_active", "products.description"],
+        "operators_used": ["=", "IS NOT NULL"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "orders with a shipping address",
+      "target_table": "orders",
+      "sql_where": "orders.shipping_address IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["orders.shipping_address"],
+        "operators_used": ["IS NOT NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active verified customers over 30 years old",
+      "target_table": "customers",
+      "sql_where": "customers.status = 'active' AND customers.is_verified = TRUE AND customers.age > 30",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["customers.status", "customers.is_verified", "customers.age"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "pending or processing orders paid by credit card",
+      "target_table": "orders",
+      "sql_where": "orders.status IN ('pending', 'processing') AND orders.payment_method = 'credit_card'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["orders.status", "orders.payment_method"],
+        "operators_used": ["IN", "="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "approved reviews with high helpful count",
+      "target_table": "reviews",
+      "sql_where": "reviews.status = 'approved' AND reviews.helpful_count >= 5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["reviews.status", "reviews.helpful_count"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active branded products with a discount",
+      "target_table": "products",
+      "sql_where": "products.is_active = TRUE AND products.brand IS NOT NULL AND products.discount_percent > 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["products.is_active", "products.brand", "products.discount_percent"],
+        "operators_used": ["=", "IS NOT NULL", ">"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "null", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "orders placed in the last 30 days",
+      "target_table": "orders",
+      "sql_where": "orders.created_at >= '2024-12-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["orders.created_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "last 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "orders that were delivered during Q3 2024",
+      "target_table": "orders",
+      "sql_where": "orders.delivered_at BETWEEN '2024-07-01' AND '2024-09-30'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["orders.delivered_at"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "date_range",
+        "temporal_expression": "Q3 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Q3 2024 = July 1 to September 30"
+      }
+    },
+    {
+      "english": "customers who signed up before 2023",
+      "target_table": "customers",
+      "sql_where": "customers.created_at < '2023-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["customers.created_at"],
+        "operators_used": ["<"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "absolute_date",
+        "temporal_expression": "before 2023",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "reviews submitted within the past week",
+      "target_table": "reviews",
+      "sql_where": "reviews.created_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["reviews.created_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "past week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "inactive products",
+      "target_table": "products",
+      "sql_where": "products.is_active = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["products.is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "orders excluding cancelled ones",
+      "target_table": "orders",
+      "sql_where": "orders.status != 'cancelled'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["orders.status"],
+        "operators_used": ["!="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "reviews without a rating of 1",
+      "target_table": "reviews",
+      "sql_where": "reviews.rating != 1",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["reviews.rating"],
+        "operators_used": ["!="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active verified customers in Austin or Dallas with lifetime value over $2000 who joined in 2024",
+      "target_table": "customers",
+      "sql_where": "customers.status = 'active' AND customers.is_verified = TRUE AND customers.city IN ('Austin', 'Dallas') AND customers.lifetime_value > 2000.00 AND customers.created_at >= '2024-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["customers.status", "customers.is_verified", "customers.city", "customers.lifetime_value", "customers.created_at"],
+        "operators_used": ["=", "IN", ">", ">="],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "date_range",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "string_literal", "number", "date"],
+        "ambiguity_notes": "city names are examples"
+      }
+    },
+    {
+      "english": "shipped gift orders over $500 with a tracking number placed this year",
+      "target_table": "orders",
+      "sql_where": "orders.status = 'shipped' AND orders.is_gift = TRUE AND orders.total_amount > 500.00 AND orders.tracking_number IS NOT NULL AND orders.created_at >= '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["orders.status", "orders.is_gift", "orders.total_amount", "orders.tracking_number", "orders.created_at"],
+        "operators_used": ["=", ">", "IS NOT NULL", ">="],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "number", "null", "date"],
+        "ambiguity_notes": "this year = 2025"
+      }
+    },
+    {
+      "english": "approved reviews on active products",
+      "target_table": "reviews",
+      "sql_where": "reviews.status = 'approved' AND products.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN products ON reviews.product_id = products.id",
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["reviews.status", "products.is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "order items with a discount on orders that weren't cancelled",
+      "target_table": "order_items",
+      "sql_where": "order_items.discount_amount > 0 AND orders.status != 'cancelled'",
+      "requires_join": true,
+      "join_clause": "JOIN orders ON order_items.order_id = orders.id",
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["order_items.discount_amount", "orders.status"],
+        "operators_used": [">", "!="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["number", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "customers who haven't updated their profile in over a year",
+      "target_table": "customers",
+      "sql_where": "customers.updated_at < '2024-01-15' OR customers.updated_at IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["customers.updated_at"],
+        "operators_used": ["<", "IS NULL"],
+        "conjunction_type": "or",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "over a year ago",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "null"],
+        "ambiguity_notes": "current date assumed 2025-01-15; includes never-updated customers"
+      }
+    },
+    {
+      "english": "pending reviews that haven't been rejected",
+      "target_table": "reviews",
+      "sql_where": "reviews.status NOT IN ('rejected')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["reviews.status"],
+        "operators_used": ["NOT IN"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "clause",
+        "value_types": ["enum"],
+        "ambiguity_notes": "covers pending and approved"
+      }
+    }
+  ]
+}

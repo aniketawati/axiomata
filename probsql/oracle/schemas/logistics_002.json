@@ -1,0 +1,208 @@
+{
+  "schema_id": "logistics_002",
+  "domain": "logistics",
+  "tables": [
+    {
+      "name": "inventory",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "warehouse_id",
+          "type": "INT",
+          "foreign_key": "warehouses.id"
+        },
+        {
+          "name": "sku",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "last_restocked_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "expiry_date",
+          "type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "max_quantity",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "product_name",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "min_quantity",
+          "type": "INT",
+          "default": 10
+        },
+        {
+          "name": "is_perishable",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "routes",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "origin",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "destination",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "distance_km",
+          "type": "FLOAT",
+          "nullable": false
+        },
+        {
+          "name": "estimated_hours",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "frequency",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "daily",
+            "weekly",
+            "biweekly",
+            "monthly"
+          ]
+        },
+        {
+          "name": "cost_per_kg",
+          "type": "DECIMAL(10,2)",
+          "nullable": true
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "carrier_id",
+          "type": "INT",
+          "foreign_key": "carriers.id"
+        }
+      ]
+    },
+    {
+      "name": "carriers",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "ground",
+            "air",
+            "sea",
+            "rail"
+          ]
+        },
+        {
+          "name": "on_time_percentage",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "contact_email",
+          "type": "VARCHAR(255)",
+          "nullable": true
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "warehouses",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "capacity",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "current_utilization",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "inventory.warehouse_id",
+      "to": "warehouses.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "routes.carrier_id",
+      "to": "carriers.id",
+      "type": "many_to_one"
+    }
+  ]
+}

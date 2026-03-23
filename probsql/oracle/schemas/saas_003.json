@@ -1,0 +1,230 @@
+{
+  "schema_id": "saas_003",
+  "domain": "saas",
+  "tables": [
+    {
+      "name": "features",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "key",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "min_plan_tier",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "free",
+            "starter",
+            "pro",
+            "enterprise"
+          ]
+        },
+        {
+          "name": "is_enabled",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "plans",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "price_monthly",
+          "type": "DECIMAL(10,2)",
+          "nullable": false
+        },
+        {
+          "name": "tier",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "free",
+            "starter",
+            "pro",
+            "enterprise"
+          ]
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "max_storage_gb",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "max_users",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "teams",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "owner_id",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "usage_logs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "foreign_key": "users.id"
+        },
+        {
+          "name": "action",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "resource_type",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "ip_address",
+          "type": "VARCHAR(45)",
+          "nullable": true
+        },
+        {
+          "name": "resource_id",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "duration_ms",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "admin",
+            "member",
+            "viewer",
+            "owner"
+          ]
+        },
+        {
+          "name": "last_login_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "timezone",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "avatar_url",
+          "type": "VARCHAR(500)",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "usage_logs.user_id",
+      "to": "users.id",
+      "type": "many_to_one"
+    }
+  ]
+}

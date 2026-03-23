@@ -1,0 +1,486 @@
+{
+  "schema_id": "social_media_007",
+  "domain": "social_media",
+  "examples": [
+    {
+      "english": "Find all verified users",
+      "target_table": "users",
+      "sql_where": "is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show close friend follows",
+      "target_table": "follows",
+      "sql_where": "is_close_friend = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_close_friend"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get comments with more than 20 likes",
+      "target_table": "comments",
+      "sql_where": "like_count > 20",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["like_count"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users in Paris",
+      "target_table": "users",
+      "sql_where": "location = 'Paris'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["location"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show posts with more than 1000 shares",
+      "target_table": "posts",
+      "sql_where": "share_count > 1000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["share_count"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find verified private users with more than 10000 followers",
+      "target_table": "users",
+      "sql_where": "is_verified = TRUE AND is_private = TRUE AND follower_count > 10000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_verified", "is_private", "follower_count"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean", "integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show muted or close friend follows",
+      "target_table": "follows",
+      "sql_where": "is_muted = TRUE OR is_close_friend = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_muted", "is_close_friend"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get reply comments with at least 5 likes from active users",
+      "target_table": "comments",
+      "sql_where": "comments.parent_id IS NOT NULL AND comments.like_count >= 5 AND users.is_active = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users ON comments.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["comments.parent_id", "comments.like_count", "users.is_active"],
+        "operators_used": ["IS NOT NULL", ">=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "integer", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find likes on posts shared more than 500 times",
+      "target_table": "likes",
+      "sql_where": "posts.share_count > 500",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON likes.post_id = posts.id",
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["posts.share_count"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show messages without a read timestamp sent by verified users",
+      "target_table": "messages",
+      "sql_where": "messages.read_at IS NULL AND users.is_verified = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN users ON messages.sender_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["messages.read_at", "users.is_verified"],
+        "operators_used": ["IS NULL", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find follows created in the last 90 days",
+      "target_table": "follows",
+      "sql_where": "created_at >= '2024-10-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 90 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get likes made this week",
+      "target_table": "likes",
+      "sql_where": "created_at >= '2025-01-13'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show messages sent in November 2024",
+      "target_table": "messages",
+      "sql_where": "created_at >= '2024-11-01' AND created_at < '2024-12-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute_range",
+        "temporal_expression": "November 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users last active in the past week",
+      "target_table": "users",
+      "sql_where": "last_active_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["last_active_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get comments posted today",
+      "target_table": "comments",
+      "sql_where": "created_at >= '2025-01-15' AND created_at < '2025-01-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "today",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find users who have no bio",
+      "target_table": "users",
+      "sql_where": "bio IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["bio"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_null",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get messages that have not been read",
+      "target_table": "messages",
+      "sql_where": "read_at IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["read_at"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_null",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show users who are not inactive",
+      "target_table": "users",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "double_negation",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "not inactive = active"
+      }
+    },
+    {
+      "english": "Find close friend follows created this month between active verified users where neither is private",
+      "target_table": "follows",
+      "sql_where": "follows.is_close_friend = TRUE AND follows.created_at >= '2025-01-01' AND follower.is_active = TRUE AND follower.is_verified = TRUE AND following.is_active = TRUE AND following.is_verified = TRUE AND follower.is_private = FALSE AND following.is_private = FALSE",
+      "requires_join": true,
+      "join_clause": "JOIN users AS follower ON follows.follower_id = follower.id JOIN users AS following ON follows.following_id = following.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["follows.is_close_friend", "follows.created_at", "follower.is_active", "follower.is_verified", "following.is_active", "following.is_verified", "follower.is_private", "following.is_private"],
+        "operators_used": ["=", ">=", "=", "=", "=", "=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this month",
+        "has_negation": true,
+        "negation_scope": "boolean_false",
+        "value_types": ["boolean", "date", "boolean", "boolean", "boolean", "boolean", "boolean", "boolean"],
+        "ambiguity_notes": "aliased self-join required"
+      }
+    },
+    {
+      "english": "Show posts with more than 100 shares from verified users with over 5000 followers created in the last 30 days",
+      "target_table": "posts",
+      "sql_where": "posts.share_count > 100 AND users.is_verified = TRUE AND users.follower_count > 5000 AND posts.created_at >= '2024-12-16'",
+      "requires_join": true,
+      "join_clause": "JOIN users ON posts.user_id = users.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["posts.share_count", "users.is_verified", "users.follower_count", "posts.created_at"],
+        "operators_used": [">", "=", ">", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer", "boolean", "integer", "date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get comments made this year on posts by users in London that have over 10 likes and are top-level",
+      "target_table": "comments",
+      "sql_where": "comments.created_at >= '2025-01-01' AND post_author.location = 'London' AND comments.like_count > 10 AND comments.parent_id IS NULL",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON comments.post_id = posts.id JOIN users AS post_author ON posts.user_id = post_author.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["comments.created_at", "post_author.location", "comments.like_count", "comments.parent_id"],
+        "operators_used": [">=", "=", ">", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "string", "integer", "null_check"],
+        "ambiguity_notes": "aliased join for post author"
+      }
+    },
+    {
+      "english": "Find messages sent between two active users where neither has been read yet",
+      "target_table": "messages",
+      "sql_where": "sender.is_active = TRUE AND receiver.is_active = TRUE AND messages.read_at IS NULL",
+      "requires_join": true,
+      "join_clause": "JOIN users AS sender ON messages.sender_id = sender.id JOIN users AS receiver ON messages.receiver_id = receiver.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["sender.is_active", "receiver.is_active", "messages.read_at"],
+        "operators_used": ["=", "=", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_null",
+        "value_types": ["boolean", "boolean", "null_check"],
+        "ambiguity_notes": "aliased self-join on users"
+      }
+    },
+    {
+      "english": "Show comments on posts with more than 500 shares",
+      "target_table": "comments",
+      "sql_where": "posts.share_count > 500",
+      "requires_join": true,
+      "join_clause": "JOIN posts ON comments.post_id = posts.id",
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["posts.share_count"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Get likes placed on posts in 2025",
+      "target_table": "likes",
+      "sql_where": "created_at >= '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

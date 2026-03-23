@@ -1,0 +1,506 @@
+{
+  "schema_id": "saas_008",
+  "domain": "saas",
+  "examples": [
+    {
+      "english": "active subscriptions",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["subscriptions.status"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "annual subscriptions",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.is_annual = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["subscriptions.is_annual"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active plans",
+      "target_table": "plans",
+      "sql_where": "plans.is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["plans.is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "enterprise tier plans",
+      "target_table": "plans",
+      "sql_where": "plans.tier = 'enterprise'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["plans.tier"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "features with a key that starts with 'billing_'",
+      "target_table": "features",
+      "sql_where": "features.key LIKE 'billing_%'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["features.key"],
+        "operators_used": ["LIKE"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_literal"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "high-value subscriptions paying more than $500 per month",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.monthly_amount > 500.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["subscriptions.monthly_amount"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "high-value threshold at $500"
+      }
+    },
+    {
+      "english": "plans priced below $50 per month",
+      "target_table": "plans",
+      "sql_where": "plans.price_monthly < 50.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["plans.price_monthly"],
+        "operators_used": ["<"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active annual subscriptions paying over $100 per month",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.status = 'active' AND subscriptions.is_annual = TRUE AND subscriptions.monthly_amount > 100.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["subscriptions.status", "subscriptions.is_annual", "subscriptions.monthly_amount"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active plans with storage over 50GB and support for more than 20 users",
+      "target_table": "plans",
+      "sql_where": "plans.is_active = TRUE AND plans.max_storage_gb > 50 AND plans.max_users > 20",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["plans.is_active", "plans.max_storage_gb", "plans.max_users"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "trialing or past due subscriptions",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.status IN ('trialing', 'past_due')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["subscriptions.status"],
+        "operators_used": ["IN"],
+        "conjunction_type": "or",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "features with a description and a key containing 'export'",
+      "target_table": "features",
+      "sql_where": "features.description IS NOT NULL AND features.key LIKE '%export%'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["features.description", "features.key"],
+        "operators_used": ["IS NOT NULL", "LIKE"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null", "string_literal"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active plans with annual pricing available",
+      "target_table": "plans",
+      "sql_where": "plans.is_active = TRUE AND plans.price_annual IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["plans.is_active", "plans.price_annual"],
+        "operators_used": ["=", "IS NOT NULL"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "subscriptions started in the last 30 days",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.started_at >= '2024-12-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["subscriptions.started_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "last 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "teams created in 2024",
+      "target_table": "teams",
+      "sql_where": "teams.created_at >= '2024-01-01' AND teams.created_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["teams.created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "absolute_date",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "subscriptions whose trial ends within the next 7 days",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.trial_ends_at BETWEEN '2025-01-15' AND '2025-01-22'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["subscriptions.trial_ends_at"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "next 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "subscriptions whose current period ends this month",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.current_period_end >= '2025-01-01' AND subscriptions.current_period_end < '2025-02-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["subscriptions.current_period_end"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current month is January 2025"
+      }
+    },
+    {
+      "english": "subscriptions that have been cancelled",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.cancelled_at IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["subscriptions.cancelled_at"],
+        "operators_used": ["IS NOT NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["null"],
+        "ambiguity_notes": "cancelled_at being set indicates cancellation"
+      }
+    },
+    {
+      "english": "plans with no storage limit",
+      "target_table": "plans",
+      "sql_where": "plans.max_storage_gb IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["plans.max_storage_gb"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["null"],
+        "ambiguity_notes": "no storage limit indicated by NULL"
+      }
+    },
+    {
+      "english": "subscriptions that are not active",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.status != 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["subscriptions.status"],
+        "operators_used": ["!="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active annual subscriptions on enterprise plans for teams created in 2024 with a monthly amount over $500",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.status = 'active' AND subscriptions.is_annual = TRUE AND subscriptions.monthly_amount > 500.00 AND plans.tier = 'enterprise' AND teams.created_at >= '2024-01-01' AND teams.created_at < '2025-01-01'",
+      "requires_join": true,
+      "join_clause": "JOIN plans ON subscriptions.plan_id = plans.id JOIN teams ON subscriptions.team_id = teams.id",
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["subscriptions.status", "subscriptions.is_annual", "subscriptions.monthly_amount", "plans.tier", "teams.created_at"],
+        "operators_used": ["=", ">", ">=", "<"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "absolute_date",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "number", "date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "trialing subscriptions on pro plans where the trial ends in the next 14 days and the monthly amount is under $100",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.status = 'trialing' AND subscriptions.monthly_amount < 100.00 AND subscriptions.trial_ends_at BETWEEN '2025-01-15' AND '2025-01-29' AND plans.tier = 'pro'",
+      "requires_join": true,
+      "join_clause": "JOIN plans ON subscriptions.plan_id = plans.id",
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["subscriptions.status", "subscriptions.monthly_amount", "subscriptions.trial_ends_at", "plans.tier"],
+        "operators_used": ["=", "<", "BETWEEN"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "next 14 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "number", "date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "features without a description",
+      "target_table": "features",
+      "sql_where": "features.description IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["features.description"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "teams linked to an enterprise plan",
+      "target_table": "teams",
+      "sql_where": "plans.tier = 'enterprise'",
+      "requires_join": true,
+      "join_clause": "JOIN plans ON teams.plan_id = plans.id",
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["plans.tier"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "subscriptions started in the past 60 days that are still active",
+      "target_table": "subscriptions",
+      "sql_where": "subscriptions.status = 'active' AND subscriptions.started_at >= '2024-11-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["subscriptions.status", "subscriptions.started_at"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "past 60 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "plans priced between $50 and $200 per month",
+      "target_table": "plans",
+      "sql_where": "plans.price_monthly BETWEEN 50.00 AND 200.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["plans.price_monthly"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

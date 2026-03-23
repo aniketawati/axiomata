@@ -1,0 +1,506 @@
+{
+  "schema_id": "healthcare_002",
+  "domain": "healthcare",
+  "examples": [
+    {
+      "english": "Show all chronic diagnoses",
+      "target_table": "diagnoses",
+      "sql_where": "is_chronic = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_chronic"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find diagnoses with critical severity",
+      "target_table": "diagnoses",
+      "sql_where": "severity = 'critical'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["severity"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show available doctors",
+      "target_table": "doctors",
+      "sql_where": "is_available = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_available"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find prescriptions with more than 3 refills remaining",
+      "target_table": "prescriptions",
+      "sql_where": "refills_remaining > 3",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["refills_remaining"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show patients with blood type AB+",
+      "target_table": "patients",
+      "sql_where": "blood_type = 'AB+'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["blood_type"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find doctors with a rating of at least 4.0",
+      "target_table": "doctors",
+      "sql_where": "rating >= 4.0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["rating"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show lab results for a Complete Blood Count test",
+      "target_table": "lab_results",
+      "sql_where": "test_name = 'Complete Blood Count'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["test_name"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active patients who have an insurance ID on file",
+      "target_table": "patients",
+      "sql_where": "is_active = TRUE AND insurance_id IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "insurance_id"],
+        "operators_used": ["=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show chronic severe diagnoses that have not been resolved",
+      "target_table": "diagnoses",
+      "sql_where": "is_chronic = TRUE AND severity = 'severe' AND resolved_at IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_chronic", "severity", "resolved_at"],
+        "operators_used": ["=", "=", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find no-show or cancelled appointments of type checkup",
+      "target_table": "appointments",
+      "sql_where": "(status = 'no_show' OR status = 'cancelled') AND type = 'checkup'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "type"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND/OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum"],
+        "ambiguity_notes": "OR within status filter"
+      }
+    },
+    {
+      "english": "Show prescriptions with a duration between 10 and 60 days",
+      "target_table": "prescriptions",
+      "sql_where": "duration_days BETWEEN 10 AND 60",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["duration_days"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer"],
+        "ambiguity_notes": "range predicate"
+      }
+    },
+    {
+      "english": "Find available doctors in the neurology department with more than 5 years experience",
+      "target_table": "doctors",
+      "sql_where": "is_available = TRUE AND department = 'neurology' AND years_experience > 5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_available", "department", "years_experience"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "string", "integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show diagnoses made in the past 6 months",
+      "target_table": "diagnoses",
+      "sql_where": "diagnosed_at >= '2024-07-15' AND diagnosed_at <= '2025-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["diagnosed_at"],
+        "operators_used": [">=", "<="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_range",
+        "temporal_expression": "past 6 months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "relative to 2025-01-15"
+      }
+    },
+    {
+      "english": "Find lab results collected this month",
+      "target_table": "lab_results",
+      "sql_where": "tested_at >= '2025-01-01' AND tested_at < '2025-02-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["tested_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "calendar_month",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "this month = January 2025"
+      }
+    },
+    {
+      "english": "Show appointments created before 2024",
+      "target_table": "appointments",
+      "sql_where": "created_at < '2024-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute_cutoff",
+        "temporal_expression": "before 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "absolute year cutoff"
+      }
+    },
+    {
+      "english": "Find prescriptions written in the last 3 months",
+      "target_table": "prescriptions",
+      "sql_where": "prescribed_at >= '2024-10-15' AND prescribed_at <= '2025-01-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["prescribed_at"],
+        "operators_used": [">=", "<="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_range",
+        "temporal_expression": "last 3 months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "relative to 2025-01-15"
+      }
+    },
+    {
+      "english": "Show diagnoses that have not been resolved yet",
+      "target_table": "diagnoses",
+      "sql_where": "resolved_at IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["resolved_at"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "column_value",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "not resolved = resolved_at IS NULL"
+      }
+    },
+    {
+      "english": "Find patients who are not currently active",
+      "target_table": "patients",
+      "sql_where": "is_active = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "boolean_flag",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "not active = is_active = FALSE"
+      }
+    },
+    {
+      "english": "Show lab results where no abnormality was found",
+      "target_table": "lab_results",
+      "sql_where": "is_abnormal = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_abnormal"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "boolean_flag",
+        "value_types": ["boolean"],
+        "ambiguity_notes": "no abnormality = is_abnormal = FALSE"
+      }
+    },
+    {
+      "english": "Find male patients",
+      "target_table": "patients",
+      "sql_where": "gender = 'male'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["gender"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show doctors with more than 10 years of experience in the cardiology department",
+      "target_table": "doctors",
+      "sql_where": "years_experience > 10 AND department = 'cardiology'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["years_experience", "department"],
+        "operators_used": [">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer", "string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active patients with blood type A+ who have an email address on file",
+      "target_table": "patients",
+      "sql_where": "is_active = TRUE AND blood_type = 'A+' AND email IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "blood_type", "email"],
+        "operators_used": ["=", "=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "null_check"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show appointments scheduled in the next 14 days",
+      "target_table": "appointments",
+      "sql_where": "scheduled_at >= '2025-01-15' AND scheduled_at <= '2025-01-29'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["scheduled_at"],
+        "operators_used": [">=", "<="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_future",
+        "temporal_expression": "next 14 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "relative to today 2025-01-15"
+      }
+    },
+    {
+      "english": "Find active male patients over 50 years old with chronic severe diagnoses made in the last year",
+      "target_table": "diagnoses",
+      "sql_where": "d.is_chronic = TRUE AND d.severity = 'severe' AND d.diagnosed_at >= '2024-01-15' AND p.gender = 'male' AND p.is_active = TRUE AND p.date_of_birth <= '1975-01-15'",
+      "requires_join": true,
+      "join_clause": "JOIN patients p ON diagnoses.patient_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["diagnoses.is_chronic", "diagnoses.severity", "diagnoses.diagnosed_at", "patients.gender", "patients.is_active", "patients.date_of_birth"],
+        "operators_used": ["=", "=", ">=", "=", "=", "<="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_range_and_age",
+        "temporal_expression": "last year and over 50 years old",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "timestamp", "enum", "boolean", "date"],
+        "ambiguity_notes": "multi-table with age derived from date_of_birth"
+      }
+    },
+    {
+      "english": "Show available cardiologist doctors whose patients have had lab abnormalities recorded in the past 60 days",
+      "target_table": "lab_results",
+      "sql_where": "lr.is_abnormal = TRUE AND lr.tested_at >= '2024-11-16' AND d.specialization = 'Cardiology' AND d.is_available = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN doctors d ON lab_results.doctor_id = d.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["lab_results.is_abnormal", "lab_results.tested_at", "doctors.specialization", "doctors.is_available"],
+        "operators_used": ["=", ">=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_range",
+        "temporal_expression": "past 60 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "timestamp", "string", "boolean"],
+        "ambiguity_notes": "multi-table join with temporal filter"
+      }
+    }
+  ]
+}

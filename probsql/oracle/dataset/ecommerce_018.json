@@ -1,0 +1,506 @@
+{
+  "schema_id": "ecommerce_018",
+  "domain": "ecommerce",
+  "examples": [
+    {
+      "english": "verified customers",
+      "target_table": "customers",
+      "sql_where": "customers.is_verified = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["customers.is_verified"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "products priced under $25",
+      "target_table": "products",
+      "sql_where": "products.price < 25",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["products.price"],
+        "operators_used": ["<"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active customers",
+      "target_table": "customers",
+      "sql_where": "customers.status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["customers.status"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "products with a high discount of 30% or more",
+      "target_table": "products",
+      "sql_where": "products.discount_percent >= 30",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["products.discount_percent"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "suspended customers",
+      "target_table": "customers",
+      "sql_where": "customers.status = 'suspended'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["customers.status"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "products with stock available",
+      "target_table": "products",
+      "sql_where": "products.stock_quantity > 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["products.stock_quantity"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "categories with subcategories",
+      "target_table": "categories",
+      "sql_where": "categories.parent_id IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["categories.parent_id"],
+        "operators_used": ["IS NOT NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null"],
+        "ambiguity_notes": "subcategory implies non-null parent_id"
+      }
+    },
+    {
+      "english": "high-value customers with a big spender lifetime value above $1500",
+      "target_table": "customers",
+      "sql_where": "customers.lifetime_value > 1500",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["customers.lifetime_value"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active verified customers with lifetime value above $500",
+      "target_table": "customers",
+      "sql_where": "customers.status = 'active' AND customers.is_verified = TRUE AND customers.lifetime_value > 500",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["customers.status", "customers.is_verified", "customers.lifetime_value"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "discounted products rated above 4",
+      "target_table": "products",
+      "sql_where": "products.discount_percent > 0 AND products.rating > 4",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["products.discount_percent", "products.rating"],
+        "operators_used": [">", ">"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number", "number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "young customers aged under 30 with a referral code",
+      "target_table": "customers",
+      "sql_where": "customers.age < 30 AND customers.referral_code IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["customers.age", "customers.referral_code"],
+        "operators_used": ["<", "IS NOT NULL"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number", "null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "lightweight products or heavily discounted products",
+      "target_table": "products",
+      "sql_where": "products.weight < 0.5 OR products.discount_percent >= 40",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["products.weight", "products.discount_percent"],
+        "operators_used": ["<", ">="],
+        "conjunction_type": "or",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number", "number"],
+        "ambiguity_notes": "OR semantics; threshold values are interpretive"
+      }
+    },
+    {
+      "english": "customers who signed up in the past 90 days",
+      "target_table": "customers",
+      "sql_where": "customers.created_at >= '2024-10-16'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["customers.created_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "past 90 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "products listed before 2024",
+      "target_table": "products",
+      "sql_where": "products.created_at < '2024-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["products.created_at"],
+        "operators_used": ["<"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "absolute_date",
+        "temporal_expression": "before 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "customers who recently updated their account in the last 7 days",
+      "target_table": "customers",
+      "sql_where": "customers.updated_at >= '2025-01-08'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["customers.updated_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "last 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "current date assumed 2025-01-15"
+      }
+    },
+    {
+      "english": "carts created in Q4 2024",
+      "target_table": "carts",
+      "sql_where": "carts.created_at >= '2024-10-01' AND carts.created_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["carts.created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "date_range",
+        "temporal_expression": "Q4 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Q4 = Oct–Dec 2024"
+      }
+    },
+    {
+      "english": "customers without a referral code",
+      "target_table": "customers",
+      "sql_where": "customers.referral_code IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["customers.referral_code"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "products with no rating",
+      "target_table": "products",
+      "sql_where": "products.rating IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["products.rating"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "customers who are not inactive",
+      "target_table": "customers",
+      "sql_where": "customers.status != 'inactive'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["customers.status"],
+        "operators_used": ["!="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "top-level categories with no parent",
+      "target_table": "categories",
+      "sql_where": "categories.parent_id IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["categories.parent_id"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "carts with a non-zero total amount",
+      "target_table": "carts",
+      "sql_where": "carts.total_amount > 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["carts.total_amount"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "active verified customers",
+      "target_table": "customers",
+      "sql_where": "customers.is_verified = TRUE AND customers.status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["customers.is_verified", "customers.status"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "products added in 2024",
+      "target_table": "products",
+      "sql_where": "products.created_at >= '2024-01-01' AND products.created_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["products.created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "date_range",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "verified active customers over 40 without a referral code who joined in the past year and have a high lifetime value above $1000",
+      "target_table": "customers",
+      "sql_where": "customers.is_verified = TRUE AND customers.status = 'active' AND customers.age > 40 AND customers.referral_code IS NULL AND customers.created_at >= '2024-01-15' AND customers.lifetime_value > 1000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["customers.is_verified", "customers.status", "customers.age", "customers.referral_code", "customers.created_at", "customers.lifetime_value"],
+        "operators_used": ["=", "=", ">", "IS NULL", ">=", ">"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "past year",
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["boolean", "enum", "number", "null", "date", "number"],
+        "ambiguity_notes": "current date assumed 2025-01-15; referral_code IS NULL is a negation"
+      }
+    },
+    {
+      "english": "discounted in-stock products in subcategories with a rating of 4 or more that were added after July 2024",
+      "target_table": "products",
+      "sql_where": "products.discount_percent > 0 AND products.stock_quantity > 0 AND products.rating >= 4 AND products.created_at >= '2024-07-01' AND categories.parent_id IS NOT NULL",
+      "requires_join": true,
+      "join_clause": "JOIN categories ON products.category_id = categories.id",
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["products.discount_percent", "products.stock_quantity", "products.rating", "products.created_at", "categories.parent_id"],
+        "operators_used": [">", ">", ">=", ">=", "IS NOT NULL"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "absolute_date",
+        "temporal_expression": "after July 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number", "number", "number", "date", "null"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

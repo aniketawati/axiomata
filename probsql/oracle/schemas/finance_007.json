@@ -1,0 +1,196 @@
+{
+  "schema_id": "finance_007",
+  "domain": "finance",
+  "tables": [
+    {
+      "name": "transactions",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "deposit",
+            "withdrawal",
+            "transfer",
+            "payment",
+            "fee",
+            "interest"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "merchant_name",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "balance_after",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "completed",
+            "failed",
+            "reversed"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "transfers",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "from_account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "to_account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "fee",
+          "type": "DECIMAL(10,2)",
+          "default": 0
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "completed",
+            "failed",
+            "cancelled"
+          ]
+        },
+        {
+          "name": "completed_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "accounts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "account_number",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "account_type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "checking",
+            "savings",
+            "investment",
+            "credit"
+          ]
+        },
+        {
+          "name": "balance",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "interest_rate",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "credit_limit",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        },
+        {
+          "name": "last_activity_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR(3)",
+          "default": "USD"
+        },
+        {
+          "name": "is_verified",
+          "type": "BOOLEAN",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "transactions.account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "transfers.from_account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "transfers.to_account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    }
+  ]
+}

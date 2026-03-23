@@ -1,0 +1,486 @@
+{
+  "schema_id": "logistics_010",
+  "domain": "logistics",
+  "examples": [
+    {
+      "english": "Find all delivered shipments",
+      "target_table": "shipments",
+      "sql_where": "status = 'delivered'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show express shipments",
+      "target_table": "shipments",
+      "sql_where": "is_express = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_express"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find active warehouses",
+      "target_table": "warehouses",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show tracking events that are exceptions",
+      "target_table": "tracking_events",
+      "sql_where": "is_exception = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_exception"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find perishable inventory items",
+      "target_table": "inventory",
+      "sql_where": "is_perishable = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_perishable"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show in-transit express shipments with weight above 30 kg",
+      "target_table": "shipments",
+      "sql_where": "status = 'in_transit' AND is_express = TRUE AND weight_kg > 30",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "is_express", "weight_kg"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string", "boolean", "float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find air or rail carriers with on-time rate above 85 percent",
+      "target_table": "carriers",
+      "sql_where": "type IN ('air', 'rail') AND on_time_percentage > 85",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["type", "on_time_percentage"],
+        "operators_used": ["IN", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string", "float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show cold storage active warehouses with capacity between 3000 and 20000",
+      "target_table": "warehouses",
+      "sql_where": "type = 'cold_storage' AND is_active = TRUE AND capacity BETWEEN 3000 AND 20000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["type", "is_active", "capacity"],
+        "operators_used": ["=", "=", "BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string", "boolean", "integer"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "List perishable inventory below minimum stock with unit cost under 20 dollars",
+      "target_table": "inventory",
+      "sql_where": "is_perishable = TRUE AND quantity < min_quantity AND unit_cost < 20.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_perishable", "quantity", "min_quantity", "unit_cost"],
+        "operators_used": ["=", "<", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "integer", "decimal"],
+        "ambiguity_notes": "column-to-column comparison for stock level"
+      }
+    },
+    {
+      "english": "Show routes with an estimated travel time under 6 hours",
+      "target_table": "routes",
+      "sql_where": "estimated_hours < 6",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["estimated_hours"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find shipments created today",
+      "target_table": "shipments",
+      "sql_where": "created_at >= '2025-01-15 00:00:00' AND created_at < '2025-01-16 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "today",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "today = 2025-01-15"
+      }
+    },
+    {
+      "english": "Show inventory items expiring in the next 14 days",
+      "target_table": "inventory",
+      "sql_where": "expiry_date BETWEEN '2025-01-15' AND '2025-01-29'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["expiry_date"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next 14 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "from today through 14 days"
+      }
+    },
+    {
+      "english": "Find warehouses created in the past 6 months",
+      "target_table": "warehouses",
+      "sql_where": "created_at >= '2024-07-15 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 6 months",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "6 months before 2025-01-15"
+      }
+    },
+    {
+      "english": "Show inventory restocked in Q4 2024",
+      "target_table": "inventory",
+      "sql_where": "last_restocked_at >= '2024-10-01 00:00:00' AND last_restocked_at < '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["last_restocked_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "Q4 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "Q4 = Oct-Dec 2024"
+      }
+    },
+    {
+      "english": "Find tracking events with no notes",
+      "target_table": "tracking_events",
+      "sql_where": "notes IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["notes"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "notes",
+        "value_types": ["text"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show shipments that were not returned",
+      "target_table": "shipments",
+      "sql_where": "status != 'returned'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find warehouses without a manager assigned",
+      "target_table": "warehouses",
+      "sql_where": "manager_name IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["manager_name"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "manager_name",
+        "value_types": ["string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Find perishable inventory items expiring within the next 7 days, below minimum stock, in active warehouses, with unit cost under 30 dollars",
+      "target_table": "inventory",
+      "sql_where": "is_perishable = TRUE AND expiry_date <= '2025-01-22' AND quantity < min_quantity AND warehouses.is_active = TRUE AND unit_cost < 30.00",
+      "requires_join": true,
+      "join_clause": "JOIN warehouses ON inventory.warehouse_id = warehouses.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_perishable", "expiry_date", "quantity", "min_quantity", "warehouses.is_active", "unit_cost"],
+        "operators_used": ["=", "<=", "<", "=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "date", "integer", "boolean", "decimal"],
+        "ambiguity_notes": "column-to-column comparison for stock level"
+      }
+    },
+    {
+      "english": "Show active cold storage warehouses with manager and utilization over 60 percent managed by someone in Los Angeles",
+      "target_table": "warehouses",
+      "sql_where": "is_active = TRUE AND type = 'cold_storage' AND manager_name IS NOT NULL AND current_utilization > 60 AND location LIKE '%Los Angeles%'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_active", "type", "manager_name", "current_utilization", "location"],
+        "operators_used": ["=", "=", "IS NOT NULL", ">", "LIKE"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum_string", "string", "float", "string"],
+        "ambiguity_notes": "location partial match; managed by someone = manager_name IS NOT NULL"
+      }
+    },
+    {
+      "english": "Find carriers with no contact ratings",
+      "target_table": "carriers",
+      "sql_where": "rating IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["rating"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "rating",
+        "value_types": ["float"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show active bulk warehouses in Texas with high capacity",
+      "target_table": "warehouses",
+      "sql_where": "is_active = TRUE AND type = 'bulk' AND location LIKE '%Texas%' AND capacity > 10000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "type", "location", "capacity"],
+        "operators_used": ["=", "=", "LIKE", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum_string", "string", "integer"],
+        "ambiguity_notes": "high capacity threshold set at 10000"
+      }
+    },
+    {
+      "english": "Find shipments with shipping cost between 10 and 200 dollars",
+      "target_table": "shipments",
+      "sql_where": "shipping_cost BETWEEN 10.00 AND 200.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["shipping_cost"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["decimal"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Show routes with weekly or biweekly frequency",
+      "target_table": "routes",
+      "sql_where": "frequency IN ('weekly', 'biweekly')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["frequency"],
+        "operators_used": ["IN"],
+        "conjunction_type": "OR",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_string"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "List inventory items with max quantity higher than 500 but current quantity below 100",
+      "target_table": "inventory",
+      "sql_where": "max_quantity > 500 AND quantity < 100",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["max_quantity", "quantity"],
+        "operators_used": [">", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["integer", "integer"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

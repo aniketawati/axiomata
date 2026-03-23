@@ -1,0 +1,247 @@
+{
+  "schema_id": "real_estate_011",
+  "domain": "real_estate",
+  "tables": [
+    {
+      "name": "properties",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "address",
+          "type": "TEXT",
+          "nullable": false
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "property_type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "house",
+            "apartment",
+            "condo",
+            "townhouse",
+            "commercial",
+            "land"
+          ]
+        },
+        {
+          "name": "price",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "year_built",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "bedrooms",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "is_featured",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "zip_code",
+          "type": "VARCHAR(10)",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "available",
+            "under_contract",
+            "sold",
+            "off_market"
+          ]
+        },
+        {
+          "name": "lot_size",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "square_feet",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "bathrooms",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "name": "agents",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": false
+        },
+        {
+          "name": "commission_rate",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "license_number",
+          "type": "VARCHAR(50)",
+          "unique": true
+        },
+        {
+          "name": "total_sales",
+          "type": "INT",
+          "default": 0
+        },
+        {
+          "name": "joined_at",
+          "type": "DATE",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "name": "viewings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "listing_id",
+          "type": "INT",
+          "foreign_key": "listings.id"
+        },
+        {
+          "name": "scheduled_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "feedback",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "listings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "property_id",
+          "type": "INT",
+          "foreign_key": "properties.id"
+        },
+        {
+          "name": "agent_id",
+          "type": "INT",
+          "foreign_key": "agents.id"
+        },
+        {
+          "name": "listing_price",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "listed_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_featured",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "expires_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "active",
+            "pending",
+            "sold",
+            "expired",
+            "withdrawn"
+          ]
+        },
+        {
+          "name": "views_count",
+          "type": "INT",
+          "default": 0
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "viewings.listing_id",
+      "to": "listings.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "listings.property_id",
+      "to": "properties.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "listings.agent_id",
+      "to": "agents.id",
+      "type": "many_to_one"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "schema_id": "finance_016",
+  "domain": "finance",
+  "tables": [
+    {
+      "name": "accounts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "account_number",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "account_type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "checking",
+            "savings",
+            "investment",
+            "credit"
+          ]
+        },
+        {
+          "name": "balance",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "last_activity_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "transfers",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "from_account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "to_account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "fee",
+          "type": "DECIMAL(10,2)",
+          "default": 0
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "completed",
+            "failed",
+            "cancelled"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "holdings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "symbol",
+          "type": "VARCHAR(10)",
+          "nullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "DECIMAL(15,6)",
+          "nullable": false
+        },
+        {
+          "name": "purchase_price",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "purchased_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "asset_type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "stock",
+            "bond",
+            "etf",
+            "mutual_fund",
+            "crypto"
+          ]
+        },
+        {
+          "name": "unrealized_gain",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        },
+        {
+          "name": "current_price",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "transactions",
+      "columns": [
+        {
+          "name": "id",
+          "type": "BIGINT",
+          "primary_key": true
+        },
+        {
+          "name": "account_id",
+          "type": "INT",
+          "foreign_key": "accounts.id"
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(15,2)",
+          "nullable": false
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "deposit",
+            "withdrawal",
+            "transfer",
+            "payment",
+            "fee",
+            "interest"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_recurring",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "category",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(500)",
+          "nullable": true
+        },
+        {
+          "name": "merchant_name",
+          "type": "VARCHAR(200)",
+          "nullable": true
+        },
+        {
+          "name": "reference_number",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "completed",
+            "failed",
+            "reversed"
+          ]
+        },
+        {
+          "name": "balance_after",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "transfers.from_account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "transfers.to_account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "holdings.account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "transactions.account_id",
+      "to": "accounts.id",
+      "type": "many_to_one"
+    }
+  ]
+}

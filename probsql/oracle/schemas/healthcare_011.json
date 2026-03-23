@@ -1,0 +1,301 @@
+{
+  "schema_id": "healthcare_011",
+  "domain": "healthcare",
+  "tables": [
+    {
+      "name": "patients",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "gender",
+          "type": "VARCHAR(10)",
+          "enum_values": [
+            "male",
+            "female",
+            "other"
+          ]
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": true
+        },
+        {
+          "name": "blood_type",
+          "type": "VARCHAR(5)",
+          "enum_values": [
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "AB+",
+            "AB-",
+            "O+",
+            "O-"
+          ]
+        },
+        {
+          "name": "emergency_contact",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "allergies",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "address",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "insurance_id",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "prescriptions",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "patient_id",
+          "type": "INT",
+          "foreign_key": "patients.id"
+        },
+        {
+          "name": "doctor_id",
+          "type": "INT",
+          "foreign_key": "doctors.id"
+        },
+        {
+          "name": "medication",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "prescribed_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "duration_days",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "notes",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "frequency",
+          "type": "VARCHAR(50)",
+          "nullable": true
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "lab_results",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "patient_id",
+          "type": "INT",
+          "foreign_key": "patients.id"
+        },
+        {
+          "name": "test_name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "result_value",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "tested_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "completed",
+            "reviewed"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "doctors",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "specialization",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "rating",
+          "type": "FLOAT",
+          "nullable": true
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(20)",
+          "nullable": true
+        },
+        {
+          "name": "is_available",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "license_number",
+          "type": "VARCHAR(50)",
+          "nullable": true,
+          "unique": true
+        },
+        {
+          "name": "years_experience",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "diagnoses",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "patient_id",
+          "type": "INT",
+          "foreign_key": "patients.id"
+        },
+        {
+          "name": "doctor_id",
+          "type": "INT",
+          "foreign_key": "doctors.id"
+        },
+        {
+          "name": "condition",
+          "type": "VARCHAR(200)",
+          "nullable": false
+        },
+        {
+          "name": "diagnosed_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "icd_code",
+          "type": "VARCHAR(10)",
+          "nullable": true
+        },
+        {
+          "name": "severity",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "mild",
+            "moderate",
+            "severe",
+            "critical"
+          ]
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "prescriptions.patient_id",
+      "to": "patients.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "prescriptions.doctor_id",
+      "to": "doctors.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "lab_results.patient_id",
+      "to": "patients.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "diagnoses.patient_id",
+      "to": "patients.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "diagnoses.doctor_id",
+      "to": "doctors.id",
+      "type": "many_to_one"
+    }
+  ]
+}

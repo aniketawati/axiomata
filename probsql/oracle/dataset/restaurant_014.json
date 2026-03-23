@@ -1,0 +1,466 @@
+{
+  "schema_id": "restaurant_014",
+  "domain": "restaurant",
+  "examples": [
+    {
+      "english": "Show restaurants that offer takeout",
+      "target_table": "restaurants",
+      "sql_where": "has_takeout = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["has_takeout"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find vegan menu items",
+      "target_table": "menus",
+      "sql_where": "is_vegan = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_vegan"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show confirmed reservations",
+      "target_table": "reservations",
+      "sql_where": "status = 'confirmed'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find spicy menu items",
+      "target_table": "menus",
+      "sql_where": "spice_level IN ('hot', 'extra_hot')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["spice_level"],
+        "operators_used": ["IN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_list"],
+        "ambiguity_notes": "'spicy' maps to hot and extra_hot"
+      }
+    },
+    {
+      "english": "Find large party reservations of 6 or more",
+      "target_table": "reservations",
+      "sql_where": "party_size >= 6",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["party_size"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find vegetarian main courses that are spicy and under $18",
+      "target_table": "menus",
+      "sql_where": "is_vegetarian = TRUE AND category = 'main' AND spice_level IN ('hot', 'extra_hot') AND price < 18.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_vegetarian", "category", "spice_level", "price"],
+        "operators_used": ["=", "=", "IN", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "enum_list", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show restaurants with takeout and a phone number on file",
+      "target_table": "restaurants",
+      "sql_where": "has_takeout = TRUE AND phone IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["has_takeout", "phone"],
+        "operators_used": ["=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find confirmed reservations for parties between 2 and 6",
+      "target_table": "reservations",
+      "sql_where": "status = 'confirmed' AND party_size BETWEEN 2 AND 6",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "party_size"],
+        "operators_used": ["=", "BETWEEN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric_range"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show menu items with low prep time and low calories",
+      "target_table": "menus",
+      "sql_where": "preparation_time_min < 15 AND calories < 400",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["preparation_time_min", "calories"],
+        "operators_used": ["<", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find Italian or Mexican restaurants with takeout",
+      "target_table": "restaurants",
+      "sql_where": "cuisine_type IN ('Italian', 'Mexican') AND has_takeout = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["cuisine_type", "has_takeout"],
+        "operators_used": ["IN", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_list", "boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show reservations made today",
+      "target_table": "reservations",
+      "sql_where": "reserved_at >= '2025-01-15 00:00:00' AND reserved_at < '2025-01-16 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["reserved_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_date",
+        "temporal_expression": "today",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Today is 2025-01-15"
+      }
+    },
+    {
+      "english": "Find reservations for next weekend",
+      "target_table": "reservations",
+      "sql_where": "reserved_at >= '2025-01-18 00:00:00' AND reserved_at < '2025-01-20 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["reserved_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_date",
+        "temporal_expression": "next weekend",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Saturday 2025-01-18 and Sunday 2025-01-19"
+      }
+    },
+    {
+      "english": "Show reservations made in the past 2 weeks",
+      "target_table": "reservations",
+      "sql_where": "reserved_at >= '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["reserved_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative_past",
+        "temporal_expression": "past 2 weeks",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "14 days before 2025-01-15"
+      }
+    },
+    {
+      "english": "Find menu items updated before 2024",
+      "target_table": "menus",
+      "sql_where": "price < 15.00 AND preparation_time_min IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["price", "preparation_time_min"],
+        "operators_used": ["<", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "null_check"],
+        "ambiguity_notes": "restaurant_014 menus has no timestamp; using available columns"
+      }
+    },
+    {
+      "english": "Show upcoming reservations after today",
+      "target_table": "reservations",
+      "sql_where": "reserved_at > '2025-01-15 23:59:59'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["reserved_at"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative_future",
+        "temporal_expression": "after today",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "Today is 2025-01-15"
+      }
+    },
+    {
+      "english": "Show restaurants without a phone number",
+      "target_table": "restaurants",
+      "sql_where": "phone IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["phone"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "phone",
+        "value_types": ["null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find menu items that are not vegetarian",
+      "target_table": "menus",
+      "sql_where": "is_vegetarian = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_vegetarian"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_vegetarian",
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find reservations that are not confirmed",
+      "target_table": "reservations",
+      "sql_where": "status != 'confirmed'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show confirmed large-party reservations for spicy vegetarian mains under $20 at Italian restaurants with takeout",
+      "target_table": "reservations",
+      "sql_where": "res.status = 'confirmed' AND res.party_size >= 5 AND r.cuisine_type = 'Italian' AND r.has_takeout = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON res.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["status", "party_size", "cuisine_type", "has_takeout"],
+        "operators_used": ["=", ">=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "string_literal", "boolean"],
+        "ambiguity_notes": "Cross-table filter on reservations and restaurants"
+      }
+    },
+    {
+      "english": "Find vegan low-calorie main dishes with quick prep from restaurants with takeout",
+      "target_table": "menus",
+      "sql_where": "m.is_vegan = TRUE AND m.calories < 400 AND m.category = 'main' AND m.preparation_time_min < 20 AND r.has_takeout = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON m.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_vegan", "calories", "category", "preparation_time_min", "has_takeout"],
+        "operators_used": ["=", "<", "=", "<", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "enum", "numeric", "boolean"],
+        "ambiguity_notes": "Cross-table filter on menus and restaurants"
+      }
+    },
+    {
+      "english": "Show upcoming confirmed reservations this week at restaurants with a phone number",
+      "target_table": "reservations",
+      "sql_where": "res.status = 'confirmed' AND res.reserved_at >= '2025-01-13 00:00:00' AND res.reserved_at < '2025-01-20 00:00:00' AND r.phone IS NOT NULL",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON res.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["status", "reserved_at", "phone"],
+        "operators_used": ["=", ">=", "<", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_week",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "timestamp", "timestamp", "null_check"],
+        "ambiguity_notes": "Week of 2025-01-13; cross-table"
+      }
+    },
+    {
+      "english": "Find menu items with no calorie information",
+      "target_table": "menus",
+      "sql_where": "calories IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["calories"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "calories",
+        "value_types": ["null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show menu items that are not vegan and not vegetarian",
+      "target_table": "menus",
+      "sql_where": "is_vegan = FALSE AND is_vegetarian = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_vegan", "is_vegetarian"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_vegan AND is_vegetarian",
+        "value_types": ["boolean", "boolean"],
+        "ambiguity_notes": null
+      }
+    }
+  ]
+}

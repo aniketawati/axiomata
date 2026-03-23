@@ -1,0 +1,506 @@
+{
+  "schema_id": "healthcare_011",
+  "domain": "healthcare",
+  "examples": [
+    {
+      "english": "Active patients",
+      "target_table": "patients",
+      "sql_where": "patients.is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["patients.is_active"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Patients with blood type O positive",
+      "target_table": "patients",
+      "sql_where": "patients.blood_type = 'O+'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["patients.blood_type"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Patients over 65 years old",
+      "target_table": "patients",
+      "sql_where": "patients.date_of_birth < DATE '2025-01-15' - INTERVAL '65 years'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["patients.date_of_birth"],
+        "operators_used": ["<"],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "over 65 years old",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["computed"],
+        "ambiguity_notes": "Age calculated from current date 2025-01-15"
+      }
+    },
+    {
+      "english": "Lab results with a completed status",
+      "target_table": "lab_results",
+      "sql_where": "lab_results.status = 'completed'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["lab_results.status"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Doctors with a rating above 4.5",
+      "target_table": "doctors",
+      "sql_where": "doctors.rating > 4.5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["doctors.rating"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Diagnoses with critical severity",
+      "target_table": "diagnoses",
+      "sql_where": "diagnoses.severity = 'critical'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["diagnoses.severity"],
+        "operators_used": ["="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Prescriptions lasting more than 30 days",
+      "target_table": "prescriptions",
+      "sql_where": "prescriptions.duration_days > 30",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["prescriptions.duration_days"],
+        "operators_used": [">"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["number"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Available cardiologist doctors",
+      "target_table": "doctors",
+      "sql_where": "doctors.is_available = TRUE AND doctors.specialization = 'Cardiology'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "simple",
+        "columns_referenced": ["doctors.is_available", "doctors.specialization"],
+        "operators_used": ["="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "string_literal"],
+        "ambiguity_notes": "Cardiology is assumed value; actual specialization values not enumerated in schema"
+      }
+    },
+    {
+      "english": "Active male patients with a known blood type",
+      "target_table": "patients",
+      "sql_where": "patients.is_active = TRUE AND patients.gender = 'male' AND patients.blood_type IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["patients.is_active", "patients.gender", "patients.blood_type"],
+        "operators_used": ["=", "IS NOT NULL"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Critical or severe diagnoses made by experienced doctors",
+      "target_table": "diagnoses",
+      "sql_where": "(diagnoses.severity = 'critical' OR diagnoses.severity = 'severe') AND doctors.years_experience >= 10",
+      "requires_join": true,
+      "join_clause": "JOIN doctors ON diagnoses.doctor_id = doctors.id",
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["diagnoses.severity", "doctors.years_experience"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "mixed",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "number"],
+        "ambiguity_notes": "experienced defined as >= 10 years"
+      }
+    },
+    {
+      "english": "Active prescriptions for female patients",
+      "target_table": "prescriptions",
+      "sql_where": "prescriptions.is_active = TRUE AND patients.gender = 'female'",
+      "requires_join": true,
+      "join_clause": "JOIN patients ON prescriptions.patient_id = patients.id",
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["prescriptions.is_active", "patients.gender"],
+        "operators_used": ["="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Pending lab results or results with abnormal values",
+      "target_table": "lab_results",
+      "sql_where": "lab_results.status = 'pending' OR lab_results.result_value IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["lab_results.status", "lab_results.result_value"],
+        "operators_used": ["=", "IS NOT NULL"],
+        "conjunction_type": "or",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "null"],
+        "ambiguity_notes": "abnormal values interpreted as non-null result_value; schema has no is_abnormal column in 011"
+      }
+    },
+    {
+      "english": "Diagnoses with moderate severity linked to patients with AB negative blood type",
+      "target_table": "diagnoses",
+      "sql_where": "diagnoses.severity = 'moderate' AND patients.blood_type = 'AB-'",
+      "requires_join": true,
+      "join_clause": "JOIN patients ON diagnoses.patient_id = patients.id",
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["diagnoses.severity", "patients.blood_type"],
+        "operators_used": ["="],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Lab results tested in the past 30 days",
+      "target_table": "lab_results",
+      "sql_where": "lab_results.tested_at >= '2024-12-16 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["lab_results.tested_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "past 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Computed from 2025-01-15 minus 30 days"
+      }
+    },
+    {
+      "english": "Prescriptions issued since January 1st 2025",
+      "target_table": "prescriptions",
+      "sql_where": "prescriptions.prescribed_at >= '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["prescriptions.prescribed_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "absolute_date",
+        "temporal_expression": "since January 1st 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Patients registered in the past year",
+      "target_table": "patients",
+      "sql_where": "patients.created_at >= '2024-01-15 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["patients.created_at"],
+        "operators_used": [">="],
+        "conjunction_type": "none",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "past year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Computed as current date minus 1 year"
+      }
+    },
+    {
+      "english": "Diagnoses made between July and December 2024",
+      "target_table": "diagnoses",
+      "sql_where": "diagnoses.diagnosed_at >= '2024-07-01 00:00:00' AND diagnoses.diagnosed_at < '2025-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["diagnoses.diagnosed_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "date_range",
+        "temporal_expression": "between July and December 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Lab results reviewed in the last 7 days",
+      "target_table": "lab_results",
+      "sql_where": "lab_results.tested_at >= '2025-01-08 00:00:00' AND lab_results.status = 'reviewed'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "temporal",
+        "columns_referenced": ["lab_results.tested_at", "lab_results.status"],
+        "operators_used": [">=", "="],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "last 7 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date", "enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Patients with no allergies listed",
+      "target_table": "patients",
+      "sql_where": "patients.allergies IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["patients.allergies"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Doctors with no insurance or license information on file",
+      "target_table": "doctors",
+      "sql_where": "doctors.license_number IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["doctors.license_number"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "existence",
+        "value_types": ["null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Lab results that are not pending",
+      "target_table": "lab_results",
+      "sql_where": "lab_results.status != 'pending'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "negation",
+        "columns_referenced": ["lab_results.status"],
+        "operators_used": ["!="],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "operator",
+        "value_types": ["enum"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Active female patients over 40 who have an insurance ID and a blood type on record",
+      "target_table": "patients",
+      "sql_where": "patients.is_active = TRUE AND patients.gender = 'female' AND patients.date_of_birth < '1985-01-15' AND patients.insurance_id IS NOT NULL AND patients.blood_type IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["patients.is_active", "patients.gender", "patients.date_of_birth", "patients.insurance_id", "patients.blood_type"],
+        "operators_used": ["=", "<", "IS NOT NULL"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "over 40",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "date", "null"],
+        "ambiguity_notes": "Age 40 computed as 2025-01-15 minus 40 years"
+      }
+    },
+    {
+      "english": "Critical diagnoses issued in 2024 by doctors with more than 5 years experience for patients with known allergies",
+      "target_table": "diagnoses",
+      "sql_where": "diagnoses.severity = 'critical' AND diagnoses.diagnosed_at >= '2024-01-01 00:00:00' AND diagnoses.diagnosed_at < '2025-01-01 00:00:00' AND doctors.years_experience > 5 AND patients.allergies IS NOT NULL",
+      "requires_join": true,
+      "join_clause": "JOIN doctors ON diagnoses.doctor_id = doctors.id JOIN patients ON diagnoses.patient_id = patients.id",
+      "latent_variables": {
+        "predicate_type": "complex",
+        "columns_referenced": ["diagnoses.severity", "diagnoses.diagnosed_at", "doctors.years_experience", "patients.allergies"],
+        "operators_used": ["=", ">=", "<", ">", "IS NOT NULL"],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "date_range",
+        "temporal_expression": "in 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "date", "number", "null"],
+        "ambiguity_notes": "none"
+      }
+    },
+    {
+      "english": "Prescriptions with twice-daily frequency issued in the last 90 days that are still active",
+      "target_table": "prescriptions",
+      "sql_where": "prescriptions.frequency = 'twice daily' AND prescriptions.prescribed_at >= '2024-10-17 00:00:00' AND prescriptions.is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["prescriptions.frequency", "prescriptions.prescribed_at", "prescriptions.is_active"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "and",
+        "has_temporal": true,
+        "temporal_type": "relative_to_now",
+        "temporal_expression": "last 90 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_literal", "date", "boolean"],
+        "ambiguity_notes": "frequency value 'twice daily' is illustrative; column is free-text VARCHAR"
+      }
+    },
+    {
+      "english": "Reviewed lab results for male patients that have a result value recorded",
+      "target_table": "lab_results",
+      "sql_where": "lab_results.status = 'reviewed' AND patients.gender = 'male' AND lab_results.result_value IS NOT NULL",
+      "requires_join": true,
+      "join_clause": "JOIN patients ON lab_results.patient_id = patients.id",
+      "latent_variables": {
+        "predicate_type": "compound",
+        "columns_referenced": ["lab_results.status", "patients.gender", "lab_results.result_value"],
+        "operators_used": ["=", "IS NOT NULL"],
+        "conjunction_type": "and",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "null"],
+        "ambiguity_notes": "none"
+      }
+    }
+  ]
+}

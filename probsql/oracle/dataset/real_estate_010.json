@@ -1,0 +1,466 @@
+{
+  "schema_id": "real_estate_010",
+  "domain": "real_estate",
+  "examples": [
+    {
+      "english": "Show all featured properties",
+      "target_table": "properties",
+      "sql_where": "is_featured = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_featured"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find completed viewings",
+      "target_table": "viewings",
+      "sql_where": "status = 'completed'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show available properties in Atlanta",
+      "target_table": "properties",
+      "sql_where": "status = 'available' AND city = 'Atlanta'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status", "city"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find listings with over 500 views",
+      "target_table": "listings",
+      "sql_where": "views_count > 500",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["views_count"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show highly rated agents",
+      "target_table": "agents",
+      "sql_where": "rating >= 4.5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["rating"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "highly rated interpreted as >= 4.5"
+      }
+    },
+    {
+      "english": "Find properties priced between $250,000 and $550,000",
+      "target_table": "properties",
+      "sql_where": "price BETWEEN 250000 AND 550000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["price"],
+        "operators_used": ["BETWEEN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show listings on the market for fewer than 15 days",
+      "target_table": "listings",
+      "sql_where": "days_on_market < 15",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["days_on_market"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find high-interest viewings with feedback provided on active listings",
+      "target_table": "viewings",
+      "sql_where": "v.interest_level = 'high' AND v.feedback IS NOT NULL AND l.listing_price > 0",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON viewings.listing_id = l.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["interest_level", "feedback", "listing_price"],
+        "operators_used": ["=", "IS NOT NULL", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "null_check", "numeric"],
+        "ambiguity_notes": "listing_price > 0 used to confirm active listing"
+      }
+    },
+    {
+      "english": "Show available houses with at least 4 bedrooms under $700,000",
+      "target_table": "properties",
+      "sql_where": "status = 'available' AND property_type = 'house' AND bedrooms >= 4 AND price < 700000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "property_type", "bedrooms", "price"],
+        "operators_used": ["=", "=", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum", "numeric", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find high-rated agents handling viewings with completed status on popular listings",
+      "target_table": "viewings",
+      "sql_where": "v.status = 'completed' AND a.rating >= 4.0 AND l.views_count > 100",
+      "requires_join": true,
+      "join_clause": "JOIN agents a ON viewings.agent_id = a.id JOIN listings l ON viewings.listing_id = l.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "rating", "views_count"],
+        "operators_used": ["=", ">=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show listings with over 400 views on available condos with square footage over 1,200",
+      "target_table": "listings",
+      "sql_where": "l.views_count > 400 AND p.status = 'available' AND p.property_type = 'condo' AND p.square_feet > 1200",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON listings.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["views_count", "status", "property_type", "square_feet"],
+        "operators_used": [">", "=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "enum", "enum", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find offers over $800,000 on properties priced under $850,000 with highly rated listing agents",
+      "target_table": "offers",
+      "sql_where": "o.amount > 800000 AND p.price < 850000 AND a.rating >= 4.5",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON offers.listing_id = l.id JOIN properties p ON l.property_id = p.id JOIN agents a ON l.agent_id = a.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["amount", "price", "rating"],
+        "operators_used": [">", "<", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "numeric", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show listings posted in the past month",
+      "target_table": "listings",
+      "sql_where": "listed_at >= '2024-12-15'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["listed_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "One month before 2025-01-15 is 2024-12-15"
+      }
+    },
+    {
+      "english": "Find agents who joined before 2020",
+      "target_table": "agents",
+      "sql_where": "joined_at < '2020-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["joined_at"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "before 2020",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show viewings scheduled last month",
+      "target_table": "viewings",
+      "sql_where": "scheduled_at >= '2024-12-01' AND scheduled_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["scheduled_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Last month = December 2024"
+      }
+    },
+    {
+      "english": "Find offers expiring in the next 48 hours",
+      "target_table": "offers",
+      "sql_where": "expires_at IS NOT NULL AND expires_at >= '2025-01-15' AND expires_at < '2025-01-17'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["expires_at"],
+        "operators_used": ["IS NOT NULL", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next 48 hours",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "date"],
+        "ambiguity_notes": "48 hours expressed as 2 days"
+      }
+    },
+    {
+      "english": "Show properties that are not houses",
+      "target_table": "properties",
+      "sql_where": "property_type != 'house'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["property_type"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "property_type",
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find listings with no views yet",
+      "target_table": "listings",
+      "sql_where": "views_count = 0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["views_count"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "views_count",
+        "value_types": ["numeric"],
+        "ambiguity_notes": "no views = zero count"
+      }
+    },
+    {
+      "english": "Show agents with no rating on file",
+      "target_table": "agents",
+      "sql_where": "rating IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["rating"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "rating",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find high-interest completed viewings in the past 30 days on featured houses in Georgia with listing prices over $400,000 handled by agents with a rating above 4.0",
+      "target_table": "viewings",
+      "sql_where": "v.interest_level = 'high' AND v.status = 'completed' AND v.scheduled_at >= '2024-12-16' AND p.is_featured = TRUE AND p.property_type = 'house' AND p.city = 'Atlanta' AND l.listing_price > 400000 AND a.rating > 4.0",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON viewings.listing_id = l.id JOIN properties p ON l.property_id = p.id JOIN agents a ON viewings.agent_id = a.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["interest_level", "status", "scheduled_at", "is_featured", "property_type", "city", "listing_price", "rating"],
+        "operators_used": ["=", "=", ">=", "=", "=", "=", ">", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "past 30 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum", "date", "boolean", "enum", "string", "numeric", "numeric"],
+        "ambiguity_notes": "Georgia proxied with Atlanta"
+      }
+    },
+    {
+      "english": "Show listings from well-rated agents with a high view count posted this year on available condos priced under $600,000 in Chicago",
+      "target_table": "listings",
+      "sql_where": "a.rating >= 4.5 AND l.views_count > 300 AND l.listed_at >= '2025-01-01' AND p.status = 'available' AND p.property_type = 'condo' AND l.listing_price < 600000 AND p.city = 'Chicago'",
+      "requires_join": true,
+      "join_clause": "JOIN agents a ON listings.agent_id = a.id JOIN properties p ON listings.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["rating", "views_count", "listed_at", "status", "property_type", "listing_price", "city"],
+        "operators_used": [">=", ">", ">=", "=", "=", "<", "="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "numeric", "date", "enum", "enum", "numeric", "string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find townhouses priced over $600,000",
+      "target_table": "properties",
+      "sql_where": "property_type = 'townhouse' AND price > 600000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["property_type", "price"],
+        "operators_used": ["=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show viewings with feedback that were completed last month",
+      "target_table": "viewings",
+      "sql_where": "feedback IS NOT NULL AND status = 'completed' AND scheduled_at >= '2024-12-01' AND scheduled_at < '2025-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["feedback", "status", "scheduled_at"],
+        "operators_used": ["IS NOT NULL", "=", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "enum", "date"],
+        "ambiguity_notes": "Last month = December 2024"
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "schema_id": "saas_008",
+  "domain": "saas",
+  "tables": [
+    {
+      "name": "teams",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "plan_id",
+          "type": "INT",
+          "foreign_key": "plans.id"
+        }
+      ]
+    },
+    {
+      "name": "features",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "key",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "subscriptions",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "team_id",
+          "type": "INT",
+          "foreign_key": "teams.id"
+        },
+        {
+          "name": "plan_id",
+          "type": "INT",
+          "foreign_key": "plans.id"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "active",
+            "cancelled",
+            "past_due",
+            "trialing",
+            "expired"
+          ]
+        },
+        {
+          "name": "started_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "cancelled_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "trial_ends_at",
+          "type": "TIMESTAMP",
+          "nullable": true
+        },
+        {
+          "name": "is_annual",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "monthly_amount",
+          "type": "DECIMAL(10,2)",
+          "nullable": false
+        },
+        {
+          "name": "current_period_end",
+          "type": "TIMESTAMP",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "plans",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(50)",
+          "nullable": false
+        },
+        {
+          "name": "price_monthly",
+          "type": "DECIMAL(10,2)",
+          "nullable": false
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "tier",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "free",
+            "starter",
+            "pro",
+            "enterprise"
+          ]
+        },
+        {
+          "name": "max_storage_gb",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "price_annual",
+          "type": "DECIMAL(10,2)",
+          "nullable": true
+        },
+        {
+          "name": "features",
+          "type": "TEXT",
+          "nullable": true
+        },
+        {
+          "name": "max_users",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "teams.plan_id",
+      "to": "plans.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "subscriptions.team_id",
+      "to": "teams.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "subscriptions.plan_id",
+      "to": "plans.id",
+      "type": "many_to_one"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "schema_id": "hr_019",
+  "domain": "hr",
+  "tables": [
+    {
+      "name": "roles",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "level",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "junior",
+            "mid",
+            "senior",
+            "lead",
+            "principal",
+            "director",
+            "vp"
+          ]
+        },
+        {
+          "name": "max_salary",
+          "type": "DECIMAL(12,2)",
+          "nullable": true
+        },
+        {
+          "name": "department_id",
+          "type": "INT",
+          "foreign_key": "departments.id"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "min_salary",
+          "type": "DECIMAL(12,2)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "departments",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "budget",
+          "type": "DECIMAL(15,2)",
+          "nullable": true
+        },
+        {
+          "name": "location",
+          "type": "VARCHAR(100)",
+          "nullable": true
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "head_id",
+          "type": "INT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "leave_requests",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "employee_id",
+          "type": "INT",
+          "foreign_key": "employees.id"
+        },
+        {
+          "name": "start_date",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "end_date",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "pending",
+            "approved",
+            "rejected",
+            "cancelled"
+          ]
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "vacation",
+            "sick",
+            "personal",
+            "maternity",
+            "paternity",
+            "bereavement"
+          ]
+        },
+        {
+          "name": "days_count",
+          "type": "INT",
+          "nullable": false
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "nullable": false
+        },
+        {
+          "name": "approved_by",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "reason",
+          "type": "TEXT",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "performance_reviews",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "employee_id",
+          "type": "INT",
+          "foreign_key": "employees.id"
+        },
+        {
+          "name": "reviewer_id",
+          "type": "INT",
+          "foreign_key": "employees.id"
+        },
+        {
+          "name": "rating",
+          "type": "FLOAT",
+          "nullable": false
+        },
+        {
+          "name": "review_date",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "period",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4",
+            "annual"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "employees",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "nullable": false
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "unique": true
+        },
+        {
+          "name": "department_id",
+          "type": "INT",
+          "foreign_key": "departments.id"
+        },
+        {
+          "name": "hired_at",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "enum_values": [
+            "active",
+            "on_leave",
+            "terminated",
+            "probation"
+          ]
+        },
+        {
+          "name": "manager_id",
+          "type": "INT",
+          "nullable": true
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATE",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "name": "salaries",
+      "columns": [
+        {
+          "name": "id",
+          "type": "INT",
+          "primary_key": true
+        },
+        {
+          "name": "employee_id",
+          "type": "INT",
+          "foreign_key": "employees.id"
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(12,2)",
+          "nullable": false
+        },
+        {
+          "name": "effective_date",
+          "type": "DATE",
+          "nullable": false
+        },
+        {
+          "name": "bonus",
+          "type": "DECIMAL(12,2)",
+          "default": 0
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR(3)",
+          "default": "USD"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "roles.department_id",
+      "to": "departments.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "leave_requests.employee_id",
+      "to": "employees.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "performance_reviews.employee_id",
+      "to": "employees.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "performance_reviews.reviewer_id",
+      "to": "employees.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "employees.department_id",
+      "to": "departments.id",
+      "type": "many_to_one"
+    },
+    {
+      "from": "salaries.employee_id",
+      "to": "employees.id",
+      "type": "many_to_one"
+    }
+  ]
+}

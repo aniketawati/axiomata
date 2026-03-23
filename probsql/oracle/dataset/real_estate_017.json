@@ -1,0 +1,466 @@
+{
+  "schema_id": "real_estate_017",
+  "domain": "real_estate",
+  "examples": [
+    {
+      "english": "Show all active listings",
+      "target_table": "listings",
+      "sql_where": "status = 'active'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active tenants",
+      "target_table": "tenants",
+      "sql_where": "is_active = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show available properties in Oregon",
+      "target_table": "properties",
+      "sql_where": "status = 'available' AND state = 'Oregon'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status", "state"],
+        "operators_used": ["=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find featured listings",
+      "target_table": "listings",
+      "sql_where": "is_featured = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_featured"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show high-interest viewings",
+      "target_table": "viewings",
+      "sql_where": "interest_level = 'high'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["interest_level"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active agents with high ratings",
+      "target_table": "agents",
+      "sql_where": "is_active = TRUE AND rating >= 4.5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["is_active", "rating"],
+        "operators_used": ["=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric"],
+        "ambiguity_notes": "high rating = >= 4.5"
+      }
+    },
+    {
+      "english": "Show properties with lot sizes over 2 acres",
+      "target_table": "properties",
+      "sql_where": "lot_size > 2.0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["lot_size"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": "lot_size in acres"
+      }
+    },
+    {
+      "english": "Find active featured listings posted in the last 14 days with listing price under $600,000",
+      "target_table": "listings",
+      "sql_where": "status = 'active' AND is_featured = TRUE AND listed_at >= '2025-01-01' AND listing_price < 600000",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "is_featured", "listed_at", "listing_price"],
+        "operators_used": ["=", "=", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 14 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "date", "numeric"],
+        "ambiguity_notes": "14 days before 2025-01-15 is 2025-01-01"
+      }
+    },
+    {
+      "english": "Show active tenants paying above $2,500 rent on available properties in Oregon",
+      "target_table": "tenants",
+      "sql_where": "t.is_active = TRUE AND t.monthly_rent > 2500 AND p.status = 'available' AND p.state = 'Oregon'",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON tenants.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_active", "monthly_rent", "status", "state"],
+        "operators_used": ["=", ">", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "enum", "string"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find high-interest completed viewings on active listings from well-rated agents",
+      "target_table": "viewings",
+      "sql_where": "v.interest_level = 'high' AND v.status = 'completed' AND l.status = 'active' AND a.rating >= 4.0",
+      "requires_join": true,
+      "join_clause": "JOIN listings l ON viewings.listing_id = l.id JOIN agents a ON l.agent_id = a.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["interest_level", "status", "status", "rating"],
+        "operators_used": ["=", "=", "=", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum", "enum", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show available houses built after 2000 in Oregon with lot size over 1 acre",
+      "target_table": "properties",
+      "sql_where": "status = 'available' AND property_type = 'house' AND year_built > 2000 AND state = 'Oregon' AND lot_size > 1.0",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "property_type", "year_built", "state", "lot_size"],
+        "operators_used": ["=", "=", ">", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "after 2000",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum", "year", "string", "numeric"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active featured listings with high views on available properties in the Pacific Northwest",
+      "target_table": "listings",
+      "sql_where": "l.status = 'active' AND l.is_featured = TRUE AND l.views_count > 200 AND p.status = 'available' AND p.state IN ('Oregon', 'Washington')",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON listings.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["status", "is_featured", "views_count", "status", "state"],
+        "operators_used": ["=", "=", ">", "=", "IN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "numeric", "enum", "string_list"],
+        "ambiguity_notes": "Pacific Northwest interpreted as Oregon and Washington"
+      }
+    },
+    {
+      "english": "Show listings posted in the last 45 days",
+      "target_table": "listings",
+      "sql_where": "listed_at >= '2024-12-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["listed_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "last 45 days",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "45 days before 2025-01-15 is approximately Dec 1, 2024"
+      }
+    },
+    {
+      "english": "Find tenants whose leases expire this quarter",
+      "target_table": "tenants",
+      "sql_where": "lease_end >= '2025-01-01' AND lease_end < '2025-04-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["lease_end"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this quarter",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Q1 2025 = Jan to Mar"
+      }
+    },
+    {
+      "english": "Show agents who joined in 2022 or 2023",
+      "target_table": "agents",
+      "sql_where": "joined_at >= '2022-01-01' AND joined_at < '2024-01-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["joined_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "absolute",
+        "temporal_expression": "2022 or 2023",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find viewings scheduled for next month",
+      "target_table": "viewings",
+      "sql_where": "scheduled_at >= '2025-02-01' AND scheduled_at < '2025-03-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["scheduled_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "next month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "Next month = February 2025"
+      }
+    },
+    {
+      "english": "Show tenants whose leases have not expired",
+      "target_table": "tenants",
+      "sql_where": "status != 'expired'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find properties without a lot size recorded",
+      "target_table": "properties",
+      "sql_where": "lot_size IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["lot_size"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "lot_size",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show listings not yet sold or withdrawn",
+      "target_table": "listings",
+      "sql_where": "status NOT IN ('sold', 'withdrawn')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["status"],
+        "operators_used": ["NOT IN"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "status",
+        "value_types": ["enum_list"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Find active featured listings on available houses built after 2005 in Oregon with more than 3 bedrooms, lot size over 1 acre from high-rated active agents who joined within 3 years and listings with more than 100 views",
+      "target_table": "listings",
+      "sql_where": "l.status = 'active' AND l.is_featured = TRUE AND p.status = 'available' AND p.property_type = 'house' AND p.year_built > 2005 AND p.state = 'Oregon' AND p.lot_size > 1.0 AND a.rating >= 4.0 AND a.is_active = TRUE AND a.joined_at >= '2022-01-15' AND l.views_count > 100",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON listings.property_id = p.id JOIN agents a ON listings.agent_id = a.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["status", "is_featured", "status", "property_type", "year_built", "state", "lot_size", "rating", "is_active", "joined_at", "views_count"],
+        "operators_used": ["=", "=", "=", "=", ">", "=", ">", ">=", "=", ">=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "within 3 years",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "boolean", "enum", "enum", "year", "string", "numeric", "numeric", "boolean", "date", "numeric"],
+        "ambiguity_notes": "3 years before 2025-01-15 is 2022-01-15"
+      }
+    },
+    {
+      "english": "Show active tenants with high deposits paying above $3,000 rent on available properties built after 2010 in the Pacific Northwest with leases expiring this year",
+      "target_table": "tenants",
+      "sql_where": "t.is_active = TRUE AND t.deposit_amount > 5000 AND t.monthly_rent > 3000 AND p.status = 'available' AND p.year_built > 2010 AND p.state IN ('Oregon', 'Washington') AND t.lease_end >= '2025-01-01' AND t.lease_end < '2026-01-01'",
+      "requires_join": true,
+      "join_clause": "JOIN properties p ON tenants.property_id = p.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_active", "deposit_amount", "monthly_rent", "status", "year_built", "state", "lease_end"],
+        "operators_used": ["=", ">", ">", "=", ">", "IN", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "numeric", "numeric", "enum", "year", "string_list", "date"],
+        "ambiguity_notes": "Pacific Northwest = Oregon, Washington"
+      }
+    },
+    {
+      "english": "Find all condos",
+      "target_table": "properties",
+      "sql_where": "property_type = 'condo'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["property_type"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": "None"
+      }
+    },
+    {
+      "english": "Show listings that expire this month",
+      "target_table": "listings",
+      "sql_where": "expires_at >= '2025-01-01' AND expires_at < '2025-02-01'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["expires_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["date"],
+        "ambiguity_notes": "This month = January 2025"
+      }
+    }
+  ]
+}

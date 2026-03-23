@@ -1,0 +1,506 @@
+{
+  "schema_id": "restaurant_002",
+  "domain": "restaurant",
+  "examples": [
+    {
+      "english": "Show me all restaurants with takeout available",
+      "target_table": "restaurants",
+      "sql_where": "has_takeout = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["has_takeout"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find restaurants with seating capacity over 50",
+      "target_table": "restaurants",
+      "sql_where": "seating_capacity > 50",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["seating_capacity"],
+        "operators_used": [">"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "List all menu items under $10",
+      "target_table": "menus",
+      "sql_where": "price < 10.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["price"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Get reviews with a service rating of 5",
+      "target_table": "reviews",
+      "sql_where": "service_rating = 5",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["service_rating"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find all orders that are currently in preparing status",
+      "target_table": "orders",
+      "sql_where": "status = 'preparing'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "SIMPLE",
+        "columns_referenced": ["status"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show dessert items with fewer than 300 calories",
+      "target_table": "menus",
+      "sql_where": "category = 'dessert' AND calories < 300",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["category", "calories"],
+        "operators_used": ["=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find restaurants in New York that offer both delivery and takeout",
+      "target_table": "restaurants",
+      "sql_where": "city = 'New York' AND has_delivery = TRUE AND has_takeout = TRUE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["city", "has_delivery", "has_takeout"],
+        "operators_used": ["=", "=", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["string_literal", "boolean", "boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show me paid delivery orders over $40",
+      "target_table": "orders",
+      "sql_where": "is_paid = TRUE AND order_type = 'delivery' AND total_amount > 40.00",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["is_paid", "order_type", "total_amount"],
+        "operators_used": ["=", "=", ">"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "numeric"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find hot or extra hot menu items that are drinks or appetizers",
+      "target_table": "menus",
+      "sql_where": "spice_level IN ('hot', 'extra_hot') AND category IN ('drink', 'appetizer')",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["spice_level", "category"],
+        "operators_used": ["IN", "IN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_list", "enum_list"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show orders with rating 4 or 5 and at least some ambiance score",
+      "target_table": "reviews",
+      "sql_where": "rating >= 4 AND ambiance_rating IS NOT NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["rating", "ambiance_rating"],
+        "operators_used": [">=", "IS NOT NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["numeric", "null_check"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show orders placed in the past 24 hours",
+      "target_table": "orders",
+      "sql_where": "created_at >= '2025-01-14 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">="],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "relative_past",
+        "temporal_expression": "past 24 hours",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": "Based on current date 2025-01-15"
+      }
+    },
+    {
+      "english": "Find restaurants created before 2024",
+      "target_table": "restaurants",
+      "sql_where": "created_at < '2024-01-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": ["<"],
+        "conjunction_type": null,
+        "has_temporal": true,
+        "temporal_type": "year_boundary",
+        "temporal_expression": "before 2024",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show orders delivered this week",
+      "target_table": "orders",
+      "sql_where": "delivered_at >= '2025-01-13 00:00:00' AND delivered_at < '2025-01-20 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["delivered_at"],
+        "operators_used": [">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_week",
+        "temporal_expression": "this week",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": "Week starting Monday 2025-01-13"
+      }
+    },
+    {
+      "english": "Find reviews written between January 1 and January 15 2025",
+      "target_table": "reviews",
+      "sql_where": "created_at >= '2025-01-01 00:00:00' AND created_at <= '2025-01-15 23:59:59'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["created_at"],
+        "operators_used": [">=", "<="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "date_range",
+        "temporal_expression": "between January 1 and January 15 2025",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show orders with estimated delivery today that have not arrived yet",
+      "target_table": "orders",
+      "sql_where": "estimated_delivery_at >= '2025-01-15 00:00:00' AND estimated_delivery_at < '2025-01-16 00:00:00' AND delivered_at IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "TEMPORAL",
+        "columns_referenced": ["estimated_delivery_at", "delivered_at"],
+        "operators_used": [">=", "<", "IS NULL"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "specific_date",
+        "temporal_expression": "today",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["timestamp", "timestamp", "null_check"],
+        "ambiguity_notes": "Today is 2025-01-15"
+      }
+    },
+    {
+      "english": "Find restaurants without delivery service",
+      "target_table": "restaurants",
+      "sql_where": "has_delivery = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["has_delivery"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "has_delivery",
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show orders that were not placed as dine-in",
+      "target_table": "orders",
+      "sql_where": "order_type != 'dine_in'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["order_type"],
+        "operators_used": ["!="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "order_type",
+        "value_types": ["enum"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Find reviews with no body text",
+      "target_table": "reviews",
+      "sql_where": "body IS NULL",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["body"],
+        "operators_used": ["IS NULL"],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "body",
+        "value_types": ["null_check"],
+        "ambiguity_notes": "'no body text' maps to IS NULL"
+      }
+    },
+    {
+      "english": "Show me active restaurants in Chicago with rating above 4 that offer delivery, where menu items include spicy mains under $25",
+      "target_table": "menus",
+      "sql_where": "m.category = 'main' AND m.spice_level IN ('hot', 'extra_hot') AND m.price < 25.00 AND r.is_active = TRUE AND r.city = 'Chicago' AND r.rating > 4.0 AND r.has_delivery = TRUE",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON m.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["category", "spice_level", "price", "is_active", "city", "rating", "has_delivery"],
+        "operators_used": ["=", "IN", "<", "=", "=", ">", "="],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "enum_list", "numeric", "boolean", "string_literal", "numeric", "boolean"],
+        "ambiguity_notes": "Cross-table filter on menus joined to restaurants"
+      }
+    },
+    {
+      "english": "Find paid dine-in orders over $60 from restaurants rated above 4.5 that opened this year",
+      "target_table": "orders",
+      "sql_where": "o.is_paid = TRUE AND o.order_type = 'dine_in' AND o.total_amount > 60.00 AND r.rating > 4.5 AND r.created_at >= '2025-01-01 00:00:00'",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON o.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["is_paid", "order_type", "total_amount", "rating", "created_at"],
+        "operators_used": ["=", "=", ">", ">", ">="],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_year",
+        "temporal_expression": "opened this year",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["boolean", "enum", "numeric", "numeric", "timestamp"],
+        "ambiguity_notes": "Temporal filter on restaurants.created_at, join to orders"
+      }
+    },
+    {
+      "english": "Show me low-calorie (under 200 cal) vegan drinks from any restaurant",
+      "target_table": "menus",
+      "sql_where": "category = 'drink' AND calories < 200",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["category", "calories"],
+        "operators_used": ["=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum", "numeric"],
+        "ambiguity_notes": "restaurant_002 menus does not have is_vegan; filter by category and calories only"
+      }
+    },
+    {
+      "english": "Find restaurants that are not active",
+      "target_table": "restaurants",
+      "sql_where": "is_active = FALSE",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "NEGATION",
+        "columns_referenced": ["is_active"],
+        "operators_used": ["="],
+        "conjunction_type": null,
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "is_active",
+        "value_types": ["boolean"],
+        "ambiguity_notes": null
+      }
+    },
+    {
+      "english": "Show reviews with a body that were submitted this month",
+      "target_table": "reviews",
+      "sql_where": "body IS NOT NULL AND created_at >= '2025-01-01 00:00:00' AND created_at < '2025-02-01 00:00:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["body", "created_at"],
+        "operators_used": ["IS NOT NULL", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": true,
+        "temporal_type": "relative_month",
+        "temporal_expression": "this month",
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["null_check", "timestamp", "timestamp"],
+        "ambiguity_notes": "January 2025"
+      }
+    },
+    {
+      "english": "Find mid-range restaurants with seating for 30 or more that open before 10am",
+      "target_table": "restaurants",
+      "sql_where": "price_range IN ('$$', '$$$') AND seating_capacity >= 30 AND opening_time < '10:00'",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "COMPOUND",
+        "columns_referenced": ["price_range", "seating_capacity", "opening_time"],
+        "operators_used": ["IN", ">=", "<"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": ["enum_list", "numeric", "time_string"],
+        "ambiguity_notes": "opening_time is VARCHAR(10), compared as string time"
+      }
+    },
+    {
+      "english": "Show low-calorie hot menu items from restaurants that are not mid-range priced",
+      "target_table": "menus",
+      "sql_where": "m.spice_level = 'hot' AND m.calories < 400 AND r.price_range NOT IN ('$$', '$$$')",
+      "requires_join": true,
+      "join_clause": "JOIN restaurants r ON m.restaurant_id = r.id",
+      "latent_variables": {
+        "predicate_type": "COMPLEX",
+        "columns_referenced": ["spice_level", "calories", "price_range"],
+        "operators_used": ["=", "<", "NOT IN"],
+        "conjunction_type": "AND",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": true,
+        "negation_scope": "price_range",
+        "value_types": ["enum", "numeric", "enum_list"],
+        "ambiguity_notes": "Requires join; negation on restaurant price_range"
+      }
+    }
+  ]
+}
