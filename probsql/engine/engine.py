@@ -97,7 +97,7 @@ class ProbSQLEngine:
         # and better discrimination before it can be the primary path.
         if self._semextract_loaded:
             sem_result = self._try_semextract(english, schema, debug)
-            if sem_result and sem_result.confidence > 0.88:
+            if sem_result and sem_result.confidence > 0.95:
                 return sem_result
 
         # Step 1: Parse compound structure
@@ -278,12 +278,13 @@ class ProbSQLEngine:
             return None
 
         # Step 3: Identify the SELECT column (to exclude from WHERE candidates)
-        select_candidates = decomp.get("select_column_candidates", [])
+        select_col = self.column_resolver.identify_select_column(english, headers)
         exclude_cols = set()
-        if select_candidates:
-            exclude_cols.add(select_candidates[0][0])
+        if select_col:
+            exclude_cols.add(select_col)
+        debug["steps"].append({"step": "semextract_select", "select_col": select_col})
 
-        # Step 4: For each spotted value, resolve to a column
+        # Step 4: For each spotted value, resolve to a column using Bayesian chain
         conditions = []
         columns_info = [{"name": h, "type": t} for h, t in zip(headers, col_types)]
 
@@ -292,8 +293,8 @@ class ProbSQLEngine:
                 spotted_val["value"],
                 spotted_val["type"],
                 columns_info,
-                exclude_columns=exclude_cols,
                 question=english,
+                exclude_columns=exclude_cols,
             )
             if resolved and resolved[0][1] > 0.3:
                 best_col_name, col_confidence = resolved[0]

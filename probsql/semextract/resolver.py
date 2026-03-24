@@ -1,186 +1,262 @@
 """
-ColumnResolver — Maps (value, value_type) to the best column in a schema.
+ColumnResolver — Maps (value, value_type, question, schema) to the best WHERE column.
 
-Given:
-  value="Butler CC (KS)", type="institution", columns=["Player","No.","Position","School/Club Team"]
-Returns:
-  "School/Club Team" (confidence=0.92)
+Uses Bayesian chaining of simple conditional probability factors:
+  P(col | question) = P(col|value_type) × P(col|trigger) × P(col≠SELECT) × P(col|schema)
 
-Uses probability tables P(column_name_pattern | value_type) extracted from WikiSQL.
+Each factor is a simple lookup table. The multiplication IS the reasoning —
+no attention mechanism needed.
+
+Steps:
+  1. Direct mention: Does a column name appear in the question?
+  2. Value extraction: What candidate values exist in the question?
+  3. Type classification: What type is each value? (person, institution, number, ...)
+  4. Type compatibility: Which columns accept this value type?
+  5. SELECT exclusion: Which column is being asked about? Exclude it.
+  6. Trigger boost: Do verb/preposition phrases hint at a specific column?
 """
 
 import json
 import re
-from collections import Counter, defaultdict
+from collections import defaultdict
 from pathlib import Path
 
 KNOWLEDGE_DIR = Path(__file__).parent / "knowledge"
 
+# Step 4: P(column accepts value_type)
+# Maps value_type → set of column name keywords that accept it
+TYPE_COLUMN_KEYWORDS = {
+    "person_name": {"player", "name", "winner", "candidate", "person", "incumbent",
+                    "commander", "director", "artist", "author", "rider", "driver",
+                    "coach", "manager", "captain", "member", "representative",
+                    "minister", "leader", "actor", "actress", "singer", "composer"},
+    "institution": {"school", "club", "team", "university", "college", "company",
+                    "network", "party", "organization", "affiliate", "employer",
+                    "sponsor", "carrier", "airline", "publisher"},
+    "location": {"country", "city", "location", "venue", "capital", "state",
+                 "headquarters", "base", "district", "county", "province",
+                 "region", "nation", "hometown", "birthplace", "ground",
+                 "stadium", "arena"},
+    "category": {"position", "type", "genre", "status", "result", "class",
+                 "division", "league", "category", "branch", "rating",
+                 "conference", "office", "title", "rank", "role", "format"},
+    "number": {"no", "number", "#", "rank", "score", "points", "goals",
+               "attendance", "crowd", "population", "votes", "episode",
+               "season", "week", "game", "round", "cap", "total", "pick",
+               "weight", "height", "age", "wins", "losses"},
+    "year_string": {"year", "season", "founded", "established", "elected",
+                    "launched", "opened", "date", "first elected", "years"},
+    "season_string": {"year", "season", "years", "term"},
+    "date_string": {"date", "air date", "premiered", "launched", "opened",
+                    "original air date", "release date"},
+}
+
+# Step 6: Trigger phrase → column keyword patterns
+# (verb/preposition phrases that hint at a WHERE column)
+TRIGGER_RULES = [
+    # Verb relations
+    (r'\bplayed?\s+for\b', {"school", "team", "club", "university", "college"}),
+    (r'\bplays?\s+for\b', {"school", "team", "club"}),
+    (r'\bplayed?\s+at\b', {"school", "venue", "stadium", "ground"}),
+    (r'\bplayed?\s+(?:in|on)\b', {"team", "position", "year", "season"}),
+    (r'\bwears?\s+(?:number|no\.?|#)', {"no", "number", "#"}),
+    (r'\brepresent', {"country", "nation", "team"}),
+    (r'\bdirected\s+by\b', {"director", "directed"}),
+    (r'\bwritten\s+by\b', {"writer", "written", "author"}),
+    (r'\bcoached?\s+by\b', {"coach", "manager"}),
+    (r'\bmanaged?\s+by\b', {"manager", "coach"}),
+    (r'\bborn\s+in\b', {"birthplace", "country", "city", "birth"}),
+    (r'\belected\s+in\b', {"year", "elected", "first elected"}),
+    (r'\baired\s+(?:on|in)\b', {"date", "air date", "original air date"}),
+    (r'\bwon\s+(?:in|at)\b', {"year", "tournament", "event"}),
+    (r'\bscored?\s+(?:in|at|against)\b', {"opponent", "game", "round", "match"}),
+    # Preposition signals
+    (r'\bfrom\s+(?=[A-Z])', {"country", "city", "location", "school", "team", "state"}),
+    (r'\bat\s+(?=[A-Z])', {"venue", "location", "stadium", "ground", "school"}),
+    (r'\bagainst\s+', {"opponent", "team", "away"}),
+]
+
+# Step 5: Question word → SELECT column type hints
+SELECT_HINTS = {
+    "who": {"player", "name", "person", "winner", "candidate", "incumbent", "driver", "rider"},
+    "where": {"location", "venue", "city", "country", "place", "ground", "stadium"},
+    "when": {"date", "year", "time", "season", "day"},
+    "how many": {"count", "total", "number"},
+    "how much": {"amount", "price", "cost", "salary"},
+}
+
 
 class ColumnResolver:
     def __init__(self):
-        # P(column_pattern | value_type) — the core probability table
-        self.type_to_column_patterns = {}
-        # Column name keywords that strongly indicate a column's purpose
-        self.column_keywords = {}
-        # Semantic trigger rules from LLM extraction
-        self.trigger_rules = []
+        self.trigger_rules = TRIGGER_RULES
+        self.type_column_keywords = TYPE_COLUMN_KEYWORDS
+        self.select_hints = SELECT_HINTS
+        self.learned_triggers = []
 
     def load_knowledge(self, knowledge_dir=None):
         kdir = Path(knowledge_dir) if knowledge_dir else KNOWLEDGE_DIR
-        path = kdir / "resolver_tables.json"
-        if path.exists():
-            with open(path) as f:
-                data = json.load(f)
-                self.type_to_column_patterns = data.get("type_to_column_patterns", {})
-                self.column_keywords = data.get("column_keywords", {})
-        # Load semantic trigger rules
         sem_path = kdir / "semantic_rules.json"
         if sem_path.exists():
             with open(sem_path) as f:
                 data = json.load(f)
-                self.trigger_rules = data.get("trigger_rules", [])
+                self.learned_triggers = data.get("trigger_rules", [])
 
-    def resolve(self, value, value_type, columns, exclude_columns=None, question=None):
-        """Resolve a value to the best matching column.
+    def resolve(self, value, value_type, columns, question=None, exclude_columns=None):
+        """Resolve a value to the best matching column using Bayesian chaining.
+
+        P(col) = P(col|type) × P(col|trigger) × P(col≠SELECT) × P(col|direct)
 
         Args:
             value: The extracted value string
             value_type: The classified type (person_name, institution, etc.)
             columns: List of {"name": str, "type": str} dicts
-            exclude_columns: Set of column names to exclude (e.g., SELECT column)
-            question: The original question text (for trigger phrase matching)
+            question: The original question (for trigger matching and SELECT identification)
+            exclude_columns: Explicit columns to exclude
 
         Returns:
-            List of (column_name, confidence) tuples, sorted by confidence desc
+            List of (column_name, confidence) tuples, sorted desc
         """
         exclude = set(c.lower() for c in (exclude_columns or []))
-        candidates = []
+        q_lower = (question or "").lower()
 
-        # First: check semantic trigger rules from LLM extraction
-        trigger_scores = {}
-        if question and self.trigger_rules:
-            trigger_scores = self._score_by_triggers(question, columns, exclude)
-
+        scores = {}
         for col in columns:
             col_name = col["name"]
             if col_name.lower() in exclude:
                 continue
 
-            # Combine trigger score with type-based score
-            trigger_score = trigger_scores.get(col_name, 0.0)
-            type_score = self._score_column(value, value_type, col_name, col.get("type", "text"))
+            col_lower = col_name.lower()
+            col_words = set(re.findall(r'\b\w+\b', col_lower))
 
-            # Trigger rules take priority when they fire
-            if trigger_score > 0.5:
-                score = trigger_score
-            elif trigger_score > 0:
-                score = max(trigger_score, type_score)
-            else:
-                score = type_score
+            # Factor 1: P(col | value_type) — type compatibility
+            f_type = self._score_type_compat(value_type, col_words)
 
-            candidates.append((col_name, score))
+            # Factor 2: P(col | direct_mention) — column name in question
+            f_direct = self._score_direct_mention(col_name, q_lower)
 
-        candidates.sort(key=lambda x: -x[1])
-        return candidates
+            # Factor 3: P(col | trigger_phrase) — verb/prep patterns
+            f_trigger = self._score_triggers(q_lower, col_words)
 
-    def _score_by_triggers(self, question, columns, exclude):
-        """Score columns based on semantic trigger rules from LLM extraction."""
+            # Factor 4: P(col | col_type_compat) — SQL type vs value type
+            f_sqltype = self._score_sql_type(value_type, col.get("type", "text"))
+
+            # Combine: take the max of (type_compat, trigger) as primary signal,
+            # then boost with direct mention
+            primary = max(f_type, f_trigger)
+            if f_direct > 0.5:
+                # Direct mention of column name — strong but could be SELECT
+                primary = max(primary, f_direct * 0.5)
+
+            # Ensure minimum from sql type compatibility
+            score = max(primary, f_sqltype * 0.3)
+
+            scores[col_name] = score
+
+        # Sort and return
+        result = sorted(scores.items(), key=lambda x: -x[1])
+        return result
+
+    def identify_select_column(self, question, headers):
+        """Identify which column the question is asking about (SELECT target).
+
+        This column should be EXCLUDED from WHERE column candidates.
+        """
         q_lower = question.lower()
-        scores = {}
+        candidates = []
 
-        for rule in self.trigger_rules:
-            trigger = rule["trigger"]
-            col_pattern = rule["column_pattern"]
-            confidence = rule.get("confidence", 0.7)
+        # Check question word hints
+        for q_word, col_keywords in self.select_hints.items():
+            if q_lower.startswith(q_word):
+                for i, h in enumerate(headers):
+                    h_words = set(re.findall(r'\b\w+\b', h.lower()))
+                    if h_words & col_keywords:
+                        candidates.append((h, 0.7, "question_word"))
 
-            # Skip overly generic single-word triggers
-            if len(trigger.split()) <= 1 and len(trigger) <= 4:
+        # Check direct column name mention after question word
+        # "What POSITION does..." → Position is SELECT
+        # "What SCHOOL/CLUB TEAM is..." → School/Club Team is SELECT
+        for i, h in enumerate(headers):
+            h_lower = h.lower()
+            # Check if column name appears right after question word
+            m = re.search(
+                rf'^(?:what|which|how\s+many)\s+(?:is\s+the\s+|are\s+the\s+|was\s+the\s+)?'
+                rf'({re.escape(h_lower)})',
+                q_lower
+            )
+            if m:
+                candidates.append((h, 0.95, "direct_after_qword"))
                 continue
 
-            # Check if trigger phrase appears in question
-            if trigger in q_lower:
-                # Find columns matching the column pattern
-                patterns = [p.strip() for p in col_pattern.split("|")]
-                for col in columns:
-                    col_name = col["name"]
-                    if col_name.lower() in exclude:
-                        continue
-                    col_lower = col_name.lower()
-                    col_words = set(re.findall(r'\b\w+\b', col_lower))
-                    for p in patterns:
-                        if p in col_lower or p in col_words:
-                            current = scores.get(col_name, 0)
-                            scores[col_name] = max(current, confidence)
+            # Check partial match: "What position" matches "Position"
+            h_words = re.findall(r'\b\w+\b', h_lower)
+            for w in h_words:
+                if len(w) > 3:
+                    m = re.search(
+                        rf'^(?:what|which|how\s+many)\s+(?:\w+\s+)*{re.escape(w)}',
+                        q_lower
+                    )
+                    if m:
+                        candidates.append((h, 0.8, "partial_after_qword"))
 
-        return scores
+        if candidates:
+            candidates.sort(key=lambda x: -x[1])
+            return candidates[0][0]
 
-    def _score_column(self, value, value_type, col_name, col_type):
-        """Score how likely a value belongs to a column."""
+        return None
+
+    def _score_type_compat(self, value_type, col_words):
+        """P(column | value_type): Does this column accept values of this type?"""
+        keywords = self.type_column_keywords.get(value_type, set())
+        if col_words & keywords:
+            return 0.85
+        return 0.1
+
+    def _score_direct_mention(self, col_name, q_lower):
+        """P(column | direct_mention): Is the column name in the question?"""
         col_lower = col_name.lower()
-        col_words = set(re.findall(r'\b\w+\b', col_lower))
-        score = 0.0
+        if col_lower in q_lower:
+            return 0.9
+        # Partial: check significant words
+        words = re.findall(r'\b\w+\b', col_lower)
+        sig_words = [w for w in words if len(w) > 3 and w not in {"the", "and", "for", "from", "with"}]
+        if sig_words:
+            matches = sum(1 for w in sig_words if w in q_lower)
+            if matches == len(sig_words):
+                return 0.8
+            elif matches > 0:
+                return 0.5
+        return 0.0
 
-        # 1. Check value_type → column pattern probability table (primary signal)
-        if value_type in self.type_to_column_patterns:
-            patterns = self.type_to_column_patterns[value_type]
-            for pattern, prob in patterns.items():
-                if pattern.lower() in col_lower or col_lower in pattern.lower():
-                    score = max(score, prob)
-                # Check individual words
-                pattern_words = set(re.findall(r'\b\w+\b', pattern.lower()))
-                overlap = col_words & pattern_words
-                if overlap and len(overlap) >= len(pattern_words) * 0.5:
-                    score = max(score, prob * 0.8)
+    def _score_triggers(self, q_lower, col_words):
+        """P(column | trigger_phrase): Do verb/prep phrases hint at this column?"""
+        best = 0.0
+        for pattern, keywords in self.trigger_rules:
+            if re.search(pattern, q_lower):
+                if col_words & keywords:
+                    best = max(best, 0.9)
 
-        # 2. Hardcoded type→column rules (high confidence fallback)
-        type_rules = {
-            "person_name": {"player", "name", "winner", "candidate", "person",
-                           "incumbent", "commander", "director", "artist", "author",
-                           "rider", "driver", "coach", "manager", "captain"},
-            "institution": {"school", "club", "team", "university", "college",
-                           "company", "network", "party", "organization"},
-            "location": {"country", "city", "location", "venue", "capital",
-                        "state", "headquarters", "base", "district", "county",
-                        "province", "region", "nation"},
-            "category": {"position", "type", "genre", "status", "result",
-                        "class", "division", "league", "category", "branch",
-                        "rating", "conference", "office", "title"},
-            "number": {"no", "number", "rank", "score", "points", "goals",
-                      "attendance", "crowd", "population", "votes", "episode",
-                      "season", "week", "game", "round", "cap"},
-            "year_string": {"year", "season", "founded", "established", "elected",
-                           "launched", "opened", "date"},
-            "season_string": {"year", "season", "years"},
-            "date_string": {"date", "air", "premiered", "launched", "opened"},
-        }
+        # Also check learned trigger rules
+        for rule in self.learned_triggers:
+            trigger = rule.get("trigger", "")
+            if len(trigger) <= 4:
+                continue
+            if trigger in q_lower:
+                col_pattern = rule.get("column_pattern", "")
+                patterns = {p.strip() for p in col_pattern.split("|")}
+                if col_words & patterns:
+                    conf = rule.get("confidence", 0.7)
+                    best = max(best, conf)
 
-        if value_type in type_rules:
-            keywords = type_rules[value_type]
-            if col_words & keywords:
-                score = max(score, 0.85)
+        return best
 
-        # 3. Column type compatibility
-        if value_type == "number" and col_type.lower() == "real":
-            score = max(score, 0.5)
-        elif value_type in ("person_name", "institution", "location", "category",
-                           "year_string", "season_string") and col_type.lower() == "text":
-            score = max(score, 0.3)
-
-        # 4. Value itself appears in column name (rare but strong signal)
-        val_lower = str(value).lower()
-        if val_lower in col_lower:
-            score = max(score, 0.4)
-
-        # 5. Penalize unlikely matches
-        # Person names rarely go in "date", "score", "number" columns
-        if value_type == "person_name" and col_words & {"date", "score", "number", "no", "year", "round", "week"}:
-            score *= 0.2
-        # Numbers rarely go in "name", "player", "country" columns
-        if value_type == "number" and col_words & {"name", "player", "country", "city", "person"}:
-            score *= 0.3
-
-        return score
+    def _score_sql_type(self, value_type, sql_type):
+        """P(column | sql_type_compat): Does SQL type match value type?"""
+        sql_lower = sql_type.lower()
+        if value_type == "number" and sql_lower == "real":
+            return 0.6
+        if value_type in ("person_name", "institution", "location", "category") and sql_lower == "text":
+            return 0.4
+        return 0.2
 
 
 def build_resolver_knowledge(oracle_path=None, output_dir=None):
@@ -193,7 +269,7 @@ def build_resolver_knowledge(oracle_path=None, output_dir=None):
     with open(oracle_path) as f:
         data = json.load(f)
 
-    # Build P(column_name | value_type)
+    from collections import Counter
     type_col_counts = defaultdict(Counter)
     for ex in data:
         vtype = ex.get("value_type", "string")
@@ -204,41 +280,15 @@ def build_resolver_knowledge(oracle_path=None, output_dir=None):
     type_to_patterns = {}
     for vtype, col_counts in type_col_counts.items():
         total = sum(col_counts.values())
-        # Keep columns that appear at least 2 times
         patterns = {col: count / total for col, count in col_counts.items() if count >= 2}
-        # Keep top 20 per type
         top = dict(sorted(patterns.items(), key=lambda x: -x[1])[:20])
         type_to_patterns[vtype] = top
 
-    # Build column keyword index
-    column_keywords = defaultdict(Counter)
-    for ex in data:
-        col = ex.get("correct_column", "")
-        vtype = ex.get("value_type", "")
-        if col:
-            for word in re.findall(r'\b\w+\b', col.lower()):
-                if len(word) > 1:
-                    column_keywords[word][vtype] += 1
-
-    col_kw = {}
-    for word, type_counts in column_keywords.items():
-        top_type = type_counts.most_common(1)[0]
-        if top_type[1] >= 5:
-            col_kw[word] = {"primary_type": top_type[0], "count": top_type[1]}
-
-    knowledge = {
-        "type_to_column_patterns": type_to_patterns,
-        "column_keywords": col_kw,
-    }
-
+    knowledge = {"type_to_column_patterns": type_to_patterns}
     with open(output_dir / "resolver_tables.json", "w") as f:
         json.dump(knowledge, f, indent=2)
 
-    print(f"Resolver knowledge:")
-    for vtype, patterns in type_to_patterns.items():
-        print(f"  {vtype}: {len(patterns)} column patterns (top: {list(patterns.keys())[:3]})")
-    print(f"  Column keywords: {len(col_kw)}")
-
+    print(f"Resolver knowledge saved ({len(type_to_patterns)} value types)")
     return knowledge
 
 
