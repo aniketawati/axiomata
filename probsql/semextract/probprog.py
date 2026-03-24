@@ -700,6 +700,7 @@ class ProbabilisticResolver:
         self.feature_hmm = None
         self.span_detector = None
         self.condition_estimator = None
+        self.bayesian = None  # fully Bayesian components
         self.markov_resolver = MarkovResolver()
 
     def load_knowledge(self, knowledge_dir=None):
@@ -713,6 +714,10 @@ class ProbabilisticResolver:
         from probsql.semextract.condition_estimator import ConditionEstimator
         self.condition_estimator = ConditionEstimator()
         self.condition_estimator.load_knowledge(kdir)
+        # Load fully Bayesian components
+        from probsql.semextract.bayesian_probprog import FullBayesianProbProg
+        self.bayesian = FullBayesianProbProg()
+        self.bayesian.load_knowledge(kdir)
         # Try to load feature-based HMM (fallback)
         from probsql.semextract.feature_hmm import FeatureHMM
         fhmm = FeatureHMM()
@@ -732,8 +737,11 @@ class ProbabilisticResolver:
             dict with: where_column, where_value, operator, confidence,
                        select_column, parsed_question, reasoning_chain
         """
-        # Step 1: Classify question type
-        q_type = classify_question_type(question)
+        # Step 1: Classify question type — BAYESIAN
+        if self.bayesian and self.bayesian.tables_loaded:
+            q_type, qt_conf = self.bayesian.classify_question_type(question)
+        else:
+            q_type = classify_question_type(question)
 
         # Step 2: Parse tokens and extract value span(s)
         token_roles = self.hmm_parser.parse(question, headers)
@@ -766,8 +774,11 @@ class ProbabilisticResolver:
                     from probsql.semextract.span_detector import SpanCandidate
                     value_spans = [SpanCandidate(hmm_value, 0, 0, 0.3, "hmm", "hmm")]
 
-        # Step 3: Identify SELECT column
-        select_col = identify_select(token_roles, headers, question)
+        # Step 3: Identify SELECT column — BAYESIAN
+        if self.bayesian and self.bayesian.tables_loaded:
+            select_col = self.bayesian.identify_select(question, headers)
+        else:
+            select_col = identify_select(token_roles, headers, question)
 
         # Step 4-8: Resolve each value span to a (column, operator, value) condition
         conditions = []
@@ -777,7 +788,11 @@ class ProbabilisticResolver:
 
         for span in value_spans:
             value = span.text
-            v_type = classify_value_type(value) if value else "unknown"
+            # Classify value type — BAYESIAN
+            if self.bayesian and self.bayesian.tables_loaded and value:
+                v_type, vt_conf = self.bayesian.classify_value_type(value)
+            else:
+                v_type = classify_value_type(value) if value else "unknown"
 
             # Extract trigger from tokens near this span
             trigger_tokens = [t.token.lower() for t in token_roles if t.role == "TRIGGER"]

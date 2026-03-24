@@ -61,7 +61,7 @@
   },
   {
     "question": "When is the earliest began operation with a length of sultan ismail and over 27 stations?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "explicit_and",
       "with_clause"
@@ -170,7 +170,7 @@
   },
   {
     "question": "What is 2011, when 2006 is \"A\", when 2008 is \"A\", and when Tournament is \"Rome\"?",
-    "n_conditions": 4,
+    "n_conditions": 3,
     "condition_signals": [
       "explicit_and",
       "comma_separated",
@@ -294,7 +294,7 @@
       "has_with": false,
       "has_when": false,
       "word_count": 20,
-      "column_mentions": 3
+      "column_mentions": 2
     }
   },
   {
@@ -361,7 +361,7 @@
   },
   {
     "question": "What is the lowest position with 32-6 points and less then 59 goals when there are more than 38 played?",
-    "n_conditions": 2,
+    "n_conditions": 4,
     "condition_signals": [
       "explicit_and",
       "when_clause",
@@ -519,7 +519,7 @@
   },
   {
     "question": "Who was the opponent in London, England in a round less than 2?",
-    "n_conditions": 2,
+    "n_conditions": 1,
     "condition_signals": [
       "comparative"
     ],
@@ -730,7 +730,7 @@
   },
   {
     "question": "What is Date, when Country is \"China\", and when Perpetrator is \"Shi Yuejun , 35\"?",
-    "n_conditions": 4,
+    "n_conditions": 2,
     "condition_signals": [
       "explicit_and",
       "comma_separated",

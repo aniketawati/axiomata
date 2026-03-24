@@ -1,0 +1,913 @@
+{
+  "question_type": {
+    "prior": {
+      "lookup": 0.5212298682284041,
+      "count": 0.14421669106881405,
+      "comparison": 0.232796486090776,
+      "superlative": 0.10175695461200586
+    },
+    "feature_probs": {
+      "lookup": {
+        "qword_what": 0.9985994397759104,
+        "qword_who": 0.9985994397759104,
+        "qword_how": 0.9985994397759104,
+        "qword_which": 0.9985994397759104,
+        "qword_where": 0.9985994397759104,
+        "qword_when": 0.9985994397759104,
+        "qword_name": 0.9985994397759104,
+        "has_comparison": 0.0014005602240896359,
+        "has_superlative": 0.0014005602240896359,
+        "has_aggregation": 0.058823529411764705,
+        "word_count_short": 0.3165266106442577,
+        "word_count_long": 0.2857142857142857
+      },
+      "count": {
+        "qword_what": 0.9949748743718593,
+        "qword_who": 0.9949748743718593,
+        "qword_how": 0.9949748743718593,
+        "qword_which": 0.9949748743718593,
+        "qword_where": 0.9949748743718593,
+        "qword_when": 0.9949748743718593,
+        "qword_name": 0.9949748743718593,
+        "has_comparison": 0.4472361809045226,
+        "has_superlative": 0.035175879396984924,
+        "has_aggregation": 0.8190954773869347,
+        "word_count_short": 0.11557788944723618,
+        "word_count_long": 0.5276381909547738
+      },
+      "comparison": {
+        "qword_what": 0.996875,
+        "qword_who": 0.996875,
+        "qword_how": 0.996875,
+        "qword_which": 0.996875,
+        "qword_where": 0.996875,
+        "qword_when": 0.996875,
+        "qword_name": 0.996875,
+        "has_comparison": 0.88125,
+        "has_superlative": 0.003125,
+        "has_aggregation": 0.315625,
+        "word_count_short": 0.01875,
+        "word_count_long": 0.765625
+      },
+      "superlative": {
+        "qword_what": 0.9929078014184397,
+        "qword_who": 0.9929078014184397,
+        "qword_how": 0.9929078014184397,
+        "qword_which": 0.9929078014184397,
+        "qword_where": 0.9929078014184397,
+        "qword_when": 0.9929078014184397,
+        "qword_name": 0.9929078014184397,
+        "has_comparison": 0.6028368794326241,
+        "has_superlative": 0.9929078014184397,
+        "has_aggregation": 0.10638297872340426,
+        "word_count_short": 0.07801418439716312,
+        "word_count_long": 0.7375886524822695
+      }
+    }
+  },
+  "select_identifier": {
+    "qword_select_keywords": {},
+    "qword_reasoning": {
+      "what": {
+        "question_word_implies": 0.0625,
+        "column_name_after_question_word": 0.9192073170731707,
+        "context_implies": 0.018292682926829267
+      },
+      "from": {
+        "question_word_implies": 1.0
+      },
+      "which": {
+        "column_name_after_question_word": 0.7642276422764228,
+        "question_word_implies": 0.21951219512195122,
+        "context_implies": 0.016260162601626018
+      },
+      "name": {
+        "column_name_after_question_word": 0.9895287958115183,
+        "question_word_implies": 0.010471204188481676
+      },
+      "what's": {
+        "column_name_after_question_word": 0.9818181818181818,
+        "question_word_implies": 0.01818181818181818
+      },
+      "who": {
+        "column_name_after_question_word": 0.5490196078431373,
+        "question_word_implies": 0.4411764705882353,
+        "context_implies": 0.00980392156862745
+      },
+      "opponent": {
+        "context_implies": 0.5,
+        "column_name_after_question_word": 0.5
+      },
+      "the": {
+        "context_implies": 0.08333333333333333,
+        "column_name_after_question_word": 0.7916666666666666,
+        "question_word_implies": 0.125
+      },
+      "when": {
+        "column_name_after_question_word": 0.5857142857142857,
+        "question_word_implies": 0.35714285714285715,
+        "context_implies": 0.05714285714285714
+      },
+      "how": {
+        "column_name_after_question_word": 0.9310344827586207,
+        "context_implies": 0.05747126436781609,
+        "question_word_implies": 0.011494252873563218
+      },
+      "if": {
+        "context_implies": 0.05263157894736842,
+        "column_name_after_question_word": 0.8421052631578947,
+        "question_word_implies": 0.10526315789473684
+      },
+      "tell": {
+        "column_name_after_question_word": 1.0
+      },
+      "in": {
+        "question_word_implies": 0.3333333333333333,
+        "column_name_after_question_word": 0.6666666666666666
+      },
+      "on": {
+        "question_word_implies": 0.42857142857142855,
+        "column_name_after_question_word": 0.5714285714285714
+      },
+      "for": {
+        "column_name_after_question_word": 1.0
+      },
+      "give": {
+        "column_name_after_question_word": 1.0
+      },
+      "wha": {
+        "column_name_after_question_word": 1.0
+      },
+      "avg/g": {
+        "column_name_after_question_word": 1.0
+      },
+      "can": {
+        "column_name_after_question_word": 1.0
+      },
+      "list": {
+        "column_name_after_question_word": 0.9230769230769231,
+        "question_word_implies": 0.07692307692307693
+      },
+      "network": {
+        "column_name_after_question_word": 1.0
+      },
+      "november": {
+        "column_name_after_question_word": 1.0
+      },
+      "college": {
+        "column_name_after_question_word": 1.0
+      },
+      "achievement": {
+        "column_name_after_question_word": 1.0
+      },
+      "born": {
+        "context_implies": 1.0
+      },
+      "game": {
+        "context_implies": 1.0
+      },
+      "to": {
+        "column_name_after_question_word": 1.0
+      },
+      "provide": {
+        "column_name_after_question_word": 1.0
+      },
+      "where": {
+        "question_word_implies": 0.7,
+        "column_name_after_question_word": 0.3
+      },
+      "nusa": {
+        "context_implies": 1.0
+      },
+      "are": {
+        "context_implies": 1.0
+      },
+      "who's": {
+        "column_name_after_question_word": 1.0
+      },
+      "luis": {
+        "question_word_implies": 1.0
+      },
+      "isbn": {
+        "column_name_after_question_word": 1.0
+      },
+      "at": {
+        "question_word_implies": 1.0
+      },
+      "during": {
+        "column_name_after_question_word": 1.0
+      },
+      "under": {
+        "column_name_after_question_word": 1.0
+      },
+      "clubs": {
+        "column_name_after_question_word": 1.0
+      },
+      "find": {
+        "column_name_after_question_word": 1.0
+      },
+      "steve": {
+        "column_name_after_question_word": 1.0
+      },
+      "08-09": {
+        "column_name_after_question_word": 1.0
+      },
+      "nagua": {
+        "column_name_after_question_word": 1.0
+      }
+    },
+    "P_select_if_in_prefix": 0.5
+  },
+  "value_type": {
+    "prior": {
+      "lowercase_phrase": 0.14,
+      "code_string": 0.08,
+      "date_string": 0.07,
+      "proper_noun_sequence": 0.239,
+      "number": 0.219,
+      "single_proper_noun": 0.102,
+      "mixed_case": 0.09,
+      "score_pattern": 0.06
+    },
+    "feature_probs": {
+      "lowercase_phrase": {
+        "first_char_upper": 0.1056338028169014,
+        "all_words_upper": 0.1267605633802817,
+        "starts_with_digit": 0.02112676056338028,
+        "has_digits": 0.04929577464788732,
+        "has_special": 0.07746478873239436,
+        "has_comma": 0.028169014084507043,
+        "single_word": 0.39436619718309857,
+        "two_words": 0.3732394366197183,
+        "multi_word": 0.23943661971830985,
+        "short_value": 0.1056338028169014,
+        "long_value": 0.16901408450704225,
+        "all_lowercase": 0.8943661971830986,
+        "has_parentheses": 0.028169014084507043
+      },
+      "code_string": {
+        "first_char_upper": 0.12195121951219512,
+        "all_words_upper": 0.6707317073170732,
+        "starts_with_digit": 0.34146341463414637,
+        "has_digits": 0.7073170731707317,
+        "has_special": 0.36585365853658536,
+        "has_comma": 0.012195121951219513,
+        "single_word": 0.7195121951219512,
+        "two_words": 0.1951219512195122,
+        "multi_word": 0.0975609756097561,
+        "short_value": 0.45121951219512196,
+        "long_value": 0.04878048780487805,
+        "all_lowercase": 0.8536585365853658,
+        "has_parentheses": 0.07317073170731707
+      },
+      "date_string": {
+        "first_char_upper": 0.4583333333333333,
+        "all_words_upper": 0.6388888888888888,
+        "starts_with_digit": 0.3055555555555556,
+        "has_digits": 0.9861111111111112,
+        "has_special": 0.5416666666666666,
+        "has_comma": 0.4444444444444444,
+        "single_word": 0.09722222222222222,
+        "two_words": 0.3055555555555556,
+        "multi_word": 0.6111111111111112,
+        "short_value": 0.013888888888888888,
+        "long_value": 0.013888888888888888,
+        "all_lowercase": 0.4583333333333333,
+        "has_parentheses": 0.013888888888888888
+      },
+      "proper_noun_sequence": {
+        "first_char_upper": 0.47717842323651455,
+        "all_words_upper": 0.45643153526970953,
+        "starts_with_digit": 0.024896265560165973,
+        "has_digits": 0.12863070539419086,
+        "has_special": 0.18672199170124482,
+        "has_comma": 0.07053941908713693,
+        "single_word": 0.012448132780082987,
+        "two_words": 0.6431535269709544,
+        "multi_word": 0.34854771784232363,
+        "short_value": 0.004149377593360996,
+        "long_value": 0.17012448132780084,
+        "all_lowercase": 0.4979253112033195,
+        "has_parentheses": 0.06224066390041494
+      },
+      "number": {
+        "first_char_upper": 0.004524886877828055,
+        "all_words_upper": 0.995475113122172,
+        "starts_with_digit": 0.9819004524886877,
+        "has_digits": 0.995475113122172,
+        "has_special": 0.2398190045248869,
+        "has_comma": 0.12669683257918551,
+        "single_word": 0.995475113122172,
+        "two_words": 0.004524886877828055,
+        "multi_word": 0.004524886877828055,
+        "short_value": 0.8054298642533937,
+        "long_value": 0.004524886877828055,
+        "all_lowercase": 0.995475113122172,
+        "has_parentheses": 0.004524886877828055
+      },
+      "single_proper_noun": {
+        "first_char_upper": 0.46153846153846156,
+        "all_words_upper": 0.47115384615384615,
+        "starts_with_digit": 0.009615384615384616,
+        "has_digits": 0.009615384615384616,
+        "has_special": 0.009615384615384616,
+        "has_comma": 0.009615384615384616,
+        "single_word": 0.9903846153846154,
+        "two_words": 0.009615384615384616,
+        "multi_word": 0.009615384615384616,
+        "short_value": 0.16346153846153846,
+        "long_value": 0.009615384615384616,
+        "all_lowercase": 0.5384615384615384,
+        "has_parentheses": 0.009615384615384616
+      },
+      "mixed_case": {
+        "first_char_upper": 0.06521739130434782,
+        "all_words_upper": 0.5434782608695652,
+        "starts_with_digit": 0.4891304347826087,
+        "has_digits": 0.8478260869565217,
+        "has_special": 0.6086956521739131,
+        "has_comma": 0.09782608695652174,
+        "single_word": 0.44565217391304346,
+        "two_words": 0.32608695652173914,
+        "multi_word": 0.2391304347826087,
+        "short_value": 0.20652173913043478,
+        "long_value": 0.13043478260869565,
+        "all_lowercase": 0.9347826086956522,
+        "has_parentheses": 0.18478260869565216
+      },
+      "score_pattern": {
+        "first_char_upper": 0.016129032258064516,
+        "all_words_upper": 0.9516129032258065,
+        "starts_with_digit": 0.9354838709677419,
+        "has_digits": 0.9838709677419355,
+        "has_special": 0.9516129032258065,
+        "has_comma": 0.08064516129032258,
+        "single_word": 0.5967741935483871,
+        "two_words": 0.3064516129032258,
+        "multi_word": 0.11290322580645161,
+        "short_value": 0.2903225806451613,
+        "long_value": 0.016129032258064516,
+        "all_lowercase": 0.9838709677419355,
+        "has_parentheses": 0.2903225806451613
+      }
+    }
+  },
+  "span_detector": {
+    "P_start_given_structure": {
+      "lowercase_phrase": {
+        "after_preposition": 0.5428571428571428,
+        "after_article": 0.14285714285714285,
+        "after_copula": 0.11428571428571428,
+        "after_column_name": 0.07857142857142857,
+        "after_trigger_verb": 0.06428571428571428,
+        "start_of_phrase": 0.02857142857142857,
+        "at_quoted": 0.02142857142857143,
+        "at_proper_noun": 0.007142857142857143
+      },
+      "code_string": {
+        "after_preposition": 0.3625,
+        "after_column_name": 0.1625,
+        "after_copula": 0.1375,
+        "at_number": 0.1375,
+        "after_article": 0.125,
+        "after_trigger_verb": 0.0375,
+        "at_quoted": 0.025,
+        "at_proper_noun": 0.0125
+      },
+      "date_string": {
+        "after_preposition": 0.6142857142857143,
+        "at_number": 0.14285714285714285,
+        "at_proper_noun": 0.11428571428571428,
+        "after_copula": 0.04285714285714286,
+        "after_column_name": 0.04285714285714286,
+        "after_article": 0.02857142857142857,
+        "after_trigger_verb": 0.014285714285714285
+      },
+      "proper_noun_sequence": {
+        "after_preposition": 0.3138075313807531,
+        "at_proper_noun": 0.19665271966527198,
+        "after_article": 0.11297071129707113,
+        "after_copula": 0.100418410041841,
+        "after_column_name": 0.09205020920502092,
+        "after_trigger_verb": 0.09205020920502092,
+        "at_quoted": 0.058577405857740586,
+        "start_of_phrase": 0.029288702928870293,
+        "at_number": 0.0041841004184100415
+      },
+      "number": {
+        "at_number": 0.6757990867579908,
+        "after_preposition": 0.1917808219178082,
+        "after_copula": 0.0730593607305936,
+        "after_column_name": 0.0228310502283105,
+        "at_quoted": 0.0136986301369863,
+        "after_trigger_verb": 0.0136986301369863,
+        "after_article": 0.0091324200913242
+      },
+      "single_proper_noun": {
+        "after_preposition": 0.3627450980392157,
+        "at_proper_noun": 0.2647058823529412,
+        "after_copula": 0.10784313725490197,
+        "after_article": 0.10784313725490197,
+        "after_column_name": 0.0784313725490196,
+        "after_trigger_verb": 0.058823529411764705,
+        "at_quoted": 0.0196078431372549
+      },
+      "mixed_case": {
+        "after_preposition": 0.3888888888888889,
+        "after_copula": 0.2111111111111111,
+        "at_number": 0.17777777777777778,
+        "after_column_name": 0.08888888888888889,
+        "after_article": 0.06666666666666667,
+        "after_trigger_verb": 0.05555555555555555,
+        "at_quoted": 0.011111111111111112
+      },
+      "score_pattern": {
+        "at_number": 0.3,
+        "after_preposition": 0.26666666666666666,
+        "after_copula": 0.21666666666666667,
+        "after_trigger_verb": 0.1,
+        "after_column_name": 0.1,
+        "after_article": 0.016666666666666666
+      }
+    },
+    "P_end_given_structure": {
+      "lowercase_phrase": {
+        "before_question_mark": 0.25,
+        "before_filler": 0.21428571428571427,
+        "end_of_question": 0.17857142857142858,
+        "before_comma_clause": 0.1357142857142857,
+        "before_preposition": 0.12857142857142856,
+        "before_verb": 0.05714285714285714,
+        "at_end_of_proper_noun": 0.02857142857142857,
+        "before_column_name": 0.007142857142857143
+      },
+      "code_string": {
+        "before_question_mark": 0.4875,
+        "before_filler": 0.175,
+        "end_of_question": 0.1125,
+        "before_comma_clause": 0.1,
+        "at_end_of_number": 0.05,
+        "before_verb": 0.025,
+        "before_column_name": 0.025,
+        "before_preposition": 0.0125,
+        "at_end_of_proper_noun": 0.0125
+      },
+      "date_string": {
+        "before_question_mark": 0.5714285714285714,
+        "end_of_question": 0.17142857142857143,
+        "before_filler": 0.11428571428571428,
+        "before_verb": 0.05714285714285714,
+        "before_comma_clause": 0.04285714285714286,
+        "before_preposition": 0.02857142857142857,
+        "at_end_of_number": 0.014285714285714285
+      },
+      "proper_noun_sequence": {
+        "before_question_mark": 0.4100418410041841,
+        "before_verb": 0.1589958158995816,
+        "before_filler": 0.13389121338912133,
+        "end_of_question": 0.09623430962343096,
+        "before_comma_clause": 0.07531380753138076,
+        "at_end_of_proper_noun": 0.06694560669456066,
+        "before_preposition": 0.0502092050209205,
+        "at_end_of_number": 0.0041841004184100415,
+        "before_column_name": 0.0041841004184100415
+      },
+      "number": {
+        "before_question_mark": 0.3424657534246575,
+        "before_comma_clause": 0.1872146118721461,
+        "at_end_of_number": 0.1689497716894977,
+        "end_of_question": 0.1324200913242009,
+        "before_filler": 0.1232876712328767,
+        "before_preposition": 0.0365296803652968,
+        "before_verb": 0.0091324200913242
+      },
+      "single_proper_noun": {
+        "before_question_mark": 0.4117647058823529,
+        "at_end_of_proper_noun": 0.12745098039215685,
+        "before_filler": 0.10784313725490197,
+        "before_comma_clause": 0.09803921568627451,
+        "before_verb": 0.08823529411764706,
+        "end_of_question": 0.08823529411764706,
+        "before_preposition": 0.0784313725490196
+      },
+      "mixed_case": {
+        "before_question_mark": 0.43333333333333335,
+        "end_of_question": 0.15555555555555556,
+        "before_filler": 0.14444444444444443,
+        "before_comma_clause": 0.1,
+        "before_verb": 0.06666666666666667,
+        "at_end_of_number": 0.05555555555555555,
+        "before_preposition": 0.03333333333333333,
+        "before_column_name": 0.011111111111111112
+      },
+      "score_pattern": {
+        "before_question_mark": 0.5333333333333333,
+        "end_of_question": 0.2,
+        "before_comma_clause": 0.13333333333333333,
+        "before_preposition": 0.05,
+        "before_verb": 0.05,
+        "before_filler": 0.03333333333333333
+      }
+    },
+    "P_left_word_given_start": {
+      "after_preposition": {
+        "of": 0.49291784702549574,
+        "for": 0.1501416430594901,
+        "on": 0.0906515580736544,
+        "in": 0.053824362606232294,
+        "than": 0.042492917847025496,
+        "with": 0.0339943342776204,
+        "at": 0.028328611898016998,
+        "by": 0.0226628895184136,
+        "from": 0.019830028328611898,
+        "that": 0.0084985835694051,
+        "to": 0.0056657223796034,
+        "when": 0.0056657223796034,
+        "where": 0.0056657223796034,
+        "over": 0.0056657223796034,
+        "as": 0.0056657223796034,
+        "against": 0.0056657223796034,
+        "97": 0.0028328611898017,
+        "after": 0.0028328611898017,
+        "held": 0.0028328611898017,
+        "under": 0.0028328611898017,
+        "pope": 0.0028328611898017,
+        "before": 0.0028328611898017,
+        "\"": 0.0028328611898017,
+        "2007": 0.0028328611898017
+      },
+      "after_column_name": {
+        "of": 0.25,
+        "being": 0.05263157894736842,
+        "title": 0.039473684210526314,
+        "name": 0.02631578947368421,
+        "season": 0.02631578947368421,
+        "village": 0.02631578947368421,
+        "date": 0.02631578947368421,
+        "player": 0.02631578947368421,
+        "#": 0.013157894736842105,
+        "simplified": 0.013157894736842105,
+        "class": 0.013157894736842105,
+        "tournament": 0.013157894736842105,
+        "opponent": 0.013157894736842105,
+        "driver": 0.013157894736842105,
+        "price": 0.013157894736842105,
+        "club": 0.013157894736842105,
+        "code": 0.013157894736842105,
+        "color": 0.013157894736842105,
+        "singer": 0.013157894736842105,
+        "school": 0.013157894736842105,
+        "film": 0.013157894736842105,
+        "where": 0.013157894736842105,
+        "2.20": 0.013157894736842105,
+        "has": 0.013157894736842105,
+        "assists": 0.013157894736842105,
+        "couple": 0.013157894736842105,
+        "type": 0.013157894736842105,
+        "commander": 0.013157894736842105,
+        "state": 0.013157894736842105,
+        "third": 0.013157894736842105,
+        "team": 0.013157894736842105,
+        "finalist": 0.013157894736842105,
+        "position": 0.013157894736842105,
+        "constellation": 0.013157894736842105,
+        "2": 0.013157894736842105,
+        "artist": 0.013157894736842105,
+        "february": 0.013157894736842105,
+        "block": 0.013157894736842105,
+        "round": 0.013157894736842105,
+        "year": 0.013157894736842105,
+        "number": 0.013157894736842105,
+        "record": 0.013157894736842105,
+        "2003": 0.013157894736842105,
+        "result": 0.013157894736842105,
+        "venue": 0.013157894736842105,
+        "hanja": 0.013157894736842105,
+        "episode": 0.013157894736842105,
+        "index": 0.013157894736842105
+      },
+      "at_number": {
+        "than": 0.31862745098039214,
+        "of": 0.21568627450980393,
+        "is": 0.06372549019607843,
+        "has": 0.029411764705882353,
+        "game": 0.029411764705882353,
+        "in": 0.024509803921568627,
+        "had": 0.024509803921568627,
+        "score": 0.0196078431372549,
+        "on": 0.0196078431372549,
+        "have": 0.0196078431372549,
+        "for": 0.014705882352941176,
+        "being": 0.014705882352941176,
+        "week": 0.014705882352941176,
+        "was": 0.014705882352941176,
+        "were": 0.014705882352941176,
+        "number": 0.014705882352941176,
+        "when": 0.014705882352941176,
+        "born": 0.00980392156862745,
+        "after": 0.00980392156862745,
+        "with": 0.00980392156862745,
+        "#": 0.00980392156862745,
+        "from": 0.00980392156862745,
+        "against": 0.004901960784313725,
+        "results": 0.004901960784313725,
+        "are": 0.004901960784313725,
+        "did": 0.004901960784313725,
+        "over": 0.004901960784313725,
+        "attendance": 0.004901960784313725,
+        "scored": 0.004901960784313725,
+        "a": 0.004901960784313725,
+        "$": 0.004901960784313725,
+        "episode": 0.004901960784313725,
+        "date": 0.004901960784313725,
+        "goal": 0.004901960784313725,
+        "season": 0.004901960784313725,
+        "which": 0.004901960784313725,
+        "both": 0.004901960784313725,
+        "before": 0.004901960784313725,
+        "the": 0.004901960784313725
+      },
+      "after_copula": {
+        "is": 0.6902654867256637,
+        "was": 0.24778761061946902,
+        "were": 0.035398230088495575,
+        "when": 0.008849557522123894,
+        "\"": 0.008849557522123894,
+        "are": 0.008849557522123894
+      },
+      "at_proper_noun": {
+        "of": 0.11904761904761904,
+        "is": 0.10714285714285714,
+        "did": 0.08333333333333333,
+        "the": 0.07142857142857142,
+        "when": 0.05952380952380952,
+        "on": 0.05952380952380952,
+        "has": 0.05952380952380952,
+        "was": 0.05952380952380952,
+        "for": 0.047619047619047616,
+        "in": 0.047619047619047616,
+        "from": 0.023809523809523808,
+        "and": 0.023809523809523808,
+        "where": 0.023809523809523808,
+        "writer": 0.011904761904761904,
+        "color": 0.011904761904761904,
+        "chiefs": 0.011904761904761904,
+        "as": 0.011904761904761904,
+        "resort": 0.011904761904761904,
+        "incumbent": 0.011904761904761904,
+        "player": 0.011904761904761904,
+        "director": 0.011904761904761904,
+        "that": 0.011904761904761904,
+        "had": 0.011904761904761904,
+        "runner-up": 0.011904761904761904,
+        "republican": 0.011904761904761904,
+        "at": 0.011904761904761904,
+        "team": 0.011904761904761904,
+        "does": 0.011904761904761904,
+        "\"": 0.011904761904761904,
+        "a": 0.011904761904761904,
+        "date": 0.011904761904761904
+      },
+      "after_article": {
+        "the": 0.7468354430379747,
+        "a": 0.24050632911392406,
+        "an": 0.012658227848101266
+      },
+      "at_quoted": {
+        "\"": 0.44,
+        "is": 0.12,
+        "titled": 0.08,
+        "of": 0.08,
+        "episode": 0.08,
+        "entitled": 0.08,
+        "with": 0.04,
+        "saw": 0.04,
+        "did": 0.04
+      },
+      "after_trigger_verb": {
+        "has": 0.3090909090909091,
+        "did": 0.12727272727272726,
+        "scored": 0.09090909090909091,
+        "had": 0.09090909090909091,
+        "does": 0.07272727272727272,
+        "have": 0.05454545454545454,
+        "being": 0.05454545454545454,
+        "named": 0.03636363636363636,
+        "placed": 0.03636363636363636,
+        "goes": 0.01818181818181818,
+        "released": 0.01818181818181818,
+        "was": 0.01818181818181818,
+        "hosted": 0.01818181818181818,
+        "scoring": 0.01818181818181818,
+        "plays": 0.01818181818181818,
+        "identifies": 0.01818181818181818
+      },
+      "start_of_phrase": {
+        "when": 0.6363636363636364,
+        "race": 0.09090909090909091,
+        "where": 0.09090909090909091,
+        "or": 0.09090909090909091,
+        "does": 0.09090909090909091
+      }
+    },
+    "P_right_word_given_end": {
+      "before_comma_clause": {
+        "": 0.9741379310344828,
+        "\"": 0.02586206896551724
+      },
+      "before_filler": {
+        "and": 0.31386861313868614,
+        "as": 0.10948905109489052,
+        "is": 0.08029197080291971,
+        "when": 0.029197080291970802,
+        "game": 0.021897810218978103,
+        "date": 0.014598540145985401,
+        "points": 0.014598540145985401,
+        "district": 0.014598540145985401,
+        "which": 0.014598540145985401,
+        "that": 0.014598540145985401,
+        "who": 0.014598540145985401,
+        "a": 0.014598540145985401,
+        "'s": 0.014598540145985401,
+        "hard": 0.0072992700729927005,
+        "\"": 0.0072992700729927005,
+        "goals": 0.0072992700729927005,
+        "yes": 0.0072992700729927005,
+        "seasons": 0.0072992700729927005,
+        "increase": 0.0072992700729927005,
+        "record": 0.0072992700729927005,
+        "laps": 0.0072992700729927005,
+        "season": 0.0072992700729927005,
+        "mode": 0.0072992700729927005,
+        "listed": 0.0072992700729927005,
+        "total": 0.0072992700729927005,
+        "losses": 0.0072992700729927005,
+        "web": 0.0072992700729927005,
+        "wins": 0.0072992700729927005,
+        "surface": 0.0072992700729927005,
+        "class": 0.0072992700729927005,
+        "player": 0.0072992700729927005,
+        "wheel": 0.0072992700729927005,
+        "genre": 0.0072992700729927005,
+        "model": 0.0072992700729927005,
+        "torque": 0.0072992700729927005,
+        "pick": 0.0072992700729927005,
+        "bayonet": 0.0072992700729927005,
+        "league": 0.0072992700729927005,
+        "margin": 0.0072992700729927005,
+        "touchdowns": 0.0072992700729927005,
+        "circut": 0.0072992700729927005,
+        "road": 0.0072992700729927005,
+        "(s)": 0.0072992700729927005,
+        "safari": 0.0072992700729927005,
+        "event": 0.0072992700729927005,
+        "tall": 0.0072992700729927005,
+        "power": 0.0072992700729927005,
+        "joakim": 0.0072992700729927005,
+        "what": 0.0072992700729927005,
+        "position": 0.0072992700729927005,
+        "first": 0.0072992700729927005,
+        "competition": 0.0072992700729927005,
+        "advantage": 0.0072992700729927005,
+        "series": 0.0072992700729927005,
+        "was": 0.0072992700729927005,
+        "brup": 0.0072992700729927005,
+        "round": 0.0072992700729927005,
+        "where": 0.0072992700729927005
+      },
+      "before_question_mark": {
+        "": 0.98,
+        "\"": 0.02
+      },
+      "before_verb": {
+        "play": 0.1388888888888889,
+        "was": 0.125,
+        "had": 0.09722222222222222,
+        "have": 0.08333333333333333,
+        "is": 0.06944444444444445,
+        "get": 0.05555555555555555,
+        "played": 0.041666666666666664,
+        "has": 0.041666666666666664,
+        "ended": 0.027777777777777776,
+        "won": 0.027777777777777776,
+        "set": 0.013888888888888888,
+        "lapped": 0.013888888888888888,
+        "belong": 0.013888888888888888,
+        "pick": 0.013888888888888888,
+        "attended": 0.013888888888888888,
+        "released": 0.013888888888888888,
+        "lose": 0.013888888888888888,
+        "run": 0.013888888888888888,
+        "involves": 0.013888888888888888,
+        "did": 0.013888888888888888,
+        "winning": 0.013888888888888888,
+        "picked": 0.013888888888888888,
+        "enter": 0.013888888888888888,
+        "born": 0.013888888888888888,
+        "directed": 0.013888888888888888,
+        "win": 0.013888888888888888,
+        "ride": 0.013888888888888888,
+        "work": 0.013888888888888888,
+        "score": 0.013888888888888888,
+        "pass": 0.013888888888888888,
+        "going": 0.013888888888888888
+      },
+      "before_preposition": {
+        "with": 0.2545454545454545,
+        "in": 0.2,
+        "as": 0.18181818181818182,
+        "on": 0.10909090909090909,
+        "for": 0.07272727272727272,
+        "of": 0.05454545454545454,
+        "against": 0.03636363636363636,
+        "at": 0.03636363636363636,
+        "from": 0.03636363636363636,
+        "after": 0.01818181818181818
+      },
+      "at_end_of_proper_noun": {
+        "'s": 0.14705882352941177,
+        "as": 0.11764705882352941,
+        "team": 0.08823529411764706,
+        "townland": 0.058823529411764705,
+        "mill": 0.029411764705882353,
+        "is": 0.029411764705882353,
+        "did": 0.029411764705882353,
+        "from": 0.029411764705882353,
+        "won": 0.029411764705882353,
+        "'": 0.029411764705882353,
+        "answered": 0.029411764705882353,
+        "equipment": 0.029411764705882353,
+        "vehicle": 0.029411764705882353,
+        "party": 0.029411764705882353,
+        "manufacturer": 0.029411764705882353,
+        "location": 0.029411764705882353,
+        "located": 0.029411764705882353,
+        "conference": 0.029411764705882353,
+        "named": 0.029411764705882353,
+        "operational": 0.029411764705882353,
+        "\"": 0.029411764705882353,
+        "round": 0.029411764705882353,
+        "network": 0.029411764705882353,
+        "municipality": 0.029411764705882353
+      },
+      "at_end_of_number": {
+        "and": 0.16666666666666666,
+        "points": 0.0625,
+        "in": 0.041666666666666664,
+        "place": 0.041666666666666664,
+        "as": 0.041666666666666664,
+        "byes": 0.020833333333333332,
+        "happen": 0.020833333333333332,
+        "ties": 0.020833333333333332,
+        "floors": 0.020833333333333332,
+        "fans": 0.020833333333333332,
+        "but": 0.020833333333333332,
+        "gold": 0.020833333333333332,
+        "on": 0.020833333333333332,
+        "belongs": 0.020833333333333332,
+        "yes": 0.020833333333333332,
+        "fight": 0.020833333333333332,
+        "chart": 0.020833333333333332,
+        "silver": 0.020833333333333332,
+        "season": 0.020833333333333332,
+        "losses": 0.020833333333333332,
+        "touchdowns": 0.020833333333333332,
+        "week": 0.020833333333333332,
+        "\"": 0.020833333333333332,
+        "that": 0.020833333333333332,
+        "rounds": 0.020833333333333332,
+        "were": 0.020833333333333332,
+        "total": 0.020833333333333332,
+        "from": 0.020833333333333332,
+        "runs": 0.020833333333333332,
+        "with": 0.020833333333333332,
+        "votes": 0.020833333333333332,
+        "pixels": 0.020833333333333332,
+        "people": 0.020833333333333332,
+        "passengers": 0.020833333333333332,
+        "completion": 0.020833333333333332,
+        "games": 0.020833333333333332
+      },
+      "end_of_question": {
+        "": 1.0
+      },
+      "before_column_name": {
+        "to": 0.2,
+        "tournament": 0.2,
+        "class": 0.2,
+        "position": 0.2,
+        "outcome": 0.2
+      }
+    },
+    "avg_length_by_structure": {
+      "lowercase_phrase": 2.0214285714285714,
+      "code_string": 1.4375,
+      "date_string": 2.5285714285714285,
+      "proper_noun_sequence": 2.5313807531380754,
+      "number": 1.0,
+      "single_proper_noun": 1.0,
+      "mixed_case": 2.1444444444444444,
+      "score_pattern": 1.55
+    }
+  }
+}

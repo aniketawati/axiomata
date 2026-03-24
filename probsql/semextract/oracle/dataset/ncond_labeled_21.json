@@ -1,7 +1,7 @@
 [
   {
     "question": "What are the formats associated with the Atlantic Records label, catalog number 512336?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "with_clause"
     ],
@@ -49,7 +49,7 @@
   },
   {
     "question": "What is the average number of TDs when the yards are less than 119, the AVG is larger than 5, and Jamarr Ward is a player?",
-    "n_conditions": 2,
+    "n_conditions": 3,
     "condition_signals": [
       "comma_separated",
       "when_clause",
@@ -61,7 +61,7 @@
       "has_with": false,
       "has_when": true,
       "word_count": 26,
-      "column_mentions": 2
+      "column_mentions": 3
     }
   },
   {
@@ -161,7 +161,7 @@
   },
   {
     "question": "In the match where the away team scored 2.7 (19), how many peopel were in the crowd?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "implicit_single"
     ],
@@ -176,7 +176,7 @@
   },
   {
     "question": "What is the Team, when the Year 2007 is greater than 15,710, when the Year 2006 is greater than 17,666, and when the Year 2005 is greater than 22,532?",
-    "n_conditions": 4,
+    "n_conditions": 3,
     "condition_signals": [
       "explicit_and",
       "comma_separated",
@@ -193,7 +193,7 @@
   },
   {
     "question": "What is the highest race number in the Phillip Island circuit with James Winslow as the winning driver and pole position?",
-    "n_conditions": 2,
+    "n_conditions": 4,
     "condition_signals": [
       "implicit_single"
     ],
@@ -225,7 +225,7 @@
   },
   {
     "question": "With a Col (m) larger than 2012, what is Mount Kazbek's Prominence (m)?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "comma_separated",
       "with_clause",
@@ -272,7 +272,7 @@
   },
   {
     "question": "What is the total frequency mhz of the kgrj call sign, which has an erp w greater than 21,500?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "comma_separated",
       "comparative"
@@ -288,7 +288,7 @@
   },
   {
     "question": "What is the total number of field goals for a player that had less than 3 touchdowns, had 4 points, and had less than 4 extra points?",
-    "n_conditions": 2,
+    "n_conditions": 4,
     "condition_signals": [
       "explicit_and",
       "comparative"
@@ -304,7 +304,7 @@
   },
   {
     "question": "What Date has a Mach of 0.662?",
-    "n_conditions": 2,
+    "n_conditions": 1,
     "condition_signals": [
       "implicit_single"
     ],
@@ -444,7 +444,7 @@
   },
   {
     "question": "What is the score of the match at happy valley recreation ground pitch #2 with a 14:30 time?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "with_clause"
     ],
@@ -634,7 +634,7 @@
   },
   {
     "question": "What is the highest value in 2011 with less than 5,049 in 2006 and less than 1,380,935 in 2008?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "explicit_and",
       "with_clause",
@@ -750,7 +750,7 @@
   },
   {
     "question": "Achievement of m (ft), and a Type of mi-10r, and a Pilot of v.p. koloshenko, and a Date of 28 may 1965 had what record description?",
-    "n_conditions": 4,
+    "n_conditions": 3,
     "condition_signals": [
       "explicit_and",
       "comma_separated"

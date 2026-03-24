@@ -1,7 +1,7 @@
 [
   {
     "question": "What is 1998, when 1997 is \"3R\", and when 1992 is \"A\"?",
-    "n_conditions": 4,
+    "n_conditions": 2,
     "condition_signals": [
       "explicit_and",
       "comma_separated",
@@ -18,7 +18,7 @@
   },
   {
     "question": "When Philadelphia has a 2007 less than 20,796,173 and a 2008 more than 10,215,225, what is the smallest 2009?",
-    "n_conditions": 2,
+    "n_conditions": 3,
     "condition_signals": [
       "explicit_and",
       "comma_separated",
@@ -50,7 +50,7 @@
   },
   {
     "question": "What is the name of the driver with a rotax max engine, in the rotax heavy class, with arrow as chassis and on the TWR Raceline Seating team?",
-    "n_conditions": 1,
+    "n_conditions": 4,
     "condition_signals": [
       "comma_separated",
       "with_clause"
@@ -81,7 +81,7 @@
   },
   {
     "question": "What is the Population density that has a Change (%) higher than 10.4, and a Population (2011) less than 8574, in the County of Queens?",
-    "n_conditions": 3,
+    "n_conditions": 4,
     "condition_signals": [
       "explicit_and",
       "comma_separated",
@@ -140,7 +140,7 @@
       "has_with": false,
       "has_when": false,
       "word_count": 15,
-      "column_mentions": 0
+      "column_mentions": 1
     }
   },
   {
@@ -180,7 +180,7 @@
   },
   {
     "question": "Opponent of @ edmonton oilers, and a Game smaller than 7, and a Series of oilers lead 3\u20132 had what score?",
-    "n_conditions": 3,
+    "n_conditions": 2,
     "condition_signals": [
       "explicit_and",
       "comma_separated",
@@ -319,7 +319,7 @@
   },
   {
     "question": "What Competition had a Score of 2\u20130?",
-    "n_conditions": 2,
+    "n_conditions": 1,
     "condition_signals": [
       "implicit_single"
     ],
@@ -379,7 +379,7 @@
   },
   {
     "question": "What coach premiered February 16, 2008 later than episode 21.0?",
-    "n_conditions": 3,
+    "n_conditions": 4,
     "condition_signals": [
       "implicit_single"
     ],
@@ -404,7 +404,7 @@
       "has_with": false,
       "has_when": false,
       "word_count": 16,
-      "column_mentions": 2
+      "column_mentions": 3
     }
   },
   {
@@ -618,7 +618,7 @@
   },
   {
     "question": "What is the comp percentage when there are less than 44,611 in yardage, more than 254 touchdowns, and rank larger than 24?",
-    "n_conditions": 2,
+    "n_conditions": 3,
     "condition_signals": [
       "explicit_and",
       "comma_separated",
@@ -636,7 +636,7 @@
   },
   {
     "question": "Which round had Michael Schumacher in the pole position, David Coulthard with the fastest lap, and McLaren - Mercedes as the winning constructor?",
-    "n_conditions": 2,
+    "n_conditions": 4,
     "condition_signals": [
       "with_clause"
     ],
@@ -698,7 +698,7 @@
   },
   {
     "question": "Which seniors have a year after 2005, a Reserve of kiewa-sandy creek, and Fourths (Under 14's) of kiewa-sandy creek?",
-    "n_conditions": 2,
+    "n_conditions": 3,
     "condition_signals": [
       "comma_separated",
       "comparative",

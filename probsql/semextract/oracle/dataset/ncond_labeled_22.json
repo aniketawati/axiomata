@@ -1,7 +1,7 @@
 [
   {
     "question": "When the driver is Juan Manuel Fangio and laps is less than 39, what is the highest grid?",
-    "n_conditions": 2,
+    "n_conditions": 3,
     "condition_signals": [
       "explicit_and",
       "comma_separated",
@@ -249,7 +249,7 @@
   },
   {
     "question": "What team had a capacity of over 26,542, a home city of milan, and finished the 2011-2012 season 6th in serie a?",
-    "n_conditions": 2,
+    "n_conditions": 3,
     "condition_signals": [
       "comma_separated"
     ],
@@ -264,7 +264,7 @@
   },
   {
     "question": "With a 0-2 series, what is the high points?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "comma_separated",
       "with_clause"
@@ -361,7 +361,7 @@
   },
   {
     "question": "On January 15, what was the most in attendance?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "comma_separated",
       "temporal_qualifier"
@@ -454,7 +454,7 @@
   },
   {
     "question": "Which landfall was in category 1 for Saffir-Simpson in 1999?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "temporal_qualifier"
     ],
@@ -509,7 +509,7 @@
       "has_with": false,
       "has_when": false,
       "word_count": 20,
-      "column_mentions": 2
+      "column_mentions": 3
     }
   },
   {
@@ -653,7 +653,7 @@
   },
   {
     "question": "What is the part 3 of the word in class 7a?",
-    "n_conditions": 1,
+    "n_conditions": 3,
     "condition_signals": [
       "implicit_single"
     ],
@@ -762,7 +762,7 @@
   },
   {
     "question": "What is the total medal count for the nation that has 5 gold?",
-    "n_conditions": 1,
+    "n_conditions": 2,
     "condition_signals": [
       "implicit_single"
     ],
