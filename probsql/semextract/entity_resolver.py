@@ -118,6 +118,14 @@ class EntityResolver:
                 for val, etype in self.llm_entities.items():
                     self.entity_kb[val.lower()] = etype
 
+        # Load LLM-classified column types (16,601 headers)
+        col_types_path = SEMEXTRACT_KNOWLEDGE / "column_types_llm.json"
+        if col_types_path.exists():
+            with open(col_types_path) as f:
+                self._column_types_llm = json.load(f)
+        else:
+            self._column_types_llm = {}
+
         # Load feature-based type classifier (for unknown entities)
         cls_path = SEMEXTRACT_KNOWLEDGE / "entity_type_classifier.json"
         if cls_path.exists():
@@ -190,13 +198,20 @@ class EntityResolver:
         return inferred
 
     def get_column_type(self, column_name):
-        """Classify a column's semantic type from its name."""
+        """Classify a column's semantic type.
+
+        Uses LLM-classified lookup (16,601 headers) with keyword fallback.
+        """
+        # LLM lookup first (exact match)
+        if hasattr(self, '_column_types_llm') and column_name in self._column_types_llm:
+            return self._column_types_llm[column_name]
+
+        # Keyword fallback
         col_lower = column_name.lower()
         col_words = set(re.findall(r'\b\w+\b', col_lower))
 
         best_type = "other"
         best_overlap = 0
-
         for col_type, keywords in COLUMN_SEMANTIC_TYPES.items():
             overlap = len(col_words & keywords)
             if overlap > best_overlap:
