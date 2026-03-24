@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What is the toll for light vehicles at the plaza where the toll for heavy vehicles with 2 axles is r87.00?",
+    "where_column": "Heavy vehicle (2 axles)",
+    "where_value": "R87.00",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "heavy vehicles with 2 axles",
+    "column_keyword": "axles",
+    "value_span": "r87.00",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Where is the orchestra when the year of recording is 1934?",
+    "where_column": "Year of Recording",
+    "where_value": "1934",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "year of recording is",
+    "column_keyword": "recording",
+    "value_span": "1934",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the part 3 of the word in class 7a?",
+    "where_column": "Class",
+    "where_value": "7a",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in class 7a",
+    "column_keyword": "class",
+    "value_span": "7a",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the successor for elected january 26, 1837",
+    "where_column": "Date of successors formal installation",
+    "where_value": "Elected January 26, 1837",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "for elected january 26, 1837",
+    "column_keyword": "date",
+    "value_span": "elected january 26, 1837",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the minimum 11-12 enrollment for washington school",
+    "where_column": "School",
+    "where_value": "Washington",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for washington school",
+    "column_keyword": "school",
+    "value_span": "washington",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What district does John Cooksey represent?",
+    "where_column": "Incumbent",
+    "where_value": "John Cooksey",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "incumbent",
+    "value_span": "John Cooksey",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What was the result in the voting district Kentucky 2?",
+    "where_column": "District",
+    "where_value": "Kentucky 2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "voting district",
+    "column_keyword": "district",
+    "value_span": "Kentucky 2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which municipalities located in the county of Finnmark have populations bigger than 6187.0?",
+    "where_column": "County",
+    "where_value": "Finnmark",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "county of Finnmark",
+    "column_keyword": "county",
+    "value_span": "Finnmark",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the y = 2008 when y = 2011 is a = 3?",
+    "where_column": "Y = 2011",
+    "where_value": "a = 3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "y = 2011 is",
+    "column_keyword": "2011",
+    "value_span": "a = 3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If 4 went to iran and the amount that survived was less than 12.0 how many were there in 1990?",
+    "where_column": "to Iran",
+    "where_value": "4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "went to iran",
+    "column_keyword": "iran",
+    "value_span": "4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "In 1987 who was the mens singles",
+    "where_column": "Year",
+    "where_value": "1987",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "In 1987",
+    "column_keyword": "year",
+    "value_span": "1987",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What languages are spoken in Niger with r1b1c (r-v88) of 0.0%?",
+    "where_column": "Country",
+    "where_value": "Niger",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "spoken in Niger",
+    "column_keyword": "country",
+    "value_span": "Niger",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many points did player 7 score in the challenge cup?",
+    "where_column": "P",
+    "where_value": "7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "player 7",
+    "column_keyword": "p",
+    "value_span": "7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which party has a first elected number bigger than 1939.0?",
+    "where_column": "First elected",
+    "where_value": "1939.0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "first elected number",
+    "column_keyword": "elected",
+    "value_span": "1939.0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the title for episode 2?",
+    "where_column": "Episode #",
+    "where_value": "2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for episode 2",
+    "column_keyword": "episode",
+    "value_span": "2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the short stem for garbitzen?",
+    "where_column": "Imperfect stem",
+    "where_value": "garbitzen",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "stem",
+    "value_span": "garbitzen",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When 0-1 is the series who has the highest amount of assists?",
+    "where_column": "Series",
+    "where_value": "0-1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "is the series",
+    "column_keyword": "series",
+    "value_span": "0-1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many episodes were watched by 12.72 million U.S. viewers?",
+    "where_column": "U.S. viewers (millions)",
+    "where_value": "12.72",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "million U.S. viewers",
+    "column_keyword": "viewers",
+    "value_span": "12.72",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If Powershell (alias) is cpi, copy, cp, what are all corresponding descriptions. ",
+    "where_column": "PowerShell (Alias)",
+    "where_value": "cpi, copy, cp",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Powershell (alias) is",
+    "column_keyword": "alias",
+    "value_span": "cpi, copy, cp",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the election year when the # of candidates nominated was 262?",
+    "where_column": "# of candidates nominated",
+    "where_value": "262",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "candidates nominated was",
+    "column_keyword": "candidates",
+    "value_span": "262",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "isbn 0-441-01400-3 is book number?",
+    "where_column": "Hardcover",
+    "where_value": "ISBN 0-441-01400-3",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "hardcover",
+    "value_span": "isbn 0-441-01400-3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many viewers were there on 1august1964?",
+    "where_column": "Broadcast date",
+    "where_value": "1August1964",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "on 1august1964",
+    "column_keyword": "date",
+    "value_span": "1august1964",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the district when the total amount of trees is smaller than 150817.6878461314 and amount of old trees is 1,928 (1.89%)?",
+    "where_column": "Total amount of trees",
+    "where_value": "150817.6878461314",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "total amount of trees",
+    "column_keyword": "trees",
+    "value_span": "150817.6878461314",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "which station is located in edmonton",
+    "where_column": "City",
+    "where_value": "Edmonton",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "located in edmonton",
+    "column_keyword": "city",
+    "value_span": "edmonton",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What countries have a margin of victory at 6 strokes?",
+    "where_column": "Margin of victory",
+    "where_value": "6 strokes",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "margin of victory at",
+    "column_keyword": "margin",
+    "value_span": "6 strokes",
+    "select_reasoning": "question_word_implies"
+  }
+]

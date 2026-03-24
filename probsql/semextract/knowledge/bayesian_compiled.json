@@ -1,13 +1,23 @@
 {
   "P_reasoning_type": {
-    "column_name_mentioned": 0.762,
-    "trigger_phrase_indicates": 0.126,
-    "value_is_entity_name": 0.072,
-    "value_matches_column_type": 0.032,
-    "number_matches_numeric_column": 0.004,
-    "process_of_elimination": 0.004
+    "column_name_mentioned": 0.6513,
+    "trigger_phrase_indicates": 0.1393,
+    "value_is_entity_name": 0.1213,
+    "value_matches_column_type": 0.074,
+    "process_of_elimination": 0.0113,
+    "number_matches_numeric_column": 0.0027
   },
   "P_colkw_given_trigger": {
+    "written by": {
+      "top_column_keyword": "written",
+      "probability": 0.6667,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "written": 0.6667,
+        "directed": 0.3333
+      }
+    },
     "position is less than": {
       "top_column_keyword": "position",
       "probability": 1.0,
@@ -21,9 +31,28 @@
       "top_column_keyword": "directed",
       "probability": 1.0,
       "source": "llm",
-      "count": 2,
+      "count": 8,
       "all_keywords": {
         "directed": 1.0
+      }
+    },
+    "original artist": {
+      "top_column_keyword": "artist",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "artist": 1.0
+      }
+    },
+    "production code of": {
+      "top_column_keyword": "code",
+      "probability": 0.6667,
+      "source": "llm",
+      "count": 6,
+      "all_keywords": {
+        "code": 0.6667,
+        "production": 0.3333
       }
     },
     "time/retired of": {
@@ -35,6 +64,15 @@
         "time": 1.0
       }
     },
+    "average finish is": {
+      "top_column_keyword": "finish",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "finish": 1.0
+      }
+    },
     "points 1 of": {
       "top_column_keyword": "points",
       "probability": 1.0,
@@ -44,6 +82,33 @@
         "points": 1.0
       }
     },
+    "june 10-11 is": {
+      "top_column_keyword": "june",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "june": 1.0
+      }
+    },
+    "outcome is": {
+      "top_column_keyword": "outcome",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "outcome": 1.0
+      }
+    },
+    "purity is": {
+      "top_column_keyword": "purity",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "purity": 1.0
+      }
+    },
     "score of": {
       "top_column_keyword": "score",
       "probability": 1.0,
@@ -51,6 +116,25 @@
       "count": 2,
       "all_keywords": {
         "score": 1.0
+      }
+    },
+    "corrected time of": {
+      "top_column_keyword": "time",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "time": 1.0
+      }
+    },
+    "no bayonet lug": {
+      "top_column_keyword": "lug",
+      "probability": 0.5,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "lug": 0.5,
+        "bayonet": 0.5
       }
     },
     "when silver is": {
@@ -71,6 +155,43 @@
         "replaced": 1.0
       }
     },
+    "went to regina": {
+      "top_column_keyword": "college",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "college": 1.0
+      }
+    },
+    "for the year": {
+      "top_column_keyword": "year",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "year": 1.0
+      }
+    },
+    "heavy vehicles with 2 axles": {
+      "top_column_keyword": "heavy",
+      "probability": 0.5,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "heavy": 0.5,
+        "axles": 0.5
+      }
+    },
+    "million viewers": {
+      "top_column_keyword": "viewers",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 4,
+      "all_keywords": {
+        "viewers": 1.0
+      }
+    },
     "oregon 5 district": {
       "top_column_keyword": "district",
       "probability": 1.0,
@@ -78,6 +199,33 @@
       "count": 2,
       "all_keywords": {
         "district": 1.0
+      }
+    },
+    "evening gown is": {
+      "top_column_keyword": "gown",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "gown": 1.0
+      }
+    },
+    "has a population of": {
+      "top_column_keyword": "population",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "population": 1.0
+      }
+    },
+    "average finish of": {
+      "top_column_keyword": "finish",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 4,
+      "all_keywords": {
+        "finish": 1.0
       }
     },
     "round is less than": {
@@ -98,6 +246,15 @@
         "date": 1.0
       }
     },
+    "field goals being": {
+      "top_column_keyword": "goals",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "goals": 1.0
+      }
+    },
     "home city of": {
       "top_column_keyword": "city",
       "probability": 1.0,
@@ -105,6 +262,15 @@
       "count": 2,
       "all_keywords": {
         "city": 1.0
+      }
+    },
+    "overs bowled is": {
+      "top_column_keyword": "overs",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 4,
+      "all_keywords": {
+        "overs": 1.0
       }
     },
     "a score of": {
@@ -116,6 +282,24 @@
         "score": 1.0
       }
     },
+    "was produced in": {
+      "top_column_keyword": "production",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "production": 1.0
+      }
+    },
+    "closing date of": {
+      "top_column_keyword": "closing",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "closing": 1.0
+      }
+    },
     "a record of": {
       "top_column_keyword": "record",
       "probability": 1.0,
@@ -123,6 +307,482 @@
       "count": 2,
       "all_keywords": {
         "record": 1.0
+      }
+    },
+    "is the championship": {
+      "top_column_keyword": "championship",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "championship": 1.0
+      }
+    },
+    "198 rebounds": {
+      "top_column_keyword": "rebounds",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "rebounds": 1.0
+      }
+    },
+    "slovenes in 1951": {
+      "top_column_keyword": "slovenes",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "slovenes": 1.0
+      }
+    },
+    "poverty rate": {
+      "top_column_keyword": "rate",
+      "probability": 0.5,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "rate": 0.5,
+        "poverty": 0.5
+      }
+    },
+    "density of": {
+      "top_column_keyword": "division",
+      "probability": 0.5,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "division": 0.5,
+        "density": 0.5
+      }
+    },
+    "is the district": {
+      "top_column_keyword": "district",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "district": 1.0
+      }
+    },
+    "involved in": {
+      "top_column_keyword": "year",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "year": 1.0
+      }
+    },
+    "goals for/against being": {
+      "top_column_keyword": "goals",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "goals": 1.0
+      }
+    },
+    "production code": {
+      "top_column_keyword": "code",
+      "probability": 0.75,
+      "source": "llm",
+      "count": 8,
+      "all_keywords": {
+        "code": 0.75,
+        "production": 0.25
+      }
+    },
+    "parallel bars is": {
+      "top_column_keyword": "bars",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "bars": 1.0
+      }
+    },
+    "streak is": {
+      "top_column_keyword": "streak",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "streak": 1.0
+      }
+    },
+    "winning score is": {
+      "top_column_keyword": "score",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "score": 1.0
+      }
+    },
+    "area of": {
+      "top_column_keyword": "division",
+      "probability": 0.5,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "division": 0.5,
+        "area": 0.5
+      }
+    },
+    "arrived on the main island": {
+      "top_column_keyword": "arrived",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "arrived": 1.0
+      }
+    },
+    "market value of": {
+      "top_column_keyword": "market",
+      "probability": 0.6667,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "market": 0.6667,
+        "value": 0.3333
+      }
+    },
+    "1st leg is": {
+      "top_column_keyword": "leg",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "leg": 1.0
+      }
+    },
+    "finished in": {
+      "top_column_keyword": "time",
+      "probability": 0.5,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "time": 0.5,
+        "finished": 0.5
+      }
+    },
+    "total viewers": {
+      "top_column_keyword": "viewers",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "viewers": 1.0
+      }
+    },
+    "special edition is": {
+      "top_column_keyword": "edition",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "edition": 1.0
+      }
+    },
+    "remarks section": {
+      "top_column_keyword": "remarks",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "remarks": 1.0
+      }
+    },
+    "incumbent is": {
+      "top_column_keyword": "incumbent",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "incumbent": 1.0
+      }
+    },
+    "aggregate is": {
+      "top_column_keyword": "aggregate",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "aggregate": 1.0
+      }
+    },
+    "tries for being": {
+      "top_column_keyword": "tries",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "tries": 1.0
+      }
+    },
+    "has a density of": {
+      "top_column_keyword": "density",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "density": 1.0
+      }
+    },
+    "first operational being": {
+      "top_column_keyword": "operational",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "operational": 1.0
+      }
+    },
+    "original air date": {
+      "top_column_keyword": "date",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "date": 1.0
+      }
+    },
+    "with an area of": {
+      "top_column_keyword": "area",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "area": 1.0
+      }
+    },
+    "average score of": {
+      "top_column_keyword": "average",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "average": 1.0
+      }
+    },
+    "conference record is": {
+      "top_column_keyword": "record",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "record": 1.0
+      }
+    },
+    "u.s. airdate of": {
+      "top_column_keyword": "airdate",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "airdate": 1.0
+      }
+    },
+    "million u.s. viewers": {
+      "top_column_keyword": "viewers",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "viewers": 1.0
+      }
+    },
+    "million viewers (u.s.)": {
+      "top_column_keyword": "viewers",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "viewers": 1.0
+      }
+    },
+    "voting district": {
+      "top_column_keyword": "district",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "district": 1.0
+      }
+    },
+    "is the series": {
+      "top_column_keyword": "series",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "series": 1.0
+      }
+    },
+    "audience share in timeslot": {
+      "top_column_keyword": "audience",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "audience": 1.0
+      }
+    },
+    "record of": {
+      "top_column_keyword": "record",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "record": 1.0
+      }
+    },
+    "player from": {
+      "top_column_keyword": "school",
+      "probability": 0.5,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "school": 0.5,
+        "team": 0.5
+      }
+    },
+    "order number": {
+      "top_column_keyword": "order",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "order": 1.0
+      }
+    },
+    "is the subject": {
+      "top_column_keyword": "subject",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "subject": 1.0
+      }
+    },
+    "headquarters located in": {
+      "top_column_keyword": "headquarters",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "headquarters": 1.0
+      }
+    },
+    "record": {
+      "top_column_keyword": "record",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "record": 1.0
+      }
+    },
+    "is the performer": {
+      "top_column_keyword": "performed",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "performed": 1.0
+      }
+    },
+    "mls regular season was": {
+      "top_column_keyword": "regular",
+      "probability": 0.5,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "regular": 0.5,
+        "season": 0.5
+      }
+    },
+    "new entries this round": {
+      "top_column_keyword": "entries",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "entries": 1.0
+      }
+    },
+    "elected first in": {
+      "top_column_keyword": "elected",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "elected": 1.0
+      }
+    },
+    "record is": {
+      "top_column_keyword": "record",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "record": 1.0
+      }
+    },
+    "mon may 26 is": {
+      "top_column_keyword": "mon",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "mon": 1.0
+      }
+    },
+    "an area of": {
+      "top_column_keyword": "area",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "area": 1.0
+      }
+    },
+    "average rating of": {
+      "top_column_keyword": "ratings",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 3,
+      "all_keywords": {
+        "ratings": 1.0
+      }
+    },
+    "the equation is": {
+      "top_column_keyword": "equation",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "equation": 1.0
+      }
+    },
+    "most high points": {
+      "top_column_keyword": "points",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "points": 1.0
+      }
+    },
+    "scientific linux release is": {
+      "top_column_keyword": "release",
+      "probability": 1.0,
+      "source": "llm",
+      "count": 2,
+      "all_keywords": {
+        "release": 1.0
       }
     },
     "number [N]": {
@@ -231,24 +891,6 @@
         "record": 0.017,
         "opponent": 0.0169,
         "points": 0.0165
-      }
-    },
-    "written by": {
-      "top_column_keyword": "written",
-      "probability": 0.5493,
-      "source": "mechanical",
-      "count": 249,
-      "all_keywords": {
-        "written": 0.5493,
-        "directed": 0.1021,
-        "writer": 0.0634,
-        "s": 0.0246,
-        "title": 0.0211,
-        "no": 0.0211,
-        "original": 0.0176,
-        "code": 0.0176,
-        "date": 0.0141,
-        "air": 0.0141
       }
     },
     "represent": {
@@ -374,84 +1016,94 @@
     }
   },
   "P_select_reasoning": {
-    "column_name_after_question_word": 0.86,
-    "question_word_implies": 0.1,
-    "context_implies": 0.04
+    "column_name_after_question_word": 0.864,
+    "question_word_implies": 0.1113,
+    "context_implies": 0.0247
   },
   "P_colkw_given_reasoning_type": {
     "column_name_mentioned": {
       "distribution": {
-        "score": 0.0289,
-        "points": 0.0236,
-        "date": 0.021,
-        "rank": 0.021,
-        "year": 0.021,
-        "record": 0.0184,
-        "total": 0.0184,
-        "silver": 0.0184,
-        "position": 0.0157,
-        "time": 0.0157
+        "points": 0.0287,
+        "viewers": 0.0235,
+        "record": 0.0225,
+        "score": 0.0205,
+        "year": 0.0194,
+        "date": 0.0143,
+        "game": 0.0113,
+        "rank": 0.0113,
+        "season": 0.0113,
+        "district": 0.0113
       },
-      "count": 381
+      "count": 977
     },
     "value_matches_column_type": {
       "distribution": {
-        "date": 0.1875,
-        "year": 0.1875,
-        "state": 0.125,
-        "position": 0.0625,
-        "stem": 0.0625,
-        "lakota": 0.0625,
-        "production": 0.0625,
-        "playoffs": 0.0625,
-        "pos": 0.0625,
-        "score": 0.0625
+        "date": 0.2162,
+        "year": 0.0811,
+        "district": 0.045,
+        "title": 0.045,
+        "position": 0.027,
+        "hardcover": 0.027,
+        "uyghur": 0.027,
+        "season": 0.027,
+        "stem": 0.018,
+        "playoffs": 0.018
       },
-      "count": 16
+      "count": 111
     },
     "trigger_phrase_indicates": {
       "distribution": {
-        "date": 0.1746,
-        "home": 0.0476,
-        "directed": 0.0317,
-        "city": 0.0317,
-        "college": 0.0317,
-        "year": 0.0317,
-        "location": 0.0317,
-        "capacity": 0.0317,
-        "team": 0.0317,
-        "tournament": 0.0317
+        "date": 0.0622,
+        "team": 0.0335,
+        "written": 0.0287,
+        "year": 0.0287,
+        "directed": 0.0239,
+        "name": 0.0239,
+        "code": 0.0239,
+        "home": 0.0191,
+        "school": 0.0191,
+        "title": 0.0191
       },
-      "count": 63
+      "count": 209
     },
     "value_is_entity_name": {
       "distribution": {
-        "player": 0.1944,
-        "city": 0.0833,
-        "artist": 0.0556,
-        "manager": 0.0556,
-        "country": 0.0556,
-        "team": 0.0556,
-        "name": 0.0556,
-        "driver": 0.0556,
-        "leader": 0.0278,
-        "station": 0.0278
+        "player": 0.1264,
+        "incumbent": 0.0879,
+        "name": 0.0769,
+        "country": 0.0659,
+        "team": 0.0659,
+        "driver": 0.0385,
+        "district": 0.033,
+        "title": 0.033,
+        "artist": 0.0275,
+        "location": 0.0275
       },
-      "count": 36
+      "count": 182
     },
     "number_matches_numeric_column": {
       "distribution": {
-        "points": 0.5,
-        "rank": 0.5
+        "points": 0.25,
+        "rank": 0.25,
+        "tries": 0.25,
+        "others": 0.25
       },
-      "count": 2
+      "count": 4
     },
     "process_of_elimination": {
       "distribution": {
-        "2009": 0.5,
-        "notes": 0.5
+        "stem": 0.1765,
+        "points": 0.1176,
+        "2009": 0.0588,
+        "notes": 0.0588,
+        "lakota": 0.0588,
+        "yankton": 0.0588,
+        "clubs": 0.0588,
+        "difference": 0.0588,
+        "song": 0.0588,
+        "elected": 0.0588
       },
-      "count": 2
+      "count": 17
     }
   },
   "P_colkw_given_valuetype": {

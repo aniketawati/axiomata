@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What is the diameter in km of the feature named Colette Patera? ",
+    "where_column": "Name",
+    "where_value": "Colette Patera",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "feature named",
+    "column_keyword": "name",
+    "value_span": "Colette Patera",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many millions of people in the US watched the \"Company Man\" episode?",
+    "where_column": "Title",
+    "where_value": "\"Company Man\"",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "title",
+    "value_span": "\"Company Man\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What are the official name(s) of places with an area of 304.06 km2?",
+    "where_column": "Area km 2",
+    "where_value": "304.06",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "area of",
+    "column_keyword": "area",
+    "value_span": "304.06 km2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "The new entries this round was shown to be 12, in which phase would you find this?",
+    "where_column": "New entries this round",
+    "where_value": "12",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "new entries this round",
+    "column_keyword": "entries",
+    "value_span": "12",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what's the computing mechanbeingm with first operational being february 1944",
+    "where_column": "First operational",
+    "where_value": "February 1944",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "first operational being",
+    "column_keyword": "operational",
+    "value_span": "february 1944",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the ground for essendon",
+    "where_column": "Home team",
+    "where_value": "Essendon",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "home",
+    "value_span": "essendon",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What number parliament held it's election in 1997?",
+    "where_column": "General election contested",
+    "where_value": "1997",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "election in 1997",
+    "column_keyword": "election",
+    "value_span": "1997",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the swimsuit score for the country with the average score of 8.848?",
+    "where_column": "Average",
+    "where_value": "8.848",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "average score of",
+    "column_keyword": "average",
+    "value_span": "8.848",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " what's the permanence of the body where penance is the undifferenced",
+    "where_column": "penance",
+    "where_value": "the undifferenced",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "penance is",
+    "column_keyword": "penance",
+    "value_span": "the undifferenced",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the leagues entering this round for 4",
+    "where_column": "Clubs involved",
+    "where_value": "4",
+    "why_this_column": "process_of_elimination",
+    "trigger_phrase": null,
+    "column_keyword": "clubs",
+    "value_span": "4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many times was Plan B 4th place?",
+    "where_column": "Fourth",
+    "where_value": "Plan B",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "Plan B 4th place",
+    "column_keyword": "fourth",
+    "value_span": "Plan B",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Which masters fought in hapkido style?",
+    "where_column": "Martial Art/Style",
+    "where_value": "Hapkido",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "fought in hapkido style",
+    "column_keyword": "style",
+    "value_span": "hapkido",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What district first elected a Democratic incumbent in 1998?",
+    "where_column": "Party",
+    "where_value": "Democratic",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "Democratic incumbent",
+    "column_keyword": "party",
+    "value_span": "Democratic",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the player that wears number 42?",
+    "where_column": "No.",
+    "where_value": "42",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "wears number",
+    "column_keyword": "no",
+    "value_span": "42",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the record when the opponent is washington redskins?",
+    "where_column": "Opponent",
+    "where_value": "Washington Redskins",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "opponent is",
+    "column_keyword": "opponent",
+    "value_span": "washington redskins",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the total number of incumbent for first elected of 1944",
+    "where_column": "First elected",
+    "where_value": "1944",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "first elected of",
+    "column_keyword": "elected",
+    "value_span": "1944",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the song choice when week number is hollywood",
+    "where_column": "Week #",
+    "where_value": "Hollywood",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "week number is",
+    "column_keyword": "week",
+    "value_span": "hollywood",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many discs for the complete 4th series?",
+    "where_column": "Season",
+    "where_value": "The Complete 4th Series",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "complete 4th series",
+    "column_keyword": "season",
+    "value_span": "complete 4th series",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many dollars is the purse when the margin of victory is 8 strokes?",
+    "where_column": "Margin of victory",
+    "where_value": "8 strokes",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "margin of victory is",
+    "column_keyword": "margin",
+    "value_span": "8 strokes",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the institution that was located is circleville, ohio?",
+    "where_column": "Location",
+    "where_value": "Circleville, Ohio",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "located is",
+    "column_keyword": "location",
+    "value_span": "circleville, ohio",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What position did the team with the total score of 41/60 get?",
+    "where_column": "Total score/week",
+    "where_value": "41/60",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "total score of",
+    "column_keyword": "score",
+    "value_span": "41/60",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the location attendance for january 18",
+    "where_column": "Date",
+    "where_value": "January 18",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "date",
+    "value_span": "january 18",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who made the highest assist in the game that scored 79-88?",
+    "where_column": "Score",
+    "where_value": "79-88",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "game that scored",
+    "column_keyword": "score",
+    "value_span": "79-88",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the minimum games played with goals for/against being 7-5",
+    "where_column": "Goals For/Against",
+    "where_value": "7-5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "goals for/against being",
+    "column_keyword": "goals",
+    "value_span": "7-5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the perfect stem for pozten?",
+    "where_column": "Imperfect stem",
+    "where_value": "pozten",
+    "why_this_column": "process_of_elimination",
+    "trigger_phrase": null,
+    "column_keyword": "stem",
+    "value_span": "pozten",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

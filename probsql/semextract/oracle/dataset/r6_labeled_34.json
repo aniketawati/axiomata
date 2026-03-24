@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What location is farmer city speedway?",
+    "where_column": "Track Name",
+    "where_value": "Farmer City Speedway",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "track",
+    "value_span": "farmer city speedway",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the township with a geo ID of 3807116660?",
+    "where_column": "GEO ID",
+    "where_value": "3807116660",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "geo ID of",
+    "column_keyword": "ID",
+    "value_span": "3807116660",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "The winning team of the race, los angeles times 500 is who?",
+    "where_column": "Name",
+    "where_value": "Los Angeles Times 500",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "name",
+    "value_span": "los angeles times 500",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many players named jake flaherty?",
+    "where_column": "Name",
+    "where_value": "Jake Flaherty",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "players named",
+    "column_keyword": "name",
+    "value_span": "jake flaherty",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "When jim is eliminated what is the finish?",
+    "where_column": "Eliminated",
+    "where_value": "Jim",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "jim is eliminated",
+    "column_keyword": "eliminated",
+    "value_span": "jim",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many opponents played 1 game with a result win?",
+    "where_column": "Result",
+    "where_value": "Win",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "with a result win",
+    "column_keyword": "result",
+    "value_span": "win",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the least new points for points defending is 1200",
+    "where_column": "Points defending",
+    "where_value": "1200",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "points defending is",
+    "column_keyword": "defending",
+    "value_span": "1200",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lifetime (years) for chemical formula ch 4?",
+    "where_column": "Chemical formula",
+    "where_value": "CH 4",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "chemical formula",
+    "column_keyword": "formula",
+    "value_span": "ch 4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What position did Pranita Sahu's team get?",
+    "where_column": "Co-contestant (Yaar vs. Pyaar)",
+    "where_value": "Pranita Sahu",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "contestant",
+    "value_span": "Pranita Sahu",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What are the record(s) for the team with a winning percentage of .464?",
+    "where_column": "Pct.",
+    "where_value": ".464",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "winning percentage of",
+    "column_keyword": "pct",
+    "value_span": ".464",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If the height order is 1 and the soundfield type is mixed-order, what are all the channels?",
+    "where_column": "Soundfield type",
+    "where_value": "mixed-order",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "soundfield type is",
+    "column_keyword": "soundfield",
+    "value_span": "mixed-order",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the location for illinois",
+    "where_column": "Big Ten Team",
+    "where_value": "Illinois",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "team",
+    "value_span": "illinois",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many cfl teams had pick # 21?",
+    "where_column": "Pick #",
+    "where_value": "21",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "pick # 21",
+    "column_keyword": "pick",
+    "value_span": "21",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many times has a wrestler whose federation was roh, wwe competed in this event?",
+    "where_column": "Federation",
+    "where_value": "ROH, WWE",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "whose federation was",
+    "column_keyword": "federation",
+    "value_span": "roh, wwe",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Name the number of panelists for oat of cash wearing celebrity being matt di angelo",
+    "where_column": "Coat Of Cash Wearing Celebrity",
+    "where_value": "Matt Di Angelo",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "cash wearing celebrity being",
+    "column_keyword": "celebrity",
+    "value_span": "matt di angelo",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many reports are there in the race that Forsythe Racing won and Teo Fabi had the pole position in?",
+    "where_column": "Winning team",
+    "where_value": "Forsythe Racing",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "Forsythe Racing won",
+    "column_keyword": "team",
+    "value_span": "Forsythe Racing",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many outcomes are listed when the final opponent was Johan Kriek? ",
+    "where_column": "Opponent in the final",
+    "where_value": "Johan Kriek",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "final opponent was",
+    "column_keyword": "opponent",
+    "value_span": "Johan Kriek",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When Ryan Anderson won the mountains classification, and Michael Rogers won the general classification, who won the sprint classification?",
+    "where_column": "Mountains Classification",
+    "where_value": "Ryan Anderson",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "Ryan Anderson won the mountains classification",
+    "column_keyword": "mountains",
+    "value_span": "Ryan Anderson",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who has high points when toyota center 15,095 is location attendance?",
+    "where_column": "Location Attendance",
+    "where_value": "Toyota Center 15,095",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "is location attendance",
+    "column_keyword": "attendance",
+    "value_span": "toyota center 15,095",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the report for races where Will Power had both pole position and fastest lap?",
+    "where_column": "Pole position",
+    "where_value": "Will Power",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "had both pole position",
+    "column_keyword": "pole",
+    "value_span": "Will Power",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many websites are there for the school with 1939 students?",
+    "where_column": "Size",
+    "where_value": "1939",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "with 1939 students",
+    "column_keyword": "size",
+    "value_span": "1939",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " how many\u00a0candidates\u00a0with\u00a0district being california 7",
+    "where_column": "District",
+    "where_value": "California 7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "district being",
+    "column_keyword": "district",
+    "value_span": "california 7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the finished for exited day 13",
+    "where_column": "Exited",
+    "where_value": "Day 13",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "exited day",
+    "column_keyword": "exited",
+    "value_span": "day 13",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many publishers put out isbn 193700788x?",
+    "where_column": "Hardcover",
+    "where_value": "ISBN 193700788X",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "hardcover",
+    "value_span": "isbn 193700788x",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total population in the city/town of Arendal?",
+    "where_column": "City/town",
+    "where_value": "Arendal",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "city/town of",
+    "column_keyword": "city",
+    "value_span": "Arendal",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

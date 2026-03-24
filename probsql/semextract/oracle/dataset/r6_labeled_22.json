@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What's the C_{low} value when C_{high} is 12.0?",
+    "where_column": "C_{high}",
+    "where_value": "12.0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "C_{high} is",
+    "column_keyword": "high",
+    "value_span": "12.0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the original air date for \" don't look a smith horse in the mouth \"",
+    "where_column": "Title",
+    "where_value": "\" Don't Look a Smith Horse in the Mouth \"",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "title",
+    "value_span": "\" don't look a smith horse in the mouth \"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the industry for revenue being 2.1",
+    "where_column": "Revenue (billion $)",
+    "where_value": "2.1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "revenue being",
+    "column_keyword": "revenue",
+    "value_span": "2.1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What's the i_{high} value when C_{low} is 250.5?",
+    "where_column": "C_{low}",
+    "where_value": "250.5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "C_{low} is",
+    "column_keyword": "low",
+    "value_span": "250.5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which party won in the election in voting district Kentucky 5?",
+    "where_column": "District",
+    "where_value": "Kentucky 5",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "voting district",
+    "column_keyword": "district",
+    "value_span": "Kentucky 5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the candidates for illinois 15",
+    "where_column": "District",
+    "where_value": "Illinois 15",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "district",
+    "value_span": "illinois 15",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When hit by sam at 38,500 feet just after bomb release was the cause of loss what is the mission/target?",
+    "where_column": "Cause of Loss",
+    "where_value": "Hit by SAM at 38,500 feet just after bomb release",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "cause of loss",
+    "column_keyword": "cause",
+    "value_span": "hit by sam at 38,500 feet just after bomb release",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What class in the word with part 4 \"giheizan\"?",
+    "where_column": "Part 4",
+    "where_value": "giheizan",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "part 4",
+    "column_keyword": "part",
+    "value_span": "\"giheizan\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "List all directors from episodes with viewership of 1.945 million.",
+    "where_column": "Viewers (in millions)",
+    "where_value": "1.945",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "viewership of",
+    "column_keyword": "viewers",
+    "value_span": "1.945 million",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which common has an area (km2) of 103.02?",
+    "where_column": "Area (km 2 )",
+    "where_value": "103.02",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "area (km2) of",
+    "column_keyword": "area",
+    "value_span": "103.02",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the main service for the station with 14.849 million passengers 2011-12? ",
+    "where_column": "Total Passengers (millions) 2011–12",
+    "where_value": "14.849",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "million passengers 2011-12",
+    "column_keyword": "passengers",
+    "value_span": "14.849 million",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the 2012 election results for locations whose representative is Barbara Lee?",
+    "where_column": "Representative",
+    "where_value": "Barbara Lee",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "representative is",
+    "column_keyword": "representative",
+    "value_span": "Barbara Lee",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the first elected for kentucky 3",
+    "where_column": "District",
+    "where_value": "Kentucky 3",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "district",
+    "value_span": "kentucky 3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the United States rank?",
+    "where_column": "Country/Territory",
+    "where_value": "United States",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "country",
+    "value_span": "United States",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What players finished 2nd?",
+    "where_column": "Finish",
+    "where_value": "2nd",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "finished 2nd",
+    "column_keyword": "finish",
+    "value_span": "2nd",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Which one of the songs was originally performed by Rickie Lee Jones?",
+    "where_column": "Original artist",
+    "where_value": "Rickie Lee Jones",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "originally performed by",
+    "column_keyword": "artist",
+    "value_span": "Rickie Lee Jones",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many candidates were elected first in 1980?",
+    "where_column": "First elected",
+    "where_value": "1980",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "elected first in",
+    "column_keyword": "elected",
+    "value_span": "1980",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When tracy mcgrady (8) is leading in assists what is the date?",
+    "where_column": "High assists",
+    "where_value": "Tracy McGrady (8)",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "leading in assists",
+    "column_keyword": "assists",
+    "value_span": "tracy mcgrady (8)",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "which is the  maximun serie episode number when the millions of North American spectators is 3.14?",
+    "where_column": "U.S. Viewers (millions)",
+    "where_value": "3.14",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "millions of North American spectators",
+    "column_keyword": "viewers",
+    "value_span": "3.14",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the points against for 51 points",
+    "where_column": "Points",
+    "where_value": "51",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "51 points",
+    "column_keyword": "points",
+    "value_span": "51",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When the cmd.exe / command.com is type, what are all associated values for powershell (cmdlet)?",
+    "where_column": "CMD.EXE / COMMAND.COM",
+    "where_value": "type",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "cmd.exe / command.com is",
+    "column_keyword": "cmd",
+    "value_span": "type",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the affiliation when the institution was ohio christian university?",
+    "where_column": "Institution",
+    "where_value": "Ohio Christian University",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "institution was",
+    "column_keyword": "institution",
+    "value_span": "ohio christian university",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many u.s. viewers  (in millions) have \"dare devil\" as the title?",
+    "where_column": "Title",
+    "where_value": "\"Dare Devil\"",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "as the title",
+    "column_keyword": "title",
+    "value_span": "\"dare devil\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the maximum perigee on 1969-01-09?",
+    "where_column": "Decay date",
+    "where_value": "1969-01-09",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "perigee on",
+    "column_keyword": "decay",
+    "value_span": "1969-01-09",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What the is the first city listed on the route that had 6.6+ passengers in 2011 and a distance of 1075km?",
+    "where_column": "2011 Passengers (in millions)",
+    "where_value": "6.6+",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "passengers in 2011",
+    "column_keyword": "passengers",
+    "value_span": "6.6+",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

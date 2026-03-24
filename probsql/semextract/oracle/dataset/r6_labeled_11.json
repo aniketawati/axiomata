@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What is the party when the incumbent is samuel smith?",
+    "where_column": "Incumbent",
+    "where_value": "Samuel Smith",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "incumbent is",
+    "column_keyword": "incumbent",
+    "value_span": "samuel smith",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many players did the philadelphia eagles pick?",
+    "where_column": "NFL Team",
+    "where_value": "Philadelphia Eagles",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "philadelphia eagles pick",
+    "column_keyword": "team",
+    "value_span": "philadelphia eagles",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "In what district was John E. Miller the incumbent? ",
+    "where_column": "Incumbent",
+    "where_value": "John E. Miller",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "was John E. Miller the incumbent",
+    "column_keyword": "incumbent",
+    "value_span": "John E. Miller",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "How many members arrived on the main island in week 4?",
+    "where_column": "Week Arrived On Main Island",
+    "where_value": "4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "arrived on the main island",
+    "column_keyword": "arrived",
+    "value_span": "4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What team was Bodine in when he had an average finish of 8.3?",
+    "where_column": "Avg. Finish",
+    "where_value": "8.3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "average finish of",
+    "column_keyword": "finish",
+    "value_span": "8.3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is orthodoxy when x is wehdat?",
+    "where_column": "\u00d7",
+    "where_value": "Wehdat",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "when x is",
+    "column_keyword": "x",
+    "value_span": "wehdat",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "List the scores of all games when Miami were listed as the first Semi finalist",
+    "where_column": "Semi-Finalist #1",
+    "where_value": "Miami",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "first Semi finalist",
+    "column_keyword": "semi-finalist",
+    "value_span": "Miami",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many numbers were recorded under Obama when he had 29.9% voters?",
+    "where_column": "Obama%",
+    "where_value": "29.9%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "had 29.9% voters",
+    "column_keyword": "obama",
+    "value_span": "29.9%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which round 5 Grand Prix had Daijiro Hiura at pole position? ",
+    "where_column": "Pole Position",
+    "where_value": "Daijiro Hiura",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "at pole position",
+    "column_keyword": "pole",
+    "value_span": "Daijiro Hiura",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the name of the 9th ranked common?",
+    "where_column": "Rank",
+    "where_value": "9th",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "9th ranked",
+    "column_keyword": "rank",
+    "value_span": "9th",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the withdrawal rate for the school district with a graduation rate of 89.3%?",
+    "where_column": "Graduation rate (2011-12)",
+    "where_value": "89.3%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "graduation rate of",
+    "column_keyword": "graduation",
+    "value_span": "89.3%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If the equation is (10 times 1) + 3, what is the 2nd throw?",
+    "where_column": "Equation",
+    "where_value": "(10 times 1) + 3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "equation is",
+    "column_keyword": "equation",
+    "value_span": "(10 times 1) + 3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "In 2011, which city is listed first along the route that had 7.6+ million passengers?",
+    "where_column": "2011 Passengers (in millions)",
+    "where_value": "7.6+",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "million passengers",
+    "column_keyword": "passengers",
+    "value_span": "7.6+",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "WHAT WAS THE YEAR WHEN THE RUNNER-UP WAS WILLIAM MEHLHORN?",
+    "where_column": "Runner-up",
+    "where_value": "William Mehlhorn",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "runner-up was",
+    "column_keyword": "runner-up",
+    "value_span": "WILLIAM MEHLHORN",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "what are all the playoffs for u.s. open cup in 1st round",
+    "where_column": "U.S. Open Cup",
+    "where_value": "1st Round",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "u.s. open cup in",
+    "column_keyword": "cup",
+    "value_span": "1st round",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the minimum\u00a0year\u00a0where\u00a0winning score\u00a0is \u22128 (71-63-69-69=272)",
+    "where_column": "Winning score",
+    "where_value": "\u22128 (71-63-69-69=272)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "winning score is",
+    "column_keyword": "score",
+    "value_span": "\u22128 (71-63-69-69=272)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the number of original air date for when the number in season is 10/11",
+    "where_column": "No. in season",
+    "where_value": "10/11",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "number in season is",
+    "column_keyword": "season",
+    "value_span": "10/11",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Where was the final game played in 2007",
+    "where_column": "Year",
+    "where_value": "2007",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "played in 2007",
+    "column_keyword": "year",
+    "value_span": "2007",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the date successor seated for contested election; served until february 14, 1794",
+    "where_column": "Reason for change",
+    "where_value": "Contested election; served until February 14, 1794",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "for contested election",
+    "column_keyword": "reason",
+    "value_span": "contested election; served until february 14, 1794",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which countries have a 5th runner-up ranking is 2 and the 3rd runner-up ranking is 0",
+    "where_column": "5th Runner-up",
+    "where_value": "2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "5th runner-up ranking is",
+    "column_keyword": "runner-up",
+    "value_span": "2",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "What was the score in game 6?",
+    "where_column": "Game",
+    "where_value": "6",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in game 6",
+    "column_keyword": "game",
+    "value_span": "6",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "List all losses with average goals of 1.21.",
+    "where_column": "Goal Average 1",
+    "where_value": "1.21",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "average goals of",
+    "column_keyword": "average",
+    "value_span": "1.21",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the margin of the match on 19 Jan 2002?",
+    "where_column": "Match Date",
+    "where_value": "19 Jan 2002",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "match on 19 Jan 2002",
+    "column_keyword": "date",
+    "value_span": "19 Jan 2002",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the mens singles of 2008?",
+    "where_column": "Year",
+    "where_value": "2008",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "singles of 2008",
+    "column_keyword": "year",
+    "value_span": "2008",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the laps for 18 pointss",
+    "where_column": "Points",
+    "where_value": "18",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for 18 pointss",
+    "column_keyword": "points",
+    "value_span": "18",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

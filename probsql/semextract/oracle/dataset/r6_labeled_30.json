@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Name the opponent for june 12",
+    "where_column": "Date",
+    "where_value": "June 12",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "for june 12",
+    "column_keyword": "date",
+    "value_span": "june 12",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the number of the city district of stadtteil where foreigners are 5.162?",
+    "where_column": "Foreign nationals",
+    "where_value": "5.162",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "foreigners are",
+    "column_keyword": "foreign",
+    "value_span": "5.162",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What percentage of the votes were for others in the county where 462 people voted that way?",
+    "where_column": "Others#",
+    "where_value": "462",
+    "why_this_column": "number_matches_numeric_column",
+    "trigger_phrase": "462 people voted",
+    "column_keyword": "others",
+    "value_span": "462",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the last year someone was elected to the 14th district?",
+    "where_column": "District",
+    "where_value": "14th",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "elected to the 14th district",
+    "column_keyword": "district",
+    "value_span": "14th",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many new stations have a lenght (miles) of 6.0?",
+    "where_column": "Length (miles)",
+    "where_value": "6.0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "lenght (miles) of",
+    "column_keyword": "length",
+    "value_span": "6.0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the number of tn seshan values for kr values is 478608",
+    "where_column": "K.R. Narayanan (Values)",
+    "where_value": "478608",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "kr values is",
+    "column_keyword": "values",
+    "value_span": "478608",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the county with a longitude of -102.302775?",
+    "where_column": "Longitude",
+    "where_value": "-102.302775",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "a longitude of",
+    "column_keyword": "longitude",
+    "value_span": "-102.302775",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What was the total number of weeks on peak for the Ireland Albums Top 75 chart?",
+    "where_column": "Chart",
+    "where_value": "Ireland Albums Top 75",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Top 75 chart",
+    "column_keyword": "chart",
+    "value_span": "Ireland Albums Top 75",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest points scored by the Wildcats when the record was 5-1?",
+    "where_column": "Record",
+    "where_value": "5-1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the record was",
+    "column_keyword": "record",
+    "value_span": "5-1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was the centerfold model when a pictorial was done on marilyn monroe?",
+    "where_column": "Pictorials",
+    "where_value": "Marilyn Monroe",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "pictorial was done on",
+    "column_keyword": "pictorials",
+    "value_span": "marilyn monroe",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What country has the order number 711871-711880?",
+    "where_column": "Order number",
+    "where_value": "711871-711880",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the order number",
+    "column_keyword": "order",
+    "value_span": "711871-711880",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is run time when there were 7.4 million viewers?",
+    "where_column": "Viewers (in millions)",
+    "where_value": "7.4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "million viewers",
+    "column_keyword": "viewers",
+    "value_span": "7.4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who took first place in week 6?",
+    "where_column": "No. of weeks",
+    "where_value": "6",
+    "why_this_column": "process_of_elimination",
+    "trigger_phrase": null,
+    "column_keyword": "weeks",
+    "value_span": "week 6",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the swimsuit score for Illinois?",
+    "where_column": "Country",
+    "where_value": "Illinois",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "country",
+    "value_span": "Illinois",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which award-winning film has a screening number of 50 films 50 televised?",
+    "where_column": "Number of Screening",
+    "where_value": "50 films 50 televised",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "screening number of",
+    "column_keyword": "screening",
+    "value_span": "50 films 50 televised",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the team for scott dixon",
+    "where_column": "Driver",
+    "where_value": "Scott Dixon",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "driver",
+    "value_span": "scott dixon",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the hanja for the province of \"sangju\"?",
+    "where_column": "Province",
+    "where_value": "Sangju",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the province of",
+    "column_keyword": "province",
+    "value_span": "\"sangju\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the average finish the year Bodine finished 3rd?",
+    "where_column": "Position",
+    "where_value": "3rd",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "bodine finished 3rd",
+    "column_keyword": "position",
+    "value_span": "3rd",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which episode number drew in 3.84 million viewers in the U.S.?",
+    "where_column": "U.S. viewers (million)",
+    "where_value": "3.84",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "million viewers in the U.S.",
+    "column_keyword": "viewers",
+    "value_span": "3.84",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many times has a wrestler from the country of England wrestled in this event?",
+    "where_column": "Country",
+    "where_value": "England",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "from the country of",
+    "column_keyword": "country",
+    "value_span": "England",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Which qualifying schools were in the Patriot conference?",
+    "where_column": "Conference",
+    "where_value": "Patriot",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in the Patriot conference",
+    "column_keyword": "conference",
+    "value_span": "Patriot",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the environment rating of the country with an overall average rating of 4.7?",
+    "where_column": "Overall (Average)",
+    "where_value": "4.7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "overall average rating of",
+    "column_keyword": "average",
+    "value_span": "4.7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the report of the Belgian Grand Prix?",
+    "where_column": "Grand Prix",
+    "where_value": "Belgian Grand Prix",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the Belgian Grand Prix",
+    "column_keyword": "grand",
+    "value_span": "Belgian Grand Prix",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the successor when the reason for change is seat declared vacant January 2, 1808",
+    "where_column": "Reason for change",
+    "where_value": "Seat declared vacant January 2, 1808",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "reason for change is",
+    "column_keyword": "reason",
+    "value_span": "seat declared vacant January 2, 1808",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "who wrote s01e06",
+    "where_column": "Television order",
+    "where_value": "S01E06",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "order",
+    "value_span": "s01e06",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

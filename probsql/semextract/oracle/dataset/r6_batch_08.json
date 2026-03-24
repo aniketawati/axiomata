@@ -1,0 +1,383 @@
+[
+  {
+    "question": "what is the total number of\u00a02nd leg\u00a0where\u00a0aggregate\u00a0is 7-2",
+    "headers": [
+      "Season",
+      "Competition",
+      "Round",
+      "Opponents",
+      "1st leg",
+      "2nd leg",
+      "Aggregate"
+    ],
+    "where_column": "Aggregate",
+    "where_value": "7-2",
+    "select_column": "2nd leg"
+  },
+  {
+    "question": "Name who was famous for finished in 9th",
+    "headers": [
+      "Celebrity",
+      "Famous for",
+      "Entered",
+      "Exited",
+      "Finished"
+    ],
+    "where_column": "Finished",
+    "where_value": "9th",
+    "select_column": "Famous for"
+  },
+  {
+    "question": "What was the diameter of the feature found in 1997?",
+    "headers": [
+      "Name",
+      "Latitude",
+      "Longitude",
+      "Diameter (km)",
+      "Year named",
+      "Name origin"
+    ],
+    "where_column": "Year named",
+    "where_value": "1997",
+    "select_column": "Diameter (km)"
+  },
+  {
+    "question": "Which county had a 3.6% unemployment rate?",
+    "headers": [
+      "County",
+      "Population",
+      "Unemployment Rate",
+      "Market Income Per Capita",
+      "Poverty Rate",
+      "Status"
+    ],
+    "where_column": "Unemployment Rate",
+    "where_value": "3.6%",
+    "select_column": "County"
+  },
+  {
+    "question": "How many people voted for Kerry in the county where 8 voted for others?",
+    "headers": [
+      "County",
+      "Kerry%",
+      "Kerry#",
+      "Bush%",
+      "Bush#",
+      "Others%",
+      "Others#"
+    ],
+    "where_column": "Others#",
+    "where_value": "8",
+    "select_column": "Kerry#"
+  },
+  {
+    "question": "What are the nationality of the players on the Fresno State school/club team?",
+    "headers": [
+      "Player",
+      "No.",
+      "Nationality",
+      "Position",
+      "Years in Toronto",
+      "School/Club Team"
+    ],
+    "where_column": "School/Club Team",
+    "where_value": "Fresno State",
+    "select_column": "Nationality"
+  },
+  {
+    "question": "What is the lowest number of games played by the player with 50 steals?",
+    "headers": [
+      "Player",
+      "Games Played",
+      "Minutes",
+      "Field Goals",
+      "Three Pointers",
+      "Free Throws",
+      "Rebounds",
+      "Assists",
+      "Blocks",
+      "Steals",
+      "Points"
+    ],
+    "where_column": "Steals",
+    "where_value": "50",
+    "select_column": "Games Played"
+  },
+  {
+    "question": "Which junctions have \"replaced by bsi-35\" listed in their remarks section?",
+    "headers": [
+      "Route Name",
+      "Direction",
+      "Termini",
+      "Junctions",
+      "Length",
+      "Population Area",
+      "Remarks"
+    ],
+    "where_column": "Remarks",
+    "where_value": "Replaced by BSI-35",
+    "select_column": "Junctions"
+  },
+  {
+    "question": "What's the type of muzzle devices on the models with round hand guards?",
+    "headers": [
+      "Colt model no.",
+      "Name",
+      "Stock",
+      "Fire control",
+      "Rear sight",
+      "Forward assist",
+      "Case deflector",
+      "Barrel length",
+      "Barrel profile",
+      "Barrel twist",
+      "Hand guards",
+      "Bayonet Lug",
+      "Muzzle device"
+    ],
+    "where_column": "Hand guards",
+    "where_value": "Round",
+    "select_column": "Muzzle device"
+  },
+  {
+    "question": "What is Norway's least ends lost?",
+    "headers": [
+      "Country",
+      "Skip",
+      "W",
+      "L",
+      "PF",
+      "PA",
+      "Ends Won",
+      "Ends Lost",
+      "Blank Ends",
+      "Stolen Ends",
+      "Shot %"
+    ],
+    "where_column": "Country",
+    "where_value": "Norway",
+    "select_column": "Ends Lost"
+  },
+  {
+    "question": "What is the population density of the administrative division with a population in 2010 of 264170 according to the census?",
+    "headers": [
+      "Administrative division",
+      "Area (km\u00b2) 2005",
+      "Population 2010 Census",
+      "Population 2011 SIAK Database",
+      "Population density (/km\u00b2 2010)"
+    ],
+    "where_column": "Population 2010 Census",
+    "where_value": "264170",
+    "select_column": "Population density (/km\u00b2 2010)"
+  },
+  {
+    "question": "What city and state is the Lancers mascot located?",
+    "headers": [
+      "School",
+      "Mascot",
+      "Location",
+      "League",
+      "Enrollment"
+    ],
+    "where_column": "Mascot",
+    "where_value": "Lancers",
+    "select_column": "Location"
+  },
+  {
+    "question": "Who had the highest assists on March 18?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "March 18",
+    "select_column": "High assists"
+  },
+  {
+    "question": "The hanja \u5c19\u5dde is for what capital?",
+    "headers": [
+      "Former kingdom",
+      "Province",
+      "Hangul",
+      "Hanja",
+      "Capital",
+      "Modern equivalent"
+    ],
+    "where_column": "Hanja",
+    "where_value": "\u5c19\u5dde",
+    "select_column": "Capital"
+  },
+  {
+    "question": "How many position does Teodor Salparov play on? ",
+    "headers": [
+      "Shirt No",
+      "Nationality",
+      "Player",
+      "Birth Date",
+      "Height",
+      "Position"
+    ],
+    "where_column": "Player",
+    "where_value": "Teodor Salparov",
+    "select_column": "Position"
+  },
+  {
+    "question": "Who was the centerfold model in the issue where Fergie answered the \"20 questions\"?",
+    "headers": [
+      "Date",
+      "Cover model",
+      "Centerfold model",
+      "Interview subject",
+      "20 Questions",
+      "Pictorials"
+    ],
+    "where_column": "20 Questions",
+    "where_value": "Fergie",
+    "select_column": "Centerfold model"
+  },
+  {
+    "question": "What is the pick number for round 2?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "College/junior/club team (league)"
+    ],
+    "where_column": "Round",
+    "where_value": "2",
+    "select_column": "Pick #"
+  },
+  {
+    "question": "what's the\u00a0bubbles\u00a0with\u00a0attribute\u00a0being onpopuphidden",
+    "headers": [
+      "Category",
+      "Type",
+      "Attribute",
+      "Description",
+      "Bubbles",
+      "Cancelable"
+    ],
+    "where_column": "Attribute",
+    "where_value": "onpopuphidden",
+    "select_column": "Bubbles"
+  },
+  {
+    "question": " what's the\u00a0swimsuit\u00a0where\u00a0average\u00a0is 8.670",
+    "headers": [
+      "State",
+      "Preliminaries",
+      "Interview",
+      "Swimsuit",
+      "Evening Gown",
+      "Average"
+    ],
+    "where_column": "Average",
+    "where_value": "8.670",
+    "select_column": "Swimsuit"
+  },
+  {
+    "question": "How many winning drivers in the kraco twin 125 (r2) race were there?",
+    "headers": [
+      "Rd",
+      "Name",
+      "Pole Position",
+      "Fastest Lap",
+      "Winning driver",
+      "Winning team",
+      "Report"
+    ],
+    "where_column": "Name",
+    "where_value": "Kraco Twin 125 (R2)",
+    "select_column": "Winning driver"
+  },
+  {
+    "question": "What DS division has S. L. M. Haneefa as the divisional secretary?",
+    "headers": [
+      "DS Division",
+      "Main Town",
+      "Divisional Secretary",
+      "GN Divisions",
+      "Area (km 2 )",
+      "Sri Lankan Tamil",
+      "Sri Lankan Moors",
+      "Sinhalese",
+      "Burgher",
+      "Other",
+      "Total",
+      "Population Density (/km 2 )"
+    ],
+    "where_column": "Divisional Secretary",
+    "where_value": "S. L. M. Haneefa",
+    "select_column": "DS Division"
+  },
+  {
+    "question": " how many\u00a0points against\u00a0with\u00a0tries for\u00a0being 43",
+    "headers": [
+      "Club",
+      "Played",
+      "Won",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Tries for",
+    "where_value": "43",
+    "select_column": "Points against"
+  },
+  {
+    "question": "Name the total number for period of validity for upper volta",
+    "headers": [
+      "Former country name",
+      "Former codes",
+      "Period of validity",
+      "ISO 3166-3 code",
+      "New country names and codes"
+    ],
+    "where_column": "Former country name",
+    "where_value": "Upper Volta",
+    "select_column": "Period of validity"
+  },
+  {
+    "question": "Who was \"The Magic Necklace\" written by?",
+    "headers": [
+      "Series #",
+      "Season #",
+      "Title",
+      "Directed by:",
+      "Written by:",
+      "Original air date"
+    ],
+    "where_column": "Title",
+    "where_value": "\"The Magic Necklace\"",
+    "select_column": "Written by:"
+  },
+  {
+    "question": "Who is the vacator when south carolina 4th is the district?",
+    "headers": [
+      "District",
+      "Vacator",
+      "Reason for change",
+      "Successor",
+      "Date successor seated"
+    ],
+    "where_column": "District",
+    "where_value": "South Carolina 4th",
+    "select_column": "Vacator"
+  }
+]

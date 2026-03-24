@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What team or teams with 18 in the top 10?",
+    "where_column": "Top 10",
+    "where_value": "18",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in the top 10",
+    "column_keyword": "top",
+    "value_span": "18",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When us open (2) is the championship what is the surface?",
+    "where_column": "Championship",
+    "where_value": "US Open (2)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "is the championship",
+    "column_keyword": "championship",
+    "value_span": "us open (2)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who had the highest points on January 2?",
+    "where_column": "Date",
+    "where_value": "January 2",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "date",
+    "value_span": "January 2",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the number for service dates for hoosier energy for petersburg",
+    "where_column": "Owner(s) (2009)",
+    "where_value": "Hoosier Energy",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "owner",
+    "value_span": "hoosier energy",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What time in eastern standard time was game held at denver broncos?",
+    "where_column": "Opponent",
+    "where_value": "at Denver Broncos",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "game held at",
+    "column_keyword": "opponent",
+    "value_span": "at Denver Broncos",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name who wrote number 88",
+    "where_column": "No. in series",
+    "where_value": "88",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "wrote number",
+    "column_keyword": "series",
+    "value_span": "88",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the total number of opponent of record 9-2",
+    "where_column": "Record",
+    "where_value": "9-2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "of record",
+    "column_keyword": "record",
+    "value_span": "9-2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Nagua has the area (km\u00b2) of?",
+    "where_column": "Capital",
+    "where_value": "Nagua",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "capital",
+    "value_span": "Nagua",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many U.S. air dates were from an episode in Season 4?",
+    "where_column": "No. in season",
+    "where_value": "4",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "episode in Season",
+    "column_keyword": "season",
+    "value_span": "4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many schools did player number 3 play at?",
+    "where_column": "No.",
+    "where_value": "3",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "player number",
+    "column_keyword": "no",
+    "value_span": "3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the original air date for production code 1ark79?",
+    "where_column": "Production code",
+    "where_value": "1ARK79",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "production code",
+    "column_keyword": "code",
+    "value_span": "1ark79",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many endowments does Mosaic Stadium have?",
+    "where_column": "Football stadium",
+    "where_value": "Mosaic Stadium",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "Mosaic Stadium have",
+    "column_keyword": "stadium",
+    "value_span": "Mosaic Stadium",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the pos for west ham united",
+    "where_column": "Club",
+    "where_value": "West Ham United",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "club",
+    "value_span": "west ham united",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the number of leaders for % of popular vote being 11.05%",
+    "where_column": "% of popular vote",
+    "where_value": "11.05%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "% of popular vote being",
+    "column_keyword": "vote",
+    "value_span": "11.05%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What school did the forward whose number is 10 belong to?",
+    "where_column": "No.(s)",
+    "where_value": "10",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "whose number is",
+    "column_keyword": "no",
+    "value_span": "10",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the teleplay for  david simon & eric overmyer and tom piazza",
+    "where_column": "Story by",
+    "where_value": "David Simon & Eric Overmyer and Tom Piazza",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "story",
+    "value_span": "david simon & eric overmyer and tom piazza",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who directed episode number 3?",
+    "where_column": "Episode No.",
+    "where_value": "3",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "episode number",
+    "column_keyword": "episode",
+    "value_span": "3",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the fluency for transcortical sensory aphasia",
+    "where_column": "Type of aphasia",
+    "where_value": "Transcortical sensory aphasia",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "aphasia",
+    "value_span": "transcortical sensory aphasia",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what's the\u00a0won\u00a0with\u00a0points against\u00a0being 597",
+    "where_column": "Points against",
+    "where_value": "597",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "points against being",
+    "column_keyword": "against",
+    "value_span": "597",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the series on june 5",
+    "where_column": "Date",
+    "where_value": "June 5",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "date",
+    "value_span": "june 5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What date was episode 10 in the season originally aired?",
+    "where_column": "No. in season",
+    "where_value": "10",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "episode 10 in the season",
+    "column_keyword": "season",
+    "value_span": "10",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "WHAT YEAR DID MIKE BRADY GET RUNNER-UP?",
+    "where_column": "Runner-up",
+    "where_value": "Mike Brady",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "get runner-up",
+    "column_keyword": "runner-up",
+    "value_span": "MIKE BRADY",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the number of song for solydo",
+    "where_column": "Artist",
+    "where_value": "Solydo",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "artist",
+    "value_span": "solydo",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the kr narayanan votes for values being 936 for kr",
+    "where_column": "K.R. Narayanan (Values)",
+    "where_value": "936",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "values being",
+    "column_keyword": "values",
+    "value_span": "936",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Where the home team scored 13.10 (88), what was the size of the crowd?",
+    "where_column": "Home team score",
+    "where_value": "13.10 (88)",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "home team scored",
+    "column_keyword": "score",
+    "value_span": "13.10 (88)",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

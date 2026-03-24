@@ -20,11 +20,12 @@ ORACLE_DIR = Path(__file__).parent / "oracle" / "dataset"
 def load_reasoning_labels():
     """Load all LLM-labeled reasoning data."""
     labels = []
-    for f in sorted(ORACLE_DIR.glob("reasoning_labeled_*.json")):
-        with open(f) as fh:
-            data = json.load(fh)
-            if isinstance(data, list):
-                labels.extend(data)
+    for pattern in ["reasoning_labeled_*.json", "r6_labeled_*.json"]:
+        for f in sorted(ORACLE_DIR.glob(pattern)):
+            with open(f) as fh:
+                data = json.load(fh)
+                if isinstance(data, list):
+                    labels.extend(data)
     return labels
 
 

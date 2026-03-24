@@ -1,0 +1,252 @@
+[
+  {
+    "question": "How many times did episode 1.8 air?",
+    "where_column": "Episode #",
+    "where_value": "1.8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "episode 1.8",
+    "column_keyword": "episode",
+    "value_span": "1.8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many games did the team play when they were 1-3?",
+    "where_column": "Record",
+    "where_value": "1-3",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "they were",
+    "column_keyword": "record",
+    "value_span": "1-3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What league was involved in 2008?",
+    "where_column": "Year",
+    "where_value": "2008",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "involved in",
+    "column_keyword": "year",
+    "value_span": "2008",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the first episode in the season directed by nelson mccormick?",
+    "where_column": "Directed by",
+    "where_value": "Nelson McCormick",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "directed by",
+    "column_keyword": "directed",
+    "value_span": "nelson mccormick",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Provide me with the names of all the villages (German) that has 76.3% of Slovenes in 1951.",
+    "where_column": "Percent of Slovenes 1951",
+    "where_value": "76.3%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Slovenes in 1951",
+    "column_keyword": "slovenes",
+    "value_span": "76.3%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the number of the player who went to Southern University?",
+    "where_column": "School/Club Team/Country",
+    "where_value": "Southern University",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "went to",
+    "column_keyword": "school",
+    "value_span": "Southern University",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the surface for events held in 1983?",
+    "where_column": "Year",
+    "where_value": "1983",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "held in",
+    "column_keyword": "year",
+    "value_span": "1983",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many alt names does 1964-011a have?",
+    "where_column": "ID",
+    "where_value": "1964-011A",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "does 1964-011a",
+    "column_keyword": "id",
+    "value_span": "1964-011a",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many settlements are named \u0452\u0443\u0440\u0452\u0438\u043d (croatian: \u0111ur\u0111in)?",
+    "where_column": "Cyrillic Name Other Names",
+    "where_value": "\u0402\u0443\u0440\u0452\u0438\u043d (Croatian: \u0110ur\u0111in)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "named \u0452\u0443\u0440\u0452\u0438\u043d",
+    "column_keyword": "name",
+    "value_span": "\u0452\u0443\u0440\u0452\u0438\u043d (croatian: \u0111ur\u0111in)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what's the minimum\u00a0species in the peruvian amazon\u00a0with\u00a0taxonomy\u00a0s fern ( pteridophyta )",
+    "where_column": "Taxonomy",
+    "where_value": "s Fern ( Pteridophyta )",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "taxonomy s fern",
+    "column_keyword": "taxonomy",
+    "value_span": "s fern ( pteridophyta )",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the position for van den brink, bas",
+    "where_column": "Name",
+    "where_value": "van den Brink, Bas",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "for van den",
+    "column_keyword": "name",
+    "value_span": "van den brink, bas",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If the parallel bars is 14.025, what is the total number of gymnasts?",
+    "where_column": "Parallel Bars",
+    "where_value": "14.025",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "parallel bars is",
+    "column_keyword": "bars",
+    "value_span": "14.025",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "How many foreigners in percentage terms had a population of 4.911?",
+    "where_column": "Population",
+    "where_value": "4.911",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "population of",
+    "column_keyword": "population",
+    "value_span": "4.911",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the total number of\u00a0record\u00a0where\u00a0streak\u00a0is l2 and\u00a0leading scorer\u00a0is roy : 23",
+    "where_column": "Streak",
+    "where_value": "L2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "streak is",
+    "column_keyword": "streak",
+    "value_span": "l2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " what's the\u00a0margin\u00a0where\u00a0runner(s)-up\u00a0is phil mickelson",
+    "where_column": "Runner(s)-up",
+    "where_value": "Phil Mickelson",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "runner(s)-up is",
+    "column_keyword": "runner",
+    "value_span": "phil mickelson",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the title of the song that received 259 points?",
+    "where_column": "Points",
+    "where_value": "259",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "received 259 points",
+    "column_keyword": "points",
+    "value_span": "259",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the license award date for North East England?",
+    "where_column": "Region",
+    "where_value": "North East England",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "date for",
+    "column_keyword": "region",
+    "value_span": "North East England",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " what's the\u00a054 holes\u00a0where\u00a0winning score\u00a0is \u221219 (67-66-67-69=269)",
+    "where_column": "Winning score",
+    "where_value": "\u221219 (67-66-67-69=269)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "winning score is",
+    "column_keyword": "score",
+    "value_span": "\u221219 (67-66-67-69=269)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "The episode with the title \"Bait\" has what original air date?",
+    "where_column": "Title",
+    "where_value": "\"Bait\"",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "with the title",
+    "column_keyword": "title",
+    "value_span": "\"Bait\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the area of cimahi city?",
+    "where_column": "Administrative division",
+    "where_value": "Cimahi City",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "area of",
+    "column_keyword": "division",
+    "value_span": "cimahi city",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the district for tim lee hall",
+    "where_column": "Incumbent",
+    "where_value": "Tim Lee Hall",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "for tim lee",
+    "column_keyword": "incumbent",
+    "value_span": "tim lee hall",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the production code for episode 3 of the season?",
+    "where_column": "No. in season",
+    "where_value": "3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "episode 3 of the season",
+    "column_keyword": "season",
+    "value_span": "3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What team was he on when he had 10 f/laps?",
+    "where_column": "F/Laps",
+    "where_value": "10",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "10 f/laps",
+    "column_keyword": "laps",
+    "value_span": "10",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which award-winning film has a closing date of September 4?",
+    "where_column": "Date (Closing)",
+    "where_value": "September 4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "closing date of",
+    "column_keyword": "closing",
+    "value_span": "September 4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the distrct for thomas wilson",
+    "where_column": "Incumbent",
+    "where_value": "Thomas Wilson",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "for thomas wilson",
+    "column_keyword": "incumbent",
+    "value_span": "thomas wilson",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

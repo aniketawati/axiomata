@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What is the 100 year for Carbon Dioxide?",
+    "where_column": "Gas name",
+    "where_value": "Carbon dioxide",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "gas",
+    "value_span": "Carbon Dioxide",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many games were won by a margin of 131 runs?",
+    "where_column": "Margin",
+    "where_value": "131 runs",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "by a margin of",
+    "column_keyword": "margin",
+    "value_span": "131 runs",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Find all the result(s) with the record of 2-13.",
+    "where_column": "Record",
+    "where_value": "2-13",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "with the record of",
+    "column_keyword": "record",
+    "value_span": "2-13",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When Yaroslav Popovych won most corageous, who won the mountains classification?",
+    "where_column": "Most Courageous",
+    "where_value": "Yaroslav Popovych",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "won most corageous",
+    "column_keyword": "courageous",
+    "value_span": "Yaroslav Popovych",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "List the number of cores for ddr3-1333 with frequencies between 2.66-2.8ghz.",
+    "where_column": "Max Memory Speed",
+    "where_value": "DDR3-1333",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "memory",
+    "value_span": "ddr3-1333",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When was the Kymberly Paige the Centerfold?",
+    "where_column": "Centerfold model",
+    "where_value": "Kymberly Paige",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "the Centerfold",
+    "column_keyword": "centerfold",
+    "value_span": "Kymberly Paige",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the maximum memory speed for frequencies between 2.93-3.2ghz?",
+    "where_column": "Frequency",
+    "where_value": "2.93-3.2GHz",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "frequencies between",
+    "column_keyword": "frequency",
+    "value_span": "2.93-3.2ghz",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was the interview subject on the date 1-97?",
+    "where_column": "Date",
+    "where_value": "1-97",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "on the date",
+    "column_keyword": "date",
+    "value_span": "1-97",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the english version that is buena vista edition is daisuke gouri?",
+    "where_column": "Buena Vista edition",
+    "where_value": "Daisuke Gouri",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "buena vista edition is",
+    "column_keyword": "edition",
+    "value_span": "daisuke gouri",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the points for 212 respect toward opponents",
+    "where_column": "Respect toward opponents",
+    "where_value": "212",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "respect toward opponents",
+    "column_keyword": "respect",
+    "value_span": "212",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the dates where Hillcrest Reserve is the home grounds?",
+    "where_column": "Home ground(s)",
+    "where_value": "Hillcrest Reserve",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "is the home grounds",
+    "column_keyword": "ground",
+    "value_span": "Hillcrest Reserve",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": " what's the\u00a0home\u00a0team where\u00a0streak\u00a0is l3 and\u00a0leading scorer\u00a0is roy : 23",
+    "where_column": "Streak",
+    "where_value": "L3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "streak is",
+    "column_keyword": "streak",
+    "value_span": "l3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total number of 3rd place entries that have exactly 8 total placings?",
+    "where_column": "Total placing(s)",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "total placings",
+    "column_keyword": "placing",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many champions were there when the first driver was hiroki yoshimoto ( 2005 )?",
+    "where_column": "First driver(s)",
+    "where_value": "Hiroki Yoshimoto ( 2005 )",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "first driver was",
+    "column_keyword": "driver",
+    "value_span": "hiroki yoshimoto ( 2005 )",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " what's the\u00a0championship\u00a0where\u00a0winning score\u00a0is \u221212 (74-66-65-71=276)",
+    "where_column": "Winning score",
+    "where_value": "\u221212 (74-66-65-71=276)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "winning score is",
+    "column_keyword": "score",
+    "value_span": "\u221212 (74-66-65-71=276)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the rating in Brisbane the week it was 276000 in Melbourne? ",
+    "where_column": "Melbourne",
+    "where_value": "276000",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "276000 in Melbourne",
+    "column_keyword": "melbourne",
+    "value_span": "276000",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Where was the game in which Carl Landry (25) did the most high points played?",
+    "where_column": "High points",
+    "where_value": "Carl Landry (25)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "most high points",
+    "column_keyword": "points",
+    "value_span": "Carl Landry (25)",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "How many titles had an average rating of 8.9%?",
+    "where_column": "Average Ratings",
+    "where_value": "8.9%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "average rating of",
+    "column_keyword": "ratings",
+    "value_span": "8.9%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " what's the\u00a0evening gown\u00a0where\u00a0state\u00a0is south dakota",
+    "where_column": "State",
+    "where_value": "South Dakota",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "state is",
+    "column_keyword": "state",
+    "value_span": "south dakota",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many episodes in the season had 3.81 million US viewers?",
+    "where_column": "U.S. viewers (million)",
+    "where_value": "3.81",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "million US viewers",
+    "column_keyword": "viewers",
+    "value_span": "3.81",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name who directed the episode for the series number 236",
+    "where_column": "Series #",
+    "where_value": "236",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "series number 236",
+    "column_keyword": "series",
+    "value_span": "236",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the pick # when the nhl team is montreal canadiens and the college/junior/club team is trois-rivi\u00e8res draveurs (qmjhl)?",
+    "where_column": "NHL team",
+    "where_value": "Montreal Canadiens",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "nhl team is",
+    "column_keyword": "nhl",
+    "value_span": "montreal canadiens",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the name of the plaza where the told for heavy vehicles with 2 axles is r20.50?",
+    "where_column": "Heavy vehicle (2 axles)",
+    "where_value": "R20.50",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "heavy vehicles with 2 axles is",
+    "column_keyword": "heavy",
+    "value_span": "r20.50",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Steve Nash (24) got high points for how many teams?",
+    "where_column": "High points",
+    "where_value": "Steve Nash (24)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "got high points",
+    "column_keyword": "points",
+    "value_span": "Steve Nash (24)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When north american record is the world record who is the denis nizhegorodov ( rus )?",
+    "where_column": "World record",
+    "where_value": "North American record",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "is the world record",
+    "column_keyword": "record",
+    "value_span": "north american record",
+    "select_reasoning": "context_implies"
+  }
+]

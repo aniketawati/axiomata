@@ -1,0 +1,371 @@
+[
+  {
+    "question": "What were all Yachts with a sail number of 6952?",
+    "headers": [
+      "Position",
+      "Sail number",
+      "Yacht",
+      "State/country",
+      "Yacht type",
+      "LOA (Metres)",
+      "Skipper",
+      "Corrected time d:hh:mm:ss"
+    ],
+    "where_column": "Sail number",
+    "where_value": "6952",
+    "select_column": "Yacht"
+  },
+  {
+    "question": "Name the pinyin for mazar",
+    "headers": [
+      "Conventional",
+      "Sarikoli (in IPA )",
+      "Uyghur ( K\u0322ona Yezik\u0322 )",
+      "Uyghur ( Yen\u0261i Yezik\u0322 )",
+      "Chinese",
+      "Pinyin"
+    ],
+    "where_column": "Conventional",
+    "where_value": "Mazar",
+    "select_column": "Pinyin"
+  },
+  {
+    "question": "Name the world rank for market value 17.2",
+    "headers": [
+      "World Rank",
+      "Company",
+      "Industry",
+      "Revenue (billion $)",
+      "Profits (billion $)",
+      "Assets (billion $)",
+      "Market Value (billion $)"
+    ],
+    "where_column": "Market Value (billion $)",
+    "where_value": "17.2",
+    "select_column": "World Rank"
+  },
+  {
+    "question": "How many times was the opponent country India? ",
+    "headers": [
+      "Runs (Balls)",
+      "Wicket",
+      "Partnerships",
+      "Country",
+      "Versus",
+      "Venue",
+      "Date"
+    ],
+    "where_column": "Versus",
+    "where_value": "India",
+    "select_column": "Country"
+  },
+  {
+    "question": "What date was the race in 1968 run on?",
+    "headers": [
+      "Year",
+      "Date",
+      "Driver",
+      "Team",
+      "Manufacturer",
+      "Laps",
+      "Miles (km)",
+      "Race Time",
+      "Average Speed (mph)",
+      "Report"
+    ],
+    "where_column": "Year",
+    "where_value": "1968",
+    "select_column": "Date"
+  },
+  {
+    "question": "What was the original air date for \"Crisis: 22,300 Miles Above Earth!\"?",
+    "headers": [
+      "No.",
+      "#",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "Television order"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Crisis: 22,300 Miles Above Earth!\"",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "Name the height for date of birth being 17/08/75",
+    "headers": [
+      "Number",
+      "Name",
+      "Height (m)",
+      "Date of Birth",
+      "Position",
+      "Nationality"
+    ],
+    "where_column": "Date of Birth",
+    "where_value": "17/08/75",
+    "select_column": "Height (m)"
+  },
+  {
+    "question": "Name the time for saturday 4 march 1995",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Ground",
+      "Crowd",
+      "Date",
+      "Time"
+    ],
+    "where_column": "Date",
+    "where_value": "Saturday 4 March 1995",
+    "select_column": "Time"
+  },
+  {
+    "question": "If the total points is 50.5, what is the total number of dances?",
+    "headers": [
+      "Rank by average",
+      "Place",
+      "Couple",
+      "Number of Dances",
+      "Total Points",
+      "Average"
+    ],
+    "where_column": "Total Points",
+    "where_value": "50.5",
+    "select_column": "Number of Dances"
+  },
+  {
+    "question": "The U.S. airdate of 8 august 2008 also had canadian airdates of what?",
+    "headers": [
+      "No. in season",
+      "No. in series",
+      "Title",
+      "Canadian airdate",
+      "US airdate",
+      "Production code"
+    ],
+    "where_column": "US airdate",
+    "where_value": "8 August 2008",
+    "select_column": "Canadian airdate"
+  },
+  {
+    "question": "Name the number of candidates for # of seats won being 43",
+    "headers": [
+      "Election",
+      "Leader",
+      "# of candidates",
+      "# of seats to be won",
+      "# of seats won",
+      "# of total votes",
+      "% of popular vote"
+    ],
+    "where_column": "# of seats won",
+    "where_value": "43",
+    "select_column": "# of candidates"
+  },
+  {
+    "question": "What is the strong words compounded when the strongs transliteration is yowyariyb?",
+    "headers": [
+      "Strongs #",
+      "Hebrew word",
+      "Strongs Transliteration",
+      "Strongs Words Compounded",
+      "English Spelling"
+    ],
+    "where_column": "Strongs Transliteration",
+    "where_value": "Yowyariyb",
+    "select_column": "Strongs Words Compounded"
+  },
+  {
+    "question": "Who is the candidates for district maryland 1?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "District",
+    "where_value": "Maryland 1",
+    "select_column": "Candidates"
+  },
+  {
+    "question": "what's the\u00a0country\u00a0with\u00a0health\u00a0being 91.4",
+    "headers": [
+      "Rank",
+      "Country",
+      "Overall",
+      "Justice",
+      "Health",
+      "Education",
+      "Economics",
+      "Politics"
+    ],
+    "where_column": "Health",
+    "where_value": "91.4",
+    "select_column": "Country"
+  },
+  {
+    "question": "What percentage of the votes in Oneida did Kerry win?",
+    "headers": [
+      "County",
+      "Kerry%",
+      "Kerry#",
+      "Bush%",
+      "Bush#",
+      "Others%",
+      "Others#"
+    ],
+    "where_column": "County",
+    "where_value": "Oneida",
+    "select_column": "Kerry%"
+  },
+  {
+    "question": "What is the cable rank for the airdate of 10 december 2009?",
+    "headers": [
+      "Episode no.",
+      "Airdate",
+      "Viewers",
+      "BBC Three weekly ranking",
+      "Cable rank"
+    ],
+    "where_column": "Airdate",
+    "where_value": "10 December 2009",
+    "select_column": "Cable rank"
+  },
+  {
+    "question": "Name the timeslot for 6.51 viewers",
+    "headers": [
+      "#",
+      "Episode",
+      "UK air date",
+      "Timeslot",
+      "Viewers (millions)",
+      "Audience share in timeslot"
+    ],
+    "where_column": "Viewers (millions)",
+    "where_value": "6.51",
+    "select_column": "Timeslot"
+  },
+  {
+    "question": "what's the\u00a0health\u00a0score with\u00a0justice\u00a0being 80.7",
+    "headers": [
+      "Rank",
+      "Country",
+      "Overall",
+      "Justice",
+      "Health",
+      "Education",
+      "Economics",
+      "Politics"
+    ],
+    "where_column": "Justice",
+    "where_value": "80.7",
+    "select_column": "Health"
+  },
+  {
+    "question": "What was the name of the entrant with an owner named David Johnson?",
+    "headers": [
+      "Starting price",
+      "Number",
+      "Name",
+      "Age",
+      "Weight (st, lb)",
+      "Jockey",
+      "Trainer",
+      "Owner",
+      "Colours"
+    ],
+    "where_column": "Owner",
+    "where_value": "David Johnson",
+    "select_column": "Name"
+  },
+  {
+    "question": "What is the average for the couple anh & luda?",
+    "headers": [
+      "Average Ranking",
+      "Competitive Finish",
+      "Couple",
+      "Number Of Dances",
+      "Total Score",
+      "Average"
+    ],
+    "where_column": "Couple",
+    "where_value": "Anh & Luda",
+    "select_column": "Average"
+  },
+  {
+    "question": "List all who wrote for production code 1ark07.",
+    "headers": [
+      "No.",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "Viewers (in millions)"
+    ],
+    "where_column": "Production code",
+    "where_value": "1ARK07",
+    "select_column": "Written by"
+  },
+  {
+    "question": "How many assists per game have 4.2 rebounds per game?",
+    "headers": [
+      "Tournament",
+      "Games played",
+      "Points per game",
+      "Rebounds per game",
+      "Assists per game"
+    ],
+    "where_column": "Rebounds per game",
+    "where_value": "4.2",
+    "select_column": "Assists per game"
+  },
+  {
+    "question": "When looking at new entries this round and seeing 8; what number in total is there for clubs remaining?",
+    "headers": [
+      "Phase",
+      "Round",
+      "Clubs remaining",
+      "Clubs involved",
+      "Winners from previous round",
+      "New entries this round",
+      "Leagues entering at this round"
+    ],
+    "where_column": "New entries this round",
+    "where_value": "8",
+    "select_column": "Clubs remaining"
+  },
+  {
+    "question": "Name the total number of opponent in the final for 6\u20132, 6\u20131, 6\u20133",
+    "headers": [
+      "Outcome",
+      "Year",
+      "Championship",
+      "Surface",
+      "Opponent in the final",
+      "Score in the final"
+    ],
+    "where_column": "Score in the final",
+    "where_value": "6\u20132, 6\u20131, 6\u20133",
+    "select_column": "Opponent in the final"
+  },
+  {
+    "question": "What is the land area for the RCM that has a population of 18847?",
+    "headers": [
+      "Regional County Municipality (RCM)",
+      "Population Canada 2011 Census",
+      "Land Area",
+      "Density (pop. per km2)",
+      "Seat of RCM"
+    ],
+    "where_column": "Population Canada 2011 Census",
+    "where_value": "18847",
+    "select_column": "Land Area"
+  }
+]

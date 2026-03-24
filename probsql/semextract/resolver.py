@@ -104,13 +104,13 @@ class ColumnResolver:
     def resolve(self, value, value_type, columns, question=None, exclude_columns=None):
         """Resolve a value to the best matching column using Bayesian chaining.
 
-        Empirical base rates from 500 LLM-labeled examples:
-          76% column_name_mentioned (proximity to value in question)
-          13% trigger_phrase_indicates (verb/prep pattern)
-           7% value_type_match (proper noun → person column)
-           4% other
+        Empirical base rates from 1500 LLM-labeled examples:
+          65% column_name_mentioned (proximity to value in question)
+          14% trigger_phrase_indicates (verb/prep pattern)
+          12% value_is_entity_name / value_type_match
+           9% other
 
-        P(col) = 0.76 * P(proximity) + 0.13 * P(trigger) + 0.07 * P(type) + 0.04 * base
+        P(col) = 0.65 * P(proximity) + 0.14 * P(trigger) + 0.12 * P(type) + 0.09 * base
 
         Args:
             value: The extracted value string
@@ -144,8 +144,8 @@ class ColumnResolver:
             # Factor 3 (base rate 0.07): Value type compatibility
             f_type = self._score_type_compat(value_type, col_words)
 
-            # Weighted combination using empirical base rates
-            score = 0.76 * f_prox + 0.13 * f_trigger + 0.07 * f_type + 0.04 * 0.3
+            # Weighted combination using empirical base rates (1500 labeled examples)
+            score = 0.65 * f_prox + 0.14 * f_trigger + 0.12 * f_type + 0.09 * 0.3
 
             scores[col_name] = score
 

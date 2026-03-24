@@ -1,0 +1,252 @@
+[
+  {
+    "question": "How many millions of U.S. viewers watched the episode \"Buzzkill\"? ",
+    "where_column": "Title",
+    "where_value": "\"Buzzkill\"",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "title",
+    "value_span": "\"Buzzkill\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was the winning mentor in season two?",
+    "where_column": "Season",
+    "where_value": "Two",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in season two",
+    "column_keyword": "season",
+    "value_span": "season two",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "The pooulation of јарковац is?",
+    "where_column": "Cyrillic Name Other Names",
+    "where_value": "Јарковац",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "name",
+    "value_span": "јарковац",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the total number of grid for 30",
+    "where_column": "Points",
+    "where_value": "30",
+    "why_this_column": "process_of_elimination",
+    "trigger_phrase": null,
+    "column_keyword": "points",
+    "value_span": "30",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "On how many dates was the complete 4th series released?",
+    "where_column": "Season",
+    "where_value": "The Complete 4th Series",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "season",
+    "value_span": "complete 4th series",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many passengers (in millions) flew through along the route that is 1075km long in 2012?",
+    "where_column": "Distance",
+    "where_value": "1075km",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "route that is",
+    "column_keyword": "distance",
+    "value_span": "1075km",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "who directed s01e13",
+    "where_column": "Television order",
+    "where_value": "S01E13",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "order",
+    "value_span": "s01e13",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What rank is the common with an area of 47.3 km^2?",
+    "where_column": "Area (km 2 )",
+    "where_value": "47.3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "an area of",
+    "column_keyword": "area",
+    "value_span": "47.3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "name the total number of timeslot for number 1",
+    "where_column": "#",
+    "where_value": "1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for number 1",
+    "column_keyword": "#",
+    "value_span": "1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the h when c max is 99",
+    "where_column": "C (max)",
+    "where_value": "99",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "c max is",
+    "column_keyword": "c",
+    "value_span": "99",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Chris Gatling 's number?",
+    "where_column": "Player",
+    "where_value": "Chris Gatling",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "player",
+    "value_span": "Chris Gatling",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the number of games on june 12",
+    "where_column": "Date",
+    "where_value": "June 12",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "on june 12",
+    "column_keyword": "date",
+    "value_span": "june 12",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the modern german standard wording for the german based writing system 2 phrase \"wie mir die vergewwe wu uns schuldich sinn.\"?",
+    "where_column": "Writing system 2 (German-based)",
+    "where_value": "wie mir die vergewwe wu uns schuldich sinn.",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "writing system 2 phrase",
+    "column_keyword": "writing",
+    "value_span": "wie mir die vergewwe wu uns schuldich sinn.",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the party for jack thomas brinkley",
+    "where_column": "Incumbent",
+    "where_value": "Jack Thomas Brinkley",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "incumbent",
+    "value_span": "jack thomas brinkley",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the title with an average rating of 22.4%?",
+    "where_column": "Average Ratings",
+    "where_value": "22.4%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "average rating of",
+    "column_keyword": "ratings",
+    "value_span": "22.4%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "The numbers 801-812 are in which country?",
+    "where_column": "Numbers",
+    "where_value": "801-812",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the numbers",
+    "column_keyword": "numbers",
+    "value_span": "801-812",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the reason for change pennsylvania 13th",
+    "where_column": "District",
+    "where_value": "Pennsylvania 13th",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "district",
+    "value_span": "pennsylvania 13th",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What period were conscituency contested is aljunied grc?",
+    "where_column": "Constituency contested",
+    "where_value": "Aljunied GRC",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "constituency contested is",
+    "column_keyword": "constituency",
+    "value_span": "aljunied grc",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the party of Joseph Vance?",
+    "where_column": "Incumbent",
+    "where_value": "Joseph Vance",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "incumbent",
+    "value_span": "Joseph Vance",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the district for anti-jacksonian",
+    "where_column": "Party",
+    "where_value": "Anti-Jacksonian",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "party",
+    "value_span": "anti-jacksonian",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the No in series when Rob wright & Debra j. Fisher & Erica Messer were the writers?",
+    "where_column": "Written by",
+    "where_value": "Rob Wright & Debra J. Fisher & Erica Messer",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "were the writers",
+    "column_keyword": "written",
+    "value_span": "Rob wright & Debra j. Fisher & Erica Messer",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What NHL team was the player from Calgary Centennials (WCHL) drafted for?",
+    "where_column": "College/junior/club team",
+    "where_value": "Calgary Centennials (WCHL)",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "player from",
+    "column_keyword": "team",
+    "value_span": "Calgary Centennials (WCHL)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Roman Bragin's position? ",
+    "where_column": "Player",
+    "where_value": "Roman Bragin",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "player",
+    "value_span": "Roman Bragin",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "During the first phase portion of phase and having 16 clubs involved; what would you find for the winners from previous round?",
+    "where_column": "Phase",
+    "where_value": "First Phase",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "first phase portion of phase",
+    "column_keyword": "phase",
+    "value_span": "first phase",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "who is the candidate in district south carolina 2?",
+    "where_column": "District",
+    "where_value": "South Carolina 2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in district",
+    "column_keyword": "district",
+    "value_span": "south carolina 2",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

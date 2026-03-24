@@ -1,0 +1,377 @@
+[
+  {
+    "question": "What's the C_{low} value when C_{high} is 12.0?",
+    "headers": [
+      "C_{low}",
+      "C_{high}",
+      "I_{low}",
+      "I_{high}",
+      "Category"
+    ],
+    "where_column": "C_{high}",
+    "where_value": "12.0",
+    "select_column": "C_{low}"
+  },
+  {
+    "question": "Name the original air date for \" don't look a smith horse in the mouth \"",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Title",
+    "where_value": "\" Don't Look a Smith Horse in the Mouth \"",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "Name the industry for revenue being 2.1",
+    "headers": [
+      "World Rank",
+      "Company",
+      "Industry",
+      "Revenue (billion $)",
+      "Profits (billion $)",
+      "Assets (billion $)",
+      "Market Value (billion $)"
+    ],
+    "where_column": "Revenue (billion $)",
+    "where_value": "2.1",
+    "select_column": "Industry"
+  },
+  {
+    "question": "What's the i_{high} value when C_{low} is 250.5?",
+    "headers": [
+      "C_{low}",
+      "C_{high}",
+      "I_{low}",
+      "I_{high}",
+      "Category"
+    ],
+    "where_column": "C_{low}",
+    "where_value": "250.5",
+    "select_column": "I_{high}"
+  },
+  {
+    "question": "Which party won in the election in voting district Kentucky 5?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "District",
+    "where_value": "Kentucky 5",
+    "select_column": "Party"
+  },
+  {
+    "question": "Name the candidates for illinois 15",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "District",
+    "where_value": "Illinois 15",
+    "select_column": "Candidates"
+  },
+  {
+    "question": "When hit by sam at 38,500 feet just after bomb release was the cause of loss what is the mission/target?",
+    "headers": [
+      "Date",
+      "B-52 Model",
+      "Serial #",
+      "Unit",
+      "Bomb Capacity",
+      "Mission/Target",
+      "Cause of Loss"
+    ],
+    "where_column": "Cause of Loss",
+    "where_value": "Hit by SAM at 38,500 feet just after bomb release",
+    "select_column": "Mission/Target"
+  },
+  {
+    "question": "What class in the word with part 4 \"giheizan\"?",
+    "headers": [
+      "Class",
+      "Part 1",
+      "Part 2",
+      "Part 3",
+      "Part 4",
+      "Verb meaning"
+    ],
+    "where_column": "Part 4",
+    "where_value": "giheizan",
+    "select_column": "Class"
+  },
+  {
+    "question": "List all directors from episodes with viewership of 1.945 million.",
+    "headers": [
+      "No.",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "Viewers (in millions)"
+    ],
+    "where_column": "Viewers (in millions)",
+    "where_value": "1.945",
+    "select_column": "Directed by"
+  },
+  {
+    "question": "Which common has an area (km2) of 103.02?",
+    "headers": [
+      "Rank",
+      "Common",
+      "Population",
+      "Area (km 2 )",
+      "Density (inhabitants/km 2 )",
+      "Altitude (mslm)"
+    ],
+    "where_column": "Area (km 2 )",
+    "where_value": "103.02",
+    "select_column": "Common"
+  },
+  {
+    "question": "What is the main service for the station with 14.849 million passengers 2011-12? ",
+    "headers": [
+      "Rank",
+      "Railway Station",
+      "Annual entry/exit (millions) 2011\u201312",
+      "Annual interchanges (millions) 2011\u201312",
+      "Total Passengers (millions) 2011\u201312",
+      "Location",
+      "Main Services",
+      "Number of Platforms"
+    ],
+    "where_column": "Total Passengers (millions) 2011\u201312",
+    "where_value": "14.849",
+    "select_column": "Main Services"
+  },
+  {
+    "question": "What is the 2012 election results for locations whose representative is Barbara Lee?",
+    "headers": [
+      "District",
+      "Location",
+      "Representative",
+      "Cook PVI",
+      "2012 election results",
+      "Median household income (2011)"
+    ],
+    "where_column": "Representative",
+    "where_value": "Barbara Lee",
+    "select_column": "2012 election results"
+  },
+  {
+    "question": "Name the first elected for kentucky 3",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "District",
+    "where_value": "Kentucky 3",
+    "select_column": "First elected"
+  },
+  {
+    "question": "What is the United States rank?",
+    "headers": [
+      "Rank",
+      "Country/Territory",
+      "Miss World",
+      "1st Runner-up",
+      "2nd Runner-up",
+      "3rd Runner-up",
+      "4th Runner-up",
+      "5th Runner-up",
+      "6th Runner-up",
+      "Semifinalists",
+      "Total"
+    ],
+    "where_column": "Country/Territory",
+    "where_value": "United States",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What players finished 2nd?",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Player",
+      "Country",
+      "Rounds",
+      "Score",
+      "To par",
+      "Finish"
+    ],
+    "where_column": "Finish",
+    "where_value": "2nd",
+    "select_column": "Player"
+  },
+  {
+    "question": "Which one of the songs was originally performed by Rickie Lee Jones?",
+    "headers": [
+      "Episode",
+      "Song choice",
+      "Original artist",
+      "Order #",
+      "Result"
+    ],
+    "where_column": "Original artist",
+    "where_value": "Rickie Lee Jones",
+    "select_column": "Song choice"
+  },
+  {
+    "question": "How many candidates were elected first in 1980?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Results",
+      "Candidates"
+    ],
+    "where_column": "First elected",
+    "where_value": "1980",
+    "select_column": "Candidates"
+  },
+  {
+    "question": "When tracy mcgrady (8) is leading in assists what is the date?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "High assists",
+    "where_value": "Tracy McGrady (8)",
+    "select_column": "Date"
+  },
+  {
+    "question": "which is the  maximun serie episode number when the millions of North American spectators is 3.14?",
+    "headers": [
+      "Season no.",
+      "Series no.",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. Viewers (millions)"
+    ],
+    "where_column": "U.S. Viewers (millions)",
+    "where_value": "3.14",
+    "select_column": "Series no."
+  },
+  {
+    "question": "Name the points against for 51 points",
+    "headers": [
+      "Club",
+      "Played",
+      "Won",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "51",
+    "select_column": "Points against"
+  },
+  {
+    "question": "When the cmd.exe / command.com is type, what are all associated values for powershell (cmdlet)?",
+    "headers": [
+      "PowerShell (Cmdlet)",
+      "PowerShell (Alias)",
+      "CMD.EXE / COMMAND.COM",
+      "Unix shell",
+      "Description"
+    ],
+    "where_column": "CMD.EXE / COMMAND.COM",
+    "where_value": "type",
+    "select_column": "PowerShell (Cmdlet)"
+  },
+  {
+    "question": "What is the affiliation when the institution was ohio christian university?",
+    "headers": [
+      "Institution",
+      "Location",
+      "Team Name",
+      "Founded",
+      "Affiliation",
+      "Enrollment",
+      "Year Joined"
+    ],
+    "where_column": "Institution",
+    "where_value": "Ohio Christian University",
+    "select_column": "Affiliation"
+  },
+  {
+    "question": "How many u.s. viewers  (in millions) have \"dare devil\" as the title?",
+    "headers": [
+      "No. in series",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (in millions)"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Dare Devil\"",
+    "select_column": "U.S. viewers (in millions)"
+  },
+  {
+    "question": "What was the maximum perigee on 1969-01-09?",
+    "headers": [
+      "Name",
+      "Alt name",
+      "Launch date",
+      "ID",
+      "Mass (kg)",
+      "Decay date",
+      "Perigee (km)",
+      "Apogee (km)",
+      "Inclination"
+    ],
+    "where_column": "Decay date",
+    "where_value": "1969-01-09",
+    "select_column": "Perigee (km)"
+  },
+  {
+    "question": "What the is the first city listed on the route that had 6.6+ passengers in 2011 and a distance of 1075km?",
+    "headers": [
+      "Rank",
+      "City 1",
+      "City 2",
+      "2012 Passengers (in millions)",
+      "2011 Passengers (in millions)",
+      "Distance"
+    ],
+    "where_column": "2011 Passengers (in millions)",
+    "where_value": "6.6+",
+    "select_column": "City 1"
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Who answered the 20 questions on 10-07?",
+    "where_column": "Date",
+    "where_value": "10-07",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "20 questions on",
+    "column_keyword": "date",
+    "value_span": "10-07",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the graduation rate for the school district with headquarters located in Sydney?",
+    "where_column": "Headquarters",
+    "where_value": "Sydney",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "headquarters located in",
+    "column_keyword": "headquarters",
+    "value_span": "Sydney",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was the game attended by 60425 people played against?",
+    "where_column": "Attendance",
+    "where_value": "60425",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "attended by 60425 people",
+    "column_keyword": "attendance",
+    "value_span": "60425",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what's the\u00a0species in the world\u00a0with\u00a0peruvian amazon vs. peru (percent)\u00a0 of 63",
+    "where_column": "Peruvian Amazon Vs. Peru (Percent)",
+    "where_value": "63",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "peruvian amazon vs. peru (percent) of",
+    "column_keyword": "amazon",
+    "value_span": "63",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How man teams had a total weight of 57.5?",
+    "where_column": "Weight (kg)",
+    "where_value": "57.5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "total weight of",
+    "column_keyword": "weight",
+    "value_span": "57.5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the drive for points being 13",
+    "where_column": "Points",
+    "where_value": "13",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "points being",
+    "column_keyword": "points",
+    "value_span": "13",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the episode summary for travis brown",
+    "where_column": "Coach",
+    "where_value": "Travis Brown",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "coach",
+    "value_span": "travis brown",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many values of powershell (cmdlet) are valid when unix shell is env, export, set, setenv?",
+    "where_column": "Unix shell",
+    "where_value": "env, export, set, setenv",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "unix shell is",
+    "column_keyword": "unix",
+    "value_span": "env, export, set, setenv",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When  27 gp h-e bombs the capacity of the bomb what is the cause of loss?",
+    "where_column": "Bomb Capacity",
+    "where_value": "27 GP H-E bombs",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "capacity of the bomb",
+    "column_keyword": "capacity",
+    "value_span": "27 gp h-e bombs",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which city did kpnz-tv provide coverage for?",
+    "where_column": "Callsign",
+    "where_value": "KPNZ-TV",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "callsign",
+    "value_span": "kpnz-tv",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the position for pick number 128",
+    "where_column": "Pick #",
+    "where_value": "128",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "pick number 128",
+    "column_keyword": "pick",
+    "value_span": "128",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many cities have an enrollment of 19082?",
+    "where_column": "Enrollment",
+    "where_value": "19082",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "an enrollment of",
+    "column_keyword": "enrollment",
+    "value_span": "19082",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the title of the episode with the production code 624?",
+    "where_column": "Production code",
+    "where_value": "624",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "production code 624",
+    "column_keyword": "code",
+    "value_span": "624",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How did the team place when they did not qualify for the Concaf Champions Cup but made it to Round of 16 in the U.S. Open Cup?",
+    "where_column": "CONCACAF Champions Cup / Champions League",
+    "where_value": "Did not qualify",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "did not qualify for the Concaf Champions Cup",
+    "column_keyword": "champions",
+    "value_span": "did not qualify",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name who directed the production code 1l10",
+    "where_column": "Production code",
+    "where_value": "1L10",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "production code",
+    "column_keyword": "code",
+    "value_span": "1l10",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the market value of a company in billions that has 172.7 billion in sales? ",
+    "where_column": "Sales (billion $)",
+    "where_value": "172.7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "billion in sales",
+    "column_keyword": "sales",
+    "value_span": "172.7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the little league team from Kentucky when the little league team from Indiana and Wisconsin were Brownsburg LL Brownsburg and Merrill LL Merrill?",
+    "where_column": "Indiana",
+    "where_value": "Brownsburg LL Brownsburg",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "little league team from Indiana",
+    "column_keyword": "indiana",
+    "value_span": "Brownsburg LL Brownsburg",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the total number of\u00a0constancy\u00a0where\u00a0purity\u00a0is falling",
+    "where_column": "purity",
+    "where_value": "falling",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "purity is",
+    "column_keyword": "purity",
+    "value_span": "falling",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which country had an interview score of 9.40 and average of 9.44?",
+    "where_column": "Interview",
+    "where_value": "9.40",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "interview score of",
+    "column_keyword": "interview",
+    "value_span": "9.40",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "List the branding for krca-tv.",
+    "where_column": "Callsign",
+    "where_value": "KRCA-TV",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "callsign",
+    "value_span": "krca-tv",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Clubs involved is 8, what number would you find from winners from previous round?",
+    "where_column": "Clubs involved",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "clubs involved is",
+    "column_keyword": "involved",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many were first elected in the Arkansas 4 district?",
+    "where_column": "District",
+    "where_value": "Arkansas 4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in the Arkansas 4 district",
+    "column_keyword": "district",
+    "value_span": "Arkansas 4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the part 4 when part 1 is \"lesan\"?",
+    "where_column": "Part 1",
+    "where_value": "lesan",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "part 1 is",
+    "column_keyword": "part",
+    "value_span": "\"lesan\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the traditional form for \u5b81\u9675\u53bf?",
+    "where_column": "Simplified",
+    "where_value": "\u5b81\u9675\u53bf",
+    "why_this_column": "process_of_elimination",
+    "trigger_phrase": null,
+    "column_keyword": "simplified",
+    "value_span": "\u5b81\u9675\u53bf",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the top scorer where gf is 41?",
+    "where_column": "GF",
+    "where_value": "41",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "gf is",
+    "column_keyword": "gf",
+    "value_span": "41",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

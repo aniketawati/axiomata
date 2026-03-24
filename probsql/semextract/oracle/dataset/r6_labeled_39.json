@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What were all Yachts with a sail number of 6952?",
+    "where_column": "Sail number",
+    "where_value": "6952",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "sail number of",
+    "column_keyword": "sail",
+    "value_span": "6952",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the pinyin for mazar",
+    "where_column": "Conventional",
+    "where_value": "Mazar",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "conventional",
+    "value_span": "mazar",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the world rank for market value 17.2",
+    "where_column": "Market Value (billion $)",
+    "where_value": "17.2",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "market value",
+    "column_keyword": "value",
+    "value_span": "17.2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many times was the opponent country India? ",
+    "where_column": "Versus",
+    "where_value": "India",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "opponent country",
+    "column_keyword": "versus",
+    "value_span": "India",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What date was the race in 1968 run on?",
+    "where_column": "Year",
+    "where_value": "1968",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "race in",
+    "column_keyword": "year",
+    "value_span": "1968",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What was the original air date for \"Crisis: 22,300 Miles Above Earth!\"?",
+    "where_column": "Title",
+    "where_value": "\"Crisis: 22,300 Miles Above Earth!\"",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "title",
+    "value_span": "\"Crisis: 22,300 Miles Above Earth!\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the height for date of birth being 17/08/75",
+    "where_column": "Date of Birth",
+    "where_value": "17/08/75",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "date of birth being",
+    "column_keyword": "birth",
+    "value_span": "17/08/75",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the time for saturday 4 march 1995",
+    "where_column": "Date",
+    "where_value": "Saturday 4 March 1995",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "date",
+    "value_span": "saturday 4 march 1995",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If the total points is 50.5, what is the total number of dances?",
+    "where_column": "Total Points",
+    "where_value": "50.5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "total points is",
+    "column_keyword": "points",
+    "value_span": "50.5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "The U.S. airdate of 8 august 2008 also had canadian airdates of what?",
+    "where_column": "US airdate",
+    "where_value": "8 August 2008",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "U.S. airdate of",
+    "column_keyword": "airdate",
+    "value_span": "8 august 2008",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the number of candidates for # of seats won being 43",
+    "where_column": "# of seats won",
+    "where_value": "43",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "# of seats won being",
+    "column_keyword": "seats",
+    "value_span": "43",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the strong words compounded when the strongs transliteration is yowyariyb?",
+    "where_column": "Strongs Transliteration",
+    "where_value": "Yowyariyb",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "strongs transliteration is",
+    "column_keyword": "transliteration",
+    "value_span": "yowyariyb",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the candidates for district maryland 1?",
+    "where_column": "District",
+    "where_value": "Maryland 1",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "district maryland",
+    "column_keyword": "district",
+    "value_span": "maryland 1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what's the\u00a0country\u00a0with\u00a0health\u00a0being 91.4",
+    "where_column": "Health",
+    "where_value": "91.4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "health being",
+    "column_keyword": "health",
+    "value_span": "91.4",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What percentage of the votes in Oneida did Kerry win?",
+    "where_column": "County",
+    "where_value": "Oneida",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "votes in",
+    "column_keyword": "county",
+    "value_span": "Oneida",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the cable rank for the airdate of 10 december 2009?",
+    "where_column": "Airdate",
+    "where_value": "10 December 2009",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "airdate of",
+    "column_keyword": "airdate",
+    "value_span": "10 december 2009",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the timeslot for 6.51 viewers",
+    "where_column": "Viewers (millions)",
+    "where_value": "6.51",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "for 6.51 viewers",
+    "column_keyword": "viewers",
+    "value_span": "6.51",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what's the\u00a0health\u00a0score with\u00a0justice\u00a0being 80.7",
+    "where_column": "Justice",
+    "where_value": "80.7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "justice being",
+    "column_keyword": "justice",
+    "value_span": "80.7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the name of the entrant with an owner named David Johnson?",
+    "where_column": "Owner",
+    "where_value": "David Johnson",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "owner named",
+    "column_keyword": "owner",
+    "value_span": "David Johnson",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the average for the couple anh & luda?",
+    "where_column": "Couple",
+    "where_value": "Anh & Luda",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "for the couple",
+    "column_keyword": "couple",
+    "value_span": "anh & luda",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "List all who wrote for production code 1ark07.",
+    "where_column": "Production code",
+    "where_value": "1ARK07",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "production code",
+    "column_keyword": "code",
+    "value_span": "1ark07",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "How many assists per game have 4.2 rebounds per game?",
+    "where_column": "Rebounds per game",
+    "where_value": "4.2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "rebounds per game",
+    "column_keyword": "rebounds",
+    "value_span": "4.2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When looking at new entries this round and seeing 8; what number in total is there for clubs remaining?",
+    "where_column": "New entries this round",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "new entries this round",
+    "column_keyword": "entries",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the total number of opponent in the final for 6\u20132, 6\u20131, 6\u20133",
+    "where_column": "Score in the final",
+    "where_value": "6\u20132, 6\u20131, 6\u20133",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "in the final for",
+    "column_keyword": "score",
+    "value_span": "6\u20132, 6\u20131, 6\u20133",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the land area for the RCM that has a population of 18847?",
+    "where_column": "Population Canada 2011 Census",
+    "where_value": "18847",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "has a population of",
+    "column_keyword": "population",
+    "value_span": "18847",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

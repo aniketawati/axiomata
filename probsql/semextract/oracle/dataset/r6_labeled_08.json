@@ -1,0 +1,252 @@
+[
+  {
+    "question": "what is the total number of\u00a02nd leg\u00a0where\u00a0aggregate\u00a0is 7-2",
+    "where_column": "Aggregate",
+    "where_value": "7-2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "aggregate is",
+    "column_keyword": "aggregate",
+    "value_span": "7-2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name who was famous for finished in 9th",
+    "where_column": "Finished",
+    "where_value": "9th",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "finished in",
+    "column_keyword": "finished",
+    "value_span": "9th",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the diameter of the feature found in 1997?",
+    "where_column": "Year named",
+    "where_value": "1997",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "found in",
+    "column_keyword": "year",
+    "value_span": "1997",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which county had a 3.6% unemployment rate?",
+    "where_column": "Unemployment Rate",
+    "where_value": "3.6%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "unemployment rate",
+    "column_keyword": "unemployment",
+    "value_span": "3.6%",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "How many people voted for Kerry in the county where 8 voted for others?",
+    "where_column": "Others#",
+    "where_value": "8",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "voted for others",
+    "column_keyword": "others",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What are the nationality of the players on the Fresno State school/club team?",
+    "where_column": "School/Club Team",
+    "where_value": "Fresno State",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "school/club team",
+    "column_keyword": "team",
+    "value_span": "Fresno State",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest number of games played by the player with 50 steals?",
+    "where_column": "Steals",
+    "where_value": "50",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "with 50 steals",
+    "column_keyword": "steals",
+    "value_span": "50",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which junctions have \"replaced by bsi-35\" listed in their remarks section?",
+    "where_column": "Remarks",
+    "where_value": "Replaced by BSI-35",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "remarks section",
+    "column_keyword": "remarks",
+    "value_span": "replaced by bsi-35",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What's the type of muzzle devices on the models with round hand guards?",
+    "where_column": "Hand guards",
+    "where_value": "Round",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "round hand guards",
+    "column_keyword": "guards",
+    "value_span": "round",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Norway's least ends lost?",
+    "where_column": "Country",
+    "where_value": "Norway",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "country",
+    "value_span": "Norway",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the population density of the administrative division with a population in 2010 of 264170 according to the census?",
+    "where_column": "Population 2010 Census",
+    "where_value": "264170",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "population in 2010",
+    "column_keyword": "population",
+    "value_span": "264170",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What city and state is the Lancers mascot located?",
+    "where_column": "Mascot",
+    "where_value": "Lancers",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Lancers mascot",
+    "column_keyword": "mascot",
+    "value_span": "Lancers",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Who had the highest assists on March 18?",
+    "where_column": "Date",
+    "where_value": "March 18",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "on March 18",
+    "column_keyword": "date",
+    "value_span": "March 18",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "The hanja \u5c19\u5dde is for what capital?",
+    "where_column": "Hanja",
+    "where_value": "\u5c19\u5dde",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "hanja \u5c19\u5dde",
+    "column_keyword": "hanja",
+    "value_span": "\u5c19\u5dde",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many position does Teodor Salparov play on? ",
+    "where_column": "Player",
+    "where_value": "Teodor Salparov",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "player",
+    "value_span": "Teodor Salparov",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was the centerfold model in the issue where Fergie answered the \"20 questions\"?",
+    "where_column": "20 Questions",
+    "where_value": "Fergie",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "answered the \"20 questions\"",
+    "column_keyword": "questions",
+    "value_span": "Fergie",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the pick number for round 2?",
+    "where_column": "Round",
+    "where_value": "2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for round 2",
+    "column_keyword": "round",
+    "value_span": "2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what's the\u00a0bubbles\u00a0with\u00a0attribute\u00a0being onpopuphidden",
+    "where_column": "Attribute",
+    "where_value": "onpopuphidden",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "attribute being",
+    "column_keyword": "attribute",
+    "value_span": "onpopuphidden",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " what's the\u00a0swimsuit\u00a0where\u00a0average\u00a0is 8.670",
+    "where_column": "Average",
+    "where_value": "8.670",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "average is",
+    "column_keyword": "average",
+    "value_span": "8.670",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many winning drivers in the kraco twin 125 (r2) race were there?",
+    "where_column": "Name",
+    "where_value": "Kraco Twin 125 (R2)",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "in the kraco twin 125 (r2) race",
+    "column_keyword": "name",
+    "value_span": "kraco twin 125 (r2)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What DS division has S. L. M. Haneefa as the divisional secretary?",
+    "where_column": "Divisional Secretary",
+    "where_value": "S. L. M. Haneefa",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "divisional secretary",
+    "column_keyword": "secretary",
+    "value_span": "S. L. M. Haneefa",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " how many\u00a0points against\u00a0with\u00a0tries for\u00a0being 43",
+    "where_column": "Tries for",
+    "where_value": "43",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "tries for being",
+    "column_keyword": "tries",
+    "value_span": "43",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the total number for period of validity for upper volta",
+    "where_column": "Former country name",
+    "where_value": "Upper Volta",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "for upper volta",
+    "column_keyword": "country",
+    "value_span": "upper volta",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was \"The Magic Necklace\" written by?",
+    "where_column": "Title",
+    "where_value": "\"The Magic Necklace\"",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "title",
+    "value_span": "\"The Magic Necklace\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the vacator when south carolina 4th is the district?",
+    "where_column": "District",
+    "where_value": "South Carolina 4th",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "is the district",
+    "column_keyword": "district",
+    "value_span": "south carolina 4th",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

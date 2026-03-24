@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What is the market income per capita of the county with the 9.4% poverty rate?",
+    "where_column": "Poverty Rate",
+    "where_value": "9.4%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "poverty rate",
+    "column_keyword": "rate",
+    "value_span": "9.4%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Where was the shot pct 78?",
+    "where_column": "Shot Pct.",
+    "where_value": "78",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "shot pct",
+    "column_keyword": "pct",
+    "value_span": "78",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the average rating for tv asahi?",
+    "where_column": "TV Station",
+    "where_value": "TV Asahi",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "for tv asahi",
+    "column_keyword": "station",
+    "value_span": "tv asahi",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many providers are there where the resale category is yes and bandwith is up is 1024?",
+    "where_column": "Resale",
+    "where_value": "yes",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "resale category is",
+    "column_keyword": "resale",
+    "value_span": "yes",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the total opponents points for the game were the Oilers scored 21?",
+    "where_column": "Oilers points",
+    "where_value": "21",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Oilers scored",
+    "column_keyword": "points",
+    "value_span": "21",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the population density of bandung regency?",
+    "where_column": "Administrative division",
+    "where_value": "Bandung Regency",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "density of",
+    "column_keyword": "division",
+    "value_span": "bandung regency",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the original air dates for the title \"firestorm\"?",
+    "where_column": "Title",
+    "where_value": "\"Firestorm\"",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for the title",
+    "column_keyword": "title",
+    "value_span": "\"firestorm\"",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the record where the locaiton is tampa, fl and the opponent is louisville?",
+    "where_column": "Location",
+    "where_value": "Tampa, FL",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "locaiton is",
+    "column_keyword": "location",
+    "value_span": "tampa, fl",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many total viewers (combined Live and SD) watched the episode with a share of 8?",
+    "where_column": "Share",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "share of",
+    "column_keyword": "share",
+    "value_span": "8",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Which school has the Raiders as their mascot?",
+    "where_column": "Mascot",
+    "where_value": "Raiders",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as their mascot",
+    "column_keyword": "mascot",
+    "value_span": "Raiders",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "How tall is Maksim Botin? ",
+    "where_column": "Player",
+    "where_value": "Maksim Botin",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "tall is",
+    "column_keyword": "player",
+    "value_span": "Maksim Botin",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the ranking for rr2 pts being 8",
+    "where_column": "RR2 Pts.",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "rr2 pts being",
+    "column_keyword": "pts",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the television order of the episode directed by ben jones, written by j. m. dematteis and originally aired on february6,2009",
+    "where_column": "Directed by",
+    "where_value": "Ben Jones",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "directed by",
+    "column_keyword": "directed",
+    "value_span": "ben jones",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many years was lynn muscarella the high school principal and charlie wiltse the superintendent?",
+    "where_column": "High School Principal",
+    "where_value": "Lynn Muscarella",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "high school principal",
+    "column_keyword": "principal",
+    "value_span": "lynn muscarella",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "what time is mon may 26 and fri may 30 is 18' 28.27 122.599mph?",
+    "where_column": "Fri 30 May",
+    "where_value": "18' 28.27 122.599mph",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "fri may 30 is",
+    "column_keyword": "fri",
+    "value_span": "18' 28.27 122.599mph",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the to for 19 league apps",
+    "where_column": "League Apps",
+    "where_value": "19",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "league apps",
+    "column_keyword": "apps",
+    "value_span": "19",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the number of vacators when the successor was William H. Wells ( F )?",
+    "where_column": "Successor",
+    "where_value": "William H. Wells ( F )",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "successor was",
+    "column_keyword": "successor",
+    "value_span": "William H. Wells ( F )",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What are all values of CMD.EXE / COMMAND.COM for the unix shell echo?",
+    "where_column": "Unix shell",
+    "where_value": "echo",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "unix shell",
+    "column_keyword": "shell",
+    "value_span": "echo",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who were all of the skippers with a corrected time of 3:15:07:27?",
+    "where_column": "Corrected time d:hh:mm:ss",
+    "where_value": "3:15:07:27",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "corrected time of",
+    "column_keyword": "time",
+    "value_span": "3:15:07:27",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the date successor seated for delegate seat established",
+    "where_column": "Reason for change",
+    "where_value": "Delegate seat established",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "reason",
+    "value_span": "delegate seat established",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What season was the episode \"haunted\" in?",
+    "where_column": "Title",
+    "where_value": "\"Haunted\"",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "episode \"haunted\"",
+    "column_keyword": "title",
+    "value_span": "\"haunted\"",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "In the championship Miami , United States, what is the score in the final?",
+    "where_column": "Championship",
+    "where_value": "Miami , United States",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "championship Miami",
+    "column_keyword": "championship",
+    "value_span": "Miami , United States",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " what's the\u00a0championship\u00a0where\u00a054 holes\u00a0is 1 shot lead and\u00a0runner(s)-up\u00a0is chris dimarco",
+    "where_column": "54 holes",
+    "where_value": "1 shot lead",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "54 holes is",
+    "column_keyword": "holes",
+    "value_span": "1 shot lead",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What position did the driver earn 31 points?",
+    "where_column": "Points",
+    "where_value": "31",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "earn 31 points",
+    "column_keyword": "points",
+    "value_span": "31",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the naming for fluent and poor comprehension",
+    "where_column": "Fluency",
+    "where_value": "fluent",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "fluency",
+    "value_span": "fluent",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

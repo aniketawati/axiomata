@@ -1,0 +1,383 @@
+[
+  {
+    "question": "Which team has a match played of 10 4?",
+    "headers": [
+      "Team",
+      "Stadium",
+      "Match played",
+      "Highest",
+      "Lowest",
+      "Average"
+    ],
+    "where_column": "Match played",
+    "where_value": "10 4",
+    "select_column": "Team"
+  },
+  {
+    "question": "What is the most recent year where the average start is 8.5?",
+    "headers": [
+      "Year",
+      "Starts",
+      "Wins",
+      "Top 10",
+      "Poles",
+      "Avg. Start",
+      "Avg. Finish",
+      "Winnings",
+      "Position",
+      "Team(s)"
+    ],
+    "where_column": "Avg. Start",
+    "where_value": "8.5",
+    "select_column": "Year"
+  },
+  {
+    "question": "What was the rating for Brisbane the week that Adelaide had 94000?",
+    "headers": [
+      "WEEK",
+      "Sydney",
+      "Melbourne",
+      "Brisbane",
+      "Adelaide",
+      "Perth",
+      "TOTAL",
+      "NIGHTLY RANK"
+    ],
+    "where_column": "Adelaide",
+    "where_value": "94000",
+    "select_column": "Brisbane"
+  },
+  {
+    "question": "How many persons had immunity in the episode when Wanda was eliminated?",
+    "headers": [
+      "Episode title",
+      "Air date",
+      "Reward",
+      "Immunity",
+      "Eliminated",
+      "Vote",
+      "Finish"
+    ],
+    "where_column": "Eliminated",
+    "where_value": "Wanda",
+    "select_column": "Immunity"
+  },
+  {
+    "question": "Who were all womens doubles for the year 2000/2001?",
+    "headers": [
+      "Year",
+      "Mens singles",
+      "Womens singles",
+      "Mens doubles",
+      "Womens doubles",
+      "Mixed doubles"
+    ],
+    "where_column": "Year",
+    "where_value": "2000/2001",
+    "select_column": "Womens doubles"
+  },
+  {
+    "question": "When did the Cowboys score 13 points in 1966?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Result",
+      "Cowboys points",
+      "Opponents",
+      "Record"
+    ],
+    "where_column": "Cowboys points",
+    "where_value": "13",
+    "select_column": "Date"
+  },
+  {
+    "question": "How many yachts had a position of 3?",
+    "headers": [
+      "Position",
+      "Sail number",
+      "Yacht",
+      "State/country",
+      "Yacht type",
+      "LOA (Metres)",
+      "Skipper",
+      "Corrected time d:hh:mm:ss"
+    ],
+    "where_column": "Position",
+    "where_value": "3",
+    "select_column": "Yacht"
+  },
+  {
+    "question": "What are the racing teams for which the average finish is 23.3?",
+    "headers": [
+      "Year",
+      "Starts",
+      "Wins",
+      "Top 10",
+      "Poles",
+      "Avg. Start",
+      "Avg. Finish",
+      "Winnings",
+      "Position",
+      "Team(s)"
+    ],
+    "where_column": "Avg. Finish",
+    "where_value": "23.3",
+    "select_column": "Team(s)"
+  },
+  {
+    "question": "How many vacators have October 22, 1808 as date successor seated?",
+    "headers": [
+      "District",
+      "Vacator",
+      "Reason for change",
+      "Successor",
+      "Date successor seated"
+    ],
+    "where_column": "Date successor seated",
+    "where_value": "October 22, 1808",
+    "select_column": "Vacator"
+  },
+  {
+    "question": "When pronoun is the subject what is the episode title?",
+    "headers": [
+      "Episode title",
+      "Subject",
+      "Music by",
+      "Lyrics by",
+      "Performed by",
+      "First aired"
+    ],
+    "where_column": "Subject",
+    "where_value": "pronoun",
+    "select_column": "Episode title"
+  },
+  {
+    "question": "During what period were parliament 11th?",
+    "headers": [
+      "Parliament",
+      "Name",
+      "Period in office",
+      "Birth and death years",
+      "General election contested",
+      "Constituency contested",
+      "Political party"
+    ],
+    "where_column": "Parliament",
+    "where_value": "11th",
+    "select_column": "Period in office"
+  },
+  {
+    "question": "under belles, which is the most possible created?",
+    "headers": [
+      "Institution",
+      "Location",
+      "Nickname",
+      "Founded",
+      "Type",
+      "Enrollment",
+      "Joined"
+    ],
+    "where_column": "Nickname",
+    "where_value": "Belles",
+    "select_column": "Founded"
+  },
+  {
+    "question": "When 1-1 is the series who is the team?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Series"
+    ],
+    "where_column": "Series",
+    "where_value": "1-1",
+    "select_column": "Team"
+  },
+  {
+    "question": "When was Kalin Olson listed as  the centerfold model?",
+    "headers": [
+      "Date",
+      "Cover model",
+      "Centerfold model",
+      "Interview subject",
+      "20 Questions",
+      "Pictorials"
+    ],
+    "where_column": "Centerfold model",
+    "where_value": "Kalin Olson",
+    "select_column": "Date"
+  },
+  {
+    "question": "What are the names of all unix shell with PowerShell (Cmdlet) of select-string?",
+    "headers": [
+      "PowerShell (Cmdlet)",
+      "PowerShell (Alias)",
+      "CMD.EXE / COMMAND.COM",
+      "Unix shell",
+      "Description"
+    ],
+    "where_column": "PowerShell (Cmdlet)",
+    "where_value": "Select-String",
+    "select_column": "Unix shell"
+  },
+  {
+    "question": "When Kubb is in 9th, who is in 10th?",
+    "headers": [
+      "Poll Year",
+      "Winner",
+      "Second",
+      "Third",
+      "Fourth",
+      "Fifth",
+      "Sixth",
+      "Seventh",
+      "Eighth",
+      "Ninth",
+      "Tenth"
+    ],
+    "where_column": "Ninth",
+    "where_value": "Kubb",
+    "select_column": "Tenth"
+  },
+  {
+    "question": "How many fastest laps were there for a rd that equals 10?",
+    "headers": [
+      "Rd",
+      "Name",
+      "Pole Position",
+      "Fastest Lap",
+      "Winning driver",
+      "Winning team",
+      "Report"
+    ],
+    "where_column": "Rd",
+    "where_value": "10",
+    "select_column": "Fastest Lap"
+  },
+  {
+    "question": "What are week 4 results? ",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Game site",
+      "Record",
+      "Attendance"
+    ],
+    "where_column": "Week",
+    "where_value": "4",
+    "select_column": "Result"
+  },
+  {
+    "question": "What was the interview score for Hawaii?",
+    "headers": [
+      "Country",
+      "Interview",
+      "Swimsuit",
+      "Evening Gown",
+      "Average"
+    ],
+    "where_column": "Country",
+    "where_value": "Hawaii",
+    "select_column": "Interview"
+  },
+  {
+    "question": "Name the number in the series for when the viewers is 7.78",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "U.S. viewers (millions)",
+    "where_value": "7.78",
+    "select_column": "No. in series"
+  },
+  {
+    "question": "What is their withdrawal rate for the school district with headquarters located in Truro?",
+    "headers": [
+      "School District",
+      "Headquarters",
+      "Sector",
+      "Enrollment (2011-12)",
+      "Teachers (2008-09",
+      "Student-Teacher ratio (2008-09)",
+      "French enrollment (2011-12)",
+      "Graduation rate (2011-12)",
+      "Withdrawal rate (2010-11)"
+    ],
+    "where_column": "Headquarters",
+    "where_value": "Truro",
+    "select_column": "Withdrawal rate (2010-11)"
+  },
+  {
+    "question": "The location (transmitter site) San Fernando, Pampanga ** has what Power kW (ERP)?",
+    "headers": [
+      "Branding",
+      "Callsign",
+      "Ch. #",
+      "Station Type",
+      "Power kW (ERP)",
+      "Location (Transmitter Site)"
+    ],
+    "where_column": "Location (Transmitter Site)",
+    "where_value": "San Fernando, Pampanga **",
+    "select_column": "Power kW (ERP)"
+  },
+  {
+    "question": "How many players did the most high points in the game with 39-22 record?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "39-22",
+    "select_column": "High points"
+  },
+  {
+    "question": "How many times was banbridge academy the winner?",
+    "headers": [
+      "School",
+      "Winners",
+      "Finalists",
+      "Total Finals",
+      "Year of last win"
+    ],
+    "where_column": "School",
+    "where_value": "Banbridge Academy",
+    "select_column": "Winners"
+  },
+  {
+    "question": "Name the number of seats to be won being % of popular vote at 6.88%",
+    "headers": [
+      "Election",
+      "Leader",
+      "# of candidates",
+      "# of seats to be won",
+      "# of seats won",
+      "# of total votes",
+      "% of popular vote"
+    ],
+    "where_column": "% of popular vote",
+    "where_value": "6.88%",
+    "select_column": "# of seats to be won"
+  }
+]

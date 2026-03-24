@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What team(s) did they play on march 9?",
+    "where_column": "Date",
+    "where_value": "March 9",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "play on march 9",
+    "column_keyword": "date",
+    "value_span": "march 9",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What district was John Porter elected in?",
+    "where_column": "Incumbent",
+    "where_value": "John Porter",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "incumbent",
+    "value_span": "John Porter",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "In what year was the total finals at 10?",
+    "where_column": "Total Finals",
+    "where_value": "10",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "total finals at",
+    "column_keyword": "finals",
+    "value_span": "10",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Who did the fastest lap in the race won by Paul Tracy, with Emerson Fittipaldi at the pole position?",
+    "where_column": "Pole position",
+    "where_value": "Emerson Fittipaldi",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "at the pole position",
+    "column_keyword": "pole",
+    "value_span": "Emerson Fittipaldi",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many strongs transliteration of the english spelling of the work jehojakin?",
+    "where_column": "English Spelling",
+    "where_value": "Jehojakin",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "english spelling of",
+    "column_keyword": "spelling",
+    "value_span": "jehojakin",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the try bonus of points against at 430",
+    "where_column": "Points against",
+    "where_value": "430",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "points against at",
+    "column_keyword": "points",
+    "value_span": "430",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many rewards are there for air date October 6, 2005?",
+    "where_column": "Air date",
+    "where_value": "October 6, 2005",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for air date",
+    "column_keyword": "date",
+    "value_span": "October 6, 2005",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "List the stadium and number of people in attendance when the team record was 45-22.",
+    "where_column": "Record",
+    "where_value": "45-22",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "team record was",
+    "column_keyword": "record",
+    "value_span": "45-22",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the date for score w 109\u201395 (ot)",
+    "where_column": "Score",
+    "where_value": "W 109\u201395 (OT)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for score",
+    "column_keyword": "score",
+    "value_span": "w 109\u201395 (ot)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When did the episode viewed by 10.50 millions of people in the US run for the first time?",
+    "where_column": "U.S. viewers (millions)",
+    "where_value": "10.50",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "viewed by 10.50 millions",
+    "column_keyword": "viewers",
+    "value_span": "10.50",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "On what date was the race at Nazareth?",
+    "where_column": "Location",
+    "where_value": "Nazareth",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "race at Nazareth",
+    "column_keyword": "location",
+    "value_span": "Nazareth",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Which tournaments current venue is the Madrid Arena?",
+    "where_column": "Current Venue",
+    "where_value": "Madrid Arena",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "current venue is",
+    "column_keyword": "venue",
+    "value_span": "Madrid Arena",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What are the lengths of the models that are mm (in) tall?",
+    "where_column": "Height",
+    "where_value": "mm (in)",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "are mm (in) tall",
+    "column_keyword": "height",
+    "value_span": "mm (in)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many episodes are written by Lew Schneider?",
+    "where_column": "Written by",
+    "where_value": "Lew Schneider",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "written by Lew Schneider",
+    "column_keyword": "written",
+    "value_span": "Lew Schneider",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which team was the second semi finalist in 2007?",
+    "where_column": "Year",
+    "where_value": "2007",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "semi finalist in 2007",
+    "column_keyword": "year",
+    "value_span": "2007",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the incumbent for alabama 6",
+    "where_column": "District",
+    "where_value": "Alabama 6",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "for alabama 6",
+    "column_keyword": "district",
+    "value_span": "alabama 6",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which county has a median household income of  $98,090?",
+    "where_column": "Median House- hold Income",
+    "where_value": "$98,090",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "median household income of",
+    "column_keyword": "income",
+    "value_span": "$98,090",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the land area of the RCM having a density of 21.1?",
+    "where_column": "Density (pop. per km2)",
+    "where_value": "21.1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "having a density of",
+    "column_keyword": "density",
+    "value_span": "21.1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what year was william francis stevenson first elected?",
+    "where_column": "Incumbent",
+    "where_value": "William Francis Stevenson",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "incumbent",
+    "value_span": "william francis stevenson",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who has the fastest lap where Beno\u00eet Tr\u00e9luyer got the pole position?",
+    "where_column": "Pole Position",
+    "where_value": "Beno\u00eet Tr\u00e9luyer",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "got the pole position",
+    "column_keyword": "pole",
+    "value_span": "Beno\u00eet Tr\u00e9luyer",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the record on November 7?",
+    "where_column": "Date",
+    "where_value": "November 7",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "on November 7",
+    "column_keyword": "date",
+    "value_span": "November 7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who wrote the episode with the production code 519?",
+    "where_column": "Production code",
+    "where_value": "519",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "production code 519",
+    "column_keyword": "production",
+    "value_span": "519",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What was the result of the Top 3 episode?",
+    "where_column": "Episode",
+    "where_value": "Top 3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the Top 3 episode",
+    "column_keyword": "episode",
+    "value_span": "Top 3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the round eliminated where conference record is 12-6",
+    "where_column": "Conf. record",
+    "where_value": "12-6",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "conference record is",
+    "column_keyword": "record",
+    "value_span": "12-6",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What date did the West Indies win the match?",
+    "where_column": "Winner",
+    "where_value": "West Indies",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "West Indies win",
+    "column_keyword": "winner",
+    "value_span": "West Indies",
+    "select_reasoning": "question_word_implies"
+  }
+]

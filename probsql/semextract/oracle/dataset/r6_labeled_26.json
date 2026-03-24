@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What was the result of the game seen by 31095 people?",
+    "where_column": "Attendance",
+    "where_value": "31095",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "seen by 31095 people",
+    "column_keyword": "attendance",
+    "value_span": "31095",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is  the y = 2009 when the expression is month = floor ((d + e + 114) / 31)?",
+    "where_column": "Expression",
+    "where_value": "month = floor ((d + e + 114) / 31)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the expression is",
+    "column_keyword": "expression",
+    "value_span": "month = floor ((d + e + 114) / 31)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If the equation is (10 times 8) + 4, what would be the 2nd throw?",
+    "where_column": "Equation",
+    "where_value": "(10 times 8) + 4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the equation is",
+    "column_keyword": "equation",
+    "value_span": "(10 times 8) + 4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the score when the opponent was Dominika Cibulková?",
+    "where_column": "Opponent",
+    "where_value": "Dominika Cibulková",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "the opponent was",
+    "column_keyword": "opponent",
+    "value_span": "Dominika Cibulková",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What party did incumbent Brooks Hays belong to? ",
+    "where_column": "Incumbent",
+    "where_value": "Brooks Hays",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "incumbent Brooks Hays",
+    "column_keyword": "incumbent",
+    "value_span": "Brooks Hays",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the builder for wd number being 22",
+    "where_column": "WD No.",
+    "where_value": "22",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "wd number being",
+    "column_keyword": "wd",
+    "value_span": "22",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what parliament's name is lina loh woon lee?",
+    "where_column": "Name",
+    "where_value": "Lina Loh Woon Lee",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "name",
+    "value_span": "lina loh woon lee",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the audition city for hyatt regency chicago",
+    "where_column": "Callback Venue",
+    "where_value": "Hyatt Regency Chicago",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "venue",
+    "value_span": "hyatt regency chicago",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What kind of party is the district in Alabama 1?",
+    "where_column": "District",
+    "where_value": "Alabama 1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the district in",
+    "column_keyword": "district",
+    "value_span": "Alabama 1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many results are listed for week 13?",
+    "where_column": "Week",
+    "where_value": "13",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for week 13",
+    "column_keyword": "week",
+    "value_span": "week 13",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who sang for the movie Amar Deep?",
+    "where_column": "Movie/Album",
+    "where_value": "Amar Deep",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "for the movie",
+    "column_keyword": "movie",
+    "value_span": "Amar Deep",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Who directed the episode that was written by Jackson Gillis and Originally aired on May 21, 1955?",
+    "where_column": "Written by:",
+    "where_value": "Jackson Gillis",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "written by Jackson Gillis",
+    "column_keyword": "written",
+    "value_span": "Jackson Gillis",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the score in game 81?",
+    "where_column": "Game",
+    "where_value": "81",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in game 81",
+    "column_keyword": "game",
+    "value_span": "game 81",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the total number of industry for maxis",
+    "where_column": "Company",
+    "where_value": "Maxis",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "company",
+    "value_span": "maxis",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the number of points defending for 1075",
+    "where_column": "New points",
+    "where_value": "1075",
+    "why_this_column": "process_of_elimination",
+    "trigger_phrase": null,
+    "column_keyword": "points",
+    "value_span": "1075",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the longitude of the township with a latitude of 48.075823?",
+    "where_column": "Latitude",
+    "where_value": "48.075823",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "with a latitude of",
+    "column_keyword": "latitude",
+    "value_span": "48.075823",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what's the\u00a0club\u00a0with\u00a0losing bonus\u00a0being 1",
+    "where_column": "Losing bonus",
+    "where_value": "1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "losing bonus being",
+    "column_keyword": "bonus",
+    "value_span": "1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which party was elected first in 1998?",
+    "where_column": "First elected",
+    "where_value": "1998",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "elected first in",
+    "column_keyword": "elected",
+    "value_span": "1998",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many wins in the 4th position?",
+    "where_column": "Position",
+    "where_value": "4th",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in the 4th position",
+    "column_keyword": "position",
+    "value_span": "4th",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " How many table points are listed for the deficit is +194? ",
+    "where_column": "difference",
+    "where_value": "+194",
+    "why_this_column": "process_of_elimination",
+    "trigger_phrase": null,
+    "column_keyword": "difference",
+    "value_span": "+194",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the vote tally on the episode aired May 5, 2005?",
+    "where_column": "Air date",
+    "where_value": "May 5, 2005",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "episode aired",
+    "column_keyword": "date",
+    "value_span": "May 5, 2005",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "who many times is gloucestershire is painswick?",
+    "where_column": "Gloucestershire",
+    "where_value": "Painswick",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "gloucestershire",
+    "value_span": "painswick",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "who is the character where the special edition is koichi sakaguchi?",
+    "where_column": "Special edition",
+    "where_value": "Koichi Sakaguchi",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "special edition is",
+    "column_keyword": "edition",
+    "value_span": "koichi sakaguchi",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many episodes aired in Sydney in Week 3?",
+    "where_column": "WEEK",
+    "where_value": "3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in Week 3",
+    "column_keyword": "week",
+    "value_span": "Week 3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many pick numbers did Michael Giffin have?",
+    "where_column": "Player",
+    "where_value": "Michael Giffin",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "player",
+    "value_span": "Michael Giffin",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]
