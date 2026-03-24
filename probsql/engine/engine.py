@@ -91,16 +91,12 @@ class ProbSQLEngine:
         """
         debug = {"steps": []}
 
-        # Try semantic extraction path (for lookup-style questions)
-        # Only use when confidence is very high — the old path is still more
-        # reliable on average. The semextract resolver needs more training data
-        # and better discrimination before it can be the primary path.
+        # Ensemble: run both paths, pick the higher-confidence result
+        sem_result = None
         if self._semextract_loaded:
             sem_result = self._try_semextract(english, schema, debug)
-            if sem_result and sem_result.confidence > 0.6:
-                return sem_result
 
-        # Step 1: Parse compound structure
+        # Step 1: Parse compound structure (old path)
         predicate_tree = self.conjunction_parser.parse(english)
         debug["steps"].append({
             "step": "conjunction_parse",
@@ -122,13 +118,19 @@ class ProbSQLEngine:
         # Step 5: Render to SQL
         sql_where = format_sql(resolved_tree)
 
-        return GenerationResult(
+        old_result = GenerationResult(
             sql_where=sql_where,
             confidence=calibrated_confidence,
             alternatives=alternatives,
             predicate_tree=resolved_tree,
             debug_info=debug,
         )
+
+        # Step 6: Ensemble — pick the higher-confidence path
+        if sem_result and sem_result.confidence > old_result.confidence:
+            return sem_result
+
+        return old_result
 
     def _resolve_tree(self, tree, schema, debug):
         """Recursively resolve the parsed tree into SQL predicates."""
@@ -206,6 +208,13 @@ class ProbSQLEngine:
         value, value_type, val_confidence = self.value_extractor.extract(
             working_phrase, col_info, operator
         )
+
+        # Bayesian operator override using P(operator | value_type)
+        # Empirical from 76K WikiSQL: person_name→100% =, category→100% =
+        if value_type in ("string_literal", "enum") and operator in ("LIKE", "NOT LIKE"):
+            operator = "="
+            op_confidence = 0.9
+            value_transform = None
 
         # Apply negation
         if neg_info.has_negation:

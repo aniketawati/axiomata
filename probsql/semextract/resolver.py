@@ -208,43 +208,48 @@ class ColumnResolver:
         """Identify which column the question is asking about (SELECT target).
 
         This column should be EXCLUDED from WHERE column candidates.
+        Empirical: 86% identified by column name after question word.
         """
-        q_lower = question.lower()
+        q_lower = question.lower().rstrip("?").strip()
         candidates = []
 
-        # Check question word hints
-        for q_word, col_keywords in self.select_hints.items():
-            if q_lower.startswith(q_word):
-                for i, h in enumerate(headers):
-                    h_words = set(re.findall(r'\b\w+\b', h.lower()))
-                    if h_words & col_keywords:
-                        candidates.append((h, 0.7, "question_word"))
+        # Pattern 1 (86%): Column name appears right after question word
+        # "What POSITION does...", "What is the SCORE...", "Which TEAM..."
+        qword_patterns = [
+            r'^what\s+(?:is\s+(?:the\s+)?|are\s+(?:the\s+)?|was\s+(?:the\s+)?|were\s+(?:the\s+)?)?(\w[\w\s/()#.,-]*?)(?:\s+(?:of|for|did|does|do|is|are|was|were|when|where|that|who|which|with|in|on|at|from|has|have|had)\b)',
+            r'^what\s+(\w[\w\s/()#.,-]*?)\s*$',
+            r'^which\s+(\w[\w\s/()#.,-]*?)(?:\s+(?:did|does|do|is|are|was|were|has|have|had)\b)',
+            r'^how\s+many\s+(\w[\w\s/()#.,-]*?)(?:\s+(?:did|does|do|is|are|was|were|has|have|had)\b)',
+        ]
 
-        # Check direct column name mention after question word
-        # "What POSITION does..." → Position is SELECT
-        # "What SCHOOL/CLUB TEAM is..." → School/Club Team is SELECT
-        for i, h in enumerate(headers):
-            h_lower = h.lower()
-            # Check if column name appears right after question word
-            m = re.search(
-                rf'^(?:what|which|how\s+many)\s+(?:is\s+the\s+|are\s+the\s+|was\s+the\s+)?'
-                rf'({re.escape(h_lower)})',
-                q_lower
-            )
+        for pattern in qword_patterns:
+            m = re.match(pattern, q_lower)
             if m:
-                candidates.append((h, 0.95, "direct_after_qword"))
-                continue
+                hint = m.group(1).strip()
+                # Match hint against headers
+                for h in headers:
+                    h_lower = h.lower()
+                    if h_lower == hint or h_lower in hint or hint in h_lower:
+                        candidates.append((h, 0.95, "direct_after_qword"))
+                    else:
+                        # Word overlap
+                        hint_words = set(re.findall(r'\b\w{3,}\b', hint))
+                        h_words = set(re.findall(r'\b\w{3,}\b', h_lower))
+                        overlap = hint_words & h_words
+                        if overlap:
+                            score = 0.85 * len(overlap) / max(len(h_words), 1)
+                            candidates.append((h, score, "partial_after_qword"))
+                break  # use first matching pattern
 
-            # Check partial match: "What position" matches "Position"
-            h_words = re.findall(r'\b\w+\b', h_lower)
-            for w in h_words:
-                if len(w) > 3:
-                    m = re.search(
-                        rf'^(?:what|which|how\s+many)\s+(?:\w+\s+)*{re.escape(w)}',
-                        q_lower
-                    )
-                    if m:
-                        candidates.append((h, 0.8, "partial_after_qword"))
+        # Pattern 2 (10%): Question word implies SELECT type
+        # "Who..." → person/name column, "Where..." → location column
+        if not candidates:
+            for q_word, col_keywords in self.select_hints.items():
+                if q_lower.startswith(q_word):
+                    for h in headers:
+                        h_words = set(re.findall(r'\b\w+\b', h.lower()))
+                        if h_words & col_keywords:
+                            candidates.append((h, 0.7, "question_word"))
 
         if candidates:
             candidates.sort(key=lambda x: -x[1])
