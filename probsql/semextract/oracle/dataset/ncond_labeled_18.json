@@ -1,0 +1,702 @@
+[
+  {
+    "question": "How many points per game have the tournament 2005 eurobasket?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Tournament = 2005 Eurobasket.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is Expected End Date, when Target/Approach is Notes?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Target/Approach = Notes.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Away result of 1–1, and a Round of 1r, and a Season of 1967-68 involves what club?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Away result = 1-1, Round = 1R, and Season = 1967-68.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "I want the plaid cymru for 4 may 2011",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Date(s) conducted = 4 May 2011.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which Played has Draws smaller than 7, and Goals for smaller than 61, and Goals against smaller than 48, and a Position of 5?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Draws < 7, Goals for < 61, Goals against < 48, and Position = 5.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What was the value in 1995 for A in 2000 at the Indian Wells tournament?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Tournament = Indian Wells and 2000 = A.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the player with 238 hits and years after 1885",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Hits = 238 and Year > 1885.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest Built, when Floors is greater than 23, and when Rank is 3?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Floors > 23 and Rank = 3.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the highest Bush#, when Others% is \"1.7%\", when Others# is less than 75, and when Kerry# is greater than 1,524?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Others% = 1.7%, Others# < 75, and Kerry# > 1524.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What home team has a score of 5 - 5?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Score = 5-5.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who was the director for Tango Bar?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: English title = Tango Bar.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Name the D 45 O with D 44 O majority →",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: D 44 O = Majority.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "When was the game with richmond as Away team?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Away team = Richmond.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Name the ERP W for frequency of 92.7",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Frequency MHz = 92.7.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "With a total of 11, and 10 rank points, what are the score points?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Total = 11 and Rank points = 10.",
+    "condition_signals": ["with_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the greatest Time with a Year of 1991, and Event of 4x100 m relay?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Year = 1991 and Event = 4x100 m relay.",
+    "condition_signals": ["with_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What game 1 has halfback as a position?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Position = Halfback.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the Game number on April 12 with St. Louis Home Team?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Date = April 12 and Home Team = St. Louis.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What races achieved 0 f/laps and 1 pole position?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: F/Laps = 0 and Poles = 1.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is Occupation², when Age¹ is greater than 24, when Alias is \"Black\"?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Age > 24 and Alias = Black.",
+    "condition_signals": ["when_clause", "comma_separated", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the largest ethnic group of the settlement with the cyrillic name of банатско аранђелово?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Cyrillic Name Other Names = банатско аранђелово.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many total finals where there when the last win was in 2012-13?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Year of last win = 2012-13.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 11,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What was the literacy rate published in the 2001 census for the state that saw a 12.66% increase?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: % Increase = 12.66%.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the j p c that commonly decays (>5% of decays) d 0 + π 0 or d 0 + γ?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Commonly decays to (>5% of decays) = d 0 + pi 0 or d 0 + gamma.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the largest crowd size at a match against the Chicago Cardinals after Week 10 of the season?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Opponent = Chicago Cardinals and Week > 10.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the record when the visiting team was Ottawa?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Visitor = Ottawa.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "How many Wins have Goals against smaller than 30, and Goals for larger than 25, and Draws larger than 5?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Goals against < 30, Goals for > 25, and Draws > 5.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What was the result in a week lower than 10 with an opponent of Chicago Bears?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Week < 10 and Opponent = Chicago Bears.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How much January has a Record of 26–12–6, and Points smaller than 58?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Record = 26-12-6 and Points < 58.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the lowest number of League Cups a player with a 434 league has?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: League = 434.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the year for clay for boston and guillermo vilas",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Surface = Clay, Championship = Boston (or similar), and Opponent in the final = Guillermo Vilas.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is Drawn, when Played is \"Correct as of 2006-06-10\"?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Played = Correct as of 2006-06-10.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the Opponent when the Cavaliers had a Record of 3-9?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Record = 3-9.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many average laps for Alex Tagliani with more than 17 points?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Driver = Alex Tagliani and Points > 17.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the low lap total for a grid larger than 16 and has a Time/Retired of + 3:27.3?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Grid > 16 and Time/Retired = +3:27.3.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the total number of bronze a team with more than 0 silver, a total of 7 medals, and less than 1 gold medal has?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Silver > 0, Total = 7, and Gold < 1.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the highest capacity for the venue of the club, vihren?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Club = Vihren.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who drove the car with over 66 laps with a grid of 5?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Laps > 66 and Grid = 5.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is 2011, when 2010 is \"WTA Premier 5 Tournaments\"?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: 2010 = WTA Premier 5 Tournaments.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the source of an ENG transfer that paid a £1.5m transfer fee?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Country = ENG and Transfer fee = 1.5m.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Grid has Laps of 25, and a Manufacturer of honda, and a Time/Retired of +1:47.797?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Laps = 25, Manufacturer = Honda, and Time/Retired = +1:47.797.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What was the lowest rank after 2009 with an accolade of 125 best albums of the past 25 years?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Year > 2009 and Accolade = 125 Best Albums of the Past 25 Years.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the maximum number of silvers for a country with fewer than 12 golds and a total less than 8?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Gold < 12 and Total < 8.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the average silver for golds over 2, ranks of 1, and bronzes over 0?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Gold > 2, Rank = 1, and Bronze > 0.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What were the matches where the teams finished in the first group stage, in 1998?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Result = First Group Stage and Year = 1998.",
+    "condition_signals": ["temporal_qualifier"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What's the total number of games with more than 20 points for the 1976 season?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Points > 20 and Season = 1976.",
+    "condition_signals": ["comparative", "temporal_qualifier"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What's the first year that Guo Xin featured in women's singles?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Women's singles contains Guo Xin.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the top grid that roger williamson lapped less than 7?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Driver = Roger Williamson and Laps < 7.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the winning score when there were 9 strokes advantage?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Margin of victory = 9 strokes.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What was the publication date of the photos of Sean Preston Federline that cost $500,000 and were published by People?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Person(s) = Sean Preston Federline, Reported price = $500,000, and Publisher(s) = People.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  }
+]

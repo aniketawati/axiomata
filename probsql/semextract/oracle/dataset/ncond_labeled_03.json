@@ -1,0 +1,827 @@
+[
+  {
+    "question": "What year engine does a ferrari v6 have?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the average speed of Tony Stewart's winning Chevrolet Impala?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Winning Driver=Tony Stewart, Make=Chevrolet Impala; the possessive structure implies two column filters.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What is the total of all to par with player Bob Rosburg?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who was the opposing team in the game attended by 65,554?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "what is the nationality of the ship appam?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many lines have the segment description of red line mos-2 west?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the number of goals with less than 14 wins and a goal difference less than -4?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who had the most rebounds and how many did they have on October 16?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What is the sum of all points in 1975 with 0 wins?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "with_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the number of successes for rockets that have more than 3 launches, were based in Russia, are type soyuz and a rocket type of soyuz-u?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 27,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What are the number of episodes when the genre is modern drama and the highest average ratings points are 28?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "explicit_and",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 20,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What country has a rank smaller than 6, a time of 6:32.32 and notes of FB?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which FCC info has an ERP W of 100 watts?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What's the highest FA Cup with the Name of Alan Smith, and League Cup smaller than 4?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the record of the game on December 5, 2007?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What class in the word with part 4 \"giheizan\"?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the league with a 0:1 home?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the score for the United States when Harry Hampton is the player and the money is $73?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the most gold medals a team with less than 2 silvers, more than 7 total medals, and less than 8 bronze medals has?",
+    "n_conditions": 4,
+    "reasoning": "Four filtering conditions needed; the question specifies four separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 25,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What district is incument terry kilgore from?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "When the wins are less than 0 and the Top-5 1 what is the average cuts?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who is the away side when the crowd is over 18,000 with collingwood at home?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 15,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "For the \"Downtown Girl\" episode, what was the original air date?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the total pick number for a wide receiver?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "How many grids have more than 24 laps with a time/retired of +1:12.208?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the height of the EMC Insurance Building in Des Moines?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Who is the player from the United States with a total less than 293 and won in 1984?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "with_clause",
+      "comparative",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the 100m that the 110H was less than 14.52 and the 400m was more than 47.3?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is Country, when Place is \"T9\", and when Player is \"Michael Campbell\"?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Thurs 2 June time for the rider with a Fri 3 June time of 17' 36.58 128.554mph?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "with_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Country, when Place is T6, and when Player is \"Raymond Floyd\"?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the sum of laps that has a car number of larger than 1, is a ford, and has 155 points?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which match had more than 1,490 people in attendance to watch FCR 2001 Duisburg have a result of 0:3 (0:2)?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What rank is the common with an area of 47.3 km^2?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "what is the highest points when the chassis is focus rs wrc 08 and 09 and the stage wins is more than 91?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 23,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "what is the mountain range when the state is colorado, rank is higher than 90 and mountain peak is whetstone mountain?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "comma_separated",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the smallest amount of freight carried on the road that closed on March 31 and reached super B capacity on February 17 after 2011?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 26,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What week is a bye week?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "In what Round was Pick #12 drafted?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the value of match points when the points for is 570?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who was the lead with Pete Fenson as skip and Joe Polo as second in season 2005–06?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the highest pick of the player from texas a&i with an overall less than 28?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What party did the incumbent of the Arkansas 6 district belong to? ",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the sum of the losses that a match score larger than 26, a points score of 62, and a draw greater than 5?",
+    "n_conditions": 3,
+    "reasoning": "Three filtering conditions needed; the question specifies three separate constraints connected by conjunctions/commas.",
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 25,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which builder completed before 1890 and launched on 9 june 1888?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the Attendance when the Time was 2:13?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "If points against was 371, what is the drawn?",
+    "n_conditions": 2,
+    "reasoning": "Two filtering conditions needed; the question specifies two separate constraints joined by conjunction or qualifier.",
+    "condition_signals": [
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many games had a Time of 2:14?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Where did the episode rank that was written by thomas l. moran?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "On what date was Tampa Bay's Week 4 game?",
+    "n_conditions": 1,
+    "reasoning": "Single filtering condition needed; the question specifies one constraint to match rows.",
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  }
+]

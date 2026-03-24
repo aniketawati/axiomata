@@ -1,0 +1,702 @@
+[
+  {
+    "question": "What is the average games a player born on 17 March 1915 and debut before 1935 had?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Date of birth = 17 March 1915 and Debut year < 1935.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many games had fewer than 118 opponents and more than 109 net points with an opponent of Washington?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Opponents < 118, Nets points > 109, and Opponent = Washington.",
+    "condition_signals": ["explicit_and", "with_clause", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is the name of the episode whose writer is Timothy J. Lea and the director is Norberto Barba?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Written by = Timothy J. Lea and Directed by = Norberto Barba.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the lowest Floors, when Built is greater than 1970, and when Name is NV Building 3?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Built > 1970 and Name = NV Building 3.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "For teams with more than 0 ties and goals against of 37, how many wins were tallied?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Ties > 0 and Goals Against = 37.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What number is shown for january 15-16 when november 3 is 133?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: November 3 = 133.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the average played for entries with fewer than 65 goals against, points 1 of 19 2, and a position higher than 15?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Goals Against < 65, Points 1 = 19 2, and Position > 15.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which engine is responsible for the USAC Championship Car?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Series = USAC Championship Car.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the RCM that has a density of 9.7?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Density (pop. per km2) = 9.7.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "How many passengers (in millions) flew through along the route that is 1075km long in 2012?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Distance = 1075km.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the system called that is named ELKJS?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Name = ELKJS.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the total number of First Year, when Displacement CC is greater than 4719, when Engine is V8, when Power HP (kW) is \"335 (246)\", and when Model is \"Ghibli SS\"?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Displacement cc > 4719, Engine = V8, Power hp (kW) = 335 (246), and Model = Ghibli SS.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 23,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "When Tujunga is moderate, what is La Crescenta-Montrose?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Tujunga = Moderate.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the Date of the game in Vancouver?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Home = Vancouver.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the name of the driver with a grid less than 14, laps smaller than 53 and a Time/Retired of collision, and a Constructor of ferrari?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Grid < 14, Laps < 53, Time/Retired = Collision, and Constructor = Ferrari.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What was the aggregate score that had a 1-2 second leg score?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: 2nd leg = 1-2.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the masculine u form for the old Swedish word with a neuter a form of skipum?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Neuter a-stems = Skipum.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Score has a Game larger than 32, and Points smaller than 42, and a December larger than 19, and a Record of 18–12–5?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Game > 32, Points < 42, December > 19, and Record = 18-12-5.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "Tell me the highest matches for point 43 and final rank less than 7",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Point = 43 and Final rank < 7.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the little league team from Kentucky when the little league team from Indiana and Wisconsin were Brownsburg LL Brownsburg and Merrill LL Merrill?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Indiana = Brownsburg LL Brownsburg and Wisconsin = Merrill LL Merrill.",
+    "condition_signals": ["when_clause", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 21,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the average point total for the nets in games before game 9 where the opponents scored less than 95?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Game < 9 and Opponents < 95.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the score of the 2nd leg when the Belgrano played the first leg at home with a score of 2-1?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Home (1st leg) = Belgrano and 1st Leg = 2-1.",
+    "condition_signals": ["when_clause", "with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": true,
+      "word_count": 18,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the years at the club of the player with 2 goals and was born on 23 July 1910?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Goals = 2 and Date of birth = 23 July 1910.",
+    "condition_signals": ["explicit_and", "with_clause"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest week that has an attendance greater than 23,058, with october 24, 1943 as the date?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Attendance > 23058 and Date = October 24, 1943.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which opponent has unknown attendance, and lost 2-0?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Attendance = Unknown and Result = 2-0 loss.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the total number of score for staples center 13,266",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Location Attendance = Staples Center 13,266.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which Series 2 has a Series 3 of deborah meaden?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Series 3 = Deborah Meaden.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many conversions had 0 pens and 0 tries?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Pens = 0 and Tries = 0.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the score on 20/6/97?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Date = 20/6/97.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the total number of field goals a player had when there were more than 0 extra points and there were 5 touchdowns?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Extra points > 0 and Touchdowns = 5.",
+    "condition_signals": ["when_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who was the arranger for the song that had a lyricist of Sirapatara Kalayapanid?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Lyricist(s) = Sirapatara Kalayapanid.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Run 4 has a Run 3 of 1:26.63?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Run 3 = 1:26.63.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which place has points larger than 1, a bmw machine, and a time of 1:18.47.6?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Points > 1, Machine = BMW, and Time = 1:18.47.6.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": " what's the\u00a0swimsuit\u00a0where\u00a0average\u00a0is 8.670",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Average = 8.670.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 5,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the average Pick, when Name is \"Lybrant Robinson\", and when Overall is less than 139?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Name = Lybrant Robinson and Overall < 139.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What's the position that has a total less than 66.5m, a compulsory of 30.9 and voluntary less than 33.7?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Total < 66.5, Compulsory = 30.9, and Voluntary < 33.7.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What country has sa/b as the notes, and a time of 5:51.30?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Notes = SA/B and Time = 5:51.30.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the record on November 1?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Date = November 1.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What was the lowest crowd size at MCG?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Venue = MCG.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What number corresponds to Presidet Yves Krattinger of the Socialist party?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: President = Yves Krattinger and Party = Socialist.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the Money ($) when the Place is t6, and Player is chris dimarco?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Place = T6 and Player = Chris DiMarco.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How much is the sum of every crowd in attendance when the away score was 7.13 (55) for Richmond?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Away team score = 7.13 (55) and Away team = Richmond.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "When did indiana play?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Opponent = Indiana.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 4,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What was the constructor when there were 95 laps and a grid less than 15?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Laps = 95 and Grid < 15.",
+    "condition_signals": ["when_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What are the fewest draws with less than 7 losses and Mitta United is the Tallagatta DFL?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Losses < 7 and Tallangatta DFL = Mitta United.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Nanquan has a Nandao larger than 9.49, and a Rank of 4?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Nandao > 9.49 and Rank = 4.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Where did Tyler Haws, 2009 Utah Mr. Basketball, go to high school?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Utah Mr. Basketball = Tyler Haws.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who was the centerfold model when the issue's pictorial was kimberly bell , bunnies of the new playboy club?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Pictorials = Kimberly Bell, Bunnies of the New Playboy Club.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who was in Second Place with Isabelle Brayley came in Fourth?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Fourth = Isabelle Brayley.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many receptions for players with over 647 yards and an under 14 yard average?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Yards > 647 and Avg. < 14.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  }
+]

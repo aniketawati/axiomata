@@ -1,0 +1,702 @@
+[
+  {
+    "question": "Who had 41.76% yes votes",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: % YES = 41.76%.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the time of Max Biaggi with more than 2 grids, 20 laps?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Rider = Max Biaggi, Grid > 2, and Laps = 20.",
+    "condition_signals": ["with_clause", "comma_separated", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the average overall that has a pick less than 20, North Carolina as the college, with a round less than 8?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Pick < 20, College = North Carolina, and Round < 8.",
+    "condition_signals": ["comma_separated", "with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "How many different results for high rebounds were there for game number 76?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Game = 76.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many people attended the game with a kickoff time of cbs 1:00pm, in a week earlier than 8, on September 15, 2002?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Kickoff Time = CBS 1:00pm, Week < 8, and Date = September 15, 2002.",
+    "condition_signals": ["with_clause", "comma_separated", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What's the sum of the total congregation in the manitoba province with less than 1,208,268 population?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Province = Manitoba and Population < 1,208,268.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the total Gold's less than 0?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Gold < 0.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest number of games Jack Gaudion, who debut in 1936, played?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Player = Jack Gaudion and Debut year = 1936.",
+    "condition_signals": ["comma_separated", "temporal_qualifier"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How much Drawn has a Lost of 2, and Played smaller than 14?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Lost = 2 and Played < 14.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What result has January 21, 2002 as the date?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Date = January 21, 2002.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the ICAO for Denmark, and the IATA is bll?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Country = Denmark and IATA = BLL.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the total number drawn with goals against less than 55, and a total of 14 losses?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Goals Against < 55 and Lost = 14.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many Points have a Record of 40–21–12–3, and a March larger than 28?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Record = 40-21-12-3 and March > 28.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "When was the year that had an average attendance of 5,445?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Avg. attendance = 5,445.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "List the number of ramsan-720 hard drives?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Product Name = RAMSAN-720.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What's the total number of points when the vancouver carlings have fewer than 12 losses and more than 32 games?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Team Name = Vancouver Carlings, Losses < 12, and Games > 32.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "When grid is less than 7, laps are greater than 17, and time/retired is + 1:35.6, who is the constructor?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Grid < 7, Laps > 17, and Time/Retired = +1:35.6.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What was Holly Scouler's total votes",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Members = Holly Scouler.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which couple has 295 as a total score?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Total Score = 295.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the sum of losses for teams with less than 4 games played?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Played < 4.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "On what Date is Game 3 with Boston Road Team?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Game = 3 and Road Team = Boston.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who finished in third place when the winner was Karina Bacchi? ",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Winner = Karina Bacchi.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many are in the Green Party with a Fine Gael of less than 4 and a Fianna Fail of less than 2 in Athy?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Fine Gael < 4, Fianna Fail < 2, and Town = Athy.",
+    "condition_signals": ["with_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many golds have 3 as the rank, with a total greater than 7?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Rank = 3 and Total > 7.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Arena when there were 65 points?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Points = 65.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the place of Australia?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Country = Australia.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "which election had seat no 1 filled by jacques lachapelle but seat no 5 was filled by g. sanscartier",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Seat no 1 = Jacques Lachapelle and Seat no 5 = G. Sanscartier.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the lowest round for when pole position and winning driver is michael schumacher",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Pole Position = Michael Schumacher and Winning Driver = Michael Schumacher.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many games have a score of 85-92?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Score = 85-92.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the 2010 population of frankfort which has a rank smaller than 14?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: City = Frankfort and Rank < 14.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What were the sales for Dj Casper when he was in a position lower than 13?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Artist = DJ Casper and Position < 13.",
+    "condition_signals": ["when_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "I want the total number of ties for win % more than 0 and tenure of 2001-2011 with lost more than 16",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Win % > 0, Tenure = 2001-2011, and Lost > 16.",
+    "condition_signals": ["explicit_and", "with_clause", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the value for the item \"Tries\" when the value of the item \"Played\" is 18 and the value of the item \"Points\" is 375?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Played = 18 and Points = 375.",
+    "condition_signals": ["when_clause", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 20,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Place of Davis Love III with a To Par of +1?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Player = Davis Love III and To Par = +1.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What's the total number of Silver that has Gold that's larger than 0, Bronze that's smaller than 23, a Total that's larger than 22, and has the Nation of Saint Kitts and Nevis?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Gold > 0, Bronze < 23, Total > 22, and Nation = Saint Kitts and Nevis.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 24,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "Name the first elected for re-elected and brian higgins",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Result = Re-elected and Incumbent = Brian Higgins.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which team had a year over 1995, machine of RS125R, and ranked 1st?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Year > 1995, Machine = RS125R, and Rank = 1st.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the type for the Cathay Pacific Holidays company, an incorporation of Hong Kong and listed activities as Travel Agency?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Company = Cathay Pacific Holidays, Incorporated in = Hong Kong, and Principal activities = Travel Agency.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which manager has Manchester City as the team?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Team = Manchester City.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the original air date for \"Crisis: 22,300 Miles Above Earth!\"?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Title = Crisis: 22,300 Miles Above Earth!.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What was the overall record of Oral Roberts college?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: School = Oral Roberts.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the total number of Total, when Silver is 1, and when Bronze is 7?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Silver = 1 and Bronze = 7.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What year was the ranking 1?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Rank = 1.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is Date of Birth, when Height is \"Head Coach: Adel Shamala\"?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Height = Head Coach: Adel Shamala.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the others for cons of 21% and lead of 24%",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Cons = 21% and Lead = 24%.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is 1980 when 1978 is 2.3?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: 1978 = 2.3.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the venue of the game on 20 November 2002?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Date = 20 November 2002.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the district when the first elected was in 1986?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: First elected = 1986.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest attendance that has a week less than 4, and w 13-7 as the result?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Week < 4 and Result = W 13-7.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the lowest attendance for week 2?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Week = 2.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  }
+]

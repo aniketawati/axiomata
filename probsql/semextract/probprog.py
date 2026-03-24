@@ -698,7 +698,8 @@ class ProbabilisticResolver:
     def __init__(self):
         self.hmm_parser = HMMParser()
         self.feature_hmm = None
-        self.span_detector = None  # span boundary detector (preferred)
+        self.span_detector = None
+        self.condition_estimator = None
         self.markov_resolver = MarkovResolver()
 
     def load_knowledge(self, knowledge_dir=None):
@@ -708,6 +709,10 @@ class ProbabilisticResolver:
         # Load span boundary detector (preferred for value extraction)
         from probsql.semextract.span_detector import ValueSpanDetector
         self.span_detector = ValueSpanDetector()
+        # Load condition count estimator
+        from probsql.semextract.condition_estimator import ConditionEstimator
+        self.condition_estimator = ConditionEstimator()
+        self.condition_estimator.load_knowledge(kdir)
         # Try to load feature-based HMM (fallback)
         from probsql.semextract.feature_hmm import FeatureHMM
         fhmm = FeatureHMM()
@@ -733,21 +738,13 @@ class ProbabilisticResolver:
         # Step 2: Parse tokens and extract value span(s)
         token_roles = self.hmm_parser.parse(question, headers)
 
-        # Use span boundary detector for value extraction
-        # Estimate number of conditions from question structure
-        # Multi-condition signals: explicit conjunctions between clauses
-        q_lower = question.lower()
-        multi_signals = [", and ", " and a ", " and an ", " and the ",
-                         ", a ", ", with ", " with a ", " with an ",
-                         ", when ", ", where "]
-        has_conjunction = any(sig in q_lower for sig in multi_signals)
-        # Also check for comma-separated column references
-        if not has_conjunction and headers:
-            # Count how many column names appear in the question
-            col_mentions = sum(1 for h in headers
-                              if h.lower() in q_lower and len(h) > 3)
-            has_conjunction = col_mentions >= 3  # 1 for SELECT + 2 for WHERE conditions
-        max_spans = 3 if has_conjunction else 1
+        # Estimate number of conditions using Bayesian estimator
+        # P(n_conditions | question_features) learned from 1300+ Opus labels
+        if self.condition_estimator:
+            estimated_n, est_conf = self.condition_estimator.estimate(question, headers)
+            max_spans = estimated_n
+        else:
+            max_spans = 1
 
         value_spans = []
         if self.span_detector:

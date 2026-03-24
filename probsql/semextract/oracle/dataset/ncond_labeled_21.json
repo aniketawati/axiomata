@@ -1,0 +1,798 @@
+[
+  {
+    "question": "What are the formats associated with the Atlantic Records label, catalog number 512336?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the Date of inauguration of the President with an Age at inauguration of 73years, 262days?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which locomotive had a 2-8-2t type, entered service year prior to 1915, and which was built after 1911?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the average number of TDs when the yards are less than 119, the AVG is larger than 5, and Jamarr Ward is a player?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comma_separated",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 26,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which College has Player Mark Brown and a Pick # greater than 195?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What the B Score when the total is 16.125 and the position is less than 7?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the car number that has less than 369 laps for a Dodge with more than 49 points?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What position is for Plant high school?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the total for Bernhard Langer?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which Floors have a Location of ljubljana, and a Name of tr3?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "In the match where the away team scored 2.7 (19), how many peopel were in the crowd?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Team, when the Year 2007 is greater than 15,710, when the Year 2006 is greater than 17,666, and when the Year 2005 is greater than 22,532?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 29,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the highest race number in the Phillip Island circuit with James Winslow as the winning driver and pole position?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which Against has a Drawn smaller than 5, and a Lost smaller than 6, and a Points larger than 36?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "With a Col (m) larger than 2012, what is Mount Kazbek's Prominence (m)?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comma_separated",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the candidates for georgia 8",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What building in Louisville had more than 35 floors?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the total frequency mhz of the kgrj call sign, which has an erp w greater than 21,500?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the total number of field goals for a player that had less than 3 touchdowns, had 4 points, and had less than 4 extra points?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 27,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What Date has a Mach of 0.662?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many wins for average start less than 25?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which round 5 Grand Prix had Daijiro Hiura at pole position? ",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Position has a Round larger than 5, and a Selection of 168?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the highest Rd that Tom Sneva had the pole position in?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the result of the game played on April 16 with Philadelphia as home team?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Johnny Palmer with a To larger than 6 Money sum?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What season has a number less than 90, Mitte as the league and spvgg ruhmannsfelden as the team?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the lowest year in since that had a transfer fee of \u20ac 14m and ended after 2011?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the score of the match at happy valley recreation ground pitch #2 with a 14:30 time?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the top grid that laps less than 66 and a retried engine?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Original air date has a Season # smaller than 21, and a Title of \"palimpsest\"?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Chukwubuikem Maduabuchi is what gender?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 5,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What's the rank when attendance was less than 18,073 and having Northwestern as an opponent?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Venue of the Competition with a Result of 2\u20132 (d)?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Can you tell me the lowest Pts/game that has the Name of philippa tuttiett, and the Points larger then 6?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the percentage of Tujunja when Pasadena is 33%?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the total number of rank with losses less than 992, North Carolina State College and a season greater than 101?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Surname has Throws of l, and a DOB of 5/02/79?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the date that the decision was Niittymaki, the attendance larger than 19,207, and the record 28\u201317\u20135?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "On what date was their record 26-19?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the highest value in 2011 with less than 5,049 in 2006 and less than 1,380,935 in 2008?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comparative",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the low score for TO par +2 in japan?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Score has Points of 64, and a Game of 49?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the year joined with a Conference championships of 5, and a Nickname of wolfpack?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the segment A name, having a Netflix of s01e12?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What is the total number of wins for events with under 2 top-5s, under 5 top-25s, and more than 4 events played?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the mean number of play-offs when the league number was bigger than 18, where the player was John Grant and the total number was bigger than 25?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 29,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Achievement of m (ft), and a Type of mi-10r, and a Pilot of v.p. koloshenko, and a Date of 28 may 1965 had what record description?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 26,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What was the result in the year greaters than 2008 with an award of Jahat and had a category of Stacy?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the maximum area (in acres) of the Knockacullen townland?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  }
+]

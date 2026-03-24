@@ -1,0 +1,702 @@
+[
+  {
+    "question": "How many cuts did Gary Clark make?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Player = Gary Clark.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many F.L. are listed for Formula Three Euroseries?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Series = Formula Three Euroseries.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the loss for August 19?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Date = August 19.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the Rank of the Rowers with FA as Notes?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Notes = FA.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which party has Peter A. Quinn as a representative?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Representative = Peter A. Quinn.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the minimum number of starts for the players having a best finish of T18?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Best finish = T18.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What's the total attendance at anaheim stadium after 1983 when the result is 14-28?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Venue = Anaheim Stadium, Year > 1983, and Result = 14-28.",
+    "condition_signals": ["when_clause", "temporal_qualifier", "implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the attendance for week 2?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Week = 2.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "When the 8th is Marcos Hernandez who was the 6th?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Eighth = Marcos Hernandez.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the date with score of 66-62?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Score = 66-62.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which poll source had an other of 15%?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Other = 15%.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the number of poles with 104 points?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Points = 104.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the total number of successors when the vacator was William North ( F )",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Vacator = William North (F).",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many names are listed for the player with 50 points?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Points = 50.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What country joined before 1976, with IHSSA class of 5a, and a size larger than 1,112?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Year Joined < 1976, IHSAA Class = 5a, and Size > 1112.",
+    "condition_signals": ["comma_separated", "with_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which week did the Baltimore Ravens play at home ?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Host Team = Baltimore Ravens.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What season has a regionalliga süd league, a 1-0 home, and an away of 2-3?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: League = Regionalliga Süd, Home = 1-0, and Away = 2-3.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What's the lowest Total thats got an FA Cup larger than 10, Name of Arthur Chandler, and a League Cup thats larger than 0?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: FA Cup > 10, Name = Arthur Chandler, and League Cup > 0.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What position was for Arizona State?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: School/Country = Arizona State.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Who was the home team for the game where North Melbourne was the away team and the crowd was over 12,000?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Away team = North Melbourne and Crowd > 12000.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What Event has a Position of 1st, a Year of 1983, and a Venue of budapest?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Position = 1st, Year = 1983, and Venue = Budapest.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Who was the lead with John Shuster as skip, Chris Plys in second, and Jeff Isaacson in third?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Skip = John Shuster, Second = Chris Plys, and Third = Jeff Isaacson.",
+    "condition_signals": ["comma_separated", "explicit_and", "with_clause"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the lowest Profits (billion $) which has a Sales (billion $) of 425.7, and a Rank larger than 4?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Sales (billion $) = 425.7 and Rank > 4.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the average wins in 250cc class for Bultaco with 8 points later than 1966?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Class = 250cc, Team = Bultaco, Points = 8, and Year > 1966.",
+    "condition_signals": ["with_clause", "temporal_qualifier", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which School has a Capacity larger than 730, and an Ofsted smaller than 106135, and a Locality of heaton mersey?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Capacity > 730, Ofsted < 106135, and Locality = Heaton Mersey.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the lowest decile with a state authority and Midhirst school?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Authority = State and Name = Midhirst.",
+    "condition_signals": ["explicit_and", "with_clause"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is Illinois 13 District's Party?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: District = Illinois 13.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest year that has edmonton, canada as the venue with a weight class (kg) greater than 100?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Venue = Edmonton, Canada and Weight class (kg) > 100.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is Tom Gillis' score?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Player = Tom Gillis.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the sum of poverty (2009) HPI-1 % when the GDP (PPP) (2012) US$ per capita of 11,284?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: GDP (PPP) (2012) US$ per capita = 11,284.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What company made the chassis when Ferrari made the engine and there were 25 points?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Engine = Ferrari and Points = 25.",
+    "condition_signals": ["when_clause", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many are in the Labour Party of a Fianna Fail of 3 with a total higher than 9 and more than 2 in the Green Party?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Fianna Fail = 3, Total > 9, and Green Party > 2.",
+    "condition_signals": ["with_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What venue had footscray play at it?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Home team = Footscray (or Away team = Footscray).",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "On what date did the away team Fremantle play?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Away team = Fremantle.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the drive for points being 13",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Points = 13.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What was the nationality of the winner for the 20th Edition?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Edition = 20th.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What was the crowd size when there was a home team score of 10.13 (73)?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Home team score = 10.13 (73).",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "For more than 3 events in the PGA Championship, what is the fewest number of wins?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Events > 3 and Tournament = PGA Championship.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Label has a Region of united states, and a Format of lp album?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Region = United States and Format = LP Album.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the Lineup that has an Assist/pass of carli lloyd,a Competition of 2010 concacaf world cup qualifying – group stage?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Assist/pass = Carli Lloyd and Competition = 2010 CONCACAF World Cup Qualifying - Group Stage.",
+    "condition_signals": ["comma_separated"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "In the County of Prince, what was the highest Population density when the Area (km²) was larger than 3.02, and the Population (2006) was larger than 786, and the Population (2011) was smaller than 1135?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: County = Prince, Area (km²) > 3.02, Population (2006) > 786, and Population (2011) < 1135.",
+    "condition_signals": ["when_clause", "explicit_and", "comma_separated", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 27,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the date of Game 50?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Game = 50.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who is the pregame host when the pregame analysts is  Dave Campbell and the year is 2001?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Pregame analysts = Dave Campbell and Year = 2001.",
+    "condition_signals": ["when_clause", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What game showed a home team score of 8.11 (59)?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Home team score = 8.11 (59).",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What happened on November 20, 1983 before week 15?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Date = November 20, 1983 and Week < 15.",
+    "condition_signals": ["comparative", "temporal_qualifier"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What are the highest wins with cuts smaller than 6, events of 4 and a top-5 smaller than 0?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Cuts made < 6, Events = 4, and Top-5 < 0.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the name of the award in a year more than 2005, and the Result of nominated?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Year > 2005 and Result = Nominated.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the highest Area (KM 2) for the Province of Ontario, that has the Status of Town, a Municipality of Minto, and a Rank that's smaller than 84?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Province = Ontario, Status = Town, Municipality = Minto, and Rank < 84.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "How many Caps does the Club/province Munster, position of lock and Mick O'Driscoll have?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Club/province = Munster, Position = Lock, and Player = Mick O'Driscoll.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many contestants were there on March 1, 2009 during the season premiere?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Season Premiere = March 1, 2009.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  }
+]

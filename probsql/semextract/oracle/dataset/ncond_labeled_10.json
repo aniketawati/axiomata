@@ -1,0 +1,789 @@
+[
+  {
+    "question": "Which actor played Harold Bishop for 17 years?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the postal code when the administrative capital in Bori?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the Loss of the game at Nationwide Arena with a Score of 4\u20133?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Title when the winner was suntory sungoliath, and a Season of 2011-12 details?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which venue has a crowd over 16,000 and a home team score of 7.7 (49)?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the kickoff time on November 10, 2002?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is To par, when Country is \"United States\", when Money ( \u00a3 ) is greater than 125,000, and when Score is \"67-70-68-71=276\"?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 23,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the maximum rebounds when there are 0.9 steals and fewer than 1.4 turnovers?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was Gary Player's highest total when his To par was over 15?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is Fitzroy's Home team Crowd?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What day has a callback Venue of total tickets to hollywood? Question",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "When Bunky Henry of the United States scored higher than 67 and his To par was e, what was his place?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 21,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What chassis does the shadow built car use?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What shows for nationality when there is a rank larger than 6, and a Time of 2:14.95?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What year is the Grim Fandango with a windows platform?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "In what Week was the Attendance 49,097?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is ramtha when jeel is 1-0 and hussein is 1-0?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Block does Northamptonshire Area have?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the area for german",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 5,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "Tell me the venue for extra of short race and year less than 1999",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is the highest events when the cuts made is less than 34, the top-25 is less than 5 and the top-10 is more than 1?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 26,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "How many 2011 1H values have a 2006 of 27.4 and 2007 over 27.7?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the locomotive class that has a wheel arrangement of 2-8-2 and a quantity made of 25?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who had the high rebound total on january 6?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What is the location of the University of Montana, which was founded after 1890?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was his position in 2009 with 1 win?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which developer has xbox 360 as the platform?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Ofsted has a Capacity of 1677?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the highest Pick that is wide receiver with overall of 29?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What races have gp2 series, 0 F.L. and a 17th position?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Name the result for kingdome game site and opponent of denver broncos",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the region for december 7, 2004",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which female artist has an album named elephant?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which career win-loss record has a 1r in 2002, a 2r in 2000 and a 2r in 2001?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What type of engine does the BF Racing Marron Excavations have that also has Monaco as chassis and Lee Filliponi as the driver?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 23,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the average crowd attendance for Collingwood?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which Home team has a Venue of arden street oval?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Second has a Third of david nedohin, and a Lead of ben hebert?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Cowansville has less than 16 regions and is a Brome-Missisquoi Municipality, what is their population?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Bronze is the highest one that has a Rank larger than 1, and a Nation of dominican republic, and a Total larger than 4?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 25,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the total number of offensive rebounds for players with under 65 total rebounds, 5 defensive rebounds, and under 7 assists?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the score of player bob rosburg?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What mean total had a league number of 18, Richard Logan as a player, and a play-offs number smaller than 1?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "what is the record where the locaiton is tampa, fl and the opponent is louisville?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 15,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which years did Martin Sacks work on a soap opera?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What's the location when the record was 6-0-1?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What are the active pixels of the cantare model?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the inclination when the alt name is OPS-1584?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the torque of the xdrive20d model, which has a power of ps (kw; hp)@4000?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comma_separated",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the average number of points for a song ranked 2nd with a draw greater than 3?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  }
+]

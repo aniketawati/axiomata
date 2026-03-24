@@ -1,0 +1,797 @@
+[
+  {
+    "question": "What is the name of the Venue for the team that has an Away team score of 14.11 (95)?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which player has a Club/province of direito, less than 21 caps, and a Position of lock?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "When was the episode with a 999,000 BARB rating first aired in Denmark?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What's the total of the position of 1?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest number of gold medals the nation with less than 0 silver medals has?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which School has Ages of 11-16, and an Ofsted smaller than 106142, and a Capacity of 1206?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the average nominated of the composition nominated by Taioseach with an Industrial and Commercial panel less than 9, an administrative panel greater than 0, a cultural and educational panel greater than 2, and a total less than 29?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 40,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the fewest number of top-25s for events with more than 13 cuts made?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the lowest effic with a 58.9 avg/g?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the total number of Lunsford votes when the percentage of those votes is 33.85%?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is Agricultural Use (m 3 /p/yr)(in %), when Per Capita Withdrawal (m 3 /p/yr) is greater than 923, and when Domestic Use (m 3 /p/yr)(in %) is 73(7%)?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 29,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the North American release date of the remake with a European release date on 2013-03-20?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the Venue on November 26?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the highest number of TDs when the Avg is larger than 8.5 and the Rec is less than 1?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 21,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "Who was the away team with a tie of 14?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the masculine an form for the word with a feminine \u00f6 ending of siangar and a masculine u ending of sunar?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 23,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "How many weeks had an attendance larger than 84,816?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who directed a film for Cracking Film Productions?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Name the industry for revenue being 2.1",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the series # when the US air date is 20 July 2012?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which elevation groundstation has a capacity in persons/hour larger than 820, and a Name or route of lager 1, and a slope length smaller than 336?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 26,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the hangul symbol for the hanja \u826f\u5dde?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Score has a Result of 2\u20131, and a Competition of friendly, and a Goal smaller than 17?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the lowest Viewers that has an Episode #higher than 58 with a title of \"curveball\" less than 4.1 rating?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "For events with values of exactly 1, and 0 cuts made, what is the fewest number of top-10s?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Seasons has a Name of joe grugin, and a Lost larger than 8?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Wins have a Goal Difference larger than 0, and Goals against larger than 40, and a Position smaller than 6, and a Club of sd indauchu?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 27,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "List the population density per kilometer for the city of calintaan?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What was the record at the game that had a score of 7-10?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "The U.S. airdate of 4 april 2008 had a production code of what?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the overall pick number for a draft pick smaller than 9, named buck mystrom from Michigan State college?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which country's score of 72-77-69-74=292 resulted in a reward of over $5,500?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the firefox value with a 1.8% opera on 30 July 2007?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Marat Safin is the opponent in the final in what championship?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which home team has a home team 14.12 (96)?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the total number of losses for a draw of 7, and 1 points less than 33?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What is the release date of the 2x 512 kb L2 cache with a 11x multi 1, and a FPU width of 128-bit?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 23,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the average Tie no when the date is Birmingham City?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest number of against of NTFA Div 2 Fingal Valley?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is Nation, when Rank is greater than 2, when Total is greater than 1, and when Bronze is less than 3?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 22,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Who played in group 12 when persikutim east kutai played in group 10?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the total grid number when Fonsi Nieto had more than 22 laps?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "what is the chassis when the tyre is b, the engine is ferrari 050 ferrari 051 and the driver is rubens barrichello?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 22,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "When was became dauphine when birth is 1393?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Date of 23 september 1961, and a Pilot of b.v. zemskov had what record description?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the points total for the team with points average more than 34, 1984 score more than 37 and N/A in 1982?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 23,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which Assist/pass has a Score of 1-0,a Competition of 2010 concacaf world cup qualifying \u2013 group stage?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who was the winner of the Miami tournament where Elena Dementieva was a finalist?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which opponent played in the Chinese Taipei Open in 2000?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Tell me the model with fuel or propulsion of diesel and orion manufacturer in 2005",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  }
+]

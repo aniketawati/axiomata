@@ -1,0 +1,784 @@
+[
+  {
+    "question": "Who is the opponent when the attendance is 57,331?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the highest track for Burning Love?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What was the position of the player that went to warren central high school?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What Mountain Pass has an Elevation of 10,001 feet 3048 m?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "When is the earliest began operation with a length of sultan ismail and over 27 stations?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the championship of Jem Karacan that has a total of 2 and a league cup more than 0?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the Date of the game with an attendance of 72,051 after Week 9?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "how many division  did not qualify for u.s. open cup in 2003",
+    "n_conditions": 3,
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the number of Games for Partizan Belgrade player Nikola Pekovi\u0107 with a Rank of more than 4?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the turnover when the profit before tax was 29.47?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the average number of laps with an accident time/retired, aprilia manufacturer and a grid of 27?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is 2011, when 2006 is \"A\", when 2008 is \"A\", and when Tournament is \"Rome\"?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "For majors with 8 events played and more than 1 made cut, what is the most top-10s recorded?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the sum of the points of all teams that had against scores less than 14?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the lowest Kerry#, when Others# is \"106\", and when Bush# is less than 3,188?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which model has a sensor sized 48x36 mm, pixels of 6726 x 5040, and a 33 mp resolution?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "List all candidates in the democratic party where the election had the incumbent Frank Chelf running.",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the density of an area that is 1.38km and has a population more than 12924?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the total number of patient portayers for the episode directed by Craig Zisk and written by Brad Falchuk?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "I want to know the team that was sacked and date of vacancy was 4 december",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Third has Runners-up of 0, and Winners of 0, and a Club of far rabat?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "WHAT IS THE NUMBER OF VIEWERS WITH EPISODE LARGER THAN 10, RATING SMALLER THAN 2?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What integrated school had a decile of 2 and a roll larger than 55?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest position with 32-6 points and less then 59 goals when there are more than 38 played?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the average number of laps that has a Time/Retired of +1 lap, a Driver of olivier panis, and a Grid larger than 4?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 25,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the biggest points when the grid is less than 13 and the time/retired is +7.538 secs?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Title has a Type of album and a Year larger than 1986?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is listed as the highest Participants that also have a Rank of 5, and Silver that's smaller than 0?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Result has a Score of 1\u20130, and a Goal of 16?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many tournaments have their current venue as the Lindner Family Tennis Center?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many Against has Byes smaller than 2?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "List the player that scored 4 times.",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "Who directed the episode with production code 4akj08?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who was the opponent in London, England in a round less than 2?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is Turkey's average Gold entry that also has a Bronze entry that is smaller than 2 and the Total is greater than 1?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 24,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the races for the prada challenge",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Who was the supervisor in the year 1846?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which team played their first leg at home with an aggregate score of 3-4?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the report for races where Will Power had both pole position and fastest lap?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Name the most touchdowns for field goals being 1",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the date of injury for player Wesley sneijder (2)?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Who is the constructor for driver Niki Lauda and a chassis of mp4/1c?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "When the player gained below 1,405 yards and lost over 390 yards, what's the sum of the long yards?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What countries have a margin of victory at 6 strokes?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What sum of game has an attendance of 18,690?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the method where there is a loss with time 5:00?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What team ran car #24 on August 30?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is Date, when Country is \"China\", and when Perpetrator is \"Shi Yuejun , 35\"?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which date's week was more than 4 with the venue being City Stadium and where the attendance was more than 14,297?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": true,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the grid number with less than 52 laps and a Time/Retired of collision, and a Constructor of arrows - supertec?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 4
+    }
+  }
+]

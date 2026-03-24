@@ -1,0 +1,806 @@
+[
+  {
+    "question": "what is the name of the tournament where outcome is runner-up",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What year were outputs is 2x pro bias, rca loop out and notes is vacuum tube released?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the modern house title of the 1st house?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which Losses have a Goal Difference of -16, and less than 8 wins?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which  company's type is joint venture, and has principle activities listed as Cargo Airline and an incorporation of China?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What's the score for a game over 56 with a record of 29-24-7 with a lundqvist decision?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which Taper/in that has a Small end larger than 0.7000000000000001, and a Taper of #19, and a Large end larger than 2.375?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Home team has a Venue of mcg?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Opponent of @ edmonton oilers, and a Game larger than 1, and a Series of oilers lead 3\u20132 had what score?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What school has a mascot of the spartans with an AAAA IHSAA class and more than 1,275 enrolled?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many head coaches did Kent state golden flashes have?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What round did the celtic played away on 24 february 1900?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which venue had an extra of Junior Race?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Wins have a Goal Difference larger than 12, and a Club of granada cf, and Played larger than 30?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the Record of the game on June 24?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which Wrestler plays for Team Batista which was Elimated by Orton on Elimination 8?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the total for radio luxembourg?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Who was North Melbourne's home opponent?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What character did Vicky Versavel play for 13 years?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the real name of the Pick # that is greater than 9?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the total years with average runs less than 4.75 and a time of 14.26?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What round has the highest Res loss, and a time of 40:00?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the lowest Market Value (billion $) which has Assets (billion $) larger than 276.81, and a Company of toyota, and Profits (billion $) larger than 17.21?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 27,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the sum of Overall, when Name is \"Tim Smiley\", and when Round is less than 5?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the score in game 81?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the try bonus of points against at 430",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is Place, when Country is \"United States\", and when Player is \"Lee Trevino\"?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What football stadium has a school enrollment of 43579?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many shows were in 1994?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What year was the runner-up Portugal with Italy in third place, and the gold keeper Nuno Hidalgo?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is the club that was founded before 2007, joined prsl in 2008 and the stadium is yldefonso sol\u00e1 morales stadium?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "How many high rebounds are listed for game 35?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the value in 1997 when the value in 1989 is A, 1995 is QF, 1996 is 3R and the career SR is 0 / 8?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 27,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What is the number of totals that have silvers under 2, bronzes over 0, and golds over 1?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What was the away team's score at the match played at The Western Oval?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "I want the total number of matches for draw less than 7 and lost point of 16 with lose more than 4",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "Which Grid has Laps larger than 26, and a Time/Retired of 44:39.467?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the highest planetary mass having an RV (cm/s) of 65 and a Period (days) less than 21?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What kind of free practice is there with a Ford RS2 engine +?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What is the production number for the episode directed by Robert McKimson named Mice Follies?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which Average population (x 1000) has a Crude death rate (per 1000) smaller than 10.9, and a Crude birth rate (per 1000) smaller than 19.7, and a Natural change (per 1000) of 8.7, and Live births of 54 263?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 39,
+      "column_mentions": 6
+    }
+  },
+  {
+    "question": "How many attended the game on march 16 after over 64 games?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comparative",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Who was the player associated with Ole Miss in years after 2008 with a Mississippi St. name of Eric Moulds?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many golds for nations with over 0 silvers, over 1 total, and over 3 bronze?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What is Height, when Rank is less than 20, when Floors is greater than 9, when Built is 2005, and when Name is The Edge (C)?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 26,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "Which Lane has a Time larger than 20.5, and a Nationality of trinidad and tobago?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the earliest Year commissioned wiht an Average annual output greater than 58 and Installed capacity of 20?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the Hanzi of Hong Kong in 1998?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What's the total of rank 8 when Silver medals are 0 and gold is more than 1?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the average agricultural panel of the composition with a labour panel less than 6, more than 0 nominations by Taoiseach, and a total less than 4?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 28,
+      "column_mentions": 3
+    }
+  }
+]

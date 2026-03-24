@@ -1,0 +1,702 @@
+[
+  {
+    "question": "What is the right ascension of Pegasus with a 7343 NGC?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Constellation = Pegasus and NGC number = 7343.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest amount of draws with less than 12 wins and less than 30 played?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Wins < 12 and Played < 30.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What sum of Losses has Year greater than 1972, and Competition of nswrfl, and Draws 0, and Wins 16?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Year > 1972, Competition = NSWRFL, Draws = 0, and Wins = 16.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What is the total prominence number in m of ethiopia, which has a col in m of 1728 and an elevation less than 3,358?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Country = Ethiopia, Col (m) = 1728, and Elevation (m) < 3358.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the 9th runner-up with a top 18/20/24/30 greater than 17 and a 5th runner-up of 2?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Top 18/20/24/30 > 17 and 5th runner-up = 2.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "who is the the\u00a0club (city/town)\u00a0with\u00a0goals for/against\u00a0being 14-2",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Goals For/Against = 14-2.",
+    "condition_signals": ["with_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the Venue for Goal number 1?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Goal = 1.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What District has a Location of tharamani?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Location = Tharamani.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the most numbers dam and gnis query link for borough or census area for fairbanks north star",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Borough or Census area = Fairbanks North Star.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the game with a rank higher than 2 and a name of zendon hamilton?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Rank > 2 and Name = Zendon Hamilton.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many age entries had a weight of 10-7 and an owner of Double Octagon Partnership?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Weight (st, lb) = 10-7 and Owner = Double Octagon Partnership.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the total number of Top Division Titles where the year founded was prior to 1975 and the location was in Chaguaramas?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Founded < 1975 and Location = Chaguaramas.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the total number of bronze medals of West Germany, which is ranked 2 and has less than 1 total medals?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Nation = West Germany, Rank = 2, and Total < 1.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What's the title for the release date of 1953-01-31 in the MM series, no reissue, and a director of I. Freleng?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Release date = 1953-01-31, Series = MM, Reissue = No, and Director = I. Freleng.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the number of podiums with 0 wins, 0 F.L. and 35 points?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Wins = 0, F.L. = 0, and Points = 35.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the Netflix number having a series episode of 1-01?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Series Ep. = 1-01.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How much Bronze has a Gold larger than 1, and a Silver smaller than 3, and a Nation of germany, and a Total larger than 11?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Gold > 1, Silver < 3, Nation = Germany, and Total > 11.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "Tell me the sum of losses for wins less than 2 and rank of 10 with appearances larger than 3",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Wins < 2, Rank = 10, and Appearances > 3.",
+    "condition_signals": ["explicit_and", "with_clause", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Name the call sign for ERP W of 4",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: ERP W = 4.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who won in 1979 with +8 to par?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Year(s) won = 1979 and To par = +8.",
+    "condition_signals": ["with_clause", "temporal_qualifier"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What school/club team is Amir Johnson on?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Player = Amir Johnson.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the School/Junior/Club Group (Class) that has a Nationality of canada, and a Place of goalie?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Nationality = Canada and Position = Goalie.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many members were in the group that sold 65 million albums and singles?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Sold (albums and singles) = 65 million.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest rank of Gatwick Airport? ",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Railway Station = Gatwick Airport.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the number of wins with a 0 F.L., 0 poles, a position of 7th, and 35 points?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: F.L. = 0, Poles = 0, Position = 7th, and Points = 35.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What is the average 5432 value with a 11502 larger than 1163, a 15122 less than 15122, and a 3620 less than 624?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: 11502 > 1163, 15122 < 15122, and 3620 < 624.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Name the number of points defending for 1075",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Points = 1075.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Issue Date(s) has Weeks on Top larger than 3, and a Volume: Issue of 35:25-26, 36:1-2?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Weeks on Top > 3 and Volume:Issue = 35:25-26, 36:1-2.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Length has a Taper of #15, and a Large end larger than 1.875?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Taper = #15 and Large end > 1.875.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many Picks have an Overall smaller than 304, and a Position of g, and a Round smaller than 11?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Overall < 304, Position = G, and Round < 11.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the result of choreographer bjørn holthe?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Choreographer(s) = Bjorn Holthe.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who was the cover model when the issue's pictorials was pmoy - sara jean underwood?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Pictorials = PMOY - Sara Jean Underwood.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which chassis has marlboro brm as the team?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Team = Marlboro BRM.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Points have a Score of 4–1, and a Record of 18–10–8–1, and a January larger than 2?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Score = 4-1, Record = 18-10-8-1, and January > 2.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "How many laps did Giancarlo Fisichella do with a grid larger than 15?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Driver = Giancarlo Fisichella and Grid > 15.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the fastest lap time in the Escort Radar Warning 200?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Name = Escort Radar Warning 200.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which team had goal averages of 1.34?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Goal Average 1 = 1.34.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "what is hte date where republican jeaff beatty is 34%?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Republican: Jeff Beatty = 34%.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many times was Plan B 4th place?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Fourth = Plan B.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which district is jamie l. whitten from?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Incumbent = Jamie L. Whitten.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which chassis is more recent than 1972 and has more than 0 Pts. ?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Year > 1972 and Pts. > 0.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Genre has a Game of donkey kong country?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Game = Donkey Kong Country.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which position is the highest to have less than 54 goals, a loss of 7 and a goal difference higher than 23?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Goals for < 54, Losses = 7, and Goal Difference > 23.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What Venue has a Year smaller than 1991, Time larger than 10.29, Competition of mediterranean games, and Event of 4x100 m relay?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Year < 1991, Time > 10.29, Competition = Mediterranean Games, and Event = 4x100 m relay.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "Which Neville has a Novick of 23%?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Novick = 23%.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest Draws, when Alianza Goals is less than 317, when U Goals is less than 3, and when Alianza Wins is less than 2?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Alianza goals < 317, U goals < 3, and Alianza wins < 2.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the 3rd runner-up of the country with more than 0 9th runner-up, an 11th runner-up of 0, and the 1st runner-up greater than 0?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: 9th runner-up > 0, 11th runner-up = 0, and 1st runner-up > 0.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What's the sum of A Score that also has a score lower than 7.3 and an E Score larger than 7.1?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: T Score < 7.3 and E Score > 7.1.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is Opponent, when Result is Loss, and when Venue is Mosaic Stadium?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Result = Loss and Venue = Mosaic Stadium.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is the class when the quantity perserved is 0 and the quantity made is 5?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Quantity preserved = 0 and Quantity made = 5.",
+    "condition_signals": ["when_clause", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  }
+]

@@ -1,0 +1,702 @@
+[
+  {
+    "question": "What is the order number that has Aretha Franklin as the original artist?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Original artist = Aretha Franklin.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is To Par, when Country is \"United States\", when Place is \"T4\", and when Player is \"Arnold Palmer\"?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Country = United States, Place = T4, and Player = Arnold Palmer.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What was the Population (2011) when the Population (2006) was less than 7083, and the Population density less than 342.8, and the Change (%) of 5, and an Area (km²) larger than 4.5?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Population (2006) < 7083, Population density < 342.8, Change (%) = 5, and Area (km²) > 4.5.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 28,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "Name the week 6 when week 3 is 25 and week 7 is eliminated",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Week 3 = 25 and Week 7 = Eliminated.",
+    "condition_signals": ["when_clause", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the sum of the goals with less than 30 points, a position less than 10, and more than 57 goals against?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Points < 30, Position < 10, and Goals against > 57.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the winning team of the race on 31 August with Audi as the winning manufacturer and Timo Scheider as the winning driver?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Date = 31 August, Winning manufacturer = Audi, and Winning driver = Timo Scheider.",
+    "condition_signals": ["with_clause", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is the Sydney that has Adelaide, Gold Coast, Melbourne, and Auckland are all yes?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Adelaide = Yes, Gold Coast = Yes, Melbourne = Yes, and Auckland = Yes.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What is the most points when Maserati made the engine, and a Entrant of owen racing organisation?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Engine = Maserati and Entrant = Owen Racing Organisation.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who was the Blue Jays opponent when their record was 84-69?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Record = 84-69.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the played number when tries against is 84, and drawn is 2?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Tries against = 84 and Drawn = 2.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the original air dates for the title \"firestorm\"?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Title = Firestorm.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Player of napoleon lajoie, and a Team of cleveland bronchos, and a Doubles of 49 which years record stood?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Player = Napoleon Lajoie, Team = Cleveland Bronchos, and Doubles = 49.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What position does the 5-8 player from Grottoes, VA play?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Height = 5-8 and Home Town = Grottoes, VA.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest number of laps for kyle petty with under 118 points?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Driver = Kyle Petty and Points < 118.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What average game was held on february 24 and has an attendance smaller than 16,541?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Date = February 24 and Attendance < 16541.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the number of gold medals when the number of bronze medals is 8?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Bronze = 8.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the highest Total with a Rank that is smaller than 4 and a Nation of tunisia (tun) with a Gold that is smaller than 2?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Rank < 4, Nation = Tunisia (TUN), and Gold < 2.",
+    "condition_signals": ["with_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "How many values for constituency for the vote result of 162?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Result - votes = 162.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What version of iWork was released on October 22, 2013 with a pages version greater than 2?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Release date = October 22, 2013 and Pages version > 2.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Wins is the highest one that has a Class of 500cc, and Points smaller than 6?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Class = 500cc and Points < 6.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the lifespan of Joseph Vance, a democratic-republican from Ohio?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Representative = Joseph Vance, Party = Democratic-Republican, and State = Ohio.",
+    "condition_signals": ["comma_separated"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Can you tell me the average Points that has a Pts/game larger than 4, and the Nation of england, and the Games smaller than 5?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Pts/game > 4, Nation = England, and Games < 5.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What was the result for the nomination of Best Revival of a Musical?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Category = Best Revival of a Musical.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What tournament did Nadal win and had a nadal of 16?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Winner = Nadal and Nadal = 16.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the tyres for the JBW type 2 chassis?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Chassis = JBW Type 2.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What Country is Player Sam Snead with a To par of less than 5 from?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Player = Sam Snead and To par < 5.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is FA Cup Goals, when Euro Competitions is 1, and when League Goals is 11?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Euro competitions = 1 and League goals = 11.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the lowest number of wins where the losses are more than 12 and the draws are less than 0?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Losses > 12 and Draws < 0.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was Trevard Lindley's number?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Name = Trevard Lindley.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 5,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "How many places have bianka panova as the name, with clubs less than 10?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Name = Bianka Panova and Clubs < 10.",
+    "condition_signals": ["with_clause", "comma_separated", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many pages does a dream of spring have?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Title = A Dream of Spring.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "How many bronzes for nations with over 22 golds and ranked under 2?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Gold > 22 and Rank < 2.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who was the opponent on carpet in a final?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Surface = Carpet.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the organisation in 2011 that was nominated and the award of best info-ed programme host?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Year = 2011, Result = Nominated, and Award = Best Info-Ed Programme Host.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many grids for peter collins?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Driver = Peter Collins.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 5,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the code name when the FSB / HT (MHz) is 100 (fsb)?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: FSB / HT (MHz) = 100 (FSB).",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Ofsted has a School of marple hall school, and a Capacity larger than 1711?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: School = Marple Hall School and Capacity > 1711.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What are the lowest goal that have goals/matches greater than 0.43 with joachim streich as the name and matches greater than 378?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Goals/Matches > 0.43, Name = Joachim Streich, and Matches > 378.",
+    "condition_signals": ["with_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Can you tell me the lowest Games that has the Pts/game larger than 1.4 and the Points of 20, and the Name of susan day?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Pts/game > 1.4, Points = 20, and Name = Susan Day.",
+    "condition_signals": ["explicit_and", "comma_separated", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What in 2007 has a 2010 of qf, and a 2012 of w?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: 2010 = QF and 2012 = W.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What shows for Southbridge when the Model number is amd-640 chipset?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Model = AMD-640 Chipset.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many goal ratios have rank of 2 with more than 44 games?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Rank = 2 and Games > 44.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the smallest number of goals against when 8 games were lost, and the goals for are 60?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Lost = 8 and Goals For = 60.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who was the on the cover when Bob Vila did the 20 Questions?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: 20 Questions = Bob Vila.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which January has a Score of 7–4, and a Game smaller than 42?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Score = 7-4 and Game < 42.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who is the rider with less than 15 laps, more than 32 grids, and an accident time/retired?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Laps < 15, Grid > 32, and Time/Retired = Accident.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "In what year did the United States win To par greater than 14",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Country = United States and To par > 14.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the main span feet from opening year of 1936 in the United States with a rank greater than 47 and 421 main span metres?",
+    "n_conditions": 4,
+    "reasoning": "Four conditions: Year opened = 1936, Country = United States, Rank > 47, and Main span metres = 421.",
+    "condition_signals": ["with_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the rank when there are more than 4,123 completion and the comp percentage is more than 65.6?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Completions > 4123 and Comp % > 65.6.",
+    "condition_signals": ["when_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the average number of points when the ranking is 7th and the draw is less than 4?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Rank = 7th and Draw < 4.",
+    "condition_signals": ["when_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  }
+]

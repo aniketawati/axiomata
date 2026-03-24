@@ -1,0 +1,793 @@
+[
+  {
+    "question": "What is 1998, when 1997 is \"3R\", and when 1992 is \"A\"?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "When Philadelphia has a 2007 less than 20,796,173 and a 2008 more than 10,215,225, what is the smallest 2009?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which publisher is responsible for spec ops: stealth patrol?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the name of the driver with a rotax max engine, in the rotax heavy class, with arrow as chassis and on the TWR Raceline Seating team?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comma_separated",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 28,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What percentage of browsers were using Safari during the period in which 31.27% were using Firefox?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the Population density that has a Change (%) higher than 10.4, and a Population (2011) less than 8574, in the County of Queens?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 25,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What year has a Schwante smaller than 2.043, an Eichst\u00e4dt smaller than 848, and a B\u00e4renklau smaller than 1.262?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What's the source of wealth of the person worth $17 billion?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "During the play-off quarter-final which team scored position was the team that scored 56 points?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "When the total is larger than 1,and the bronze is less than 3, and silver larger than 2, and a gold larger than 2, what is the nation?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 28,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What's the total population when there are 5.7% Asian American and fewer than 126,965 Asian American Population?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Opponent of @ edmonton oilers, and a Game smaller than 7, and a Series of oilers lead 3\u20132 had what score?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Can you tell me the lowest Played that has the Position larger than 2, and the Draws smaller than 2, and the Goals against smaller than 18?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 27,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "When Efrain Valdez was pitching, what was the highest home run?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What was the record the the match against vs. calgary stampeders before week 15?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Score has a Visitor of buffalo sabres and a Record of 1-3?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What school did Dwight Howard play for",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "Which away team had a score of 7.13 (55) against the home team North Melbourne?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the average gold total for nations ranked 6 with 1 total medal and 1 bronze medal?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What percentage is listed in column r1b1c (r-v88) for the 4.5% total percentage?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What Competition had a Score of 2\u20130?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What date has alamodome, san antonio, united states as the venue?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the highest Sets+ number for Valeriano All\u00e8s Menorca when the Sets- number was larger than 31?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Total Pts have a 2001\u201302 Pts smaller than 38?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What coach premiered February 16, 2008 later than episode 21.0?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the total number in the series written by john banas and directed by pino amenta",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "On what Date was the Score 105-118 and the H/A/N A?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Opponent of edmonton oilers, and a Game of 3 is what series?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the power output (kw) of builder zhuzhou, model hxd1d, with a total production of 2?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "comma_separated",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the location when the opponent was Seattle Supersonics?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "How many points numbers had a class of 250cc, a year prior to 1978, Yamaha as a team, and where wins was more than 0?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "when_clause",
+      "comparative",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 25,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "Which Nation has a Gold of 0, and a Bronze smaller than 6, and a Rank of 6?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "WHICH Usual translation is on jun 21?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the accession number of the protein with the common name Purple Sea Urchin?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is the material of the surface in the dehradun , uttarakhand, india location",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the lowest Top-25 that has 3 Events and Wins greater than 0?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the sum of draw with a lost smaller than 6, and a place of 5, and a goals scored less than 29?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 24,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which Points is the lowest one that has Touchdowns smaller than 2, and an Extra points of 7, and a Field goals smaller than 0?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 25,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Who built Warren Booth's car with the Cosworth DFV V8 engine?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the comp percentage when there are less than 44,611 in yardage, more than 254 touchdowns, and rank larger than 24?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "when_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 22,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which round had Michael Schumacher in the pole position, David Coulthard with the fastest lap, and McLaren - Mercedes as the winning constructor?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 23,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What date was Wet Hare, directed by Robert McKimson, released?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "Which Game has a Record of 14\u201310\u20134, and Points smaller than 32?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Image attachment has a Threaded of yes, and a Calendar of yes?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which seniors have a year after 2005, a Reserve of kiewa-sandy creek, and Fourths (Under 14's) of kiewa-sandy creek?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comma_separated",
+      "comparative",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Oberliga S\u00fcdwest has an Oberliga Bayern of fc schweinfurt 05?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many wins were there for Washington State College with losses greater than 980 and a first season before 1906 and rank greater than 42?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comparative",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 25,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "In which season did he have 0 Poles and 19th position in the GP2 Series?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What team uses a Cosworth DFV V8 engine and DN9 Chassis?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Where is the director Dariush Mehrjui from?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  }
+]

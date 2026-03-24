@@ -1,0 +1,802 @@
+[
+  {
+    "question": "What is the average number of bronze medals of the Philippines, which has more than 0 gold?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the partial failure for the Country of russia, and a Failure larger than 0, and a Family of angara, and a Launch larger than 1?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 27,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many people were injured in total in East Champaran, Bihar with more than 2 people killed?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 17,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What municipality has 719 people and is larger than 108.46 km2?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "what is the road numbers when the builder is alco, the railroad (quantity) is union pacific railroad (105) and the class is csa-2?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 23,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "How many caps have a Position of prop, and a Player of rui cordeiro?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "How many people had the high assists @ minnesota?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What's the Opponent with a Week that's larger than 16?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What year was Jamboree made?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 5,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the time/retired of the honda manufacturer with a grid less than 26, 18 laps, and joan oliv\u00e9 as the rider?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "What constructor has under 62 laps, a Time/Retired of gearbox, a Grid larger than 1, and pedro diniz driving?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the Airport in Oslo?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "When chase harrison category:articles with hcards is the name what is the year?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 13,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which women's doubles happened after 1987 and a women's single of astrid van der knaap?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the award for the excellence in tamil category?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the largest total for a team with fewer than 12 bronze, 1 silver and 0 gold medals?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Tell me the outgoing manager for 22 november date of vacancy",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which event had an opponent of Yasuhito Namekawa with a decision method?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Novick has a Source of surveyusa, and a Neville of 8%?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is the original air date of the episode directed by Ben Jones and written by Steven Melching? ",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the area for civil parish ballynoe and killasseragh",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What ride was manufactured by Zierer?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "Which municipalities located in the county of Finnmark have populations bigger than 6187.0?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What's the curb weight of the model with a wheelbase of mm (in) and height of mm (in) mm (in) (4Matic)?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 21,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "who is the opponent when the surface is clay, the outcome is winner and the championship is estoril on 15 april 1996?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comma_separated",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 22,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the L2 cache with a 13.5x multi 1?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "When 2010 is the year what is the game?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 9,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "What is the Total Region number of hte one that has Eidsvold at 970 and Biggenden larger than 1,570?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is Year(s) Won, when Finish is \"T31\", and when Player is \"Nick Price\"?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the driver with the laps under 16, grid of 10, a bike of Yamaha YZF-R6, and ended with an accident?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 22,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the original air date for production code 1l16",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What engine was used by Equipe Simca Gordini before 1956 with less than 4 points?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What was the English title fo the film that was a nominee?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "In total, how much did the United States player George Archer earn with Wins lower than 24 and a rank that was higher than 5?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 25,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the week 3 of 36",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Who is the opponent before game 5 with a 0-1-0 record?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What team was the lower when the winner was the new york jets, and a Year earlier than 1994, and a Result of 37\u201313?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 24,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the amount of renewable electricity without hydrogen power when the percentage of renewable energy is 83.4?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 18,
+      "column_mentions": 0
+    }
+  },
+  {
+    "question": "Away result of 0\u20133, and a Season of 1969-70 is what competition?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "what is the record for score 1-3?",
+    "n_conditions": 1,
+    "condition_signals": [
+      "implicit_single"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "when is the latest to join prsl when founded in 2007 and the stadium is roberto clemente stadium 1?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause",
+      "temporal_qualifier"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 19,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Who won the Women's singles, in the year that Raymond M. White won the Men's singles and that W. Hamilton Ian Maconachie won the Men's doubles?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 26,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the 7th runner-up of the country with a 10th runner-up greater than 0, a 9th runner-up greater than 0, and an 8th runner-up greater than 1?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "with_clause",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 28,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What are the lowest clubs that have a place greater than 5, with an all around greater than 9.7?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "with_clause",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the total championships of James Henry that has a league cup more than 1?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which tournament has a 2013 of 1r, and a 2012 of 1r?",
+    "n_conditions": 2,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Silver has a Gold of 2, and a Nation of puerto rico, and a Total smaller than 12?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which Country has a Prominence (m) smaller than 1540, and a Height (m) smaller than 3530, and a Range of virunga mountains, and a Mountain of nyiragongo?",
+    "n_conditions": 4,
+    "condition_signals": [
+      "explicit_and",
+      "comma_separated",
+      "comparative"
+    ],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 27,
+      "column_mentions": 5
+    }
+  },
+  {
+    "question": "what is the competition when the result is loss in berlin with a score of 0-3?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "when_clause",
+      "with_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the average Total, when FA Cup Goals is 1, when League Goals is 10, and when Club is Crystal Palace?",
+    "n_conditions": 3,
+    "condition_signals": [
+      "explicit_and",
+      "when_clause"
+    ],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 22,
+      "column_mentions": 4
+    }
+  }
+]

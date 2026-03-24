@@ -1,0 +1,702 @@
+[
+  {
+    "question": "What is the smallest number of tries with conversions more than 0?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Conversions > 0.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Attendance has an Arena of arrowhead pond of anaheim, and a Loss of giguere (3–3)?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Arena = Arrowhead Pond of Anaheim and Loss = Giguere (3-3).",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Tell me the lowest kazakhstan for kyrghizstan of 4.62 and belarus less than 2.46",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Kyrghizstan = 4.62 and Belarus < 2.46.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is Team, when Replaced By is \"Jes\u00fas Ram\u00edrez\"?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Replaced by = Jesus Ramirez.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What day was the appointment when Credentials Presented was jul 2, 1969?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Credentials Presented = Jul 2, 1969.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many golden tickets for the georgia international convention center?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: First Audition Venue = Georgia International Convention Center.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 9,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which college/junior/club team (league) did Brett Sonne play in?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Player = Brett Sonne.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "How many Inhabitants were in the democratic party for an election before 2009 for Mayor of stefano cimatti?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Party = Democratic, Election < 2009, and Mayor = Stefano Cimatti.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the total number of golds having a total of 1, bronzes of 0, and from West Germany?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Total = 1, Bronze = 0, and Nation = West Germany.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Call sign of k33ln-ld, and a Virtual channel of 33.5 is what network?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Call sign = K33LN-LD and Virtual channel = 33.5.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the total number of Against values for clubs with more than 2 wins, 5 losses, and 0 draws?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Wins > 2, Losses = 5, and Draws = 0.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What record has a november greater than 11, and st. louis blues as the opponent?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: November > 11 and Opponent = St. Louis Blues.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which team is number 14 and had a franchise in 1993-2000?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Number = 14 and Years with franchise = 1993-2000.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What award was in the year after 2009 with a competition of Digi Wwwow Awards?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Year > 2009 and Competition = Digi Wwwow Awards.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is To Par, when Country is \"United States\", when Place is \"T4\", and when Player is \"Frank Boynton\"?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Country = United States, Place = T4, and Player = Frank Boynton.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What is the FCC frequency for the station w262al which has a Frequency MHz larger than 92.7?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Call sign = W262AL and Frequency MHz > 92.7.",
+    "condition_signals": ["comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Name with a Year of junior, and a High School with wheatley?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Year = Junior and High School = Wheatley.",
+    "condition_signals": ["comma_separated", "explicit_and", "with_clause"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the least clubs involved for leagues being none for semi finals",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Leagues entering this round = None and Round = Semi Finals.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How many different combinations of team colors are there in all the schools in Maroa, Illinois?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Location = Maroa, Illinois.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "WHich Play-by-play has a Studio host of gary tanguay, and a Studio analysts of donny marshall?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Studio host = Gary Tanguay and Studio analysts = Donny Marshall.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the place and when was the year when the women's doubles womens were Bai yang Niu Jianfeng?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Womens Doubles = Bai Yang Niu Jianfeng.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What all turbines have a capacity of 30 and have a Somerset location?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Capacity (MW) = 30 and Location (county) = Somerset.",
+    "condition_signals": ["explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 11,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which birthplace's height in inches was more than 192 when the position was d and the birthday was April 5, 1983?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Height (in) > 192, Position = D, and Birthdate = April 5, 1983.",
+    "condition_signals": ["when_clause", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which Points have a Position larger than 6, and a Lost smaller than 13?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Position > 6 and Lost < 13.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 12,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Is Blonanserin MHRA approved?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Generic Name = Blonanserin.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 4,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Who did they play on August 12?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Date = August 12.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Who led the most laps when brandon wagner had the fastest lap?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Fastest lap = Brandon Wagner.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 11,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the smallest finish time for a race after 1972 with a car manufactured by pontiac?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Year > 1972 and Manufacturer = Pontiac.",
+    "condition_signals": ["with_clause", "comparative"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which Attendance has an Opponent of green bay packers, and a Week larger than 10?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Opponent = Green Bay Packers and Week > 10.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the smallest finish time for a race where start was less than 3, buick was the manufacturer, and the race was held after 1978?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Start < 3, Manufacturer = Buick, and Year > 1978.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 20,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Who won the Men's singles in the year that Ian Maconachie Marian Horsley won the Mixed doubles?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Mixed doubles = Ian Maconachie Marian Horsley.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Which company's principal activities are catering services, and a Group's Equity Shareholding (as of March 10th 2010) of 40%?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Principal activities = Catering Services and Group's Equity Shareholding (10 March 2010) = 40%.",
+    "condition_signals": ["comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "How much Time has a Reaction of 0.155, and an Athlete of kristof beyens, and a Rank smaller than 3?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: React = 0.155, Athlete = Kristof Beyens, and Rank < 3.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Name the total number of swimsuits for evening gowns less than 8.21 and average of 8.453 with interview less than 9.09",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Evening Gown < 8.21, Average = 8.453, and Interview < 9.09.",
+    "condition_signals": ["explicit_and", "with_clause", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 16,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "What were the points in the year when his Wins were 0, his Podiums were 0, and he drove in 4 races?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Wins = 0, Podiums = 0, and Races = 4.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 18,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the number of high checkout when legs Lost is 17, 140+ is 15, and played is larger than 4?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Legs Lost = 17, 140+ = 15, and Played > 4.",
+    "condition_signals": ["when_clause", "comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 17,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "Which Home team has an Away team of everton?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Away team = Everton.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Name the location on june 10",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Date = June 10.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 5,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "what is drawn when the club is hirwaun rfc?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Club = Hirwaun RFC.",
+    "condition_signals": ["when_clause"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": true,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the depth of the quake that occurred at 19:48?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Time (UTC) = 19:48.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 10,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "What is the s B share for the shareholder that has 2.55 percent of votes? ",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Percent of votes = 2.55.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What rank has a gross of $35,976,000?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Gross = $35,976,000.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the average total pld with 45 points in 2005-06, and more than 52 points in 2006-07?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: 2005-06 Pts = 45 and 2006-07 Pts > 52.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 15,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What is the Datacenter for the Memory modules: hot addition Feature that has Yes listed for Itanium?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Features = Memory modules: hot addition and Itanium = Yes.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 13,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "What was the maximum OTL if L is 28?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: L = 28.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 8,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "Which date was game 35 on?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Game = 35.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 6,
+      "column_mentions": 2
+    }
+  },
+  {
+    "question": "What is the total number of matches with a loss less than 5 in the 2008/2009 season and has a draw larger than 9?",
+    "n_conditions": 3,
+    "reasoning": "Three conditions: Lost < 5, Season = 2008/2009, and Draw > 9.",
+    "condition_signals": ["explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": false,
+      "has_with": true,
+      "has_when": false,
+      "word_count": 19,
+      "column_mentions": 4
+    }
+  },
+  {
+    "question": "The common of Chieri has what population density?",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Common of = Chieri.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 7,
+      "column_mentions": 1
+    }
+  },
+  {
+    "question": "Which Lost is the lowest one that has a Name of esc holzkirchen, and Played smaller than 14?",
+    "n_conditions": 2,
+    "reasoning": "Two conditions: Name = ESC Holzkirchen and Played < 14.",
+    "condition_signals": ["comma_separated", "explicit_and", "comparative"],
+    "question_features": {
+      "has_and": true,
+      "has_comma_clause": true,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 14,
+      "column_mentions": 3
+    }
+  },
+  {
+    "question": "Name the title of jean-pierre jeunet",
+    "n_conditions": 1,
+    "reasoning": "Only one condition needed: Director = Jean-Pierre Jeunet.",
+    "condition_signals": ["implicit_single"],
+    "question_features": {
+      "has_and": false,
+      "has_comma_clause": false,
+      "has_with": false,
+      "has_when": false,
+      "word_count": 5,
+      "column_mentions": 0
+    }
+  }
+]
