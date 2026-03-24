@@ -730,57 +730,100 @@ class ProbabilisticResolver:
         # Step 1: Classify question type
         q_type = classify_question_type(question)
 
-        # Step 2: Parse tokens and extract value
-        # Use span boundary detector if available (from Opus labels),
-        # then fall back to rule-based HMM for token roles
+        # Step 2: Parse tokens and extract value span(s)
         token_roles = self.hmm_parser.parse(question, headers)
 
+        # Use span boundary detector for value extraction
+        value_spans = []
         if self.span_detector:
-            span = self.span_detector.detect(question, headers)
-            value = span.text if span else extract_value_from_parse(token_roles)
-        elif self.feature_hmm:
-            parsed, value = self.feature_hmm.parse(question, headers)
-            token_roles = [TokenRole(t, r) for t, r in parsed]
-        else:
-            value = extract_value_from_parse(token_roles)
+            value_spans = self.span_detector.detect_multiple(question, headers, max_spans=4)
+        if not value_spans:
+            # Fallback to single span or HMM
+            if self.span_detector:
+                single = self.span_detector.detect(question, headers)
+                if single:
+                    value_spans = [single]
+            if not value_spans:
+                hmm_value = extract_value_from_parse(token_roles)
+                if hmm_value:
+                    from probsql.semextract.span_detector import SpanCandidate
+                    value_spans = [SpanCandidate(hmm_value, 0, 0, 0.3, "hmm", "hmm")]
 
         # Step 3: Identify SELECT column
         select_col = identify_select(token_roles, headers, question)
 
-        # Step 5: Classify value type
-        v_type = classify_value_type(value) if value else "unknown"
+        # Step 4-8: Resolve each value span to a (column, operator, value) condition
+        conditions = []
+        used_columns = set()
+        if select_col:
+            used_columns.add(select_col)
 
-        # Step 6: Extract trigger phrase from TRIGGER tokens
-        trigger_tokens = [t.token.lower() for t in token_roles if t.role == "TRIGGER"]
-        trigger_phrase = " ".join(trigger_tokens) if trigger_tokens else None
+        for span in value_spans:
+            value = span.text
+            v_type = classify_value_type(value) if value else "unknown"
 
-        # Step 7: Resolve WHERE column via Markov chain
-        resolved = self.markov_resolver.resolve(
-            value=value,
-            value_type=v_type,
-            headers=headers,
-            question=question,
-            select_col=select_col,
-            trigger_phrase=trigger_phrase,
-        )
+            # Extract trigger from tokens near this span
+            trigger_tokens = [t.token.lower() for t in token_roles if t.role == "TRIGGER"]
+            trigger_phrase = " ".join(trigger_tokens) if trigger_tokens else None
 
-        # Step 8: Determine operator
-        operator, op_confidence = determine_operator(question, q_type, v_type)
+            # Resolve column (exclude SELECT and already-used columns)
+            resolved = self.markov_resolver.resolve(
+                value=value,
+                value_type=v_type,
+                headers=headers,
+                question=question,
+                select_col=select_col,
+                trigger_phrase=trigger_phrase,
+            )
 
-        # Compute overall confidence
-        confidence = resolved.confidence * op_confidence
-        if value is None:
-            confidence *= 0.3  # heavy penalty for no value
+            # Skip if best column was already used (avoid duplicate conditions)
+            best_col = resolved.column
+            if best_col in used_columns:
+                # Try second-best
+                chain = resolved.reasoning_chain
+                if chain:
+                    last_probs = chain[-1][1]
+                    sorted_cols = sorted(last_probs.items(), key=lambda x: -x[1])
+                    for col, _ in sorted_cols:
+                        if col not in used_columns:
+                            best_col = col
+                            break
+
+            used_columns.add(best_col)
+            operator, op_confidence = determine_operator(question, q_type, v_type)
+
+            conditions.append({
+                "column": best_col,
+                "value": value,
+                "operator": operator,
+                "confidence": resolved.confidence * op_confidence,
+                "value_type": v_type,
+                "reasoning_chain": resolved.reasoning_chain,
+            })
+
+        if not conditions:
+            return {
+                "where_column": None, "where_value": None, "operator": "=",
+                "confidence": 0.0, "select_column": select_col, "conditions": [],
+                "token_roles": [(t.token, t.role) for t in token_roles],
+            }
+
+        # Primary condition (highest confidence)
+        primary = max(conditions, key=lambda c: c["confidence"])
+        overall_confidence = primary["confidence"]
+        if len(conditions) > 1:
+            overall_confidence *= 0.9  # slight penalty for complexity
 
         return {
-            "where_column": resolved.column,
-            "where_value": value,
-            "operator": operator,
-            "confidence": confidence,
+            "where_column": primary["column"],
+            "where_value": primary["value"],
+            "operator": primary["operator"],
+            "confidence": overall_confidence,
             "select_column": select_col,
-            "value_type": v_type,
+            "value_type": primary["value_type"],
             "q_type": q_type,
-            "reasoning_chain": resolved.reasoning_chain,
+            "conditions": conditions,
+            "reasoning_chain": primary["reasoning_chain"],
             "token_roles": [(t.token, t.role) for t in token_roles],
         }
 

@@ -171,6 +171,112 @@ class ValueSpanDetector:
         candidates.sort(key=lambda c: -c.score)
         return candidates[0]
 
+    def detect_multiple(self, question, headers=None, max_spans=4):
+        """Find multiple non-overlapping value spans.
+
+        For multi-condition queries like:
+        "What X has a Y of Z and a W of V?"
+        → two spans: Z and V
+
+        Returns list of SpanCandidate, sorted by position in question.
+        """
+        q = question.strip()
+        tokens = q.split()
+        n = len(tokens)
+
+        if n < 2:
+            return []
+
+        header_words = set()
+        if headers:
+            for h in headers:
+                header_words.update(w.lower() for w in re.findall(r'\b\w+\b', h))
+
+        # Build token positions
+        token_starts = []
+        token_ends = []
+        pos = 0
+        for tok in tokens:
+            idx = q.find(tok, pos)
+            token_starts.append(idx)
+            token_ends.append(idx + len(tok))
+            pos = idx + len(tok)
+
+        # Get ALL scored spans
+        all_candidates = []
+        starts = [(i, *self._score_start(tokens, i, header_words)) for i in range(n)]
+        ends = [(i, *self._score_end(tokens, i, n)) for i in range(n)]
+
+        for si, s_score, s_signal in starts:
+            if s_score <= 0.2:
+                continue
+            for ei, e_score, e_signal in ends:
+                if e_score <= 0.2 or ei < si:
+                    continue
+                span_len = ei - si + 1
+                if span_len < 1 or span_len > 10:
+                    continue
+
+                span_text = " ".join(tokens[si:ei + 1])
+                # Strip leading/trailing
+                orig_si, orig_ei = si, ei
+                strip_leading = {"the", "a", "an", "this", "that", "these", "those"}
+                while span_text.split() and span_text.split()[0].lower() in strip_leading:
+                    first = span_text.split()[0]
+                    span_text = span_text[len(first):].strip()
+                    si += 1
+                strip_trailing = {"play", "plays", "played", "score", "scored", "have",
+                                  "has", "had", "is", "are", "was", "were", "as", "the",
+                                  "a", "an", "in", "on", "at", "for", "with", "by",
+                                  "does", "did", "do", "result", "team"}
+                while span_text.split() and span_text.split()[-1].lower().rstrip("?,") in strip_trailing:
+                    last = span_text.split()[-1]
+                    span_text = span_text[:-(len(last))].strip()
+                    ei -= 1
+                    if ei < si:
+                        break
+
+                span_text = span_text.strip().rstrip("?,. ")
+                if not span_text:
+                    continue
+
+                content_score = self._score_content(span_text, tokens, si, ei, header_words)
+                total = s_score * 0.35 + e_score * 0.35 + content_score * 0.30
+
+                all_candidates.append(SpanCandidate(
+                    text=span_text,
+                    start=token_starts[si] if si < len(token_starts) else 0,
+                    end=token_ends[min(ei, len(token_ends)-1)],
+                    score=total,
+                    start_signal=s_signal,
+                    end_signal=e_signal,
+                ))
+
+        if not all_candidates:
+            return []
+
+        # Greedy non-overlapping selection: pick best, remove overlapping, repeat
+        all_candidates.sort(key=lambda c: -c.score)
+        selected = []
+        used_chars = set()
+
+        for cand in all_candidates:
+            # Check overlap with already selected spans
+            cand_chars = set(range(cand.start, cand.end))
+            if cand_chars & used_chars:
+                continue
+            # Don't select duplicate texts
+            if any(cand.text.lower() == s.text.lower() for s in selected):
+                continue
+            selected.append(cand)
+            used_chars.update(cand_chars)
+            if len(selected) >= max_spans:
+                break
+
+        # Sort by position in question
+        selected.sort(key=lambda c: c.start)
+        return selected
+
     def _score_start(self, tokens, i, header_words):
         """Score position i as a value start."""
         tok = tokens[i]

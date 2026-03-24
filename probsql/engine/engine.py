@@ -157,10 +157,9 @@ class ProbSQLEngine:
         )
 
         # Step 6: Ensemble — pick highest confidence
-        # Calibration analysis showed all paths are ~28-31% average accuracy,
-        # but the naive max-confidence ensemble reaches 34.9% because different
-        # paths are correct on different subsets. The uncalibrated confidence
-        # happens to correlate with correctness WITHIN each path's subset.
+        # Each path captures different strengths. The naive max-confidence
+        # ensemble works because uncalibrated confidence correlates with
+        # per-example correctness within each path's subset.
         candidates = [old_result]
         if sem_result:
             candidates.append(sem_result)
@@ -333,15 +332,34 @@ class ProbSQLEngine:
             "token_roles": result.get("token_roles", [])[:10],
         })
 
-        tree = AtomicPredicate(
-            english_phrase=english,
-            table=table_name,
-            column=col_name,
-            operator=operator,
-            value=value,
-            confidence=confidence,
-            column_match_score=confidence,
-        )
+        # Build predicate tree — single or multi-condition
+        conditions = result.get("conditions", [])
+        if len(conditions) > 1:
+            # Multi-condition: AND tree
+            nodes = []
+            for cond in conditions:
+                nodes.append(AtomicPredicate(
+                    english_phrase=english,
+                    table=table_name,
+                    column=cond["column"],
+                    operator=cond["operator"],
+                    value=cond["value"],
+                    confidence=cond["confidence"],
+                    column_match_score=cond["confidence"],
+                ))
+            tree = nodes[0]
+            for node in nodes[1:]:
+                tree = CompoundPredicate("AND", tree, node)
+        else:
+            tree = AtomicPredicate(
+                english_phrase=english,
+                table=table_name,
+                column=col_name,
+                operator=operator,
+                value=value,
+                confidence=confidence,
+                column_match_score=confidence,
+            )
 
         sql_where = format_sql(tree)
 
