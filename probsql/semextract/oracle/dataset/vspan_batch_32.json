@@ -1,0 +1,354 @@
+[
+  {
+    "question": "Which Position has a Played larger than 9?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Played",
+    "where_value": "9",
+    "select_column": "Position"
+  },
+  {
+    "question": "In 1983 what is the tournament that is 0 / 1?",
+    "headers": [
+      "Tournament",
+      "1983",
+      "1984",
+      "1985",
+      "1986",
+      "1987",
+      "1988",
+      "1989",
+      "1990",
+      "Career SR",
+      "Career Win-Loss"
+    ],
+    "where_column": "1983",
+    "where_value": "0 / 1",
+    "select_column": "Tournament"
+  },
+  {
+    "question": "Name the least for when played is 12",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Won",
+      "Drawn",
+      "Lost",
+      "For",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Played",
+    "where_value": "12",
+    "select_column": "For"
+  },
+  {
+    "question": "What is the largest area in Alaska with a population of 39 and rank over 19?",
+    "headers": [
+      "Rank",
+      "Island's Name",
+      "Area (sqmi)",
+      "Area (km 2 )",
+      "Location",
+      "Population (2000)"
+    ],
+    "where_column": "Location",
+    "where_value": "alaska",
+    "select_column": "Area (km 2 )"
+  },
+  {
+    "question": "If the record is 6-8, what was the score?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "6-8",
+    "select_column": "Score"
+  },
+  {
+    "question": "On what date was the venue Away and the result was lost 6-4 (lost 9-7 on agg)?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance",
+      "Competition",
+      "Man of the Match"
+    ],
+    "where_column": "Venue",
+    "where_value": "away",
+    "select_column": "Date"
+  },
+  {
+    "question": "How many games played have 4.7 as points per game?",
+    "headers": [
+      "Tournament",
+      "Games played",
+      "Points per game",
+      "Rebounds per game",
+      "Assists per game"
+    ],
+    "where_column": "Points per game",
+    "where_value": "4.7",
+    "select_column": "Games played"
+  },
+  {
+    "question": "For the match in which player David Frost scored a To Par of +7, what was the final score?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "To par",
+    "where_value": "+7",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the sum of Bronze when the total is more than 27?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "27",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "On what date was game 2 played?",
+    "headers": [
+      "Game",
+      "Date",
+      "Home Team",
+      "Result",
+      "Road Team"
+    ],
+    "where_column": "Game",
+    "where_value": "game 2",
+    "select_column": "Date"
+  },
+  {
+    "question": "What date had a tie no of replay, and an away team of watford?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Date"
+    ],
+    "where_column": "Tie no",
+    "where_value": "replay",
+    "select_column": "Date"
+  },
+  {
+    "question": "name the title of the episode that ed sherin directed.",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date"
+    ],
+    "where_column": "Directed by",
+    "where_value": "Ed Sherin",
+    "select_column": "Title"
+  },
+  {
+    "question": "Which name had more than 5 rounds and was a defensive end?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Round",
+    "where_value": "5",
+    "select_column": "Name"
+  },
+  {
+    "question": "What is the production number for the episode directed by Robert McKimson named Mice Follies?",
+    "headers": [
+      "Title",
+      "Series",
+      "Director",
+      "Production Number",
+      "Release date"
+    ],
+    "where_column": "Director",
+    "where_value": "robert mckimson",
+    "select_column": "Production Number"
+  },
+  {
+    "question": "What is the Elevator of the Elected Elevated on September 21, 1179?",
+    "headers": [
+      "Elector",
+      "Place of birth",
+      "Cardinalatial title",
+      "Elevated",
+      "Elevator"
+    ],
+    "where_column": "Elevated",
+    "where_value": "september 21, 1179",
+    "select_column": "Elevator"
+  },
+  {
+    "question": "What was the result at the Berlin International Film Festival in a year greater than 1987?",
+    "headers": [
+      "Year",
+      "Awards",
+      "Categorie",
+      "Movie",
+      "Result"
+    ],
+    "where_column": "Year",
+    "where_value": "1987",
+    "select_column": "Result"
+  },
+  {
+    "question": "What is the tie no of the game where exeter city was the home team?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "exeter city",
+    "select_column": "Tie no"
+  },
+  {
+    "question": "What is the draw when the losses were more than 8 and less than 2 wins?",
+    "headers": [
+      "Club",
+      "Wins",
+      "Losses",
+      "Draws",
+      "Against"
+    ],
+    "where_column": "Losses",
+    "where_value": "8",
+    "select_column": "Draws"
+  },
+  {
+    "question": "Which Skip has a Third of tony angiboust?",
+    "headers": [
+      "Nation",
+      "Skip",
+      "Third",
+      "Second",
+      "Lead"
+    ],
+    "where_column": "Third",
+    "where_value": "tony angiboust",
+    "select_column": "Skip"
+  },
+  {
+    "question": "Which Score has a Home team of aston villa?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "aston villa",
+    "select_column": "Score"
+  },
+  {
+    "question": "What percentage of browsers were using Internet Explorer during the period in which 27.85% were using Firefox?",
+    "headers": [
+      "Date",
+      "Internet Explorer",
+      "Firefox",
+      "Safari",
+      "Opera"
+    ],
+    "where_column": "Firefox",
+    "where_value": "27.85%",
+    "select_column": "Internet Explorer"
+  },
+  {
+    "question": "What character did Vicky Versavel play for 13 years?",
+    "headers": [
+      "Actor",
+      "Character",
+      "Soap Opera",
+      "Years",
+      "Duration"
+    ],
+    "where_column": "Duration",
+    "where_value": "13 years",
+    "select_column": "Character"
+  },
+  {
+    "question": "What is the current freq for Frequency of 104.7?",
+    "headers": [
+      "Callsign",
+      "Area served",
+      "Frequency",
+      "Band",
+      "Fate",
+      "Freq currently",
+      "Purpose"
+    ],
+    "where_column": "Frequency",
+    "where_value": "104.7",
+    "select_column": "Freq currently"
+  },
+  {
+    "question": "When did \"My Confessions\" first air?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date"
+    ],
+    "where_column": "Title",
+    "where_value": "\"My Confessions\"",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "What is the total of laps run by the driver with a grid under 17 and a time of +5.088?",
+    "headers": [
+      "Rider",
+      "Bike",
+      "Laps",
+      "Time",
+      "Grid"
+    ],
+    "where_column": "Time",
+    "where_value": "+5.088",
+    "select_column": "Laps"
+  }
+]

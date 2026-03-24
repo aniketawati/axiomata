@@ -1,0 +1,363 @@
+[
+  {
+    "question": "How many people attended the match when Manchester United played against the Hearts?",
+    "headers": [
+      "Date",
+      "Opponents",
+      "H / A",
+      "Result F \u2013 A",
+      "Attendance"
+    ],
+    "where_column": "Opponents",
+    "where_value": "hearts",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "Which company launched in 1996 and has a Hanzi of \u51e4\u51f0\u536b\u89c6\u4e2d\u6587\u53f0?",
+    "headers": [
+      "Name",
+      "Hanzi",
+      "Origin",
+      "Launch",
+      "Owner"
+    ],
+    "where_column": "Launch",
+    "where_value": "1996",
+    "select_column": "Name"
+  },
+  {
+    "question": "What are the japanese title(s) for tv asahi?",
+    "headers": [
+      "Japanese Title",
+      "Romaji Title",
+      "TV Station",
+      "Time Frame",
+      "Starring Actors",
+      "Theme Song(s)",
+      "Episodes",
+      "Average Ratings"
+    ],
+    "where_column": "TV Station",
+    "where_value": "TV Asahi",
+    "select_column": "Japanese Title"
+  },
+  {
+    "question": "What was the date of the poll with a sample size of 496 where Republican Mike Huckabee was chosen?",
+    "headers": [
+      "Poll Source",
+      "Sample Size",
+      "Margin of Error",
+      "Date",
+      "Democrat",
+      "Republican"
+    ],
+    "where_column": "Republican",
+    "where_value": "mike huckabee",
+    "select_column": "Date"
+  },
+  {
+    "question": "College of lsu has how many rounds?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "College",
+    "where_value": "lsu",
+    "select_column": "Round"
+  },
+  {
+    "question": "What model is the n\u00b7m (lb\u00b7ft)@1500-2500 torque?",
+    "headers": [
+      "Model",
+      "Years",
+      "Engine code",
+      "Power",
+      "Torque"
+    ],
+    "where_column": "Torque",
+    "where_value": "n\u00b7m (lb\u00b7ft)@1500-2500",
+    "select_column": "Model"
+  },
+  {
+    "question": "What season's premiere had puerto rico winning on May 20, 2012?",
+    "headers": [
+      "Season",
+      "Season Premiere",
+      "Season Finale",
+      "Winner",
+      "Runner-up",
+      "Number of Contestants",
+      "Winner's Country",
+      "Runner Up's Country"
+    ],
+    "where_column": "Winner's Country",
+    "where_value": "puerto rico",
+    "select_column": "Season Premiere"
+  },
+  {
+    "question": "What was the score of the game 57 after February 23?",
+    "headers": [
+      "Game",
+      "February",
+      "Opponent",
+      "Score",
+      "Record"
+    ],
+    "where_column": "February",
+    "where_value": "23",
+    "select_column": "Score"
+  },
+  {
+    "question": "What ending does siangu get for \u00f6n?",
+    "headers": [
+      "Masculine a-stems",
+      "Masculine u-stems",
+      "Feminine \u014d-stems",
+      "Neuter a-stems",
+      "Masculine an-stems",
+      "Feminine \u014dn-stems"
+    ],
+    "where_column": "Feminine \u014d-stems",
+    "where_value": "siangu",
+    "select_column": "Feminine \u014dn-stems"
+  },
+  {
+    "question": "What artist's song was performed in the week with theme of Billboard #1?",
+    "headers": [
+      "Week",
+      "Theme",
+      "Artist",
+      "Order sung",
+      "Status"
+    ],
+    "where_column": "Theme",
+    "where_value": "billboard #1",
+    "select_column": "Artist"
+  },
+  {
+    "question": "What was the outcome before 1997?",
+    "headers": [
+      "Outcome",
+      "Year",
+      "Championship",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Year",
+    "where_value": "1997",
+    "select_column": "Outcome"
+  },
+  {
+    "question": "What is the Date of the Competition with a Result of 3\u20130?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Result",
+    "where_value": "3\u20130",
+    "select_column": "Date"
+  },
+  {
+    "question": "What are the remarks for 8 October 2008?",
+    "headers": [
+      "Date",
+      "Team #1",
+      "Res.",
+      "Team #2",
+      "Competition",
+      "Attendance",
+      "Remarks"
+    ],
+    "where_column": "Date",
+    "where_value": "8 October 2008",
+    "select_column": "Remarks"
+  },
+  {
+    "question": "Name the manner of departyre for 26 january date of appointment",
+    "headers": [
+      "Team",
+      "Outgoing manager",
+      "Manner of departure",
+      "Date of vacancy",
+      "Replaced by",
+      "Date of appointment"
+    ],
+    "where_column": "Date of appointment",
+    "where_value": "26 january",
+    "select_column": "Manner of departure"
+  },
+  {
+    "question": "A tournament on which date has a margin of victory of 2 strokes and a par of \u221216?",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Winning score",
+      "To par",
+      "Margin of victory",
+      "Runner-up"
+    ],
+    "where_column": "Margin of victory",
+    "where_value": "2 strokes",
+    "select_column": "Date"
+  },
+  {
+    "question": "Which Height (cm) has a Birthplace of new canaan, connecticut?",
+    "headers": [
+      "Position",
+      "Jersey #",
+      "Name",
+      "Height (cm)",
+      "Weight (kg)",
+      "Birthdate",
+      "Birthplace",
+      "2007\u20132008 Team",
+      "NHL rights, if any"
+    ],
+    "where_column": "Birthplace",
+    "where_value": "new canaan, connecticut",
+    "select_column": "Height (cm)"
+  },
+  {
+    "question": "When was the game when Footscray was the away team?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "footscray",
+    "select_column": "Date"
+  },
+  {
+    "question": "Pick # of 25, and an Overall of 207 has what name?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Pick #",
+    "where_value": "25",
+    "select_column": "Name"
+  },
+  {
+    "question": "Tell me the average final rank for loe more than 10 and point less than 43",
+    "headers": [
+      "Season",
+      "Belonging league",
+      "Matches",
+      "league point",
+      "Draw",
+      "Lose",
+      "Goal difference",
+      "Point",
+      "Lost point",
+      "Final rank"
+    ],
+    "where_column": "Lose",
+    "where_value": "10",
+    "select_column": "Final rank"
+  },
+  {
+    "question": "In the game where the home team scored 12.17 (89), who was the home team?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team score",
+    "where_value": "12.17 (89)",
+    "select_column": "Home team"
+  },
+  {
+    "question": "Which round has a position that is cornerback?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Position",
+      "School/Club Team"
+    ],
+    "where_column": "Position",
+    "where_value": "cornerback",
+    "select_column": "Round"
+  },
+  {
+    "question": "Which Week has an Opponent of washington redskins, and an Attendance larger than 56,077?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "washington redskins",
+    "select_column": "Week"
+  },
+  {
+    "question": "In what Country is Haugesund?",
+    "headers": [
+      "City",
+      "Country",
+      "Airport",
+      "IATA",
+      "ICAO"
+    ],
+    "where_column": "City",
+    "where_value": "haugesund",
+    "select_column": "Country"
+  },
+  {
+    "question": "How many times did kevin love (22) have the high points?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "High points",
+    "where_value": "Kevin Love (22)",
+    "select_column": "Date"
+  },
+  {
+    "question": "What is the least number of penalties he got when his point total was over 1419 in more than 98 games?",
+    "headers": [
+      "Played",
+      "Drawn",
+      "Lost",
+      "Winning %",
+      "Tries",
+      "Conversions",
+      "Penalties",
+      "s Drop goal",
+      "Points total"
+    ],
+    "where_column": "Points total",
+    "where_value": "1419",
+    "select_column": "Penalties"
+  }
+]

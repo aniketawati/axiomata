@@ -1,54 +1,54 @@
 {
   "split": "dev",
-  "total": 1944,
-  "column_accuracy": 0.48281035665294925,
-  "operator_accuracy": 0.366812414266118,
-  "value_accuracy": 0.1946159122085048,
-  "full_condition_match": 0.19084362139917696,
-  "execution_accuracy": 0.7340534979423868,
+  "total": 8357,
+  "column_accuracy": 0.4803757329185146,
+  "operator_accuracy": 0.37447648677755246,
+  "value_accuracy": 0.1402117984922819,
+  "full_condition_match": 0.13366040445135816,
+  "execution_accuracy": 0.3490487016872083,
   "engine_errors": 0,
   "oracle_exec_errors": 5,
   "engine_exec_errors": 4,
   "by_num_conditions": {
     "1": {
-      "total": 1806,
-      "full_match": 371,
-      "exec_match": 1322,
-      "col_match": 886.0
+      "total": 5755,
+      "full_match": 1115,
+      "exec_match": 2077,
+      "col_match": 3089.0
     },
     "2": {
-      "total": 128,
-      "full_match": 0,
-      "exec_match": 96,
-      "col_match": 50.0
+      "total": 2082,
+      "full_match": 2,
+      "exec_match": 629,
+      "col_match": 785.5
     },
     "3": {
-      "total": 9,
+      "total": 454,
       "full_match": 0,
-      "exec_match": 8,
-      "col_match": 2.333333333333333
+      "exec_match": 193,
+      "col_match": 125.99999999999933
     },
     "4": {
-      "total": 1,
+      "total": 66,
       "full_match": 0,
-      "exec_match": 1,
-      "col_match": 0.25
+      "exec_match": 18,
+      "col_match": 14.0
     }
   },
   "by_operator": {
     "=": {
-      "total": 2083,
+      "total": 9534,
       "matched": 0
     },
     "<": {
-      "total": 4,
+      "total": 982,
       "matched": 0
     },
     ">": {
-      "total": 6,
+      "total": 1029,
       "matched": 0
     }
   },
-  "avg_confidence": 0.7557196243486474,
-  "avg_latency_ms": 1.0808369593621359
+  "avg_confidence": 0.8363500259443386,
+  "avg_latency_ms": 1.222029175541444
 }

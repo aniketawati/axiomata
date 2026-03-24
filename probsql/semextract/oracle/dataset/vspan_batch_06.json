@@ -1,0 +1,367 @@
+[
+  {
+    "question": "What was the score of the Chiefs November 27, 1994 game?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Date",
+    "where_value": "november 27, 1994",
+    "select_column": "Result"
+  },
+  {
+    "question": "If the away team scored 7.3 (45), what was the home team score?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team score",
+    "where_value": "7.3 (45)",
+    "select_column": "Home team score"
+  },
+  {
+    "question": "What was the lowest production code value in series #10?",
+    "headers": [
+      "Series #",
+      "Title",
+      "Directed by",
+      "Original air date",
+      "Production code"
+    ],
+    "where_column": "Series #",
+    "where_value": "10",
+    "select_column": "Production code"
+  },
+  {
+    "question": "Who manufactured the motorcycle that did 24 laps and 9 grids?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "24",
+    "select_column": "Manufacturer"
+  },
+  {
+    "question": "If the height order is 1 and the soundfield type is mixed-order, what are all the channels?",
+    "headers": [
+      "Horizontal order",
+      "Height order",
+      "Soundfield type",
+      "Number of channels",
+      "Channels"
+    ],
+    "where_column": "Soundfield type",
+    "where_value": "mixed-order",
+    "select_column": "Channels"
+  },
+  {
+    "question": "What was the score when the time was 14:00?",
+    "headers": [
+      "Date",
+      "Time",
+      "Score",
+      "Set 1",
+      "Set 2",
+      "Set 3",
+      "Total"
+    ],
+    "where_column": "Time",
+    "where_value": "14:00",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the figure for La Crescenta-Montrose when Gelndale is $57,112?",
+    "headers": [
+      "Tujunga",
+      "La Crescenta- Montrose",
+      "Glendale",
+      "La Ca\u00f1ada Flintridge",
+      "Pasadena"
+    ],
+    "where_column": "Glendale",
+    "where_value": "$57,112",
+    "select_column": "La Crescenta- Montrose"
+  },
+  {
+    "question": "Which batter has the last name Graham?",
+    "headers": [
+      "Surname",
+      "First",
+      "D.O.B.",
+      "Uni#",
+      "Bats",
+      "Throws",
+      "Position"
+    ],
+    "where_column": "Surname",
+    "where_value": "graham",
+    "select_column": "Bats"
+  },
+  {
+    "question": "What is the code name when the FSB / HT (MHz) is 100 (fsb)?",
+    "headers": [
+      "Model",
+      "Code name",
+      "CPU support",
+      "FSB / HT (MHz)",
+      "Southbridge"
+    ],
+    "where_column": "FSB / HT (MHz)",
+    "where_value": "100 (fsb)",
+    "select_column": "Code name"
+  },
+  {
+    "question": "What Giant Slalom has Victories larger than 27, a Slalom of \u2013, and a Career of 1996\u20132009?",
+    "headers": [
+      "Country",
+      "Career",
+      "Victories",
+      "Super G",
+      "Giant Slalom",
+      "Slalom",
+      "Combined",
+      "Parallel"
+    ],
+    "where_column": "Victories",
+    "where_value": "27",
+    "select_column": "Giant Slalom"
+  },
+  {
+    "question": "What is the average 2000 that has a 1997 greater than 34,6, a 2006 greater than 38,7, and a 2998 less than 76?",
+    "headers": [
+      "Capital/Region",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007"
+    ],
+    "where_column": "1997",
+    "where_value": "34,6",
+    "select_column": "2000"
+  },
+  {
+    "question": "Where was the player from who had the position of DF, who started 2007-10-30?",
+    "headers": [
+      "Date From",
+      "Date To",
+      "Position",
+      "Name",
+      "From"
+    ],
+    "where_column": "Position",
+    "where_value": "df",
+    "select_column": "From"
+  },
+  {
+    "question": "Who is the manager whose rank is 16?",
+    "headers": [
+      "Season",
+      "League",
+      "Rank",
+      "Games",
+      "Points",
+      "GF",
+      "GA",
+      "Manager",
+      "Top Scorer",
+      "Goals"
+    ],
+    "where_column": "Rank",
+    "where_value": "16",
+    "select_column": "Manager"
+  },
+  {
+    "question": "Name the Place of england with a Score larger than 66?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Country",
+    "where_value": "england",
+    "select_column": "Place"
+  },
+  {
+    "question": "Which opponent's game was less than 76 when the march was 10?",
+    "headers": [
+      "Game",
+      "March",
+      "Opponent",
+      "Score",
+      "Decision",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "76",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "What is the sum of bronzes having silvers over 5 and golds under 20?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "5",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "What is the route/via when the destination is listed as Madurai?",
+    "headers": [
+      "Sl. No.",
+      "Train number",
+      "Train name",
+      "Origin",
+      "Destination",
+      "Time",
+      "Service",
+      "Route/Via."
+    ],
+    "where_column": "Destination",
+    "where_value": "Madurai",
+    "select_column": "Route/Via."
+  },
+  {
+    "question": "Who was the winner in the 2008 season?",
+    "headers": [
+      "Season",
+      "Winner",
+      "Team",
+      "Position",
+      "Win #"
+    ],
+    "where_column": "Season",
+    "where_value": "2008",
+    "select_column": "Winner"
+  },
+  {
+    "question": "What is the Depart de la main gauche of the do Mode?",
+    "headers": [
+      "Mode",
+      "D\u00e9part de la main gauche",
+      "Accord du 1st string",
+      "2nd string",
+      "3rd string"
+    ],
+    "where_column": "Mode",
+    "where_value": "do",
+    "select_column": "D\u00e9part de la main gauche"
+  },
+  {
+    "question": "WhichScore has a Location Attendance of seattle center coliseum 11,497?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Location Attendance",
+    "where_value": "seattle center coliseum 11,497",
+    "select_column": "Score"
+  },
+  {
+    "question": "I want the plaid cymru for 4 may 2011",
+    "headers": [
+      "Date(s) conducted",
+      "Polling organisation/client",
+      "Cons",
+      "Plaid Cymru",
+      "Lib Dem",
+      "Others",
+      "Lead"
+    ],
+    "where_column": "Date(s) conducted",
+    "where_value": "4 may 2011",
+    "select_column": "Plaid Cymru"
+  },
+  {
+    "question": "What is the womens singles of marcus ellis gabrielle white?",
+    "headers": [
+      "Year",
+      "Mens singles",
+      "Womens singles",
+      "Mens doubles",
+      "Womens doubles",
+      "Mixed doubles"
+    ],
+    "where_column": "Mixed doubles",
+    "where_value": "Marcus Ellis Gabrielle White",
+    "select_column": "Womens singles"
+  },
+  {
+    "question": "Name the points for paulistano",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Won",
+      "Drawn",
+      "Lost",
+      "For",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Team",
+    "where_value": "Paulistano",
+    "select_column": "Points"
+  },
+  {
+    "question": "What date was the attendance 22000?",
+    "headers": [
+      "Date",
+      "Team #1",
+      "Res.",
+      "Team #2",
+      "Competition",
+      "Attendance",
+      "Remarks"
+    ],
+    "where_column": "Attendance",
+    "where_value": "22000",
+    "select_column": "Date"
+  },
+  {
+    "question": "What is Place, when Country is \"United States\", and when Player is \"Lee Trevino\"?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Country",
+    "where_value": "united states",
+    "select_column": "Place"
+  }
+]

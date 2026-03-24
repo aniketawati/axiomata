@@ -1,0 +1,359 @@
+[
+  {
+    "question": "Which Venue has a Competition of pl group b, and a Score of 2-2?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Opponents",
+      "Score",
+      "Competition"
+    ],
+    "where_column": "Competition",
+    "where_value": "pl group b",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What is the Mach with Vehicle Flight # m2-f2 #8 and an Altitude (meters) greater than 13,716?",
+    "headers": [
+      "Vehicle Flight #",
+      "Date",
+      "Pilot",
+      "Mach",
+      "Velocity (km/h)",
+      "Altitude (meters)",
+      "Duration"
+    ],
+    "where_column": "Vehicle Flight #",
+    "where_value": "m2-f2 #8",
+    "select_column": "Mach"
+  },
+  {
+    "question": "What is the total of Caps when player born 13 December 1977?",
+    "headers": [
+      "Player",
+      "Position",
+      "Date of Birth (Age)",
+      "Caps",
+      "Club/province"
+    ],
+    "where_column": "Date of Birth (Age)",
+    "where_value": "13 december 1977",
+    "select_column": "Caps"
+  },
+  {
+    "question": "What is the reason for change when maryland 6th is the district? ",
+    "headers": [
+      "District",
+      "Vacator",
+      "Reason for change",
+      "Successor",
+      "Date successor seated"
+    ],
+    "where_column": "District",
+    "where_value": "Maryland 6th",
+    "select_column": "Reason for change"
+  },
+  {
+    "question": "Which Medal had a Name of f\u00e9lix s\u00e1nchez, and a Games of 2012 london?",
+    "headers": [
+      "Medal",
+      "Name",
+      "Games",
+      "Sport",
+      "Event"
+    ],
+    "where_column": "Name",
+    "where_value": "f\u00e9lix s\u00e1nchez",
+    "select_column": "Medal"
+  },
+  {
+    "question": "What is the highest goals entry with drawn larger than 6 and goals against 85?",
+    "headers": [
+      "Position",
+      "Team",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Goals For",
+      "Goals Against",
+      "Goal Difference",
+      "Points 1"
+    ],
+    "where_column": "Goals Against",
+    "where_value": "85",
+    "select_column": "Goals For"
+  },
+  {
+    "question": "What was the average round score of the player who won in 1978?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par"
+    ],
+    "where_column": "Year(s) won",
+    "where_value": "1978",
+    "select_column": "Total"
+  },
+  {
+    "question": "Which Rebuilt has a Builder of derby, and a Name as rebuilt of ben madigan?",
+    "headers": [
+      "Number",
+      "Builder",
+      "Built",
+      "Rebuilt",
+      "Name as rebuilt",
+      "Scrapped/Sold"
+    ],
+    "where_column": "Builder",
+    "where_value": "derby",
+    "select_column": "Rebuilt"
+  },
+  {
+    "question": "What is the strong words compounded when the strongs transliteration is yowyariyb?",
+    "headers": [
+      "Strongs #",
+      "Hebrew word",
+      "Strongs Transliteration",
+      "Strongs Words Compounded",
+      "English Spelling"
+    ],
+    "where_column": "Strongs Transliteration",
+    "where_value": "Yowyariyb",
+    "select_column": "Strongs Words Compounded"
+  },
+  {
+    "question": "What is the pick number of Penn State?",
+    "headers": [
+      "Pick",
+      "Round",
+      "Player",
+      "Position",
+      "School"
+    ],
+    "where_column": "School",
+    "where_value": "penn state",
+    "select_column": "Pick"
+  },
+  {
+    "question": "Who presented their credentials at an unknown date?",
+    "headers": [
+      "Name",
+      "Background",
+      "Title",
+      "Appointment",
+      "Presentation of Credentials"
+    ],
+    "where_column": "Presentation of Credentials",
+    "where_value": "unknown",
+    "select_column": "Name"
+  },
+  {
+    "question": "What is the Pinyin for the simplified \u865e\u57ce\u53bf?",
+    "headers": [
+      "English Name",
+      "Simplified",
+      "Traditional",
+      "Pinyin",
+      "Area",
+      "Population",
+      "Density"
+    ],
+    "where_column": "Simplified",
+    "where_value": "\u865e\u57ce\u53bf",
+    "select_column": "Pinyin"
+  },
+  {
+    "question": "List the pictorals from issues when lindsey roeper was the cover model.",
+    "headers": [
+      "Date",
+      "Cover model",
+      "Centerfold model",
+      "Interview subject",
+      "20 Questions",
+      "Pictorials"
+    ],
+    "where_column": "Cover model",
+    "where_value": "Lindsey Roeper",
+    "select_column": "Pictorials"
+  },
+  {
+    "question": "What is the size of the team that was previously from Central Indiana conference, and is in IHSSA Class 4a?",
+    "headers": [
+      "School",
+      "Location",
+      "Mascot",
+      "Size",
+      "IHSAA Class",
+      "County",
+      "Year Joined",
+      "Previous Conference"
+    ],
+    "where_column": "IHSAA Class",
+    "where_value": "4a",
+    "select_column": "Size"
+  },
+  {
+    "question": "Which Date has a Game of game 3?",
+    "headers": [
+      "Game",
+      "Date",
+      "Home Team",
+      "Result",
+      "Road Team"
+    ],
+    "where_column": "Game",
+    "where_value": "game 3",
+    "select_column": "Date"
+  },
+  {
+    "question": "What team with a goals conceded smaller than 25, and a place smaller than 3?",
+    "headers": [
+      "Place",
+      "Team",
+      "Played",
+      "Draw",
+      "Lost",
+      "Goals Scored",
+      "Goals Conceded",
+      "Points"
+    ],
+    "where_column": "Goals Conceded",
+    "where_value": "25",
+    "select_column": "Team"
+  },
+  {
+    "question": "How many elverum are tehre for et sted i scandinavia?",
+    "headers": [
+      "Song",
+      "Porsgrunn",
+      "Bergen",
+      "Bod\u00f8",
+      "Stavanger",
+      "\u00c5lesund",
+      "Elverum",
+      "Troms\u00f8",
+      "Fredrikstad",
+      "Trondheim",
+      "Oslo",
+      "Total"
+    ],
+    "where_column": "Song",
+    "where_value": "Et sted i Scandinavia",
+    "select_column": "Elverum"
+  },
+  {
+    "question": "Which opposing team had an Against score less than 42 and a Tour Match status in Rugby Park, Gisborne?",
+    "headers": [
+      "Opposing Team",
+      "Against",
+      "Date",
+      "Venue",
+      "Status"
+    ],
+    "where_column": "Against",
+    "where_value": "42",
+    "select_column": "Opposing Team"
+  },
+  {
+    "question": "What is the Netflix number having a series episode of 1-01?",
+    "headers": [
+      "Series Ep.",
+      "Episode",
+      "Netflix",
+      "Segment A",
+      "Segment B",
+      "Segment C",
+      "Segment D"
+    ],
+    "where_column": "Series Ep.",
+    "where_value": "1-01",
+    "select_column": "Netflix"
+  },
+  {
+    "question": "For a date of 29 Sep and a time of 16:40, what is the corresponding Set 3?",
+    "headers": [
+      "Date",
+      "Time",
+      "Score",
+      "Set 1",
+      "Set 2",
+      "Set 3",
+      "Total",
+      "Report"
+    ],
+    "where_column": "Date",
+    "where_value": "29 sep",
+    "select_column": "Set 3"
+  },
+  {
+    "question": "What is the surface of the tournament with c\u00e9dric pioline as the opponent in the final?",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Surface",
+      "Opponent in the final",
+      "Score"
+    ],
+    "where_column": "Opponent in the final",
+    "where_value": "c\u00e9dric pioline",
+    "select_column": "Surface"
+  },
+  {
+    "question": "Which Second has a Lead of ben hebert?",
+    "headers": [
+      "Season",
+      "Skip",
+      "Third",
+      "Second",
+      "Lead"
+    ],
+    "where_column": "Lead",
+    "where_value": "ben hebert",
+    "select_column": "Second"
+  },
+  {
+    "question": "Who is the Director of the Original title of The Crying Game?",
+    "headers": [
+      "Year",
+      "English title",
+      "Original title",
+      "Country",
+      "Director"
+    ],
+    "where_column": "Original title",
+    "where_value": "the crying game",
+    "select_column": "Director"
+  },
+  {
+    "question": "What is the average overall that has a pick less than 20, North Carolina as the college, with a round less than 8?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Pick",
+    "where_value": "20",
+    "select_column": "Overall"
+  },
+  {
+    "question": "What round was it when the method was TKO (would not stand up from Butt Scoot)?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round",
+      "Time",
+      "Location"
+    ],
+    "where_column": "Method",
+    "where_value": "tko (would not stand up from butt scoot)",
+    "select_column": "Round"
+  }
+]

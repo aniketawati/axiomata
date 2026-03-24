@@ -697,12 +697,19 @@ class ProbabilisticResolver:
 
     def __init__(self):
         self.hmm_parser = HMMParser()
+        self.feature_hmm = None  # loaded if available
         self.markov_resolver = MarkovResolver()
 
     def load_knowledge(self, knowledge_dir=None):
         kdir = Path(knowledge_dir) if knowledge_dir else KNOWLEDGE_DIR
         self.hmm_parser.load_knowledge(kdir)
         self.markov_resolver.load_knowledge(kdir)
+        # Try to load feature-based HMM
+        from probsql.semextract.feature_hmm import FeatureHMM
+        fhmm = FeatureHMM()
+        fhmm.load_knowledge(kdir)
+        if fhmm.trained:
+            self.feature_hmm = fhmm
 
     def resolve(self, question, headers, col_types=None):
         """Run the full compositional program.
@@ -719,14 +726,17 @@ class ProbabilisticResolver:
         # Step 1: Classify question type
         q_type = classify_question_type(question)
 
-        # Step 2: Parse tokens into roles (HMM)
-        token_roles = self.hmm_parser.parse(question, headers)
+        # Step 2: Parse tokens into roles
+        # Use feature-based HMM if available (trained from Opus value spans)
+        if self.feature_hmm:
+            parsed, value = self.feature_hmm.parse(question, headers)
+            token_roles = [TokenRole(t, r) for t, r in parsed]
+        else:
+            token_roles = self.hmm_parser.parse(question, headers)
+            value = extract_value_from_parse(token_roles)
 
         # Step 3: Identify SELECT column
         select_col = identify_select(token_roles, headers, question)
-
-        # Step 4: Extract value from VALUE tokens
-        value = extract_value_from_parse(token_roles)
 
         # Step 5: Classify value type
         v_type = classify_value_type(value) if value else "unknown"

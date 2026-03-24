@@ -1,0 +1,358 @@
+[
+  {
+    "question": "Tell me the rider that had round 1 points of 7.465 and total more than 16.615",
+    "headers": [
+      "Rider",
+      "Horse",
+      "Faults",
+      "Round 1 Points",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "16.615",
+    "select_column": "Rider"
+  },
+  {
+    "question": "The score in the final is 2\u20136, 6\u20132, 6\u20130, on what surface?",
+    "headers": [
+      "Outcome",
+      "No.",
+      "Date",
+      "Championship",
+      "Surface",
+      "Opponent in the final",
+      "Score in the final"
+    ],
+    "where_column": "Score in the final",
+    "where_value": "2\u20136, 6\u20132, 6\u20130",
+    "select_column": "Surface"
+  },
+  {
+    "question": "Which Points have an Opponent of new york islanders, and a Game smaller than 65?",
+    "headers": [
+      "Game",
+      "March",
+      "Opponent",
+      "Score",
+      "Record",
+      "Points"
+    ],
+    "where_column": "Opponent",
+    "where_value": "new york islanders",
+    "select_column": "Points"
+  },
+  {
+    "question": "Which Features have Yes listed under Datacenter?",
+    "headers": [
+      "Features",
+      "Foundation",
+      "Standard",
+      "Enterprise",
+      "Datacenter",
+      "Itanium"
+    ],
+    "where_column": "Datacenter",
+    "where_value": "yes",
+    "select_column": "Features"
+  },
+  {
+    "question": "How many Picks have a College of hawaii, and an Overall smaller than 122?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "College",
+    "where_value": "hawaii",
+    "select_column": "Pick"
+  },
+  {
+    "question": "Which Round has a School/Club Team of north carolina, and a Pick larger than 131?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Position",
+      "School/Club Team"
+    ],
+    "where_column": "School/Club Team",
+    "where_value": "north carolina",
+    "select_column": "Round"
+  },
+  {
+    "question": "What is the snowfall for ski resort Snowmass?",
+    "headers": [
+      "Name",
+      "Nearest city",
+      "Skiable area (acres)",
+      "Top elevation (feet)",
+      "Base elevation (feet)",
+      "Vertical (feet)",
+      "Runs",
+      "Lifts",
+      "Snowfall (in/year)"
+    ],
+    "where_column": "Name",
+    "where_value": "Snowmass",
+    "select_column": "Snowfall (in/year)"
+  },
+  {
+    "question": "What is the original Danish air date of \"Episode 17\"? ",
+    "headers": [
+      "Episode",
+      "Title",
+      "Original Danish air date",
+      "Danish ratings (DR1)",
+      "Original UK air date",
+      "UK ratings (BBC Four)"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Episode 17\"",
+    "select_column": "Original Danish air date"
+  },
+  {
+    "question": "How much attendance has a Loss of roloson (11\u20135)?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Series",
+      "Arena"
+    ],
+    "where_column": "Loss",
+    "where_value": "roloson (11\u20135)",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "How many overalls have a pick greater than 19, with florida as the college?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Pick",
+    "where_value": "19",
+    "select_column": "Overall"
+  },
+  {
+    "question": "On June 17 in Tiger stadium, what was the average home run?",
+    "headers": [
+      "Home Run",
+      "Game",
+      "Date",
+      "Inning",
+      "Location",
+      "Opposing Pitcher",
+      "Team"
+    ],
+    "where_column": "Location",
+    "where_value": "tiger stadium",
+    "select_column": "Home Run"
+  },
+  {
+    "question": "How many teams had an outgoing manager of antonio g\u00f3mez",
+    "headers": [
+      "Team",
+      "Outgoing manager",
+      "Manner of departure",
+      "Date of vacancy",
+      "Replaced by",
+      "Date of appointment",
+      "Position in table"
+    ],
+    "where_column": "Outgoing manager",
+    "where_value": "Antonio G\u00f3mez",
+    "select_column": "Manner of departure"
+  },
+  {
+    "question": "Which Record has an Opponent of twins, and a Date of july 25?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Opponent",
+    "where_value": "twins",
+    "select_column": "Record"
+  },
+  {
+    "question": "What is year Built of the Moulin de Momalle Mill?",
+    "headers": [
+      "Location",
+      "Name of mill",
+      "Type",
+      "Built",
+      "Notes"
+    ],
+    "where_column": "Name of mill",
+    "where_value": "moulin de momalle",
+    "select_column": "Built"
+  },
+  {
+    "question": "Which Away team has a Crowd larger than 14,000, and a Home team of melbourne?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Crowd",
+    "where_value": "14,000",
+    "select_column": "Away team"
+  },
+  {
+    "question": "What is the average place for a couple with the rank by average of 9 and total smaller than 83?",
+    "headers": [
+      "Rank by average",
+      "Place",
+      "Couple",
+      "Total",
+      "Number of dances",
+      "Average"
+    ],
+    "where_column": "Rank by average",
+    "where_value": "9",
+    "select_column": "Place"
+  },
+  {
+    "question": " How many table points are listed for the deficit is +194? ",
+    "headers": [
+      "Place",
+      "Nation",
+      "played",
+      "won",
+      "drawn",
+      "lost",
+      "for",
+      "against",
+      "difference",
+      "Table points"
+    ],
+    "where_column": "difference",
+    "where_value": "+194",
+    "select_column": "Table points"
+  },
+  {
+    "question": "What car/motorcycle goes 91.813mph?",
+    "headers": [
+      "Year",
+      "Date",
+      "Driver / Rider",
+      "Car / Motorcycle",
+      "Time",
+      "Speed"
+    ],
+    "where_column": "Speed",
+    "where_value": "91.813mph",
+    "select_column": "Car / Motorcycle"
+  },
+  {
+    "question": "How many episodes in history have a running time of 24:06?",
+    "headers": [
+      "Episode",
+      "Broadcast date",
+      "Run time",
+      "Viewers (in millions)",
+      "Archive"
+    ],
+    "where_column": "Run time",
+    "where_value": "24:06",
+    "select_column": "Archive"
+  },
+  {
+    "question": "Which week was the game on December 14, 1967?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Date",
+    "where_value": "december 14, 1967",
+    "select_column": "Week"
+  },
+  {
+    "question": "What year was the building completed that has 10 floors?",
+    "headers": [
+      "Years tallest",
+      "Name",
+      "Height ft / m",
+      "Floors",
+      "Year completed"
+    ],
+    "where_column": "Floors",
+    "where_value": "10",
+    "select_column": "Year completed"
+  },
+  {
+    "question": "Which Opponent has an Away of 1\u20131, and a Home of 3\u20133?",
+    "headers": [
+      "Season",
+      "Competition",
+      "Round",
+      "Opponent",
+      "Home",
+      "Away",
+      "Series"
+    ],
+    "where_column": "Away",
+    "where_value": "1\u20131",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "When there was a bye in the round of 32, what was the result in the round of 16?",
+    "headers": [
+      "Athlete",
+      "Event",
+      "Round of 32",
+      "Round of 16",
+      "Quarterfinals",
+      "Semifinals"
+    ],
+    "where_column": "Round of 32",
+    "where_value": "Bye",
+    "select_column": "Semifinals"
+  },
+  {
+    "question": "List the population density per kilometer for the city of calintaan?",
+    "headers": [
+      "Municipality",
+      "No. of Barangays",
+      "Area (km\u00b2)",
+      "Population (2010)",
+      "Pop. density (per km\u00b2)",
+      "Income Class (2004)"
+    ],
+    "where_column": "Municipality",
+    "where_value": "Calintaan",
+    "select_column": "Pop. density (per km\u00b2)"
+  },
+  {
+    "question": "Which home team had a visitor of Ottawa Senators with a score of 1\u20135?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Record"
+    ],
+    "where_column": "Visitor",
+    "where_value": "ottawa senators",
+    "select_column": "Home"
+  }
+]

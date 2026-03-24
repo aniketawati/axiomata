@@ -1,0 +1,373 @@
+[
+  {
+    "question": "What is the number of bronze medals when the total is greater than 1, more than 2 silver medals are won, and the rank is 2?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "1",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "Who was the host country when Bar was the host city?",
+    "headers": [
+      "Edition",
+      "Year",
+      "Host city",
+      "Host country",
+      "Date",
+      "No. of athletes",
+      "Nations"
+    ],
+    "where_column": "Host city",
+    "where_value": "Bar",
+    "select_column": "Host country"
+  },
+  {
+    "question": "When 1-1 is the series who is the team?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Series"
+    ],
+    "where_column": "Series",
+    "where_value": "1-1",
+    "select_column": "Team"
+  },
+  {
+    "question": "what is the total tonnage grt of the cargo ship(s) sunk or captured on 4 feb 16?",
+    "headers": [
+      "Date",
+      "Ship",
+      "Type",
+      "Nationality",
+      "Tonnage GRT"
+    ],
+    "where_column": "Type",
+    "where_value": "cargo ship",
+    "select_column": "Tonnage GRT"
+  },
+  {
+    "question": "What is the average number of points for players with 4 touchdowns and more than 0 field goals?",
+    "headers": [
+      "Player",
+      "Touchdowns",
+      "Extra points",
+      "Field goals",
+      "Points"
+    ],
+    "where_column": "Touchdowns",
+    "where_value": "4",
+    "select_column": "Points"
+  },
+  {
+    "question": "Who was the leading actor in the film with a supporting actor named Cecil Kellaway?",
+    "headers": [
+      "Year",
+      "Oscars",
+      "Noms",
+      "Wins",
+      "Film",
+      "Leading Actor",
+      "Leading Actress",
+      "Supporting Actor",
+      "Supporting Actress"
+    ],
+    "where_column": "Supporting Actor",
+    "where_value": "Cecil Kellaway",
+    "select_column": "Leading Actor"
+  },
+  {
+    "question": "When was the earliest year when the attendance was 77,254?",
+    "headers": [
+      "Year",
+      "Date",
+      "Home Team",
+      "Result",
+      "Visiting Team",
+      "Venue",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "77,254",
+    "select_column": "Year"
+  },
+  {
+    "question": "Which year has a 2011 of 1r?",
+    "headers": [
+      "Tournament",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013"
+    ],
+    "where_column": "2011",
+    "where_value": "1r",
+    "select_column": "2008"
+  },
+  {
+    "question": "What is the nickname of the baby with the birth weight of 730g (23.5 oz.)?",
+    "headers": [
+      "Full Name",
+      "Nickname",
+      "Gender",
+      "Weight at birth",
+      "Meaning"
+    ],
+    "where_column": "Weight at birth",
+    "where_value": "730g (23.5 oz.)",
+    "select_column": "Nickname"
+  },
+  {
+    "question": "What school has south bend as the location, with indians as the mascot?",
+    "headers": [
+      "School",
+      "Mascot",
+      "Location",
+      "Enrollment",
+      "IHSAA Class",
+      "IHSAA Football Class",
+      "County"
+    ],
+    "where_column": "Location",
+    "where_value": "south bend",
+    "select_column": "School"
+  },
+  {
+    "question": "What is the number of losses when the goal difference was -8, and position is smaller than 10?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Goal Difference",
+    "where_value": "-8",
+    "select_column": "Losses"
+  },
+  {
+    "question": "Which date was game 35 on?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "35",
+    "select_column": "Date"
+  },
+  {
+    "question": "What was the away team that played against Fitzroy?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "fitzroy",
+    "select_column": "Away team"
+  },
+  {
+    "question": "Who has a former name of nordpr\u00f8ven?",
+    "headers": [
+      "Rank",
+      "Population",
+      "Name",
+      "Former Name",
+      "Municipality"
+    ],
+    "where_column": "Former Name",
+    "where_value": "nordpr\u00f8ven",
+    "select_column": "Name"
+  },
+  {
+    "question": "What is the name of the boat that was built by Chatham and Laid down of 25 april 1887?",
+    "headers": [
+      "Name",
+      "Builder",
+      "Laid down",
+      "Launched",
+      "Completed"
+    ],
+    "where_column": "Builder",
+    "where_value": "chatham",
+    "select_column": "Name"
+  },
+  {
+    "question": "What is the 20 year for Sulfur Hexafluoride?",
+    "headers": [
+      "Gas name",
+      "Chemical formula",
+      "Lifetime (years)",
+      "20-yr",
+      "100-yr",
+      "500-yr"
+    ],
+    "where_column": "Gas name",
+    "where_value": "Sulfur hexafluoride",
+    "select_column": "20-yr"
+  },
+  {
+    "question": "What week was it on November 19, 1995?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Kickoff [a ]",
+      "Game site",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "november 19, 1995",
+    "select_column": "Week"
+  },
+  {
+    "question": "What's the venue for the home team that scored 9.14 (68)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team score",
+    "where_value": "9.14 (68)",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What is the country of the player with a t6 place?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Place",
+    "where_value": "t6",
+    "select_column": "Country"
+  },
+  {
+    "question": "What is the 2007 with ch callaway's copyright in 2003?",
+    "headers": [
+      "Year",
+      "2009",
+      "2008",
+      "2007",
+      "2006",
+      "2005",
+      "2004",
+      "2003"
+    ],
+    "where_column": "2003",
+    "where_value": "ch callaway's copyright",
+    "select_column": "2007"
+  },
+  {
+    "question": "How many primary conferences were held in Allendale, Michigan?",
+    "headers": [
+      "Institution",
+      "Location",
+      "Founded",
+      "Affiliation",
+      "Enrollment",
+      "Team Nickname",
+      "Primary conference"
+    ],
+    "where_column": "Location",
+    "where_value": "Allendale, Michigan",
+    "select_column": "Primary conference"
+  },
+  {
+    "question": "Who is the s color commentator when the pregame host is jon sciambi?",
+    "headers": [
+      "Year",
+      "Network",
+      "Play-by-play announcers",
+      "s Color commentator",
+      "Pregame hosts",
+      "Pregame analysts"
+    ],
+    "where_column": "Pregame hosts",
+    "where_value": "Jon Sciambi",
+    "select_column": "s Color commentator"
+  },
+  {
+    "question": "Tell me the final score for january 9 for cincinnati bengals",
+    "headers": [
+      "Date",
+      "Visiting Team",
+      "Final Score",
+      "Host Team",
+      "Stadium"
+    ],
+    "where_column": "Date",
+    "where_value": "january 9",
+    "select_column": "Final Score"
+  },
+  {
+    "question": "What was the Attendance high on August 28?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "august 28",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "Which Thirds (Under 17's) have a Reserve of barnawartha?",
+    "headers": [
+      "YEAR",
+      "Seniors",
+      "Reserves",
+      "Thirds (Under 17's)",
+      "Fourths (Under 14's)"
+    ],
+    "where_column": "Reserves",
+    "where_value": "barnawartha",
+    "select_column": "Thirds (Under 17's)"
+  }
+]
