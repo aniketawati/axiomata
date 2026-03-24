@@ -1,0 +1,45 @@
+{
+  "schema_id": "flat_sports_results_004",
+  "domain": "flat_sports_results",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_sports_results_004",
+      "columns": [
+        {
+          "name": "Round",
+          "type": "TEXT"
+        },
+        {
+          "name": "Date",
+          "type": "TEXT"
+        },
+        {
+          "name": "Home team",
+          "type": "TEXT"
+        },
+        {
+          "name": "Home team score",
+          "type": "TEXT"
+        },
+        {
+          "name": "Away team",
+          "type": "TEXT"
+        },
+        {
+          "name": "Away team score",
+          "type": "TEXT"
+        },
+        {
+          "name": "Venue",
+          "type": "TEXT"
+        },
+        {
+          "name": "Crowd",
+          "type": "REAL"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}

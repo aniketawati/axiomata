@@ -1,0 +1,33 @@
+{
+  "schema_id": "flat_transportation_001",
+  "domain": "flat_transportation",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_transportation_001",
+      "columns": [
+        {
+          "name": "Station",
+          "type": "TEXT"
+        },
+        {
+          "name": "Line",
+          "type": "TEXT"
+        },
+        {
+          "name": "Location",
+          "type": "TEXT"
+        },
+        {
+          "name": "Passengers (daily)",
+          "type": "REAL"
+        },
+        {
+          "name": "Zone",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}

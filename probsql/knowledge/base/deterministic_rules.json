@@ -1,10 +1,115 @@
 [
   {
+    "table": "operator_given_type",
+    "condition": "string_not_temporal",
+    "result": "=",
+    "probability": 0.9740932642487047,
+    "sample_count": 189
+  },
+  {
+    "table": "conjunction_given_type",
+    "condition": "comparison",
+    "result": "none",
+    "probability": 0.9941176470588236,
+    "sample_count": 340
+  },
+  {
+    "table": "conjunction_given_type",
+    "condition": "multi_condition",
+    "result": "and",
+    "probability": 0.9951219512195122,
+    "sample_count": 410
+  },
+  {
+    "table": "conjunction_given_type",
+    "condition": "implied_column",
+    "result": "none",
+    "probability": 0.9846938775510204,
+    "sample_count": 196
+  },
+  {
+    "table": "conjunction_given_type",
+    "condition": "string_not_temporal",
+    "result": "none",
+    "probability": 0.9788359788359788,
+    "sample_count": 189
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_education",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 212
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_entertainment",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 240
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_geography",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 243
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_military_history",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 220
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_politics_elections",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 195
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_rankings_awards",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 243
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_science_tech",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 235
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_sports_results",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 219
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_sports_roster",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 237
+  },
+  {
+    "table": "temporal_given_domain",
+    "condition": "flat_transportation",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 242
+  },
+  {
     "table": "negation_given_type",
     "condition": "simple",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 975
+    "sample_count": 2126
   },
   {
     "table": "negation_given_type",
@@ -28,11 +133,39 @@
     "sample_count": 646
   },
   {
+    "table": "negation_given_type",
+    "condition": "comparison",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 340
+  },
+  {
+    "table": "negation_given_type",
+    "condition": "multi_condition",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 410
+  },
+  {
+    "table": "negation_given_type",
+    "condition": "implied_column",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 196
+  },
+  {
+    "table": "negation_given_type",
+    "condition": "string_not_temporal",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 189
+  },
+  {
     "table": "join_given_type",
     "condition": "simple",
     "result": "False",
-    "probability": 0.9887179487179487,
-    "sample_count": 975
+    "probability": 0.9948259642521167,
+    "sample_count": 2126
   },
   {
     "table": "join_given_type",
@@ -47,5 +180,33 @@
     "result": "False",
     "probability": 0.9845201238390093,
     "sample_count": 646
+  },
+  {
+    "table": "join_given_type",
+    "condition": "comparison",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 340
+  },
+  {
+    "table": "join_given_type",
+    "condition": "multi_condition",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 410
+  },
+  {
+    "table": "join_given_type",
+    "condition": "implied_column",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 196
+  },
+  {
+    "table": "join_given_type",
+    "condition": "string_not_temporal",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 189
   }
 ]

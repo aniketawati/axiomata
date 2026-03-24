@@ -37,11 +37,12 @@ TYPE_DEFAULTS = {
     "TIMESTAMP": {"default_operator": ">=", "fallback": "BETWEEN"},
     "DATE": {"default_operator": ">=", "fallback": "BETWEEN"},
     "VARCHAR": {"default_operator": "=", "fallback": "LIKE"},
-    "TEXT": {"default_operator": "LIKE", "fallback": "="},
+    "TEXT": {"default_operator": "=", "fallback": "LIKE"},
     "INT": {"default_operator": "=", "comparison_operators": [">=", "<=", ">", "<"]},
     "BIGINT": {"default_operator": "=", "comparison_operators": [">=", "<=", ">", "<"]},
     "FLOAT": {"default_operator": ">=", "comparison_operators": [">=", "<=", ">", "<"]},
     "DECIMAL": {"default_operator": ">=", "comparison_operators": [">=", "<=", ">", "<"]},
+    "REAL": {"default_operator": "=", "comparison_operators": [">=", "<=", ">", "<"]},
 }
 
 
@@ -130,7 +131,7 @@ class OperatorExtractor:
                 return "=", 0.8, None
 
         # Numeric types with comparison context
-        if base_type in ("INT", "BIGINT", "FLOAT", "DECIMAL"):
+        if base_type in ("INT", "BIGINT", "FLOAT", "DECIMAL", "REAL"):
             if re.search(r'\d', phrase_lower):
                 return type_info.get("default_operator", "="), 0.6, None
 

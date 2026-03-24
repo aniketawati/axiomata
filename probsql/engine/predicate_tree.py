@@ -59,9 +59,17 @@ def to_sql(node):
     return ""
 
 
+def _quote_col(name):
+    """Quote a column name if it contains spaces or special characters."""
+    if " " in name or "/" in name or "(" in name or "#" in name or "." in name:
+        return f'"{name}"'
+    return name
+
+
 def _atomic_to_sql(node):
     """Render a single atomic predicate as SQL."""
-    col = f"{node.table}.{node.column}" if node.table else node.column
+    col_name = _quote_col(node.column)
+    col = f"{node.table}.{col_name}" if node.table else col_name
     op = node.operator
     val = node.value
 

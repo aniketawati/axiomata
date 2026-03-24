@@ -1,0 +1,33 @@
+{
+  "schema_id": "flat_rankings_awards_003",
+  "domain": "flat_rankings_awards",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_rankings_awards_003",
+      "columns": [
+        {
+          "name": "Position",
+          "type": "REAL"
+        },
+        {
+          "name": "Company",
+          "type": "TEXT"
+        },
+        {
+          "name": "Industry",
+          "type": "TEXT"
+        },
+        {
+          "name": "Revenue ($B)",
+          "type": "REAL"
+        },
+        {
+          "name": "Employees",
+          "type": "REAL"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}

@@ -1,0 +1,33 @@
+{
+  "schema_id": "flat_entertainment_003",
+  "domain": "flat_entertainment",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_entertainment_003",
+      "columns": [
+        {
+          "name": "Song",
+          "type": "TEXT"
+        },
+        {
+          "name": "Artist",
+          "type": "TEXT"
+        },
+        {
+          "name": "Year",
+          "type": "TEXT"
+        },
+        {
+          "name": "Peak Position",
+          "type": "REAL"
+        },
+        {
+          "name": "Weeks on Chart",
+          "type": "REAL"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}

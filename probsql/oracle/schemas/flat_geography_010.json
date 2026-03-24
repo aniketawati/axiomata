@@ -1,0 +1,33 @@
+{
+  "schema_id": "flat_geography_010",
+  "domain": "flat_geography",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_geography_010",
+      "columns": [
+        {
+          "name": "City",
+          "type": "TEXT"
+        },
+        {
+          "name": "State/Province",
+          "type": "TEXT"
+        },
+        {
+          "name": "Country",
+          "type": "TEXT"
+        },
+        {
+          "name": "Elevation (m)",
+          "type": "REAL"
+        },
+        {
+          "name": "Time Zone",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}

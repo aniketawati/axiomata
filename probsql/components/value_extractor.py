@@ -61,9 +61,15 @@ class ValueExtractor:
         if base_type in ("TIMESTAMP", "DATE"):
             return None, "temporal", 0.5
 
-        # String types
-        if base_type in ("VARCHAR", "TEXT"):
-            # Check for enum-like values from context
+        # For REAL type, try number extraction
+        if base_type == "REAL":
+            val, vtype, conf = self._extract_number(phrase)
+            if val is not None:
+                return val, vtype, conf
+            # Fall through to string extraction for REAL columns with string values
+
+        # String types (VARCHAR, TEXT, REAL-as-string)
+        if base_type in ("VARCHAR", "TEXT", "REAL"):
             return self._extract_string_value(phrase, col_name)
 
         return self._extract_generic(phrase)
@@ -162,21 +168,54 @@ class ValueExtractor:
         """Extract string value from English phrase."""
         phrase_lower = phrase.lower()
 
-        # Quoted strings
+        # Quoted strings (highest priority)
         m = re.search(r'["\']([^"\']+)["\']', phrase)
         if m:
             return m.group(1), "string_literal", 0.95
 
-        # Value after "is", "equals", "named", "called", "titled"
-        for keyword in ["is", "equals", "named", "called", "titled", "labeled"]:
-            m = re.search(rf'\b{keyword}\s+["\']?(\w[\w\s]*?)["\']?\s*$', phrase_lower)
+        # Value after "is", "equals", "named", "called", "titled", "for", "of", "played for"
+        for keyword in ["is", "equals", "named", "called", "titled", "labeled",
+                        "played for", "plays for", "played at", "from"]:
+            m = re.search(rf'\b{keyword}\s+["\']?(.+?)["\']?(?:\s*\??\s*)$', phrase_lower)
             if m:
-                return m.group(1).strip(), "string_literal", 0.75
+                val = m.group(1).strip().rstrip("?. ")
+                if len(val) > 1:
+                    return val, "string_literal", 0.8
 
-        # Proper nouns (capitalized words that aren't at sentence start)
-        proper_nouns = re.findall(r'(?<!\. )(?<!\A)([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)', phrase)
-        if proper_nouns:
-            return proper_nouns[0], "string_literal", 0.65
+        # Proper noun sequences (capitalized multi-word: "Butler CC (KS)", "Amir Johnson")
+        # Match sequences of capitalized words possibly with special chars between them
+        proper_nouns = re.findall(
+            r'(?:^|\s)([A-Z][a-zA-Z]*(?:[\s\-/()]+[A-Za-z0-9.()]+)*)',
+            phrase
+        )
+        # Filter out sentence-initial words by checking if they're at position > 0
+        candidates = []
+        for pn in proper_nouns:
+            pn = pn.strip()
+            start_pos = phrase.find(pn)
+            # Skip if it's the very first word and only one word
+            if start_pos == 0 and " " not in pn and len(pn.split()) == 1:
+                # Could be sentence start — check if it looks like a question word
+                first_word = pn.split()[0].lower()
+                if first_word in ("what", "who", "where", "when", "how", "which", "the"):
+                    continue
+            if len(pn) > 1:
+                candidates.append(pn)
+
+        if candidates:
+            # Prefer longer proper nouns (more specific)
+            best = max(candidates, key=len)
+            return best, "string_literal", 0.7
+
+        # Number-like strings that should stay as strings (e.g., "number 42", "player 3")
+        m = re.search(r'\b(?:number|no\.?|#)\s*(\d+)', phrase_lower)
+        if m:
+            return m.group(1), "string_literal", 0.8
+
+        # Bare numbers at end of phrase for text columns
+        m = re.search(r'\b(\d+)\s*\??$', phrase_lower)
+        if m:
+            return m.group(1), "string_literal", 0.5
 
         return None, "unknown", 0.3
 

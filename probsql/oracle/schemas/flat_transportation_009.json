@@ -1,0 +1,33 @@
+{
+  "schema_id": "flat_transportation_009",
+  "domain": "flat_transportation",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_transportation_009",
+      "columns": [
+        {
+          "name": "Route",
+          "type": "TEXT"
+        },
+        {
+          "name": "Origin",
+          "type": "TEXT"
+        },
+        {
+          "name": "Distance (km)",
+          "type": "REAL"
+        },
+        {
+          "name": "Operator",
+          "type": "TEXT"
+        },
+        {
+          "name": "Frequency",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}

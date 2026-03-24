@@ -1,24 +1,6 @@
 [
   {
     "table": "operator_given_type",
-    "condition": "simple",
-    "max_probability": 0.5950804162724692,
-    "distribution": {
-      "=": 0.5950804162724692,
-      ">": 0.25165562913907286,
-      "IS NOT NULL": 0.041627246925260174,
-      ">=": 0.04446546830652791,
-      "<": 0.03878902554399243,
-      "<=": 0.001892147587511826,
-      "IS NULL": 0.003784295175023652,
-      "BETWEEN": 0.006622516556291391,
-      "IN": 0.004730368968779565,
-      "LIKE": 0.011352885525070956
-    },
-    "sample_count": 975
-  },
-  {
-    "table": "operator_given_type",
     "condition": "compound",
     "max_probability": 0.47035040431266845,
     "distribution": {
@@ -99,15 +81,29 @@
     "sample_count": 487
   },
   {
+    "table": "operator_given_type",
+    "condition": "comparison",
+    "max_probability": 0.3965014577259475,
+    "distribution": {
+      ">": 0.3965014577259475,
+      "<": 0.2886297376093295,
+      ">=": 0.17784256559766765,
+      "<=": 0.1282798833819242,
+      "AND": 0.0029154518950437317,
+      "=": 0.0058309037900874635
+    },
+    "sample_count": 340
+  },
+  {
     "table": "conjunction_given_type",
     "condition": "simple",
-    "max_probability": 0.27487179487179486,
+    "max_probability": 0.6674506114769521,
     "distribution": {
-      "none": 0.27487179487179486,
-      "and": 0.014358974358974359,
-      "AND": 0.07076923076923076
+      "none": 0.6674506114769521,
+      "and": 0.00658513640639699,
+      "AND": 0.032455315145813735
     },
-    "sample_count": 975
+    "sample_count": 2126
   },
   {
     "table": "conjunction_given_type",

@@ -116,8 +116,8 @@
       "fallback": "LIKE"
     },
     "TEXT": {
-      "default_operator": "LIKE",
-      "fallback": "="
+      "default_operator": "=",
+      "fallback": "LIKE"
     },
     "INT": {
       "default_operator": "=",
@@ -154,21 +154,31 @@
         ">",
         "<"
       ]
+    },
+    "REAL": {
+      "default_operator": "=",
+      "comparison_operators": [
+        ">=",
+        "<=",
+        ">",
+        "<"
+      ]
     }
   },
   "operator_frequency": {
-    "=": 3369,
-    ">": 1397,
+    "=": 5605,
+    ">": 1629,
     "IN": 296,
     "IS NOT NULL": 412,
-    ">=": 1248,
-    "<": 794,
+    ">=": 1313,
+    "<": 916,
     "BETWEEN": 233,
-    "IS NULL": 429,
+    "IS NULL": 430,
     "!=": 186,
     "NOT IN": 62,
-    "<=": 56,
+    "<=": 103,
     "EXISTS": 2,
+    "AND": 75,
     "LIKE": 48,
     "NOT EXISTS": 1,
     "NOT LIKE": 3,

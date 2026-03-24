@@ -128,21 +128,35 @@ class ColumnMatcher:
     def _keyword_match_score(self, phrase_lower, phrase_tokens, cand):
         """Score based on semantic expansion dictionary match."""
         col_name = cand.column_name
-        # Try direct column name match
-        col_tokens = col_name.split("_")
-
-        # Check semantic map for column name patterns
         best_score = 0.0
 
-        # Direct column name in phrase
-        if col_name in phrase_lower or col_name.replace("_", " ") in phrase_lower:
+        # Direct column name in phrase (handles both "created_at" and "School/Club Team")
+        col_lower = col_name.lower()
+        if col_lower in phrase_lower:
+            best_score = max(best_score, 1.0)
+        elif col_name.replace("_", " ").lower() in phrase_lower:
             best_score = max(best_score, 1.0)
 
+        # Tokenize column name — handle both snake_case and human-readable
+        if "_" in col_name and " " not in col_name:
+            col_tokens = col_name.lower().split("_")
+        else:
+            col_tokens = re.findall(r'\b[a-z]+\b', col_lower)
+
         # Check each token of column name
-        col_token_matches = sum(1 for t in col_tokens if t in phrase_tokens and t not in ("id", "at", "is", "has"))
-        if col_tokens:
-            token_ratio = col_token_matches / len([t for t in col_tokens if t not in ("id", "at", "is", "has")] or [1])
+        skip_tokens = {"id", "at", "is", "has", "of", "the", "and", "in", "for", "a", "an"}
+        meaningful_col_tokens = [t for t in col_tokens if t not in skip_tokens and len(t) > 1]
+        if meaningful_col_tokens:
+            col_token_matches = sum(1 for t in meaningful_col_tokens if t in phrase_tokens)
+            token_ratio = col_token_matches / len(meaningful_col_tokens)
             best_score = max(best_score, min(token_ratio, 1.0))
+
+        # Partial column name match for multi-word headers
+        # e.g., "Home team" matches question containing "home team" or just "team"
+        if " " in col_name and len(meaningful_col_tokens) >= 2:
+            for token in meaningful_col_tokens:
+                if len(token) >= 4 and token in phrase_tokens:
+                    best_score = max(best_score, 0.6)
 
         # Check semantic expansion via reverse index
         if hasattr(self, '_phrase_to_patterns'):

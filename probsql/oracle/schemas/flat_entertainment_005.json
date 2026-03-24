@@ -1,0 +1,37 @@
+{
+  "schema_id": "flat_entertainment_005",
+  "domain": "flat_entertainment",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_entertainment_005",
+      "columns": [
+        {
+          "name": "Title",
+          "type": "TEXT"
+        },
+        {
+          "name": "Director",
+          "type": "TEXT"
+        },
+        {
+          "name": "Year",
+          "type": "TEXT"
+        },
+        {
+          "name": "Genre",
+          "type": "TEXT"
+        },
+        {
+          "name": "Box Office ($M)",
+          "type": "REAL"
+        },
+        {
+          "name": "Rating",
+          "type": "TEXT"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}

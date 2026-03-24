@@ -1,0 +1,37 @@
+{
+  "schema_id": "flat_transportation_005",
+  "domain": "flat_transportation",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_transportation_005",
+      "columns": [
+        {
+          "name": "Airport",
+          "type": "TEXT"
+        },
+        {
+          "name": "City",
+          "type": "TEXT"
+        },
+        {
+          "name": "Country",
+          "type": "TEXT"
+        },
+        {
+          "name": "IATA Code",
+          "type": "TEXT"
+        },
+        {
+          "name": "Passengers (2019)",
+          "type": "REAL"
+        },
+        {
+          "name": "Runways",
+          "type": "REAL"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}

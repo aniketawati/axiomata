@@ -1,18 +1,18 @@
 {
   "operator_given_type": {
     "simple": {
-      "=": 0.5950804162724692,
-      ">": 0.25165562913907286,
-      "IS NOT NULL": 0.041627246925260174,
-      ">=": 0.04446546830652791,
-      "<": 0.03878902554399243,
-      "<=": 0.001892147587511826,
-      "IS NULL": 0.003784295175023652,
-      "BETWEEN": 0.006622516556291391,
-      "IN": 0.004730368968779565,
-      "LIKE": 0.011352885525070956,
-      "_count": 975,
-      "_total_observations": 1057
+      "=": 0.8063348416289593,
+      ">": 0.12036199095022625,
+      "IS NOT NULL": 0.019909502262443438,
+      ">=": 0.021266968325791856,
+      "<": 0.018552036199095023,
+      "<=": 0.0009049773755656109,
+      "IS NULL": 0.0018099547511312218,
+      "BETWEEN": 0.003167420814479638,
+      "IN": 0.0022624434389140274,
+      "LIKE": 0.005429864253393665,
+      "_count": 2126,
+      "_total_observations": 2210
     },
     "compound": {
       "=": 0.47035040431266845,
@@ -78,16 +78,50 @@
       "NOT LIKE": 0.0008250825082508251,
       "_count": 487,
       "_total_observations": 2424
+    },
+    "comparison": {
+      ">": 0.3965014577259475,
+      "<": 0.2886297376093295,
+      ">=": 0.17784256559766765,
+      "<=": 0.1282798833819242,
+      "AND": 0.0029154518950437317,
+      "=": 0.0058309037900874635,
+      "_count": 340,
+      "_total_observations": 343
+    },
+    "multi_condition": {
+      "=": 0.7865168539325843,
+      ">": 0.09775280898876404,
+      "<=": 0.0033707865168539327,
+      "<": 0.025842696629213482,
+      ">=": 0.0044943820224719105,
+      "AND": 0.08202247191011236,
+      "_count": 410,
+      "_total_observations": 890
+    },
+    "implied_column": {
+      "=": 0.9698492462311558,
+      ">": 0.02512562814070352,
+      "IS NULL": 0.005025125628140704,
+      "_count": 196,
+      "_total_observations": 199
+    },
+    "string_not_temporal": {
+      "=": 0.9740932642487047,
+      ">": 0.02072538860103627,
+      "AND": 0.0051813471502590676,
+      "_count": 189,
+      "_total_observations": 193
     }
   },
   "conjunction_given_type": {
     "simple": {
-      "none": 0.27487179487179486,
-      "and": 0.014358974358974359,
-      "null": 0.64,
-      "AND": 0.07076923076923076,
-      "_count": 975,
-      "_total_observations": 975
+      "none": 0.6674506114769521,
+      "and": 0.00658513640639699,
+      "null": 0.29350893697083724,
+      "AND": 0.032455315145813735,
+      "_count": 2126,
+      "_total_observations": 2126
     },
     "compound": {
       "and": 0.15858668857847166,
@@ -128,6 +162,30 @@
       "AND/OR": 0.014373716632443531,
       "_count": 487,
       "_total_observations": 487
+    },
+    "comparison": {
+      "none": 0.9941176470588236,
+      "and": 0.0058823529411764705,
+      "_count": 340,
+      "_total_observations": 340
+    },
+    "multi_condition": {
+      "and": 0.9951219512195122,
+      "none": 0.004878048780487805,
+      "_count": 410,
+      "_total_observations": 410
+    },
+    "implied_column": {
+      "none": 0.9846938775510204,
+      "and": 0.015306122448979591,
+      "_count": 196,
+      "_total_observations": 196
+    },
+    "string_not_temporal": {
+      "none": 0.9788359788359788,
+      "and": 0.021164021164021163,
+      "_count": 189,
+      "_total_observations": 189
     }
   },
   "temporal_given_domain": {
@@ -148,6 +206,56 @@
       "True": 0.369727047146402,
       "_count": 403,
       "_total_observations": 403
+    },
+    "flat_education": {
+      "False": 1.0,
+      "_count": 212,
+      "_total_observations": 212
+    },
+    "flat_entertainment": {
+      "False": 1.0,
+      "_count": 240,
+      "_total_observations": 240
+    },
+    "flat_geography": {
+      "False": 1.0,
+      "_count": 243,
+      "_total_observations": 243
+    },
+    "flat_military_history": {
+      "False": 1.0,
+      "_count": 220,
+      "_total_observations": 220
+    },
+    "flat_politics_elections": {
+      "False": 1.0,
+      "_count": 195,
+      "_total_observations": 195
+    },
+    "flat_rankings_awards": {
+      "False": 1.0,
+      "_count": 243,
+      "_total_observations": 243
+    },
+    "flat_science_tech": {
+      "False": 1.0,
+      "_count": 235,
+      "_total_observations": 235
+    },
+    "flat_sports_results": {
+      "False": 1.0,
+      "_count": 219,
+      "_total_observations": 219
+    },
+    "flat_sports_roster": {
+      "False": 1.0,
+      "_count": 237,
+      "_total_observations": 237
+    },
+    "flat_transportation": {
+      "False": 1.0,
+      "_count": 242,
+      "_total_observations": 242
     },
     "healthcare": {
       "False": 0.6622222222222223,
@@ -195,8 +303,8 @@
   "negation_given_type": {
     "simple": {
       "False": 1.0,
-      "_count": 975,
-      "_total_observations": 975
+      "_count": 2126,
+      "_total_observations": 2126
     },
     "compound": {
       "False": 0.9704190632703369,
@@ -220,14 +328,34 @@
       "True": 0.15195071868583163,
       "_count": 487,
       "_total_observations": 487
+    },
+    "comparison": {
+      "False": 1.0,
+      "_count": 340,
+      "_total_observations": 340
+    },
+    "multi_condition": {
+      "False": 1.0,
+      "_count": 410,
+      "_total_observations": 410
+    },
+    "implied_column": {
+      "False": 1.0,
+      "_count": 196,
+      "_total_observations": 196
+    },
+    "string_not_temporal": {
+      "False": 1.0,
+      "_count": 189,
+      "_total_observations": 189
     }
   },
   "join_given_type": {
     "simple": {
-      "False": 0.9887179487179487,
-      "True": 0.011282051282051283,
-      "_count": 975,
-      "_total_observations": 975
+      "False": 0.9948259642521167,
+      "True": 0.0051740357478833494,
+      "_count": 2126,
+      "_total_observations": 2126
     },
     "compound": {
       "False": 0.7682826622843056,
@@ -252,6 +380,26 @@
       "True": 0.8542094455852156,
       "_count": 487,
       "_total_observations": 487
+    },
+    "comparison": {
+      "False": 1.0,
+      "_count": 340,
+      "_total_observations": 340
+    },
+    "multi_condition": {
+      "False": 1.0,
+      "_count": 410,
+      "_total_observations": 410
+    },
+    "implied_column": {
+      "False": 1.0,
+      "_count": 196,
+      "_total_observations": 196
+    },
+    "string_not_temporal": {
+      "False": 1.0,
+      "_count": 189,
+      "_total_observations": 189
     }
   },
   "temporal_type_dist": {

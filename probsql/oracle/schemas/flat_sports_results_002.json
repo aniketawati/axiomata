@@ -1,0 +1,41 @@
+{
+  "schema_id": "flat_sports_results_002",
+  "domain": "flat_sports_results",
+  "schema_style": "flat",
+  "tables": [
+    {
+      "name": "table_sports_results_002",
+      "columns": [
+        {
+          "name": "Week",
+          "type": "REAL"
+        },
+        {
+          "name": "Date",
+          "type": "TEXT"
+        },
+        {
+          "name": "Opponent",
+          "type": "TEXT"
+        },
+        {
+          "name": "Result",
+          "type": "TEXT"
+        },
+        {
+          "name": "Score",
+          "type": "TEXT"
+        },
+        {
+          "name": "Venue",
+          "type": "TEXT"
+        },
+        {
+          "name": "Attendance",
+          "type": "REAL"
+        }
+      ]
+    }
+  ],
+  "relationships": []
+}
