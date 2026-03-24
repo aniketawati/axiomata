@@ -64,7 +64,7 @@ def wikisql_table_to_schema(table):
         })
     return {
         "tables": [{
-            "name": table["name"],
+            "name": table.get("name", "table_" + table.get("id", "unknown").replace("-", "_")),
             "columns": columns,
         }]
     }
