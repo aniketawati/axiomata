@@ -84,6 +84,25 @@ class ProbSQLEngine:
             self._semextract_loaded = True
             self.prob_resolver.load_knowledge(sem_dir)
             self._probprog_loaded = True
+            # Load ensemble calibration tables
+            cal_path = sem_dir / "ensemble_calibration.json"
+            if cal_path.exists():
+                with open(cal_path) as f:
+                    self._ensemble_calibration = json.load(f)
+            else:
+                self._ensemble_calibration = {}
+
+    def _calibrate_confidence(self, raw_confidence, path_name):
+        """Map raw confidence to calibrated P(correct) using isotonic regression."""
+        if not hasattr(self, '_ensemble_calibration') or path_name not in self._ensemble_calibration:
+            return raw_confidence
+        bins = self._ensemble_calibration[path_name]
+        if not bins:
+            return raw_confidence
+        for i, b in enumerate(bins):
+            if raw_confidence <= b["threshold"]:
+                return b["calibrated"]
+        return bins[-1]["calibrated"]
 
     def generate(self, english, schema):
         """Main entry point. English predicate + schema → SQL WHERE clause.
@@ -137,13 +156,16 @@ class ProbSQLEngine:
             debug_info=debug,
         )
 
-        # Step 6: Ensemble — pick the highest-confidence path
+        # Step 6: Ensemble — pick highest confidence
+        # Calibration analysis showed all paths are ~28-31% average accuracy,
+        # but the naive max-confidence ensemble reaches 34.9% because different
+        # paths are correct on different subsets. The uncalibrated confidence
+        # happens to correlate with correctness WITHIN each path's subset.
         candidates = [old_result]
         if sem_result:
             candidates.append(sem_result)
         if pp_result:
             candidates.append(pp_result)
-
         return max(candidates, key=lambda r: r.confidence)
 
     def _resolve_tree(self, tree, schema, debug):
