@@ -697,14 +697,18 @@ class ProbabilisticResolver:
 
     def __init__(self):
         self.hmm_parser = HMMParser()
-        self.feature_hmm = None  # loaded if available
+        self.feature_hmm = None
+        self.span_detector = None  # span boundary detector (preferred)
         self.markov_resolver = MarkovResolver()
 
     def load_knowledge(self, knowledge_dir=None):
         kdir = Path(knowledge_dir) if knowledge_dir else KNOWLEDGE_DIR
         self.hmm_parser.load_knowledge(kdir)
         self.markov_resolver.load_knowledge(kdir)
-        # Try to load feature-based HMM
+        # Load span boundary detector (preferred for value extraction)
+        from probsql.semextract.span_detector import ValueSpanDetector
+        self.span_detector = ValueSpanDetector()
+        # Try to load feature-based HMM (fallback)
         from probsql.semextract.feature_hmm import FeatureHMM
         fhmm = FeatureHMM()
         fhmm.load_knowledge(kdir)
@@ -726,13 +730,18 @@ class ProbabilisticResolver:
         # Step 1: Classify question type
         q_type = classify_question_type(question)
 
-        # Step 2: Parse tokens into roles
-        # Use feature-based HMM if available (trained from Opus value spans)
-        if self.feature_hmm:
+        # Step 2: Parse tokens and extract value
+        # Use span boundary detector if available (from Opus labels),
+        # then fall back to rule-based HMM for token roles
+        token_roles = self.hmm_parser.parse(question, headers)
+
+        if self.span_detector:
+            span = self.span_detector.detect(question, headers)
+            value = span.text if span else extract_value_from_parse(token_roles)
+        elif self.feature_hmm:
             parsed, value = self.feature_hmm.parse(question, headers)
             token_roles = [TokenRole(t, r) for t, r in parsed]
         else:
-            token_roles = self.hmm_parser.parse(question, headers)
             value = extract_value_from_parse(token_roles)
 
         # Step 3: Identify SELECT column
