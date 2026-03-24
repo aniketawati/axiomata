@@ -35,7 +35,7 @@ COLUMN_SEMANTIC_TYPES = {
     "place": {"location", "venue", "country", "city", "capital", "state",
               "district", "county", "ground", "stadium", "arena", "nation",
               "headquarters", "base", "region", "province", "hometown",
-              "birthplace"},
+              "birthplace", "common", "municipality", "territory", "area"},
     "team_org": {"team", "opponent", "club", "school", "university", "college",
                  "company", "party", "network", "organization", "affiliate",
                  "carrier", "airline", "away", "home", "visitor"},

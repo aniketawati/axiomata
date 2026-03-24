@@ -132,11 +132,23 @@ class ValueSpanDetector:
                     if si_adj <= ei:
                         si = si_adj
 
-                # Strip trailing common verbs/fillers
+                # Strip leading prepositions/fillers that leaked in
+                strip_leading_extra = {"represents", "number", "named", "called",
+                                       "titled", "labeled"}
+                while span_text.split() and span_text.split()[0].lower().rstrip(",") in strip_leading_extra:
+                    first = span_text.split()[0]
+                    span_text = span_text[len(first):].strip()
+                    si += 1
+                    if si > ei:
+                        break
+
+                # Strip trailing units, verbs, fillers
                 strip_trailing = {"play", "plays", "played", "score", "scored", "have",
                                   "has", "had", "is", "are", "was", "were", "as", "the",
                                   "a", "an", "in", "on", "at", "for", "with", "by",
-                                  "does", "did", "do", "result", "team"}
+                                  "does", "did", "do", "result", "team", "points",
+                                  "wins", "losses", "goals", "games", "times",
+                                  "season", "match", "round", "total"}
                 while span_text.split() and span_text.split()[-1].lower().rstrip("?,") in strip_trailing:
                     last = span_text.split()[-1]
                     span_text = span_text[:-(len(last))].strip().rstrip()
