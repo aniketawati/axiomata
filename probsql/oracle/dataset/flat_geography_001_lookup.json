@@ -10,16 +10,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Country"],
+        "columns_referenced": [
+          "table_geography_001.Country"
+        ],
         "select_column": "Capital",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -34,16 +40,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Country"],
+        "columns_referenced": [
+          "table_geography_001.Country"
+        ],
         "select_column": "Official Language",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -58,16 +70,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Country"],
+        "columns_referenced": [
+          "table_geography_001.Country"
+        ],
         "select_column": "Currency",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -75,27 +93,33 @@
       }
     },
     {
-      "english": "What is the area of Canada?",
+      "english": "What country has an area of 9984670 km squared?",
       "target_table": "table_geography_001",
-      "sql_where": "Country = 'Canada'",
+      "sql_where": "\"Area (km²)\" = 9984670",
       "requires_join": false,
       "join_clause": null,
       "latent_variables": {
-        "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Country"],
-        "select_column": "Area (km\u00b2)",
-        "operators_used": ["="],
+        "predicate_type": "lookup_number",
+        "columns_referenced": [
+          "table_geography_001.Area (km²)"
+        ],
+        "select_column": "Country",
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "number"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
-        "value_in_question": "Canada"
+        "value_in_question": "9984670"
       }
     },
     {
@@ -106,16 +130,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Country"],
+        "columns_referenced": [
+          "table_geography_001.Country"
+        ],
         "select_column": "Capital",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -130,16 +160,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Capital"],
+        "columns_referenced": [
+          "table_geography_001.Capital"
+        ],
         "select_column": "Country",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -154,16 +190,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Capital"],
+        "columns_referenced": [
+          "table_geography_001.Capital"
+        ],
         "select_column": "Official Language",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -178,16 +220,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Capital"],
+        "columns_referenced": [
+          "table_geography_001.Capital"
+        ],
         "select_column": "Currency",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -202,16 +250,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Official Language"],
+        "columns_referenced": [
+          "table_geography_001.Official Language"
+        ],
         "select_column": "Country",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -226,16 +280,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Currency"],
+        "columns_referenced": [
+          "table_geography_001.Currency"
+        ],
         "select_column": "Capital",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "multiple countries may use Euro",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -243,99 +303,153 @@
       }
     },
     {
-      "english": "What country uses the Yen?",
+      "english": "What is the capital of the country with an area of 9372610 km squared?",
       "target_table": "table_geography_001",
-      "sql_where": "Currency = 'Yen'",
+      "sql_where": "\"Area (km²)\" = 9372610",
       "requires_join": false,
       "join_clause": null,
       "latent_variables": {
-        "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Currency"],
-        "select_column": "Country",
-        "operators_used": ["="],
+        "predicate_type": "lookup_number",
+        "columns_referenced": [
+          "table_geography_001.Area (km²)"
+        ],
+        "select_column": "Capital",
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "number"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
-        "value_in_question": "Yen"
+        "value_in_question": "9372610"
       }
     },
     {
-      "english": "What is the official language of the country with the Rupee?",
+      "english": "What language is official in the country with area 8515767?",
       "target_table": "table_geography_001",
-      "sql_where": "Currency = 'Rupee'",
+      "sql_where": "\"Area (km²)\" = 8515767",
       "requires_join": false,
       "join_clause": null,
       "latent_variables": {
-        "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Currency"],
+        "predicate_type": "lookup_number",
+        "columns_referenced": [
+          "table_geography_001.Area (km²)"
+        ],
         "select_column": "Official Language",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
-        "ambiguity_notes": "multiple countries may use Rupee",
+        "value_types": [
+          "number"
+        ],
+        "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
-        "value_in_question": "Rupee"
+        "value_in_question": "8515767"
       }
     },
     {
-      "english": "What country uses the Pound?",
+      "english": "What currency does the country with area 301340 use?",
       "target_table": "table_geography_001",
-      "sql_where": "Currency = 'Pound'",
+      "sql_where": "\"Area (km²)\" = 301340",
       "requires_join": false,
       "join_clause": null,
       "latent_variables": {
-        "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Currency"],
-        "select_column": "Country",
-        "operators_used": ["="],
-        "conjunction_type": "none",
-        "has_temporal": false,
-        "temporal_type": null,
-        "temporal_expression": null,
-        "has_negation": false,
-        "negation_scope": null,
-        "value_types": ["string_literal"],
-        "ambiguity_notes": "multiple countries may use Pound",
-        "column_reference_type": "direct",
-        "value_extraction_type": "verbatim",
-        "value_in_question": "Pound"
-      }
-    },
-    {
-      "english": "What currency does the Spanish-speaking country use?",
-      "target_table": "table_geography_001",
-      "sql_where": "\"Official Language\" = 'Spanish'",
-      "requires_join": false,
-      "join_clause": null,
-      "latent_variables": {
-        "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Official Language"],
+        "predicate_type": "lookup_number",
+        "columns_referenced": [
+          "table_geography_001.Area (km²)"
+        ],
         "select_column": "Currency",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
-        "ambiguity_notes": "multiple countries speak Spanish",
+        "value_types": [
+          "number"
+        ],
+        "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
-        "value_in_question": "Spanish"
+        "value_in_question": "301340"
+      }
+    },
+    {
+      "english": "What is the capital of the country with an area of 357114?",
+      "target_table": "table_geography_001",
+      "sql_where": "\"Area (km²)\" = 357114",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "lookup_number",
+        "columns_referenced": [
+          "table_geography_001.Area (km²)"
+        ],
+        "select_column": "Capital",
+        "operators_used": [
+          "="
+        ],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": [
+          "number"
+        ],
+        "ambiguity_notes": "none",
+        "column_reference_type": "direct",
+        "value_extraction_type": "verbatim",
+        "value_in_question": "357114"
+      }
+    },
+    {
+      "english": "What official language does the country with area 505990 km squared use?",
+      "target_table": "table_geography_001",
+      "sql_where": "\"Area (km²)\" = 505990",
+      "requires_join": false,
+      "join_clause": null,
+      "latent_variables": {
+        "predicate_type": "lookup_number",
+        "columns_referenced": [
+          "table_geography_001.Area (km²)"
+        ],
+        "select_column": "Official Language",
+        "operators_used": [
+          "="
+        ],
+        "conjunction_type": "none",
+        "has_temporal": false,
+        "temporal_type": null,
+        "temporal_expression": null,
+        "has_negation": false,
+        "negation_scope": null,
+        "value_types": [
+          "number"
+        ],
+        "ambiguity_notes": "none",
+        "column_reference_type": "direct",
+        "value_extraction_type": "verbatim",
+        "value_in_question": "505990"
       }
     },
     {
@@ -346,16 +460,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_proper_noun",
-        "columns_referenced": ["table_geography_001.Official Language"],
+        "columns_referenced": [
+          "table_geography_001.Official Language"
+        ],
         "select_column": "Capital",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "multiple countries speak Portuguese",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -370,16 +490,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_category",
-        "columns_referenced": ["table_geography_001.Official Language"],
-        "select_column": "Area (km\u00b2)",
-        "operators_used": ["="],
+        "columns_referenced": [
+          "table_geography_001.Official Language"
+        ],
+        "select_column": "Area (km²)",
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "multiple countries speak English",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -394,16 +520,25 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_category",
-        "columns_referenced": ["table_geography_001.Official Language", "table_geography_001.Currency"],
+        "columns_referenced": [
+          "table_geography_001.Official Language",
+          "table_geography_001.Currency"
+        ],
         "select_column": "Country",
-        "operators_used": ["=", "="],
+        "operators_used": [
+          "=",
+          "="
+        ],
         "conjunction_type": "and",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal", "string_literal"],
+        "value_types": [
+          "string_literal",
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -418,16 +553,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_category",
-        "columns_referenced": ["table_geography_001.Official Language"],
+        "columns_referenced": [
+          "table_geography_001.Official Language"
+        ],
         "select_column": "Country",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -442,16 +583,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "lookup_category",
-        "columns_referenced": ["table_geography_001.Official Language"],
+        "columns_referenced": [
+          "table_geography_001.Official Language"
+        ],
         "select_column": "Currency",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "multiple countries may speak Arabic",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -466,16 +613,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "reverse_lookup",
-        "columns_referenced": ["table_geography_001.Capital"],
+        "columns_referenced": [
+          "table_geography_001.Capital"
+        ],
         "select_column": "Official Language",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -490,16 +643,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "reverse_lookup",
-        "columns_referenced": ["table_geography_001.Capital"],
+        "columns_referenced": [
+          "table_geography_001.Capital"
+        ],
         "select_column": "Currency",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "none",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -514,16 +673,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "reverse_lookup",
-        "columns_referenced": ["table_geography_001.Currency"],
+        "columns_referenced": [
+          "table_geography_001.Currency"
+        ],
         "select_column": "Country",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "multiple countries may use Dollar",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -538,16 +703,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "year_as_string",
-        "columns_referenced": ["table_geography_001.Country"],
+        "columns_referenced": [
+          "table_geography_001.Country"
+        ],
         "select_column": "Capital",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "no year column; country used as proxy; year contextual",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",
@@ -562,16 +733,22 @@
       "join_clause": null,
       "latent_variables": {
         "predicate_type": "year_as_string",
-        "columns_referenced": ["table_geography_001.Country"],
+        "columns_referenced": [
+          "table_geography_001.Country"
+        ],
         "select_column": "Currency",
-        "operators_used": ["="],
+        "operators_used": [
+          "="
+        ],
         "conjunction_type": "none",
         "has_temporal": false,
         "temporal_type": null,
         "temporal_expression": null,
         "has_negation": false,
         "negation_scope": null,
-        "value_types": ["string_literal"],
+        "value_types": [
+          "string_literal"
+        ],
         "ambiguity_notes": "no year column; country used as proxy; year contextual",
         "column_reference_type": "direct",
         "value_extraction_type": "verbatim",

@@ -37,6 +37,7 @@ from probsql.engine.formatter import format_sql
 from probsql.semextract.decomposer import QuestionDecomposer
 from probsql.semextract.spotter import ValueSpotter
 from probsql.semextract.resolver import ColumnResolver
+from probsql.semextract.probprog import ProbabilisticResolver
 
 
 @dataclass
@@ -61,8 +62,11 @@ class ProbSQLEngine:
         self.question_decomposer = QuestionDecomposer()
         self.value_spotter = ValueSpotter()
         self.column_resolver = ColumnResolver()
+        # Compositional probabilistic program (Option B+E)
+        self.prob_resolver = ProbabilisticResolver()
         self._loaded = False
         self._semextract_loaded = False
+        self._probprog_loaded = False
 
     def load_knowledge(self, knowledge_dir):
         """Load all extracted knowledge from JSON files."""
@@ -78,6 +82,8 @@ class ProbSQLEngine:
             self.value_spotter.load_knowledge(sem_dir)
             self.column_resolver.load_knowledge(sem_dir)
             self._semextract_loaded = True
+            self.prob_resolver.load_knowledge(sem_dir)
+            self._probprog_loaded = True
 
     def generate(self, english, schema):
         """Main entry point. English predicate + schema → SQL WHERE clause.
@@ -91,10 +97,15 @@ class ProbSQLEngine:
         """
         debug = {"steps": []}
 
-        # Ensemble: run both paths, pick the higher-confidence result
+        # Ensemble: run all paths, pick the highest-confidence result
         sem_result = None
         if self._semextract_loaded:
             sem_result = self._try_semextract(english, schema, debug)
+
+        # Probabilistic program path (Markov chain + HMM)
+        pp_result = None
+        if self._probprog_loaded:
+            pp_result = self._try_probprog(english, schema, debug)
 
         # Step 1: Parse compound structure (old path)
         predicate_tree = self.conjunction_parser.parse(english)
@@ -126,11 +137,14 @@ class ProbSQLEngine:
             debug_info=debug,
         )
 
-        # Step 6: Ensemble — pick the higher-confidence path
-        if sem_result and sem_result.confidence > old_result.confidence:
-            return sem_result
+        # Step 6: Ensemble — pick the highest-confidence path
+        candidates = [old_result]
+        if sem_result:
+            candidates.append(sem_result)
+        if pp_result:
+            candidates.append(pp_result)
 
-        return old_result
+        return max(candidates, key=lambda r: r.confidence)
 
     def _resolve_tree(self, tree, schema, debug):
         """Recursively resolve the parsed tree into SQL predicates."""
@@ -254,6 +268,68 @@ class ProbSQLEngine:
         })
 
         return pred
+
+    def _try_probprog(self, english, schema, debug):
+        """Try the compositional probabilistic program path.
+
+        Uses Markov chain reasoning with HMM token parsing.
+        """
+        tables = schema.get("tables", [])
+        if not tables:
+            return None
+
+        table = tables[0]
+        headers = [col["name"] for col in table.get("columns", [])]
+        col_types = [col.get("type", "text") for col in table.get("columns", [])]
+        table_name = table["name"]
+
+        result = self.prob_resolver.resolve(english, headers, col_types)
+
+        if not result.get("where_value") or not result.get("where_column"):
+            return None
+
+        # Scale confidence to be comparable with other paths
+        # ProbProg Markov chain produces normalized probabilities (0-1/N_cols)
+        # which are naturally lower than the ad-hoc scores from other paths.
+        # Scale by N_cols to make the top candidate's score comparable.
+        raw_conf = result["confidence"]
+        n_cols = len(headers)
+        scaled_conf = min(raw_conf * n_cols * 0.8, 0.95)
+
+        col_name = result["where_column"]
+        value = result["where_value"]
+        operator = result["operator"]
+        confidence = scaled_conf
+
+        debug["steps"].append({
+            "step": "probprog",
+            "select": result.get("select_column"),
+            "value": value,
+            "value_type": result.get("value_type"),
+            "where_col": col_name,
+            "confidence": confidence,
+            "token_roles": result.get("token_roles", [])[:10],
+        })
+
+        tree = AtomicPredicate(
+            english_phrase=english,
+            table=table_name,
+            column=col_name,
+            operator=operator,
+            value=value,
+            confidence=confidence,
+            column_match_score=confidence,
+        )
+
+        sql_where = format_sql(tree)
+
+        return GenerationResult(
+            sql_where=sql_where,
+            confidence=confidence,
+            alternatives=[],
+            predicate_tree=tree,
+            debug_info=debug,
+        )
 
     def _try_semextract(self, english, schema, debug):
         """Try the semantic extraction pipeline for lookup-style questions.
