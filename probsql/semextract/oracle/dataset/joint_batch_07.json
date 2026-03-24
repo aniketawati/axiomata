@@ -1,0 +1,396 @@
+[
+  {
+    "question": "How many average wins for players ranked below 2 with earnings greater than $7,676,552?",
+    "headers": [
+      "Rank",
+      "Player",
+      "Country",
+      "Earnings( $ )",
+      "Wins"
+    ],
+    "where_column": "Earnings( $ )",
+    "where_value": "7,676,552",
+    "all_conditions": [
+      {
+        "column": "Earnings( $ )",
+        "value": "7,676,552"
+      },
+      {
+        "column": "Rank",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "question": "if there are 30 lifts, what is the name of the ski resort?",
+    "headers": [
+      "Name",
+      "Nearest city",
+      "Skiable area (acres)",
+      "Top elevation (feet)",
+      "Base elevation (feet)",
+      "Vertical (feet)",
+      "Runs",
+      "Lifts",
+      "Snowfall (in/year)"
+    ],
+    "where_column": "Lifts",
+    "where_value": "30"
+  },
+  {
+    "question": "Which result's venue was in Rotterdam, Netherlands?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Venue",
+    "where_value": "rotterdam, netherlands"
+  },
+  {
+    "question": "What is the lowest number of draws of the NTFA Div 2 Lilydale?",
+    "headers": [
+      "NTFA Div 2",
+      "Wins",
+      "Byes",
+      "Losses",
+      "Draws",
+      "Against"
+    ],
+    "where_column": "NTFA Div 2",
+    "where_value": "lilydale"
+  },
+  {
+    "question": "Which Notes have a Competition of world championships, and a Position of 2nd?",
+    "headers": [
+      "Year",
+      "Competition",
+      "Venue",
+      "Position",
+      "Notes"
+    ],
+    "where_column": "Competition",
+    "where_value": "world championships",
+    "all_conditions": [
+      {
+        "column": "Competition",
+        "value": "world championships"
+      },
+      {
+        "column": "Position",
+        "value": "2nd"
+      }
+    ]
+  },
+  {
+    "question": "Provide me with the names of all the villages (German) that has 76.3% of Slovenes in 1951.",
+    "headers": [
+      "Village (German)",
+      "Village (Slovenian)",
+      "Number of people 1991",
+      "Percent of Slovenes 1991",
+      "Percent of Slovenes 1951"
+    ],
+    "where_column": "Percent of Slovenes 1951",
+    "where_value": "76.3%"
+  },
+  {
+    "question": "What is the lowest Top-25 with Wins less than 0?",
+    "headers": [
+      "Tournament",
+      "Wins",
+      "Top-25",
+      "Events",
+      "Cuts made"
+    ],
+    "where_column": "Wins",
+    "where_value": "0"
+  },
+  {
+    "question": "What is the Year of the Coin with an Issue Price of $1089.95 and Mintage less than 900?",
+    "headers": [
+      "Year",
+      "Theme",
+      "Face Value",
+      "Weight",
+      "Diameter",
+      "Mintage",
+      "Issue Price"
+    ],
+    "where_column": "Issue Price",
+    "where_value": "$1089.95",
+    "all_conditions": [
+      {
+        "column": "Issue Price",
+        "value": "$1089.95"
+      },
+      {
+        "column": "Mintage",
+        "value": "900"
+      }
+    ]
+  },
+  {
+    "question": "What is the team's record on april 23?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "april 23"
+  },
+  {
+    "question": "When was the game when Footscray was the away team?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "footscray"
+  },
+  {
+    "question": "With the Type is game of friendly and the City Belgrade and November 2 as the Date what were the Results\u00b9?",
+    "headers": [
+      "Date",
+      "City",
+      "Opponent",
+      "Results\u00b9",
+      "Type of game"
+    ],
+    "where_column": "Type of game",
+    "where_value": "friendly",
+    "all_conditions": [
+      {
+        "column": "Type of game",
+        "value": "friendly"
+      },
+      {
+        "column": "City",
+        "value": "belgrade"
+      },
+      {
+        "column": "Date",
+        "value": "november 2"
+      }
+    ]
+  },
+  {
+    "question": "What party is Mick Young a member of?",
+    "headers": [
+      "Member",
+      "Party",
+      "Electorate",
+      "State",
+      "Term in office"
+    ],
+    "where_column": "Member",
+    "where_value": "mick young"
+  },
+  {
+    "question": "what is the earliest founded when the home city is mayag\u00fcez?",
+    "headers": [
+      "Club",
+      "Home city",
+      "Stadium",
+      "Founded",
+      "Joined PRSL"
+    ],
+    "where_column": "Home city",
+    "where_value": "mayag\u00fcez"
+  },
+  {
+    "question": "What is the hawthorn score at the year 2000?",
+    "headers": [
+      "Year",
+      "Round",
+      "Winner",
+      "Hawthorn score",
+      "St Kilda score",
+      "Attendance",
+      "Venue",
+      "Silk-Miller Medallist"
+    ],
+    "where_column": "Year",
+    "where_value": "2000"
+  },
+  {
+    "question": "Name the result for new york 8",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "District",
+    "where_value": "New York 8"
+  },
+  {
+    "question": "who directed the episode that 6.3 million u.s. viewers saw?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Prod. code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "U.S. viewers (millions)",
+    "where_value": "6.3"
+  },
+  {
+    "question": "What is the Year of the Film Belle of the Nineties?",
+    "headers": [
+      "Year",
+      "Film",
+      "Role",
+      "Director",
+      "Studio"
+    ],
+    "where_column": "Film",
+    "where_value": "belle of the nineties"
+  },
+  {
+    "question": "WHAT IS THE DATE WITH BOSTON ROAD TEAM AND 126-105 RESULT?",
+    "headers": [
+      "Game",
+      "Date",
+      "Home Team",
+      "Result",
+      "Road Team"
+    ],
+    "where_column": "Road Team",
+    "where_value": "boston",
+    "all_conditions": [
+      {
+        "column": "Road Team",
+        "value": "boston"
+      },
+      {
+        "column": "Result",
+        "value": "126-105"
+      }
+    ]
+  },
+  {
+    "question": "How many people were in the crowd with the away team being collingwood?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "collingwood"
+  },
+  {
+    "question": "What year was the building completed that has 10 floors?",
+    "headers": [
+      "Years tallest",
+      "Name",
+      "Height ft / m",
+      "Floors",
+      "Year completed"
+    ],
+    "where_column": "Floors",
+    "where_value": "10"
+  },
+  {
+    "question": "What party does William J. Jefferson?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Results",
+      "Candidates"
+    ],
+    "where_column": "Incumbent",
+    "where_value": "William J. Jefferson"
+  },
+  {
+    "question": "Which Date has a Game of game 3?",
+    "headers": [
+      "Game",
+      "Date",
+      "Home Team",
+      "Result",
+      "Road Team"
+    ],
+    "where_column": "Game",
+    "where_value": "game 3"
+  },
+  {
+    "question": "HOw many no votes were there when there were 45.60% yes votes",
+    "headers": [
+      "meas. num",
+      "passed",
+      "YES votes",
+      "NO votes",
+      "% YES",
+      "Const. Amd.?",
+      "type",
+      "description"
+    ],
+    "where_column": "% YES",
+    "where_value": "45.60%"
+  },
+  {
+    "question": "How many results are listed for week 13?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Game site",
+      "Record",
+      "Attendance"
+    ],
+    "where_column": "Week",
+    "where_value": "13"
+  },
+  {
+    "question": "What is the sum for the int yards that has an assts more than 3, and player Jay Alford?",
+    "headers": [
+      "Player",
+      "Tackles",
+      "Solo",
+      "Assts",
+      "Sacks",
+      "Int yards",
+      "Int avg.",
+      "Int TD",
+      "Fum. rec",
+      "Fum. rec TD"
+    ],
+    "where_column": "Assts",
+    "where_value": "3",
+    "all_conditions": [
+      {
+        "column": "Assts",
+        "value": "3"
+      },
+      {
+        "column": "Player",
+        "value": "jay alford"
+      }
+    ]
+  }
+]

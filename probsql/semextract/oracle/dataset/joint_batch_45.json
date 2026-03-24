@@ -1,0 +1,392 @@
+[
+  {
+    "question": "What is the location of the race on 11 November?",
+    "headers": [
+      "Date",
+      "Race Name",
+      "Location",
+      "UCI Rating",
+      "Winner",
+      "Team"
+    ],
+    "where_column": "Date",
+    "where_value": "11 november"
+  },
+  {
+    "question": "Name the subject of shiyan",
+    "headers": [
+      "Chapter",
+      "Chinese",
+      "Pinyin",
+      "Translation",
+      "Subject"
+    ],
+    "where_column": "Pinyin",
+    "where_value": "shiyan"
+  },
+  {
+    "question": "What is the total grid number when Fonsi Nieto had more than 22 laps?",
+    "headers": [
+      "Rider",
+      "Bike",
+      "Laps",
+      "Time",
+      "Grid"
+    ],
+    "where_column": "Rider",
+    "where_value": "fonsi nieto",
+    "all_conditions": [
+      {
+        "column": "Rider",
+        "value": "fonsi nieto"
+      },
+      {
+        "column": "Laps",
+        "value": "22"
+      }
+    ]
+  },
+  {
+    "question": "What Country is Player Sam Snead with a To par of less than 5 from?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "To par",
+    "where_value": "5",
+    "all_conditions": [
+      {
+        "column": "To par",
+        "value": "5"
+      },
+      {
+        "column": "Player",
+        "value": "sam snead"
+      }
+    ]
+  },
+  {
+    "question": "What episode number in the season is titled \"stray\"?",
+    "headers": [
+      "Season no.",
+      "Series no.",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Stray\""
+  },
+  {
+    "question": "What team used the BRM built car?",
+    "headers": [
+      "Entrant",
+      "Constructor",
+      "Chassis",
+      "Engine",
+      "Driver"
+    ],
+    "where_column": "Constructor",
+    "where_value": "brm"
+  },
+  {
+    "question": "What rnds were there for the phoenix international raceway?",
+    "headers": [
+      "Rnd",
+      "Race Name",
+      "Circuit",
+      "City/Location",
+      "Date",
+      "Pole position",
+      "Winning driver",
+      "Winning team",
+      "Report"
+    ],
+    "where_column": "Circuit",
+    "where_value": "Phoenix International Raceway"
+  },
+  {
+    "question": "Name the most touchdowns for norcross",
+    "headers": [
+      "Player",
+      "Position",
+      "Starter",
+      "Touchdowns",
+      "Extra points",
+      "Field goals",
+      "Points"
+    ],
+    "where_column": "Player",
+    "where_value": "Norcross"
+  },
+  {
+    "question": "What team with a goals conceded smaller than 25, and a place smaller than 3?",
+    "headers": [
+      "Place",
+      "Team",
+      "Played",
+      "Draw",
+      "Lost",
+      "Goals Scored",
+      "Goals Conceded",
+      "Points"
+    ],
+    "where_column": "Goals Conceded",
+    "where_value": "25",
+    "all_conditions": [
+      {
+        "column": "Goals Conceded",
+        "value": "25"
+      },
+      {
+        "column": "Place",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "question": "What is the lowest average of the contestant with an interview of 8.275 and an evening gown bigger than 8.7?",
+    "headers": [
+      "State",
+      "Interview",
+      "Swimsuit",
+      "Evening Gown",
+      "Average"
+    ],
+    "where_column": "Interview",
+    "where_value": "8.275",
+    "all_conditions": [
+      {
+        "column": "Interview",
+        "value": "8.275"
+      },
+      {
+        "column": "Evening Gown",
+        "value": "8.7"
+      }
+    ]
+  },
+  {
+    "question": "How many in lost renomination results were elected first?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Result",
+    "where_value": "Lost renomination"
+  },
+  {
+    "question": "What is Opponent, when Game is \"37\"?",
+    "headers": [
+      "Game",
+      "December",
+      "Opponent",
+      "Score",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "37"
+  },
+  {
+    "question": "What is the Pick # for Ryan Strong?",
+    "headers": [
+      "Pick #",
+      "CFL Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "Player",
+    "where_value": "ryan strong"
+  },
+  {
+    "question": "Which position did Michael Lee play?",
+    "headers": [
+      "Name",
+      "Pos.",
+      "Height",
+      "Weight",
+      "Born"
+    ],
+    "where_column": "Name",
+    "where_value": "michael lee"
+  },
+  {
+    "question": "Which school has the player that started in 1958?",
+    "headers": [
+      "Player",
+      "Nationality",
+      "Position",
+      "From",
+      "School/Country"
+    ],
+    "where_column": "From",
+    "where_value": "1958"
+  },
+  {
+    "question": "How much time is required for less than 35 laps and less than 10 grids?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "35",
+    "all_conditions": [
+      {
+        "column": "Laps",
+        "value": "35"
+      },
+      {
+        "column": "Grid",
+        "value": "10"
+      }
+    ]
+  },
+  {
+    "question": "What is the team #2 with Deport as team #1?",
+    "headers": [
+      "Team #1",
+      "Points",
+      "Team #2",
+      "1st leg",
+      "2nd leg"
+    ],
+    "where_column": "Team #1",
+    "where_value": "deport"
+  },
+  {
+    "question": "What's the largest amount of wins Texas has? ",
+    "headers": [
+      "Appearances",
+      "School",
+      "Wins",
+      "Losses",
+      "Percent",
+      "Last Appearance"
+    ],
+    "where_column": "School",
+    "where_value": "Texas"
+  },
+  {
+    "question": "What team played on the road against the Buffalo Bills at home ?",
+    "headers": [
+      "Week",
+      "Date",
+      "Visiting Team",
+      "Final Score",
+      "Host Team"
+    ],
+    "where_column": "Host Team",
+    "where_value": "buffalo bills"
+  },
+  {
+    "question": "What is the protein name of the protein with a sequence identity to human protein of 32%?",
+    "headers": [
+      "common name",
+      "protein name",
+      "divergence from human lineage (MYA)",
+      "accession number",
+      "sequence length (aa)",
+      "sequence identity to human protein"
+    ],
+    "where_column": "sequence identity to human protein",
+    "where_value": "32%"
+  },
+  {
+    "question": "What is the goals for when played is larger than 30?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Played",
+    "where_value": "30"
+  },
+  {
+    "question": "What is the tyre on the race where Bruce Mclaren had the fastest lap?",
+    "headers": [
+      "Race",
+      "Circuit",
+      "Date",
+      "Pole position",
+      "Fastest lap",
+      "Winning driver",
+      "Constructor",
+      "Tyre",
+      "Report"
+    ],
+    "where_column": "Fastest lap",
+    "where_value": "bruce mclaren"
+  },
+  {
+    "question": "What is the average operation beginning with a length of ampang and over 27 stations?",
+    "headers": [
+      "Line",
+      "Began operation",
+      "Stations",
+      "Length (km)",
+      "Terminals"
+    ],
+    "where_column": "Length (km)",
+    "where_value": "ampang",
+    "all_conditions": [
+      {
+        "column": "Length (km)",
+        "value": "ampang"
+      },
+      {
+        "column": "Stations",
+        "value": "27"
+      }
+    ]
+  },
+  {
+    "question": " how many\u00a0candidates\u00a0with\u00a0result\u00a0being new seat democratic gain",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Result",
+    "where_value": "New seat Democratic gain"
+  },
+  {
+    "question": "What is the date of the circuit of Monaco?",
+    "headers": [
+      "Race",
+      "Circuit",
+      "Date",
+      "Pole position",
+      "Fastest lap",
+      "Winning driver",
+      "Constructor",
+      "Tyre",
+      "Report"
+    ],
+    "where_column": "Circuit",
+    "where_value": "monaco"
+  }
+]

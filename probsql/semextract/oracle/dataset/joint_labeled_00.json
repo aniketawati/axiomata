@@ -1,0 +1,191 @@
+[
+  {
+    "question": "Who is the home team when the san francisco 49ers are visiting with a result of 42-14?",
+    "value_column_pairs": [
+      {"value_span": "san francisco 49ers", "column": "Visiting Team", "match_reason": "team_to_team_column"},
+      {"value_span": "42-14", "column": "Result", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What Super G has Victories of 26, and a Country of austria?",
+    "value_column_pairs": [
+      {"value_span": "26", "column": "Victories", "match_reason": "number_to_numeric_column"},
+      {"value_span": "austria", "column": "Country", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the average 2012 civil liberties value associated with a 2011 status of not free, political rights 2012 over 6, and political rights 2011 over 7?",
+    "value_column_pairs": [
+      {"value_span": "not free", "column": "Status 2011", "match_reason": "category_to_category_column"},
+      {"value_span": "6", "column": "Political Rights 2012", "match_reason": "number_to_numeric_column"},
+      {"value_span": "7", "column": "Political Rights 2011", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "what is the highest events when the cuts made is less than 34, the top-25 is less than 5 and the top-10 is more than 1?",
+    "value_column_pairs": [
+      {"value_span": "34", "column": "Cuts made", "match_reason": "number_to_numeric_column"},
+      {"value_span": "5", "column": "Top-25", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1", "column": "Top-10", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "which Partial thromboplastin time has a Condition of liver failure , early?",
+    "value_column_pairs": [
+      {"value_span": "liver failure , early", "column": "Condition", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "The game of 6 has what lowest attendance?",
+    "value_column_pairs": [
+      {"value_span": "6", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the number of failure for the country of Russia, and a Family of r14 r-14, and a Partial failures smaller than 0?",
+    "value_column_pairs": [
+      {"value_span": "Russia", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "r14 r-14", "column": "Family", "match_reason": "text_to_matching_column"},
+      {"value_span": "0", "column": "Partial failures", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the mean year number where there are more than 0 wins, the class is 250cc, and the points are 95?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Wins", "match_reason": "number_to_numeric_column"},
+      {"value_span": "250cc", "column": "Class", "match_reason": "category_to_category_column"},
+      {"value_span": "95", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What school has south bend as the location, with indians as the mascot?",
+    "value_column_pairs": [
+      {"value_span": "south bend", "column": "Location", "match_reason": "place_to_location_column"},
+      {"value_span": "indians", "column": "Mascot", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the total season number for episodes later than episode 30?",
+    "value_column_pairs": [
+      {"value_span": "30", "column": "Episodes", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "For entries with lost larger than 21 and goals for smaller than 36, what is the average drawn?",
+    "value_column_pairs": [
+      {"value_span": "21", "column": "Lost", "match_reason": "number_to_numeric_column"},
+      {"value_span": "36", "column": "Goals For", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the college/junior/club team (league) of the player who was pick number 130?",
+    "value_column_pairs": [
+      {"value_span": "130", "column": "Pick #", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the production number of From Hare to Heir?",
+    "value_column_pairs": [
+      {"value_span": "From Hare to Heir", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Round of 2r, and a Home result of 0-0 has what season?",
+    "value_column_pairs": [
+      {"value_span": "2r", "column": "Round", "match_reason": "category_to_category_column"},
+      {"value_span": "0-0", "column": "Home result", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "When the venue was lake oval what did the home team score?",
+    "value_column_pairs": [
+      {"value_span": "lake oval", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What party did the incumbent from the Arkansas 5 district belong to? ",
+    "value_column_pairs": [
+      {"value_span": "Arkansas 5", "column": "District", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many votes were cast when the constituency was midlothian?",
+    "value_column_pairs": [
+      {"value_span": "midlothian", "column": "Constituency", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What ending does siangu get for \u00f6n?",
+    "value_column_pairs": [
+      {"value_span": "siangu", "column": "Feminine \u014d-stems", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What position did the driver earn 31 points?",
+    "value_column_pairs": [
+      {"value_span": "31", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What round was the nose tackle drafted?",
+    "value_column_pairs": [
+      {"value_span": "nose tackle", "column": "Position", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the total pick number from round 2?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Round", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Give the Finish for a Stage that is larger than 15",
+    "value_column_pairs": [
+      {"value_span": "15", "column": "Stage", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "When @ new orleans is the team who has the highest amount of rebounds?",
+    "value_column_pairs": [
+      {"value_span": "@ new orleans", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "In which women's doubles did Wang Junjie play men's singles?",
+    "value_column_pairs": [
+      {"value_span": "Wang Junjie", "column": "Men's singles", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "Who won the Women's singles, in the year that Raymond M. White won the Men's singles and that W. Hamilton Ian Maconachie won the Men's doubles?",
+    "value_column_pairs": [
+      {"value_span": "Raymond M. White", "column": "Men's singles", "match_reason": "name_to_name_column"},
+      {"value_span": "W. Hamilton Ian Maconachie", "column": "Men's doubles", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  }
+]

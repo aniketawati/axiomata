@@ -1,0 +1,415 @@
+[
+  {
+    "question": "Name the D 41 \u221a with D 44 O of r 13",
+    "headers": [
+      "D 41 \u221a",
+      "D 42 \u221a",
+      "D 43 \u221a",
+      "D 44 O",
+      "D 45 O",
+      "D 46 O",
+      "D 47 O",
+      "D 48 O"
+    ],
+    "where_column": "D 44 O",
+    "where_value": "r 13"
+  },
+  {
+    "question": "What year did the finish of 15 happen in?",
+    "headers": [
+      "Year",
+      "Start",
+      "Qual",
+      "Rank",
+      "Finish",
+      "Laps"
+    ],
+    "where_column": "Finish",
+    "where_value": "15"
+  },
+  {
+    "question": "What is the number of dances total number if the average is 22.3?",
+    "headers": [
+      "Rank by average",
+      "Place",
+      "Couple",
+      "Number Of Dances",
+      "Total Points Earned",
+      "Average"
+    ],
+    "where_column": "Average",
+    "where_value": "22.3"
+  },
+  {
+    "question": "Which Opponent has a Result of l 14\u201310?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Result",
+    "where_value": "l 14\u201310"
+  },
+  {
+    "question": "Which week was the game on December 14, 1967?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Date",
+    "where_value": "december 14, 1967"
+  },
+  {
+    "question": "What season was Norwich Union League promoted?",
+    "headers": [
+      "Season",
+      "1st Division",
+      "Relegated",
+      "2nd Division",
+      "Promoted"
+    ],
+    "where_column": "Promoted",
+    "where_value": "norwich union league"
+  },
+  {
+    "question": "Which draft number did the new jersey devils get?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "NHL team",
+    "where_value": "New Jersey Devils"
+  },
+  {
+    "question": "Who was the Man of the Match when the opponent was Milton Keynes Lightning and the venue was Away?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance",
+      "Competition",
+      "Man of the Match"
+    ],
+    "where_column": "Opponent",
+    "where_value": "milton keynes lightning",
+    "all_conditions": [
+      {
+        "column": "Opponent",
+        "value": "milton keynes lightning"
+      },
+      {
+        "column": "Venue",
+        "value": "away"
+      }
+    ]
+  },
+  {
+    "question": "List all winning scores from 1982.",
+    "headers": [
+      "Year",
+      "Champion",
+      "Country",
+      "Venue",
+      "Location of venue",
+      "Winners Score",
+      "Winners share ( $ )"
+    ],
+    "where_column": "Year",
+    "where_value": "1982"
+  },
+  {
+    "question": "How many attendances have 9 as the week?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Week",
+    "where_value": "9"
+  },
+  {
+    "question": "Who was the Player that spent the Year 2005 in Orlando?",
+    "headers": [
+      "Player",
+      "Nationality",
+      "Position",
+      "Years in Orlando",
+      "School/Club Team"
+    ],
+    "where_column": "Years in Orlando",
+    "where_value": "2005"
+  },
+  {
+    "question": "What is the total number of rounds that had draft pick 97, duncan mccoll?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Position",
+      "School/Club Team"
+    ],
+    "where_column": "Player",
+    "where_value": "duncan mccoll",
+    "all_conditions": [
+      {
+        "column": "Player",
+        "value": "duncan mccoll"
+      },
+      {
+        "column": "Pick",
+        "value": "97"
+      }
+    ]
+  },
+  {
+    "question": "What is the frequency of the radio station with a call sign of WGNR-FM?",
+    "headers": [
+      "Call sign",
+      "Frequency",
+      "City of license",
+      "State",
+      "FCC info"
+    ],
+    "where_column": "Call sign",
+    "where_value": "wgnr-fm"
+  },
+  {
+    "question": "What is the date of the game when attendance is more than 20,682?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Decision",
+      "Attendance",
+      "Series"
+    ],
+    "where_column": "Attendance",
+    "where_value": "20,682"
+  },
+  {
+    "question": "What is the average grid for competitors who had more than 22 laps and time/retired of +17.276?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Time/Retired",
+    "where_value": "+17.276",
+    "all_conditions": [
+      {
+        "column": "Time/Retired",
+        "value": "+17.276"
+      },
+      {
+        "column": "Laps",
+        "value": "22"
+      }
+    ]
+  },
+  {
+    "question": "what tims is wed may 28 and mon may 26 is 17' 58.34 125.960mph?",
+    "headers": [
+      "Rank",
+      "Rider",
+      "Mon 26 May",
+      "Tues 27 May",
+      "Wed 28 May",
+      "Thurs 29 May",
+      "Fri 30 May"
+    ],
+    "where_column": "Mon 26 May",
+    "where_value": "17' 58.34 125.960mph"
+  },
+  {
+    "question": "Who is the Director of the Original title of The Crying Game?",
+    "headers": [
+      "Year",
+      "English title",
+      "Original title",
+      "Country",
+      "Director"
+    ],
+    "where_column": "Original title",
+    "where_value": "the crying game"
+  },
+  {
+    "question": "What is the top grid that roger williamson lapped less than 7?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Driver",
+    "where_value": "roger williamson",
+    "all_conditions": [
+      {
+        "column": "Driver",
+        "value": "roger williamson"
+      },
+      {
+        "column": "Laps",
+        "value": "7"
+      }
+    ]
+  },
+  {
+    "question": "What the is the first city listed on the route that had 6.6+ passengers in 2011 and a distance of 1075km?",
+    "headers": [
+      "Rank",
+      "City 1",
+      "City 2",
+      "2012 Passengers (in millions)",
+      "2011 Passengers (in millions)",
+      "Distance"
+    ],
+    "where_column": "2011 Passengers (in millions)",
+    "where_value": "6.6+",
+    "all_conditions": [
+      {
+        "column": "2011 Passengers (in millions)",
+        "value": "6.6+"
+      },
+      {
+        "column": "Distance",
+        "value": "1075km"
+      }
+    ]
+  },
+  {
+    "question": "What is the nationality of the draft pick player who plays centre position and is going to Calgary Flames?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Position",
+    "where_value": "Centre",
+    "all_conditions": [
+      {
+        "column": "Position",
+        "value": "Centre"
+      },
+      {
+        "column": "NHL team",
+        "value": "Calgary Flames"
+      }
+    ]
+  },
+  {
+    "question": "Name the points for paulistano",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Won",
+      "Drawn",
+      "Lost",
+      "For",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Team",
+    "where_value": "Paulistano"
+  },
+  {
+    "question": "On what date was the venue Away and the result was lost 6-4 (lost 9-7 on agg)?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance",
+      "Competition",
+      "Man of the Match"
+    ],
+    "where_column": "Venue",
+    "where_value": "away",
+    "all_conditions": [
+      {
+        "column": "Venue",
+        "value": "away"
+      },
+      {
+        "column": "Result",
+        "value": "lost 6-4 (lost 9-7 on agg)"
+      }
+    ]
+  },
+  {
+    "question": "What is the name of the boat that was built by Chatham and Laid down of 25 april 1887?",
+    "headers": [
+      "Name",
+      "Builder",
+      "Laid down",
+      "Launched",
+      "Completed"
+    ],
+    "where_column": "Builder",
+    "where_value": "chatham",
+    "all_conditions": [
+      {
+        "column": "Builder",
+        "value": "chatham"
+      },
+      {
+        "column": "Laid down",
+        "value": "25 april 1887"
+      }
+    ]
+  },
+  {
+    "question": "What character was portrayed by the same actor for 12 years on Neighbours?",
+    "headers": [
+      "Actor",
+      "Character",
+      "Soap Opera",
+      "Years",
+      "Duration"
+    ],
+    "where_column": "Duration",
+    "where_value": "12 years",
+    "all_conditions": [
+      {
+        "column": "Duration",
+        "value": "12 years"
+      },
+      {
+        "column": "Soap Opera",
+        "value": "neighbours"
+      }
+    ]
+  },
+  {
+    "question": "What year did actor Richard Farnsworth get nominated for an award?",
+    "headers": [
+      "Superlative",
+      "Actor",
+      "Record Set",
+      "Year",
+      "Notes"
+    ],
+    "where_column": "Actor",
+    "where_value": "richard farnsworth"
+  }
+]

@@ -1,0 +1,400 @@
+[
+  {
+    "question": "What was the week number when the opponent was the New York Jets?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Game site",
+      "Record",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "New York Jets"
+  },
+  {
+    "question": "How many season have an average attendance league of 2.456?",
+    "headers": [
+      "Season",
+      "Average Attendance Home",
+      "Highest Attendance Home",
+      "Average Attendance Away",
+      "Highest Attendance Away",
+      "Division / Section",
+      "Level",
+      "Average Attendance League"
+    ],
+    "where_column": "Average Attendance League",
+    "where_value": "2.456"
+  },
+  {
+    "question": "What is the money won by Frank Nobilo?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( \u00a3 )"
+    ],
+    "where_column": "Player",
+    "where_value": "frank nobilo"
+  },
+  {
+    "question": "What television service is in italy and is in english?",
+    "headers": [
+      "N\u00b0",
+      "Television service",
+      "Country",
+      "Language",
+      "Content",
+      "DAR",
+      "HDTV",
+      "Package/Option"
+    ],
+    "where_column": "Country",
+    "where_value": "Italy",
+    "all_conditions": [
+      {
+        "column": "Country",
+        "value": "Italy"
+      },
+      {
+        "column": "Language",
+        "value": "English"
+      }
+    ]
+  },
+  {
+    "question": "What was the largest crowd where the home team was Fitzroy?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "fitzroy"
+  },
+  {
+    "question": "Name the production code for number in season being 21",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "No. in season",
+    "where_value": "21"
+  },
+  {
+    "question": "What place is David Graham in?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( \u00a3 )"
+    ],
+    "where_column": "Player",
+    "where_value": "david graham"
+  },
+  {
+    "question": "What gender has a local board of albert\u2013eden with a roll of more than 232 and Decile of 5?",
+    "headers": [
+      "Name",
+      "Gender",
+      "Local board",
+      "Suburb",
+      "Authority",
+      "Decile",
+      "Roll"
+    ],
+    "where_column": "Local board",
+    "where_value": "albert\u2013eden",
+    "all_conditions": [
+      {
+        "column": "Local board",
+        "value": "albert\u2013eden"
+      },
+      {
+        "column": "Roll",
+        "value": "232"
+      },
+      {
+        "column": "Decile",
+        "value": "5"
+      }
+    ]
+  },
+  {
+    "question": "What shows for Southbridge when the Model number is amd-640 chipset?",
+    "headers": [
+      "Model",
+      "Code name",
+      "CPU support",
+      "FSB / HT (MHz)",
+      "Southbridge"
+    ],
+    "where_column": "Model",
+    "where_value": "amd-640 chipset"
+  },
+  {
+    "question": "What is High Points, when Game is \"5\"?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "5"
+  },
+  {
+    "question": "Who was their opponent in game 4?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "4"
+  },
+  {
+    "question": "What was the production code of the episode directed by Rondell Sheridan? ",
+    "headers": [
+      "Series #",
+      "Season #",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Prod. code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Directed by",
+    "where_value": "Rondell Sheridan"
+  },
+  {
+    "question": "Which pick has a school/club team that is kentucky?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Position",
+      "School/Club Team"
+    ],
+    "where_column": "School/Club Team",
+    "where_value": "kentucky"
+  },
+  {
+    "question": "Which player has montana as the school/club team?",
+    "headers": [
+      "Player",
+      "Nationality",
+      "Position",
+      "Years in Orlando",
+      "School/Club Team"
+    ],
+    "where_column": "School/Club Team",
+    "where_value": "montana"
+  },
+  {
+    "question": "How many viewers in millions for episode \"sokka's master\"?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "Viewers (millions)"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Sokka's Master\""
+  },
+  {
+    "question": "Which Against is the highest one that has a Difference of 12?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Difference",
+    "where_value": "12"
+  },
+  {
+    "question": "What is the total stellar mass of the type m0?",
+    "headers": [
+      "Stellar mass ( M\u2609 )",
+      "Planetary mass ( M\u2295 )",
+      "Lum. (L 0 )",
+      "Type",
+      "RHAB ( AU )",
+      "RV (cm/s)",
+      "Period (days)"
+    ],
+    "where_column": "Type",
+    "where_value": "m0"
+  },
+  {
+    "question": "What is the music for choreographer sabina dalfj\u00e4ll?",
+    "headers": [
+      "Couple",
+      "Style",
+      "Music",
+      "Choreographer(s)",
+      "Result"
+    ],
+    "where_column": "Choreographer(s)",
+    "where_value": "sabina dalfj\u00e4ll"
+  },
+  {
+    "question": "How many points for the cooper car company after 1959?",
+    "headers": [
+      "Year",
+      "Entrant",
+      "Chassis",
+      "Engine",
+      "Points"
+    ],
+    "where_column": "Entrant",
+    "where_value": "cooper car company",
+    "all_conditions": [
+      {
+        "column": "Entrant",
+        "value": "cooper car company"
+      },
+      {
+        "column": "Year",
+        "value": "1959"
+      }
+    ]
+  },
+  {
+    "question": "What is the sum of the prominence in m of moussa ali terara peak?",
+    "headers": [
+      "Peak",
+      "Country",
+      "Elevation (m)",
+      "Prominence (m)",
+      "Col (m)"
+    ],
+    "where_column": "Peak",
+    "where_value": "moussa ali terara"
+  },
+  {
+    "question": "Which College has a Position of ol, and a Pick # smaller than 32?",
+    "headers": [
+      "Pick #",
+      "CFL Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "Position",
+    "where_value": "ol",
+    "all_conditions": [
+      {
+        "column": "Position",
+        "value": "ol"
+      },
+      {
+        "column": "Pick #",
+        "value": "32"
+      }
+    ]
+  },
+  {
+    "question": "What are the japanese title(s) for tv asahi?",
+    "headers": [
+      "Japanese Title",
+      "Romaji Title",
+      "TV Station",
+      "Time Frame",
+      "Starring Actors",
+      "Theme Song(s)",
+      "Episodes",
+      "Average Ratings"
+    ],
+    "where_column": "TV Station",
+    "where_value": "TV Asahi"
+  },
+  {
+    "question": "What was the number of the crowd when the Wollongong Hawks were the home team?",
+    "headers": [
+      "Date",
+      "Home team",
+      "Score",
+      "Away team",
+      "Venue",
+      "Crowd",
+      "Box Score",
+      "Report"
+    ],
+    "where_column": "Home team",
+    "where_value": "wollongong hawks"
+  },
+  {
+    "question": "List the weight for 56.5 kilograms.",
+    "headers": [
+      "Result",
+      "Date",
+      "Race",
+      "Venue",
+      "Group",
+      "Distance",
+      "Weight (kg)",
+      "Jockey",
+      "Winner/2nd"
+    ],
+    "where_column": "Weight (kg)",
+    "where_value": "56.5"
+  },
+  {
+    "question": "What is the sum of golds for ranks of 6 and totals over 3?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "6",
+    "all_conditions": [
+      {
+        "column": "Rank",
+        "value": "6"
+      },
+      {
+        "column": "Total",
+        "value": "3"
+      }
+    ]
+  }
+]

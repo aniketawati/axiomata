@@ -1,0 +1,445 @@
+[
+  {
+    "question": "How did the ship named proletarij finish its service?",
+    "headers": [
+      "Date",
+      "Name of ship",
+      "Flag",
+      "Tonnage",
+      "Fate"
+    ],
+    "where_column": "Name of ship",
+    "where_value": "proletarij"
+  },
+  {
+    "question": "On what date was game 2 played?",
+    "headers": [
+      "Game",
+      "Date",
+      "Home Team",
+      "Result",
+      "Road Team"
+    ],
+    "where_column": "Game",
+    "where_value": "game 2"
+  },
+  {
+    "question": "Which Player has position of power forward and School/Club Team of Depaul?",
+    "headers": [
+      "Player",
+      "Nationality",
+      "Position",
+      "Years for Grizzlies",
+      "School/Club Team"
+    ],
+    "where_column": "Position",
+    "where_value": "power forward",
+    "all_conditions": [
+      {
+        "column": "Position",
+        "value": "power forward"
+      },
+      {
+        "column": "School/Club Team",
+        "value": "depaul"
+      }
+    ]
+  },
+  {
+    "question": "How many attended the game with an opponent of bye?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Result",
+      "Dolphins' points",
+      "Opponents' Points",
+      "Record",
+      "Streak",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "bye"
+  },
+  {
+    "question": "What is the average Draw when the Place is larger than 5?",
+    "headers": [
+      "Draw",
+      "Artist",
+      "Song",
+      "Place",
+      "Points"
+    ],
+    "where_column": "Place",
+    "where_value": "5"
+  },
+  {
+    "question": "What nationality is the draft pick player going to Minnesota North Stars?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "NHL team",
+    "where_value": "Minnesota North Stars"
+  },
+  {
+    "question": "What was Marty Furgol's place when he was paid less than $3,000?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "Money ( $ )",
+    "where_value": "3,000",
+    "all_conditions": [
+      {
+        "column": "Money ( $ )",
+        "value": "3,000"
+      },
+      {
+        "column": "Player",
+        "value": "marty furgol"
+      }
+    ]
+  },
+  {
+    "question": "What is the sum of Total Passengers when the annual change is 9.7% and the rank is less than 6?",
+    "headers": [
+      "Rank",
+      "Location",
+      "Total Passengers",
+      "Annual change",
+      "Capacity in use"
+    ],
+    "where_column": "Annual change",
+    "where_value": "9.7%",
+    "all_conditions": [
+      {
+        "column": "Annual change",
+        "value": "9.7%"
+      },
+      {
+        "column": "Rank",
+        "value": "6"
+      }
+    ]
+  },
+  {
+    "question": "Which away team played the home team when they scored 14.21 (105)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team score",
+    "where_value": "14.21 (105)"
+  },
+  {
+    "question": "What was the total number of Points when the value Difference was 13, and when the value Lost was greater than 3?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Difference",
+    "where_value": "13",
+    "all_conditions": [
+      {
+        "column": "Difference",
+        "value": "13"
+      },
+      {
+        "column": "Lost",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "question": "Name the candidates for john boyle",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Incumbent",
+    "where_value": "John Boyle"
+  },
+  {
+    "question": "what's the\u00a0u.s. open cup status\u00a0for regular season\u00a0of 4th, atlantic division ",
+    "headers": [
+      "Year",
+      "Division",
+      "League",
+      "Regular Season",
+      "Playoffs",
+      "U.S. Open Cup"
+    ],
+    "where_column": "Regular Season",
+    "where_value": "4th, Atlantic Division"
+  },
+  {
+    "question": "Which was the district that had first elected greater than 2006 and is democratic?",
+    "headers": [
+      "District",
+      "Counties Represented",
+      "Delegate",
+      "Party",
+      "First Elected",
+      "Committee"
+    ],
+    "where_column": "Party",
+    "where_value": "democratic",
+    "all_conditions": [
+      {
+        "column": "Party",
+        "value": "democratic"
+      },
+      {
+        "column": "First Elected",
+        "value": "2006"
+      }
+    ]
+  },
+  {
+    "question": "What's the acting segment of \u6797\u4f69\u742a lin peiqi's events that are eliminated?",
+    "headers": [
+      "Index",
+      "Name",
+      "Talent Segment",
+      "Acting Segment",
+      "Overall Ranking",
+      "Status"
+    ],
+    "where_column": "Status",
+    "where_value": "eliminated",
+    "all_conditions": [
+      {
+        "column": "Status",
+        "value": "eliminated"
+      },
+      {
+        "column": "Name",
+        "value": "\u6797\u4f69\u742a lin peiqi"
+      }
+    ]
+  },
+  {
+    "question": "On June 17 in Tiger stadium, what was the average home run?",
+    "headers": [
+      "Home Run",
+      "Game",
+      "Date",
+      "Inning",
+      "Location",
+      "Opposing Pitcher",
+      "Team"
+    ],
+    "where_column": "Location",
+    "where_value": "tiger stadium",
+    "all_conditions": [
+      {
+        "column": "Location",
+        "value": "tiger stadium"
+      },
+      {
+        "column": "Date",
+        "value": "june 17"
+      }
+    ]
+  },
+  {
+    "question": "What date had a tie no of replay, and an away team of watford?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Date"
+    ],
+    "where_column": "Tie no",
+    "where_value": "replay",
+    "all_conditions": [
+      {
+        "column": "Tie no",
+        "value": "replay"
+      },
+      {
+        "column": "Away team",
+        "value": "watford"
+      }
+    ]
+  },
+  {
+    "question": "Which player from Scotland has a To Par score of +7?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "To par",
+    "where_value": "+7",
+    "all_conditions": [
+      {
+        "column": "To par",
+        "value": "+7"
+      },
+      {
+        "column": "Country",
+        "value": "scotland"
+      }
+    ]
+  },
+  {
+    "question": "What is the current status of the person named Nicholls?",
+    "headers": [
+      "Name",
+      "Country",
+      "Status",
+      "Transfer window",
+      "Transfer fee",
+      "Source"
+    ],
+    "where_column": "Name",
+    "where_value": "nicholls"
+  },
+  {
+    "question": "How many values of powershell (cmdlet) are valid when unix shell is env, export, set, setenv?",
+    "headers": [
+      "PowerShell (Cmdlet)",
+      "PowerShell (Alias)",
+      "CMD.EXE / COMMAND.COM",
+      "Unix shell",
+      "Description"
+    ],
+    "where_column": "Unix shell",
+    "where_value": "env, export, set, setenv"
+  },
+  {
+    "question": "Who is the poll source that has Republican: Jeff Beatty behind at 27%?",
+    "headers": [
+      "Poll Source",
+      "Dates administered",
+      "Democrat: John Kerry",
+      "Republican: Jeff Beatty",
+      "Lead Margin"
+    ],
+    "where_column": "Republican: Jeff Beatty",
+    "where_value": "27%"
+  },
+  {
+    "question": "Which date was game 35 on?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "35"
+  },
+  {
+    "question": "Which Incumbent has a District of California 8?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result"
+    ],
+    "where_column": "District",
+    "where_value": "california 8"
+  },
+  {
+    "question": "What is the figure for La Crescenta-Montrose when Gelndale is $57,112?",
+    "headers": [
+      "Tujunga",
+      "La Crescenta- Montrose",
+      "Glendale",
+      "La Ca\u00f1ada Flintridge",
+      "Pasadena"
+    ],
+    "where_column": "Glendale",
+    "where_value": "$57,112"
+  },
+  {
+    "question": "What's the total number of points when the vancouver burrards have fewer than 9 losses and more than 24 games?",
+    "headers": [
+      "Season",
+      "Team Name",
+      "Games",
+      "Losses",
+      "Points"
+    ],
+    "where_column": "Losses",
+    "where_value": "9",
+    "all_conditions": [
+      {
+        "column": "Losses",
+        "value": "9"
+      },
+      {
+        "column": "Games",
+        "value": "24"
+      },
+      {
+        "column": "Team Name",
+        "value": "vancouver burrards"
+      }
+    ]
+  },
+  {
+    "question": "How many Assets (billion $) has an Industry of oil and gas, and a Rank of 9, and a Market Value (billion $) larger than 121.7?",
+    "headers": [
+      "Rank",
+      "Company",
+      "Headquarters",
+      "Industry",
+      "Sales (billion $)",
+      "Profits (billion $)",
+      "Assets (billion $)",
+      "Market Value (billion $)"
+    ],
+    "where_column": "Industry",
+    "where_value": "oil and gas",
+    "all_conditions": [
+      {
+        "column": "Industry",
+        "value": "oil and gas"
+      },
+      {
+        "column": "Rank",
+        "value": "9"
+      },
+      {
+        "column": "Market Value (billion $)",
+        "value": "121.7"
+      }
+    ]
+  }
+]

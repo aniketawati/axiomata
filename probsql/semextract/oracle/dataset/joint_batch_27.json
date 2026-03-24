@@ -1,0 +1,400 @@
+[
+  {
+    "question": "What is the average total in 1969?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par",
+      "Finish"
+    ],
+    "where_column": "Year(s) won",
+    "where_value": "1969"
+  },
+  {
+    "question": "The player for which country had a score of 66-72=138?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Score",
+    "where_value": "66-72=138"
+  },
+  {
+    "question": "How many episodes had a production code 120?",
+    "headers": [
+      "Series #",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (million)"
+    ],
+    "where_column": "Production code",
+    "where_value": "120"
+  },
+  {
+    "question": "How many tries against did the club with 1 drawn and 41 points have?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Drawn",
+    "where_value": "1",
+    "all_conditions": [
+      {
+        "column": "Drawn",
+        "value": "1"
+      },
+      {
+        "column": "Points",
+        "value": "41"
+      }
+    ]
+  },
+  {
+    "question": "How many weeks had an attendance larger than 84,816?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "84,816"
+  },
+  {
+    "question": "How much money has been won by Stephen Ames?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( \u00a3 )"
+    ],
+    "where_column": "Player",
+    "where_value": "stephen ames"
+  },
+  {
+    "question": "How many games are shown for the game where andre iguodala (9) had the high rebounds?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "High rebounds",
+    "where_value": "Andre Iguodala (9)"
+  },
+  {
+    "question": "Which Points have an Opponent of new york islanders, and a Game smaller than 65?",
+    "headers": [
+      "Game",
+      "March",
+      "Opponent",
+      "Score",
+      "Record",
+      "Points"
+    ],
+    "where_column": "Opponent",
+    "where_value": "new york islanders",
+    "all_conditions": [
+      {
+        "column": "Opponent",
+        "value": "new york islanders"
+      },
+      {
+        "column": "Game",
+        "value": "65"
+      }
+    ]
+  },
+  {
+    "question": "How many F.L. are listed for Formula Three Euroseries?",
+    "headers": [
+      "Season",
+      "Series",
+      "Team",
+      "Races",
+      "Wins",
+      "Poles",
+      "F.L.",
+      "Podiums",
+      "Points",
+      "Position"
+    ],
+    "where_column": "Series",
+    "where_value": "Formula Three Euroseries"
+  },
+  {
+    "question": "How many games were played where the height of the player is 1.92m?",
+    "headers": [
+      "Player",
+      "Position",
+      "Starting No.#",
+      "D.O.B",
+      "Club",
+      "Height",
+      "Weight",
+      "Games"
+    ],
+    "where_column": "Height",
+    "where_value": "1.92m"
+  },
+  {
+    "question": "What was the round for Villa Park?",
+    "headers": [
+      "Opposing Team",
+      "Against",
+      "Date",
+      "Venue",
+      "Round"
+    ],
+    "where_column": "Venue",
+    "where_value": "villa park"
+  },
+  {
+    "question": "Which Rank is the lowest one that has Points larger than 52, and a Year larger than 1970?",
+    "headers": [
+      "Rank",
+      "Player",
+      "Year",
+      "Game",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "52",
+    "all_conditions": [
+      {
+        "column": "Points",
+        "value": "52"
+      },
+      {
+        "column": "Year",
+        "value": "1970"
+      }
+    ]
+  },
+  {
+    "question": "For the event with index f9, what's the talent segment?",
+    "headers": [
+      "Index",
+      "Name",
+      "Talent Segment",
+      "Acting Segment",
+      "Overall Ranking",
+      "Status"
+    ],
+    "where_column": "Index",
+    "where_value": "f9"
+  },
+  {
+    "question": "Which venues resulted in a draw?",
+    "headers": [
+      "Date",
+      "Home captain",
+      "Away captain",
+      "Venue",
+      "Result"
+    ],
+    "where_column": "Result",
+    "where_value": "draw"
+  },
+  {
+    "question": "Which is the year with Mundubbera being smaller than 2,395, and Biggenden smaller than 1,506?",
+    "headers": [
+      "Year",
+      "Total Region",
+      "Biggenden",
+      "Eidsvold",
+      "Gayndah",
+      "Monto",
+      "Mundubbera",
+      "Perry"
+    ],
+    "where_column": "Mundubbera",
+    "where_value": "2,395",
+    "all_conditions": [
+      {
+        "column": "Mundubbera",
+        "value": "2,395"
+      },
+      {
+        "column": "Biggenden",
+        "value": "1,506"
+      }
+    ]
+  },
+  {
+    "question": "What's the Game SIte with an Opponent of San Diego Chargers?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Record",
+      "Game Site",
+      "TV Time",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "san diego chargers"
+  },
+  {
+    "question": "What was the result of the game against the Miami Dolphins held at the Riverfront Stadium?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Location"
+    ],
+    "where_column": "Location",
+    "where_value": "riverfront stadium",
+    "all_conditions": [
+      {
+        "column": "Location",
+        "value": "riverfront stadium"
+      },
+      {
+        "column": "Opponent",
+        "value": "miami dolphins"
+      }
+    ]
+  },
+  {
+    "question": "What is the average year of the Fantasia Section Award?",
+    "headers": [
+      "Festival",
+      "Year",
+      "Result",
+      "Award",
+      "Category"
+    ],
+    "where_column": "Award",
+    "where_value": "fantasia section award"
+  },
+  {
+    "question": "How many total cuts were made in events with more than 0 wins and exactly 0 top-5s?",
+    "headers": [
+      "Tournament",
+      "Wins",
+      "Top-5",
+      "Top-25",
+      "Events",
+      "Cuts made"
+    ],
+    "where_column": "Top-5",
+    "where_value": "0",
+    "all_conditions": [
+      {
+        "column": "Top-5",
+        "value": "0"
+      },
+      {
+        "column": "Wins",
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "question": "What is the toll for light vehicles at the plaza between bela bela and modimolle?",
+    "headers": [
+      "Name",
+      "Location",
+      "Light vehicle",
+      "Heavy vehicle (2 axles)",
+      "Heavy vehicle (3/4 axles)",
+      "Heavy vehicle (5+ axles)"
+    ],
+    "where_column": "Location",
+    "where_value": "between Bela Bela and Modimolle"
+  },
+  {
+    "question": "What position does Antti-Jussi Niemi play?",
+    "headers": [
+      "Pick",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Player",
+    "where_value": "Antti-Jussi Niemi"
+  },
+  {
+    "question": "When 1999 is the year how many tournaments are there?",
+    "headers": [
+      "Year",
+      "Tournament",
+      "Winner",
+      "Margin of victory",
+      "Winners share ( $ )",
+      "Par",
+      "Course length"
+    ],
+    "where_column": "Year",
+    "where_value": "1999"
+  },
+  {
+    "question": "What is the stadium of the NK Zagreb?",
+    "headers": [
+      "Team",
+      "Manager",
+      "Home city",
+      "Stadium",
+      "Capacity"
+    ],
+    "where_column": "Team",
+    "where_value": "nk zagreb"
+  },
+  {
+    "question": "Which venue held a basketball team?",
+    "headers": [
+      "Club",
+      "City",
+      "Sport",
+      "League",
+      "Venue"
+    ],
+    "where_column": "Sport",
+    "where_value": "basketball"
+  },
+  {
+    "question": "when the writer is Brad Kern, how many u.s viewers (in millions) had the episode?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Written by",
+    "where_value": "Brad Kern"
+  }
+]

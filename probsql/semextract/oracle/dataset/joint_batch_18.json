@@ -1,0 +1,379 @@
+[
+  {
+    "question": "What home team has an Away team of richmond?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "richmond"
+  },
+  {
+    "question": "Is Jasper being producted?",
+    "headers": [
+      "Codename",
+      "HDMI",
+      "Power Supply",
+      "In Production",
+      "Date Released"
+    ],
+    "where_column": "Codename",
+    "where_value": "jasper"
+  },
+  {
+    "question": "What is the result in oakland?",
+    "headers": [
+      "Goal",
+      "Date",
+      "Venue",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Venue",
+    "where_value": "oakland"
+  },
+  {
+    "question": "What was the us airdate of \"love lockdown\" part one?",
+    "headers": [
+      "No. in season",
+      "No. in series",
+      "Title",
+      "Canadian airdate",
+      "US airdate",
+      "Production code"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Love Lockdown\" Part One"
+  },
+  {
+    "question": "Who is the manager whose rank is 16?",
+    "headers": [
+      "Season",
+      "League",
+      "Rank",
+      "Games",
+      "Points",
+      "GF",
+      "GA",
+      "Manager",
+      "Top Scorer",
+      "Goals"
+    ],
+    "where_column": "Rank",
+    "where_value": "16"
+  },
+  {
+    "question": "How many primary conferences were held in Allendale, Michigan?",
+    "headers": [
+      "Institution",
+      "Location",
+      "Founded",
+      "Affiliation",
+      "Enrollment",
+      "Team Nickname",
+      "Primary conference"
+    ],
+    "where_column": "Location",
+    "where_value": "Allendale, Michigan"
+  },
+  {
+    "question": "Who was the opponent in London, England in a round less than 2?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round",
+      "Time",
+      "Location"
+    ],
+    "where_column": "Location",
+    "where_value": "london, england",
+    "all_conditions": [
+      {
+        "column": "Location",
+        "value": "london, england"
+      },
+      {
+        "column": "Round",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "question": "Which year has a 2011 of 1r?",
+    "headers": [
+      "Tournament",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013"
+    ],
+    "where_column": "2011",
+    "where_value": "1r"
+  },
+  {
+    "question": "How many years was the issue price $19.95?",
+    "headers": [
+      "Year of issue",
+      "Theme",
+      "Composition",
+      "Issue price",
+      "Mintage"
+    ],
+    "where_column": "Issue price",
+    "where_value": "$19.95"
+  },
+  {
+    "question": "What pick number was marc deschamps?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Player",
+    "where_value": "Marc Deschamps"
+  },
+  {
+    "question": "Which gymnast had a b score of 8.95 and an a score less than 6.9",
+    "headers": [
+      "Position",
+      "Gymnast",
+      "A Score",
+      "B Score",
+      "Total"
+    ],
+    "where_column": "B Score",
+    "where_value": "8.95",
+    "all_conditions": [
+      {
+        "column": "B Score",
+        "value": "8.95"
+      },
+      {
+        "column": "A Score",
+        "value": "6.9"
+      }
+    ]
+  },
+  {
+    "question": "What machine did Kenneth E. Herbert ride?",
+    "headers": [
+      "Rider",
+      "Date",
+      "Place",
+      "Race",
+      "Event",
+      "Machine"
+    ],
+    "where_column": "Rider",
+    "where_value": "kenneth e. herbert"
+  },
+  {
+    "question": "How many fastest laps did I.C. Team have?",
+    "headers": [
+      "Season",
+      "Class",
+      "Team",
+      "Motorcycle",
+      "Type",
+      "Races",
+      "Wins",
+      "Podiums",
+      "Poles",
+      "Fastest Laps",
+      "Pts",
+      "Position"
+    ],
+    "where_column": "Team",
+    "where_value": "I.C. Team"
+  },
+  {
+    "question": "What District has a College or Campus Name of anna university college of engineering kanchipuram?",
+    "headers": [
+      "College or Campus Name",
+      "Location",
+      "District",
+      "Affiliation",
+      "Weblink"
+    ],
+    "where_column": "College or Campus Name",
+    "where_value": "anna university college of engineering kanchipuram"
+  },
+  {
+    "question": "What Silver has a Golf of Li AO?",
+    "headers": [
+      "Year",
+      "Location",
+      "Gold",
+      "Silver",
+      "Bronze"
+    ],
+    "where_column": "Gold",
+    "where_value": "li ao"
+  },
+  {
+    "question": "What are the rank/s of Eddie Guerrero?",
+    "headers": [
+      "#",
+      "Name",
+      "Country",
+      "1",
+      "2",
+      "3",
+      "Other placings",
+      "Total",
+      "First appearance",
+      "Last appearance",
+      "Federation"
+    ],
+    "where_column": "Name",
+    "where_value": "Eddie Guerrero"
+  },
+  {
+    "question": "Which Poll source has Pat Toomey of 23%?",
+    "headers": [
+      "Poll source",
+      "Dates administered",
+      "Arlen Specter*",
+      "Pat Toomey",
+      "Tom Ridge*",
+      "Peg Luksik"
+    ],
+    "where_column": "Pat Toomey",
+    "where_value": "23%"
+  },
+  {
+    "question": "What's the venue for the home team that scored 9.14 (68)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team score",
+    "where_value": "9.14 (68)"
+  },
+  {
+    "question": "How much did Kenny Brack win?",
+    "headers": [
+      "Position",
+      "Driver",
+      "Points",
+      "Winnings",
+      "Series"
+    ],
+    "where_column": "Driver",
+    "where_value": "Kenny Brack"
+  },
+  {
+    "question": "Tier of 2, and a Season of 2000\u201301 is what European competitions?",
+    "headers": [
+      "Season",
+      "Tier",
+      "League",
+      "Turkish Cup",
+      "European Competitions"
+    ],
+    "where_column": "Tier",
+    "where_value": "2",
+    "all_conditions": [
+      {
+        "column": "Tier",
+        "value": "2"
+      },
+      {
+        "column": "Season",
+        "value": "2000\u201301"
+      }
+    ]
+  },
+  {
+    "question": "What was the attendance at game with a loss of Josh Hall (0\u20131)?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Save",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Loss",
+    "where_value": "josh hall (0\u20131)"
+  },
+  {
+    "question": "What is the date for the game with team orlando?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Team",
+    "where_value": "Orlando"
+  },
+  {
+    "question": "What was the attendance when the record was 77-54?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "77-54"
+  },
+  {
+    "question": "What lowest round has orlando pace as the player?",
+    "headers": [
+      "Player",
+      "Round",
+      "Pick",
+      "Position",
+      "NFL Club"
+    ],
+    "where_column": "Player",
+    "where_value": "orlando pace"
+  },
+  {
+    "question": "Name the studio for super callanetics",
+    "headers": [
+      "Year",
+      "Title",
+      "Format",
+      "Studio",
+      "Release Date",
+      "Copyright Information",
+      "Catalog Number"
+    ],
+    "where_column": "Title",
+    "where_value": "Super Callanetics"
+  }
+]

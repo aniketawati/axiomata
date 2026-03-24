@@ -1,0 +1,180 @@
+[
+  {
+    "question": "What home team has an Away team of richmond?",
+    "value_column_pairs": [
+      {"value_span": "richmond", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Is Jasper being producted?",
+    "value_column_pairs": [
+      {"value_span": "Jasper", "column": "Codename", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the result in oakland?",
+    "value_column_pairs": [
+      {"value_span": "oakland", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "What was the us airdate of \"love lockdown\" part one?",
+    "value_column_pairs": [
+      {"value_span": "\"love lockdown\" part one", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Who is the manager whose rank is 16?",
+    "value_column_pairs": [
+      {"value_span": "16", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "How many primary conferences were held in Allendale, Michigan?",
+    "value_column_pairs": [
+      {"value_span": "Allendale, Michigan", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Who was the opponent in London, England in a round less than 2?",
+    "value_column_pairs": [
+      {"value_span": "London, England", "column": "Location", "match_reason": "place_to_location_column"},
+      {"value_span": "2", "column": "Round", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Which year has a 2011 of 1r?",
+    "value_column_pairs": [
+      {"value_span": "1r", "column": "2011", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many years was the issue price $19.95?",
+    "value_column_pairs": [
+      {"value_span": "$19.95", "column": "Issue price", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What pick number was marc deschamps?",
+    "value_column_pairs": [
+      {"value_span": "marc deschamps", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which gymnast had a b score of 8.95 and an a score less than 6.9",
+    "value_column_pairs": [
+      {"value_span": "8.95", "column": "B Score", "match_reason": "number_to_numeric_column"},
+      {"value_span": "6.9", "column": "A Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What machine did Kenneth E. Herbert ride?",
+    "value_column_pairs": [
+      {"value_span": "Kenneth E. Herbert", "column": "Rider", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "How many fastest laps did I.C. Team have?",
+    "value_column_pairs": [
+      {"value_span": "I.C. Team", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What District has a College or Campus Name of anna university college of engineering kanchipuram?",
+    "value_column_pairs": [
+      {"value_span": "anna university college of engineering kanchipuram", "column": "College or Campus Name", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What Silver has a Golf of Li AO?",
+    "value_column_pairs": [
+      {"value_span": "Li AO", "column": "Gold", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What are the rank/s of Eddie Guerrero?",
+    "value_column_pairs": [
+      {"value_span": "Eddie Guerrero", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which Poll source has Pat Toomey of 23%?",
+    "value_column_pairs": [
+      {"value_span": "23%", "column": "Pat Toomey", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What's the venue for the home team that scored 9.14 (68)?",
+    "value_column_pairs": [
+      {"value_span": "9.14 (68)", "column": "Home team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "How much did Kenny Brack win?",
+    "value_column_pairs": [
+      {"value_span": "Kenny Brack", "column": "Driver", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Tier of 2, and a Season of 2000\u201301 is what European competitions?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Tier", "match_reason": "number_to_id_column"},
+      {"value_span": "2000\u201301", "column": "Season", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What was the attendance at game with a loss of Josh Hall (0\u20131)?",
+    "value_column_pairs": [
+      {"value_span": "Josh Hall (0\u20131)", "column": "Loss", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the date for the game with team orlando?",
+    "value_column_pairs": [
+      {"value_span": "orlando", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the attendance when the record was 77-54?",
+    "value_column_pairs": [
+      {"value_span": "77-54", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What lowest round has orlando pace as the player?",
+    "value_column_pairs": [
+      {"value_span": "orlando pace", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Name the studio for super callanetics",
+    "value_column_pairs": [
+      {"value_span": "super callanetics", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  }
+]

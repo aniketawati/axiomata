@@ -1,0 +1,452 @@
+[
+  {
+    "question": "Virtual channel of 16.5 has what call sign?",
+    "headers": [
+      "Call sign",
+      "Analog channel",
+      "Digital channel",
+      "Virtual channel",
+      "Network",
+      "Station Ownership"
+    ],
+    "where_column": "Virtual channel",
+    "where_value": "16.5"
+  },
+  {
+    "question": "what is the company when the base is ljubljana?",
+    "headers": [
+      "play",
+      "author",
+      "company",
+      "base",
+      "country"
+    ],
+    "where_column": "base",
+    "where_value": "ljubljana"
+  },
+  {
+    "question": "Which Week has an Opponent of washington redskins, and an Attendance larger than 56,077?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "washington redskins",
+    "all_conditions": [
+      {
+        "column": "Opponent",
+        "value": "washington redskins"
+      },
+      {
+        "column": "Attendance",
+        "value": "56,077"
+      }
+    ]
+  },
+  {
+    "question": "If the record is 5-8, what is the team name?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "5-8"
+  },
+  {
+    "question": "Which country has a score of 70-66=136?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Score",
+    "where_value": "70-66=136"
+  },
+  {
+    "question": "What was the away team that played at Princes Park?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Venue",
+    "where_value": "princes park"
+  },
+  {
+    "question": "Who answered the 20 questions on 10-07?",
+    "headers": [
+      "Date",
+      "Cover model",
+      "Centerfold model",
+      "Interview subject",
+      "20 Questions",
+      "Pictorials"
+    ],
+    "where_column": "Date",
+    "where_value": "10-07"
+  },
+  {
+    "question": "How many top 10s associated with 3 top 5s and under 22 cuts made?",
+    "headers": [
+      "Tournament",
+      "Wins",
+      "Top-5",
+      "Top-10",
+      "Top-25",
+      "Events",
+      "Cuts made"
+    ],
+    "where_column": "Top-5",
+    "where_value": "3",
+    "all_conditions": [
+      {
+        "column": "Top-5",
+        "value": "3"
+      },
+      {
+        "column": "Cuts made",
+        "value": "22"
+      }
+    ]
+  },
+  {
+    "question": "what is the minimum\u00a0games played\u00a0with\u00a0goals for/against\u00a0being 7-5",
+    "headers": [
+      "Position",
+      "Club (City/Town)",
+      "Games Played",
+      "W-L-D",
+      "Goals For/Against",
+      "Points"
+    ],
+    "where_column": "Goals For/Against",
+    "where_value": "7-5"
+  },
+  {
+    "question": "What was the time for Peter Berwick of Team Suzuki?",
+    "headers": [
+      "Rank",
+      "Rider",
+      "Team",
+      "Speed",
+      "Time"
+    ],
+    "where_column": "Team",
+    "where_value": "suzuki",
+    "all_conditions": [
+      {
+        "column": "Team",
+        "value": "suzuki"
+      },
+      {
+        "column": "Rider",
+        "value": "peter berwick"
+      }
+    ]
+  },
+  {
+    "question": "Name the number of tn seshan values for kr values is 478608",
+    "headers": [
+      "States",
+      "No. of MLA/MPs",
+      "Value of each Vote",
+      "K.R. Narayanan (Votes)",
+      "K.R. Narayanan (Values)",
+      "T.N. Seshan (Votes)",
+      "T.N. Seshan (Values)",
+      "Invalid (Votes)",
+      "Invalid (Values)"
+    ],
+    "where_column": "K.R. Narayanan (Values)",
+    "where_value": "478608"
+  },
+  {
+    "question": "Who is the winner of the tournament in Georgia on Oct 3?",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Location",
+      "Winner",
+      "Score",
+      "1st prize ( $ )"
+    ],
+    "where_column": "Location",
+    "where_value": "georgia",
+    "all_conditions": [
+      {
+        "column": "Location",
+        "value": "georgia"
+      },
+      {
+        "column": "Date",
+        "value": "oct 3"
+      }
+    ]
+  },
+  {
+    "question": "If the record is 6-8, what was the score?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "6-8"
+  },
+  {
+    "question": "Which Year Start has a Number of 28?",
+    "headers": [
+      "Number",
+      "Year Start",
+      "Year End",
+      "Name",
+      "Home Club"
+    ],
+    "where_column": "Number",
+    "where_value": "28"
+  },
+  {
+    "question": "Which Seasons has a Name of joe grugin, and a Lost larger than 8?",
+    "headers": [
+      "Name",
+      "Years",
+      "Seasons",
+      "Lost",
+      "Pct."
+    ],
+    "where_column": "Name",
+    "where_value": "joe grugin",
+    "all_conditions": [
+      {
+        "column": "Name",
+        "value": "joe grugin"
+      },
+      {
+        "column": "Lost",
+        "value": "8"
+      }
+    ]
+  },
+  {
+    "question": "What is the highest Average, when Goals is \"34\", and when Matches is less than 37?",
+    "headers": [
+      "Goalkeeper",
+      "Goals",
+      "Matches",
+      "Average",
+      "Team"
+    ],
+    "where_column": "Goals",
+    "where_value": "34",
+    "all_conditions": [
+      {
+        "column": "Goals",
+        "value": "34"
+      },
+      {
+        "column": "Matches",
+        "value": "37"
+      }
+    ]
+  },
+  {
+    "question": "What is the partial failure for the Country of russia, and a Failure larger than 0, and a Family of angara, and a Launch larger than 1?",
+    "headers": [
+      "Family",
+      "Country",
+      "Launches",
+      "Successes",
+      "Failures",
+      "Partial failures"
+    ],
+    "where_column": "Country",
+    "where_value": "russia",
+    "all_conditions": [
+      {
+        "column": "Country",
+        "value": "russia"
+      },
+      {
+        "column": "Failures",
+        "value": "0"
+      },
+      {
+        "column": "Family",
+        "value": "angara"
+      },
+      {
+        "column": "Launches",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "question": "Name the builder for wd number being 22",
+    "headers": [
+      "LMS No.",
+      "WD No.",
+      "Builder",
+      "Serial No.",
+      "Date built"
+    ],
+    "where_column": "WD No.",
+    "where_value": "22"
+  },
+  {
+    "question": "How many bronzes associated with over 0 total medals, 3 golds, and over 6 games?",
+    "headers": [
+      "Games",
+      "First",
+      "Last",
+      "Gold",
+      "Bronze",
+      "Total",
+      "Best finish (first/last)"
+    ],
+    "where_column": "Total",
+    "where_value": "0",
+    "all_conditions": [
+      {
+        "column": "Total",
+        "value": "0"
+      },
+      {
+        "column": "Gold",
+        "value": "3"
+      },
+      {
+        "column": "Games",
+        "value": "6"
+      }
+    ]
+  },
+  {
+    "question": "What percentage is listed in column r1b1c (r-v88) for the 4.5% total percentage?",
+    "headers": [
+      "Region",
+      "Population",
+      "Country",
+      "Language",
+      "N",
+      "Total%",
+      "R1b1c (R-V88)",
+      "R1b1a2 (R-M269)",
+      "R1b1c* (R-V88*)",
+      "R1b1c4 (R-V69)"
+    ],
+    "where_column": "Total%",
+    "where_value": "4.5%"
+  },
+  {
+    "question": "What is the population density of bandung regency?",
+    "headers": [
+      "Administrative division",
+      "Area (km\u00b2) 2005",
+      "Population 2010 Census",
+      "Population 2011 SIAK Database",
+      "Population density (/km\u00b2 2010)"
+    ],
+    "where_column": "Administrative division",
+    "where_value": "Bandung Regency"
+  },
+  {
+    "question": "How many games had fewer than 118 opponents and more than 109 net points with an opponent of Washington?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Result",
+      "Nets points",
+      "Opponents",
+      "Record",
+      "Streak"
+    ],
+    "where_column": "Opponents",
+    "where_value": "118",
+    "all_conditions": [
+      {
+        "column": "Opponents",
+        "value": "118"
+      },
+      {
+        "column": "Nets points",
+        "value": "109"
+      },
+      {
+        "column": "Opponent",
+        "value": "washington"
+      }
+    ]
+  },
+  {
+    "question": "What is the sum of Total, when Silver is 0, and when Gold is 1?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "0",
+    "all_conditions": [
+      {
+        "column": "Silver",
+        "value": "0"
+      },
+      {
+        "column": "Gold",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "question": "What's the song of artist liam reilly?",
+    "headers": [
+      "Draw",
+      "Artist",
+      "Song",
+      "Points",
+      "Place"
+    ],
+    "where_column": "Artist",
+    "where_value": "liam reilly"
+  },
+  {
+    "question": "Who was on 12 March 2000?",
+    "headers": [
+      "Date",
+      "Round",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance",
+      "Scorers"
+    ],
+    "where_column": "Date",
+    "where_value": "12 march 2000"
+  }
+]

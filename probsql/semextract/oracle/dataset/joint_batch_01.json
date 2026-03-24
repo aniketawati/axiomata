@@ -1,0 +1,415 @@
+[
+  {
+    "question": "Who had the high rebounds on January 24?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "january 24"
+  },
+  {
+    "question": "What's the time/retired for a grid of 14?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Grid",
+    "where_value": "14"
+  },
+  {
+    "question": "what is the special edition where the english version is nick stewart?",
+    "headers": [
+      "Character",
+      "English version",
+      "Laserdisc edition",
+      "Buena Vista edition",
+      "Special edition"
+    ],
+    "where_column": "English version",
+    "where_value": "Nick Stewart"
+  },
+  {
+    "question": "What is the total average for Rank entries where the Lane listed is smaller than 4 and the Nationality listed is San Marino?",
+    "headers": [
+      "Rank",
+      "Lane",
+      "Athlete",
+      "Nationality",
+      "Time",
+      "React"
+    ],
+    "where_column": "Lane",
+    "where_value": "4",
+    "all_conditions": [
+      {
+        "column": "Lane",
+        "value": "4"
+      },
+      {
+        "column": "Nationality",
+        "value": "san marino"
+      }
+    ]
+  },
+  {
+    "question": "How many overalls have charley barnes as the name, with a pick less than 3?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Name",
+    "where_value": "charley barnes",
+    "all_conditions": [
+      {
+        "column": "Name",
+        "value": "charley barnes"
+      },
+      {
+        "column": "Pick",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "question": "List the population density per kilometer for the city of calintaan?",
+    "headers": [
+      "Municipality",
+      "No. of Barangays",
+      "Area (km\u00b2)",
+      "Population (2010)",
+      "Pop. density (per km\u00b2)",
+      "Income Class (2004)"
+    ],
+    "where_column": "Municipality",
+    "where_value": "Calintaan"
+  },
+  {
+    "question": "What is the round in Finland with a draw for method?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round",
+      "Location"
+    ],
+    "where_column": "Location",
+    "where_value": "finland",
+    "all_conditions": [
+      {
+        "column": "Location",
+        "value": "finland"
+      },
+      {
+        "column": "Method",
+        "value": "draw"
+      }
+    ]
+  },
+  {
+    "question": "What is Country, when Total is less than 290, and when Year(s) Won is 1960?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par",
+      "Finish"
+    ],
+    "where_column": "Total",
+    "where_value": "290",
+    "all_conditions": [
+      {
+        "column": "Total",
+        "value": "290"
+      },
+      {
+        "column": "Year(s) won",
+        "value": "1960"
+      }
+    ]
+  },
+  {
+    "question": "When was the status test match with an opposing team of south africa?",
+    "headers": [
+      "Opposing Teams",
+      "Against",
+      "Date",
+      "Venue",
+      "Status"
+    ],
+    "where_column": "Status",
+    "where_value": "test match",
+    "all_conditions": [
+      {
+        "column": "Status",
+        "value": "test match"
+      },
+      {
+        "column": "Opposing Teams",
+        "value": "south africa"
+      }
+    ]
+  },
+  {
+    "question": "What was the date of the game with a score of 2\u20131?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Record"
+    ],
+    "where_column": "Score",
+    "where_value": "2\u20131"
+  },
+  {
+    "question": "Which Attendance has a Date of september 29, 1968, and a Week smaller than 3?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Date",
+    "where_value": "september 29, 1968",
+    "all_conditions": [
+      {
+        "column": "Date",
+        "value": "september 29, 1968"
+      },
+      {
+        "column": "Week",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "question": "When danilo di luca is the winner who is the general classification? ",
+    "headers": [
+      "Stage",
+      "Winner",
+      "General classification",
+      "Points classification",
+      "Mountains classification",
+      "Young rider classification"
+    ],
+    "where_column": "Winner",
+    "where_value": "Danilo Di Luca"
+  },
+  {
+    "question": "What was the result in the voting district Kentucky 2?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "District",
+    "where_value": "Kentucky 2"
+  },
+  {
+    "question": "What is the loss for the game against @ expos, with a save of parrett (2)?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Save"
+    ],
+    "where_column": "Opponent",
+    "where_value": "@ expos",
+    "all_conditions": [
+      {
+        "column": "Opponent",
+        "value": "@ expos"
+      },
+      {
+        "column": "Save",
+        "value": "parrett (2)"
+      }
+    ]
+  },
+  {
+    "question": "Who were the away team in tie number 20?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Attendance"
+    ],
+    "where_column": "Tie no",
+    "where_value": "20"
+  },
+  {
+    "question": "What type has a population of 370?",
+    "headers": [
+      "Code",
+      "Type",
+      "Name",
+      "Area (km 2 )",
+      "Population",
+      "Regional County Municipality",
+      "Region"
+    ],
+    "where_column": "Population",
+    "where_value": "370"
+  },
+  {
+    "question": "What is the Date with an Opponent that is indiana state college?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Location",
+      "Result",
+      "Overall"
+    ],
+    "where_column": "Opponent",
+    "where_value": "indiana state college"
+  },
+  {
+    "question": "What is the total number of agriculatural panels of the composition with more than 3 National Universities of Ireland?",
+    "headers": [
+      "Administrative Panel",
+      "Agricultural Panel",
+      "Cultural and Educational Panel",
+      "Industrial and Commercial Panel",
+      "Labour Panel",
+      "National University of Ireland",
+      "Nominated by the Taoiseach",
+      "Total"
+    ],
+    "where_column": "National University of Ireland",
+    "where_value": "3"
+  },
+  {
+    "question": "Who was the centerfold model in the issue where Fergie answered the \"20 questions\"?",
+    "headers": [
+      "Date",
+      "Cover model",
+      "Centerfold model",
+      "Interview subject",
+      "20 Questions",
+      "Pictorials"
+    ],
+    "where_column": "20 Questions",
+    "where_value": "Fergie"
+  },
+  {
+    "question": "Where was the game played on 20 may?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Competition",
+      "Report"
+    ],
+    "where_column": "Date",
+    "where_value": "20 may"
+  },
+  {
+    "question": "What is the episode number of  \"you gonna do that the rest of your life?\"",
+    "headers": [
+      "Series #",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Viewers (in millions)"
+    ],
+    "where_column": "Title",
+    "where_value": "\"You Gonna Do That the Rest of Your Life?\""
+  },
+  {
+    "question": "If the height order is 1 and the soundfield type is mixed-order, what are all the channels?",
+    "headers": [
+      "Horizontal order",
+      "Height order",
+      "Soundfield type",
+      "Number of channels",
+      "Channels"
+    ],
+    "where_column": "Soundfield type",
+    "where_value": "mixed-order",
+    "all_conditions": [
+      {
+        "column": "Soundfield type",
+        "value": "mixed-order"
+      },
+      {
+        "column": "Height order",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "question": "What is the Depart de la main gauche of the do Mode?",
+    "headers": [
+      "Mode",
+      "D\u00e9part de la main gauche",
+      "Accord du 1st string",
+      "2nd string",
+      "3rd string"
+    ],
+    "where_column": "Mode",
+    "where_value": "do"
+  },
+  {
+    "question": "Name the team for january 17",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "January 17"
+  },
+  {
+    "question": "what is the total tonnage grt of the cargo ship(s) sunk or captured on 4 feb 16?",
+    "headers": [
+      "Date",
+      "Ship",
+      "Type",
+      "Nationality",
+      "Tonnage GRT"
+    ],
+    "where_column": "Type",
+    "where_value": "cargo ship",
+    "all_conditions": [
+      {
+        "column": "Type",
+        "value": "cargo ship"
+      },
+      {
+        "column": "Date",
+        "value": "4 feb 16"
+      }
+    ]
+  }
+]

@@ -1,0 +1,425 @@
+[
+  {
+    "question": "at most what number in the series was the episode \"chet episode\"?",
+    "headers": [
+      "Series no.",
+      "Season no.",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Chet Episode\""
+  },
+  {
+    "question": "What team was the opponent in a week earlier than 17 on June 17, 2006?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Record",
+      "Game site"
+    ],
+    "where_column": "Week",
+    "where_value": "17",
+    "all_conditions": [
+      {
+        "column": "Week",
+        "value": "17"
+      },
+      {
+        "column": "Date",
+        "value": "june 17, 2006"
+      }
+    ]
+  },
+  {
+    "question": "What is the the name of the winner or 2nd  with a weight more than 7.3, and the result was \u2013?",
+    "headers": [
+      "Result",
+      "Race",
+      "Distance",
+      "Weight",
+      "Winner or 2nd",
+      "Pos'n"
+    ],
+    "where_column": "Weight",
+    "where_value": "7.3",
+    "all_conditions": [
+      {
+        "column": "Weight",
+        "value": "7.3"
+      },
+      {
+        "column": "Result",
+        "value": "\u2013"
+      }
+    ]
+  },
+  {
+    "question": "What is the highest Points+ number when the Points- number is larger than 1385, a Sets+ number smaller than 37 and a Sets- number larger than 41?",
+    "headers": [
+      "Team",
+      "Sets+",
+      "Sets\u2013",
+      "Points+",
+      "Points\u2013"
+    ],
+    "where_column": "Points\u2013",
+    "where_value": "1385",
+    "all_conditions": [
+      {
+        "column": "Points\u2013",
+        "value": "1385"
+      },
+      {
+        "column": "Sets+",
+        "value": "37"
+      },
+      {
+        "column": "Sets\u2013",
+        "value": "41"
+      }
+    ]
+  },
+  {
+    "question": "What is the Date of the Competition with a Result of 3\u20130?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Result",
+    "where_value": "3\u20130"
+  },
+  {
+    "question": "what's the total number of\u00a0species in the peruvian amazon\u00a0with\u00a08411 species in the world\u00a0",
+    "headers": [
+      "Taxonomy",
+      "Species in the world",
+      "Species in Peru",
+      "Species in the Peruvian Amazon",
+      "Peru Vs. world (Percent)",
+      "Peruvian Amazon Vs. Peru (Percent)"
+    ],
+    "where_column": "Species in the world",
+    "where_value": "8411"
+  },
+  {
+    "question": "What is the latest week with an attendance of 74,162?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "74,162"
+  },
+  {
+    "question": "Who was the on the cover when Bob Vila did the 20 Questions?",
+    "headers": [
+      "Date",
+      "Cover model",
+      "Centerfold model",
+      "Interview subject",
+      "20 Questions",
+      "Pictorials"
+    ],
+    "where_column": "20 Questions",
+    "where_value": "Bob Vila"
+  },
+  {
+    "question": "What Municipality has a Rank of 44?",
+    "headers": [
+      "Rank",
+      "Municipality",
+      "Province",
+      "Status",
+      "Area (km 2 )"
+    ],
+    "where_column": "Rank",
+    "where_value": "44"
+  },
+  {
+    "question": "who are all the visitor with a record of 25\u201318",
+    "headers": [
+      "#",
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Leading scorer",
+      "Attendance",
+      "Record",
+      "Streak"
+    ],
+    "where_column": "Record",
+    "where_value": "25\u201318"
+  },
+  {
+    "question": "What is the away team of the match with a 356 attendance?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "356"
+  },
+  {
+    "question": "How many winning drivers were the for the rnd equalling 5?",
+    "headers": [
+      "Rnd",
+      "Race Name",
+      "Circuit",
+      "City/Location",
+      "Date",
+      "Pole position",
+      "Winning driver",
+      "Winning team",
+      "Report"
+    ],
+    "where_column": "Rnd",
+    "where_value": "5"
+  },
+  {
+    "question": "In episode Top 16 (8 Men), what are the themes?",
+    "headers": [
+      "Episode",
+      "Theme",
+      "Song choice",
+      "Original artist",
+      "Order #",
+      "Result"
+    ],
+    "where_column": "Episode",
+    "where_value": "Top 16 (8 Men)"
+  },
+  {
+    "question": "What is the sum of draw with a lost smaller than 6, and a place of 5, and a goals scored less than 29?",
+    "headers": [
+      "Place",
+      "Team",
+      "Played",
+      "Draw",
+      "Lost",
+      "Goals Scored",
+      "Goals Conceded",
+      "Points"
+    ],
+    "where_column": "Lost",
+    "where_value": "6",
+    "all_conditions": [
+      {
+        "column": "Lost",
+        "value": "6"
+      },
+      {
+        "column": "Place",
+        "value": "5"
+      },
+      {
+        "column": "Goals Scored",
+        "value": "29"
+      }
+    ]
+  },
+  {
+    "question": "What is the points when the lost was 11?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Lost",
+    "where_value": "11"
+  },
+  {
+    "question": "what is the date when the round is sf?",
+    "headers": [
+      "Date",
+      "Round",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Round",
+    "where_value": "sf"
+  },
+  {
+    "question": "Who's the athlete with a wind of 1.7 and from the United States?",
+    "headers": [
+      "Time",
+      "Wind",
+      "Athlete",
+      "Nationality",
+      "Location of race",
+      "Date"
+    ],
+    "where_column": "Nationality",
+    "where_value": "united states",
+    "all_conditions": [
+      {
+        "column": "Nationality",
+        "value": "united states"
+      },
+      {
+        "column": "Wind",
+        "value": "1.7"
+      }
+    ]
+  },
+  {
+    "question": "What is Beohari's highest number of electorates?",
+    "headers": [
+      "Constituency number",
+      "Name",
+      "Reserved for ( SC / ST /None)",
+      "District",
+      "Number of electorates (2009)"
+    ],
+    "where_column": "Name",
+    "where_value": "beohari"
+  },
+  {
+    "question": "When Treasurer was treasurer, who was the highway commissioner?",
+    "headers": [
+      "Years",
+      "Supervisor",
+      "Clerk",
+      "Treasurer",
+      "Highway Commissioners"
+    ],
+    "where_column": "Treasurer",
+    "where_value": "treasurer"
+  },
+  {
+    "question": "At what venue did the team from Collingwood score 7.14 (56) - 4.5 (29)?",
+    "headers": [
+      "Year",
+      "Competition",
+      "Opponent",
+      "Score",
+      "Venue"
+    ],
+    "where_column": "Opponent",
+    "where_value": "collingwood",
+    "all_conditions": [
+      {
+        "column": "Opponent",
+        "value": "collingwood"
+      },
+      {
+        "column": "Score",
+        "value": "7.14 (56) - 4.5 (29)"
+      }
+    ]
+  },
+  {
+    "question": "On what Date was the Score 6\u20134, 6\u20132?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Tournament",
+      "Surface",
+      "Partner",
+      "Opponents",
+      "Score"
+    ],
+    "where_column": "Score",
+    "where_value": "6\u20134, 6\u20132"
+  },
+  {
+    "question": "What is the quantity preserved of the e-1 class?",
+    "headers": [
+      "Class",
+      "Wheel arrangement",
+      "Fleet number(s)",
+      "Year made",
+      "Quantity made",
+      "Quantity preserved"
+    ],
+    "where_column": "Class",
+    "where_value": "e-1"
+  },
+  {
+    "question": "What year was the b n2t axle arrangement, which has a quantity of 31, manufactured?",
+    "headers": [
+      "Class",
+      "Railway number(s)",
+      "Quantity",
+      "Year(s) of manufacture",
+      "Axle arrangement ( UIC )"
+    ],
+    "where_column": "Quantity",
+    "where_value": "31",
+    "all_conditions": [
+      {
+        "column": "Quantity",
+        "value": "31"
+      },
+      {
+        "column": "Axle arrangement ( UIC )",
+        "value": "b n2t"
+      }
+    ]
+  },
+  {
+    "question": "What is the lowest number of bronze a short track athlete with 0 gold medals has?",
+    "headers": [
+      "Athlete",
+      "Sport",
+      "Type",
+      "Olympics",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Sport",
+    "where_value": "short track",
+    "all_conditions": [
+      {
+        "column": "Sport",
+        "value": "short track"
+      },
+      {
+        "column": "Gold",
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "question": "When looking at new entries this round and seeing 8; what number in total is there for clubs remaining?",
+    "headers": [
+      "Phase",
+      "Round",
+      "Clubs remaining",
+      "Clubs involved",
+      "Winners from previous round",
+      "New entries this round",
+      "Leagues entering at this round"
+    ],
+    "where_column": "New entries this round",
+    "where_value": "8"
+  }
+]

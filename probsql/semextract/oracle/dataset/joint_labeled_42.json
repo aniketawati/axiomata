@@ -1,0 +1,192 @@
+[
+  {
+    "question": "Which current venues location is Mason, Ohio?",
+    "value_column_pairs": [
+      {"value_span": "Mason, Ohio", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "On what Date was the Score 105-128?",
+    "value_column_pairs": [
+      {"value_span": "105-128", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many different counts of the votes for Bush are there in the county where he got 69.7% of the votes?",
+    "value_column_pairs": [
+      {"value_span": "69.7%", "column": "Bush%", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "value_type_excludes"]
+  },
+  {
+    "question": "what is the sum of the losses when the goals against is less than 34 and the games played is less than 8?",
+    "value_column_pairs": [
+      {"value_span": "34", "column": "Goals Against", "match_reason": "number_to_numeric_column"},
+      {"value_span": "8", "column": "Games Played", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Name the score for september 11",
+    "value_column_pairs": [
+      {"value_span": "september 11", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the score of the event that Alianza Lima won in 1965?",
+    "value_column_pairs": [
+      {"value_span": "Alianza Lima", "column": "Winner", "match_reason": "name_to_name_column"},
+      {"value_span": "1965", "column": "Season", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "Which Home team score has a Home team of geelong?",
+    "value_column_pairs": [
+      {"value_span": "geelong", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average total medals of the nation ranked 1 with less than 1 silver?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Rank", "match_reason": "number_to_id_column"},
+      {"value_span": "1", "column": "Silver", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the average nominated of the composition nominated by Taioseach with an Industrial and Commercial panel less than 9, an administrative panel greater than 0, a cultural and educational panel greater than 2, and a total less than 29?",
+    "value_column_pairs": [
+      {"value_span": "9", "column": "Industrial and Commercial Panel", "match_reason": "number_to_numeric_column"},
+      {"value_span": "0", "column": "Administrative Panel", "match_reason": "number_to_numeric_column"},
+      {"value_span": "2", "column": "Cultural and Educational Panel", "match_reason": "number_to_numeric_column"},
+      {"value_span": "29", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What was the score of game 82?",
+    "value_column_pairs": [
+      {"value_span": "82", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the # listed when the score is 70-69-69-70=278?",
+    "value_column_pairs": [
+      {"value_span": "70-69-69-70=278", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the 2009 ffor 2010 of 1r and 2012 of a and 2008 of 2r",
+    "value_column_pairs": [
+      {"value_span": "1r", "column": "2010", "match_reason": "category_to_category_column"},
+      {"value_span": "a", "column": "2012", "match_reason": "category_to_category_column"},
+      {"value_span": "2r", "column": "2008", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Who won Division Southwest when the winner of Division North was Lepenec and Division South was won by 11 Oktomvri?",
+    "value_column_pairs": [
+      {"value_span": "Lepenec", "column": "Division North", "match_reason": "name_to_name_column"},
+      {"value_span": "11 Oktomvri", "column": "Division South", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What city was the event in when Patrik Antonius won?",
+    "value_column_pairs": [
+      {"value_span": "Patrik Antonius", "column": "Winner", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "Which city includes the Target Center arena?",
+    "value_column_pairs": [
+      {"value_span": "Target Center", "column": "Home Arena", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "context_implies"]
+  },
+  {
+    "question": "What was the host city of the 8th edition in the the host country of Croatia?",
+    "value_column_pairs": [
+      {"value_span": "Croatia", "column": "Host country", "match_reason": "place_to_location_column"},
+      {"value_span": "8th", "column": "Edition", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many people attended the game at VFL Park?",
+    "value_column_pairs": [
+      {"value_span": "VFL Park", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "context_implies"]
+  },
+  {
+    "question": "How many Drawn have a Lost smaller than 25, and a Goal Difference of +7, and a Played larger than 34?",
+    "value_column_pairs": [
+      {"value_span": "25", "column": "Lost", "match_reason": "number_to_numeric_column"},
+      {"value_span": "+7", "column": "Goal Difference", "match_reason": "number_to_numeric_column"},
+      {"value_span": "34", "column": "Played", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is 2005, when 1998 is \"F\", and when 2002 is \"2R\"?",
+    "value_column_pairs": [
+      {"value_span": "F", "column": "1998", "match_reason": "category_to_category_column"},
+      {"value_span": "2R", "column": "2002", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "who is the driver when the engine is mercedes fo110m?",
+    "value_column_pairs": [
+      {"value_span": "mercedes fo110m", "column": "Engine \u2020", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Points have a Score of 4\u20131, and a Game smaller than 39?",
+    "value_column_pairs": [
+      {"value_span": "4\u20131", "column": "Score", "match_reason": "number_to_numeric_column"},
+      {"value_span": "39", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the away team when solon was the home team?",
+    "value_column_pairs": [
+      {"value_span": "solon", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Tell me the highest home runs for cleveland indians years before 1931",
+    "value_column_pairs": [
+      {"value_span": "cleveland indians", "column": "Team", "match_reason": "team_to_team_column"},
+      {"value_span": "1931", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": " How many games had a deficit of 175? ",
+    "value_column_pairs": [
+      {"value_span": "175", "column": "against", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["context_implies"]
+  },
+  {
+    "question": "When the Home team score was 15.18 (108), what's the lowest Crowd turnout?",
+    "value_column_pairs": [
+      {"value_span": "15.18 (108)", "column": "Home team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  }
+]

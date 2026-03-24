@@ -1,0 +1,394 @@
+[
+  {
+    "question": "What is the series # when the US air date is 20 July 2012?",
+    "headers": [
+      "Series #",
+      "Title",
+      "Directed by",
+      "Written by",
+      "France air date",
+      "Canadian air date",
+      "US air date"
+    ],
+    "where_column": "US air date",
+    "where_value": "20 July 2012"
+  },
+  {
+    "question": "What is the cable rank for the airdate of 10 december 2009?",
+    "headers": [
+      "Episode no.",
+      "Airdate",
+      "Viewers",
+      "BBC Three weekly ranking",
+      "Cable rank"
+    ],
+    "where_column": "Airdate",
+    "where_value": "10 December 2009"
+  },
+  {
+    "question": "What is the pick# from South Dakota college?",
+    "headers": [
+      "Pick #",
+      "NFL Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "College",
+    "where_value": "south dakota"
+  },
+  {
+    "question": "When pronoun is the subject what is the episode title?",
+    "headers": [
+      "Episode title",
+      "Subject",
+      "Music by",
+      "Lyrics by",
+      "Performed by",
+      "First aired"
+    ],
+    "where_column": "Subject",
+    "where_value": "pronoun"
+  },
+  {
+    "question": "What is the event when the class is time trial hc a?",
+    "headers": [
+      "Event",
+      "Class",
+      "Gold",
+      "Silver",
+      "Bronze"
+    ],
+    "where_column": "Class",
+    "where_value": "time trial hc a"
+  },
+  {
+    "question": "Name the least grid for 17 points ",
+    "headers": [
+      "Fin. Pos",
+      "Car No.",
+      "Driver",
+      "Team",
+      "Laps",
+      "Time/Retired",
+      "Grid",
+      "Laps Led",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "17"
+  },
+  {
+    "question": "Which trainer won the hyroglyphic in a year that was before 2010?",
+    "headers": [
+      "Year",
+      "Winner",
+      "Jockey",
+      "Trainer",
+      "Time",
+      "Grade"
+    ],
+    "where_column": "Year",
+    "where_value": "2010",
+    "all_conditions": [
+      {
+        "column": "Year",
+        "value": "2010"
+      },
+      {
+        "column": "Winner",
+        "value": "hyroglyphic"
+      }
+    ]
+  },
+  {
+    "question": "Which school is in Raleigh, NC?",
+    "headers": [
+      "Player",
+      "Height",
+      "School",
+      "Hometown",
+      "College",
+      "NBA Draft"
+    ],
+    "where_column": "Hometown",
+    "where_value": "raleigh, nc"
+  },
+  {
+    "question": "Which qual has both 200 total laps and took place in 1957?",
+    "headers": [
+      "Year",
+      "Start",
+      "Qual",
+      "Rank",
+      "Finish",
+      "Laps"
+    ],
+    "where_column": "Laps",
+    "where_value": "200",
+    "all_conditions": [
+      {
+        "column": "Laps",
+        "value": "200"
+      },
+      {
+        "column": "Year",
+        "value": "1957"
+      }
+    ]
+  },
+  {
+    "question": "What is the 9th runner-up with a top 18/20/24/30 greater than 17 and a 5th runner-up of 2?",
+    "headers": [
+      "Rank",
+      "Country/Territory",
+      "Nuestra Belleza Latina",
+      "1st runner-up",
+      "2nd runner-up",
+      "3rd runner-up",
+      "4th runner-up",
+      "5th runner-up",
+      "6th runner-up",
+      "7th runner-up",
+      "8th runner-up",
+      "9th runner-up",
+      "10th runner-up",
+      "11th runner-up",
+      "Top 18/20/24/30",
+      "Total"
+    ],
+    "where_column": "5th runner-up",
+    "where_value": "2",
+    "all_conditions": [
+      {
+        "column": "5th runner-up",
+        "value": "2"
+      },
+      {
+        "column": "Top 18/20/24/30",
+        "value": "17"
+      }
+    ]
+  },
+  {
+    "question": "What is the record of the game on December 5, 2007?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Leading scorer",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "december 5, 2007"
+  },
+  {
+    "question": "Where's the school that Mark Fletcher is the principal of?",
+    "headers": [
+      "School",
+      "City / Town",
+      "Website",
+      "Size",
+      "Principal",
+      "Grades",
+      "IDOE Profile"
+    ],
+    "where_column": "Principal",
+    "where_value": "Mark Fletcher"
+  },
+  {
+    "question": "Which 3rd run has rank of 8?",
+    "headers": [
+      "Rank",
+      "Name",
+      "1st run",
+      "2nd run",
+      "3rd run",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "8"
+  },
+  {
+    "question": "What is the Game number on March 30?",
+    "headers": [
+      "Game",
+      "Date",
+      "Home Team",
+      "Result",
+      "Road Team"
+    ],
+    "where_column": "Date",
+    "where_value": "march 30"
+  },
+  {
+    "question": "What were Holly Scouler's total votes?",
+    "headers": [
+      "Members",
+      "Teammate",
+      "Couples Team",
+      "Status",
+      "Total Votes"
+    ],
+    "where_column": "Members",
+    "where_value": "holly scouler"
+  },
+  {
+    "question": "What was the air date of the episode that has a production code of 5aky13?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Production code",
+    "where_value": "5AKY13"
+  },
+  {
+    "question": "Which county has a median household income of  $98,090?",
+    "headers": [
+      "Rank",
+      "Place",
+      "County",
+      "Per Capita Income",
+      "Median House- hold Income",
+      "Population",
+      "Number of Households"
+    ],
+    "where_column": "Median House- hold Income",
+    "where_value": "$98,090"
+  },
+  {
+    "question": "Name the high assists for  l 98\u2013103 (ot)",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Score",
+    "where_value": "L 98\u2013103 (OT)"
+  },
+  {
+    "question": "What skip has angela tuvaeva as the lead?",
+    "headers": [
+      "Country",
+      "Skip",
+      "Third",
+      "Second",
+      "Lead"
+    ],
+    "where_column": "Lead",
+    "where_value": "angela tuvaeva"
+  },
+  {
+    "question": "Tell me the average final rank for loe more than 10 and point less than 43",
+    "headers": [
+      "Season",
+      "Belonging league",
+      "Matches",
+      "league point",
+      "Draw",
+      "Lose",
+      "Goal difference",
+      "Point",
+      "Lost point",
+      "Final rank"
+    ],
+    "where_column": "Lose",
+    "where_value": "10",
+    "all_conditions": [
+      {
+        "column": "Lose",
+        "value": "10"
+      },
+      {
+        "column": "Point",
+        "value": "43"
+      }
+    ]
+  },
+  {
+    "question": "What is the population density of the area with a population larger than 92,719?",
+    "headers": [
+      "District",
+      "Population",
+      "Area",
+      "Pop. Dens.",
+      "No.of Settlements"
+    ],
+    "where_column": "Population",
+    "where_value": "92,719"
+  },
+  {
+    "question": "Which years did Martin Sacks work on a soap opera?",
+    "headers": [
+      "Actor",
+      "Character",
+      "Soap Opera",
+      "Years",
+      "Duration"
+    ],
+    "where_column": "Actor",
+    "where_value": "martin sacks"
+  },
+  {
+    "question": "Who is the Winning Applicant of Ensemble Name Muxco Lincolnshire in Block 10D?",
+    "headers": [
+      "Area",
+      "Advertisement date",
+      "Block",
+      "Winning applicant",
+      "Ensemble name"
+    ],
+    "where_column": "Block",
+    "where_value": "10d",
+    "all_conditions": [
+      {
+        "column": "Block",
+        "value": "10d"
+      },
+      {
+        "column": "Ensemble name",
+        "value": "muxco lincolnshire"
+      }
+    ]
+  },
+  {
+    "question": "What is Maksim Botin's position? ",
+    "headers": [
+      "Shirt No",
+      "Nationality",
+      "Player",
+      "Birth Date",
+      "Height",
+      "Position"
+    ],
+    "where_column": "Player",
+    "where_value": "Maksim Botin"
+  },
+  {
+    "question": "How many in total were elected first in lost renomination?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Result",
+    "where_value": "Lost renomination"
+  }
+]

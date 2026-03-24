@@ -1,0 +1,418 @@
+[
+  {
+    "question": "Who was sent to the third island in week 1?",
+    "headers": [
+      "Member",
+      "Week Arrived On Main Island",
+      "Week Sent To Third Island",
+      "Original Tribe",
+      "Tribe They Chose To Win"
+    ],
+    "where_column": "Week Sent To Third Island",
+    "where_value": "1"
+  },
+  {
+    "question": "What is the home team at Victoria Park with an Away team score of 7.12 (54) and more than 12,000 people?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Crowd",
+    "where_value": "12,000",
+    "all_conditions": [
+      {
+        "column": "Crowd",
+        "value": "12,000"
+      },
+      {
+        "column": "Away team score",
+        "value": "7.12 (54)"
+      },
+      {
+        "column": "Venue",
+        "value": "victoria park"
+      }
+    ]
+  },
+  {
+    "question": "What was the literacy rate published in the 2001 census for the state that saw a 12.66% increase?",
+    "headers": [
+      "State",
+      "Literacy Rate (%) - [2013 Estimate]",
+      "Literacy Rate (%) - 2001 Census",
+      "Literacy Rate (%) - 2011 Census",
+      "% Increase"
+    ],
+    "where_column": "% Increase",
+    "where_value": "12.66%"
+  },
+  {
+    "question": "How many games have an Attendance of 19,190?",
+    "headers": [
+      "Game",
+      "Date",
+      "Score",
+      "Location",
+      "Time",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "19,190"
+  },
+  {
+    "question": "Which rank's country is the US when the accolade is 40 best albums of the year?",
+    "headers": [
+      "Publication",
+      "Country",
+      "Accolade",
+      "Year",
+      "Rank"
+    ],
+    "where_column": "Country",
+    "where_value": "us",
+    "all_conditions": [
+      {
+        "column": "Country",
+        "value": "us"
+      },
+      {
+        "column": "Accolade",
+        "value": "40 best albums of the year"
+      }
+    ]
+  },
+  {
+    "question": "What is City of License, when Frequency MHz is less than 102.5?",
+    "headers": [
+      "Call sign",
+      "Frequency MHz",
+      "City of license",
+      "ERP W",
+      "Class",
+      "FCC info"
+    ],
+    "where_column": "Frequency MHz",
+    "where_value": "102.5"
+  },
+  {
+    "question": "What is the figure for Pasadena when Tujunga is 36?",
+    "headers": [
+      "Tujunga",
+      "La Crescenta- Montrose",
+      "Glendale",
+      "La Ca\u00f1ada Flintridge",
+      "Pasadena"
+    ],
+    "where_column": "Tujunga",
+    "where_value": "36"
+  },
+  {
+    "question": "What is the largest money for a t4 place, for Tiger Woods?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "Place",
+    "where_value": "t4",
+    "all_conditions": [
+      {
+        "column": "Place",
+        "value": "t4"
+      },
+      {
+        "column": "Player",
+        "value": "tiger woods"
+      }
+    ]
+  },
+  {
+    "question": "What company made the chassis when Ferrari made the engine and there were 25 points?",
+    "headers": [
+      "Year",
+      "Entrant",
+      "Chassis",
+      "Engine",
+      "Points"
+    ],
+    "where_column": "Engine",
+    "where_value": "ferrari",
+    "all_conditions": [
+      {
+        "column": "Engine",
+        "value": "ferrari"
+      },
+      {
+        "column": "Points",
+        "value": "25"
+      }
+    ]
+  },
+  {
+    "question": "Name the number of year for 6\u20133, 6\u20132 hard surface",
+    "headers": [
+      "Outcome",
+      "Year",
+      "Championship",
+      "Surface",
+      "Opponent in the final",
+      "Score in the final"
+    ],
+    "where_column": "Score in the final",
+    "where_value": "6\u20133, 6\u20132",
+    "all_conditions": [
+      {
+        "column": "Score in the final",
+        "value": "6\u20133, 6\u20132"
+      },
+      {
+        "column": "Surface",
+        "value": "Hard"
+      }
+    ]
+  },
+  {
+    "question": "What is the maximum folded value of the team whose stadium is Fraser Field?",
+    "headers": [
+      "Team",
+      "City",
+      "Stadium",
+      "Capacity",
+      "Founded",
+      "Folded",
+      "History"
+    ],
+    "where_column": "Stadium",
+    "where_value": "Fraser Field"
+  },
+  {
+    "question": "Tell me the highest point with lost point being 33 and league point less than 52",
+    "headers": [
+      "Season",
+      "Belonging league",
+      "Matches",
+      "league point",
+      "Draw",
+      "Lose",
+      "Goal difference",
+      "Point",
+      "Lost point",
+      "Final rank"
+    ],
+    "where_column": "Lost point",
+    "where_value": "33",
+    "all_conditions": [
+      {
+        "column": "Lost point",
+        "value": "33"
+      },
+      {
+        "column": "league point",
+        "value": "52"
+      }
+    ]
+  },
+  {
+    "question": "What is the name of the team whose class is Rotax Light?",
+    "headers": [
+      "Team",
+      "Class",
+      "Chassis",
+      "Engine",
+      "Driver"
+    ],
+    "where_column": "Class",
+    "where_value": "rotax light"
+  },
+  {
+    "question": "Which Calendar has a User-selectable themes of user-selectable themes?",
+    "headers": [
+      "Flat",
+      "Threaded",
+      "User-selectable themes",
+      "Calendar",
+      "Image attachment",
+      "Unread message tracking",
+      "WYSIWYG Editor"
+    ],
+    "where_column": "User-selectable themes",
+    "where_value": "user-selectable themes"
+  },
+  {
+    "question": "When Tujunga is moderate, what is La Crescenta-Montrose?",
+    "headers": [
+      "Tujunga",
+      "La Crescenta- Montrose",
+      "Glendale",
+      "La Ca\u00f1ada Flintridge",
+      "Pasadena"
+    ],
+    "where_column": "Tujunga",
+    "where_value": "moderate"
+  },
+  {
+    "question": "Which Player has a Round smaller than 5, and a School/Club Team of florida state?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Position",
+      "School/Club Team"
+    ],
+    "where_column": "Round",
+    "where_value": "5",
+    "all_conditions": [
+      {
+        "column": "Round",
+        "value": "5"
+      },
+      {
+        "column": "School/Club Team",
+        "value": "florida state"
+      }
+    ]
+  },
+  {
+    "question": "what is the total number of\u00a0round\u00a0where\u00a0opponents\u00a0is haugar",
+    "headers": [
+      "Season",
+      "Competition",
+      "Round",
+      "Opponents",
+      "1st leg",
+      "2nd leg",
+      "Aggregate"
+    ],
+    "where_column": "Opponents",
+    "where_value": "Haugar"
+  },
+  {
+    "question": "With a total of 11, and 10 rank points, what are the score points?",
+    "headers": [
+      "Shooter",
+      "Event",
+      "Rank points",
+      "Score points",
+      "Total"
+    ],
+    "where_column": "Rank points",
+    "where_value": "10",
+    "all_conditions": [
+      {
+        "column": "Rank points",
+        "value": "10"
+      },
+      {
+        "column": "Total",
+        "value": "11"
+      }
+    ]
+  },
+  {
+    "question": "What was the class for Appleton, Wisconsin?",
+    "headers": [
+      "Call sign",
+      "Frequency MHz",
+      "City of license",
+      "ERP W",
+      "Class",
+      "FCC info"
+    ],
+    "where_column": "City of license",
+    "where_value": "appleton, wisconsin"
+  },
+  {
+    "question": "What is the title of episode No. 65?",
+    "headers": [
+      "\u2116",
+      "#",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "\u2116",
+    "where_value": "65"
+  },
+  {
+    "question": "List the pictorals from issues when lindsey roeper was the cover model.",
+    "headers": [
+      "Date",
+      "Cover model",
+      "Centerfold model",
+      "Interview subject",
+      "20 Questions",
+      "Pictorials"
+    ],
+    "where_column": "Cover model",
+    "where_value": "Lindsey Roeper"
+  },
+  {
+    "question": "What is the average interview score from Kentucky?",
+    "headers": [
+      "State",
+      "Interview",
+      "Swimsuit",
+      "Evening Gown",
+      "Average"
+    ],
+    "where_column": "State",
+    "where_value": "kentucky"
+  },
+  {
+    "question": "What is the percentage for all in 2007 when all in 2006 was 65%?",
+    "headers": [
+      "Exam",
+      "2006 First Time",
+      "2006 All",
+      "2007 First Time",
+      "2007 All",
+      "2008 First Time",
+      "2008 All",
+      "2009 First Time",
+      "2009 All",
+      "2010 First Time",
+      "2011 First Time",
+      "2012 First Time"
+    ],
+    "where_column": "2006 All",
+    "where_value": "65%"
+  },
+  {
+    "question": "Which tournament had a partner of Erika Sema?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Tournament",
+      "Surface",
+      "Partner",
+      "Opponents in the final",
+      "Score"
+    ],
+    "where_column": "Partner",
+    "where_value": "erika sema"
+  },
+  {
+    "question": "Which college does Peyton Siva play for?",
+    "headers": [
+      "Player",
+      "Height",
+      "School",
+      "Hometown",
+      "College",
+      "NBA Draft"
+    ],
+    "where_column": "Player",
+    "where_value": "peyton siva"
+  }
+]

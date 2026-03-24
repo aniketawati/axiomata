@@ -1,0 +1,450 @@
+[
+  {
+    "question": "How many years did the role of Steve Rhoades last?",
+    "headers": [
+      "Actor",
+      "Role",
+      "Years",
+      "Seasons",
+      "Episodes"
+    ],
+    "where_column": "Role",
+    "where_value": "steve rhoades"
+  },
+  {
+    "question": "What's the IHSAA Class when the school is Seymour?",
+    "headers": [
+      "School",
+      "Location",
+      "Mascot",
+      "Enrollment 08-09",
+      "IHSAA Class",
+      "IHSAA Class Football",
+      "County",
+      "Year Joined"
+    ],
+    "where_column": "School",
+    "where_value": "seymour"
+  },
+  {
+    "question": "Pick # of 25, and an Overall of 207 has what name?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Pick #",
+    "where_value": "25",
+    "all_conditions": [
+      {
+        "column": "Pick #",
+        "value": "25"
+      },
+      {
+        "column": "Overall",
+        "value": "207"
+      }
+    ]
+  },
+  {
+    "question": "Name the most october for game less than 1",
+    "headers": [
+      "Game",
+      "October",
+      "Opponent",
+      "Score",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "1"
+  },
+  {
+    "question": "Which Week has an Opponent of pittsburgh steelers, and an Attendance larger than 47,727?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "pittsburgh steelers",
+    "all_conditions": [
+      {
+        "column": "Opponent",
+        "value": "pittsburgh steelers"
+      },
+      {
+        "column": "Attendance",
+        "value": "47,727"
+      }
+    ]
+  },
+  {
+    "question": "When was Hon Les Johnson in office?",
+    "headers": [
+      "Member",
+      "Party",
+      "Electorate",
+      "State",
+      "Term in office"
+    ],
+    "where_column": "Member",
+    "where_value": "hon les johnson"
+  },
+  {
+    "question": "name the title of the episode that ed sherin directed.",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date"
+    ],
+    "where_column": "Directed by",
+    "where_value": "Ed Sherin"
+  },
+  {
+    "question": "What is the total 60 to 64 when the Oblast\\Age is Nenets in Yamal AO, and the 45 to 49 is bigger than 3,883?",
+    "headers": [
+      "C/W 15+",
+      "Oblast\\Age",
+      "15 to 17",
+      "18 to 19",
+      "20 to 24",
+      "25 to 29",
+      "30 to 34",
+      "35 to 39",
+      "40 to 44",
+      "45 to 49",
+      "50 to 54",
+      "55 to 59",
+      "60 to 64",
+      "65 to 69"
+    ],
+    "where_column": "Oblast\\Age",
+    "where_value": "nenets in yamal ao",
+    "all_conditions": [
+      {
+        "column": "Oblast\\Age",
+        "value": "nenets in yamal ao"
+      },
+      {
+        "column": "45 to 49",
+        "value": "3,883"
+      }
+    ]
+  },
+  {
+    "question": "What is the average value for Rd 8 in a position less than 2 for Audi Sport Australia?",
+    "headers": [
+      "Position",
+      "Team",
+      "Rd 6",
+      "Rd 7",
+      "Rd 8",
+      "Total"
+    ],
+    "where_column": "Team",
+    "where_value": "audi sport australia",
+    "all_conditions": [
+      {
+        "column": "Team",
+        "value": "audi sport australia"
+      },
+      {
+        "column": "Position",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "question": "What is Headquarter, when Language is English, and when Type is Independent Online News Portal?",
+    "headers": [
+      "Newspaper/Magazine",
+      "Type",
+      "Language",
+      "Headquarter",
+      "Status"
+    ],
+    "where_column": "Language",
+    "where_value": "english",
+    "all_conditions": [
+      {
+        "column": "Language",
+        "value": "english"
+      },
+      {
+        "column": "Type",
+        "value": "independent online news portal"
+      }
+    ]
+  },
+  {
+    "question": "What is the wheel arrangement made in 1890?",
+    "headers": [
+      "Class",
+      "Wheel arrangement",
+      "Fleet number(s)",
+      "Year made",
+      "Quantity made",
+      "Quantity preserved"
+    ],
+    "where_column": "Year made",
+    "where_value": "1890"
+  },
+  {
+    "question": "What is Turkey's average Gold entry that also has a Bronze entry that is smaller than 2 and the Total is greater than 1?",
+    "headers": [
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Bronze",
+    "where_value": "2",
+    "all_conditions": [
+      {
+        "column": "Bronze",
+        "value": "2"
+      },
+      {
+        "column": "Nation",
+        "value": "turkey"
+      },
+      {
+        "column": "Total",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "question": "It has a FA Cup Goals smaller than 4, and a FA Cup Apps larger than 7, what is the total number of total apps?",
+    "headers": [
+      "Division",
+      "League Apps",
+      "League Goals",
+      "FA Cup Apps",
+      "FA Cup Goals",
+      "Total Apps",
+      "Total Goals"
+    ],
+    "where_column": "FA Cup Goals",
+    "where_value": "4",
+    "all_conditions": [
+      {
+        "column": "FA Cup Goals",
+        "value": "4"
+      },
+      {
+        "column": "FA Cup Apps",
+        "value": "7"
+      }
+    ]
+  },
+  {
+    "question": "What is the nickname of the Adrian, Michigan team?",
+    "headers": [
+      "Institution",
+      "Location",
+      "Founded",
+      "Affiliation",
+      "Enrollment",
+      "Team Nickname",
+      "Primary conference"
+    ],
+    "where_column": "Location",
+    "where_value": "Adrian, Michigan"
+  },
+  {
+    "question": "What date was the episode originally aired that was directed by James Widdoes and the production code is 320?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code"
+    ],
+    "where_column": "Directed by",
+    "where_value": "James Widdoes",
+    "all_conditions": [
+      {
+        "column": "Directed by",
+        "value": "James Widdoes"
+      },
+      {
+        "column": "Production code",
+        "value": "320"
+      }
+    ]
+  },
+  {
+    "question": "When did the party elected in jun. 1959 enter office?",
+    "headers": [
+      "Entered office",
+      "Left office",
+      "Party",
+      "Election",
+      "Coalition"
+    ],
+    "where_column": "Election",
+    "where_value": "jun. 1959"
+  },
+  {
+    "question": "What year has the vehicle of open wheel and a racing series of formula one with a Nation of citizenship in Germany.",
+    "headers": [
+      "Year",
+      "Driver",
+      "Nation of citizenship",
+      "Racing series",
+      "Type of vehicle"
+    ],
+    "where_column": "Type of vehicle",
+    "where_value": "open wheel",
+    "all_conditions": [
+      {
+        "column": "Type of vehicle",
+        "value": "open wheel"
+      },
+      {
+        "column": "Racing series",
+        "value": "formula one"
+      },
+      {
+        "column": "Nation of citizenship",
+        "value": "germany"
+      }
+    ]
+  },
+  {
+    "question": "What is the result when the score is 0-2?",
+    "headers": [
+      "Goal",
+      "Date",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Score",
+    "where_value": "0-2"
+  },
+  {
+    "question": "Tell me the 2.4km run for points less than 2",
+    "headers": [
+      "Grade",
+      "Points",
+      "Sit-up (reps)",
+      "Standing Broad Jump (cm)",
+      "Chin-up (reps)",
+      "Shuttle Run (sec)",
+      "2.4km Run (min:sec)"
+    ],
+    "where_column": "Points",
+    "where_value": "2"
+  },
+  {
+    "question": "What was the profession of the celebrity who was featured on season 15 and finished 7th place?",
+    "headers": [
+      "Season",
+      "Celebrity",
+      "Notability/Profession",
+      "Professional partner",
+      "Finish"
+    ],
+    "where_column": "Season",
+    "where_value": "15",
+    "all_conditions": [
+      {
+        "column": "Season",
+        "value": "15"
+      },
+      {
+        "column": "Finish",
+        "value": "7th"
+      }
+    ]
+  },
+  {
+    "question": "How many goals against have 58 points?",
+    "headers": [
+      "Season",
+      "Games",
+      "Lost",
+      "Tied",
+      "Points",
+      "Goals for",
+      "Goals against",
+      "Standing"
+    ],
+    "where_column": "Points",
+    "where_value": "58"
+  },
+  {
+    "question": "How many new entries this round are there with more than 16 matches and a third round qualifying?",
+    "headers": [
+      "Round",
+      "Date",
+      "Matches",
+      "Clubs",
+      "New entries this round",
+      "Prize money"
+    ],
+    "where_column": "Matches",
+    "where_value": "16",
+    "all_conditions": [
+      {
+        "column": "Matches",
+        "value": "16"
+      },
+      {
+        "column": "Round",
+        "value": "third round qualifying"
+      }
+    ]
+  },
+  {
+    "question": "Which athlete, has an 18.55 result",
+    "headers": [
+      "Rank",
+      "Group",
+      "Athlete",
+      "Nationality",
+      "Result"
+    ],
+    "where_column": "Result",
+    "where_value": "18.55"
+  },
+  {
+    "question": "how many categories fall under the category of britons?",
+    "headers": [
+      "Institution",
+      "Location",
+      "Nickname",
+      "Founded",
+      "Type",
+      "Enrollment",
+      "Joined"
+    ],
+    "where_column": "Nickname",
+    "where_value": "Britons"
+  },
+  {
+    "question": "Tell me the aircraft for pzl-104",
+    "headers": [
+      "Aircraft",
+      "Origin",
+      "Type",
+      "Versions",
+      "In service"
+    ],
+    "where_column": "Versions",
+    "where_value": "pzl-104"
+  }
+]

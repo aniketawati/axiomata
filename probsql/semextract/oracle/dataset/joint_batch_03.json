@@ -1,0 +1,436 @@
+[
+  {
+    "question": "What's the title for the release date of 1953-01-31 in the MM series, no reissue, and a director of I. Freleng?",
+    "headers": [
+      "Title",
+      "Series",
+      "Director",
+      "Release date",
+      "reissue?"
+    ],
+    "where_column": "Series",
+    "where_value": "mm",
+    "all_conditions": [
+      {
+        "column": "Series",
+        "value": "mm"
+      },
+      {
+        "column": "Director",
+        "value": "i. freleng"
+      },
+      {
+        "column": "reissue?",
+        "value": "no"
+      },
+      {
+        "column": "Release date",
+        "value": "1953-01-31"
+      }
+    ]
+  },
+  {
+    "question": "Which series airs Saturday on Channel 5?",
+    "headers": [
+      "Series",
+      "Monday",
+      "Tuesday",
+      "Thursday",
+      "Saturday"
+    ],
+    "where_column": "Saturday",
+    "where_value": "channel 5"
+  },
+  {
+    "question": "How many years was the building with 24 floors the tallest?",
+    "headers": [
+      "Name",
+      "Street address",
+      "Years as tallest",
+      "Height feet / m",
+      "Floors"
+    ],
+    "where_column": "Floors",
+    "where_value": "24"
+  },
+  {
+    "question": "What year was Zona Sur nominated?",
+    "headers": [
+      "Year (Ceremony)",
+      "Film title used in nomination",
+      "Original title",
+      "Language(s)",
+      "Director",
+      "Result"
+    ],
+    "where_column": "Original title",
+    "where_value": "zona sur"
+  },
+  {
+    "question": "What was the average finish the year Bodine finished 3rd?",
+    "headers": [
+      "Year",
+      "Starts",
+      "Wins",
+      "Top 5",
+      "Top 10",
+      "Poles",
+      "Avg. Start",
+      "Avg. Finish",
+      "Winnings",
+      "Position",
+      "Team(s)"
+    ],
+    "where_column": "Position",
+    "where_value": "3rd"
+  },
+  {
+    "question": "What is the share of the 18-49 (Rating/Share) of 0.8/3?",
+    "headers": [
+      "Episode",
+      "Air Date",
+      "Timeslot",
+      "Rating",
+      "Share",
+      "18\u201349 (Rating/Share)",
+      "Viewers (m)",
+      "Rank (#)"
+    ],
+    "where_column": "18\u201349 (Rating/Share)",
+    "where_value": "0.8/3"
+  },
+  {
+    "question": "Who publishes Wolverine?",
+    "headers": [
+      "Character(s)",
+      "First Appearance",
+      "Cover Date",
+      "Publisher",
+      "Estimated Value"
+    ],
+    "where_column": "Character(s)",
+    "where_value": "wolverine"
+  },
+  {
+    "question": "What is the lowest Kerry#, when Others# is \"106\", and when Bush# is less than 3,188?",
+    "headers": [
+      "County",
+      "Kerry%",
+      "Kerry#",
+      "Bush%",
+      "Bush#",
+      "Others%",
+      "Others#"
+    ],
+    "where_column": "Others#",
+    "where_value": "106",
+    "all_conditions": [
+      {
+        "column": "Others#",
+        "value": "106"
+      },
+      {
+        "column": "Bush#",
+        "value": "3,188"
+      }
+    ]
+  },
+  {
+    "question": "What is the lowest Draws, when Alianza Goals is less than 317, when U Goals is less than 3, and when Alianza Wins is less than 2?",
+    "headers": [
+      "Alianza wins",
+      "Draws",
+      "U wins",
+      "Alianza goals",
+      "U goals"
+    ],
+    "where_column": "Alianza goals",
+    "where_value": "317",
+    "all_conditions": [
+      {
+        "column": "Alianza goals",
+        "value": "317"
+      },
+      {
+        "column": "U goals",
+        "value": "3"
+      },
+      {
+        "column": "Alianza wins",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "question": "In 2011, which city is listed first along the route that had 7.6+ million passengers?",
+    "headers": [
+      "Rank",
+      "City 1",
+      "City 2",
+      "2012 Passengers (in millions)",
+      "2011 Passengers (in millions)",
+      "Distance"
+    ],
+    "where_column": "2011 Passengers (in millions)",
+    "where_value": "7.6+"
+  },
+  {
+    "question": "Where did Ra'fat Ali play on August 17, 1999?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Date",
+    "where_value": "august 17, 1999"
+  },
+  {
+    "question": "What is Studio, when Title is \"Do Not Disturb\"?",
+    "headers": [
+      "Rank",
+      "Title",
+      "Studio",
+      "Director",
+      "Gross"
+    ],
+    "where_column": "Title",
+    "where_value": "do not disturb"
+  },
+  {
+    "question": "What audition city has a Callback Date of october 5\u20136, 2007?",
+    "headers": [
+      "Episode Air Date",
+      "Audition City",
+      "Date",
+      "First Audition Venue",
+      "Callback Date",
+      "Callback Venue",
+      "Golden Tickets"
+    ],
+    "where_column": "Callback Date",
+    "where_value": "october 5\u20136, 2007"
+  },
+  {
+    "question": "Who manufactured the motorcycle that did 24 laps and 9 grids?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "24",
+    "all_conditions": [
+      {
+        "column": "Laps",
+        "value": "24"
+      },
+      {
+        "column": "Grid",
+        "value": "9"
+      }
+    ]
+  },
+  {
+    "question": "What is the largest vote result if loss/gain is -0.5%?",
+    "headers": [
+      "Constituency",
+      "Candidate",
+      "Affiliation",
+      "Result - votes",
+      "Result - %",
+      "Loss/gain"
+    ],
+    "where_column": "Loss/gain",
+    "where_value": "-0.5%"
+  },
+  {
+    "question": "Where did Geelong play as the away team?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "geelong"
+  },
+  {
+    "question": "What is the number of losses when the goal difference was -8, and position is smaller than 10?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Goal Difference",
+    "where_value": "-8",
+    "all_conditions": [
+      {
+        "column": "Goal Difference",
+        "value": "-8"
+      },
+      {
+        "column": "Position",
+        "value": "10"
+      }
+    ]
+  },
+  {
+    "question": "What is the name for the 2008 club of Azs olsztyn?",
+    "headers": [
+      "Name",
+      "Height",
+      "Weight",
+      "Spike",
+      "2008 club"
+    ],
+    "where_column": "2008 club",
+    "where_value": "azs olsztyn"
+  },
+  {
+    "question": "How many laps was qualifier of 138.212?",
+    "headers": [
+      "Year",
+      "Start",
+      "Qual",
+      "Rank",
+      "Finish",
+      "Laps"
+    ],
+    "where_column": "Qual",
+    "where_value": "138.212"
+  },
+  {
+    "question": "What is the college/junior/club team name of player Mats Lindgren?",
+    "headers": [
+      "Pick",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Player",
+    "where_value": "Mats Lindgren"
+  },
+  {
+    "question": "Who was the away team in a tie no larger than 16 with forest green rovers at home?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Attendance"
+    ],
+    "where_column": "Tie no",
+    "where_value": "16",
+    "all_conditions": [
+      {
+        "column": "Tie no",
+        "value": "16"
+      },
+      {
+        "column": "Home team",
+        "value": "forest green rovers"
+      }
+    ]
+  },
+  {
+    "question": "How much Loss has a Gain smaller than 1571, and a Long smaller than 47, and an Avg/G of 36.4?",
+    "headers": [
+      "Name",
+      "Gain",
+      "Loss",
+      "Long",
+      "Avg/G"
+    ],
+    "where_column": "Gain",
+    "where_value": "1571",
+    "all_conditions": [
+      {
+        "column": "Gain",
+        "value": "1571"
+      },
+      {
+        "column": "Long",
+        "value": "47"
+      },
+      {
+        "column": "Avg/G",
+        "value": "36.4"
+      }
+    ]
+  },
+  {
+    "question": "What is the Netflix number having a series episode of 1-01?",
+    "headers": [
+      "Series Ep.",
+      "Episode",
+      "Netflix",
+      "Segment A",
+      "Segment B",
+      "Segment C",
+      "Segment D"
+    ],
+    "where_column": "Series Ep.",
+    "where_value": "1-01"
+  },
+  {
+    "question": "Which Competition has a Venue of estadio alfonso lastras, san luis potos\u00ed, mexico, and a Goal larger than 15?",
+    "headers": [
+      "Goal",
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Venue",
+    "where_value": "estadio alfonso lastras, san luis potos\u00ed, mexico",
+    "all_conditions": [
+      {
+        "column": "Venue",
+        "value": "estadio alfonso lastras, san luis potos\u00ed, mexico"
+      },
+      {
+        "column": "Goal",
+        "value": "15"
+      }
+    ]
+  },
+  {
+    "question": "what is the highest draw when the place is less than 3 and the percentage is 30.71%?",
+    "headers": [
+      "Draw",
+      "Artist",
+      "Song",
+      "Percentage",
+      "Place"
+    ],
+    "where_column": "Place",
+    "where_value": "3",
+    "all_conditions": [
+      {
+        "column": "Place",
+        "value": "3"
+      },
+      {
+        "column": "Percentage",
+        "value": "30.71%"
+      }
+    ]
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "question": "What is the series # when the US air date is 20 July 2012?",
+    "value_column_pairs": [
+      {"value_span": "20 July 2012", "column": "US air date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the cable rank for the airdate of 10 december 2009?",
+    "value_column_pairs": [
+      {"value_span": "10 december 2009", "column": "Airdate", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the pick# from South Dakota college?",
+    "value_column_pairs": [
+      {"value_span": "South Dakota", "column": "College", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "When pronoun is the subject what is the episode title?",
+    "value_column_pairs": [
+      {"value_span": "pronoun", "column": "Subject", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the event when the class is time trial hc a?",
+    "value_column_pairs": [
+      {"value_span": "time trial hc a", "column": "Class", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the least grid for 17 points ",
+    "value_column_pairs": [
+      {"value_span": "17", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which trainer won the hyroglyphic in a year that was before 2010?",
+    "value_column_pairs": [
+      {"value_span": "hyroglyphic", "column": "Winner", "match_reason": "text_to_matching_column"},
+      {"value_span": "2010", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "Which school is in Raleigh, NC?",
+    "value_column_pairs": [
+      {"value_span": "Raleigh, NC", "column": "Hometown", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which qual has both 200 total laps and took place in 1957?",
+    "value_column_pairs": [
+      {"value_span": "200", "column": "Laps", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1957", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the 9th runner-up with a top 18/20/24/30 greater than 17 and a 5th runner-up of 2?",
+    "value_column_pairs": [
+      {"value_span": "17", "column": "Top 18/20/24/30", "match_reason": "number_to_numeric_column"},
+      {"value_span": "2", "column": "5th runner-up", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the record of the game on December 5, 2007?",
+    "value_column_pairs": [
+      {"value_span": "December 5, 2007", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Where's the school that Mark Fletcher is the principal of?",
+    "value_column_pairs": [
+      {"value_span": "Mark Fletcher", "column": "Principal", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "Which 3rd run has rank of 8?",
+    "value_column_pairs": [
+      {"value_span": "8", "column": "Rank", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Game number on March 30?",
+    "value_column_pairs": [
+      {"value_span": "March 30", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What were Holly Scouler's total votes?",
+    "value_column_pairs": [
+      {"value_span": "Holly Scouler", "column": "Members", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the air date of the episode that has a production code of 5aky13?",
+    "value_column_pairs": [
+      {"value_span": "5aky13", "column": "Production code", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which county has a median household income of  $98,090?",
+    "value_column_pairs": [
+      {"value_span": "$98,090", "column": "Median House- hold Income", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the high assists for  l 98\u2013103 (ot)",
+    "value_column_pairs": [
+      {"value_span": "l 98\u2013103 (ot)", "column": "Score", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What skip has angela tuvaeva as the lead?",
+    "value_column_pairs": [
+      {"value_span": "angela tuvaeva", "column": "Lead", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Tell me the average final rank for loe more than 10 and point less than 43",
+    "value_column_pairs": [
+      {"value_span": "10", "column": "Lose", "match_reason": "number_to_numeric_column"},
+      {"value_span": "43", "column": "Point", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the population density of the area with a population larger than 92,719?",
+    "value_column_pairs": [
+      {"value_span": "92,719", "column": "Population", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which years did Martin Sacks work on a soap opera?",
+    "value_column_pairs": [
+      {"value_span": "Martin Sacks", "column": "Actor", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Who is the Winning Applicant of Ensemble Name Muxco Lincolnshire in Block 10D?",
+    "value_column_pairs": [
+      {"value_span": "Muxco Lincolnshire", "column": "Ensemble name", "match_reason": "text_to_matching_column"},
+      {"value_span": "10D", "column": "Block", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is Maksim Botin's position? ",
+    "value_column_pairs": [
+      {"value_span": "Maksim Botin", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many in total were elected first in lost renomination?",
+    "value_column_pairs": [
+      {"value_span": "lost renomination", "column": "Result", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  }
+]

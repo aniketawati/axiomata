@@ -1,0 +1,477 @@
+[
+  {
+    "question": "Which current venues location is Mason, Ohio?",
+    "headers": [
+      "Tournament",
+      "Country",
+      "Location",
+      "Current Venue",
+      "Began",
+      "Court surface"
+    ],
+    "where_column": "Location",
+    "where_value": "Mason, Ohio"
+  },
+  {
+    "question": "On what Date was the Score 105-128?",
+    "headers": [
+      "Date",
+      "H/A/N",
+      "Opponent",
+      "Score",
+      "Record"
+    ],
+    "where_column": "Score",
+    "where_value": "105-128"
+  },
+  {
+    "question": "How many different counts of the votes for Bush are there in the county where he got 69.7% of the votes?",
+    "headers": [
+      "County",
+      "Kerry%",
+      "Kerry#",
+      "Bush%",
+      "Bush#",
+      "Others%",
+      "Others#"
+    ],
+    "where_column": "Bush%",
+    "where_value": "69.7%"
+  },
+  {
+    "question": "what is the sum of the losses when the goals against is less than 34 and the games played is less than 8?",
+    "headers": [
+      "Team",
+      "Games Played",
+      "Wins",
+      "Losses",
+      "Ties",
+      "Goals For",
+      "Goals Against"
+    ],
+    "where_column": "Goals Against",
+    "where_value": "34",
+    "all_conditions": [
+      {
+        "column": "Goals Against",
+        "value": "34"
+      },
+      {
+        "column": "Games Played",
+        "value": "8"
+      }
+    ]
+  },
+  {
+    "question": "Name the score for september 11",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "september 11"
+  },
+  {
+    "question": "What is the score of the event that Alianza Lima won in 1965?",
+    "headers": [
+      "Season",
+      "Date",
+      "Winner",
+      "Score [C ]",
+      "Venue",
+      "Competition round"
+    ],
+    "where_column": "Winner",
+    "where_value": "alianza lima",
+    "all_conditions": [
+      {
+        "column": "Winner",
+        "value": "alianza lima"
+      },
+      {
+        "column": "Season",
+        "value": "1965"
+      }
+    ]
+  },
+  {
+    "question": "Which Home team score has a Home team of geelong?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "geelong"
+  },
+  {
+    "question": "What is the average total medals of the nation ranked 1 with less than 1 silver?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "1",
+    "all_conditions": [
+      {
+        "column": "Rank",
+        "value": "1"
+      },
+      {
+        "column": "Silver",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "question": "What is the average nominated of the composition nominated by Taioseach with an Industrial and Commercial panel less than 9, an administrative panel greater than 0, a cultural and educational panel greater than 2, and a total less than 29?",
+    "headers": [
+      "Administrative Panel",
+      "Agricultural Panel",
+      "Cultural and Educational Panel",
+      "Industrial and Commercial Panel",
+      "Labour Panel",
+      "National University of Ireland",
+      "Nominated by the Taoiseach",
+      "Total"
+    ],
+    "where_column": "Industrial and Commercial Panel",
+    "where_value": "9",
+    "all_conditions": [
+      {
+        "column": "Industrial and Commercial Panel",
+        "value": "9"
+      },
+      {
+        "column": "Administrative Panel",
+        "value": "0"
+      },
+      {
+        "column": "Cultural and Educational Panel",
+        "value": "2"
+      },
+      {
+        "column": "Total",
+        "value": "29"
+      }
+    ]
+  },
+  {
+    "question": "What was the score of game 82?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "82"
+  },
+  {
+    "question": "What is the # listed when the score is 70-69-69-70=278?",
+    "headers": [
+      "#",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Winnings ($)",
+      "After",
+      "Before"
+    ],
+    "where_column": "Score",
+    "where_value": "70-69-69-70=278"
+  },
+  {
+    "question": "Name the 2009 ffor 2010 of 1r and 2012 of a and 2008 of 2r",
+    "headers": [
+      "Tournament",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "where_column": "2010",
+    "where_value": "1r",
+    "all_conditions": [
+      {
+        "column": "2010",
+        "value": "1r"
+      },
+      {
+        "column": "2012",
+        "value": "a"
+      },
+      {
+        "column": "2008",
+        "value": "2r"
+      }
+    ]
+  },
+  {
+    "question": "Who won Division Southwest when the winner of Division North was Lepenec and Division South was won by 11 Oktomvri?",
+    "headers": [
+      "Season",
+      "Division North",
+      "Division South",
+      "Division East",
+      "Division West",
+      "Division Southwest"
+    ],
+    "where_column": "Division North",
+    "where_value": "lepenec",
+    "all_conditions": [
+      {
+        "column": "Division North",
+        "value": "lepenec"
+      },
+      {
+        "column": "Division South",
+        "value": "11 oktomvri"
+      }
+    ]
+  },
+  {
+    "question": "What city was the event in when Patrik Antonius won?",
+    "headers": [
+      "Date",
+      "City",
+      "Event",
+      "Winner",
+      "Prize"
+    ],
+    "where_column": "Winner",
+    "where_value": "patrik antonius"
+  },
+  {
+    "question": "Which city includes the Target Center arena?",
+    "headers": [
+      "Conference",
+      "Division",
+      "Team",
+      "City",
+      "Home Arena"
+    ],
+    "where_column": "Home Arena",
+    "where_value": "target center"
+  },
+  {
+    "question": "What was the host city of the 8th edition in the the host country of Croatia?",
+    "headers": [
+      "Edition",
+      "Year",
+      "Host city",
+      "Host country",
+      "Date",
+      "No. of athletes",
+      "Nations"
+    ],
+    "where_column": "Host country",
+    "where_value": "Croatia",
+    "all_conditions": [
+      {
+        "column": "Host country",
+        "value": "Croatia"
+      },
+      {
+        "column": "Edition",
+        "value": "8th"
+      }
+    ]
+  },
+  {
+    "question": "How many people attended the game at VFL Park?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Venue",
+    "where_value": "vfl park"
+  },
+  {
+    "question": "How many Drawn have a Lost smaller than 25, and a Goal Difference of +7, and a Played larger than 34?",
+    "headers": [
+      "Position",
+      "Team",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Goals For",
+      "Goals Against",
+      "Goal Difference",
+      "Points 1"
+    ],
+    "where_column": "Lost",
+    "where_value": "25",
+    "all_conditions": [
+      {
+        "column": "Lost",
+        "value": "25"
+      },
+      {
+        "column": "Goal Difference",
+        "value": "+7"
+      },
+      {
+        "column": "Played",
+        "value": "34"
+      }
+    ]
+  },
+  {
+    "question": "What is 2005, when 1998 is \"F\", and when 2002 is \"2R\"?",
+    "headers": [
+      "Tournament",
+      "1992",
+      "1993",
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005"
+    ],
+    "where_column": "1998",
+    "where_value": "f",
+    "all_conditions": [
+      {
+        "column": "1998",
+        "value": "f"
+      },
+      {
+        "column": "2002",
+        "value": "2r"
+      }
+    ]
+  },
+  {
+    "question": "who is the driver when the engine is mercedes fo110m?",
+    "headers": [
+      "Entrant",
+      "Constructor",
+      "Chassis",
+      "Engine \u2020",
+      "Tyre",
+      "Driver",
+      "Rounds"
+    ],
+    "where_column": "Engine \u2020",
+    "where_value": "mercedes fo110m"
+  },
+  {
+    "question": "Which Points have a Score of 4\u20131, and a Game smaller than 39?",
+    "headers": [
+      "Game",
+      "January",
+      "Opponent",
+      "Score",
+      "Record",
+      "Points"
+    ],
+    "where_column": "Score",
+    "where_value": "4\u20131",
+    "all_conditions": [
+      {
+        "column": "Score",
+        "value": "4\u20131"
+      },
+      {
+        "column": "Game",
+        "value": "39"
+      }
+    ]
+  },
+  {
+    "question": "What is the away team when solon was the home team?",
+    "headers": [
+      "Time",
+      "Home team",
+      "Score",
+      "Away team",
+      "Venue"
+    ],
+    "where_column": "Home team",
+    "where_value": "solon"
+  },
+  {
+    "question": "Tell me the highest home runs for cleveland indians years before 1931",
+    "headers": [
+      "Player",
+      "Home runs",
+      "Season total",
+      "Year",
+      "Team"
+    ],
+    "where_column": "Team",
+    "where_value": "cleveland indians",
+    "all_conditions": [
+      {
+        "column": "Team",
+        "value": "cleveland indians"
+      },
+      {
+        "column": "Year",
+        "value": "1931"
+      }
+    ]
+  },
+  {
+    "question": " How many games had a deficit of 175? ",
+    "headers": [
+      "Place",
+      "Nation",
+      "played",
+      "won",
+      "drawn",
+      "lost",
+      "for",
+      "against",
+      "difference",
+      "Table points"
+    ],
+    "where_column": "against",
+    "where_value": "175"
+  },
+  {
+    "question": "When the Home team score was 15.18 (108), what's the lowest Crowd turnout?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team score",
+    "where_value": "15.18 (108)"
+  }
+]

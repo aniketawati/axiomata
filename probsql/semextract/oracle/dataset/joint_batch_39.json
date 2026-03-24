@@ -1,0 +1,417 @@
+[
+  {
+    "question": "Name the least touchdowns for joe rogers",
+    "headers": [
+      "Player",
+      "Touchdowns",
+      "Extra points",
+      "Field goals",
+      "Points"
+    ],
+    "where_column": "Player",
+    "where_value": "Joe Rogers"
+  },
+  {
+    "question": "After 1996, what is the average position?",
+    "headers": [
+      "Year",
+      "Single",
+      "Chart",
+      "Position",
+      "Appeared on album"
+    ],
+    "where_column": "Year",
+    "where_value": "1996"
+  },
+  {
+    "question": "With a tonnage of 225 what is the ship type?",
+    "headers": [
+      "Date",
+      "Ship Name",
+      "Tonnage",
+      "Ship Type",
+      "Location",
+      "Disposition of Ship"
+    ],
+    "where_column": "Tonnage",
+    "where_value": "225"
+  },
+  {
+    "question": "Which Losses have a Goal Difference of -16, and less than 8 wins?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Goal Difference",
+    "where_value": "-16",
+    "all_conditions": [
+      {
+        "column": "Goal Difference",
+        "value": "-16"
+      },
+      {
+        "column": "Wins",
+        "value": "8"
+      }
+    ]
+  },
+  {
+    "question": "What is the average Pick when the round was less than 6 for kenneth green?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Nationality",
+      "School/Club Team"
+    ],
+    "where_column": "Round",
+    "where_value": "6",
+    "all_conditions": [
+      {
+        "column": "Round",
+        "value": "6"
+      },
+      {
+        "column": "Player",
+        "value": "kenneth green"
+      }
+    ]
+  },
+  {
+    "question": "What was the record of the game where the Rockets were the visiting team?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Leading scorer",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Visitor",
+    "where_value": "rockets"
+  },
+  {
+    "question": "If points against was 371, what is the drawn?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Points against",
+    "where_value": "371"
+  },
+  {
+    "question": "What farm has a capacity of 70 and is operational?",
+    "headers": [
+      "Name",
+      "Turbines",
+      "Capacity (MW)",
+      "Power (MW\u00b7hr/yr)",
+      "Location (county)",
+      "Year Operational",
+      "Status"
+    ],
+    "where_column": "Capacity (MW)",
+    "where_value": "70",
+    "all_conditions": [
+      {
+        "column": "Capacity (MW)",
+        "value": "70"
+      },
+      {
+        "column": "Status",
+        "value": "Operational"
+      }
+    ]
+  },
+  {
+    "question": "Name the distrct for thomas wilson",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Incumbent",
+    "where_value": "Thomas Wilson"
+  },
+  {
+    "question": "what is the total number of goals for when the ties is more than 0, the goals against is more than 35 and the wins is less than 2?",
+    "headers": [
+      "Team",
+      "Games Played",
+      "Wins",
+      "Losses",
+      "Ties",
+      "Goals For",
+      "Goals Against"
+    ],
+    "where_column": "Ties",
+    "where_value": "0",
+    "all_conditions": [
+      {
+        "column": "Ties",
+        "value": "0"
+      },
+      {
+        "column": "Goals Against",
+        "value": "35"
+      },
+      {
+        "column": "Wins",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "question": "What is the average number of weeks that the opponent was the Denver Broncos?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Kickoff Time",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "denver broncos"
+  },
+  {
+    "question": "When did the episode that had 5.09 million total viewers (both Live and SD types) first air?",
+    "headers": [
+      "Episode number Production number",
+      "Title",
+      "Original airdate",
+      "Rating/Share in Households",
+      "18\u201349 Rating Live+SD / Live+7",
+      "Share",
+      "Live+SD Total viewers",
+      "Live+7 Day DVR Total viewers"
+    ],
+    "where_column": "Live+SD Total viewers",
+    "where_value": "5.09 million"
+  },
+  {
+    "question": "After 2009, who was the player that has a nationality of Canada?",
+    "headers": [
+      "Year",
+      "Player",
+      "Position",
+      "Nationality",
+      "Team"
+    ],
+    "where_column": "Nationality",
+    "where_value": "canada",
+    "all_conditions": [
+      {
+        "column": "Nationality",
+        "value": "canada"
+      },
+      {
+        "column": "Year",
+        "value": "2009"
+      }
+    ]
+  },
+  {
+    "question": "What is the percentage of Glendale when Pasadena is 14%?",
+    "headers": [
+      "Tujunga",
+      "La Crescenta- Montrose",
+      "Glendale",
+      "La Ca\u00f1ada Flintridge",
+      "Pasadena"
+    ],
+    "where_column": "Pasadena",
+    "where_value": "14%"
+  },
+  {
+    "question": "What were the points on February 10?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record",
+      "Arena",
+      "Points"
+    ],
+    "where_column": "Date",
+    "where_value": "february 10"
+  },
+  {
+    "question": "Name the performance nominated for a Capif Award.",
+    "headers": [
+      "Year",
+      "Award",
+      "Category",
+      "Nominated",
+      "Result"
+    ],
+    "where_column": "Award",
+    "where_value": "capif award"
+  },
+  {
+    "question": "Which Runs has a Rank of =5 and an Opponent of south australia?",
+    "headers": [
+      "Rank",
+      "Runs",
+      "Opponent",
+      "Venue",
+      "Season"
+    ],
+    "where_column": "Rank",
+    "where_value": "=5",
+    "all_conditions": [
+      {
+        "column": "Rank",
+        "value": "=5"
+      },
+      {
+        "column": "Opponent",
+        "value": "south australia"
+      }
+    ]
+  },
+  {
+    "question": "The New York Jets picked someone from what college?",
+    "headers": [
+      "Pick",
+      "Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "Team",
+    "where_value": "new york jets"
+  },
+  {
+    "question": "How much is per capita income when median household income is $42,845?",
+    "headers": [
+      "County",
+      "Per capita income",
+      "Median household income",
+      "Median family income",
+      "Population",
+      "Number of households"
+    ],
+    "where_column": "Median household income",
+    "where_value": "$42,845"
+  },
+  {
+    "question": "What is the average against score of all teams with less than 7 losses, more than 6 draws, and 25 points?",
+    "headers": [
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Diff"
+    ],
+    "where_column": "Lost",
+    "where_value": "7",
+    "all_conditions": [
+      {
+        "column": "Lost",
+        "value": "7"
+      },
+      {
+        "column": "Drawn",
+        "value": "6"
+      },
+      {
+        "column": "Points",
+        "value": "25"
+      }
+    ]
+  },
+  {
+    "question": "What was the result of the Top 3 episode?",
+    "headers": [
+      "Episode",
+      "Song choice",
+      "Original artist",
+      "Order #",
+      "Result"
+    ],
+    "where_column": "Episode",
+    "where_value": "Top 3"
+  },
+  {
+    "question": "What is the largest rank with 2,080 area?",
+    "headers": [
+      "Rank",
+      "Island's Name",
+      "Area (sqmi)",
+      "Area (km 2 )",
+      "Location",
+      "Population (2000)"
+    ],
+    "where_column": "Area (sqmi)",
+    "where_value": "2,080"
+  },
+  {
+    "question": "What is 1996, when 1992 is \"ATP Masters Series\"?",
+    "headers": [
+      "Tournament",
+      "1990",
+      "1991",
+      "1992",
+      "1993",
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "Career SR",
+      "Career Win-Loss"
+    ],
+    "where_column": "1992",
+    "where_value": "atp masters series"
+  },
+  {
+    "question": "At what venue was there a competition with a score reported as 7.14 (56) - 4.5 (29)?",
+    "headers": [
+      "Year",
+      "Competition",
+      "Opponent",
+      "Score",
+      "Venue"
+    ],
+    "where_column": "Score",
+    "where_value": "7.14 (56) - 4.5 (29)"
+  },
+  {
+    "question": "What was the surface when he played with John Alexander? ",
+    "headers": [
+      "Year",
+      "Championship",
+      "Surface",
+      "Partner",
+      "Opponents in final",
+      "Score in final"
+    ],
+    "where_column": "Partner",
+    "where_value": "John Alexander"
+  }
+]

@@ -1,0 +1,181 @@
+[
+  {
+    "question": "How much did Jeff Burton win?",
+    "value_column_pairs": [
+      {"value_span": "Jeff Burton", "column": "Driver", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What was the score in game 6?",
+    "value_column_pairs": [
+      {"value_span": "6", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was the actor in London in 2002 with the shipwreck of Leonty Ibayev?",
+    "value_column_pairs": [
+      {"value_span": "Leonty Ibayev", "column": "Shipwreck", "match_reason": "context_implies"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links"]
+  },
+  {
+    "question": "Name the surface for philadelphia",
+    "value_column_pairs": [
+      {"value_span": "philadelphia", "column": "Championship", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What day was the complete 2nd series: volume one released?",
+    "value_column_pairs": [
+      {"value_span": "complete 2nd series: volume one", "column": "Season", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What's the largest shirt number when the cap number is 5?",
+    "value_column_pairs": [
+      {"value_span": "5", "column": "Cap Number", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Team in Game 41?",
+    "value_column_pairs": [
+      {"value_span": "41", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the average amount of laps for competitors with a grid that was more than 11 and a Time/Retired of +28.108?",
+    "value_column_pairs": [
+      {"value_span": "+28.108", "column": "Time/Retired", "match_reason": "text_to_matching_column"},
+      {"value_span": "11", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "In what Round was George Thomas Picked?",
+    "value_column_pairs": [
+      {"value_span": "George Thomas", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["value_type_excludes"]
+  },
+  {
+    "question": " How many table points are listed for the deficit is +194? ",
+    "value_column_pairs": [
+      {"value_span": "+194", "column": "difference", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["context_implies"]
+  },
+  {
+    "question": "What team played away at vfl park?",
+    "value_column_pairs": [
+      {"value_span": "vfl park", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "who is the points classification in stage 1?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Stage", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the per capita income for Fayette County?",
+    "value_column_pairs": [
+      {"value_span": "Fayette County", "column": "County", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many points does driver kosuke matsuura have?",
+    "value_column_pairs": [
+      {"value_span": "kosuke matsuura", "column": "Driver", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the low code for glen harvie with a population greater than 2,774?",
+    "value_column_pairs": [
+      {"value_span": "glen harvie", "column": "Place", "match_reason": "place_to_location_column"},
+      {"value_span": "2,774", "column": "Population", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "When was there a game at Kardinia Park?",
+    "value_column_pairs": [
+      {"value_span": "Kardinia Park", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What years in Orlando have the United States as the nationality, with concord hs as the school/club team?",
+    "value_column_pairs": [
+      {"value_span": "United States", "column": "Nationality", "match_reason": "place_to_location_column"},
+      {"value_span": "concord hs", "column": "School/Club Team", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the draw when the losses were more than 8 and less than 2 wins?",
+    "value_column_pairs": [
+      {"value_span": "8", "column": "Losses", "match_reason": "number_to_numeric_column"},
+      {"value_span": "2", "column": "Wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What position was for Arizona State?",
+    "value_column_pairs": [
+      {"value_span": "Arizona State", "column": "School/Country", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What round was it when the method was TKO (would not stand up from Butt Scoot)?",
+    "value_column_pairs": [
+      {"value_span": "TKO (would not stand up from Butt Scoot)", "column": "Method", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the manner of departure for the appointment date of 21 september 2010",
+    "value_column_pairs": [
+      {"value_span": "21 september 2010", "column": "Date of appointment", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the home team score at lake oval?",
+    "value_column_pairs": [
+      {"value_span": "lake oval", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "Which season has Zach Jacobson in third?",
+    "value_column_pairs": [
+      {"value_span": "Zach Jacobson", "column": "Third", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the result of the game that was played on week 15?",
+    "value_column_pairs": [
+      {"value_span": "15", "column": "Week", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Result of the Game on April 9?",
+    "value_column_pairs": [
+      {"value_span": "April 9", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  }
+]

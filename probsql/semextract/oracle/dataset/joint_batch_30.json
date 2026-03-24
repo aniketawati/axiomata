@@ -1,0 +1,395 @@
+[
+  {
+    "question": "How many games have a score of 85-92?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "Location",
+      "Record"
+    ],
+    "where_column": "Score",
+    "where_value": "85-92"
+  },
+  {
+    "question": "What is the greatest area when the Poor Law Union is Skibbereen and the Civil Parish is Tullagh?",
+    "headers": [
+      "Townland",
+      "Area( acres )",
+      "Barony",
+      "Civil parish",
+      "Poor law union"
+    ],
+    "where_column": "Poor law union",
+    "where_value": "Skibbereen",
+    "all_conditions": [
+      {
+        "column": "Poor law union",
+        "value": "Skibbereen"
+      },
+      {
+        "column": "Civil parish",
+        "value": "Tullagh"
+      }
+    ]
+  },
+  {
+    "question": "What number is shown for november 3 where january 15-16 is 151?",
+    "headers": [
+      "June 10-11",
+      "March 27-29",
+      "January 15-16",
+      "November 3",
+      "August 21-22"
+    ],
+    "where_column": "January 15-16",
+    "where_value": "151"
+  },
+  {
+    "question": "What is the lowest Frequency where the Hemholtz pitch is d?",
+    "headers": [
+      "String",
+      "Scientific pitch",
+      "Helmholtz pitch",
+      "Interval from middle C",
+      "Frequency ( Hz )"
+    ],
+    "where_column": "Helmholtz pitch",
+    "where_value": "d"
+  },
+  {
+    "question": "The theme Auditioner's Choice\thas what song choice?",
+    "headers": [
+      "Episode",
+      "Theme",
+      "Song choice",
+      "Original artist",
+      "Order #",
+      "Result"
+    ],
+    "where_column": "Theme",
+    "where_value": "Auditioner's Choice"
+  },
+  {
+    "question": "What Event has an Outcome of other open tournaments?",
+    "headers": [
+      "Outcome",
+      "Event",
+      "Year",
+      "Venue",
+      "Opponent in the final"
+    ],
+    "where_column": "Outcome",
+    "where_value": "other open tournaments"
+  },
+  {
+    "question": "What is the Absorbtion (in nanometers) of the color Orange?",
+    "headers": [
+      "Color",
+      "mass (g/mol)",
+      "Absorb (nm)",
+      "Emit (nm)",
+      "\u03b5 (M -1 cm -1 )"
+    ],
+    "where_column": "Color",
+    "where_value": "orange"
+  },
+  {
+    "question": "What kind of surface was the tournament at Pune played on?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Tournament",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Tournament",
+    "where_value": "pune"
+  },
+  {
+    "question": "What are the results of the incumbent who was first elected in 1996?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Results"
+    ],
+    "where_column": "First elected",
+    "where_value": "1996"
+  },
+  {
+    "question": "What was the Indians record during the game that had 19,823 fans attending?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Attendance",
+    "where_value": "19,823"
+  },
+  {
+    "question": "Who wrote episode 23 in the season?",
+    "headers": [
+      "Series #",
+      "Season #",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Season #",
+    "where_value": "23"
+  },
+  {
+    "question": "How much is the sum of every crowd in attendance when the away score was 7.13 (55) for Richmond?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team score",
+    "where_value": "7.13 (55)",
+    "all_conditions": [
+      {
+        "column": "Away team score",
+        "value": "7.13 (55)"
+      },
+      {
+        "column": "Away team",
+        "value": "richmond"
+      }
+    ]
+  },
+  {
+    "question": "What is the wins number when the points were smaller than 27, and goals against was 41?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Points",
+    "where_value": "27",
+    "all_conditions": [
+      {
+        "column": "Points",
+        "value": "27"
+      },
+      {
+        "column": "Goals against",
+        "value": "41"
+      }
+    ]
+  },
+  {
+    "question": "How many position does Teodor Salparov play on? ",
+    "headers": [
+      "Shirt No",
+      "Nationality",
+      "Player",
+      "Birth Date",
+      "Height",
+      "Position"
+    ],
+    "where_column": "Player",
+    "where_value": "Teodor Salparov"
+  },
+  {
+    "question": "Which date has Total Holocaust records in the ed Remaster cassette format?",
+    "headers": [
+      "Country",
+      "Date",
+      "Label",
+      "Format",
+      "Catalog Nr."
+    ],
+    "where_column": "Label",
+    "where_value": "total holocaust records",
+    "all_conditions": [
+      {
+        "column": "Label",
+        "value": "total holocaust records"
+      },
+      {
+        "column": "Format",
+        "value": "ed remaster cassette"
+      }
+    ]
+  },
+  {
+    "question": "What is the location of the game that has a number smaller than 2?",
+    "headers": [
+      "Game",
+      "Date",
+      "Location",
+      "Time",
+      "Attendance"
+    ],
+    "where_column": "Game",
+    "where_value": "2"
+  },
+  {
+    "question": "Can you tell me the Rank that has the Lane of 6, and the Heat of 2?",
+    "headers": [
+      "Rank",
+      "Heat",
+      "Lane",
+      "Nationality",
+      "Time"
+    ],
+    "where_column": "Lane",
+    "where_value": "6",
+    "all_conditions": [
+      {
+        "column": "Lane",
+        "value": "6"
+      },
+      {
+        "column": "Heat",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "question": "Who is the pregame host when the pregame analysts is  Dave Campbell and the year is 2001?",
+    "headers": [
+      "Year",
+      "Network",
+      "Play-by-play announcers",
+      "s Color commentator",
+      "Pregame hosts",
+      "Pregame analysts"
+    ],
+    "where_column": "Pregame analysts",
+    "where_value": "Dave Campbell",
+    "all_conditions": [
+      {
+        "column": "Pregame analysts",
+        "value": "Dave Campbell"
+      },
+      {
+        "column": "Year",
+        "value": "2001"
+      }
+    ]
+  },
+  {
+    "question": "who directed the episode that have 0.25 million u.s viewers",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (million)"
+    ],
+    "where_column": "U.S. viewers (million)",
+    "where_value": "0.25"
+  },
+  {
+    "question": "What was the score in game 81?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "81"
+  },
+  {
+    "question": "What is the winning score for the runner-up Ernie Els?",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Winning score",
+      "Margin of victory",
+      "Runner(s)-up"
+    ],
+    "where_column": "Runner(s)-up",
+    "where_value": "ernie els"
+  },
+  {
+    "question": "Name who directed the production code 1l10",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code"
+    ],
+    "where_column": "Production code",
+    "where_value": "1L10"
+  },
+  {
+    "question": "Who was the 2007 actor from Moscow for the voyage of Varenka Bakunin?",
+    "headers": [
+      "Actor in London, 2002",
+      "Actor in New York, 2006",
+      "Actor in Moscow, 2007",
+      "Voyage",
+      "Shipwreck"
+    ],
+    "where_column": "Voyage",
+    "where_value": "varenka bakunin"
+  },
+  {
+    "question": "What is the Qaxmu\u011fal village with a Fistiqli village ke\u015fqutan?",
+    "headers": [
+      "Almal\u0131 (Qax)",
+      "F\u0131st\u0131ql\u0131",
+      "Malax",
+      "Qaxmu\u011fal",
+      "S\u00fcsk\u0259n"
+    ],
+    "where_column": "F\u0131st\u0131ql\u0131",
+    "where_value": "ke\u015fqutan"
+  },
+  {
+    "question": "Which Nationality has a Heat smaller than 2, and a Rank of 15?",
+    "headers": [
+      "Rank",
+      "Heat",
+      "Name",
+      "Nationality",
+      "Result"
+    ],
+    "where_column": "Heat",
+    "where_value": "2",
+    "all_conditions": [
+      {
+        "column": "Heat",
+        "value": "2"
+      },
+      {
+        "column": "Rank",
+        "value": "15"
+      }
+    ]
+  }
+]

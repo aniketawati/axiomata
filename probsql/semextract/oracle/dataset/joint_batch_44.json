@@ -1,0 +1,431 @@
+[
+  {
+    "question": "What is the number of goals with less than 14 wins and a goal difference less than -4?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Wins",
+    "where_value": "14",
+    "all_conditions": [
+      {
+        "column": "Wins",
+        "value": "14"
+      },
+      {
+        "column": "Goal Difference",
+        "value": "-4"
+      }
+    ]
+  },
+  {
+    "question": "What area is Central Takaka School in?",
+    "headers": [
+      "Name",
+      "Gender",
+      "Area",
+      "Authority",
+      "Decile",
+      "Roll"
+    ],
+    "where_column": "Name",
+    "where_value": "central takaka school"
+  },
+  {
+    "question": "What was the attendance for the home team of Walsall?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Attendance"
+    ],
+    "where_column": "Home team",
+    "where_value": "walsall"
+  },
+  {
+    "question": "Where does center Joakim Andersson come from?",
+    "headers": [
+      "Round",
+      "Player",
+      "Position",
+      "Nationality",
+      "College/Junior/Club team (League)"
+    ],
+    "where_column": "Position",
+    "where_value": "center",
+    "all_conditions": [
+      {
+        "column": "Position",
+        "value": "center"
+      },
+      {
+        "column": "Player",
+        "value": "joakim andersson"
+      }
+    ]
+  },
+  {
+    "question": "What state did Hon David Beddall belong to?",
+    "headers": [
+      "Member",
+      "Party",
+      "Electorate",
+      "State",
+      "Term in office"
+    ],
+    "where_column": "Member",
+    "where_value": "hon david beddall"
+  },
+  {
+    "question": "Who were all of the skippers with a corrected time of 3:15:07:27?",
+    "headers": [
+      "Position",
+      "Sail number",
+      "Yacht",
+      "State/country",
+      "Yacht type",
+      "LOA (Metres)",
+      "Skipper",
+      "Corrected time d:hh:mm:ss"
+    ],
+    "where_column": "Corrected time d:hh:mm:ss",
+    "where_value": "3:15:07:27"
+  },
+  {
+    "question": "Which royal house corresponds to Polyxenos Epiphanes Soter?",
+    "headers": [
+      "Type",
+      "Name",
+      "Title",
+      "Royal house",
+      "From"
+    ],
+    "where_column": "Name",
+    "where_value": "polyxenos epiphanes soter"
+  },
+  {
+    "question": "What was the date of the game when the away team was south melbourne?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "south melbourne"
+  },
+  {
+    "question": "What is the nhl team when the college, junior, club team is toronto marlboros (ohl) and the position is centre?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "College/junior/club team",
+    "where_value": "Toronto Marlboros (OHL)",
+    "all_conditions": [
+      {
+        "column": "College/junior/club team",
+        "value": "Toronto Marlboros (OHL)"
+      },
+      {
+        "column": "Position",
+        "value": "Centre"
+      }
+    ]
+  },
+  {
+    "question": "Which quarterback had an Avg/G of 195.8?",
+    "headers": [
+      "Name",
+      "GP-GS",
+      "Year",
+      "Att-Cmp-Int",
+      "Avg/G"
+    ],
+    "where_column": "Avg/G",
+    "where_value": "195.8"
+  },
+  {
+    "question": "What was his position in 2009 with 1 win?",
+    "headers": [
+      "Season",
+      "Series",
+      "Team",
+      "Races",
+      "Wins",
+      "Poles",
+      "F/Laps",
+      "Podiums",
+      "Points",
+      "Position"
+    ],
+    "where_column": "Wins",
+    "where_value": "1",
+    "all_conditions": [
+      {
+        "column": "Wins",
+        "value": "1"
+      },
+      {
+        "column": "Season",
+        "value": "2009"
+      }
+    ]
+  },
+  {
+    "question": "Name the Visitor that has a Home of chicago black hawks on april 20?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Record"
+    ],
+    "where_column": "Home",
+    "where_value": "chicago black hawks",
+    "all_conditions": [
+      {
+        "column": "Home",
+        "value": "chicago black hawks"
+      },
+      {
+        "column": "Date",
+        "value": "april 20"
+      }
+    ]
+  },
+  {
+    "question": "Which Position has a Played larger than 9?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Played",
+    "where_value": "9"
+  },
+  {
+    "question": "What is the lowest level of Earnings($) to have a Wins value of 22 and a Rank lower than 2?",
+    "headers": [
+      "Rank",
+      "Player",
+      "Country",
+      "Earnings( $ )",
+      "Wins"
+    ],
+    "where_column": "Wins",
+    "where_value": "22",
+    "all_conditions": [
+      {
+        "column": "Wins",
+        "value": "22"
+      },
+      {
+        "column": "Rank",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "question": "What country is Adam Scott from?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "adam scott"
+  },
+  {
+    "question": "What is Fitzroy's Home team Crowd?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "fitzroy"
+  },
+  {
+    "question": "What was Maxim Podoprigora's lowest rank?",
+    "headers": [
+      "Rank",
+      "Lane",
+      "Name",
+      "Nationality",
+      "Time"
+    ],
+    "where_column": "Name",
+    "where_value": "maxim podoprigora"
+  },
+  {
+    "question": "What game number did the Wildcats play Purdue?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Result",
+      "Wildcats points",
+      "Opponents",
+      "Record"
+    ],
+    "where_column": "Opponent",
+    "where_value": "Purdue"
+  },
+  {
+    "question": "How many annual interchanges in the millions occurred in 2011-12 when the number of annual entry/exits was 36.609 million? ",
+    "headers": [
+      "Rank",
+      "Railway Station",
+      "Annual entry/exit (millions) 2011\u201312",
+      "Annual interchanges (millions) 2011\u201312",
+      "Total Passengers (millions) 2011\u201312",
+      "Location",
+      "Main Services",
+      "Number of Platforms"
+    ],
+    "where_column": "Annual entry/exit (millions) 2011\u201312",
+    "where_value": "36.609"
+  },
+  {
+    "question": "What is the total number of wickets that have runs under 4600 and matches under 44?",
+    "headers": [
+      "Matches",
+      "Wickets",
+      "Runs",
+      "Average",
+      "10WM",
+      "Best in Innings",
+      "Best in Match"
+    ],
+    "where_column": "Runs",
+    "where_value": "4600",
+    "all_conditions": [
+      {
+        "column": "Runs",
+        "value": "4600"
+      },
+      {
+        "column": "Matches",
+        "value": "44"
+      }
+    ]
+  },
+  {
+    "question": "What is Cynthia Mobumba's height?",
+    "headers": [
+      "Country",
+      "Contestant",
+      "Height (cm)",
+      "Height (ft)",
+      "Hometown"
+    ],
+    "where_column": "Contestant",
+    "where_value": "cynthia mobumba"
+  },
+  {
+    "question": "What show has a boar?",
+    "headers": [
+      "Animal Name",
+      "Species",
+      "Books",
+      "TV Series",
+      "Gender",
+      "TV Seasons",
+      "Mate",
+      "Offspring",
+      "First Appearance",
+      "Last Appearance"
+    ],
+    "where_column": "Species",
+    "where_value": "boar"
+  },
+  {
+    "question": "When the total score is 740, what is tromso?",
+    "headers": [
+      "Song",
+      "Porsgrunn",
+      "Bergen",
+      "Bod\u00f8",
+      "Stavanger",
+      "\u00c5lesund",
+      "Elverum",
+      "Troms\u00f8",
+      "Fredrikstad",
+      "Trondheim",
+      "Oslo",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "740"
+  },
+  {
+    "question": "Who is the player from the Buffalo Braves with the previous team Los Angeles Lakers and a career with the franchase in 1970?",
+    "headers": [
+      "Player",
+      "Pos.",
+      "Nationality",
+      "Team",
+      "Previous team",
+      "Years of NBA experience [a ]",
+      "Career with the franchise [b ]"
+    ],
+    "where_column": "Team",
+    "where_value": "buffalo braves",
+    "all_conditions": [
+      {
+        "column": "Team",
+        "value": "buffalo braves"
+      },
+      {
+        "column": "Previous team",
+        "value": "los angeles lakers"
+      },
+      {
+        "column": "Career with the franchise [b ]",
+        "value": "1970"
+      }
+    ]
+  },
+  {
+    "question": "which Score has a Location of mex cancun?",
+    "headers": [
+      "Date",
+      "Location",
+      "Lineup",
+      "Assist/pass",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Location",
+    "where_value": "mex cancun"
+  }
+]

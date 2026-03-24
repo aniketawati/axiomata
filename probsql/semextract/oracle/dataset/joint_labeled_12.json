@@ -1,0 +1,192 @@
+[
+  {
+    "question": "When the 8th is Marcos Hernandez who was the 6th?",
+    "value_column_pairs": [
+      {"value_span": "Marcos Hernandez", "column": "Eighth", "match_reason": "name_to_name_column"},
+      {"value_span": "8th", "column": "Eighth", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which award was nominated for in 2000?",
+    "value_column_pairs": [
+      {"value_span": "2000", "column": "Year", "match_reason": "year_to_year_column"},
+      {"value_span": "nominated", "column": "Result", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "For the 2nd string of Ra what is the Depart de la main gauche?",
+    "value_column_pairs": [
+      {"value_span": "Ra", "column": "2nd string", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was second when Shane McKinlay was the lead?",
+    "value_column_pairs": [
+      {"value_span": "Shane McKinlay", "column": "Lead", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "Who were the candidates when the first elected was a republican in 1998? ",
+    "value_column_pairs": [
+      {"value_span": "1998", "column": "First elected", "match_reason": "year_to_year_column"},
+      {"value_span": "republican", "column": "Party", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What away team played at Brunswick Street Oval?",
+    "value_column_pairs": [
+      {"value_span": "Brunswick Street Oval", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "How many Uni numbers have Bats of s, and a Position of utl?",
+    "value_column_pairs": [
+      {"value_span": "s", "column": "Bats", "match_reason": "category_to_category_column"},
+      {"value_span": "utl", "column": "Position", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What team has an incoming manager named Kenny Dalglish?",
+    "value_column_pairs": [
+      {"value_span": "Kenny Dalglish", "column": "Incoming manager", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "how many times is the location is homestead, florida?",
+    "value_column_pairs": [
+      {"value_span": "homestead, florida", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "I want the plaid cymru for 4 may 2011",
+    "value_column_pairs": [
+      {"value_span": "4 may 2011", "column": "Date(s) conducted", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many people attended the game with the home team scoring 18.25 (133)?",
+    "value_column_pairs": [
+      {"value_span": "18.25 (133)", "column": "Home team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What are the largest cuts made when the events are less than 21?",
+    "value_column_pairs": [
+      {"value_span": "21", "column": "Events", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the time/retired for brm with a grid of 13?",
+    "value_column_pairs": [
+      {"value_span": "brm", "column": "Constructor", "match_reason": "team_to_team_column"},
+      {"value_span": "13", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is Candlelight Records format?",
+    "value_column_pairs": [
+      {"value_span": "Candlelight Records", "column": "Label", "match_reason": "context_implies"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which Issue Date(s) has Weeks on Top larger than 3, and a Volume: Issue of 35:25-26, 36:1-2?",
+    "value_column_pairs": [
+      {"value_span": "3", "column": "Weeks on Top", "match_reason": "number_to_numeric_column"},
+      {"value_span": "35:25-26, 36:1-2", "column": "Volume:Issue", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which publisher released Martial Law: Substitutes?",
+    "value_column_pairs": [
+      {"value_span": "Martial Law: Substitutes", "column": "Release title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Which Bronze is the highest one that has a Rank larger than 1, and a Nation of dominican republic, and a Total larger than 4?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Rank", "match_reason": "number_to_id_column"},
+      {"value_span": "dominican republic", "column": "Nation", "match_reason": "place_to_location_column"},
+      {"value_span": "4", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which administrative division had a population of 2011 according to the siak database of 3,672,994?",
+    "value_column_pairs": [
+      {"value_span": "3,672,994", "column": "Population 2011 SIAK Database", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Who was the driver/passengar when the position was smaller than 8, the third was 1, and there was 1 win?",
+    "value_column_pairs": [
+      {"value_span": "8", "column": "Position", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1", "column": "Third", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1 win", "column": "Wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What Giant Slalom has Victories larger than 27, a Slalom of \u2013, and a Career of 1996\u20132009?",
+    "value_column_pairs": [
+      {"value_span": "27", "column": "Victories", "match_reason": "number_to_numeric_column"},
+      {"value_span": "\u2013", "column": "Slalom", "match_reason": "text_to_matching_column"},
+      {"value_span": "1996\u20132009", "column": "Career", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "on what date was tie number 4?",
+    "value_column_pairs": [
+      {"value_span": "4", "column": "Tie no", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Taper/ft that has a Large end smaller than 0.5, and a Taper of #2?",
+    "value_column_pairs": [
+      {"value_span": "0.5", "column": "Large end", "match_reason": "number_to_numeric_column"},
+      {"value_span": "#2", "column": "Taper", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the date for race title lakeside",
+    "value_column_pairs": [
+      {"value_span": "lakeside", "column": "Race Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "A tournament on which date has a margin of victory of 2 strokes and a par of \u221216?",
+    "value_column_pairs": [
+      {"value_span": "2 strokes", "column": "Margin of victory", "match_reason": "number_to_numeric_column"},
+      {"value_span": "\u221216", "column": "To par", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is re-elected Incumbent Jerry Costello's First elected date?",
+    "value_column_pairs": [
+      {"value_span": "re-elected", "column": "Results", "match_reason": "category_to_category_column"},
+      {"value_span": "Jerry Costello", "column": "Incumbent", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]

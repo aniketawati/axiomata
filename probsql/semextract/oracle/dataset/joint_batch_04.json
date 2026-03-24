@@ -1,0 +1,386 @@
+[
+  {
+    "question": "how much prize money (in USD) did bob lutz win",
+    "headers": [
+      "Rk",
+      "Name",
+      "Country",
+      "Matches Played",
+      "Matches Won",
+      "Points",
+      "Prize Money (USD)"
+    ],
+    "where_column": "Name",
+    "where_value": "Bob Lutz"
+  },
+  {
+    "question": "What is the home team's score at mcg?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Venue",
+    "where_value": "mcg"
+  },
+  {
+    "question": "How many episodes are numbered 4 in the season?",
+    "headers": [
+      "No.",
+      "#",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Patient Portrayer",
+      "Original air date",
+      "Production code"
+    ],
+    "where_column": "#",
+    "where_value": "4"
+  },
+  {
+    "question": "How many grids does dave walker have?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Driver",
+    "where_value": "dave walker"
+  },
+  {
+    "question": "What is the number of Games for the Maccabi Tel Aviv Team with less than 208 Rebounds?",
+    "headers": [
+      "Rank",
+      "Name",
+      "Team",
+      "Games",
+      "Rebounds"
+    ],
+    "where_column": "Team",
+    "where_value": "maccabi tel aviv",
+    "all_conditions": [
+      {
+        "column": "Team",
+        "value": "maccabi tel aviv"
+      },
+      {
+        "column": "Rebounds",
+        "value": "208"
+      }
+    ]
+  },
+  {
+    "question": "Which Format has a Label of toy's factory records?",
+    "headers": [
+      "Region",
+      "Date",
+      "Label",
+      "Format",
+      "Catalog"
+    ],
+    "where_column": "Label",
+    "where_value": "toy's factory records"
+  },
+  {
+    "question": "What is buffalo's pick #?",
+    "headers": [
+      "Pick #",
+      "CFL Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "College",
+    "where_value": "buffalo"
+  },
+  {
+    "question": "What shows for 2002 when the 1991 is w?",
+    "headers": [
+      "Tournament",
+      "1988",
+      "1989",
+      "1990",
+      "1991",
+      "1992",
+      "1993",
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004"
+    ],
+    "where_column": "1991",
+    "where_value": "w"
+  },
+  {
+    "question": "Name the candidates for illinois 15",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "District",
+    "where_value": "Illinois 15"
+  },
+  {
+    "question": "What was the capacity percentage when attendance was 71080?",
+    "headers": [
+      "Team",
+      "Stadium",
+      "Home Games",
+      "Average Attendance",
+      "Total Attendance",
+      "Capacity Percentage"
+    ],
+    "where_column": "Average Attendance",
+    "where_value": "71080"
+  },
+  {
+    "question": "What is the position for outgoing manager alfredo merino",
+    "headers": [
+      "Team",
+      "Outgoing manager",
+      "Manner of departure",
+      "Date of vacancy",
+      "Replaced by",
+      "Date of appointment",
+      "Position in table"
+    ],
+    "where_column": "Outgoing manager",
+    "where_value": "Alfredo Merino"
+  },
+  {
+    "question": "What is the HDTV when the Package/Option is sky famiglia, and a Television service of boomerang +1?",
+    "headers": [
+      "Television service",
+      "Country",
+      "Language",
+      "Content",
+      "HDTV",
+      "Package/Option"
+    ],
+    "where_column": "Package/Option",
+    "where_value": "sky famiglia",
+    "all_conditions": [
+      {
+        "column": "Package/Option",
+        "value": "sky famiglia"
+      },
+      {
+        "column": "Television service",
+        "value": "boomerang +1"
+      }
+    ]
+  },
+  {
+    "question": "Record description of maximum load to m (ft), and a Date of 23 september 1961 is what pilot?",
+    "headers": [
+      "Date",
+      "Type",
+      "Record description",
+      "Achievement",
+      "Pilot"
+    ],
+    "where_column": "Record description",
+    "where_value": "maximum load to m (ft)",
+    "all_conditions": [
+      {
+        "column": "Record description",
+        "value": "maximum load to m (ft)"
+      },
+      {
+        "column": "Date",
+        "value": "23 september 1961"
+      }
+    ]
+  },
+  {
+    "question": "What was the maximum perigee on 1969-01-09?",
+    "headers": [
+      "Name",
+      "Alt name",
+      "Launch date",
+      "ID",
+      "Mass (kg)",
+      "Decay date",
+      "Perigee (km)",
+      "Apogee (km)",
+      "Inclination"
+    ],
+    "where_column": "Decay date",
+    "where_value": "1969-01-09"
+  },
+  {
+    "question": "What is the highest pick for a player from auburn?",
+    "headers": [
+      "Pick",
+      "Round",
+      "Player",
+      "Position",
+      "School"
+    ],
+    "where_column": "School",
+    "where_value": "auburn"
+  },
+  {
+    "question": "What is the Against when the drawn is 5?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Drawn",
+    "where_value": "5"
+  },
+  {
+    "question": "What is the Input/output operations per second for the emlc flash?",
+    "headers": [
+      "Product Name",
+      "Form Factor",
+      "Storage Medium",
+      "Max Usable Capacity (GB)",
+      "Speed ( IOPS )",
+      "Latency (microseconds)",
+      "Bandwidth (GB/s)"
+    ],
+    "where_column": "Storage Medium",
+    "where_value": "eMLC Flash"
+  },
+  {
+    "question": "What is the location of the game with a 6-11-8 record?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "Location",
+      "Attendance",
+      "Record",
+      "Points"
+    ],
+    "where_column": "Record",
+    "where_value": "6-11-8"
+  },
+  {
+    "question": "When did tav\u00e1rez lose?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Loss",
+    "where_value": "tav\u00e1rez"
+  },
+  {
+    "question": "what's the\u00a0attribute\u00a0with\u00a0cancelable\u00a0being yes",
+    "headers": [
+      "Category",
+      "Type",
+      "Attribute",
+      "Description",
+      "Bubbles",
+      "Cancelable"
+    ],
+    "where_column": "Cancelable",
+    "where_value": "Yes"
+  },
+  {
+    "question": "What is the weight of the person born in 1980?",
+    "headers": [
+      "Name",
+      "Pos.",
+      "Height",
+      "Weight",
+      "Born"
+    ],
+    "where_column": "Born",
+    "where_value": "1980"
+  },
+  {
+    "question": "Which country is George Archer from?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "george archer"
+  },
+  {
+    "question": "Which Opponent has an Away of 1\u20131, and a Home of 3\u20133?",
+    "headers": [
+      "Season",
+      "Competition",
+      "Round",
+      "Opponent",
+      "Home",
+      "Away",
+      "Series"
+    ],
+    "where_column": "Away",
+    "where_value": "1\u20131",
+    "all_conditions": [
+      {
+        "column": "Away",
+        "value": "1\u20131"
+      },
+      {
+        "column": "Home",
+        "value": "3\u20133"
+      }
+    ]
+  },
+  {
+    "question": "What is the sum of NGC numbers for Constellation vela?",
+    "headers": [
+      "NGC number",
+      "Object type",
+      "Constellation",
+      "Right ascension ( J2000 )",
+      "Declination ( J2000 )",
+      "Apparent magnitude"
+    ],
+    "where_column": "Constellation",
+    "where_value": "vela"
+  },
+  {
+    "question": "How many values for attendance on the date of August 26?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Location",
+      "Final Score",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "August 26"
+  }
+]

@@ -1,0 +1,403 @@
+[
+  {
+    "question": "Which batter has the last name Graham?",
+    "headers": [
+      "Surname",
+      "First",
+      "D.O.B.",
+      "Uni#",
+      "Bats",
+      "Throws",
+      "Position"
+    ],
+    "where_column": "Surname",
+    "where_value": "graham"
+  },
+  {
+    "question": "On what date the footscray's away game?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "footscray"
+  },
+  {
+    "question": "What was the total number of weeks on peak for the Ireland Albums Top 75 chart?",
+    "headers": [
+      "Chart",
+      "Date of Entry",
+      "Entry Position",
+      "Peak Position",
+      "Weeks on Peak",
+      "Weeks on Chart",
+      "Date of Exit"
+    ],
+    "where_column": "Chart",
+    "where_value": "Ireland Albums Top 75"
+  },
+  {
+    "question": "What grad has a Time/Retired of + 1:24.3?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Time/Retired",
+    "where_value": "+ 1:24.3"
+  },
+  {
+    "question": "Which Record has an Opponent of twins, and a Date of july 25?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Opponent",
+    "where_value": "twins",
+    "all_conditions": [
+      {
+        "column": "Opponent",
+        "value": "twins"
+      },
+      {
+        "column": "Date",
+        "value": "july 25"
+      }
+    ]
+  },
+  {
+    "question": "How many million viewers watched episode 6?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original U.S. air date",
+      "Prod. code",
+      "Viewers (millions)"
+    ],
+    "where_column": "No. in season",
+    "where_value": "6"
+  },
+  {
+    "question": "What is the Results\u00b9 that was a friendly game and played on June 25?",
+    "headers": [
+      "Date",
+      "City",
+      "Opponent",
+      "Results\u00b9",
+      "Type of game"
+    ],
+    "where_column": "Type of game",
+    "where_value": "friendly",
+    "all_conditions": [
+      {
+        "column": "Type of game",
+        "value": "friendly"
+      },
+      {
+        "column": "Date",
+        "value": "june 25"
+      }
+    ]
+  },
+  {
+    "question": "What is the lowest Floors, when Built is greater than 1970, and when Name is NV Building 3?",
+    "headers": [
+      "Rank",
+      "Name",
+      "Built",
+      "Height",
+      "Floors"
+    ],
+    "where_column": "Built",
+    "where_value": "1970",
+    "all_conditions": [
+      {
+        "column": "Built",
+        "value": "1970"
+      },
+      {
+        "column": "Name",
+        "value": "nv building 3"
+      }
+    ]
+  },
+  {
+    "question": "What is the total number of 3rd place entries that have exactly 8 total placings?",
+    "headers": [
+      "Sporting profession",
+      "First place(s)",
+      "Second place(s)",
+      "Third place(s)",
+      "Total placing(s)"
+    ],
+    "where_column": "Total placing(s)",
+    "where_value": "8"
+  },
+  {
+    "question": "How many dates for the week of 4?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Location",
+      "Final Score",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Week",
+    "where_value": "4"
+  },
+  {
+    "question": "Which Kickoff (ET) has a Result of w 34\u201323?",
+    "headers": [
+      "Week",
+      "Date",
+      "Kickoff (ET)",
+      "Opponent",
+      "Result",
+      "Record",
+      "Game site",
+      "NFL Recap"
+    ],
+    "where_column": "Result",
+    "where_value": "w 34\u201323"
+  },
+  {
+    "question": "What is the total number of dates of successor formal installation when the vacator was Joshua Clayton ( F )?",
+    "headers": [
+      "State (class)",
+      "Vacator",
+      "Reason for change",
+      "Successor",
+      "Date of successors formal installation"
+    ],
+    "where_column": "Vacator",
+    "where_value": "Joshua Clayton ( F )"
+  },
+  {
+    "question": "What did the away team score when the home team was south melbourne?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "south melbourne"
+  },
+  {
+    "question": "Who was the home team on April 13, 2008 when Itabuna was the away team?",
+    "headers": [
+      "Round",
+      "Date",
+      "Home team",
+      "Score",
+      "Away team"
+    ],
+    "where_column": "Date",
+    "where_value": "april 13, 2008",
+    "all_conditions": [
+      {
+        "column": "Date",
+        "value": "april 13, 2008"
+      },
+      {
+        "column": "Away team",
+        "value": "itabuna"
+      }
+    ]
+  },
+  {
+    "question": "If the skip is Kelly Scott, what is the PF total number?",
+    "headers": [
+      "Locale",
+      "Skip",
+      "W",
+      "L",
+      "PF",
+      "PA",
+      "Ends Won",
+      "Ends Lost",
+      "Blank Ends",
+      "Stolen Ends",
+      "Shot Pct."
+    ],
+    "where_column": "Skip",
+    "where_value": "Kelly Scott"
+  },
+  {
+    "question": "What is the Frequency MHz for the station with a call sign of w224bn?",
+    "headers": [
+      "Call sign",
+      "Frequency MHz",
+      "City of license",
+      "ERP W",
+      "Class",
+      "FCC info"
+    ],
+    "where_column": "Call sign",
+    "where_value": "w224bn"
+  },
+  {
+    "question": "Name the runners for longchamp",
+    "headers": [
+      "Race",
+      "Dist (f)",
+      "Course",
+      "Class",
+      "Prize (\u00a3K)",
+      "Odds",
+      "Runners",
+      "Placing",
+      "Margin",
+      "Time",
+      "Jockey",
+      "Trainer"
+    ],
+    "where_column": "Course",
+    "where_value": "longchamp"
+  },
+  {
+    "question": "What is the value of D 45 O when the value of D 44 O is \u2190 majority?",
+    "headers": [
+      "D 48 +",
+      "D 47 +",
+      "D 46 +",
+      "D 45 O",
+      "D 44 O",
+      "D 43 \u221a",
+      "D 42 \u221a",
+      "D 41 \u221a"
+    ],
+    "where_column": "D 44 O",
+    "where_value": "\u2190 majority"
+  },
+  {
+    "question": "What is the number of public that was there when the vote percentage was 22.9%?",
+    "headers": [
+      "Rank",
+      "Couple",
+      "Judges",
+      "Public",
+      "Total",
+      "Vote percentage",
+      "Result"
+    ],
+    "where_column": "Vote percentage",
+    "where_value": "22.9%"
+  },
+  {
+    "question": "Where was the game and what was the attendance on April 3? ",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "April 3"
+  },
+  {
+    "question": "Name the least weeks for year less than 2000",
+    "headers": [
+      "Year",
+      "Chart",
+      "Track",
+      "Peak",
+      "Weeks on Chart"
+    ],
+    "where_column": "Year",
+    "where_value": "2000"
+  },
+  {
+    "question": "Which home team had a visitor of Ottawa Senators with a score of 1\u20135?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Record"
+    ],
+    "where_column": "Visitor",
+    "where_value": "ottawa senators",
+    "all_conditions": [
+      {
+        "column": "Visitor",
+        "value": "ottawa senators"
+      },
+      {
+        "column": "Score",
+        "value": "1\u20135"
+      }
+    ]
+  },
+  {
+    "question": "What was the profit before tax when the turnover was 431.06?",
+    "headers": [
+      "Period ended",
+      "Turnover (\u00a3m)",
+      "Profit before tax (\u00a3m)",
+      "Dividend per share (p)",
+      "Adjusted earnings per share diluted (p)"
+    ],
+    "where_column": "Turnover (\u00a3m)",
+    "where_value": "431.06"
+  },
+  {
+    "question": "Which venue had an extra of Junior Race?",
+    "headers": [
+      "Year",
+      "Tournament",
+      "Venue",
+      "Result",
+      "Extra"
+    ],
+    "where_column": "Extra",
+    "where_value": "junior race"
+  },
+  {
+    "question": "What is the sum of Overall, when College is \"Arkansas State\", and when Pick is less than 17?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "College",
+    "where_value": "arkansas state",
+    "all_conditions": [
+      {
+        "column": "College",
+        "value": "arkansas state"
+      },
+      {
+        "column": "Pick",
+        "value": "17"
+      }
+    ]
+  }
+]
