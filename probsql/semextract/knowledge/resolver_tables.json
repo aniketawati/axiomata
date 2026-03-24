@@ -1,0 +1,6564 @@
+{
+  "type_to_column_patterns": {
+    "string": {
+      "Date": 0.06662404522359433,
+      "Score": 0.04256536222618527,
+      "Opponent": 0.03741714054981662,
+      "Record": 0.03206702782731586,
+      "Title": 0.022107069551465394,
+      "Time": 0.014166021736935966,
+      "Nation": 0.011877923214105454,
+      "Competition": 0.009522527675897573,
+      "Event": 0.009455230660520206,
+      "Home": 0.00864766647599179,
+      "Place": 0.00847942393754837,
+      "Nationality": 0.008210235876038897,
+      "Visitor": 0.007705508260708638,
+      "Written by": 0.0068979440761802215,
+      "Circuit": 0.0062922709377839095,
+      "Directed by": 0.006258622430095225,
+      "Chassis": 0.006224973922406541,
+      "Surface": 0.006224973922406541,
+      "Time/Retired": 0.005518355260944177,
+      "Engine": 0.004845385107170497
+    },
+    "location": {
+      "Venue": 0.23977604673807207,
+      "Country": 0.1952288218111003,
+      "Location": 0.1587147030185005,
+      "District": 0.08787731256085686,
+      "City": 0.05331061343719572,
+      "County": 0.037244401168451804,
+      "State": 0.02750730282375852,
+      "Region": 0.0250730282375852,
+      "Location Attendance": 0.019717624148003893,
+      "City of license": 0.012901655306718598,
+      "Location/Attendance": 0.007546251217137293,
+      "Capital": 0.005355404089581304,
+      "Headquarters": 0.0046251217137293086,
+      "School/Club Team/Country": 0.0046251217137293086,
+      "Country/Territory": 0.004381694255111977,
+      "Location of the Church": 0.0036514118792599806,
+      "School/Country": 0.0036514118792599806,
+      "# / County": 0.002677702044790652,
+      "City/Town": 0.0019474196689386564,
+      "Country of origin": 0.0019474196689386564
+    },
+    "year_string": {
+      "Year": 0.4655220160620327,
+      "Season": 0.06147881473276101,
+      "First elected": 0.0376626973137635,
+      "Date": 0.026862364995846027,
+      "Against": 0.02076986984214899,
+      "Founded": 0.015785101080033233,
+      "Year(s) won": 0.015508169482137912,
+      "From": 0.011077263915812794,
+      "Election": 0.011077263915812794,
+      "Built": 0.008031016338964275,
+      "Established": 0.006369426751592357,
+      "NGC number": 0.005538631957906397,
+      "Opened": 0.004984768762115757,
+      "Elected": 0.004707837164220438,
+      "Year Joined": 0.004430905566325118,
+      "Year built": 0.003877042370534478,
+      "Year born": 0.003877042370534478,
+      "Year Built": 0.003877042370534478,
+      "Points": 0.003877042370534478,
+      "Years": 0.003877042370534478
+    },
+    "number": {
+      "Rank": 0.04069056142099778,
+      "Points": 0.04023743712900449,
+      "Total": 0.03271557388191581,
+      "Attendance": 0.02664370836920567,
+      "Round": 0.024242149621641215,
+      "Wins": 0.02039059313969822,
+      "Game": 0.02029996828129956,
+      "Week": 0.01971090670170828,
+      "Grid": 0.019121845122116995,
+      "Bronze": 0.01889528297612035,
+      "Silver": 0.01889528297612035,
+      "Laps": 0.018306221396529068,
+      "Gold": 0.01613122479496126,
+      "Played": 0.01164529430422765,
+      "Lost": 0.011418732158231002,
+      "Pick": 0.011101545153835697,
+      "Position": 0.010104671711450451,
+      "Losses": 0.008881236123068558,
+      "Drawn": 0.008518736689473923,
+      "Pick #": 0.008337486972676606
+    },
+    "season_string": {
+      "Season": 0.23410404624277456,
+      "School Year": 0.1069364161849711,
+      "Year": 0.10404624277456648,
+      "Years": 0.06936416184971098,
+      "Years for Jazz": 0.05491329479768786,
+      "Years for Rockets": 0.03468208092485549,
+      "Years for Grizzlies": 0.031791907514450865,
+      "Years in Toronto": 0.023121387283236993,
+      "Years in Orlando": 0.023121387283236993,
+      "Span": 0.02023121387283237,
+      "Career": 0.011560693641618497,
+      "Active service": 0.011560693641618497,
+      "ObjectNumber": 0.011560693641618497,
+      "Years at club": 0.011560693641618497,
+      "Joined": 0.008670520231213872,
+      "Period": 0.008670520231213872,
+      "Years in Competition": 0.008670520231213872,
+      "Date": 0.008670520231213872,
+      "WSU Year(s)": 0.008670520231213872,
+      "Years as tallest": 0.008670520231213872
+    },
+    "institution": {
+      "Team": 0.17893243482887036,
+      "Away team": 0.1260861854938819,
+      "Home team": 0.11863805639297748,
+      "Away team score": 0.0696932080156056,
+      "Home team score": 0.06951587160844121,
+      "College": 0.06082638765738606,
+      "Club": 0.05266891292782408,
+      "School": 0.043092746940946974,
+      "School/Club Team": 0.02660046107465863,
+      "Party": 0.02305373293137081,
+      "Team 2": 0.015073594608973222,
+      "Team 1": 0.014364248980315658,
+      "NHL team": 0.01259088490867175,
+      "CFL Team": 0.009576165986877105,
+      "Network": 0.009221493172548324,
+      "College/junior/club team": 0.006029437843589289,
+      "Team #2": 0.006029437843589289,
+      "2008 club": 0.006029437843589289,
+      "Team #1": 0.005852101436424898,
+      "Opposing Teams": 0.004965419400602944
+    },
+    "person_name": {
+      "Player": 0.2643522693116922,
+      "Name": 0.20513976555455365,
+      "Driver": 0.06642620979861737,
+      "Tournament": 0.06462278328824766,
+      "Incumbent": 0.0616170724376315,
+      "Winner": 0.03456567478208596,
+      "Director": 0.019987977156597534,
+      "Rider": 0.019987977156597534,
+      "Artist": 0.01923654944394349,
+      "Nickname": 0.011872557859933875,
+      "Candidates": 0.01142170123234145,
+      "Winning driver": 0.010519987977156597,
+      "Outgoing manager": 0.00826570483919447,
+      "Race Name": 0.0063119927862939585,
+      "Authority": 0.0063119927862939585,
+      "Coach": 0.0043582807333934475,
+      "Candidate": 0.0040577096483318306,
+      "Original artist": 0.003907424105801022,
+      "Manager": 0.003907424105801022,
+      "Winners": 0.0037571385632702136
+    },
+    "category": {
+      "Position": 0.23563393128610519,
+      "Result": 0.2268166615992703,
+      "Type": 0.05107935542718151,
+      "Class": 0.046518698692611736,
+      "Category": 0.03922164791730009,
+      "Status": 0.027059896625114016,
+      "Rank": 0.0246275463666768,
+      "League": 0.019762845849802372,
+      "Genre": 0.01793858315597446,
+      "Pole Position": 0.015506232897537246,
+      "Points classification": 0.010641532380662816,
+      "Conference": 0.00972940103374886,
+      "Pole position": 0.009425357251444208,
+      "Opposition": 0.009425357251444208,
+      "Division": 0.007905138339920948,
+      "Mountains classification": 0.007905138339920948,
+      "IHSAA Class": 0.007905138339920948,
+      "Results": 0.006993006993006993,
+      "Position in table": 0.006688963210702341,
+      "General classification": 0.006384919428397689
+    },
+    "date_string": {
+      "Date": 0.633693972179289,
+      "Original air date": 0.05641421947449768,
+      "Air Date": 0.020865533230293665,
+      "Original airdate": 0.012364760432766615,
+      "Dates administered": 0.011591962905718702,
+      "Date of successors formal installation": 0.010819165378670788,
+      "Airdate": 0.010046367851622875,
+      "Season finale": 0.008500772797527048,
+      "Birthdate": 0.0077279752704791345,
+      "Listed": 0.0077279752704791345,
+      "Release date": 0.0061823802163833074,
+      "Season premiere": 0.005409582689335394,
+      "Match Date": 0.005409582689335394,
+      "Original Airdate": 0.005409582689335394,
+      "Japan": 0.00463678516228748,
+      "Date introduced": 0.00463678516228748,
+      "Launch Date": 0.0038639876352395673,
+      "Charter Date": 0.0038639876352395673,
+      "Termination of Mission": 0.0038639876352395673,
+      "Presentation of Credentials": 0.0038639876352395673
+    }
+  },
+  "column_keywords": {
+    "current": {
+      "primary_type": "institution",
+      "count": 23
+    },
+    "notes": {
+      "primary_type": "string",
+      "count": 120
+    },
+    "state": {
+      "primary_type": "location",
+      "count": 174
+    },
+    "territory": {
+      "primary_type": "location",
+      "count": 34
+    },
+    "fuel": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "propulsion": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "fleet": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "series": {
+      "primary_type": "string",
+      "count": 181
+    },
+    "quantity": {
+      "primary_type": "number",
+      "count": 44
+    },
+    "order": {
+      "primary_type": "number",
+      "count": 27
+    },
+    "year": {
+      "primary_type": "year_string",
+      "count": 1996
+    },
+    "model": {
+      "primary_type": "string",
+      "count": 211
+    },
+    "aircraft": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "no": {
+      "primary_type": "number",
+      "count": 519
+    },
+    "years": {
+      "primary_type": "season_string",
+      "count": 100
+    },
+    "in": {
+      "primary_type": "string",
+      "count": 377
+    },
+    "toronto": {
+      "primary_type": "season_string",
+      "count": 8
+    },
+    "school": {
+      "primary_type": "institution",
+      "count": 435
+    },
+    "club": {
+      "primary_type": "institution",
+      "count": 645
+    },
+    "team": {
+      "primary_type": "institution",
+      "count": 4204
+    },
+    "player": {
+      "primary_type": "person_name",
+      "count": 1783
+    },
+    "scoring": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "rank": {
+      "primary_type": "number",
+      "count": 1079
+    },
+    "best": {
+      "primary_type": "string",
+      "count": 57
+    },
+    "finish": {
+      "primary_type": "string",
+      "count": 86
+    },
+    "money": {
+      "primary_type": "number",
+      "count": 83
+    },
+    "list": {
+      "primary_type": "number",
+      "count": 27
+    },
+    "draft": {
+      "primary_type": "year_string",
+      "count": 15
+    },
+    "pick": {
+      "primary_type": "number",
+      "count": 435
+    },
+    "singles": {
+      "primary_type": "string",
+      "count": 122
+    },
+    "doubles": {
+      "primary_type": "string",
+      "count": 91
+    },
+    "total": {
+      "primary_type": "number",
+      "count": 984
+    },
+    "played": {
+      "primary_type": "number",
+      "count": 293
+    },
+    "length": {
+      "primary_type": "string",
+      "count": 58
+    },
+    "meters": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "name": {
+      "primary_type": "person_name",
+      "count": 1973
+    },
+    "of": {
+      "primary_type": "string",
+      "count": 424
+    },
+    "the": {
+      "primary_type": "string",
+      "count": 271
+    },
+    "consort": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "weapon": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "direction": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "classification": {
+      "primary_type": "category",
+      "count": 137
+    },
+    "headquarters": {
+      "primary_type": "location",
+      "count": 23
+    },
+    "member": {
+      "primary_type": "string",
+      "count": 105
+    },
+    "location": {
+      "primary_type": "location",
+      "count": 821
+    },
+    "affiliation": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "capital": {
+      "primary_type": "location",
+      "count": 28
+    },
+    "official": {
+      "primary_type": "person_name",
+      "count": 23
+    },
+    "or": {
+      "primary_type": "string",
+      "count": 35
+    },
+    "language": {
+      "primary_type": "string",
+      "count": 83
+    },
+    "country": {
+      "primary_type": "location",
+      "count": 906
+    },
+    "season": {
+      "primary_type": "year_string",
+      "count": 243
+    },
+    "premiere": {
+      "primary_type": "date_string",
+      "count": 16
+    },
+    "finale": {
+      "primary_type": "date_string",
+      "count": 20
+    },
+    "seat": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "county": {
+      "primary_type": "location",
+      "count": 173
+    },
+    "english": {
+      "primary_type": "string",
+      "count": 100
+    },
+    "irish": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "operation": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "title": {
+      "primary_type": "string",
+      "count": 1053
+    },
+    "number": {
+      "primary_type": "number",
+      "count": 327
+    },
+    "involved": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "viewers": {
+      "primary_type": "number",
+      "count": 350
+    },
+    "millions": {
+      "primary_type": "number",
+      "count": 249
+    },
+    "avg": {
+      "primary_type": "number",
+      "count": 108
+    },
+    "start": {
+      "primary_type": "number",
+      "count": 74
+    },
+    "position": {
+      "primary_type": "category",
+      "count": 934
+    },
+    "nhl": {
+      "primary_type": "institution",
+      "count": 73
+    },
+    "nationality": {
+      "primary_type": "string",
+      "count": 246
+    },
+    "college": {
+      "primary_type": "institution",
+      "count": 420
+    },
+    "junior": {
+      "primary_type": "institution",
+      "count": 66
+    },
+    "ireland": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "top": {
+      "primary_type": "number",
+      "count": 177
+    },
+    "wins": {
+      "primary_type": "number",
+      "count": 491
+    },
+    "district": {
+      "primary_type": "location",
+      "count": 386
+    },
+    "structure": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "formula": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "city": {
+      "primary_type": "location",
+      "count": 374
+    },
+    "region": {
+      "primary_type": "location",
+      "count": 153
+    },
+    "census": {
+      "primary_type": "number",
+      "count": 33
+    },
+    "date": {
+      "primary_type": "string",
+      "count": 2308
+    },
+    "successors": {
+      "primary_type": "date_string",
+      "count": 14
+    },
+    "formal": {
+      "primary_type": "date_string",
+      "count": 16
+    },
+    "installation": {
+      "primary_type": "date_string",
+      "count": 16
+    },
+    "result": {
+      "primary_type": "category",
+      "count": 777
+    },
+    "dance": {
+      "primary_type": "string",
+      "count": 22
+    },
+    "song": {
+      "primary_type": "string",
+      "count": 117
+    },
+    "built": {
+      "primary_type": "year_string",
+      "count": 57
+    },
+    "two": {
+      "primary_type": "category",
+      "count": 5
+    },
+    "and": {
+      "primary_type": "string",
+      "count": 55
+    },
+    "driver": {
+      "primary_type": "person_name",
+      "count": 563
+    },
+    "winnings": {
+      "primary_type": "string",
+      "count": 30
+    },
+    "film": {
+      "primary_type": "string",
+      "count": 99
+    },
+    "nomination": {
+      "primary_type": "string",
+      "count": 67
+    },
+    "director": {
+      "primary_type": "person_name",
+      "count": 162
+    },
+    "fa": {
+      "primary_type": "number",
+      "count": 81
+    },
+    "cup": {
+      "primary_type": "number",
+      "count": 162
+    },
+    "apps": {
+      "primary_type": "number",
+      "count": 110
+    },
+    "fastest": {
+      "primary_type": "string",
+      "count": 79
+    },
+    "lap": {
+      "primary_type": "string",
+      "count": 90
+    },
+    "production": {
+      "primary_type": "string",
+      "count": 156
+    },
+    "code": {
+      "primary_type": "string",
+      "count": 234
+    },
+    "written": {
+      "primary_type": "string",
+      "count": 208
+    },
+    "by": {
+      "primary_type": "string",
+      "count": 517
+    },
+    "type": {
+      "primary_type": "category",
+      "count": 283
+    },
+    "partner": {
+      "primary_type": "string",
+      "count": 121
+    },
+    "score": {
+      "primary_type": "string",
+      "count": 1446
+    },
+    "championship": {
+      "primary_type": "string",
+      "count": 84
+    },
+    "opponents": {
+      "primary_type": "string",
+      "count": 150
+    },
+    "representative": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "birth": {
+      "primary_type": "string",
+      "count": 51
+    },
+    "character": {
+      "primary_type": "string",
+      "count": 51
+    },
+    "1999": {
+      "primary_type": "string",
+      "count": 28
+    },
+    "broadway": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "broadcast": {
+      "primary_type": "string",
+      "count": 34
+    },
+    "1998": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "bbc": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "one": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "viewing": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "used": {
+      "primary_type": "string",
+      "count": 57
+    },
+    "original": {
+      "primary_type": "string",
+      "count": 153
+    },
+    "estimated": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "deaths": {
+      "primary_type": "number",
+      "count": 25
+    },
+    "operational": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "overall": {
+      "primary_type": "number",
+      "count": 203
+    },
+    "round": {
+      "primary_type": "number",
+      "count": 567
+    },
+    "record": {
+      "primary_type": "string",
+      "count": 1008
+    },
+    "game": {
+      "primary_type": "number",
+      "count": 473
+    },
+    "id": {
+      "primary_type": "string",
+      "count": 34
+    },
+    "color": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "other": {
+      "primary_type": "string",
+      "count": 32
+    },
+    "completion": {
+      "primary_type": "year_string",
+      "count": 6
+    },
+    "games": {
+      "primary_type": "number",
+      "count": 178
+    },
+    "started": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "attempts": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "us": {
+      "primary_type": "number",
+      "count": 52
+    },
+    "tour": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "uk": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "class": {
+      "primary_type": "category",
+      "count": 306
+    },
+    "aaaaa": {
+      "primary_type": "category",
+      "count": 13
+    },
+    "aaa": {
+      "primary_type": "category",
+      "count": 15
+    },
+    "site": {
+      "primary_type": "string",
+      "count": 149
+    },
+    "duration": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "track": {
+      "primary_type": "string",
+      "count": 29
+    },
+    "major": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "theme": {
+      "primary_type": "string",
+      "count": 54
+    },
+    "style": {
+      "primary_type": "string",
+      "count": 33
+    },
+    "league": {
+      "primary_type": "number",
+      "count": 148
+    },
+    "open": {
+      "primary_type": "string",
+      "count": 45
+    },
+    "points": {
+      "primary_type": "number",
+      "count": 1226
+    },
+    "air": {
+      "primary_type": "date_string",
+      "count": 114
+    },
+    "regular": {
+      "primary_type": "string",
+      "count": 33
+    },
+    "writer": {
+      "primary_type": "string",
+      "count": 53
+    },
+    "petal": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "width": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "species": {
+      "primary_type": "string",
+      "count": 34
+    },
+    "sepal": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "winning": {
+      "primary_type": "string",
+      "count": 133
+    },
+    "pole": {
+      "primary_type": "category",
+      "count": 82
+    },
+    "organization": {
+      "primary_type": "institution",
+      "count": 8
+    },
+    "joined": {
+      "primary_type": "year_string",
+      "count": 31
+    },
+    "founded": {
+      "primary_type": "year_string",
+      "count": 66
+    },
+    "local": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "premier": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "street": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "names": {
+      "primary_type": "person_name",
+      "count": 28
+    },
+    "build": {
+      "primary_type": "year_string",
+      "count": 6
+    },
+    "owner": {
+      "primary_type": "string",
+      "count": 59
+    },
+    "serial": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "men": {
+      "primary_type": "string",
+      "count": 55
+    },
+    "nickname": {
+      "primary_type": "person_name",
+      "count": 107
+    },
+    "women": {
+      "primary_type": "string",
+      "count": 52
+    },
+    "enrollment": {
+      "primary_type": "number",
+      "count": 52
+    },
+    "institution": {
+      "primary_type": "string",
+      "count": 86
+    },
+    "appointment": {
+      "primary_type": "string",
+      "count": 32
+    },
+    "replaced": {
+      "primary_type": "string",
+      "count": 41
+    },
+    "vacancy": {
+      "primary_type": "string",
+      "count": 37
+    },
+    "table": {
+      "primary_type": "category",
+      "count": 22
+    },
+    "pressure": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "high": {
+      "primary_type": "string",
+      "count": 260
+    },
+    "50": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "inns": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "popular": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "vote": {
+      "primary_type": "string",
+      "count": 39
+    },
+    "seats": {
+      "primary_type": "number",
+      "count": 55
+    },
+    "won": {
+      "primary_type": "year_string",
+      "count": 71
+    },
+    "candidates": {
+      "primary_type": "person_name",
+      "count": 80
+    },
+    "opponent": {
+      "primary_type": "string",
+      "count": 1247
+    },
+    "stadium": {
+      "primary_type": "string",
+      "count": 116
+    },
+    "week": {
+      "primary_type": "number",
+      "count": 459
+    },
+    "probability": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "draw": {
+      "primary_type": "number",
+      "count": 110
+    },
+    "2nd": {
+      "primary_type": "string",
+      "count": 110
+    },
+    "players": {
+      "primary_type": "person_name",
+      "count": 12
+    },
+    "choice": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "1st": {
+      "primary_type": "string",
+      "count": 83
+    },
+    "density": {
+      "primary_type": "number",
+      "count": 69
+    },
+    "province": {
+      "primary_type": "string",
+      "count": 68
+    },
+    "gdp": {
+      "primary_type": "number",
+      "count": 39
+    },
+    "2003": {
+      "primary_type": "string",
+      "count": 33
+    },
+    "mil": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "million": {
+      "primary_type": "number",
+      "count": 114
+    },
+    "dvd": {
+      "primary_type": "person_name",
+      "count": 6
+    },
+    "race": {
+      "primary_type": "string",
+      "count": 138
+    },
+    "circuit": {
+      "primary_type": "string",
+      "count": 189
+    },
+    "growth": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "1991": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "2001": {
+      "primary_type": "number",
+      "count": 29
+    },
+    "work": {
+      "primary_type": "string",
+      "count": 28
+    },
+    "sex": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "ratio": {
+      "primary_type": "string",
+      "count": 25
+    },
+    "directed": {
+      "primary_type": "string",
+      "count": 190
+    },
+    "host": {
+      "primary_type": "string",
+      "count": 59
+    },
+    "conference": {
+      "primary_type": "category",
+      "count": 63
+    },
+    "32": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "races": {
+      "primary_type": "number",
+      "count": 52
+    },
+    "challenge": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "percent": {
+      "primary_type": "number",
+      "count": 16
+    },
+    "slovenes": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "village": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "german": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "cfl": {
+      "primary_type": "institution",
+      "count": 54
+    },
+    "max": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "memory": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "frequency": {
+      "primary_type": "string",
+      "count": 98
+    },
+    "sport": {
+      "primary_type": "string",
+      "count": 66
+    },
+    "playoffs": {
+      "primary_type": "string",
+      "count": 40
+    },
+    "chinese": {
+      "primary_type": "string",
+      "count": 39
+    },
+    "orbital": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "period": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "weight": {
+      "primary_type": "number",
+      "count": 62
+    },
+    "romaji": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "japanese": {
+      "primary_type": "string",
+      "count": 32
+    },
+    "condition": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "prothrombin": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "time": {
+      "primary_type": "string",
+      "count": 803
+    },
+    "bleeding": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "partial": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "thromboplastin": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "platelet": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "count": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "monday": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "wednesday": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "sunday": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "tuesday": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "rnd": {
+      "primary_type": "number",
+      "count": 18
+    },
+    "population": {
+      "primary_type": "number",
+      "count": 292
+    },
+    "at": {
+      "primary_type": "string",
+      "count": 34
+    },
+    "2010": {
+      "primary_type": "string",
+      "count": 92
+    },
+    "area": {
+      "primary_type": "number",
+      "count": 205
+    },
+    "km\u00b2": {
+      "primary_type": "number",
+      "count": 116
+    },
+    "registration": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "episode": {
+      "primary_type": "string",
+      "count": 148
+    },
+    "division": {
+      "primary_type": "category",
+      "count": 62
+    },
+    "mls": {
+      "primary_type": "institution",
+      "count": 10
+    },
+    "runner": {
+      "primary_type": "string",
+      "count": 210
+    },
+    "up": {
+      "primary_type": "string",
+      "count": 240
+    },
+    "winner": {
+      "primary_type": "person_name",
+      "count": 330
+    },
+    "goals": {
+      "primary_type": "number",
+      "count": 558
+    },
+    "venue": {
+      "primary_type": "location",
+      "count": 1016
+    },
+    "license": {
+      "primary_type": "location",
+      "count": 69
+    },
+    "market": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "station": {
+      "primary_type": "string",
+      "count": 78
+    },
+    "performance": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "trim": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "turbo": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "power": {
+      "primary_type": "string",
+      "count": 67
+    },
+    "peak": {
+      "primary_type": "string",
+      "count": 52
+    },
+    "18": {
+      "primary_type": "category",
+      "count": 18
+    },
+    "49": {
+      "primary_type": "category",
+      "count": 18
+    },
+    "rating": {
+      "primary_type": "number",
+      "count": 52
+    },
+    "share": {
+      "primary_type": "number",
+      "count": 45
+    },
+    "outgoing": {
+      "primary_type": "person_name",
+      "count": 56
+    },
+    "manager": {
+      "primary_type": "person_name",
+      "count": 93
+    },
+    "credits": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "hand": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "actor": {
+      "primary_type": "string",
+      "count": 62
+    },
+    "semi": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "finalist": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "champion": {
+      "primary_type": "string",
+      "count": 72
+    },
+    "british": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "marriage": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "minor": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "child": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "residence": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "first": {
+      "primary_type": "year_string",
+      "count": 186
+    },
+    "catalog": {
+      "primary_type": "string",
+      "count": 103
+    },
+    "engine": {
+      "primary_type": "string",
+      "count": 183
+    },
+    "altitude": {
+      "primary_type": "category",
+      "count": 8
+    },
+    "this": {
+      "primary_type": "category",
+      "count": 8
+    },
+    "highest": {
+      "primary_type": "number",
+      "count": 16
+    },
+    "off": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "with": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "height": {
+      "primary_type": "number",
+      "count": 84
+    },
+    "as": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "for": {
+      "primary_type": "number",
+      "count": 236
+    },
+    "details": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "medal": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "relationship": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "portrayed": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "night": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "per": {
+      "primary_type": "number",
+      "count": 121
+    },
+    "tons": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "person": {
+      "primary_type": "person_name",
+      "count": 6
+    },
+    "2007": {
+      "primary_type": "string",
+      "count": 83
+    },
+    "awarded": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "gold": {
+      "primary_type": "number",
+      "count": 363
+    },
+    "silver": {
+      "primary_type": "number",
+      "count": 424
+    },
+    "runs": {
+      "primary_type": "number",
+      "count": 33
+    },
+    "batting": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "partners": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "u15": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "iv": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "3rd": {
+      "primary_type": "string",
+      "count": 39
+    },
+    "4th": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "abbreviation": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "competition": {
+      "primary_type": "string",
+      "count": 293
+    },
+    "since": {
+      "primary_type": "year_string",
+      "count": 12
+    },
+    "grand": {
+      "primary_type": "string",
+      "count": 60
+    },
+    "prix": {
+      "primary_type": "string",
+      "count": 46
+    },
+    "constructor": {
+      "primary_type": "string",
+      "count": 114
+    },
+    "group": {
+      "primary_type": "string",
+      "count": 47
+    },
+    "windows": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "40": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "foundation": {
+      "primary_type": "year_string",
+      "count": 7
+    },
+    "half": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "womens": {
+      "primary_type": "string",
+      "count": 52
+    },
+    "rd": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "winners": {
+      "primary_type": "person_name",
+      "count": 37
+    },
+    "margin": {
+      "primary_type": "string",
+      "count": 65
+    },
+    "scores": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "attendance": {
+      "primary_type": "number",
+      "count": 604
+    },
+    "standing": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "house": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "fourth": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "place": {
+      "primary_type": "string",
+      "count": 318
+    },
+    "torque": {
+      "primary_type": "string",
+      "count": 23
+    },
+    "rpm": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "nm": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "jazz": {
+      "primary_type": "season_string",
+      "count": 19
+    },
+    "ship": {
+      "primary_type": "string",
+      "count": 49
+    },
+    "delivery": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "featured": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "victory": {
+      "primary_type": "string",
+      "count": 45
+    },
+    "54": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "holes": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "ground": {
+      "primary_type": "string",
+      "count": 59
+    },
+    "cuts": {
+      "primary_type": "number",
+      "count": 58
+    },
+    "made": {
+      "primary_type": "number",
+      "count": 80
+    },
+    "builder": {
+      "primary_type": "string",
+      "count": 47
+    },
+    "wheel": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "arrangement": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "debut": {
+      "primary_type": "string",
+      "count": 22
+    },
+    "death": {
+      "primary_type": "number",
+      "count": 15
+    },
+    "part": {
+      "primary_type": "string",
+      "count": 88
+    },
+    "sspec": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "tournament": {
+      "primary_type": "person_name",
+      "count": 457
+    },
+    "purse": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "property": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "russian": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "prize": {
+      "primary_type": "string",
+      "count": 39
+    },
+    "celebrity": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "head": {
+      "primary_type": "person_name",
+      "count": 39
+    },
+    "household": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "single": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "captain": {
+      "primary_type": "person_name",
+      "count": 50
+    },
+    "win": {
+      "primary_type": "number",
+      "count": 33
+    },
+    "loss": {
+      "primary_type": "string",
+      "count": 138
+    },
+    "leading": {
+      "primary_type": "string",
+      "count": 42
+    },
+    "coach": {
+      "primary_type": "person_name",
+      "count": 74
+    },
+    "countries": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "1980": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "service": {
+      "primary_type": "string",
+      "count": 84
+    },
+    "entered": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "hometown": {
+      "primary_type": "string",
+      "count": 90
+    },
+    "manner": {
+      "primary_type": "string",
+      "count": 25
+    },
+    "departure": {
+      "primary_type": "string",
+      "count": 29
+    },
+    "released": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "size": {
+      "primary_type": "number",
+      "count": 29
+    },
+    "rockets": {
+      "primary_type": "season_string",
+      "count": 12
+    },
+    "ft": {
+      "primary_type": "number",
+      "count": 27
+    },
+    "suburb": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "median": {
+      "primary_type": "string",
+      "count": 31
+    },
+    "age": {
+      "primary_type": "string",
+      "count": 30
+    },
+    "2006": {
+      "primary_type": "string",
+      "count": 68
+    },
+    "la": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "matches": {
+      "primary_type": "number",
+      "count": 111
+    },
+    "commander": {
+      "primary_type": "person_name",
+      "count": 6
+    },
+    "complement": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "wounded": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "nominal": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "num": {
+      "primary_type": "year_string",
+      "count": 14
+    },
+    "discs": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "unit": {
+      "primary_type": "string",
+      "count": 26
+    },
+    "1990": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "r\u014dmaji": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "gt3": {
+      "primary_type": "person_name",
+      "count": 9
+    },
+    "champions": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "meaning": {
+      "primary_type": "string",
+      "count": 23
+    },
+    "rebounds": {
+      "primary_type": "string",
+      "count": 85
+    },
+    "issue": {
+      "primary_type": "string",
+      "count": 53
+    },
+    "price": {
+      "primary_type": "string",
+      "count": 46
+    },
+    "mintage": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "artist": {
+      "primary_type": "person_name",
+      "count": 179
+    },
+    "guest": {
+      "primary_type": "string",
+      "count": 46
+    },
+    "assists": {
+      "primary_type": "string",
+      "count": 79
+    },
+    "streak": {
+      "primary_type": "string",
+      "count": 22
+    },
+    "home": {
+      "primary_type": "institution",
+      "count": 1084
+    },
+    "visitor": {
+      "primary_type": "string",
+      "count": 229
+    },
+    "average": {
+      "primary_type": "number",
+      "count": 233
+    },
+    "preliminaries": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "swimsuit": {
+      "primary_type": "number",
+      "count": 34
+    },
+    "reg": {
+      "primary_type": "number",
+      "count": 20
+    },
+    "car": {
+      "primary_type": "number",
+      "count": 43
+    },
+    "entrant": {
+      "primary_type": "string",
+      "count": 139
+    },
+    "index": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "publication": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "ranking": {
+      "primary_type": "category",
+      "count": 31
+    },
+    "world": {
+      "primary_type": "string",
+      "count": 25
+    },
+    "mens": {
+      "primary_type": "string",
+      "count": 51
+    },
+    "pinyin": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "metropolitan": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "version": {
+      "primary_type": "string",
+      "count": 46
+    },
+    "against": {
+      "primary_type": "number",
+      "count": 391
+    },
+    "origin": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "destination": {
+      "primary_type": "string",
+      "count": 28
+    },
+    "train": {
+      "primary_type": "person_name",
+      "count": 7
+    },
+    "operations": {
+      "primary_type": "year_string",
+      "count": 5
+    },
+    "sold": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "capacity": {
+      "primary_type": "number",
+      "count": 52
+    },
+    "end": {
+      "primary_type": "string",
+      "count": 28
+    },
+    "term": {
+      "primary_type": "string",
+      "count": 25
+    },
+    "inauguration": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "pitcher": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "third": {
+      "primary_type": "string",
+      "count": 59
+    },
+    "300": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "mm": {
+      "primary_type": "string",
+      "count": 25
+    },
+    "cartridge": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "translation": {
+      "primary_type": "string",
+      "count": 37
+    },
+    "mixed": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "titles": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "operator": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "usd": {
+      "primary_type": "number",
+      "count": 22
+    },
+    "currency": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "note": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "stage": {
+      "primary_type": "number",
+      "count": 87
+    },
+    "young": {
+      "primary_type": "person_name",
+      "count": 15
+    },
+    "rider": {
+      "primary_type": "person_name",
+      "count": 163
+    },
+    "km": {
+      "primary_type": "number",
+      "count": 126
+    },
+    "elevation": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "municipality": {
+      "primary_type": "number",
+      "count": 30
+    },
+    "reverse": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "nation": {
+      "primary_type": "string",
+      "count": 358
+    },
+    "eliminated": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "2005": {
+      "primary_type": "number",
+      "count": 47
+    },
+    "cost": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "capita": {
+      "primary_type": "string",
+      "count": 26
+    },
+    "evening": {
+      "primary_type": "number",
+      "count": 34
+    },
+    "gown": {
+      "primary_type": "number",
+      "count": 34
+    },
+    "interview": {
+      "primary_type": "number",
+      "count": 35
+    },
+    "ch": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "callsign": {
+      "primary_type": "string",
+      "count": 47
+    },
+    "kw": {
+      "primary_type": "number",
+      "count": 21
+    },
+    "athlete": {
+      "primary_type": "string",
+      "count": 98
+    },
+    "riding": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "swimming": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "transliteration": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "word": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "lost": {
+      "primary_type": "number",
+      "count": 273
+    },
+    "to": {
+      "primary_type": "number",
+      "count": 215
+    },
+    "dates": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "aired": {
+      "primary_type": "year_string",
+      "count": 5
+    },
+    "ep": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "opened": {
+      "primary_type": "year_string",
+      "count": 36
+    },
+    "units": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "produced": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "losing": {
+      "primary_type": "number",
+      "count": 29
+    },
+    "2012": {
+      "primary_type": "string",
+      "count": 89
+    },
+    "change": {
+      "primary_type": "string",
+      "count": 45
+    },
+    "2002": {
+      "primary_type": "string",
+      "count": 29
+    },
+    "from": {
+      "primary_type": "string",
+      "count": 86
+    },
+    "commissioned": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "completed": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "primary": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "sponsor": {
+      "primary_type": "string",
+      "count": 43
+    },
+    "party": {
+      "primary_type": "institution",
+      "count": 186
+    },
+    "committee": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "pos": {
+      "primary_type": "string",
+      "count": 58
+    },
+    "chemical": {
+      "primary_type": "category",
+      "count": 5
+    },
+    "target": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "status": {
+      "primary_type": "category",
+      "count": 94
+    },
+    "day": {
+      "primary_type": "string",
+      "count": 42
+    },
+    "saturday": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "gs": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "thursday": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "super": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "citation": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "road": {
+      "primary_type": "institution",
+      "count": 14
+    },
+    "closed": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "north": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "freight": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "tries": {
+      "primary_type": "number",
+      "count": 137
+    },
+    "drawn": {
+      "primary_type": "number",
+      "count": 188
+    },
+    "try": {
+      "primary_type": "number",
+      "count": 40
+    },
+    "bonus": {
+      "primary_type": "number",
+      "count": 64
+    },
+    "town": {
+      "primary_type": "string",
+      "count": 43
+    },
+    "barrel": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "profile": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "muzzle": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "background": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "candidate": {
+      "primary_type": "person_name",
+      "count": 37
+    },
+    "constituency": {
+      "primary_type": "number",
+      "count": 31
+    },
+    "born": {
+      "primary_type": "year_string",
+      "count": 16
+    },
+    "net": {
+      "primary_type": "number",
+      "count": 16
+    },
+    "construction": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "commercial": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "new": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "jersey": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "delaware": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "pts": {
+      "primary_type": "number",
+      "count": 60
+    },
+    "vice": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "international": {
+      "primary_type": "string",
+      "count": 23
+    },
+    "earnings": {
+      "primary_type": "number",
+      "count": 71
+    },
+    "bush": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "airdate": {
+      "primary_type": "date_string",
+      "count": 43
+    },
+    "blocks": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "medals": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "ensemble": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "edge": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "diameter": {
+      "primary_type": "number",
+      "count": 22
+    },
+    "mass": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "rookie": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "qualifying": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "event": {
+      "primary_type": "string",
+      "count": 301
+    },
+    "final": {
+      "primary_type": "string",
+      "count": 300
+    },
+    "most": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "aggressive": {
+      "primary_type": "person_name",
+      "count": 8
+    },
+    "release": {
+      "primary_type": "string",
+      "count": 89
+    },
+    "appointed": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "successor": {
+      "primary_type": "string",
+      "count": 22
+    },
+    "elected": {
+      "primary_type": "year_string",
+      "count": 160
+    },
+    "events": {
+      "primary_type": "number",
+      "count": 85
+    },
+    "asians": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "es": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "building": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "address": {
+      "primary_type": "string",
+      "count": 23
+    },
+    "prod": {
+      "primary_type": "number",
+      "count": 29
+    },
+    "incumbent": {
+      "primary_type": "person_name",
+      "count": 410
+    },
+    "results": {
+      "primary_type": "category",
+      "count": 27
+    },
+    "channels": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "mascot": {
+      "primary_type": "string",
+      "count": 72
+    },
+    "call": {
+      "primary_type": "string",
+      "count": 92
+    },
+    "sign": {
+      "primary_type": "string",
+      "count": 101
+    },
+    "format": {
+      "primary_type": "string",
+      "count": 135
+    },
+    "income": {
+      "primary_type": "string",
+      "count": 59
+    },
+    "jockey": {
+      "primary_type": "string",
+      "count": 31
+    },
+    "trainer": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "radio": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "laps": {
+      "primary_type": "number",
+      "count": 423
+    },
+    "led": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "channel": {
+      "primary_type": "number",
+      "count": 37
+    },
+    "tv": {
+      "primary_type": "string",
+      "count": 40
+    },
+    "dt": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "140": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "programme": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "dances": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "12": {
+      "primary_type": "string",
+      "count": 34
+    },
+    "15": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "yrs": {
+      "primary_type": "institution",
+      "count": 5
+    },
+    "senior": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "gender": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "electricity": {
+      "primary_type": "location",
+      "count": 8
+    },
+    "wind": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "distance": {
+      "primary_type": "string",
+      "count": 50
+    },
+    "distribution": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "parish": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "others": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "kg": {
+      "primary_type": "number",
+      "count": 48
+    },
+    "exports": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "2011": {
+      "primary_type": "string",
+      "count": 108
+    },
+    "poverty": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "1995": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "2000": {
+      "primary_type": "number",
+      "count": 35
+    },
+    "1985": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "source": {
+      "primary_type": "string",
+      "count": 49
+    },
+    "pal": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "gto": {
+      "primary_type": "institution",
+      "count": 5
+    },
+    "1600": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "kwh": {
+      "primary_type": "number",
+      "count": 23
+    },
+    "kwp": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "1000": {
+      "primary_type": "number",
+      "count": 18
+    },
+    "monthly": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "rate": {
+      "primary_type": "number",
+      "count": 51
+    },
+    "spokesperson": {
+      "primary_type": "person_name",
+      "count": 9
+    },
+    "reported": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "latest": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "epa": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "mpg": {
+      "primary_type": "number",
+      "count": 21
+    },
+    "election": {
+      "primary_type": "year_string",
+      "count": 45
+    },
+    "votes": {
+      "primary_type": "number",
+      "count": 60
+    },
+    "seasons": {
+      "primary_type": "number",
+      "count": 27
+    },
+    "television": {
+      "primary_type": "string",
+      "count": 64
+    },
+    "network": {
+      "primary_type": "institution",
+      "count": 71
+    },
+    "passengers": {
+      "primary_type": "number",
+      "count": 32
+    },
+    "airport": {
+      "primary_type": "string",
+      "count": 45
+    },
+    "metric": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "tonnes": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "2009": {
+      "primary_type": "string",
+      "count": 74
+    },
+    "2008": {
+      "primary_type": "string",
+      "count": 70
+    },
+    "09": {
+      "primary_type": "string",
+      "count": 28
+    },
+    "cru": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "surface": {
+      "primary_type": "string",
+      "count": 190
+    },
+    "grade": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "mhz": {
+      "primary_type": "number",
+      "count": 63
+    },
+    "arena": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "previous": {
+      "primary_type": "number",
+      "count": 19
+    },
+    "nfl": {
+      "primary_type": "institution",
+      "count": 21
+    },
+    "chassis": {
+      "primary_type": "string",
+      "count": 199
+    },
+    "virtual": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "kannada": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "voice": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "1997": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "national": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "mission": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "launch": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "poles": {
+      "primary_type": "number",
+      "count": 49
+    },
+    "month": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "established": {
+      "primary_type": "year_string",
+      "count": 24
+    },
+    "level": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "lowest": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "point": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "genre": {
+      "primary_type": "category",
+      "count": 59
+    },
+    "aggregate": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "leg": {
+      "primary_type": "string",
+      "count": 95
+    },
+    "description": {
+      "primary_type": "string",
+      "count": 37
+    },
+    "manufacturer": {
+      "primary_type": "string",
+      "count": 92
+    },
+    "numbers": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "designation": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "principal": {
+      "primary_type": "string",
+      "count": 22
+    },
+    "2013": {
+      "primary_type": "string",
+      "count": 33
+    },
+    "2014": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "pop": {
+      "primary_type": "number",
+      "count": 27
+    },
+    "run": {
+      "primary_type": "string",
+      "count": 61
+    },
+    "university": {
+      "primary_type": "institution",
+      "count": 10
+    },
+    "former": {
+      "primary_type": "person_name",
+      "count": 8
+    },
+    "pageant": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "conmebol": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "1996": {
+      "primary_type": "string",
+      "count": 23
+    },
+    "supercopa": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "away": {
+      "primary_type": "institution",
+      "count": 1118
+    },
+    "crowd": {
+      "primary_type": "number",
+      "count": 123
+    },
+    "video": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "touchdowns": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "extra": {
+      "primary_type": "number",
+      "count": 30
+    },
+    "co": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "presenter": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "comedian": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "main": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "finished": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "1992": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "shirt": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "1989": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "90": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "barangay": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "clubs": {
+      "primary_type": "number",
+      "count": 15
+    },
+    "association": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "1987": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "88": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "people": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "application": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "1986": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "10": {
+      "primary_type": "number",
+      "count": 72
+    },
+    "starts": {
+      "primary_type": "number",
+      "count": 37
+    },
+    "aa": {
+      "primary_type": "category",
+      "count": 7
+    },
+    "females": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "aaaa": {
+      "primary_type": "category",
+      "count": 13
+    },
+    "postseason": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "branding": {
+      "primary_type": "string",
+      "count": 31
+    },
+    "author": {
+      "primary_type": "person_name",
+      "count": 26
+    },
+    "left": {
+      "primary_type": "year_string",
+      "count": 18
+    },
+    "green": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "communist": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "social": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "democratic": {
+      "primary_type": "string",
+      "count": 38
+    },
+    "socialist": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "revenue": {
+      "primary_type": "location",
+      "count": 16
+    },
+    "2004": {
+      "primary_type": "string",
+      "count": 31
+    },
+    "05": {
+      "primary_type": "number",
+      "count": 15
+    },
+    "mountains": {
+      "primary_type": "category",
+      "count": 35
+    },
+    "users": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "hispanic": {
+      "primary_type": "number",
+      "count": 20
+    },
+    "free": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "states": {
+      "primary_type": "location",
+      "count": 6
+    },
+    "development": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "pct": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "dart": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "credit": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "general": {
+      "primary_type": "category",
+      "count": 33
+    },
+    "yacht": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "sail": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "elapsed": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "hh": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "ss": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "athletes": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "conceded": {
+      "primary_type": "number",
+      "count": 30
+    },
+    "draws": {
+      "primary_type": "number",
+      "count": 150
+    },
+    "scored": {
+      "primary_type": "number",
+      "count": 53
+    },
+    "performer": {
+      "primary_type": "string",
+      "count": 63
+    },
+    "pa": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "french": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "administrative": {
+      "primary_type": "category",
+      "count": 5
+    },
+    "gloss": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "figure": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "software": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "italian": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "fall": {
+      "primary_type": "number",
+      "count": 16
+    },
+    "06": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "07": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "ends": {
+      "primary_type": "number",
+      "count": 55
+    },
+    "blank": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "stolen": {
+      "primary_type": "number",
+      "count": 22
+    },
+    "attribute": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "13": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "save": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "segment": {
+      "primary_type": "string",
+      "count": 70
+    },
+    "netflix": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "bowl": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "control": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "liberal": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "ceremony": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "bulgarian": {
+      "primary_type": "person_name",
+      "count": 7
+    },
+    "difference": {
+      "primary_type": "number",
+      "count": 102
+    },
+    "000": {
+      "primary_type": "number",
+      "count": 19
+    },
+    "locale": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "lms": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "nos": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "wheels": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "category": {
+      "primary_type": "category",
+      "count": 137
+    },
+    "accession": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "genus": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "second": {
+      "primary_type": "string",
+      "count": 39
+    },
+    "shot": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "acquisition": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "via": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "outcome": {
+      "primary_type": "string",
+      "count": 127
+    },
+    "percentage": {
+      "primary_type": "string",
+      "count": 51
+    },
+    "land": {
+      "primary_type": "number",
+      "count": 37
+    },
+    "birthplace": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "stable": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "proto": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "polynesian": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "skip": {
+      "primary_type": "string",
+      "count": 36
+    },
+    "tier": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "value": {
+      "primary_type": "number",
+      "count": 29
+    },
+    "centerfold": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "pictorials": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "20": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "questions": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "subject": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "cover": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "pattern": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "overs": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "story": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "last": {
+      "primary_type": "string",
+      "count": 26
+    },
+    "vs": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "poll": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "all": {
+      "primary_type": "number",
+      "count": 27
+    },
+    "success": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "livery": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "prefecture": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "colors": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "content": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "package": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "option": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "bowling": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "agricultural": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "use": {
+      "primary_type": "location",
+      "count": 8
+    },
+    "who": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "knows": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "about": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "panelists": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "children": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "match": {
+      "primary_type": "number",
+      "count": 44
+    },
+    "eu": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "ppp": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "msrp": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "office": {
+      "primary_type": "string",
+      "count": 46
+    },
+    "bills": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "downs": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "family": {
+      "primary_type": "string",
+      "count": 39
+    },
+    "line": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "hangul": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "weekly": {
+      "primary_type": "number",
+      "count": 17
+    },
+    "timeslot": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "vehicle": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "billions": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "expenditure": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "operating": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "profit": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "wade": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "giles": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "simplified": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "characters": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "western": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "recipients": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "neutral": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "meetings": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "tax": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "standard": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "sorted": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "feet": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "semifinal": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "preliminary": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "largest": {
+      "primary_type": "location",
+      "count": 10
+    },
+    "map": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "gross": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "sales": {
+      "primary_type": "number",
+      "count": 16
+    },
+    "past": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "lan": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "website": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "product": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "pages": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "page": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "volleyball": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "soccer": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "cross": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "field": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "lb": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "seconds": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "25": {
+      "primary_type": "number",
+      "count": 54
+    },
+    "pf": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "30": {
+      "primary_type": "string",
+      "count": 77
+    },
+    "president": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "oblast": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "grizzlies": {
+      "primary_type": "season_string",
+      "count": 11
+    },
+    "reason": {
+      "primary_type": "string",
+      "count": 29
+    },
+    "ordained": {
+      "primary_type": "date_string",
+      "count": 5
+    },
+    "wickets": {
+      "primary_type": "number",
+      "count": 18
+    },
+    "plant": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "central": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "january": {
+      "primary_type": "number",
+      "count": 21
+    },
+    "urban": {
+      "primary_type": "number",
+      "count": 22
+    },
+    "mmol": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "wicket": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "tdp": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "leader": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "administered": {
+      "primary_type": "date_string",
+      "count": 18
+    },
+    "lead": {
+      "primary_type": "string",
+      "count": 23
+    },
+    "democrat": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "carl": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "levin": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "republican": {
+      "primary_type": "string",
+      "count": 44
+    },
+    "longitude": {
+      "primary_type": "string",
+      "count": 28
+    },
+    "latitude": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "company": {
+      "primary_type": "institution",
+      "count": 38
+    },
+    "billion": {
+      "primary_type": "number",
+      "count": 65
+    },
+    "profits": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "assets": {
+      "primary_type": "number",
+      "count": 22
+    },
+    "symbol": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "17": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "industry": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "bp": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "common": {
+      "primary_type": "person_name",
+      "count": 7
+    },
+    "bike": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "29": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "19": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "religion": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "show": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "malayalam": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "tamil": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "zodiac": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "range": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "q1": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "november": {
+      "primary_type": "number",
+      "count": 23
+    },
+    "16": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "march": {
+      "primary_type": "number",
+      "count": 24
+    },
+    "27": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "ha": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "man": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "method": {
+      "primary_type": "string",
+      "count": 86
+    },
+    "short": {
+      "primary_type": "person_name",
+      "count": 8
+    },
+    "south": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "admitted": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "going": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "retired": {
+      "primary_type": "string",
+      "count": 167
+    },
+    "equation": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "downstream": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "west": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "100": {
+      "primary_type": "number",
+      "count": 20
+    },
+    "energy": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "grid": {
+      "primary_type": "number",
+      "count": 422
+    },
+    "sanskrit": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "transfer": {
+      "primary_type": "string",
+      "count": 66
+    },
+    "speed": {
+      "primary_type": "string",
+      "count": 39
+    },
+    "cable": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "fis": {
+      "primary_type": "year_string",
+      "count": 7
+    },
+    "nordic": {
+      "primary_type": "year_string",
+      "count": 7
+    },
+    "ski": {
+      "primary_type": "year_string",
+      "count": 7
+    },
+    "championships": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "verb": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "battle": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "riders": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "commentator": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "sideline": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "reporters": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "copa": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "joe": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "john": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "domestic": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "mail": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "moving": {
+      "primary_type": "string",
+      "count": 62
+    },
+    "opposition": {
+      "primary_type": "category",
+      "count": 31
+    },
+    "april": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "july": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "runners": {
+      "primary_type": "string",
+      "count": 29
+    },
+    "make": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "goal": {
+      "primary_type": "number",
+      "count": 120
+    },
+    "mph": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "sq": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "fixtures": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "church": {
+      "primary_type": "location",
+      "count": 15
+    },
+    "colour": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "after": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "sub": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "couple": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "east": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "flights": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "project": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "maximum": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "incoming": {
+      "primary_type": "person_name",
+      "count": 14
+    },
+    "100km": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "romanised": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "occupation": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "borough": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "loses": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "papal": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "latin": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "iata": {
+      "primary_type": "string",
+      "count": 61
+    },
+    "transcription": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "based": {
+      "primary_type": "location",
+      "count": 5
+    },
+    "on": {
+      "primary_type": "number",
+      "count": 25
+    },
+    "traditional": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "abbr": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "life": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "satellite": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "cospar": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "charter": {
+      "primary_type": "date_string",
+      "count": 5
+    },
+    "arrival": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "constellation": {
+      "primary_type": "string",
+      "count": 25
+    },
+    "digital": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "delegate": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "miss": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "universe": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "binibining": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "pilipinas": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "14": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "canton": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "coverage": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "dutch": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "wrestler": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "erp": {
+      "primary_type": "number",
+      "count": 51
+    },
+    "vacator": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "album": {
+      "primary_type": "string",
+      "count": 61
+    },
+    "october": {
+      "primary_type": "number",
+      "count": 19
+    },
+    "garfield": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "acres": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "tourism": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "receipts": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "entries": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "leagues": {
+      "primary_type": "category",
+      "count": 6
+    },
+    "sqmi": {
+      "primary_type": "number",
+      "count": 45
+    },
+    "township": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "geo": {
+      "primary_type": "number",
+      "count": 19
+    },
+    "water": {
+      "primary_type": "number",
+      "count": 27
+    },
+    "ansi": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "bronze": {
+      "primary_type": "number",
+      "count": 419
+    },
+    "losses": {
+      "primary_type": "number",
+      "count": 206
+    },
+    "contestant": {
+      "primary_type": "string",
+      "count": 22
+    },
+    "community": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "regions": {
+      "primary_type": "location",
+      "count": 5
+    },
+    "actress": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "04": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "rings": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "lower": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "mj": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "upper": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "comp": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "horse": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "safari": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "firefox": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "internet": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "explorer": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "podiums": {
+      "primary_type": "number",
+      "count": 50
+    },
+    "schedule": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "socket": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "amendments": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "cosponsored": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "withdrawn": {
+      "primary_type": "year_string",
+      "count": 9
+    },
+    "gf": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "remaining": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "episodes": {
+      "primary_type": "number",
+      "count": 33
+    },
+    "career": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "col": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "expectancy": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "prominence": {
+      "primary_type": "number",
+      "count": 21
+    },
+    "island": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "cents": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "just": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "combined": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "asian": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "american": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "obese": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "mother": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "tongue": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "australian": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "america": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "edition": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "days": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "performed": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "currently": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "carrier": {
+      "primary_type": "institution",
+      "count": 9
+    },
+    "sets": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "bit": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "placed": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "200": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "finals": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "play": {
+      "primary_type": "string",
+      "count": 48
+    },
+    "yards": {
+      "primary_type": "number",
+      "count": 68
+    },
+    "playoff": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "transmission": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "strike": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "economy": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "minutes": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "mountain": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "public": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "jury": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "post": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "innings": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "skipper": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "design": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "firm": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "families": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "crew": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "chief": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "listed": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "technology": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "producer": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "pilot": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "termination": {
+      "primary_type": "date_string",
+      "count": 5
+    },
+    "presentation": {
+      "primary_type": "date_string",
+      "count": 6
+    },
+    "credentials": {
+      "primary_type": "date_string",
+      "count": 6
+    },
+    "st": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "star": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "reader": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "book": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "publisher": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "electorate": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "inch": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "system": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "legs": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "checkout": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "obama": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "mccain": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "damaged": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "animal": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "180s": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "drop": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "sec": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "utc": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "known": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "undecided": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "conductor": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "may": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "august": {
+      "primary_type": "date_string",
+      "count": 5
+    },
+    "cm": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "web": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "seed": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "pass": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "85": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "medium": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "usage": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "loa": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "metres": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "ton": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "hurricanes": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "neighborhood": {
+      "primary_type": "location",
+      "count": 5
+    },
+    "stations": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "golden": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "security": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "black": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "int": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "500ha": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "mw": {
+      "primary_type": "number",
+      "count": 16
+    },
+    "rally": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "figures": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "itv1": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "hd": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "panel": {
+      "primary_type": "number",
+      "count": 41
+    },
+    "link": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "out": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "governor": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "senator": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "xi": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "semifinalists": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "seated": {
+      "primary_type": "date_string",
+      "count": 5
+    },
+    "regional": {
+      "primary_type": "location",
+      "count": 7
+    },
+    "research": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "grants": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "sek": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "odds": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "storage": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "imports": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "households": {
+      "primary_type": "number",
+      "count": 17
+    },
+    "estimate": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "08": {
+      "primary_type": "string",
+      "count": 17
+    },
+    "foreign": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "box": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "1970": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "miles": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "airing": {
+      "primary_type": "date_string",
+      "count": 7
+    },
+    "alpha": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "teams": {
+      "primary_type": "institution",
+      "count": 38
+    },
+    "olympics": {
+      "primary_type": "year_string",
+      "count": 6
+    },
+    "discipline": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "spacecraft": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "combativity": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "studio": {
+      "primary_type": "string",
+      "count": 29
+    },
+    "ice": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "analyst": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "trophy": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "opening": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "centre": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "1993": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "1994": {
+      "primary_type": "string",
+      "count": 26
+    },
+    "1984": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "portfolio": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "june": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "11": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "partnering": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "award": {
+      "primary_type": "string",
+      "count": 88
+    },
+    "authority": {
+      "primary_type": "person_name",
+      "count": 53
+    },
+    "park": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "route": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "throws": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "three": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "data": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "annual": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "example": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "mi": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "incorporated": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "batsmen": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "promoted": {
+      "primary_type": "category",
+      "count": 5
+    },
+    "fatalities": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "tail": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "economic": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "steals": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "present": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "oberbayern": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "output": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "seans": {
+      "primary_type": "institution",
+      "count": 12
+    },
+    "24": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "span": {
+      "primary_type": "season_string",
+      "count": 7
+    },
+    "act": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "males": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "tfr": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "tues": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "aug": {
+      "primary_type": "string",
+      "count": 35
+    },
+    "mon": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "fri": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "28": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "minister": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "represented": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "scorers": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "government": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "ratings": {
+      "primary_type": "category",
+      "count": 21
+    },
+    "music": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "relegated": {
+      "primary_type": "category",
+      "count": 5
+    },
+    "gp": {
+      "primary_type": "number",
+      "count": 40
+    },
+    "challenger": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "places": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "26": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "ceased": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "brand": {
+      "primary_type": "person_name",
+      "count": 15
+    },
+    "spouse": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "base": {
+      "primary_type": "location",
+      "count": 11
+    },
+    "kickoff": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "entry": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "flaps": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "governorate": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "appearances\u00b9": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "flight": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "down": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "clean": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "polling": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "arabic": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "appearances": {
+      "primary_type": "number",
+      "count": 28
+    },
+    "balls": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "tie": {
+      "primary_type": "number",
+      "count": 140
+    },
+    "tyres": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "machine": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "none": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "clock": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "kitmaker": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "prime": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "21": {
+      "primary_type": "date_string",
+      "count": 5
+    },
+    "22": {
+      "primary_type": "date_string",
+      "count": 6
+    },
+    "thurs": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "wed": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "movie": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "facility": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "letters": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "iso": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "placing": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "00": {
+      "primary_type": "string",
+      "count": 108
+    },
+    "supporting": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "kit": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "sing": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "settlement": {
+      "primary_type": "string",
+      "count": 25
+    },
+    "cyrillic": {
+      "primary_type": "person_name",
+      "count": 29
+    },
+    "yes": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "cylinder": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "september": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "territories": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "killed": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "volume": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "catches": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "rushing": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "held": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "vessel": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "long": {
+      "primary_type": "number",
+      "count": 49
+    },
+    "solo": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "displacement": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "denomination": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "under": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "took": {
+      "primary_type": "year_string",
+      "count": 8
+    },
+    "role": {
+      "primary_type": "string",
+      "count": 47
+    },
+    "cast": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "monarch": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "heir": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "be": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "became": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "lites": {
+      "primary_type": "institution",
+      "count": 6
+    },
+    "apparatus": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "served": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "visiting": {
+      "primary_type": "institution",
+      "count": 43
+    },
+    "floors": {
+      "primary_type": "number",
+      "count": 48
+    },
+    "conf": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "creator": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "aspect": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "reporter": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "bbi": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "football": {
+      "primary_type": "category",
+      "count": 13
+    },
+    "sacks": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "course": {
+      "primary_type": "string",
+      "count": 36
+    },
+    "december": {
+      "primary_type": "number",
+      "count": 22
+    },
+    "judge": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "debt": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "bn": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "tests": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "commandery": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "uci": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "catalogue": {
+      "primary_type": "string",
+      "count": 30
+    },
+    "quarter": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "sponsored": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "lyricist": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "council": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "tackles": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "late": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "diff": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "composer": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "officer": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "100s": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "exchange": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "set": {
+      "primary_type": "string",
+      "count": 121
+    },
+    "provider": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "genitive": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "lane": {
+      "primary_type": "number",
+      "count": 127
+    },
+    "tied": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "jamie": {
+      "primary_type": "person_name",
+      "count": 8
+    },
+    "singer": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "storm": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "isbn": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "festival": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "prev": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "label": {
+      "primary_type": "string",
+      "count": 124
+    },
+    "mark": {
+      "primary_type": "number",
+      "count": 18
+    },
+    "est": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "townland": {
+      "primary_type": "string",
+      "count": 24
+    },
+    "law": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "times": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "ties": {
+      "primary_type": "number",
+      "count": 23
+    },
+    "purpose": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "caps": {
+      "primary_type": "number",
+      "count": 40
+    },
+    "japan": {
+      "primary_type": "date_string",
+      "count": 6
+    },
+    "icao": {
+      "primary_type": "string",
+      "count": 51
+    },
+    "et": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "heat": {
+      "primary_type": "number",
+      "count": 48
+    },
+    "tournaments": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "res": {
+      "primary_type": "string",
+      "count": 45
+    },
+    "drivers": {
+      "primary_type": "person_name",
+      "count": 32
+    },
+    "labour": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "weeks": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "cc": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "worst": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "dancer": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "stages": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "qual": {
+      "primary_type": "number",
+      "count": 56
+    },
+    "architecture": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "1960": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "zone": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "pens": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "programming": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "conv": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "loser": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "podcast": {
+      "primary_type": "date_string",
+      "count": 5
+    },
+    "professors": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "tackle": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "shoulder": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "body": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "recap": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "material": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "non": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "gain": {
+      "primary_type": "number",
+      "count": 27
+    },
+    "actual": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "supplier": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "wk": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "rounds": {
+      "primary_type": "string",
+      "count": 23
+    },
+    "att": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "nominated": {
+      "primary_type": "string",
+      "count": 21
+    },
+    "nvr": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "launched": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "webcast": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "metal": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "decision": {
+      "primary_type": "string",
+      "count": 61
+    },
+    "dcsf": {
+      "primary_type": "year_string",
+      "count": 10
+    },
+    "ofsted": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "february": {
+      "primary_type": "number",
+      "count": 22
+    },
+    "element": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "earth": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "employees": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "inhabitants": {
+      "primary_type": "number",
+      "count": 15
+    },
+    "mslm": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "indoor": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "possible": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "alignment": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "laid": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "ihsaa": {
+      "primary_type": "category",
+      "count": 39
+    },
+    "rec": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "results\u00b9": {
+      "primary_type": "category",
+      "count": 20
+    },
+    "scorer": {
+      "primary_type": "string",
+      "count": 38
+    },
+    "oct": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "nov": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "agg": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "letter": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "taoiseach": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "industrial": {
+      "primary_type": "number",
+      "count": 13
+    },
+    "cultural": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "educational": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "locomotive": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "alternate": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "ticket": {
+      "primary_type": "string",
+      "count": 66
+    },
+    "voltage": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "floor": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "image": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "lha": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "lzh": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "freq": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "introduced": {
+      "primary_type": "year_string",
+      "count": 10
+    },
+    "cargo": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "min": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "wc": {
+      "primary_type": "category",
+      "count": 5
+    },
+    "effic": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "opposing": {
+      "primary_type": "institution",
+      "count": 45
+    },
+    "cancelable": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "rocket": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "failures": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "launches": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "platform": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "hanzi": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "slalom": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "works": {
+      "primary_type": "number",
+      "count": 12
+    },
+    "pennant": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "surname": {
+      "primary_type": "person_name",
+      "count": 11
+    },
+    "bats": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "pat": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "farm": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "turbines": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "byes": {
+      "primary_type": "number",
+      "count": 48
+    },
+    "podium": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "flap": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "psip": {
+      "primary_type": "person_name",
+      "count": 5
+    },
+    "tropical": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "malaysia": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "par": {
+      "primary_type": "number",
+      "count": 182
+    },
+    "versus": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "support": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "finalists": {
+      "primary_type": "string",
+      "count": 11
+    },
+    "tonnage": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "chart": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "reign": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "individual": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "bb": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "div": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "pba": {
+      "primary_type": "institution",
+      "count": 11
+    },
+    "test": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "salary": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "students": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "natural": {
+      "primary_type": "number",
+      "count": 15
+    },
+    "crude": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "shape": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "nominee": {
+      "primary_type": "string",
+      "count": 48
+    },
+    "where": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "mccartney": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "oyly": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "carte": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "downhill": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "bank": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "issued": {
+      "primary_type": "year_string",
+      "count": 6
+    },
+    "liga": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "wnba": {
+      "primary_type": "institution",
+      "count": 8
+    },
+    "workers": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "labor": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "authors": {
+      "primary_type": "person_name",
+      "count": 12
+    },
+    "commenced": {
+      "primary_type": "year_string",
+      "count": 5
+    },
+    "orlando": {
+      "primary_type": "season_string",
+      "count": 8
+    },
+    "singular": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "plural": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "spike": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "block": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "birthdate": {
+      "primary_type": "date_string",
+      "count": 10
+    },
+    "wheelchair": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "uefa": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "app": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "dublin": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "spoofed": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "ratt": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "greek": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "ii": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "goalscorer": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "ballarat": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "fl": {
+      "primary_type": "string",
+      "count": 35
+    },
+    "novelty": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "goalkeeper": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "airline": {
+      "primary_type": "institution",
+      "count": 8
+    },
+    "identifier": {
+      "primary_type": "string",
+      "count": 18
+    },
+    "branch": {
+      "primary_type": "category",
+      "count": 5
+    },
+    "variant": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "react": {
+      "primary_type": "number",
+      "count": 32
+    },
+    "audience": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "aces": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "sunk": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "hanja": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "aam": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "accredited": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "activities": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "pm": {
+      "primary_type": "string",
+      "count": 55
+    },
+    "pret": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "stem": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "recipient": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "white": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "fast": {
+      "primary_type": "institution",
+      "count": 11
+    },
+    "report": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "euro": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "staffel": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "certification": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "window": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "fee": {
+      "primary_type": "string",
+      "count": 39
+    },
+    "developer": {
+      "primary_type": "string",
+      "count": 28
+    },
+    "fate": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "equipment": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "named": {
+      "primary_type": "year_string",
+      "count": 13
+    },
+    "atms": {
+      "primary_type": "year_string",
+      "count": 6
+    },
+    "nat": {
+      "primary_type": "string",
+      "count": 23
+    },
+    "cars": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "royal": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "geust": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "plyf": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "fin": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "ovrs": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "econ": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "perth": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "sydney": {
+      "primary_type": "string",
+      "count": 16
+    },
+    "melbourne": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "program": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "cause": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "sc": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "winter": {
+      "primary_type": "year_string",
+      "count": 6
+    },
+    "inaugurated": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "throw": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "44": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "railway": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "dative": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "side": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "bus": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "cache": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "bits": {
+      "primary_type": "number",
+      "count": 7
+    },
+    "rebs": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "elevated": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "elector": {
+      "primary_type": "string",
+      "count": 14
+    },
+    "elevator": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "grt": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "fsb": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "internal": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "tyre": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "placings": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "td": {
+      "primary_type": "number",
+      "count": 22
+    },
+    "assumed": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "boarding": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "object": {
+      "primary_type": "category",
+      "count": 12
+    },
+    "apparent": {
+      "primary_type": "number",
+      "count": 15
+    },
+    "magnitude": {
+      "primary_type": "number",
+      "count": 15
+    },
+    "ngc": {
+      "primary_type": "year_string",
+      "count": 20
+    },
+    "nominees": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "cerclis": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "snatch": {
+      "primary_type": "number",
+      "count": 15
+    },
+    "bodyweight": {
+      "primary_type": "number",
+      "count": 14
+    },
+    "jerk": {
+      "primary_type": "number",
+      "count": 11
+    },
+    "roll": {
+      "primary_type": "number",
+      "count": 59
+    },
+    "fs": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "46": {
+      "primary_type": "string",
+      "count": 13
+    },
+    "43": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "42": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "quad": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "decile": {
+      "primary_type": "number",
+      "count": 53
+    },
+    "declination": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "j2000": {
+      "primary_type": "string",
+      "count": 29
+    },
+    "41": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "reaction": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "sack": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "trofeo": {
+      "primary_type": "institution",
+      "count": 13
+    },
+    "prom": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "pl": {
+      "primary_type": "number",
+      "count": 17
+    },
+    "right": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "ascension": {
+      "primary_type": "string",
+      "count": 15
+    },
+    "monounsaturated": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "fat": {
+      "primary_type": "string",
+      "count": 27
+    },
+    "saturated": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "polyunsaturated": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "genes": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "asts": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "tally": {
+      "primary_type": "string",
+      "count": 12
+    },
+    "technical": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "prr": {
+      "primary_type": "category",
+      "count": 6
+    },
+    "ipsos": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "ifop": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "platforms": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "yard": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "vowels": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "am": {
+      "primary_type": "string",
+      "count": 19
+    },
+    "yaar": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "pyaar": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "pay": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "dfl": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "reserved": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "moves": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "geelong": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "conferencing": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "rivers": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "around": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "initial": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "unstressed": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "prestegjeld": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "casualties": {
+      "primary_type": "number",
+      "count": 6
+    },
+    "cf": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "toll": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "assembled": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "electorates": {
+      "primary_type": "number",
+      "count": 10
+    },
+    "cardinalatial": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "both": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "restaurant": {
+      "primary_type": "person_name",
+      "count": 8
+    },
+    "designer": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "soap": {
+      "primary_type": "string",
+      "count": 7
+    },
+    "opera": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "wimmera": {
+      "primary_type": "string",
+      "count": 9
+    },
+    "gymnast": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "chrome": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "giro": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "cold": {
+      "primary_type": "number",
+      "count": 8
+    },
+    "samples": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "requested": {
+      "primary_type": "number",
+      "count": 9
+    },
+    "entrepreneur": {
+      "primary_type": "string",
+      "count": 10
+    },
+    "mora": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "northumberland": {
+      "primary_type": "string",
+      "count": 5
+    },
+    "lady": {
+      "primary_type": "string",
+      "count": 6
+    },
+    "vuelta": {
+      "primary_type": "number",
+      "count": 5
+    },
+    "coast": {
+      "primary_type": "string",
+      "count": 22
+    },
+    "auckland": {
+      "primary_type": "string",
+      "count": 25
+    },
+    "adelaide": {
+      "primary_type": "string",
+      "count": 20
+    },
+    "circumstances": {
+      "primary_type": "string",
+      "count": 8
+    },
+    "baseman": {
+      "primary_type": "location",
+      "count": 5
+    }
+  }
+}

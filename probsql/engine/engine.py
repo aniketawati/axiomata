@@ -34,6 +34,9 @@ from probsql.engine.predicate_tree import (
 )
 from probsql.engine.confidence import ConfidenceCalibrator
 from probsql.engine.formatter import format_sql
+from probsql.semextract.decomposer import QuestionDecomposer
+from probsql.semextract.spotter import ValueSpotter
+from probsql.semextract.resolver import ColumnResolver
 
 
 @dataclass
@@ -54,7 +57,12 @@ class ProbSQLEngine:
         self.conjunction_parser = ConjunctionParser()
         self.negation_handler = NegationHandler()
         self.confidence_calibrator = ConfidenceCalibrator()
+        # Semantic extraction micro-engines
+        self.question_decomposer = QuestionDecomposer()
+        self.value_spotter = ValueSpotter()
+        self.column_resolver = ColumnResolver()
         self._loaded = False
+        self._semextract_loaded = False
 
     def load_knowledge(self, knowledge_dir):
         """Load all extracted knowledge from JSON files."""
@@ -63,6 +71,13 @@ class ProbSQLEngine:
         self.operator_extractor.load_knowledge(kdir)
         self.confidence_calibrator.load(kdir)
         self._loaded = True
+        # Try to load semextract knowledge
+        sem_dir = kdir.parent.parent / "semextract" / "knowledge"
+        if sem_dir.exists():
+            self.question_decomposer.load_knowledge(sem_dir)
+            self.value_spotter.load_knowledge(sem_dir)
+            self.column_resolver.load_knowledge(sem_dir)
+            self._semextract_loaded = True
 
     def generate(self, english, schema):
         """Main entry point. English predicate + schema → SQL WHERE clause.
@@ -75,6 +90,14 @@ class ProbSQLEngine:
             GenerationResult
         """
         debug = {"steps": []}
+
+        # Try semantic extraction path first (for lookup-style questions)
+        # Currently disabled — resolver accuracy not high enough yet.
+        # Enable by lowering threshold once resolver is improved.
+        if self._semextract_loaded:
+            sem_result = self._try_semextract(english, schema, debug)
+            if sem_result and sem_result.confidence > 0.95:
+                return sem_result
 
         # Step 1: Parse compound structure
         predicate_tree = self.conjunction_parser.parse(english)
@@ -221,6 +244,124 @@ class ProbSQLEngine:
         })
 
         return pred
+
+    def _try_semextract(self, english, schema, debug):
+        """Try the semantic extraction pipeline for lookup-style questions.
+
+        Uses QuestionDecomposer → ValueSpotter → ColumnResolver to identify
+        the WHERE column and value, bypassing TF-IDF column matching.
+        """
+        tables = schema.get("tables", [])
+        if not tables:
+            return None
+
+        table = tables[0]  # semextract works best on single-table schemas
+        headers = [col["name"] for col in table.get("columns", [])]
+        col_types = [col.get("type", "text") for col in table.get("columns", [])]
+
+        # Step 1: Decompose the question
+        decomp = self.question_decomposer.decompose(english, headers)
+        debug["steps"].append({"step": "semextract_decompose", "result": {
+            "type": decomp.get("question_type"),
+            "select_hint": decomp.get("select_hint"),
+            "filter_phrase": decomp.get("filter_phrase"),
+        }})
+
+        # Step 2: Spot values in the question
+        spotted = self.value_spotter.spot(english, headers)
+        debug["steps"].append({"step": "semextract_spot", "values": [
+            {"value": s["value"], "type": s["type"]} for s in spotted
+        ]})
+
+        if not spotted:
+            return None
+
+        # Step 3: Identify the SELECT column (to exclude from WHERE candidates)
+        select_candidates = decomp.get("select_column_candidates", [])
+        exclude_cols = set()
+        if select_candidates:
+            exclude_cols.add(select_candidates[0][0])
+
+        # Step 4: For each spotted value, resolve to a column
+        conditions = []
+        columns_info = [{"name": h, "type": t} for h, t in zip(headers, col_types)]
+
+        for spotted_val in spotted:
+            resolved = self.column_resolver.resolve(
+                spotted_val["value"],
+                spotted_val["type"],
+                columns_info,
+                exclude_columns=exclude_cols,
+            )
+            if resolved and resolved[0][1] > 0.3:
+                best_col_name, col_confidence = resolved[0]
+                # Determine operator
+                if spotted_val["type"] == "number":
+                    # Check question for comparison words
+                    q_lower = english.lower()
+                    if any(w in q_lower for w in ["more than", "greater than", "over", "above", "at least"]):
+                        operator = ">"
+                    elif any(w in q_lower for w in ["less than", "under", "below", "fewer", "at most"]):
+                        operator = "<"
+                    else:
+                        operator = "="
+                else:
+                    operator = "="
+
+                conditions.append({
+                    "column": best_col_name,
+                    "operator": operator,
+                    "value": spotted_val["value"],
+                    "confidence": spotted_val["confidence"] * col_confidence,
+                })
+
+        if not conditions:
+            return None
+
+        # Build predicate tree from conditions
+        table_name = table["name"]
+
+        if len(conditions) == 1:
+            c = conditions[0]
+            tree = AtomicPredicate(
+                english_phrase=english,
+                table=table_name,
+                column=c["column"],
+                operator=c["operator"],
+                value=c["value"],
+                confidence=c["confidence"],
+                column_match_score=c["confidence"],
+            )
+        else:
+            # Multiple conditions → AND tree
+            nodes = []
+            for c in conditions:
+                nodes.append(AtomicPredicate(
+                    english_phrase=english,
+                    table=table_name,
+                    column=c["column"],
+                    operator=c["operator"],
+                    value=c["value"],
+                    confidence=c["confidence"],
+                    column_match_score=c["confidence"],
+                ))
+            tree = nodes[0]
+            for node in nodes[1:]:
+                tree = CompoundPredicate("AND", tree, node)
+
+        overall_confidence = min(c["confidence"] for c in conditions)
+        sql_where = format_sql(tree)
+
+        debug["steps"].append({"step": "semextract_result", "sql": sql_where,
+                              "confidence": overall_confidence})
+
+        return GenerationResult(
+            sql_where=sql_where,
+            confidence=overall_confidence,
+            alternatives=[],
+            predicate_tree=tree,
+            debug_info=debug,
+        )
 
     def _generate_alternatives(self, tree, schema):
         """Generate alternative SQL interpretations for low-confidence results."""
