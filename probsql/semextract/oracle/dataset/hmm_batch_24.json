@@ -1,0 +1,796 @@
+[
+  {
+    "question": "What is the average Feb 2013 with a Feb 2010 with 37, and a Nov 2012 less than 32?",
+    "headers": [
+      "Feb 2010",
+      "Mar 2010",
+      "May 2010",
+      "Jun 2010",
+      "Jul 2010",
+      "Aug 2010",
+      "Sep 2010",
+      "Oct 2010",
+      "Nov 2010",
+      "Dec 2010",
+      "Jan 2011",
+      "Feb 2011",
+      "Mar 2011",
+      "Apr 2011",
+      "May 2011",
+      "Jun 2011",
+      "Jul 2011",
+      "Aug 2011",
+      "Sep 2011",
+      "Oct 2011",
+      "Nov 2011",
+      "Dec 2011",
+      "Jan 2012",
+      "Feb 2012",
+      "Mar 2012",
+      "Apr 2012",
+      "May 2012",
+      "Jun 2012",
+      "Jul 2012",
+      "Aug 2012",
+      "Sep 2012",
+      "Oct 2012",
+      "Nov 2012",
+      "Dec 2012",
+      "Jan 2013",
+      "Feb 2013",
+      "Mar 2013",
+      "Apr 2013",
+      "May 2013",
+      "Jun 2013",
+      "Jul 2013",
+      "Aug 2013",
+      "Sep 2013",
+      "Oct 2013"
+    ],
+    "where_column": "Nov 2012",
+    "where_value": "32",
+    "select_column": "Feb 2013"
+  },
+  {
+    "question": "Name the height for the player born in 1981",
+    "headers": [
+      "No",
+      "Player",
+      "Height (m)",
+      "Height (f)",
+      "Position",
+      "Year born",
+      "Current Club"
+    ],
+    "where_column": "Year born",
+    "where_value": "1981",
+    "select_column": "Height (m)"
+  },
+  {
+    "question": "Name the population in 1931 for lubelskie",
+    "headers": [
+      "s Car plate (starting 1937)",
+      "Voivodeship or city",
+      "Capital",
+      "Area (1930) in 1,000skm 2",
+      "Population (1931) in 1,000s"
+    ],
+    "where_column": "Voivodeship or city",
+    "where_value": "lubelskie",
+    "select_column": "Population (1931) in 1,000s"
+  },
+  {
+    "question": "Which school years have a class a being lindsay and a class aaa being cuero? ",
+    "headers": [
+      "School Year",
+      "Class A",
+      "Class AA",
+      "Class AAA",
+      "Class AAAA",
+      "Class AAAAA"
+    ],
+    "where_column": "Class A",
+    "where_value": "Lindsay",
+    "select_column": "School Year"
+  },
+  {
+    "question": "What 1941 has N/A as 1945, N/A for 1948, and 9 for 1953?",
+    "headers": [
+      "1935",
+      "1936",
+      "1937",
+      "1938",
+      "1939",
+      "1940",
+      "1941",
+      "1943",
+      "1945",
+      "1946",
+      "1947",
+      "1948",
+      "1949",
+      "1950",
+      "1951",
+      "1952",
+      "1953"
+    ],
+    "where_column": "1945",
+    "where_value": "n/a",
+    "select_column": "1941"
+  },
+  {
+    "question": "What is the highest number of points team vit\u00f3ria, which had more than 38 played, had?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Team",
+    "where_value": "vit\u00f3ria",
+    "select_column": "Points"
+  },
+  {
+    "question": "WHAT TRIES HAVE TRIES AGAINST AT 140?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Tries against",
+    "where_value": "140",
+    "select_column": "Tries for"
+  },
+  {
+    "question": "What is Score, when Player is \"Vijay Singh\"?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "vijay singh",
+    "select_column": "Score"
+  },
+  {
+    "question": "Who was the partner at the Australian Open, Melbourne when the score was 2\u20136, 7\u20135, 6\u20132, 4\u20136, 3\u20136?",
+    "headers": [
+      "Outcome",
+      "Year",
+      "Championship",
+      "Surface",
+      "Partner",
+      "Opponents",
+      "Score"
+    ],
+    "where_column": "Championship",
+    "where_value": "australian open, melbourne",
+    "select_column": "Partner"
+  },
+  {
+    "question": "Which Competition had a Result of 3-0 and VEnue of Suwon?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Result",
+    "where_value": "3-0",
+    "select_column": "Competition"
+  },
+  {
+    "question": "How many production codes does the episode \"keg! max!\" have?",
+    "headers": [
+      "No.",
+      "#",
+      "Title",
+      "Director",
+      "Writer(s)",
+      "Original air date",
+      "Prod. code",
+      "U.S. viewers (million)"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Keg! Max!\"",
+    "select_column": "Prod. code"
+  },
+  {
+    "question": "Which home team played on April 5, 2008?",
+    "headers": [
+      "Date",
+      "Home Team",
+      "Score",
+      "Visiting Team",
+      "Stadium"
+    ],
+    "where_column": "Date",
+    "where_value": "april 5, 2008",
+    "select_column": "Home Team"
+  },
+  {
+    "question": "When edward shaw is the winner what is the date?",
+    "headers": [
+      "By-election",
+      "Electorate",
+      "Date",
+      "Incumbent",
+      "Reason",
+      "Winner"
+    ],
+    "where_column": "Winner",
+    "where_value": "Edward Shaw",
+    "select_column": "Date"
+  },
+  {
+    "question": "Which player wears the number 2 on his jersey?",
+    "headers": [
+      "Player",
+      "Nationality",
+      "Jersey Number(s)",
+      "Position",
+      "Years",
+      "From"
+    ],
+    "where_column": "Jersey Number(s)",
+    "where_value": "2",
+    "select_column": "Player"
+  },
+  {
+    "question": "What's the name of the episode seen by 9.63 millions of people in the US, whose director is Laura Innes?",
+    "headers": [
+      "No. in Series",
+      "No. in Season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "U.S. viewers (millions)",
+    "where_value": "9.63",
+    "select_column": "Title"
+  },
+  {
+    "question": "What's the score for Toronto Maple Leafs on November 10?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Record"
+    ],
+    "where_column": "Home",
+    "where_value": "toronto maple leafs",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the highest number of votes for the French Professor?",
+    "headers": [
+      "Riding",
+      "Candidate's Name",
+      "Gender",
+      "Residence",
+      "Occupation",
+      "Votes",
+      "Rank"
+    ],
+    "where_column": "Occupation",
+    "where_value": "french professor",
+    "select_column": "Votes"
+  },
+  {
+    "question": "What type of yacht has a LOA of 15.15 metres?",
+    "headers": [
+      "Position",
+      "Sail Number",
+      "Yacht",
+      "State/Country",
+      "Yacht Type",
+      "LOA (Metres)",
+      "Skipper",
+      "Corrected Time d:hh:mm:ss"
+    ],
+    "where_column": "LOA (Metres)",
+    "where_value": "15.15",
+    "select_column": "Yacht Type"
+  },
+  {
+    "question": "What is the Circuit in the ATCC Round 1 Series with Winner Jim Richards?",
+    "headers": [
+      "Date",
+      "Series",
+      "Circuit",
+      "City / State",
+      "Winner",
+      "Team"
+    ],
+    "where_column": "Winner",
+    "where_value": "jim richards",
+    "select_column": "Circuit"
+  },
+  {
+    "question": "Which Rank has a Bronze of 1, and a Nation of lithuania?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Nation",
+    "where_value": "lithuania",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What is Pick #, when Round is \"10\"?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "Round",
+    "where_value": "10",
+    "select_column": "Pick #"
+  },
+  {
+    "question": "What date was the race in 1968 run on?",
+    "headers": [
+      "Year",
+      "Date",
+      "Driver",
+      "Team",
+      "Manufacturer",
+      "Laps",
+      "Miles (km)",
+      "Race Time",
+      "Average Speed (mph)",
+      "Report"
+    ],
+    "where_column": "Year",
+    "where_value": "1968",
+    "select_column": "Date"
+  },
+  {
+    "question": "How many Touchdowns have Extra points larger than 0, and Points of 48?",
+    "headers": [
+      "Player",
+      "Touchdowns",
+      "Extra points",
+      "Field goals",
+      "Points"
+    ],
+    "where_column": "Extra points",
+    "where_value": "0",
+    "select_column": "Touchdowns"
+  },
+  {
+    "question": "What is the earliest Year commissioned wiht an Average annual output greater than 58 and Installed capacity of 20?",
+    "headers": [
+      "Name",
+      "Year commissioned",
+      "Gross head (metres)",
+      "Installed capacity (megawatts)",
+      "Average annual output (million KWh)"
+    ],
+    "where_column": "Average annual output (million KWh)",
+    "where_value": "58",
+    "select_column": "Year commissioned"
+  },
+  {
+    "question": "Who has a birth of 16 august 1401?",
+    "headers": [
+      "Name",
+      "Birth",
+      "Marriage",
+      "Became Dauphine",
+      "Ceased to be Dauphine",
+      "Death",
+      "Husband"
+    ],
+    "where_column": "Birth",
+    "where_value": "16 august 1401",
+    "select_column": "Name"
+  },
+  {
+    "question": "Who wrote the album recorded at funhouse studios with a time of 3:27?",
+    "headers": [
+      "Title",
+      "Time",
+      "Writer(s)",
+      "Performer(s)",
+      "Producer(s)",
+      "Recorded at"
+    ],
+    "where_column": "Time",
+    "where_value": "3:27",
+    "select_column": "Writer(s)"
+  },
+  {
+    "question": "How many silvers on average for nations with less than 3 total, ranked 6, and over 1 bronze?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "6",
+    "select_column": "Silver"
+  },
+  {
+    "question": "Which date has a Home of washington, a Visitor of florida, and a Record of 8-15-2?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Decision",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "8-15-2",
+    "select_column": "Date"
+  },
+  {
+    "question": "At which tournament did william renshaw begin his lead when he had won 7 titles?",
+    "headers": [
+      "Years led",
+      "Span of years led",
+      "Player",
+      "Titles won at point of lead",
+      "Total Career titles",
+      "Tournament at which lead began"
+    ],
+    "where_column": "Player",
+    "where_value": "William Renshaw",
+    "select_column": "Tournament at which lead began"
+  },
+  {
+    "question": "What is the coordinate velocity v dx/dt in units of c total number if the velocity angle \u03b7 in i-radians is ln[2 + \u221a5] \u2245 1.444?",
+    "headers": [
+      "Condition/Parameter",
+      "Coordinate velocity v dx/dt in units of c",
+      "Velocity angle \u03b7 in i-radians",
+      "Proper velocity w dx/d\u03c4 in units of c",
+      "Lorentz factor \u03b3 dt/d\u03c4 = E/mc 2"
+    ],
+    "where_column": "Velocity angle \u03b7 in i-radians",
+    "where_value": "ln[2 + \u221a5] \u2245 1.444",
+    "select_column": "Coordinate velocity v dx/dt in units of c"
+  },
+  {
+    "question": "Isma\u00ebl Bangoura with a rank larger than 5 after the year 2005 was moving to what football club?",
+    "headers": [
+      "Rank",
+      "Year",
+      "Name",
+      "Moving from",
+      "Moving to"
+    ],
+    "where_column": "Name",
+    "where_value": "isma\u00ebl bangoura",
+    "select_column": "Moving to"
+  },
+  {
+    "question": "Who was the away team when Queensland Roar was the home team in the round less than 3?",
+    "headers": [
+      "Round",
+      "Date",
+      "Home Team",
+      "Away Team",
+      "Attendance",
+      "Stadium"
+    ],
+    "where_column": "Round",
+    "where_value": "3",
+    "select_column": "Away Team"
+  },
+  {
+    "question": "What is the Chinese Title Premiering 32 with 2.07 million HK viewers?",
+    "headers": [
+      "Rank",
+      "English title",
+      "Chinese title",
+      "Average",
+      "Peak",
+      "Premiere",
+      "Finale",
+      "HK viewers"
+    ],
+    "where_column": "HK viewers",
+    "where_value": "2.07 million",
+    "select_column": "Chinese title"
+  },
+  {
+    "question": "What is the highest game with a 24-23 record?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Result",
+      "Hornets score",
+      "Opponent score",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "24-23",
+    "select_column": "Game"
+  },
+  {
+    "question": "Name the 2010 for 2011 of a and 2008 of 1r",
+    "headers": [
+      "Tournament",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "where_column": "2008",
+    "where_value": "1r",
+    "select_column": "2010"
+  },
+  {
+    "question": "What is the Record of the Chicago Black Hawks Home game with the New York Rangers and a Score of 3\u20132?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Record"
+    ],
+    "where_column": "Home",
+    "where_value": "chicago black hawks",
+    "select_column": "Record"
+  },
+  {
+    "question": "What group info is available for the 56.5 kg weight?",
+    "headers": [
+      "Result",
+      "Date",
+      "Race",
+      "Venue",
+      "Group",
+      "Distance",
+      "Weight (kg)",
+      "Jockey",
+      "Winner/2nd"
+    ],
+    "where_column": "Weight (kg)",
+    "where_value": "56.5",
+    "select_column": "Group"
+  },
+  {
+    "question": "Name the truck for eric phillips",
+    "headers": [
+      "Team",
+      "Truck(s)",
+      "#",
+      "Driver(s)",
+      "Primary Sponsor(s)",
+      "Listed Owner(s)",
+      "Crew Chief"
+    ],
+    "where_column": "Crew Chief",
+    "where_value": "Eric Phillips",
+    "select_column": "Truck(s)"
+  },
+  {
+    "question": "What is the mean number of events where the rank is 1 and there are more than 3 wins?",
+    "headers": [
+      "Rank",
+      "Player",
+      "Country",
+      "Earnings ( $ )",
+      "Events",
+      "Wins"
+    ],
+    "where_column": "Wins",
+    "where_value": "3",
+    "select_column": "Events"
+  },
+  {
+    "question": "How many values for bus width have a bandwidth of 25.6 and model number of Granville Pro?",
+    "headers": [
+      "Model",
+      "Launch",
+      "Model Number",
+      "Code name",
+      "Fab ( nm )",
+      "Bus interface",
+      "Memory ( MiB )",
+      "Core clock ( MHz )",
+      "Memory clock ( MHz )",
+      "Config core 1",
+      "Pixel ( GP /s)",
+      "Texture ( GT /s)",
+      "Bandwidth ( GB /s)",
+      "Bus type",
+      "Bus width ( bit )",
+      "DirectX",
+      "OpenGL",
+      "Processing Power GFLOPs",
+      "TDP (Watts)GPU only",
+      "Features"
+    ],
+    "where_column": "Model Number",
+    "where_value": "Granville Pro",
+    "select_column": "Bus width ( bit )"
+  },
+  {
+    "question": "What television network, founded in 2002, has a community type of network?",
+    "headers": [
+      "Television Network",
+      "Founded",
+      "% of Venezuelan households reached",
+      "# of households viewable",
+      "Type of network",
+      "# of Full-Power Affiliates",
+      "# of Low-Power/Class-A Affiliates & Transmitters"
+    ],
+    "where_column": "Founded",
+    "where_value": "2002",
+    "select_column": "Television Network"
+  },
+  {
+    "question": "What is the total number of laps that Beno\u00eet Tr\u00e9yluyer completed when his position was 7th and the year was before 2008?",
+    "headers": [
+      "Year",
+      "Team",
+      "Co-Drivers",
+      "Class",
+      "Laps",
+      "Pos.",
+      "Class Pos."
+    ],
+    "where_column": "Year",
+    "where_value": "2008",
+    "select_column": "Laps"
+  },
+  {
+    "question": "Which Format has a Date of 1993, and a Catalog of cleo 2481-2?",
+    "headers": [
+      "Region",
+      "Date",
+      "Label",
+      "Format",
+      "Catalog"
+    ],
+    "where_column": "Date",
+    "where_value": "1993",
+    "select_column": "Format"
+  },
+  {
+    "question": "What is the 2006 value with a 2011 value greater than 4113 and a 2008 value less than 7181?",
+    "headers": [
+      "Production year",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "where_column": "2008",
+    "where_value": "7181",
+    "select_column": "2006"
+  },
+  {
+    "question": "Name the points for when points against is of 450",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Points against",
+    "where_value": "450",
+    "select_column": "Points for"
+  },
+  {
+    "question": "What's the event that happened in Gander, Newfoundland and Labrador with Randy Ferbey runner-up?",
+    "headers": [
+      "Event",
+      "Date",
+      "Location",
+      "Winning skip",
+      "Runner-up skip"
+    ],
+    "where_column": "Location",
+    "where_value": "gander, newfoundland and labrador",
+    "select_column": "Event"
+  },
+  {
+    "question": "Name the status for points 3185",
+    "headers": [
+      "Seed",
+      "Rank",
+      "Player",
+      "Points",
+      "Points defending",
+      "Points won",
+      "New points",
+      "Status"
+    ],
+    "where_column": "Points",
+    "where_value": "3185",
+    "select_column": "Status"
+  },
+  {
+    "question": "Which game did Bruesa GBC play in with fewer than 275 rebounds that is ranked less than 4?",
+    "headers": [
+      "Rank",
+      "Name",
+      "Team",
+      "Games",
+      "Rebounds"
+    ],
+    "where_column": "Rank",
+    "where_value": "4",
+    "select_column": "Games"
+  },
+  {
+    "question": "What is the venue when melbourne is the away team?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "melbourne",
+    "select_column": "Venue"
+  },
+  {
+    "question": "How many years of NBA experience does the player who plays position g for the Portland Trail Blazers?",
+    "headers": [
+      "Player",
+      "Pos.",
+      "Nationality",
+      "Team",
+      "Previous team",
+      "Years of NBA experience [a ]",
+      "Career with the franchise [b ]"
+    ],
+    "where_column": "Team",
+    "where_value": "portland trail blazers",
+    "select_column": "Years of NBA experience [a ]"
+  }
+]

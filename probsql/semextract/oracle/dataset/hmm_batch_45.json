@@ -1,0 +1,733 @@
+[
+  {
+    "question": "Tell me the lowest Laps with a time/retired of +2 Laps and Grid of 20",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Time/Retired",
+    "where_value": "+2 laps",
+    "select_column": "Laps"
+  },
+  {
+    "question": "What's the platform that has Rockstar Games as the developer?",
+    "headers": [
+      "Year",
+      "Game",
+      "Genre",
+      "Platform(s)",
+      "Developer(s)"
+    ],
+    "where_column": "Developer(s)",
+    "where_value": "rockstar games",
+    "select_column": "Platform(s)"
+  },
+  {
+    "question": "What is the wins number when the points were smaller than 27, and goals against was 41?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Goals against",
+    "where_value": "41",
+    "select_column": "Wins"
+  },
+  {
+    "question": "Can you tell me the total number of Byes that has the Wins of 14, and the Losses larger than 2?",
+    "headers": [
+      "Millewa",
+      "Wins",
+      "Byes",
+      "Losses",
+      "Draws",
+      "Against"
+    ],
+    "where_column": "Losses",
+    "where_value": "2",
+    "select_column": "Byes"
+  },
+  {
+    "question": "What french open tournament happened in 2010 and has a 2004 1r?",
+    "headers": [
+      "Tournament",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "where_column": "Tournament",
+    "where_value": "french open",
+    "select_column": "2010"
+  },
+  {
+    "question": "What is the frequency of the processor with an sSpec number of sl3bn(kc0)sl3e9(kc0)?",
+    "headers": [
+      "Model number",
+      "sSpec number",
+      "Frequency",
+      "L2 cache",
+      "Mult.",
+      "Voltage",
+      "Socket",
+      "Release date",
+      "Part number(s)",
+      "Release price ( USD )"
+    ],
+    "where_column": "sSpec number",
+    "where_value": "sl3bn(kc0)sl3e9(kc0)",
+    "select_column": "Frequency"
+  },
+  {
+    "question": "What date has Liga 3rd of Dynamo Dresden?",
+    "headers": [
+      "Date",
+      "2nd Bundesliga 16th",
+      "3rd Liga 3rd",
+      "Game 1",
+      "Game 2"
+    ],
+    "where_column": "3rd Liga 3rd",
+    "where_value": "dynamo dresden",
+    "select_column": "Date"
+  },
+  {
+    "question": "Which Round has a School/Club Team of north carolina, and a Pick larger than 131?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Position",
+      "School/Club Team"
+    ],
+    "where_column": "Pick",
+    "where_value": "131",
+    "select_column": "Round"
+  },
+  {
+    "question": "Which position has a time of 1:45:53:00?",
+    "headers": [
+      "Race",
+      "Position",
+      "Time",
+      "Speed",
+      "Replica"
+    ],
+    "where_column": "Time",
+    "where_value": "1:45:53:00",
+    "select_column": "Position"
+  },
+  {
+    "question": "What is the rank for the player where there are 11 points?",
+    "headers": [
+      "Shooter",
+      "Event",
+      "Rank points",
+      "Score points",
+      "Total"
+    ],
+    "where_column": "Score points",
+    "where_value": "11",
+    "select_column": "Rank points"
+  },
+  {
+    "question": "Total average with less than 105 points, 1993-1994 less than 30, and the team of gimnasia y tiro?",
+    "headers": [
+      "Team",
+      "Average",
+      "Points",
+      "Played",
+      "1991-92",
+      "1992-93",
+      "1993-94"
+    ],
+    "where_column": "1993-94",
+    "where_value": "30",
+    "select_column": "Average"
+  },
+  {
+    "question": "Game smaller than 34, and a December smaller than 14, and a Score of 10 - 6 has what opponent?",
+    "headers": [
+      "Game",
+      "December",
+      "Opponent",
+      "Score",
+      "Record"
+    ],
+    "where_column": "Score",
+    "where_value": "10 - 6",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "How many dismissals did the player Peter McGlashan have?",
+    "headers": [
+      "Rank",
+      "Dismissals",
+      "Player",
+      "Innings",
+      "Catches",
+      "Stumpings"
+    ],
+    "where_column": "Player",
+    "where_value": "Peter McGlashan",
+    "select_column": "Dismissals"
+  },
+  {
+    "question": "What is the maximum memory speed for frequencies between 2.93-3.2ghz?",
+    "headers": [
+      "Code name",
+      "Brand name",
+      "Model (list)",
+      "Frequency",
+      "Cores/Threads",
+      "Max Memory Speed"
+    ],
+    "where_column": "Frequency",
+    "where_value": "2.93-3.2GHz",
+    "select_column": "Max Memory Speed"
+  },
+  {
+    "question": "What director grossed $200,512,643",
+    "headers": [
+      "Rank",
+      "Title",
+      "Studio",
+      "Director",
+      "Gross"
+    ],
+    "where_column": "Gross",
+    "where_value": "$200,512,643",
+    "select_column": "Director"
+  },
+  {
+    "question": "What is the latest available income inequality for the country with a population of 21,315,135?",
+    "headers": [
+      "Country",
+      "Area (km\u00b2) 2010",
+      "Population 2011",
+      "GDP (PPP) ( Intl. $ ) 2011",
+      "GDP (PPP) per capita ( Intl. $ ) 2011",
+      "Income inequality 1994\u20132011 (latest available)",
+      "HDI 2011",
+      "FSI 2012",
+      "CPI 2011",
+      "IEF 2011",
+      "GPI 2012",
+      "WPFI 2011/2012",
+      "DI 2011"
+    ],
+    "where_column": "Population 2011",
+    "where_value": "21,315,135",
+    "select_column": "Income inequality 1994\u20132011 (latest available)"
+  },
+  {
+    "question": "What's the score of the t10 player from australia?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Country",
+    "where_value": "australia",
+    "select_column": "Score"
+  },
+  {
+    "question": "Which Away team score has a Venue of kardinia park?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Venue",
+    "where_value": "kardinia park",
+    "select_column": "Away team score"
+  },
+  {
+    "question": "What is the time of the driver on grid 7?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Grid",
+    "where_value": "7",
+    "select_column": "Time/Retired"
+  },
+  {
+    "question": "What is the assists for the Team of Florida and the total points of 75?",
+    "headers": [
+      "Year",
+      "Team",
+      "GP/GS",
+      "Goals",
+      "Assists",
+      "Total Points"
+    ],
+    "where_column": "Total Points",
+    "where_value": "75",
+    "select_column": "Assists"
+  },
+  {
+    "question": "Which Network is on a Vid\u00e9otron (Gatineau)  channel lower than 8 and a Rogers Cable (Ottawa) channel lower than 8 and has a Call Sign of cjoh-dt?",
+    "headers": [
+      "Digital channel",
+      "Digital PSIP",
+      "Rogers Cable (Ottawa)",
+      "Vid\u00e9otron (Gatineau)",
+      "Call sign",
+      "Network"
+    ],
+    "where_column": "Call sign",
+    "where_value": "cjoh-dt",
+    "select_column": "Network"
+  },
+  {
+    "question": "What is the total number of bronzes associated with 1 silver, ranks under 6 and under 6 golds?",
+    "headers": [
+      "Rank",
+      "Republic",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "6",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "Who is every young rider classification if combativity award is Yannick Talabardon?",
+    "headers": [
+      "Stage",
+      "Winner",
+      "General classification",
+      "Points classification",
+      "Mountains classification",
+      "Young rider classification",
+      "Team classification",
+      "Combativity award"
+    ],
+    "where_column": "Combativity award",
+    "where_value": "Yannick Talabardon",
+    "select_column": "Young rider classification"
+  },
+  {
+    "question": "What is the total number of Result, when 2nd Throw is \"2\", and when 1st Throw is less than \"4\"?",
+    "headers": [
+      "1st throw",
+      "2nd throw",
+      "3rd throw",
+      "Equation",
+      "Result"
+    ],
+    "where_column": "2nd throw",
+    "where_value": "2",
+    "select_column": "Result"
+  },
+  {
+    "question": "what is the venue when the score is 1 goal and the date is october 11, 1997?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Score",
+    "where_value": "1 goal",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What team did the Heat play against at the TD Waterhouse Centre?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Location Attendance",
+    "where_value": "td waterhouse centre",
+    "select_column": "Team"
+  },
+  {
+    "question": "what is the goals when the goal difference is more than -3, the club is real avil\u00e9s cf and the goals against is more than 60?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Goals against",
+    "where_value": "60",
+    "select_column": "Goals for"
+  },
+  {
+    "question": "If the country of Origin is South Africa, who is the primary user?",
+    "headers": [
+      "Name / designation",
+      "Year of introduction",
+      "Country of origin",
+      "Primary cartridge",
+      "primary user"
+    ],
+    "where_column": "Country of origin",
+    "where_value": "South Africa",
+    "select_column": "primary user"
+  },
+  {
+    "question": "What is the state represented by the contestant from Mesa, AZ?",
+    "headers": [
+      "State",
+      "Name",
+      "Hometown",
+      "Age 1",
+      "Talent"
+    ],
+    "where_column": "Hometown",
+    "where_value": "mesa, az",
+    "select_column": "State"
+  },
+  {
+    "question": "What is the score when the team is milwaukee?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Team",
+    "where_value": "Milwaukee",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the date of the game with toronto as the visitor?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Record",
+      "Points"
+    ],
+    "where_column": "Visitor",
+    "where_value": "toronto",
+    "select_column": "Date"
+  },
+  {
+    "question": "What is the avg/g of Rhines, Chris, who has an effic greater than 73.95?",
+    "headers": [
+      "Name",
+      "GP-GS",
+      "Effic",
+      "Cmp-Att-Int",
+      "Avg/G"
+    ],
+    "where_column": "Effic",
+    "where_value": "73.95",
+    "select_column": "Avg/G"
+  },
+  {
+    "question": "Which High rebounds has a Game smaller than 9, and a Opponent of detroit?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location",
+      "Record"
+    ],
+    "where_column": "Game",
+    "where_value": "9",
+    "select_column": "High rebounds"
+  },
+  {
+    "question": "On November 22, what were the results of the friendly type game?",
+    "headers": [
+      "Date",
+      "City",
+      "Opponent",
+      "Results\u00b9",
+      "Type of game"
+    ],
+    "where_column": "Type of game",
+    "where_value": "friendly",
+    "select_column": "Results\u00b9"
+  },
+  {
+    "question": "Name the 2011 for 2010 of olympic games",
+    "headers": [
+      "Tournament",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "where_column": "2010",
+    "where_value": "olympic games",
+    "select_column": "2011"
+  },
+  {
+    "question": "Which Bronze has a Silver of 15, and a Gold smaller than 20?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "15",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "What nation has a bronze of 2 with a total less than 5 and rank of 6?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "6",
+    "select_column": "Nation"
+  },
+  {
+    "question": "What is the title of the episode directed by Rodney Clouden? ",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Directed by",
+    "where_value": "Rodney Clouden",
+    "select_column": "Title"
+  },
+  {
+    "question": "An artist of the Beatles with an issue date(s) of 19 September has what as the listed weeks on top?",
+    "headers": [
+      "Volume:Issue",
+      "Issue Date(s)",
+      "Weeks on Top",
+      "Song",
+      "Artist"
+    ],
+    "where_column": "Issue Date(s)",
+    "where_value": "19 september",
+    "select_column": "Weeks on Top"
+  },
+  {
+    "question": "What's the rank when the start is 10 and the laps are fewer than 192?",
+    "headers": [
+      "Start",
+      "Qual",
+      "Rank",
+      "Finish",
+      "Laps"
+    ],
+    "where_column": "Laps",
+    "where_value": "192",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What is the week 32 result when week 33 is 31.9%?",
+    "headers": [
+      "Party",
+      "Week 32",
+      "Week 33",
+      "Week 34",
+      "Week 35",
+      "Week 36",
+      "Week 37"
+    ],
+    "where_column": "Week 33",
+    "where_value": "31.9%",
+    "select_column": "Week 32"
+  },
+  {
+    "question": "I want to know the team that was sacked and date of vacancy was 4 december",
+    "headers": [
+      "Team",
+      "Outgoing manager",
+      "Manner of departure",
+      "Date of vacancy",
+      "Replaced by",
+      "Date of appointment"
+    ],
+    "where_column": "Date of vacancy",
+    "where_value": "4 december",
+    "select_column": "Team"
+  },
+  {
+    "question": "What is the Birthplace, when the Jersey # is less than 18, when the Height (cm) is higher than 185, and when the Birthdate is March 3, 1980?",
+    "headers": [
+      "Position",
+      "Jersey #",
+      "Name",
+      "Height (cm)",
+      "Weight (kg)",
+      "Birthdate",
+      "Birthplace",
+      "1999\u20132000 Team",
+      "NHL Rights"
+    ],
+    "where_column": "Height (cm)",
+    "where_value": "185",
+    "select_column": "Birthplace"
+  },
+  {
+    "question": "What is 04-05, when 05-06 is 205,189?",
+    "headers": [
+      "School year",
+      "95-96",
+      "99-00",
+      "00-01",
+      "01-02",
+      "02-03",
+      "03-04",
+      "04-05",
+      "05-06",
+      "06-07"
+    ],
+    "where_column": "05-06",
+    "where_value": "205,189",
+    "select_column": "04-05"
+  },
+  {
+    "question": "What is the grid number with less than 52 laps and a Time/Retired of collision, and a Constructor of arrows - supertec?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Constructor",
+    "where_value": "arrows - supertec",
+    "select_column": "Grid"
+  },
+  {
+    "question": "what is the name of the episode directed by james bobin",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (million)"
+    ],
+    "where_column": "Directed by",
+    "where_value": "James Bobin",
+    "select_column": "Title"
+  },
+  {
+    "question": "What year has a venue of algiers, algeria, extra smaller than 8.03, and a Meeting of all africa games?",
+    "headers": [
+      "Year",
+      "Meeting",
+      "Venue",
+      "Result",
+      "Event",
+      "Extra"
+    ],
+    "where_column": "Venue",
+    "where_value": "algiers, algeria",
+    "select_column": "Year"
+  },
+  {
+    "question": "Result of 86-87 (2-4) involves what home team?",
+    "headers": [
+      "Game",
+      "Date",
+      "Home Team",
+      "Result",
+      "Road Team"
+    ],
+    "where_column": "Result",
+    "where_value": "86-87 (2-4)",
+    "select_column": "Home Team"
+  },
+  {
+    "question": "Which Album had a bigger year than 2005 and whose country was Australia?",
+    "headers": [
+      "Year",
+      "Album",
+      "Song",
+      "Label",
+      "Catalog#",
+      "Format",
+      "Country"
+    ],
+    "where_column": "Year",
+    "where_value": "2005",
+    "select_column": "Album"
+  },
+  {
+    "question": "What position did Luca Sbisa play for the Philadelphia Flyers?",
+    "headers": [
+      "Round",
+      "Player",
+      "Position",
+      "Nationality",
+      "College/Junior/Club Team (League)"
+    ],
+    "where_column": "Player",
+    "where_value": "luca sbisa",
+    "select_column": "Position"
+  }
+]

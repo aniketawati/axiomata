@@ -1,0 +1,701 @@
+[
+  {
+    "question": "What is the lowest Round, when Position is Linebacker, and when Player is Thomas Henderson?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "Player",
+    "where_value": "thomas henderson",
+    "select_column": "Round"
+  },
+  {
+    "question": "I want the tsongas of may 22, 2007",
+    "headers": [
+      "Source",
+      "Date",
+      "Donoghue (D)",
+      "Eldridge (D)",
+      "Finegold (D)",
+      "Miceli (D)",
+      "Tsongas (D)"
+    ],
+    "where_column": "Date",
+    "where_value": "may 22, 2007",
+    "select_column": "Tsongas (D)"
+  },
+  {
+    "question": "What is the height of the person whose position is Libero?",
+    "headers": [
+      "Shirt No",
+      "Nationality",
+      "Player",
+      "Birth Date",
+      "Height",
+      "Position"
+    ],
+    "where_column": "Position",
+    "where_value": "libero",
+    "select_column": "Height"
+  },
+  {
+    "question": "What is the average for the team with highest less than 13,500 and games played are fewer than 5?",
+    "headers": [
+      "Team",
+      "Played",
+      "Highest",
+      "Lowest",
+      "Total",
+      "Average"
+    ],
+    "where_column": "Played",
+    "where_value": "5",
+    "select_column": "Average"
+  },
+  {
+    "question": "Where was the September 3 game?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "Location",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "september 3",
+    "select_column": "Location"
+  },
+  {
+    "question": "Name the most middle schools for 2005-2006",
+    "headers": [
+      "Year",
+      "District-wide",
+      "High schools",
+      "Middle schools",
+      "Elementary schools",
+      "Other programs & adjustments"
+    ],
+    "where_column": "Year",
+    "where_value": "2005-2006",
+    "select_column": "Middle schools"
+  },
+  {
+    "question": "Which Year has a Manager of bobby dews, and Playoffs of lost in 1st round?",
+    "headers": [
+      "Year",
+      "Record",
+      "Finish",
+      "Manager",
+      "Playoffs"
+    ],
+    "where_column": "Manager",
+    "where_value": "bobby dews",
+    "select_column": "Year"
+  },
+  {
+    "question": "What is the barony of mountcotton?",
+    "headers": [
+      "Townland",
+      "Area( acres )",
+      "Barony",
+      "Civil parish",
+      "Poor law union"
+    ],
+    "where_column": "Townland",
+    "where_value": "Mountcotton",
+    "select_column": "Barony"
+  },
+  {
+    "question": "Which country has an abbreviation of kia?",
+    "headers": [
+      "Country",
+      "Abbreviation",
+      "Assets US$Billion",
+      "Inception",
+      "Origin"
+    ],
+    "where_column": "Abbreviation",
+    "where_value": "kia",
+    "select_column": "Country"
+  },
+  {
+    "question": "What is latitude when 2010 population is 24 and water is more than 0.319?",
+    "headers": [
+      "Township",
+      "County",
+      "Pop. (2010)",
+      "Land ( sqmi )",
+      "Water (sqmi)",
+      "Latitude",
+      "Longitude",
+      "GEO ID",
+      "ANSI code"
+    ],
+    "where_column": "Water (sqmi)",
+    "where_value": "0.319",
+    "select_column": "Latitude"
+  },
+  {
+    "question": "Which opposing team had an Against score less than 42 and a Tour Match status in Rugby Park, Gisborne?",
+    "headers": [
+      "Opposing Team",
+      "Against",
+      "Date",
+      "Venue",
+      "Status"
+    ],
+    "where_column": "Venue",
+    "where_value": "rugby park, gisborne",
+    "select_column": "Opposing Team"
+  },
+  {
+    "question": "What is the 2nd leg of the Comunicaciones team?",
+    "headers": [
+      "Team 1",
+      "Agg.",
+      "Team 2",
+      "1st leg",
+      "2nd leg"
+    ],
+    "where_column": "Team 1",
+    "where_value": "comunicaciones",
+    "select_column": "2nd leg"
+  },
+  {
+    "question": "What is the average ties when the team is montreal victorias and the games played is more than 8?",
+    "headers": [
+      "Team",
+      "Games Played",
+      "Wins",
+      "Losses",
+      "Ties",
+      "Goals For",
+      "Goals Against"
+    ],
+    "where_column": "Team",
+    "where_value": "montreal victorias",
+    "select_column": "Ties"
+  },
+  {
+    "question": "How many listings are under money list rank wher 2nd' value is larger than 2.0?",
+    "headers": [
+      "Year",
+      "Starts",
+      "Cuts made",
+      "Wins",
+      "2nd",
+      "3rd",
+      "Top 10",
+      "Top 25",
+      "Earnings (\u20ac)",
+      "Money list rank"
+    ],
+    "where_column": "2nd",
+    "where_value": "2.0",
+    "select_column": "Money list rank"
+  },
+  {
+    "question": "What year has Stacy as the category and award of Best Reality Star in Social Media?",
+    "headers": [
+      "Year",
+      "Competition",
+      "Awards",
+      "Category",
+      "Result"
+    ],
+    "where_column": "Category",
+    "where_value": "stacy",
+    "select_column": "Year"
+  },
+  {
+    "question": "Which home team had a score of 11.11 (77)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Ground",
+      "Crowd",
+      "Date",
+      "Report"
+    ],
+    "where_column": "Home team score",
+    "where_value": "11.11 (77)",
+    "select_column": "Home team"
+  },
+  {
+    "question": "Who was the opponent when the record was 55-14?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "Location",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "55-14",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "What was the TO par for the player who scored 68-71=139?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Score",
+    "where_value": "68-71=139",
+    "select_column": "To par"
+  },
+  {
+    "question": "Which Elimination Move is listed at Elimination 8 for Team Batista?",
+    "headers": [
+      "Elimination",
+      "Wrestler",
+      "Team",
+      "Eliminated by",
+      "Elimination Move",
+      "Time"
+    ],
+    "where_column": "Team",
+    "where_value": "team batista",
+    "select_column": "Elimination Move"
+  },
+  {
+    "question": "What rank is the nation that has a bronze of source: Maltese Olympic Committee?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Bronze",
+    "where_value": "source: maltese olympic committee",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What is the enrollment for the Redhawks?",
+    "headers": [
+      "Institution",
+      "Location",
+      "Founded",
+      "Affiliation",
+      "Enrollment",
+      "Team Nickname",
+      "Primary conference"
+    ],
+    "where_column": "Team Nickname",
+    "where_value": "RedHawks",
+    "select_column": "Enrollment"
+  },
+  {
+    "question": "What are all the possible bleeding time results where prothrombin time and platelet count are both unaffected?",
+    "headers": [
+      "Condition",
+      "Prothrombin time",
+      "Partial thromboplastin time",
+      "Bleeding time",
+      "Platelet count"
+    ],
+    "where_column": "Prothrombin time",
+    "where_value": "Unaffected",
+    "select_column": "Bleeding time"
+  },
+  {
+    "question": "Which City of license has a Frequency MHz smaller than 100.9, and a ERP W larger than 100?",
+    "headers": [
+      "Call sign",
+      "Frequency MHz",
+      "City of license",
+      "ERP W",
+      "Height m ( ft )",
+      "FCC info"
+    ],
+    "where_column": "Frequency MHz",
+    "where_value": "100.9",
+    "select_column": "City of license"
+  },
+  {
+    "question": "What was the smallest crowd size at a home game for Footscray?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "footscray",
+    "select_column": "Crowd"
+  },
+  {
+    "question": "what is part 2 when part 4 is gebonden?",
+    "headers": [
+      "Class",
+      "Part 1",
+      "Part 2",
+      "Part 3",
+      "Part 4",
+      "Verb meaning"
+    ],
+    "where_column": "Part 4",
+    "where_value": "gebonden",
+    "select_column": "Part 2"
+  },
+  {
+    "question": "What rank has a mark of NM and is from India?",
+    "headers": [
+      "Rank",
+      "Group",
+      "Name",
+      "Nationality",
+      "Mark"
+    ],
+    "where_column": "Nationality",
+    "where_value": "india",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What's the heat that was timed 2:08.54?",
+    "headers": [
+      "Heat",
+      "Lane",
+      "Name",
+      "Nationality",
+      "Time"
+    ],
+    "where_column": "Time",
+    "where_value": "2:08.54",
+    "select_column": "Heat"
+  },
+  {
+    "question": "what is the weeks on chart for the single from france?",
+    "headers": [
+      "Title",
+      "Album",
+      "Country",
+      "Peak position",
+      "Weeks on chart"
+    ],
+    "where_column": "Country",
+    "where_value": "france",
+    "select_column": "Weeks on chart"
+  },
+  {
+    "question": "What is the least number of assists among players ranked 2?",
+    "headers": [
+      "Rank",
+      "Name",
+      "Team",
+      "Games",
+      "Assists"
+    ],
+    "where_column": "Rank",
+    "where_value": "2",
+    "select_column": "Assists"
+  },
+  {
+    "question": "How many winners from previous round were there in the semi finals?",
+    "headers": [
+      "Round",
+      "Clubs remaining",
+      "Clubs involved",
+      "Winners from previous round",
+      "New entries this round",
+      "Leagues entering at this round"
+    ],
+    "where_column": "Round",
+    "where_value": "Semi finals",
+    "select_column": "Winners from previous round"
+  },
+  {
+    "question": "Tell me the total receipts for tom tancredo",
+    "headers": [
+      "Candidate",
+      "Money Raised, 2Q",
+      "Loans Received, 2Q",
+      "Money Spent, 2Q",
+      "Total Receipts",
+      "Cash On Hand"
+    ],
+    "where_column": "Candidate",
+    "where_value": "tom tancredo",
+    "select_column": "Total Receipts"
+  },
+  {
+    "question": "What is the lyric fm for rnag 93.2?",
+    "headers": [
+      "Transmitter",
+      "Service area",
+      "Radio 1 (MHz)",
+      "2FM (MHz)",
+      "RnaG (MHz)",
+      "Lyric FM (MHz)",
+      "ERP (kW)"
+    ],
+    "where_column": "RnaG (MHz)",
+    "where_value": "93.2",
+    "select_column": "Lyric FM (MHz)"
+  },
+  {
+    "question": "At which venue did the away team score 7.7 (49)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team score",
+    "where_value": "7.7 (49)",
+    "select_column": "Venue"
+  },
+  {
+    "question": "How many years did he have an average finish of 11.7?",
+    "headers": [
+      "Year",
+      "Starts",
+      "Wins",
+      "Top 5",
+      "Top 10",
+      "Poles",
+      "Avg. Start",
+      "Avg. Finish",
+      "Winnings",
+      "Position",
+      "Team(s)"
+    ],
+    "where_column": "Avg. Finish",
+    "where_value": "11.7",
+    "select_column": "Avg. Start"
+  },
+  {
+    "question": "What was the final score of the game on June 17?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "june 17",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the Place of the Player with Money greater than 300 and a Score of 71-69-70-70=280?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "Score",
+    "where_value": "71-69-70-70=280",
+    "select_column": "Place"
+  },
+  {
+    "question": "Can you tell me the Year(s) Won that has the To par larger than 5, and the Total smaller than 155, and the Country of united states?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) Won",
+      "Total",
+      "To par"
+    ],
+    "where_column": "Country",
+    "where_value": "united states",
+    "select_column": "Year(s) Won"
+  },
+  {
+    "question": "Which player came from Kent State?",
+    "headers": [
+      "Pick #",
+      "NFL Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "College",
+    "where_value": "kent state",
+    "select_column": "Player"
+  },
+  {
+    "question": "What date was the score 29-7?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Result",
+      "Record",
+      "Attendance"
+    ],
+    "where_column": "Score",
+    "where_value": "29-7",
+    "select_column": "Date"
+  },
+  {
+    "question": "What tournament had a score of 5\u20137, 6\u20134, 6\u20134?",
+    "headers": [
+      "Year",
+      "Tournament Name",
+      "Champions",
+      "Runners-up",
+      "Score"
+    ],
+    "where_column": "Score",
+    "where_value": "5\u20137, 6\u20134, 6\u20134",
+    "select_column": "Tournament Name"
+  },
+  {
+    "question": "What suface during the game that had Yevgeny Kafelnikov as an opponent?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Opponent",
+    "where_value": "yevgeny kafelnikov",
+    "select_column": "Surface"
+  },
+  {
+    "question": "What team had a qual 2 time of 58.385?",
+    "headers": [
+      "Name",
+      "Team",
+      "Qual 1",
+      "Qual 2",
+      "Best"
+    ],
+    "where_column": "Qual 2",
+    "where_value": "58.385",
+    "select_column": "Team"
+  },
+  {
+    "question": "Which Place has a To par of \u20138?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "To par",
+    "where_value": "\u20138",
+    "select_column": "Place"
+  },
+  {
+    "question": "What is the Lomavren associated with a Hindi of s\u0101t?",
+    "headers": [
+      "Hindi",
+      "Romani",
+      "Domari",
+      "Lomavren",
+      "Persian"
+    ],
+    "where_column": "Hindi",
+    "where_value": "s\u0101t",
+    "select_column": "Lomavren"
+  },
+  {
+    "question": "When winner is the status and  77 is the total days in pbb house what is the edition?",
+    "headers": [
+      "Name",
+      "Home or representative town or province",
+      "Age",
+      "Edition",
+      "Total days in PBB House",
+      "Duration",
+      "Status"
+    ],
+    "where_column": "Status",
+    "where_value": "Winner",
+    "select_column": "Edition"
+  },
+  {
+    "question": "What was the year Elected of Republican Incumbent Dave Reichert?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "Elected",
+      "Status",
+      "2008 Candidates",
+      "Results"
+    ],
+    "where_column": "Party",
+    "where_value": "republican",
+    "select_column": "Elected"
+  },
+  {
+    "question": "When was the first HC climb before 2013 with more than 3 times visited, more than 4 HC climbs, and a height of 1669?",
+    "headers": [
+      "Height (m.)",
+      "No. of times visited",
+      "No. of HC climbs",
+      "First time as HC climb",
+      "Most recent"
+    ],
+    "where_column": "No. of times visited",
+    "where_value": "3",
+    "select_column": "First time as HC climb"
+  },
+  {
+    "question": "What place has the score of 67-74=141?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Score",
+    "where_value": "67-74=141",
+    "select_column": "Place"
+  },
+  {
+    "question": "How many field goals did Carter get when he had 0 extra points?",
+    "headers": [
+      "Player",
+      "Touchdowns",
+      "Extra points",
+      "Field goals",
+      "Points"
+    ],
+    "where_column": "Player",
+    "where_value": "carter",
+    "select_column": "Field goals"
+  },
+  {
+    "question": "What's the Serie A when the coppa italia was 5?",
+    "headers": [
+      "Name",
+      "Serie A",
+      "Champions League",
+      "Coppa Italia",
+      "Total"
+    ],
+    "where_column": "Coppa Italia",
+    "where_value": "5",
+    "select_column": "Serie A"
+  }
+]

@@ -1,0 +1,705 @@
+[
+  {
+    "question": "What was the average of points with ranks smaller than 7 but with total point games of 113?",
+    "headers": [
+      "Rank",
+      "Player",
+      "Years",
+      "Games",
+      "PPG Avg.",
+      "Total Points"
+    ],
+    "where_column": "Rank",
+    "where_value": "7",
+    "select_column": "Total Points"
+  },
+  {
+    "question": "What is Speed, when Time is 1:24.23.0?",
+    "headers": [
+      "Place",
+      "Rider",
+      "Country",
+      "Machine",
+      "Speed",
+      "Time",
+      "Points"
+    ],
+    "where_column": "Time",
+    "where_value": "1:24.23.0",
+    "select_column": "Speed"
+  },
+  {
+    "question": "What is the Week number on November 30, 1958 with more than 33,240 in Attendance?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Date",
+    "where_value": "november 30, 1958",
+    "select_column": "Week"
+  },
+  {
+    "question": "What is the total number of gold medals when there were 2 bronze medals, a total of more than 3 medals and ranked 61?",
+    "headers": [
+      "Rank",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Bronze",
+    "where_value": "2",
+    "select_column": "Gold"
+  },
+  {
+    "question": "How many rushing yards where there when the opponent was Indiana and there was 503 passing yards?",
+    "headers": [
+      "Rank",
+      "Player",
+      "Year",
+      "Opponent",
+      "Passing yards",
+      "Rushing yards",
+      "Total offense"
+    ],
+    "where_column": "Opponent",
+    "where_value": "Indiana",
+    "select_column": "Rushing yards"
+  },
+  {
+    "question": "Which Competition has a Year larger than 2000?",
+    "headers": [
+      "Year",
+      "Competition",
+      "Venue",
+      "Position",
+      "Event",
+      "Notes"
+    ],
+    "where_column": "Year",
+    "where_value": "2000",
+    "select_column": "Competition"
+  },
+  {
+    "question": "What is the highest number of points for players with less than 2 touchdowns and 0 extra points?",
+    "headers": [
+      "Player",
+      "Touchdowns",
+      "Extra points",
+      "Field goals",
+      "Points"
+    ],
+    "where_column": "Touchdowns",
+    "where_value": "2",
+    "select_column": "Points"
+  },
+  {
+    "question": "What was the surface when the opponent was judith wiesner, and the outcome was winner?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Tournament",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Opponent",
+    "where_value": "judith wiesner",
+    "select_column": "Surface"
+  },
+  {
+    "question": "Name the 2nd leg for team 1 of hamburg",
+    "headers": [
+      "Team 1",
+      "Agg.",
+      "Team 2",
+      "1st leg",
+      "2nd leg"
+    ],
+    "where_column": "Team 1",
+    "where_value": "hamburg",
+    "select_column": "2nd leg"
+  },
+  {
+    "question": "How many games are associated with over 0 golds and a first year before 2008?",
+    "headers": [
+      "Games",
+      "First",
+      "Last",
+      "Gold",
+      "Bronze",
+      "Total",
+      "Best finish (first/last)"
+    ],
+    "where_column": "First",
+    "where_value": "2008",
+    "select_column": "Games"
+  },
+  {
+    "question": "Which Points have a Club of london wasps, and a Drop larger than 1?",
+    "headers": [
+      "Points",
+      "Name",
+      "Club",
+      "Tries",
+      "Drop"
+    ],
+    "where_column": "Club",
+    "where_value": "london wasps",
+    "select_column": "Points"
+  },
+  {
+    "question": "What year did helle nielsen marie r\u00f8pke play womens' doubles?",
+    "headers": [
+      "Year",
+      "Men's singles",
+      "Women's singles",
+      "Men's doubles",
+      "Women's doubles",
+      "Mixed doubles"
+    ],
+    "where_column": "Women's doubles",
+    "where_value": "helle nielsen marie r\u00f8pke",
+    "select_column": "Year"
+  },
+  {
+    "question": "What is the circuit of round 5?",
+    "headers": [
+      "Round",
+      "Circuit",
+      "Date",
+      "Pole position",
+      "Fastest lap",
+      "Winning driver",
+      "Winning team"
+    ],
+    "where_column": "Round",
+    "where_value": "5",
+    "select_column": "Circuit"
+  },
+  {
+    "question": "What Silver has the Location of Guangzhou?",
+    "headers": [
+      "Year",
+      "Location",
+      "Gold",
+      "Silver",
+      "Bronze"
+    ],
+    "where_column": "Location",
+    "where_value": "guangzhou",
+    "select_column": "Silver"
+  },
+  {
+    "question": "What is the highest Laps, when Bike is \"Yamaha YZF-R1\", when Rider is \"David Checa\", and when Grid is greater than 18?",
+    "headers": [
+      "Rider",
+      "Bike",
+      "Laps",
+      "Time",
+      "Grid"
+    ],
+    "where_column": "Bike",
+    "where_value": "yamaha yzf-r1",
+    "select_column": "Laps"
+  },
+  {
+    "question": "What was the Score in Final on February 19, 1989?",
+    "headers": [
+      "Date",
+      "Tournament Name",
+      "Location",
+      "Partner",
+      "Score in Final"
+    ],
+    "where_column": "Date",
+    "where_value": "february 19, 1989",
+    "select_column": "Score in Final"
+  },
+  {
+    "question": "How many years of introduction does the Neal Submachine Gun have?",
+    "headers": [
+      "Name/ designation",
+      "Year of intro",
+      "Country of origin",
+      "Primary cartridge",
+      "Major users"
+    ],
+    "where_column": "Name/ designation",
+    "where_value": "Neal submachine gun",
+    "select_column": "Year of intro"
+  },
+  {
+    "question": "Which Original air date has a Season # smaller than 21, and a Title of \"palimpsest\"?",
+    "headers": [
+      "Series #",
+      "Season #",
+      "Title",
+      "Directed by",
+      "Original air date"
+    ],
+    "where_column": "Season #",
+    "where_value": "21",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "What is the score of champion Ken Rosewall in 1957?",
+    "headers": [
+      "Year",
+      "Champion",
+      "Runner-up",
+      "Score",
+      "Surface"
+    ],
+    "where_column": "Year",
+    "where_value": "1957",
+    "select_column": "Score"
+  },
+  {
+    "question": "What owner or owners have an operational description?",
+    "headers": [
+      "Number & Name",
+      "Description",
+      "Livery",
+      "Owner(s)",
+      "Date"
+    ],
+    "where_column": "Description",
+    "where_value": "operational",
+    "select_column": "Owner(s)"
+  },
+  {
+    "question": "What Valvetrain has a fuel system made up of petrol engines?",
+    "headers": [
+      "Model",
+      "Engine",
+      "Displacement",
+      "Valvetrain",
+      "Fuel system",
+      "Max. power at rpm",
+      "Max. torque at rpm"
+    ],
+    "where_column": "Fuel system",
+    "where_value": "petrol engines",
+    "select_column": "Valvetrain"
+  },
+  {
+    "question": "What is the highest game number where the team was Cleveland? ",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Team",
+    "where_value": "Cleveland",
+    "select_column": "Game"
+  },
+  {
+    "question": "What is the name of the boat that was built by Chatham and Laid down of 25 april 1887?",
+    "headers": [
+      "Name",
+      "Builder",
+      "Laid down",
+      "Launched",
+      "Completed"
+    ],
+    "where_column": "Laid down",
+    "where_value": "25 april 1887",
+    "select_column": "Name"
+  },
+  {
+    "question": "What is the position played by the man born on 1976-09-20?",
+    "headers": [
+      "Name",
+      "Pos.",
+      "Height",
+      "Weight",
+      "Date of Birth",
+      "Club"
+    ],
+    "where_column": "Date of Birth",
+    "where_value": "1976-09-20",
+    "select_column": "Pos."
+  },
+  {
+    "question": "What is the year that a record was recorded with Libor Pesek as conductor?",
+    "headers": [
+      "Pianist",
+      "Conductor",
+      "Record Company",
+      "Year of Recording",
+      "Format"
+    ],
+    "where_column": "Conductor",
+    "where_value": "libor pesek",
+    "select_column": "Year of Recording"
+  },
+  {
+    "question": "What team defeated the Capital City Giants?",
+    "headers": [
+      "Year",
+      "Game",
+      "Team",
+      "Runner-up",
+      "Score"
+    ],
+    "where_column": "Runner-up",
+    "where_value": "capital city giants",
+    "select_column": "Team"
+  },
+  {
+    "question": "Name the most evening gown for average less than 8.793 with interview of 8.51 and swimsuit less than 8.12",
+    "headers": [
+      "State",
+      "Interview",
+      "Swimsuit",
+      "Evening Gown",
+      "Average"
+    ],
+    "where_column": "Swimsuit",
+    "where_value": "8.12",
+    "select_column": "Evening Gown"
+  },
+  {
+    "question": "Name the nation where jeff barker is from",
+    "headers": [
+      "Name",
+      "Nation",
+      "Position",
+      "FA Cup Apps",
+      "FA Cup Goals",
+      "Total Apps",
+      "Total Goals"
+    ],
+    "where_column": "Name",
+    "where_value": "Jeff Barker",
+    "select_column": "Nation"
+  },
+  {
+    "question": "What is the title of the episode no. 16 by season?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "No. in season",
+    "where_value": "16",
+    "select_column": "Title"
+  },
+  {
+    "question": "What is the average points of the Ferrari 1512 Chassis after 1965?",
+    "headers": [
+      "Year",
+      "Team",
+      "Chassis",
+      "Engine",
+      "Points"
+    ],
+    "where_column": "Chassis",
+    "where_value": "ferrari 1512",
+    "select_column": "Points"
+  },
+  {
+    "question": "In how many rounds of the draft was there a college from Georgia involved?",
+    "headers": [
+      "Round",
+      "Overall",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "College",
+    "where_value": "georgia",
+    "select_column": "Round"
+  },
+  {
+    "question": "Who has a To par of \u20132, and a Country of united states?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Country",
+    "where_value": "united states",
+    "select_column": "Player"
+  },
+  {
+    "question": "what is the apparent magnitude of the constellation sculptor",
+    "headers": [
+      "NGC number",
+      "Object type",
+      "Constellation",
+      "Right ascension ( J2000 )",
+      "Declination ( J2000 )",
+      "Apparent magnitude"
+    ],
+    "where_column": "Constellation",
+    "where_value": "sculptor",
+    "select_column": "Apparent magnitude"
+  },
+  {
+    "question": " who is the\u00a0grand finalist\u00a0where\u00a0scores\u00a0is 11.11 (77) \u2013 10.8 (68)",
+    "headers": [
+      "Year",
+      "Winners",
+      "Grand Finalist",
+      "Scores",
+      "Venue",
+      "Crowd",
+      "Margin",
+      "Season Result"
+    ],
+    "where_column": "Scores",
+    "where_value": "11.11 (77) \u2013 10.8 (68)",
+    "select_column": "Grand Finalist"
+  },
+  {
+    "question": "What was the result for Gypsy?",
+    "headers": [
+      "Year (Ceremony)",
+      "Film title used in nomination",
+      "Slovak title",
+      "Director",
+      "Result"
+    ],
+    "where_column": "Film title used in nomination",
+    "where_value": "Gypsy",
+    "select_column": "Result"
+  },
+  {
+    "question": "What is listed as the highest Participants that also have a Rank of 5, and Silver that's smaller than 0?",
+    "headers": [
+      "Rank",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total",
+      "Participants"
+    ],
+    "where_column": "Rank",
+    "where_value": "5",
+    "select_column": "Participants"
+  },
+  {
+    "question": "What is the pf for Rebecca Jean Macphee?",
+    "headers": [
+      "Locale",
+      "Skip",
+      "W",
+      "L",
+      "PF",
+      "PA",
+      "Ends Won",
+      "Ends Lost",
+      "Blank Ends",
+      "Stolen Ends",
+      "Shot Pct."
+    ],
+    "where_column": "Skip",
+    "where_value": "Rebecca Jean MacPhee",
+    "select_column": "PF"
+  },
+  {
+    "question": "What is the name of the episodes which had 1.22 million U.S. viewers?",
+    "headers": [
+      "Series #",
+      "Season #",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (in millions)"
+    ],
+    "where_column": "U.S. viewers (in millions)",
+    "where_value": "1.22",
+    "select_column": "Title"
+  },
+  {
+    "question": "What is Club, when Drawn is \"0\", and when Try Bonus is \"5\"?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Drawn",
+    "where_value": "0",
+    "select_column": "Club"
+  },
+  {
+    "question": "What is the score that the player who placed t4 from the united states get?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Country",
+    "where_value": "united states",
+    "select_column": "Score"
+  },
+  {
+    "question": "What's the to par score in T8 place from Zimbabwe and has a score of 73-68=141?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Place",
+    "where_value": "t8",
+    "select_column": "To par"
+  },
+  {
+    "question": "What game number was the first game played at the Summit this season?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "Location",
+      "Record"
+    ],
+    "where_column": "Location",
+    "where_value": "the summit",
+    "select_column": "Game"
+  },
+  {
+    "question": "What seasons had a finale on May 25, 2004?",
+    "headers": [
+      "Season",
+      "Timeslot",
+      "Premiere",
+      "Finale",
+      "TV season",
+      "Ranking",
+      "Viewers (in millions)"
+    ],
+    "where_column": "Finale",
+    "where_value": "May 25, 2004",
+    "select_column": "Season"
+  },
+  {
+    "question": "What is the mean round number for center position when the pick number is less than 23?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Position",
+    "where_value": "center",
+    "select_column": "Round"
+  },
+  {
+    "question": "What is Year(s) Won, when Finish is \"T31\", and when Player is \"Nick Price\"?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par",
+      "Finish"
+    ],
+    "where_column": "Finish",
+    "where_value": "t31",
+    "select_column": "Year(s) won"
+  },
+  {
+    "question": "What is the average share at 8:00 p.m., and an 18-49 of 1.3/4 with an air date of April 4, 2008?",
+    "headers": [
+      "Air Date",
+      "Timeslot",
+      "Rating",
+      "Share",
+      "18-49",
+      "Viewers",
+      "Weekly Rank"
+    ],
+    "where_column": "Air Date",
+    "where_value": "april 4, 2008",
+    "select_column": "Share"
+  },
+  {
+    "question": "Which position does Loren Woods play?",
+    "headers": [
+      "Player",
+      "No.",
+      "Nationality",
+      "Position",
+      "Years in Toronto",
+      "School/Club Team"
+    ],
+    "where_column": "Player",
+    "where_value": "Loren Woods",
+    "select_column": "Position"
+  },
+  {
+    "question": "Which Score has Opponents of pkns fc, and a Date of january 8, 2006?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Opponents",
+      "Score",
+      "Competition"
+    ],
+    "where_column": "Date",
+    "where_value": "january 8, 2006",
+    "select_column": "Score"
+  },
+  {
+    "question": "Which year did the team of pescarolo sport have a Class Position of 7th?",
+    "headers": [
+      "Year",
+      "Team",
+      "Co-Drivers",
+      "Class",
+      "Laps",
+      "Pos.",
+      "Class Pos."
+    ],
+    "where_column": "Team",
+    "where_value": "pescarolo sport",
+    "select_column": "Year"
+  },
+  {
+    "question": "What is the average number of gold medals when the total was 1335 medals, with more than 469 bronzes and more than 14 silvers?",
+    "headers": [
+      "Rank",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Bronze",
+    "where_value": "469",
+    "select_column": "Gold"
+  }
+]

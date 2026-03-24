@@ -1,0 +1,716 @@
+[
+  {
+    "question": "What number pick was Bill Athey?",
+    "headers": [
+      "Round",
+      "Pick #",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Name",
+    "where_value": "bill athey",
+    "select_column": "Pick #"
+  },
+  {
+    "question": "What Club team has an average of 8, plays kaj linna, and has an overall larger than 131?",
+    "headers": [
+      "Round",
+      "Overall",
+      "Player",
+      "Nationality",
+      "Club team"
+    ],
+    "where_column": "Player",
+    "where_value": "kaj linna",
+    "select_column": "Club team"
+  },
+  {
+    "question": "Which constructor has Chuck Weyant as a driver, 45 laps, and a qual of less than 142.29?",
+    "headers": [
+      "Grid",
+      "Driver",
+      "Constructor",
+      "Qual",
+      "Rank",
+      "Laps",
+      "Time/Retired"
+    ],
+    "where_column": "Qual",
+    "where_value": "142.29",
+    "select_column": "Constructor"
+  },
+  {
+    "question": "How many Matches have Balls smaller than 224, and an Average larger than 38.25, and an S/Rate larger than 139.09?",
+    "headers": [
+      "Player",
+      "Team",
+      "Matches",
+      "Inns",
+      "Runs",
+      "Balls",
+      "S/Rate",
+      "100s",
+      "Average"
+    ],
+    "where_column": "S/Rate",
+    "where_value": "139.09",
+    "select_column": "Matches"
+  },
+  {
+    "question": "How many byes when the draws are less than 0?",
+    "headers": [
+      "Port Fairy FL",
+      "Wins",
+      "Byes",
+      "Losses",
+      "Draws",
+      "Against"
+    ],
+    "where_column": "Draws",
+    "where_value": "0",
+    "select_column": "Byes"
+  },
+  {
+    "question": "What school/club team is Trey Johnson on?",
+    "headers": [
+      "Player",
+      "No.",
+      "Nationality",
+      "Position",
+      "Years in Toronto",
+      "School/Club Team"
+    ],
+    "where_column": "Player",
+    "where_value": "Trey Johnson",
+    "select_column": "School/Club Team"
+  },
+  {
+    "question": "What is every value for passing yards per game if rushing yards per game is 113.6?",
+    "headers": [
+      "Season",
+      "Points per Game",
+      "Total Yards per Game",
+      "Rushing Yards per Game",
+      "Passing Yards per Game",
+      "Sacks",
+      "Interceptions"
+    ],
+    "where_column": "Rushing Yards per Game",
+    "where_value": "113.6",
+    "select_column": "Passing Yards per Game"
+  },
+  {
+    "question": "What nationality is the forward/center position?",
+    "headers": [
+      "Player",
+      "Nationality",
+      "Position",
+      "Years for Grizzlies",
+      "School/Club Team"
+    ],
+    "where_column": "Position",
+    "where_value": "forward/center",
+    "select_column": "Nationality"
+  },
+  {
+    "question": "What is the highest week that had a game against the Pittsburgh Steelers with 22,597 fans in attendance?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "pittsburgh steelers",
+    "select_column": "Week"
+  },
+  {
+    "question": "Which chassis is more recent than 1972 and has more than 0 Pts. ?",
+    "headers": [
+      "Year",
+      "Entrant",
+      "Chassis",
+      "Engine",
+      "Pts."
+    ],
+    "where_column": "Year",
+    "where_value": "1972",
+    "select_column": "Chassis"
+  },
+  {
+    "question": "What was the opponent of the home team of essendon?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "essendon",
+    "select_column": "Away team"
+  },
+  {
+    "question": "what is games when the losses is more than 1, percent is 0.5 and wins is 2?",
+    "headers": [
+      "Quarterback",
+      "Games",
+      "Teams",
+      "Wins",
+      "Losses",
+      "Percent"
+    ],
+    "where_column": "Percent",
+    "where_value": "0.5",
+    "select_column": "Games"
+  },
+  {
+    "question": "What was the lowest pick when the position was OF with the Chicago White Sox?",
+    "headers": [
+      "Pick",
+      "Player",
+      "Team",
+      "Position",
+      "Hometown/School"
+    ],
+    "where_column": "Position",
+    "where_value": "of",
+    "select_column": "Pick"
+  },
+  {
+    "question": "What is the sum of Goals Against, when Lost is 45, and when Points is greater than 68?",
+    "headers": [
+      "Season",
+      "Games",
+      "Lost",
+      "Points",
+      "Pct %",
+      "Goals for",
+      "Goals against",
+      "Playoffs"
+    ],
+    "where_column": "Lost",
+    "where_value": "45",
+    "select_column": "Goals against"
+  },
+  {
+    "question": "When was the event that had Liberia as an opponent and resulted in a 1-0 score?",
+    "headers": [
+      "Date",
+      "Location",
+      "Opponent",
+      "Score",
+      "Competition"
+    ],
+    "where_column": "Opponent",
+    "where_value": "liberia",
+    "select_column": "Date"
+  },
+  {
+    "question": "Which engine finished 7th with the reynard 95i chassis?",
+    "headers": [
+      "Year",
+      "Team",
+      "Chassis",
+      "Engine",
+      "Rank"
+    ],
+    "where_column": "Rank",
+    "where_value": "7th",
+    "select_column": "Engine"
+  },
+  {
+    "question": "Name the Total of jeff sluman?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "jeff sluman",
+    "select_column": "Total"
+  },
+  {
+    "question": "What is the highest November that has a game less than 12, and @ detroit red wings as the opponent?",
+    "headers": [
+      "Game",
+      "November",
+      "Opponent",
+      "Score",
+      "Record",
+      "Points"
+    ],
+    "where_column": "Opponent",
+    "where_value": "@ detroit red wings",
+    "select_column": "November"
+  },
+  {
+    "question": "What's the highest with a capacity of greater than 4,000 and an average of 615?",
+    "headers": [
+      "Team",
+      "Stadium",
+      "Capacity",
+      "Highest",
+      "Lowest",
+      "Average"
+    ],
+    "where_column": "Average",
+    "where_value": "615",
+    "select_column": "Highest"
+  },
+  {
+    "question": "What was the record in the win 7 streak?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Result",
+      "Score",
+      "Record",
+      "Streak"
+    ],
+    "where_column": "Streak",
+    "where_value": "win 7",
+    "select_column": "Record"
+  },
+  {
+    "question": "What was the away team whose opponents scored 8.16 (64)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team score",
+    "where_value": "8.16 (64)",
+    "select_column": "Away team"
+  },
+  {
+    "question": "Which Home team has a Venue of arden street oval?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Venue",
+    "where_value": "arden street oval",
+    "select_column": "Home team"
+  },
+  {
+    "question": "What is the number for the player that has a k position?",
+    "headers": [
+      "Number",
+      "Name",
+      "Position",
+      "Height",
+      "Weight"
+    ],
+    "where_column": "Position",
+    "where_value": "k",
+    "select_column": "Number"
+  },
+  {
+    "question": "What average deaths have 15,0 as the IMR, with a CDR greater than 4,0?",
+    "headers": [
+      "Periodo",
+      "Births",
+      "Deaths",
+      "Difference",
+      "CBR*",
+      "CDR*",
+      "IMR*",
+      "TFR*"
+    ],
+    "where_column": "IMR*",
+    "where_value": "15,0",
+    "select_column": "Deaths"
+  },
+  {
+    "question": "What position in the Vancouver Canucks has a Pick # of 101?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "NHL team",
+    "where_value": "vancouver canucks",
+    "select_column": "Position"
+  },
+  {
+    "question": "What is the 2006 census population when the area is 159?",
+    "headers": [
+      "LGA Name",
+      "Area (km 2 )",
+      "Census 2006 population",
+      "Administrative capital",
+      "Postal Code"
+    ],
+    "where_column": "Area (km 2 )",
+    "where_value": "159",
+    "select_column": "Census 2006 population"
+  },
+  {
+    "question": "What was the bronze medal count of the team that finished with 47 total medals?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "47",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "Tell me the week that has an attendance of 78,301",
+    "headers": [
+      "Week",
+      "Opponent",
+      "Result",
+      "Game site",
+      "Time",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "78,301",
+    "select_column": "Week"
+  },
+  {
+    "question": "What is the total number of First Year, when Displacement CC is greater than 4719, when Engine is V8, when Power HP (kW) is \"335 (246)\", and when Model is \"Ghibli SS\"?",
+    "headers": [
+      "Model",
+      "First Year",
+      "Distribution",
+      "Engine",
+      "Displacement cc",
+      "Power hp (kW)"
+    ],
+    "where_column": "Power hp (kW)",
+    "where_value": "335 (246)",
+    "select_column": "First Year"
+  },
+  {
+    "question": "Who is the entrant when the engine is talbot l6 and the driver is pierre levegh?",
+    "headers": [
+      "Driver",
+      "Entrant",
+      "Constructor",
+      "Chassis",
+      "Engine",
+      "Tyre"
+    ],
+    "where_column": "Driver",
+    "where_value": "pierre levegh",
+    "select_column": "Entrant"
+  },
+  {
+    "question": "What is the latest date at Los Angeles with a game less than 62?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "Location/attendance",
+      "Record"
+    ],
+    "where_column": "Location/attendance",
+    "where_value": "los angeles",
+    "select_column": "Date"
+  },
+  {
+    "question": "What company made the chassis when there were 8 points?",
+    "headers": [
+      "Year",
+      "Entrant",
+      "Chassis",
+      "Engine",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "8",
+    "select_column": "Chassis"
+  },
+  {
+    "question": "What is the original air date of the episode directed by Jeff Melman?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Directed by",
+    "where_value": "Jeff Melman",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "What is the country of origin of the aircraft with a registration s5-hpb?",
+    "headers": [
+      "Aircraft",
+      "Origin",
+      "Role",
+      "Registration",
+      "Number"
+    ],
+    "where_column": "Registration",
+    "where_value": "s5-hpb",
+    "select_column": "Origin"
+  },
+  {
+    "question": "What is Name, when Goals is greater than 14, and when Transfer Fee is \"Youth System\"?",
+    "headers": [
+      "Nat.",
+      "Name",
+      "Since",
+      "Goals",
+      "Ends",
+      "Transfer fee"
+    ],
+    "where_column": "Goals",
+    "where_value": "14",
+    "select_column": "Name"
+  },
+  {
+    "question": "What nationality is the player who went to school at South Florida?",
+    "headers": [
+      "Player",
+      "No.",
+      "Nationality",
+      "Position",
+      "Years for Grizzlies",
+      "School/Club Team"
+    ],
+    "where_column": "School/Club Team",
+    "where_value": "South Florida",
+    "select_column": "Nationality"
+  },
+  {
+    "question": "What is the average Poles, when Wins is 0, when Position is \"nc\", and when Season is before 2004?",
+    "headers": [
+      "Season",
+      "Wins",
+      "Poles",
+      "Podiums",
+      "Position"
+    ],
+    "where_column": "Wins",
+    "where_value": "0",
+    "select_column": "Poles"
+  },
+  {
+    "question": "What is the tries for when 52 was the tries against?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus"
+    ],
+    "where_column": "Tries against",
+    "where_value": "52",
+    "select_column": "Tries for"
+  },
+  {
+    "question": "Name the Rank points which have an Event of wc beijing, and Score points of 13, and a Total of 18?",
+    "headers": [
+      "Shooter",
+      "Event",
+      "Rank points",
+      "Score points",
+      "Total"
+    ],
+    "where_column": "Event",
+    "where_value": "wc beijing",
+    "select_column": "Rank points"
+  },
+  {
+    "question": "Can you tell me the sum of Starts that the Winnings of $139,774, and the Wins smaller than 0?",
+    "headers": [
+      "Year",
+      "Starts",
+      "Wins",
+      "Top 5",
+      "Top 10",
+      "Poles",
+      "Avg. Start",
+      "Avg. Finish",
+      "Winnings",
+      "Position",
+      "Team(s)"
+    ],
+    "where_column": "Winnings",
+    "where_value": "$139,774",
+    "select_column": "Starts"
+  },
+  {
+    "question": "Which state has 5179 (gw\u00d7h) of renewable energy without hydrogen power?wha",
+    "headers": [
+      "Rank",
+      "Rank w/o Hydropower",
+      "State",
+      "% Renewable",
+      "% Renewable w/o Hydro",
+      "Renewable electricity (GW\u2022h)",
+      "Renewable electricity w/o Hydro (GW\u2022h)",
+      "Total electricity (GW\u2022h)"
+    ],
+    "where_column": "Renewable electricity w/o Hydro (GW\u2022h)",
+    "where_value": "5179",
+    "select_column": "State"
+  },
+  {
+    "question": "Who is the writer of Wallace & Gromit: A Close Shave, a short film from before 2008?",
+    "headers": [
+      "Year",
+      "Title",
+      "Director",
+      "Writer",
+      "Notes"
+    ],
+    "where_column": "Notes",
+    "where_value": "short film",
+    "select_column": "Writer"
+  },
+  {
+    "question": "What is the Losing bonus of the club that has 80 tries against ?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Tries against",
+    "where_value": "80",
+    "select_column": "Losing bonus"
+  },
+  {
+    "question": "If Class AAAA is Schertz Clemens and SChool Year is 1987-88, what is Class AA?",
+    "headers": [
+      "School Year",
+      "Class A",
+      "Class AA",
+      "Class AAA",
+      "Class AAAA",
+      "Class AAAAA"
+    ],
+    "where_column": "Class AAAA",
+    "where_value": "schertz clemens",
+    "select_column": "Class AA"
+  },
+  {
+    "question": "what is the competition on 10 august 2011?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Date",
+    "where_value": "10 august 2011",
+    "select_column": "Competition"
+  },
+  {
+    "question": "What method does the opponent of Dan New use?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round"
+    ],
+    "where_column": "Opponent",
+    "where_value": "dan new",
+    "select_column": "Method"
+  },
+  {
+    "question": "Who had the fastest lap where Joan Lascorz was the winner?",
+    "headers": [
+      "Date",
+      "Round",
+      "Circuit",
+      "Pole Position",
+      "Fastest Lap",
+      "Race Winner",
+      "Report"
+    ],
+    "where_column": "Race Winner",
+    "where_value": "joan lascorz",
+    "select_column": "Fastest Lap"
+  },
+  {
+    "question": "how many locations have a record of 14-38?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "14-38",
+    "select_column": "Location Attendance"
+  },
+  {
+    "question": "What is the total of laps run by the driver with a grid under 17 and a time of +5.088?",
+    "headers": [
+      "Rider",
+      "Bike",
+      "Laps",
+      "Time",
+      "Grid"
+    ],
+    "where_column": "Time",
+    "where_value": "+5.088",
+    "select_column": "Laps"
+  },
+  {
+    "question": "What is the Area of the Saint-Isidore Parish with a Population smaller than 4,268?",
+    "headers": [
+      "Official Name",
+      "Status",
+      "Area km 2",
+      "Population",
+      "Census Ranking"
+    ],
+    "where_column": "Official Name",
+    "where_value": "saint-isidore",
+    "select_column": "Area km 2"
+  }
+]

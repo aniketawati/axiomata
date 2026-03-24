@@ -1,0 +1,865 @@
+[
+  {
+    "question": "What is the highest loss with a long more than 61?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "highest", "role": "FILLER"},
+      {"token": "loss", "role": "SELECT_HINT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "long", "role": "TRIGGER"},
+      {"token": "more", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "61?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Which system is named ELKJS?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "system", "role": "SELECT_HINT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "named", "role": "TRIGGER"},
+      {"token": "ELKJS?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "If the season number is 2.08, who was the episode written by?",
+    "tokens": [
+      {"token": "If", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "season", "role": "TRIGGER"},
+      {"token": "number", "role": "TRIGGER"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "2.08,", "role": "VALUE"},
+      {"token": "who", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "episode", "role": "FILLER"},
+      {"token": "written", "role": "SELECT_HINT"},
+      {"token": "by?", "role": "SELECT_HINT"}
+    ]
+  },
+  {
+    "question": "What was the score when the decision was Raycroft, with attendance larger than 18,277, on February 11?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "score", "role": "SELECT_HINT"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "decision", "role": "CONTEXT"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "Raycroft,", "role": "CONTEXT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "attendance", "role": "CONTEXT"},
+      {"token": "larger", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "18,277,", "role": "CONTEXT"},
+      {"token": "on", "role": "TRIGGER"},
+      {"token": "February", "role": "VALUE"},
+      {"token": "11?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Who is the player with a 70-75=145 score?",
+    "tokens": [
+      {"token": "Who", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "player", "role": "SELECT_HINT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "70-75=145", "role": "VALUE"},
+      {"token": "score?", "role": "TRIGGER"}
+    ]
+  },
+  {
+    "question": "Which Runs has a Rank of =5 and an Opponent of south australia?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "Runs", "role": "SELECT_HINT"},
+      {"token": "has", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Rank", "role": "CONTEXT"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "=5", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "an", "role": "FILLER"},
+      {"token": "Opponent", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "south", "role": "VALUE"},
+      {"token": "australia?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What event was Donald Ouimet involved?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "event", "role": "SELECT_HINT"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "Donald", "role": "VALUE"},
+      {"token": "Ouimet", "role": "VALUE"},
+      {"token": "involved?", "role": "TRIGGER"}
+    ]
+  },
+  {
+    "question": "Can you tell me the Record that has the Home of detroit, and the Visitor of phoenix?",
+    "tokens": [
+      {"token": "Can", "role": "FILLER"},
+      {"token": "you", "role": "FILLER"},
+      {"token": "tell", "role": "FILLER"},
+      {"token": "me", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "Record", "role": "SELECT_HINT"},
+      {"token": "that", "role": "FILLER"},
+      {"token": "has", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "Home", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "detroit,", "role": "VALUE"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "Visitor", "role": "CONTEXT"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "phoenix?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "What is the nssdc id for Echo 1?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "nssdc", "role": "SELECT_HINT"},
+      {"token": "id", "role": "SELECT_HINT"},
+      {"token": "for", "role": "TRIGGER"},
+      {"token": "Echo", "role": "VALUE"},
+      {"token": "1?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Which school has a state authority and a roll of 318?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "school", "role": "SELECT_HINT"},
+      {"token": "has", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "state", "role": "CONTEXT"},
+      {"token": "authority", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "roll", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "318?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "what is the average wins when the podiums is more than 1, points is 80 and starts is less than 28?",
+    "tokens": [
+      {"token": "what", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "average", "role": "FILLER"},
+      {"token": "wins", "role": "SELECT_HINT"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "podiums", "role": "TRIGGER"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "more", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "1,", "role": "VALUE"},
+      {"token": "points", "role": "CONTEXT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "80", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "starts", "role": "CONTEXT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "less", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "28?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "What is the population of the settlement with the cyrillic name of добрица?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "population", "role": "SELECT_HINT"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "settlement", "role": "FILLER"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "cyrillic", "role": "TRIGGER"},
+      {"token": "name", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "добрица?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Which Rank has a Goals smaller than 76, and a Matches larger than 270?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "Rank", "role": "SELECT_HINT"},
+      {"token": "has", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Goals", "role": "TRIGGER"},
+      {"token": "smaller", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "76,", "role": "VALUE"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Matches", "role": "CONTEXT"},
+      {"token": "larger", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "270?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "Which Manchester United captain is sponsored by Nike?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "Manchester", "role": "CONTEXT"},
+      {"token": "United", "role": "CONTEXT"},
+      {"token": "captain", "role": "SELECT_HINT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "sponsored", "role": "FILLER"},
+      {"token": "by", "role": "TRIGGER"},
+      {"token": "Nike?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "How many votes did Wales cast when Northern England cast 6?",
+    "tokens": [
+      {"token": "How", "role": "QWORD"},
+      {"token": "many", "role": "QWORD"},
+      {"token": "votes", "role": "SELECT_HINT"},
+      {"token": "did", "role": "FILLER"},
+      {"token": "Wales", "role": "SELECT_HINT"},
+      {"token": "cast", "role": "FILLER"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "Northern", "role": "TRIGGER"},
+      {"token": "England", "role": "TRIGGER"},
+      {"token": "cast", "role": "FILLER"},
+      {"token": "6?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "what is the rank when the player is henry shefflin and the matches is higher than 4?",
+    "tokens": [
+      {"token": "what", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "rank", "role": "SELECT_HINT"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "player", "role": "CONTEXT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "henry", "role": "CONTEXT"},
+      {"token": "shefflin", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "matches", "role": "TRIGGER"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "higher", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "4?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "When does V Madgwick Cup take place?",
+    "tokens": [
+      {"token": "When", "role": "QWORD"},
+      {"token": "does", "role": "FILLER"},
+      {"token": "V", "role": "VALUE"},
+      {"token": "Madgwick", "role": "VALUE"},
+      {"token": "Cup", "role": "VALUE"},
+      {"token": "take", "role": "FILLER"},
+      {"token": "place?", "role": "FILLER"}
+    ]
+  },
+  {
+    "question": "What is the High assists with a Date that is march 31?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "High", "role": "SELECT_HINT"},
+      {"token": "assists", "role": "SELECT_HINT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Date", "role": "TRIGGER"},
+      {"token": "that", "role": "FILLER"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "march", "role": "VALUE"},
+      {"token": "31?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What years does Kakahi school, with a decile of 3, have?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "years", "role": "SELECT_HINT"},
+      {"token": "does", "role": "FILLER"},
+      {"token": "Kakahi", "role": "CONTEXT"},
+      {"token": "school,", "role": "CONTEXT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "decile", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "3,", "role": "VALUE"},
+      {"token": "have?", "role": "FILLER"}
+    ]
+  },
+  {
+    "question": "what is the total sack when totaltk is 1 and asst. is more than 0?",
+    "tokens": [
+      {"token": "what", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "total", "role": "SELECT_HINT"},
+      {"token": "sack", "role": "SELECT_HINT"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "totaltk", "role": "TRIGGER"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "1", "role": "VALUE"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "asst.", "role": "CONTEXT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "more", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "0?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "What is the overall number for a kicker with a pick of less than 6?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "overall", "role": "SELECT_HINT"},
+      {"token": "number", "role": "FILLER"},
+      {"token": "for", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "kicker", "role": "VALUE"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "pick", "role": "CONTEXT"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "less", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "6?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "What was the score for the match where the home team was Leicester City?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "score", "role": "SELECT_HINT"},
+      {"token": "for", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "match", "role": "FILLER"},
+      {"token": "where", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "home", "role": "TRIGGER"},
+      {"token": "team", "role": "TRIGGER"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "Leicester", "role": "VALUE"},
+      {"token": "City?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "At the rate where 1800 kwh/kwp•y is 1.1, what is the value of 2400 kwh/kwp•y?",
+    "tokens": [
+      {"token": "At", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "rate", "role": "FILLER"},
+      {"token": "where", "role": "FILLER"},
+      {"token": "1800", "role": "TRIGGER"},
+      {"token": "kwh/kwp•y", "role": "TRIGGER"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "1.1,", "role": "VALUE"},
+      {"token": "what", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "value", "role": "FILLER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "2400", "role": "SELECT_HINT"},
+      {"token": "kwh/kwp•y?", "role": "SELECT_HINT"}
+    ]
+  },
+  {
+    "question": "Which boys/girls school is a day school with an anglican denomination?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "boys/girls", "role": "SELECT_HINT"},
+      {"token": "school", "role": "SELECT_HINT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "day", "role": "CONTEXT"},
+      {"token": "school", "role": "CONTEXT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "an", "role": "FILLER"},
+      {"token": "anglican", "role": "VALUE"},
+      {"token": "denomination?", "role": "TRIGGER"}
+    ]
+  },
+  {
+    "question": "The player who plays left wing is from what college/junior/club team? ",
+    "tokens": [
+      {"token": "The", "role": "FILLER"},
+      {"token": "player", "role": "FILLER"},
+      {"token": "who", "role": "FILLER"},
+      {"token": "plays", "role": "FILLER"},
+      {"token": "left", "role": "VALUE"},
+      {"token": "wing", "role": "VALUE"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "from", "role": "FILLER"},
+      {"token": "what", "role": "QWORD"},
+      {"token": "college/junior/club", "role": "SELECT_HINT"},
+      {"token": "team?", "role": "SELECT_HINT"}
+    ]
+  },
+  {
+    "question": "In 1879-81 with number built 4, what is the LMS nos?",
+    "tokens": [
+      {"token": "In", "role": "TRIGGER"},
+      {"token": "1879-81", "role": "VALUE"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "number", "role": "CONTEXT"},
+      {"token": "built", "role": "CONTEXT"},
+      {"token": "4,", "role": "CONTEXT"},
+      {"token": "what", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "LMS", "role": "SELECT_HINT"},
+      {"token": "nos?", "role": "SELECT_HINT"}
+    ]
+  },
+  {
+    "question": "What place did Don Whitt finish?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "place", "role": "SELECT_HINT"},
+      {"token": "did", "role": "FILLER"},
+      {"token": "Don", "role": "VALUE"},
+      {"token": "Whitt", "role": "VALUE"},
+      {"token": "finish?", "role": "FILLER"}
+    ]
+  },
+  {
+    "question": "What is the number when against is rajasthan royals?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "number", "role": "SELECT_HINT"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "against", "role": "TRIGGER"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "rajasthan", "role": "VALUE"},
+      {"token": "royals?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What was the crowd size at Victoria Park?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "crowd", "role": "SELECT_HINT"},
+      {"token": "size", "role": "FILLER"},
+      {"token": "at", "role": "TRIGGER"},
+      {"token": "Victoria", "role": "VALUE"},
+      {"token": "Park?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What CCM Chart had 18 total weeks?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "CCM", "role": "SELECT_HINT"},
+      {"token": "Chart", "role": "SELECT_HINT"},
+      {"token": "had", "role": "FILLER"},
+      {"token": "18", "role": "VALUE"},
+      {"token": "total", "role": "FILLER"},
+      {"token": "weeks?", "role": "TRIGGER"}
+    ]
+  },
+  {
+    "question": "What was the highest attendance of a game that had a score of 3-5?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "highest", "role": "FILLER"},
+      {"token": "attendance", "role": "SELECT_HINT"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "game", "role": "FILLER"},
+      {"token": "that", "role": "FILLER"},
+      {"token": "had", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "score", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "3-5?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "How many losses have jake sharp as the name, with a long less than 30?",
+    "tokens": [
+      {"token": "How", "role": "QWORD"},
+      {"token": "many", "role": "QWORD"},
+      {"token": "losses", "role": "SELECT_HINT"},
+      {"token": "have", "role": "FILLER"},
+      {"token": "jake", "role": "CONTEXT"},
+      {"token": "sharp", "role": "CONTEXT"},
+      {"token": "as", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "name,", "role": "CONTEXT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "long", "role": "TRIGGER"},
+      {"token": "less", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "30?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Name the number of points for field goals being 1",
+    "tokens": [
+      {"token": "Name", "role": "QWORD"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "number", "role": "FILLER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "points", "role": "SELECT_HINT"},
+      {"token": "for", "role": "FILLER"},
+      {"token": "field", "role": "TRIGGER"},
+      {"token": "goals", "role": "TRIGGER"},
+      {"token": "being", "role": "FILLER"},
+      {"token": "1", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "who is the the womens doubles with mens doubles being leopold bauer alfred kohlhauser",
+    "tokens": [
+      {"token": "who", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "womens", "role": "SELECT_HINT"},
+      {"token": "doubles", "role": "SELECT_HINT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "mens", "role": "TRIGGER"},
+      {"token": "doubles", "role": "TRIGGER"},
+      {"token": "being", "role": "FILLER"},
+      {"token": "leopold", "role": "VALUE"},
+      {"token": "bauer", "role": "VALUE"},
+      {"token": "alfred", "role": "VALUE"},
+      {"token": "kohlhauser", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What is the lowest number of points for an entrant with a Jordan 192 chassis?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "lowest", "role": "FILLER"},
+      {"token": "number", "role": "FILLER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "points", "role": "SELECT_HINT"},
+      {"token": "for", "role": "FILLER"},
+      {"token": "an", "role": "FILLER"},
+      {"token": "entrant", "role": "FILLER"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Jordan", "role": "VALUE"},
+      {"token": "192", "role": "VALUE"},
+      {"token": "chassis?", "role": "TRIGGER"}
+    ]
+  },
+  {
+    "question": "What was the score for the tie that had Shrewsbury Town as home team?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "score", "role": "SELECT_HINT"},
+      {"token": "for", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "tie", "role": "FILLER"},
+      {"token": "that", "role": "FILLER"},
+      {"token": "had", "role": "FILLER"},
+      {"token": "Shrewsbury", "role": "VALUE"},
+      {"token": "Town", "role": "VALUE"},
+      {"token": "as", "role": "TRIGGER"},
+      {"token": "home", "role": "TRIGGER"},
+      {"token": "team?", "role": "FILLER"}
+    ]
+  },
+  {
+    "question": "When maker is the model what is the nupowr 167?",
+    "tokens": [
+      {"token": "When", "role": "FILLER"},
+      {"token": "maker", "role": "VALUE"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "model", "role": "TRIGGER"},
+      {"token": "what", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "nupowr", "role": "SELECT_HINT"},
+      {"token": "167?", "role": "SELECT_HINT"}
+    ]
+  },
+  {
+    "question": "What was the nickname of the team in the Geelong West Cricket & Football Club?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "nickname", "role": "SELECT_HINT"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "team", "role": "FILLER"},
+      {"token": "in", "role": "TRIGGER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "Geelong", "role": "VALUE"},
+      {"token": "West", "role": "VALUE"},
+      {"token": "Cricket", "role": "VALUE"},
+      {"token": "&", "role": "VALUE"},
+      {"token": "Football", "role": "VALUE"},
+      {"token": "Club?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What's the score when the Wolverhampton Wanderers played at home?",
+    "tokens": [
+      {"token": "What's", "role": "QWORD"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "score", "role": "SELECT_HINT"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "Wolverhampton", "role": "VALUE"},
+      {"token": "Wanderers", "role": "VALUE"},
+      {"token": "played", "role": "FILLER"},
+      {"token": "at", "role": "TRIGGER"},
+      {"token": "home?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "Which Grid has more than 8 Laps, and a Manufacturer of honda, and a Time/Retired of retirement?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "Grid", "role": "SELECT_HINT"},
+      {"token": "has", "role": "FILLER"},
+      {"token": "more", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "8", "role": "CONTEXT"},
+      {"token": "Laps,", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Manufacturer", "role": "CONTEXT"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "honda,", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Time/Retired", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "retirement?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Tell me the competition that happened on 14 june 2008",
+    "tokens": [
+      {"token": "Tell", "role": "FILLER"},
+      {"token": "me", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "competition", "role": "SELECT_HINT"},
+      {"token": "that", "role": "FILLER"},
+      {"token": "happened", "role": "FILLER"},
+      {"token": "on", "role": "TRIGGER"},
+      {"token": "14", "role": "VALUE"},
+      {"token": "june", "role": "VALUE"},
+      {"token": "2008", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What is the average round against opponent Klas Akesson?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "average", "role": "FILLER"},
+      {"token": "round", "role": "SELECT_HINT"},
+      {"token": "against", "role": "TRIGGER"},
+      {"token": "opponent", "role": "FILLER"},
+      {"token": "Klas", "role": "VALUE"},
+      {"token": "Akesson?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What episode aired on 18 April 2007?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "episode", "role": "SELECT_HINT"},
+      {"token": "aired", "role": "FILLER"},
+      {"token": "on", "role": "TRIGGER"},
+      {"token": "18", "role": "VALUE"},
+      {"token": "April", "role": "VALUE"},
+      {"token": "2007?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "What is To par, when Country is \"United States\", when Money ( £ ) is greater than 125,000, and when Score is \"67-70-68-71=276\"?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "To", "role": "SELECT_HINT"},
+      {"token": "par,", "role": "SELECT_HINT"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "Country", "role": "TRIGGER"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "\"United", "role": "VALUE"},
+      {"token": "States\",", "role": "VALUE"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "Money", "role": "CONTEXT"},
+      {"token": "(", "role": "CONTEXT"},
+      {"token": "£", "role": "CONTEXT"},
+      {"token": ")", "role": "CONTEXT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "greater", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "125,000,", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "Score", "role": "CONTEXT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "\"67-70-68-71=276\"?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "What was the prior position held by Wyman Webb?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "prior", "role": "SELECT_HINT"},
+      {"token": "position", "role": "SELECT_HINT"},
+      {"token": "held", "role": "FILLER"},
+      {"token": "by", "role": "FILLER"},
+      {"token": "Wyman", "role": "VALUE"},
+      {"token": "Webb?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Where was the game played when the high assists were scored by billups , stuckey (4)?",
+    "tokens": [
+      {"token": "Where", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "game", "role": "FILLER"},
+      {"token": "played", "role": "FILLER"},
+      {"token": "when", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "high", "role": "TRIGGER"},
+      {"token": "assists", "role": "TRIGGER"},
+      {"token": "were", "role": "FILLER"},
+      {"token": "scored", "role": "FILLER"},
+      {"token": "by", "role": "FILLER"},
+      {"token": "billups", "role": "VALUE"},
+      {"token": ",", "role": "VALUE"},
+      {"token": "stuckey", "role": "VALUE"},
+      {"token": "(4)?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Which Top 10 is the lowest one that has Winnings of $405,300, and an Avg Start smaller than 30?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "Top", "role": "SELECT_HINT"},
+      {"token": "10", "role": "SELECT_HINT"},
+      {"token": "is", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "lowest", "role": "FILLER"},
+      {"token": "one", "role": "FILLER"},
+      {"token": "that", "role": "FILLER"},
+      {"token": "has", "role": "FILLER"},
+      {"token": "Winnings", "role": "CONTEXT"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "$405,300,", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "an", "role": "FILLER"},
+      {"token": "Avg", "role": "TRIGGER"},
+      {"token": "Start", "role": "TRIGGER"},
+      {"token": "smaller", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "30?", "role": "VALUE"}
+    ]
+  },
+  {
+    "question": "Which Touchdowns have an Extra points smaller than 5, and a Player of clark, and Field goals larger than 0?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "Touchdowns", "role": "SELECT_HINT"},
+      {"token": "have", "role": "FILLER"},
+      {"token": "an", "role": "FILLER"},
+      {"token": "Extra", "role": "CONTEXT"},
+      {"token": "points", "role": "CONTEXT"},
+      {"token": "smaller", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "5,", "role": "CONTEXT"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Player", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "clark,", "role": "VALUE"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "Field", "role": "CONTEXT"},
+      {"token": "goals", "role": "CONTEXT"},
+      {"token": "larger", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "0?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "What was the Vanwall time/retired with 49 laps?",
+    "tokens": [
+      {"token": "What", "role": "QWORD"},
+      {"token": "was", "role": "FILLER"},
+      {"token": "the", "role": "FILLER"},
+      {"token": "Vanwall", "role": "CONTEXT"},
+      {"token": "time/retired", "role": "SELECT_HINT"},
+      {"token": "with", "role": "FILLER"},
+      {"token": "49", "role": "CONTEXT"},
+      {"token": "laps?", "role": "CONTEXT"}
+    ]
+  },
+  {
+    "question": "Which Attendance has a Result of w 23-21, and a Week smaller than 5?",
+    "tokens": [
+      {"token": "Which", "role": "QWORD"},
+      {"token": "Attendance", "role": "SELECT_HINT"},
+      {"token": "has", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Result", "role": "TRIGGER"},
+      {"token": "of", "role": "FILLER"},
+      {"token": "w", "role": "VALUE"},
+      {"token": "23-21,", "role": "VALUE"},
+      {"token": "and", "role": "FILLER"},
+      {"token": "a", "role": "FILLER"},
+      {"token": "Week", "role": "CONTEXT"},
+      {"token": "smaller", "role": "FILLER"},
+      {"token": "than", "role": "FILLER"},
+      {"token": "5?", "role": "CONTEXT"}
+    ]
+  }
+]

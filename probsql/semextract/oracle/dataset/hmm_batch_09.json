@@ -1,0 +1,728 @@
+[
+  {
+    "question": "How many Draws have 30 Points, and less than 33 Goals against?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Points",
+    "where_value": "30",
+    "select_column": "Draws"
+  },
+  {
+    "question": "For the train built in 2012 with less than 179 seats, what is the Fleet ID?",
+    "headers": [
+      "Year built",
+      "Builder",
+      "Model",
+      "Fleet ID",
+      "Seats"
+    ],
+    "where_column": "Year built",
+    "where_value": "2012",
+    "select_column": "Fleet ID"
+  },
+  {
+    "question": "what is the highest draw when the place is less than 3 and the percentage is 30.71%?",
+    "headers": [
+      "Draw",
+      "Artist",
+      "Song",
+      "Percentage",
+      "Place"
+    ],
+    "where_column": "Percentage",
+    "where_value": "30.71%",
+    "select_column": "Draw"
+  },
+  {
+    "question": "What is the lowest rank of the United States, with fewer than 4 bronze medals?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Nation",
+    "where_value": "united states",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What countries have a margin of victory at 6 strokes?",
+    "headers": [
+      "Year",
+      "Dates",
+      "Champion",
+      "Country",
+      "Score",
+      "To par",
+      "Margin of victory",
+      "Purse ( US$ )",
+      "Winners share"
+    ],
+    "where_column": "Margin of victory",
+    "where_value": "6 strokes",
+    "select_column": "Country"
+  },
+  {
+    "question": "Which region has a date of 1970?",
+    "headers": [
+      "Region",
+      "Date",
+      "Label",
+      "Format",
+      "Catalogue"
+    ],
+    "where_column": "Date",
+    "where_value": "1970",
+    "select_column": "Region"
+  },
+  {
+    "question": "What was the score of the game on November 9 when Atlanta was the visiting team?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Decision",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "november 9",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the number in season of the episode titled \"Cadaver\"?",
+    "headers": [
+      "Season no.",
+      "Series no.",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Cadaver\"",
+    "select_column": "Season no."
+  },
+  {
+    "question": "How many players had high points in the location/attendance FedexForum 11,498 respectively?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Location Attendance",
+    "where_value": "FedExForum 11,498",
+    "select_column": "High points"
+  },
+  {
+    "question": "What car had the fewest laps with a qual of 138.750?",
+    "headers": [
+      "Year",
+      "Start",
+      "Qual",
+      "Rank",
+      "Finish",
+      "Laps"
+    ],
+    "where_column": "Qual",
+    "where_value": "138.750",
+    "select_column": "Laps"
+  },
+  {
+    "question": "when was the episode titled \"cracked\" originally aired?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Cracked\"",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "What is the average Lost, when Games is less than 82, when Points is less than 95, and when Pct % is less than 0.506?",
+    "headers": [
+      "Season",
+      "Games",
+      "Lost",
+      "Points",
+      "Pct %",
+      "Goals for",
+      "Goals against",
+      "Playoffs"
+    ],
+    "where_column": "Pct %",
+    "where_value": "0.506",
+    "select_column": "Lost"
+  },
+  {
+    "question": "Which Name has a Championship larger than 2, and a Total larger than 4, and an FA Cup larger than 0?",
+    "headers": [
+      "Name",
+      "Championship",
+      "League Cup",
+      "FA Cup",
+      "Total"
+    ],
+    "where_column": "FA Cup",
+    "where_value": "0",
+    "select_column": "Name"
+  },
+  {
+    "question": "The Powerbook 100 model has what processor?",
+    "headers": [
+      "Processor",
+      "Model",
+      "Clock speed (MHz)",
+      "L1 cache (bytes)",
+      "Introduced",
+      "Discontinued"
+    ],
+    "where_column": "Model",
+    "where_value": "powerbook 100",
+    "select_column": "Processor"
+  },
+  {
+    "question": "What shows for notes when rank is more than 4, and country is South Korea?",
+    "headers": [
+      "Rank",
+      "Rowers",
+      "Country",
+      "Time",
+      "Notes"
+    ],
+    "where_column": "Country",
+    "where_value": "south korea",
+    "select_column": "Notes"
+  },
+  {
+    "question": "What percent of respondents had no opinion on George H.W. Bush?",
+    "headers": [
+      "Result",
+      "Barack Obama",
+      "George H. W. Bush",
+      "Ronald Reagan",
+      "Jimmy Carter",
+      "Gerald Ford",
+      "Richard Nixon"
+    ],
+    "where_column": "Result",
+    "where_value": "no opinion",
+    "select_column": "George H. W. Bush"
+  },
+  {
+    "question": "What is the name of the constructor when report shows report in 1955?",
+    "headers": [
+      "Year",
+      "Driver",
+      "Constructor",
+      "Category",
+      "Location",
+      "Report"
+    ],
+    "where_column": "Year",
+    "where_value": "1955",
+    "select_column": "Constructor"
+  },
+  {
+    "question": "What is the status of the game where there was more than 22 against?",
+    "headers": [
+      "Opposing Team",
+      "Against",
+      "Date",
+      "Venue",
+      "Status"
+    ],
+    "where_column": "Against",
+    "where_value": "22",
+    "select_column": "Status"
+  },
+  {
+    "question": "Which English winning song had the winner aris runtuwene?",
+    "headers": [
+      "Season",
+      "Winner",
+      "Winning Song",
+      "Winning Song (English Title)",
+      "Debut Album"
+    ],
+    "where_column": "Winner",
+    "where_value": "aris runtuwene",
+    "select_column": "Winning Song (English Title)"
+  },
+  {
+    "question": "What is the number of Games for Partizan Belgrade player Nikola Pekovi\u0107 with a Rank of more than 4?",
+    "headers": [
+      "Rank",
+      "Name",
+      "Team",
+      "Games",
+      "Rebounds"
+    ],
+    "where_column": "Rank",
+    "where_value": "4",
+    "select_column": "Games"
+  },
+  {
+    "question": "How many weeks in the top-10 did Beats International have?",
+    "headers": [
+      "Entered [A ]",
+      "Weeks in top 10",
+      "Single",
+      "Artist",
+      "Peak",
+      "Peak reached [A ]",
+      "Weeks at peak"
+    ],
+    "where_column": "Artist",
+    "where_value": "Beats International",
+    "select_column": "Weeks in top 10"
+  },
+  {
+    "question": "What is the largest amount of wins that was before the 2007 season, as well as the Team being silverstone motorsport academy?",
+    "headers": [
+      "Season",
+      "Series",
+      "Team",
+      "Races",
+      "Wins",
+      "Poles",
+      "Podiums"
+    ],
+    "where_column": "Team",
+    "where_value": "silverstone motorsport academy",
+    "select_column": "Wins"
+  },
+  {
+    "question": "What is the lowest pole with a Flap larger than 5, and a before race 155?",
+    "headers": [
+      "Season",
+      "Race",
+      "Podium",
+      "Pole",
+      "FLap"
+    ],
+    "where_column": "Race",
+    "where_value": "155",
+    "select_column": "Pole"
+  },
+  {
+    "question": "Who position did matthew tassone who was drafted after round 5 play?",
+    "headers": [
+      "Round",
+      "Player",
+      "Position",
+      "Nationality",
+      "College/Junior/Club Team (League)"
+    ],
+    "where_column": "Player",
+    "where_value": "matthew tassone",
+    "select_column": "Position"
+  },
+  {
+    "question": "WHAT IS THE SCORE WITH THE TEAM OF INDIANA?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Team",
+    "where_value": "indiana",
+    "select_column": "Score"
+  },
+  {
+    "question": "If the equation is (10 times 8) + 4, what would be the 2nd throw?",
+    "headers": [
+      "1st throw",
+      "2nd throw",
+      "3rd throw",
+      "Equation",
+      "Result"
+    ],
+    "where_column": "Equation",
+    "where_value": "(10 times 8) + 4",
+    "select_column": "2nd throw"
+  },
+  {
+    "question": "What is the local name given to the city of Canberra?",
+    "headers": [
+      "Country ( exonym )",
+      "Capital ( exonym )",
+      "Country ( endonym )",
+      "Capital ( endonym )",
+      "Official or native language(s) (alphabet/script)"
+    ],
+    "where_column": "Capital ( exonym )",
+    "where_value": "Canberra",
+    "select_column": "Capital ( endonym )"
+  },
+  {
+    "question": "What is the To par of the New Zealand Player?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Country",
+    "where_value": "new zealand",
+    "select_column": "To par"
+  },
+  {
+    "question": "What is the total number of Rolls of State schools in Hapuku with a Decile greater than 4?",
+    "headers": [
+      "Name",
+      "Years",
+      "Gender",
+      "Area",
+      "Authority",
+      "Decile",
+      "Roll"
+    ],
+    "where_column": "Area",
+    "where_value": "hapuku",
+    "select_column": "Roll"
+  },
+  {
+    "question": "Which School has Ages of 11-16, and an Ofsted smaller than 106142, and a Capacity of 1206?",
+    "headers": [
+      "School",
+      "Locality",
+      "Ages",
+      "Capacity",
+      "Ofsted"
+    ],
+    "where_column": "Ages",
+    "where_value": "11-16",
+    "select_column": "School"
+  },
+  {
+    "question": "what is the soap opera when the duration is 18 years and the character is miley byrne?",
+    "headers": [
+      "Actor",
+      "Character",
+      "Soap Opera",
+      "Years",
+      "Duration"
+    ],
+    "where_column": "Character",
+    "where_value": "miley byrne",
+    "select_column": "Soap Opera"
+  },
+  {
+    "question": "What is the year founded for the team Dinos?",
+    "headers": [
+      "Institution",
+      "Team",
+      "City",
+      "Province",
+      "Founded",
+      "Affiliation",
+      "Enrollment",
+      "Endowment",
+      "Football stadium",
+      "Capacity"
+    ],
+    "where_column": "Team",
+    "where_value": "Dinos",
+    "select_column": "Founded"
+  },
+  {
+    "question": "What is the power output (kw) of builder zhuzhou, model hxd1d, with a total production of 2?",
+    "headers": [
+      "Model",
+      "Build year",
+      "Top speed (In operation) (km/h)",
+      "Power output (kW)",
+      "Builder (Family)",
+      "Total production"
+    ],
+    "where_column": "Model",
+    "where_value": "hxd1d",
+    "select_column": "Power output (kW)"
+  },
+  {
+    "question": "who are the writer of the series episode number 170?",
+    "headers": [
+      "Season no.",
+      "Series no.",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. Viewers (millions)"
+    ],
+    "where_column": "Series no.",
+    "where_value": "170",
+    "select_column": "Written by"
+  },
+  {
+    "question": "Which Series has a Home of 2\u20130, and an Opponent of panathinaikos?",
+    "headers": [
+      "Season",
+      "Competition",
+      "Round",
+      "Opponent",
+      "Home",
+      "Away",
+      "Series"
+    ],
+    "where_column": "Opponent",
+    "where_value": "panathinaikos",
+    "select_column": "Series"
+  },
+  {
+    "question": "What is the highest rank for the boys swimming team in Albuquerque?",
+    "headers": [
+      "Rank",
+      "# of Titles",
+      "School",
+      "City",
+      "Sport",
+      "First",
+      "Last"
+    ],
+    "where_column": "City",
+    "where_value": "albuquerque",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What's the 1981 census of Livorno?",
+    "headers": [
+      "#",
+      "City",
+      "1981 Census",
+      "1991 Census",
+      "2001 Census",
+      "2010 Est.",
+      "Region"
+    ],
+    "where_column": "City",
+    "where_value": "Livorno",
+    "select_column": "1981 Census"
+  },
+  {
+    "question": "COunt the EBIT (US $m) which has a Revenue (US $million) larger than 434.8 and a Net profit (US $m) larger than 96.4?",
+    "headers": [
+      "Year to April",
+      "Revenue (US $million)",
+      "EBIT (US $m)",
+      "Net profit (US $m)",
+      "Earnings per share (\u00a2)"
+    ],
+    "where_column": "Revenue (US $million)",
+    "where_value": "434.8",
+    "select_column": "EBIT (US $m)"
+  },
+  {
+    "question": "What was the result when he went 1 round against jeremy beck?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Round",
+      "Time",
+      "Location"
+    ],
+    "where_column": "Opponent",
+    "where_value": "jeremy beck",
+    "select_column": "Res."
+  },
+  {
+    "question": "Which team scored l 87\u2013115 (ot)?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Score",
+    "where_value": "l 87\u2013115 (ot)",
+    "select_column": "Team"
+  },
+  {
+    "question": "How many assists did the player with 54 penalty minutes have?",
+    "headers": [
+      "Name",
+      "Hometown",
+      "Games",
+      "Goals",
+      "Assists",
+      "Points",
+      "Pen. Min."
+    ],
+    "where_column": "Pen. Min.",
+    "where_value": "54",
+    "select_column": "Assists"
+  },
+  {
+    "question": "What is the Intergiro classification of Nicolaj bo Larsen, who has a Fabrizio guidi point classification?",
+    "headers": [
+      "Stage",
+      "Winner",
+      "General classification",
+      "Points classification",
+      "Mountains classification",
+      "Intergiro classification",
+      "Trofeo Fast Team"
+    ],
+    "where_column": "Points classification",
+    "where_value": "fabrizio guidi",
+    "select_column": "Intergiro classification"
+  },
+  {
+    "question": "What is the highest Money ($), when Top Par is E, and when Player is Ernie Els?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "To par",
+    "where_value": "e",
+    "select_column": "Money ( $ )"
+  },
+  {
+    "question": "what is the media debut for the asian black bear?",
+    "headers": [
+      "Name",
+      "Sweet",
+      "Species",
+      "Gender",
+      "Attribute",
+      "Birthday",
+      "Media Debut",
+      "Voice Actor"
+    ],
+    "where_column": "Species",
+    "where_value": "Asian black bear",
+    "select_column": "Media Debut"
+  },
+  {
+    "question": "What is the most lost games for the team with a difference smaller than 86 and points of 32?",
+    "headers": [
+      "Team",
+      "Played",
+      "Drew",
+      "Lost",
+      "Against",
+      "Difference",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "32",
+    "select_column": "Lost"
+  },
+  {
+    "question": "What are the conditions for the athens circuit?",
+    "headers": [
+      "Circuit",
+      "Difficulty",
+      "Turns",
+      "Direction",
+      "Setting",
+      "Conditions",
+      "Unlock Order",
+      "Unlocks",
+      "Unlocked by"
+    ],
+    "where_column": "Circuit",
+    "where_value": "Athens",
+    "select_column": "Conditions"
+  },
+  {
+    "question": "How many were in Attendance on October 8?",
+    "headers": [
+      "Game",
+      "Date",
+      "Score",
+      "Location",
+      "Time",
+      "Attendance"
+    ],
+    "where_column": "Date",
+    "where_value": "october 8",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "When did the enews start source start?",
+    "headers": [
+      "Name",
+      "Country",
+      "Loan Club",
+      "Started",
+      "Ended",
+      "Start Source"
+    ],
+    "where_column": "Start Source",
+    "where_value": "enews",
+    "select_column": "Started"
+  },
+  {
+    "question": "What is Player, when Place is \"1\"?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Place",
+    "where_value": "1",
+    "select_column": "Player"
+  },
+  {
+    "question": "What was the category of the award that John Frank Levey was nominated for after 1995?",
+    "headers": [
+      "Year",
+      "Category",
+      "Nominee(s)",
+      "Episode",
+      "Result"
+    ],
+    "where_column": "Nominee(s)",
+    "where_value": "john frank levey",
+    "select_column": "Category"
+  }
+]

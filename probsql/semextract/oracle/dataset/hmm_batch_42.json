@@ -1,0 +1,707 @@
+[
+  {
+    "question": "What show was played on ABC laster after 2002?",
+    "headers": [
+      "Show",
+      "Network (Last Aired)",
+      "Last aired",
+      "Network (New/Returning)",
+      "Returning"
+    ],
+    "where_column": "Network (Last Aired)",
+    "where_value": "abc",
+    "select_column": "Show"
+  },
+  {
+    "question": "What is the Total number of medals for the Nation with 7 or less Bronze medals and 1 Silver medal with a Rank of 9 or larger?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "9",
+    "select_column": "Total"
+  },
+  {
+    "question": "What is the type of bulykin, which has a summer transfer window?",
+    "headers": [
+      "Name",
+      "Country",
+      "Type",
+      "Moving from",
+      "Transfer window",
+      "Transfer fee"
+    ],
+    "where_column": "Transfer window",
+    "where_value": "summer",
+    "select_column": "Type"
+  },
+  {
+    "question": "Which Ulster player has fewer than 49 caps and plays the wing position?",
+    "headers": [
+      "Player",
+      "Position",
+      "Date of Birth (Age)",
+      "Caps",
+      "Club/province"
+    ],
+    "where_column": "Position",
+    "where_value": "wing",
+    "select_column": "Player"
+  },
+  {
+    "question": "What is the average Gold when silver is more than 2, and bronze is more than 1",
+    "headers": [
+      "Rank",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "2",
+    "select_column": "Gold"
+  },
+  {
+    "question": "What is the average number of wins for entries with more than 32 points, a goal difference smaller than 23, and a Goals against of 36, and a Played smaller than 30?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Played",
+    "where_value": "30",
+    "select_column": "Wins"
+  },
+  {
+    "question": "What country has the score og 66-70-69-71=276?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "Score",
+    "where_value": "66-70-69-71=276",
+    "select_column": "Country"
+  },
+  {
+    "question": "What is the average crowd size when the home side scores 4.10 (34)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team score",
+    "where_value": "4.10 (34)",
+    "select_column": "Crowd"
+  },
+  {
+    "question": "What is the lowest silver that has a bronze greater than 1, a gold less than 2, and a total less than 2?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Bronze",
+    "where_value": "1",
+    "select_column": "Silver"
+  },
+  {
+    "question": "What is the highest Week when the opponent was the los angeles rams, with more than 37,382 in Attendance?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "los angeles rams",
+    "select_column": "Week"
+  },
+  {
+    "question": "Name the score when the opponent was the dodgers on april 21",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Opponent",
+    "where_value": "dodgers",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is on at 3pm on the channel that shows Local Programs at non?",
+    "headers": [
+      "7:00 am",
+      "7:30 am",
+      "8:00 am",
+      "9:00 am",
+      "10:00 am",
+      "11:00 am",
+      "noon",
+      "12:30 pm",
+      "1:00 pm",
+      "1:30 pm",
+      "2:00 pm",
+      "3:00 pm",
+      "3:30 pm",
+      "5:00 pm",
+      "6:30 pm"
+    ],
+    "where_column": "noon",
+    "where_value": "local programs",
+    "select_column": "3:00 pm"
+  },
+  {
+    "question": "What NFL team did the Tight End position belong to?",
+    "headers": [
+      "Pick #",
+      "NFL Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "Position",
+    "where_value": "tight end",
+    "select_column": "NFL Team"
+  },
+  {
+    "question": "What were the birth and death years when active service was 1972\u20131995?",
+    "headers": [
+      "State",
+      "Born/Died",
+      "Active service",
+      "Chief Judge",
+      "Senior status",
+      "Appointed by",
+      "Reason for termination"
+    ],
+    "where_column": "Active service",
+    "where_value": "1972\u20131995",
+    "select_column": "Born/Died"
+  },
+  {
+    "question": "what is the fee for ankarag\u00fcc\u00fc previous club",
+    "headers": [
+      "No.",
+      "Name",
+      "Place of Birth",
+      "Date of Birth",
+      "Previous Club",
+      "Date Joined",
+      "Fee",
+      "Contract Expiry"
+    ],
+    "where_column": "Previous Club",
+    "where_value": "Ankarag\u00fcc\u00fc",
+    "select_column": "Fee"
+  },
+  {
+    "question": "What is the lowest number of cf wins of the chicago blackhawks, which has more than 4 cf appearances, a last cf in 2013, and more than 2 cup wins?",
+    "headers": [
+      "Team",
+      "CF appearances",
+      "CF wins",
+      "Cup wins",
+      "Last CF"
+    ],
+    "where_column": "CF appearances",
+    "where_value": "4",
+    "select_column": "CF wins"
+  },
+  {
+    "question": "Which score had Essendon as an opponent and Steven Clark as a player?",
+    "headers": [
+      "Player",
+      "Team",
+      "Opponent",
+      "Year",
+      "Score",
+      "Outcome"
+    ],
+    "where_column": "Player",
+    "where_value": "steven clark",
+    "select_column": "Score"
+  },
+  {
+    "question": "Who was driving the Maserati with a Grid smaller than 6, and a Time/Retired of +2 laps?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Constructor",
+    "where_value": "maserati",
+    "select_column": "Driver"
+  },
+  {
+    "question": "what is the least laps when the driver is rubens barrichello and the grid is less than 12?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Grid",
+    "where_value": "12",
+    "select_column": "Laps"
+  },
+  {
+    "question": "who is the the\u00a0incumbent\u00a0with\u00a0candidates\u00a0being john m. vorys (r) 61.5% jacob f. myers (d) 38.5%",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Candidates",
+    "where_value": "John M. Vorys (R) 61.5% Jacob F. Myers (D) 38.5%",
+    "select_column": "Incumbent"
+  },
+  {
+    "question": "What is the biggest purse with a 1st prize of $26,000?",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Location",
+      "Purse( $ )",
+      "Winner",
+      "Score",
+      "1st Prize( $ )"
+    ],
+    "where_column": "1st Prize( $ )",
+    "where_value": "26,000",
+    "select_column": "Purse( $ )"
+  },
+  {
+    "question": "What state is the University of Tennessee located in?",
+    "headers": [
+      "Region",
+      "Host",
+      "Venue",
+      "City",
+      "State"
+    ],
+    "where_column": "Host",
+    "where_value": "university of tennessee",
+    "select_column": "State"
+  },
+  {
+    "question": "What is the highest number of silver medals for a team with total less than 1?",
+    "headers": [
+      "Rank",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "1",
+    "select_column": "Silver"
+  },
+  {
+    "question": "Which Award Ceremony has a Nominee of sarah travis, and a Category of the best orchestrations?",
+    "headers": [
+      "Year",
+      "Award Ceremony",
+      "Category",
+      "Nominee",
+      "Result"
+    ],
+    "where_column": "Category",
+    "where_value": "best orchestrations",
+    "select_column": "Award Ceremony"
+  },
+  {
+    "question": "What was the fewest number of viewers for the episode production number of 109 5-22?",
+    "headers": [
+      "Episode number Production number",
+      "Title",
+      "Original airing",
+      "Rating",
+      "Share",
+      "18-49",
+      "Total viewers (in millions)",
+      "Rank per week"
+    ],
+    "where_column": "Episode number Production number",
+    "where_value": "109 5-22",
+    "select_column": "Total viewers (in millions)"
+  },
+  {
+    "question": "What is the award for the Star Awards earlier than 2005 and the result is won?",
+    "headers": [
+      "Year",
+      "Organisation",
+      "Award",
+      "Representative Work",
+      "Result"
+    ],
+    "where_column": "Result",
+    "where_value": "won",
+    "select_column": "Award"
+  },
+  {
+    "question": "What is the total round with an overall of 199 with sweden?",
+    "headers": [
+      "Round",
+      "Overall",
+      "Player",
+      "Position",
+      "Nationality",
+      "Club team"
+    ],
+    "where_column": "Overall",
+    "where_value": "199",
+    "select_column": "Round"
+  },
+  {
+    "question": "Which Frequency MHz has an ERP W larger than 4, and a Call sign of w218ap?",
+    "headers": [
+      "Call sign",
+      "Frequency MHz",
+      "City of license",
+      "ERP W",
+      "FCC info"
+    ],
+    "where_column": "Call sign",
+    "where_value": "w218ap",
+    "select_column": "Frequency MHz"
+  },
+  {
+    "question": "WHAT TRANSFER FEE HAS A TYPE OF TRANSFER FOR DOS SANTOS?",
+    "headers": [
+      "Nat.",
+      "Name",
+      "Moving to",
+      "Type",
+      "Transfer window",
+      "Transfer fee",
+      "Source"
+    ],
+    "where_column": "Name",
+    "where_value": "dos santos",
+    "select_column": "Transfer fee"
+  },
+  {
+    "question": "What is the date of injury when the injury is foot injury and the number of matches (total) is 1?",
+    "headers": [
+      "Date",
+      "Player",
+      "Injury",
+      "Date of injury",
+      "Number of matches (Total)",
+      "Source"
+    ],
+    "where_column": "Number of matches (Total)",
+    "where_value": "1",
+    "select_column": "Date of injury"
+  },
+  {
+    "question": "What is the country for the player Tiger Woods?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "tiger woods",
+    "select_column": "Country"
+  },
+  {
+    "question": "What year was The Horn Blows at Midnight, directed by Raoul Walsh?",
+    "headers": [
+      "Year",
+      "Title",
+      "Role",
+      "Studio",
+      "Director"
+    ],
+    "where_column": "Director",
+    "where_value": "raoul walsh",
+    "select_column": "Year"
+  },
+  {
+    "question": "Which game had less than 270 rebounds and a rank lower than 5?",
+    "headers": [
+      "Rank",
+      "Name",
+      "Team",
+      "Games",
+      "Rebounds"
+    ],
+    "where_column": "Rebounds",
+    "where_value": "270",
+    "select_column": "Games"
+  },
+  {
+    "question": "On what Date did the friendly Competition take place?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Competition",
+    "where_value": "friendly",
+    "select_column": "Date"
+  },
+  {
+    "question": "Name the most pick for evgeny korolev",
+    "headers": [
+      "Pick",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Player",
+    "where_value": "Evgeny Korolev",
+    "select_column": "Pick"
+  },
+  {
+    "question": "Which home team played in front of 18,345 people in Adelaide Oval?",
+    "headers": [
+      "Round",
+      "Date",
+      "Home Team",
+      "Score",
+      "Away Team",
+      "Crowd",
+      "Stadium",
+      "Match Details"
+    ],
+    "where_column": "Crowd",
+    "where_value": "18,345",
+    "select_column": "Home Team"
+  },
+  {
+    "question": "What's the IHSAA Class when the school is Seymour?",
+    "headers": [
+      "School",
+      "Location",
+      "Mascot",
+      "Enrollment 08-09",
+      "IHSAA Class",
+      "IHSAA Class Football",
+      "County",
+      "Year Joined"
+    ],
+    "where_column": "School",
+    "where_value": "seymour",
+    "select_column": "IHSAA Class"
+  },
+  {
+    "question": "What is the highest goals entry with drawn larger than 6 and goals against 85?",
+    "headers": [
+      "Position",
+      "Team",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Goals For",
+      "Goals Against",
+      "Goal Difference",
+      "Points 1"
+    ],
+    "where_column": "Goals Against",
+    "where_value": "85",
+    "select_column": "Goals For"
+  },
+  {
+    "question": "What's the fed tax that has a total tax greater than 33.2, a minimum sales tax less than 41.01 and in Vancouver, BC?",
+    "headers": [
+      "Government",
+      "Federal excise tax ( CAD\u00a2 / L )",
+      "Total excise tax (CAD\u00a2/L)",
+      "Minimum tax incl. sales taxes (CAD\u00a2/L)",
+      "Min. tax (CAD\u00a2/US gal)"
+    ],
+    "where_column": "Minimum tax incl. sales taxes (CAD\u00a2/L)",
+    "where_value": "41.01",
+    "select_column": "Federal excise tax ( CAD\u00a2 / L )"
+  },
+  {
+    "question": "How many middlesex principals were there in 2000-2001?",
+    "headers": [
+      "Year",
+      "Superintendent",
+      "Middlesex Principal",
+      "Gorham Principal",
+      "Middle School Principal",
+      "High School Principal"
+    ],
+    "where_column": "Year",
+    "where_value": "2000-2001",
+    "select_column": "Middlesex Principal"
+  },
+  {
+    "question": "Where was the game played on 3 january 2009 against east fife?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Opponents",
+      "Competition",
+      "Match Report"
+    ],
+    "where_column": "Date",
+    "where_value": "3 january 2009",
+    "select_column": "Venue"
+  },
+  {
+    "question": "Home result of 1\u20130, and a Away result of 0\u20131 involves what club?",
+    "headers": [
+      "Season",
+      "Competition",
+      "Round",
+      "Club",
+      "Home result",
+      "Away result"
+    ],
+    "where_column": "Away result",
+    "where_value": "0\u20131",
+    "select_column": "Club"
+  },
+  {
+    "question": "What is the lowest Against, when Status is \"First Test\", and when Date is \"26/05/2007\"?",
+    "headers": [
+      "Opposing Teams",
+      "Against",
+      "Date",
+      "Venue",
+      "Status"
+    ],
+    "where_column": "Status",
+    "where_value": "first test",
+    "select_column": "Against"
+  },
+  {
+    "question": "What are the polish population where guberniya is vitebsk?",
+    "headers": [
+      "Guberniya *",
+      "Total Population",
+      "Belarusian (\u0411\u0463\u043b\u043e\u0440\u0443\u0441\u043a\u0456\u0439)",
+      "Russian (\u0412\u0463\u043b\u0438\u043a\u043e\u0440\u0443\u0441\u043a\u0456\u0439)",
+      "Polish (\u041f\u043e\u043b\u044c\u0441\u043a\u0456\u0439)"
+    ],
+    "where_column": "Guberniya *",
+    "where_value": "Vitebsk",
+    "select_column": "Polish (\u041f\u043e\u043b\u044c\u0441\u043a\u0456\u0439)"
+  },
+  {
+    "question": "Which label has a catalog of y8hr 1006 in 1972?",
+    "headers": [
+      "Region",
+      "Date",
+      "Label",
+      "Format",
+      "Catalog"
+    ],
+    "where_column": "Catalog",
+    "where_value": "y8hr 1006",
+    "select_column": "Label"
+  },
+  {
+    "question": "Who was the opponent for the match were the outcome was runner-up and the score was 5-7, 1-6?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Tournament",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Score",
+    "where_value": "5-7, 1-6",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "who was the candidate elected to the democratic party in 1952?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Party",
+    "where_value": "Democratic",
+    "select_column": "Candidates"
+  },
+  {
+    "question": "What is the match report for the game that was played on 23 august 2008 in stark's park during the second division competition?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Opponents",
+      "Competition",
+      "Match Report"
+    ],
+    "where_column": "Venue",
+    "where_value": "stark's park",
+    "select_column": "Match Report"
+  },
+  {
+    "question": "Name the class a for pearland",
+    "headers": [
+      "School Year",
+      "Class A",
+      "Class AA",
+      "Class AAA",
+      "Class AAAA",
+      "Class AAAAA"
+    ],
+    "where_column": "Class AAAAA",
+    "where_value": "Pearland",
+    "select_column": "Class A"
+  },
+  {
+    "question": "How many Silvers that has a Gold smaller than 1, and a Rank of 9, and a Total smaller than 1?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "9",
+    "select_column": "Silver"
+  }
+]

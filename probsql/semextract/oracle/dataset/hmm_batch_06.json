@@ -1,0 +1,725 @@
+[
+  {
+    "question": "When racing engineering is the team and 2012 is the team what is the position?",
+    "headers": [
+      "Season",
+      "Series",
+      "Team",
+      "Races",
+      "Wins",
+      "Poles",
+      "F/Laps",
+      "Podiums",
+      "Points",
+      "Position"
+    ],
+    "where_column": "Season",
+    "where_value": "2012",
+    "select_column": "Position"
+  },
+  {
+    "question": "Which Team  has a round 1  CONMEBOL 1995?",
+    "headers": [
+      "Team",
+      "Recopa 1995",
+      "Supercopa 1995",
+      "CONMEBOL 1995",
+      "Copa Libertadores 1996"
+    ],
+    "where_column": "CONMEBOL 1995",
+    "where_value": "round 1",
+    "select_column": "Team"
+  },
+  {
+    "question": "What time did Carroll Shelby have in Grid 14?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Driver",
+    "where_value": "carroll shelby",
+    "select_column": "Time/Retired"
+  },
+  {
+    "question": "Which season led to a position of 13, and a head coach of Protasov Lyutyi Talalayev Balakhnin Baidachny?",
+    "headers": [
+      "Season",
+      "Div.",
+      "Pos.",
+      "Top Scorer (League)",
+      "Head Coach"
+    ],
+    "where_column": "Head Coach",
+    "where_value": "protasov lyutyi talalayev balakhnin baidachny",
+    "select_column": "Season"
+  },
+  {
+    "question": "What is Country, when Total is less than 290, and when Year(s) Won is 1960?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par",
+      "Finish"
+    ],
+    "where_column": "Year(s) won",
+    "where_value": "1960",
+    "select_column": "Country"
+  },
+  {
+    "question": "What is the constructor for the driver with grid less than 2?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Grid",
+    "where_value": "2",
+    "select_column": "Constructor"
+  },
+  {
+    "question": "Which Time has a Lane smaller than 2, and a Nationality of spain?",
+    "headers": [
+      "Heat",
+      "Lane",
+      "Name",
+      "Nationality",
+      "Time"
+    ],
+    "where_column": "Lane",
+    "where_value": "2",
+    "select_column": "Time"
+  },
+  {
+    "question": "Which model has a top speed of 231km/h (143mph)?",
+    "headers": [
+      "Model",
+      "Years",
+      "Engine",
+      "Power",
+      "0\u2013100km/h (62mph)",
+      "Top Speed"
+    ],
+    "where_column": "Top Speed",
+    "where_value": "231km/h (143mph)",
+    "select_column": "Model"
+  },
+  {
+    "question": "What is Pronunciation Spelled Free, when Pronunciation Spelled Checked is \"\u025b\"?",
+    "headers": [
+      "Letter",
+      "Pronunciation spelled free",
+      "Pronunciation spelled checked",
+      "Example spelled free",
+      "Example spelled checked"
+    ],
+    "where_column": "Pronunciation spelled checked",
+    "where_value": "\u025b",
+    "select_column": "Pronunciation spelled free"
+  },
+  {
+    "question": "Name the catalog with cd format",
+    "headers": [
+      "Region",
+      "Date",
+      "Label",
+      "Format",
+      "Catalog",
+      "Note"
+    ],
+    "where_column": "Format",
+    "where_value": "cd",
+    "select_column": "Catalog"
+  },
+  {
+    "question": "What is the roll number of the school in Aramoho with a decile of 1?",
+    "headers": [
+      "Name",
+      "Years",
+      "Gender",
+      "Area",
+      "Authority",
+      "Decile",
+      "Roll"
+    ],
+    "where_column": "Decile",
+    "where_value": "1",
+    "select_column": "Roll"
+  },
+  {
+    "question": "What is Circuit, when Team is \"R.J.MacArthur Onslow\", and when City / State is \"Sydney , New South Wales\"?",
+    "headers": [
+      "Circuit",
+      "City / State",
+      "Date",
+      "Winner",
+      "Team"
+    ],
+    "where_column": "City / State",
+    "where_value": "sydney , new south wales",
+    "select_column": "Circuit"
+  },
+  {
+    "question": "Which formats have a region of Europe and Catalog value of WEBB185?",
+    "headers": [
+      "Region",
+      "Date",
+      "Label",
+      "Format(s)",
+      "Catalog"
+    ],
+    "where_column": "Region",
+    "where_value": "europe",
+    "select_column": "Format(s)"
+  },
+  {
+    "question": "Name the 2005 for 2003 of a and 2011 of 3r",
+    "headers": [
+      "Tournament",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "where_column": "2011",
+    "where_value": "3r",
+    "select_column": "2005"
+  },
+  {
+    "question": "What is the sum of Wins with a result of 0, and the away wins of 1, and the losses are less than 5?",
+    "headers": [
+      "Year",
+      "Matches",
+      "Wins",
+      "Losses",
+      "No Result",
+      "Success Rate",
+      "Away Wins",
+      "Away Losses"
+    ],
+    "where_column": "No Result",
+    "where_value": "0",
+    "select_column": "Wins"
+  },
+  {
+    "question": "Name the finished for exited day 13",
+    "headers": [
+      "Celebrity",
+      "Famous for",
+      "Entered",
+      "Exited",
+      "Finished"
+    ],
+    "where_column": "Exited",
+    "where_value": "Day 13",
+    "select_column": "Finished"
+  },
+  {
+    "question": "What is College, when Pick is less than 145, and when Player is Jeff Wilkins?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Nationality",
+      "College"
+    ],
+    "where_column": "Player",
+    "where_value": "jeff wilkins",
+    "select_column": "College"
+  },
+  {
+    "question": "what is the winner of meridiana",
+    "headers": [
+      "Year",
+      "Winner",
+      "Jockey",
+      "Trainer",
+      "Owner",
+      "Time"
+    ],
+    "where_column": "Winner",
+    "where_value": "meridiana",
+    "select_column": "Owner"
+  },
+  {
+    "question": "What was the value in 2003 when 2006 was WTA Premier Mandatory Tournaments?",
+    "headers": [
+      "Tournament",
+      "2001",
+      "2002",
+      "2003",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "where_column": "2006",
+    "where_value": "wta premier mandatory tournaments",
+    "select_column": "2003"
+  },
+  {
+    "question": "What was the relationship to monarch of the heir Minyekyawswa?",
+    "headers": [
+      "Monarch",
+      "Heir",
+      "Status",
+      "Relationship to Monarch",
+      "Became heir; reason",
+      "Ceased to be heir; reason",
+      "Next in succession"
+    ],
+    "where_column": "Heir",
+    "where_value": "Minyekyawswa",
+    "select_column": "Relationship to Monarch"
+  },
+  {
+    "question": "What is the earliest year that the building in sonnemannstra\u00dfe/r\u00fcckertstra\u00dfe, ostend was built with a height larger than 185 meters?",
+    "headers": [
+      "Name",
+      "Height (m)",
+      "Height (ft)",
+      "Location",
+      "Year built"
+    ],
+    "where_column": "Height (m)",
+    "where_value": "185",
+    "select_column": "Year built"
+  },
+  {
+    "question": "What is the average rebounds for players from 1976 and over 67 assists?",
+    "headers": [
+      "Player",
+      "Pos.",
+      "From",
+      "School/Country",
+      "Rebs",
+      "Asts"
+    ],
+    "where_column": "Asts",
+    "where_value": "67",
+    "select_column": "Rebs"
+  },
+  {
+    "question": "How many golds for the nation ranked below 5 and over 1 bronze medals?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "5",
+    "select_column": "Gold"
+  },
+  {
+    "question": "Who is the successor when the reason for change is seat declared vacant January 2, 1808",
+    "headers": [
+      "District",
+      "Vacator",
+      "Reason for change",
+      "Successor",
+      "Date successor seated"
+    ],
+    "where_column": "Reason for change",
+    "where_value": "Seat declared vacant January 2, 1808",
+    "select_column": "Successor"
+  },
+  {
+    "question": "On what yacht was the sail number aus70?",
+    "headers": [
+      "Position",
+      "Sail Number",
+      "Yacht",
+      "State/Country",
+      "Yacht Type",
+      "LOA (Metres)",
+      "Skipper",
+      "Corrected Time d:hh:mm:ss"
+    ],
+    "where_column": "Sail Number",
+    "where_value": "AUS70",
+    "select_column": "Yacht"
+  },
+  {
+    "question": "What lowest games have a Goal Ratio of 0, and Goals smaller than 0?",
+    "headers": [
+      "Rank",
+      "Player",
+      "Games",
+      "Goals",
+      "Goal Ratio",
+      "Debut in Europe"
+    ],
+    "where_column": "Goal Ratio",
+    "where_value": "0",
+    "select_column": "Games"
+  },
+  {
+    "question": "What is Player, when To Par is greater than 6, and when Year(s) Won is \"1962 , 1967\"?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par",
+      "Finish"
+    ],
+    "where_column": "Year(s) won",
+    "where_value": "1962 , 1967",
+    "select_column": "Player"
+  },
+  {
+    "question": "What average silver has belarus as the nation, with a total less than 1?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "1",
+    "select_column": "Silver"
+  },
+  {
+    "question": "On what Date is Delta 0:40?",
+    "headers": [
+      "Date",
+      "Team 1",
+      "Team 2",
+      "Winner",
+      "Delta",
+      "Score"
+    ],
+    "where_column": "Delta",
+    "where_value": "0:40",
+    "select_column": "Date"
+  },
+  {
+    "question": "Tell me the city/state for the holden racing team with winner of mark skaife todd kelly",
+    "headers": [
+      "Date",
+      "Series",
+      "Circuit",
+      "City / State",
+      "Winner",
+      "Team"
+    ],
+    "where_column": "Winner",
+    "where_value": "mark skaife todd kelly",
+    "select_column": "City / State"
+  },
+  {
+    "question": "What is the name of the award in a year more than 2005, and the Result of nominated?",
+    "headers": [
+      "Year",
+      "Organisation",
+      "Award",
+      "Representative Work",
+      "Result"
+    ],
+    "where_column": "Result",
+    "where_value": "nominated",
+    "select_column": "Award"
+  },
+  {
+    "question": "When did Jeremy Kagan's episode first air?",
+    "headers": [
+      "Series #",
+      "Season #",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code"
+    ],
+    "where_column": "Directed by",
+    "where_value": "Jeremy Kagan",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "What is the surface of the French Championships?",
+    "headers": [
+      "Outcome",
+      "Year",
+      "Championship",
+      "Surface",
+      "Partner",
+      "Opponents",
+      "Score"
+    ],
+    "where_column": "Championship",
+    "where_value": "French Championships",
+    "select_column": "Surface"
+  },
+  {
+    "question": "5 Hoops that has a Place larger than 7, and a Total larger than 38.525 had what sum?",
+    "headers": [
+      "Place",
+      "Nation",
+      "5 Hoops",
+      "3 Balls, 2 Ribbons",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "38.525",
+    "select_column": "5 Hoops"
+  },
+  {
+    "question": "What is the Place that has a Date of 22 august 2004?",
+    "headers": [
+      "Event",
+      "Record",
+      "Athlete",
+      "Nationality",
+      "Date",
+      "Meet",
+      "Place"
+    ],
+    "where_column": "Date",
+    "where_value": "22 august 2004",
+    "select_column": "Place"
+  },
+  {
+    "question": "What college(s) did the player(s) picked in round 4 with a pick number less than 98 play for?",
+    "headers": [
+      "Pick #",
+      "Round",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "Round",
+    "where_value": "round 4",
+    "select_column": "College"
+  },
+  {
+    "question": "How many contestants were there in a season where alejandra espinoza won?",
+    "headers": [
+      "Season",
+      "Season Premiere",
+      "Season Finale",
+      "Winner",
+      "Runner-up",
+      "Number of Contestants",
+      "Winner's Country",
+      "Runner Up's Country"
+    ],
+    "where_column": "Winner",
+    "where_value": "alejandra espinoza",
+    "select_column": "Number of Contestants"
+  },
+  {
+    "question": "Which Artist has a Draw smaller than 14, and Points less than 73, and a Language of turkish?",
+    "headers": [
+      "Draw",
+      "Language",
+      "Artist",
+      "English translation",
+      "Place",
+      "Points"
+    ],
+    "where_column": "Language",
+    "where_value": "turkish",
+    "select_column": "Artist"
+  },
+  {
+    "question": "What is the rank number with 562-506 goals before season 13?",
+    "headers": [
+      "Rank",
+      "Club 1",
+      "Seasons",
+      "Spells",
+      "Played 2",
+      "Drawn",
+      "Lost",
+      "Goals",
+      "Points 3"
+    ],
+    "where_column": "Goals",
+    "where_value": "562-506",
+    "select_column": "Rank"
+  },
+  {
+    "question": "where did rochdale play as opponent?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "rochdale",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What was the title for the game with an attendance of n/a with the runner-up being Waseda, and a season of 1995-6 details?",
+    "headers": [
+      "Title",
+      "Season",
+      "Winner",
+      "Score",
+      "Runner-up",
+      "Venue",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "n/a",
+    "select_column": "Title"
+  },
+  {
+    "question": "What is the average number of wins before the season in 1906 where there were 0 draws?",
+    "headers": [
+      "Season",
+      "Team",
+      "Wins",
+      "Losses",
+      "Draws"
+    ],
+    "where_column": "Season",
+    "where_value": "1906",
+    "select_column": "Wins"
+  },
+  {
+    "question": "who are the participants that wear clothing in 33-23-36",
+    "headers": [
+      "Represent",
+      "Contestant",
+      "Age",
+      "Sizes",
+      "Height",
+      "Hometown",
+      "Agency"
+    ],
+    "where_column": "Sizes",
+    "where_value": "33-23-36",
+    "select_column": "Contestant"
+  },
+  {
+    "question": "How many rounds did Patrick Tambay record the fastest lap?",
+    "headers": [
+      "Rnd",
+      "Race",
+      "Date",
+      "Location",
+      "Pole Position",
+      "Fastest Lap",
+      "Race Winner",
+      "Constructor",
+      "Report"
+    ],
+    "where_column": "Fastest Lap",
+    "where_value": "Patrick Tambay",
+    "select_column": "Rnd"
+  },
+  {
+    "question": "Which rider had fewer than 10 laps for the Aprilia manufacturer, finishing in retirement?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "10",
+    "select_column": "Rider"
+  },
+  {
+    "question": "What is the result with a Round of 3, and an Opponent of keith wisniewski?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round",
+      "Time"
+    ],
+    "where_column": "Round",
+    "where_value": "3",
+    "select_column": "Res."
+  },
+  {
+    "question": "Which Works number has a Builder of avonside engine company, and a Type of 4-6-0, and a Number smaller than 12, and a Date of december 1871?",
+    "headers": [
+      "Number",
+      "Builder",
+      "Type",
+      "Date",
+      "Works number"
+    ],
+    "where_column": "Type",
+    "where_value": "4-6-0",
+    "select_column": "Works number"
+  },
+  {
+    "question": "Which European competitions have a Pos of 6?",
+    "headers": [
+      "Season",
+      "Tier",
+      "League",
+      "Pos.",
+      "Postseason",
+      "Dutch Cup",
+      "European competitions"
+    ],
+    "where_column": "Pos.",
+    "where_value": "6",
+    "select_column": "European competitions"
+  },
+  {
+    "question": "What city/municipality has area of 176.40?",
+    "headers": [
+      "City/ municipality",
+      "Type",
+      "No. of Barangays",
+      "Population (2010)",
+      "Area (km\u00b2)",
+      "Pop. density (per km\u00b2)",
+      "Income Class",
+      "Zip Code"
+    ],
+    "where_column": "Area (km\u00b2)",
+    "where_value": "176.40",
+    "select_column": "City/ municipality"
+  },
+  {
+    "question": "At which location did 29753 fans show up to watch the game?",
+    "headers": [
+      "Week",
+      "Date",
+      "Kickoff",
+      "Opponent",
+      "Final score",
+      "Team record",
+      "Game site",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "29753",
+    "select_column": "Game site"
+  }
+]

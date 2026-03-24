@@ -1,0 +1,727 @@
+[
+  {
+    "question": "what is the height (m) when the nation is sweden (swe) and the weight (kg) is 102?",
+    "headers": [
+      "Nation",
+      "Birth date",
+      "Height (m)",
+      "Weight (kg)",
+      "World Rank"
+    ],
+    "where_column": "Nation",
+    "where_value": "sweden (swe)",
+    "select_column": "Height (m)"
+  },
+  {
+    "question": "What is the average gold medals for countries with more than 0 bronze, more than 0 silver, rank over 2 and total over 3?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "2",
+    "select_column": "Gold"
+  },
+  {
+    "question": "What date was the game played at princes park?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Venue",
+    "where_value": "princes park",
+    "select_column": "Date"
+  },
+  {
+    "question": "Which Points have a Performer of se\u00e1n monaghan and a Draw smaller than 7?",
+    "headers": [
+      "Draw",
+      "Song",
+      "Performer",
+      "Points",
+      "Rank"
+    ],
+    "where_column": "Draw",
+    "where_value": "7",
+    "select_column": "Points"
+  },
+  {
+    "question": "Who was the opponent of the match in South Dakota, United States which has 2 rounds?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round",
+      "Location"
+    ],
+    "where_column": "Round",
+    "where_value": "2",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "Who had the lowest interview score from South Dakota with an evening gown less than 8.513?",
+    "headers": [
+      "State",
+      "Interview",
+      "Swimsuit",
+      "Evening Gown",
+      "Average"
+    ],
+    "where_column": "Evening Gown",
+    "where_value": "8.513",
+    "select_column": "Interview"
+  },
+  {
+    "question": "what is the bristol & n. som where the somerset is ashcott and shapwick?",
+    "headers": [
+      "Year",
+      "Premier One",
+      "Premier Two",
+      "Bristol & Somerset",
+      "Glos & Wilts",
+      "Bristol & N. Som",
+      "Somerset",
+      "Gloucestershire",
+      "Wiltshire"
+    ],
+    "where_column": "Somerset",
+    "where_value": "Ashcott and Shapwick",
+    "select_column": "Bristol & N. Som"
+  },
+  {
+    "question": "What is the Datacenter for the Fault Tolerant Memory Sync Feature that has Yes for Itanium and No for Standard?",
+    "headers": [
+      "Features",
+      "Foundation",
+      "Standard",
+      "Enterprise",
+      "Datacenter",
+      "Itanium"
+    ],
+    "where_column": "Features",
+    "where_value": "fault tolerant memory sync",
+    "select_column": "Datacenter"
+  },
+  {
+    "question": "Where is Fred Couples from?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "fred couples",
+    "select_column": "Country"
+  },
+  {
+    "question": "How many bronze medals did the team have with 0 total silver and less than 3 total medals?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "0",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "What is the average round number with wide receiver as position and Clark University as the college and the pick number is bigger than 166?",
+    "headers": [
+      "Round #",
+      "Pick #",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "Pick #",
+    "where_value": "166",
+    "select_column": "Round #"
+  },
+  {
+    "question": "How many rounds were won with James Hunt as pole position and John Watson as  fastest lap?",
+    "headers": [
+      "Rnd",
+      "Race",
+      "Date",
+      "Location",
+      "Pole Position",
+      "Fastest Lap",
+      "Race Winner",
+      "Constructor",
+      "Report"
+    ],
+    "where_column": "Pole Position",
+    "where_value": "James Hunt",
+    "select_column": "Rnd"
+  },
+  {
+    "question": "What was the score for the World Cup Qualifier?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Competition",
+    "where_value": "world cup qualifier",
+    "select_column": "Score"
+  },
+  {
+    "question": "Which is the highest bronze at Chinese Taipei when the rank was higher than 5 and total was smaller than 1?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "5",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "What period was the life expectancy at 62.4?",
+    "headers": [
+      "Period",
+      "Live births per year",
+      "Deaths per year",
+      "Natural change per year",
+      "CBR*",
+      "CDR*",
+      "NC*",
+      "TFR*",
+      "IMR*",
+      "Life expectancy total",
+      "Life expectancy males",
+      "Life expectancy females"
+    ],
+    "where_column": "Life expectancy total",
+    "where_value": "62.4",
+    "select_column": "Period"
+  },
+  {
+    "question": "Name the sum of cuts with wins less than 2, top-25 more than 7 and top-10 less than 2",
+    "headers": [
+      "Tournament",
+      "Wins",
+      "Top-5",
+      "Top-10",
+      "Top-25",
+      "Events",
+      "Cuts made"
+    ],
+    "where_column": "Top-10",
+    "where_value": "2",
+    "select_column": "Cuts made"
+  },
+  {
+    "question": "Name the position for van den brink, bas",
+    "headers": [
+      "Name",
+      "Nationality",
+      "from",
+      "to",
+      "League Apps",
+      "League Goals",
+      "Finals Apps",
+      "Finals Goals",
+      "Position"
+    ],
+    "where_column": "Name",
+    "where_value": "van den Brink, Bas",
+    "select_column": "Position"
+  },
+  {
+    "question": "Tell me the lowest kazakhstan for kyrghizstan of 4.62 and belarus less than 2.46",
+    "headers": [
+      "Year",
+      "Azerbaijan",
+      "Armenia",
+      "Belarus",
+      "Georgia",
+      "Kazakhstan",
+      "Kyrghizstan",
+      "Latvia",
+      "Lithuania",
+      "Moldova",
+      "Russia",
+      "Tajikistan",
+      "Turkmenikstan",
+      "Uzbekistan",
+      "Ukraine",
+      "Estonia"
+    ],
+    "where_column": "Kyrghizstan",
+    "where_value": "4.62",
+    "select_column": "Kazakhstan"
+  },
+  {
+    "question": "On 11 July 2003, which athlete performed?",
+    "headers": [
+      "Event",
+      "Record",
+      "Athlete",
+      "Nationality",
+      "Date"
+    ],
+    "where_column": "Date",
+    "where_value": "11 july 2003",
+    "select_column": "Athlete"
+  },
+  {
+    "question": "What authority is the coed school in pinehaven?",
+    "headers": [
+      "Name",
+      "Years",
+      "Gender",
+      "Area",
+      "Authority",
+      "Decile"
+    ],
+    "where_column": "Gender",
+    "where_value": "coed",
+    "select_column": "Authority"
+  },
+  {
+    "question": "How many years did barclay nordica arrows bmw enter with a bmw str-4 t/c engine with less than 1 point?",
+    "headers": [
+      "Year",
+      "Entrant",
+      "Chassis",
+      "Engine",
+      "Points"
+    ],
+    "where_column": "Engine",
+    "where_value": "bmw str-4 t/c",
+    "select_column": "Year"
+  },
+  {
+    "question": "When Sydney Roosters won with a Crown of more than 7,426, what was the Venue?",
+    "headers": [
+      "Winner",
+      "Score",
+      "Date",
+      "Venue",
+      "Crowd"
+    ],
+    "where_column": "Crowd",
+    "where_value": "7,426",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What is Ensemble Name Muxco Gloucestershire's Advertisement Date in Block 10C?",
+    "headers": [
+      "Area",
+      "Advertisement date",
+      "Block",
+      "Winning applicant",
+      "Ensemble name"
+    ],
+    "where_column": "Block",
+    "where_value": "10c",
+    "select_column": "Advertisement date"
+  },
+  {
+    "question": "What date was Rodger Ward the winning driver?",
+    "headers": [
+      "Race",
+      "Circuit",
+      "Date",
+      "Pole position",
+      "Fastest lap",
+      "Winning driver",
+      "Constructor",
+      "Tyre",
+      "Report"
+    ],
+    "where_column": "Winning driver",
+    "where_value": "rodger ward",
+    "select_column": "Date"
+  },
+  {
+    "question": "What is every position for the CFL Edmonton?",
+    "headers": [
+      "Pick #",
+      "CFL Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "CFL Team",
+    "where_value": "Edmonton",
+    "select_column": "Position"
+  },
+  {
+    "question": "What time was the race for the country of france?",
+    "headers": [
+      "Rank",
+      "Athlete",
+      "Country",
+      "Time",
+      "Notes"
+    ],
+    "where_column": "Country",
+    "where_value": "france",
+    "select_column": "Time"
+  },
+  {
+    "question": "What Elector has the Title of Titulus S. Cecilia?",
+    "headers": [
+      "Elector",
+      "Nationality",
+      "Order",
+      "Title",
+      "Elevated",
+      "Elevator"
+    ],
+    "where_column": "Title",
+    "where_value": "titulus s. cecilia",
+    "select_column": "Elector"
+  },
+  {
+    "question": "Name the highest week for result of w 38-13",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Result",
+    "where_value": "w 38-13",
+    "select_column": "Week"
+  },
+  {
+    "question": "What is the sum of drawn that has a played more than 12?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Played",
+    "where_value": "12",
+    "select_column": "Drawn"
+  },
+  {
+    "question": "How many games were against the los angeles rams?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Result",
+      "Oilers points",
+      "Opponents",
+      "Oilers first downs",
+      "Record",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "Los Angeles Rams",
+    "select_column": "Game"
+  },
+  {
+    "question": "Which population is the greatest, has a density of 20.3, and an area (km\u00b2) larger than 50,350?",
+    "headers": [
+      "Rank",
+      "State",
+      "Population",
+      "Area (km\u00b2)",
+      "Density"
+    ],
+    "where_column": "Density",
+    "where_value": "20.3",
+    "select_column": "Population"
+  },
+  {
+    "question": "When vince carter (24) has the highest points how many teams are there? ",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "High points",
+    "where_value": "Vince Carter (24)",
+    "select_column": "Team"
+  },
+  {
+    "question": "What is the lowest grid with matra as constructor?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Constructor",
+    "where_value": "matra",
+    "select_column": "Grid"
+  },
+  {
+    "question": "What loss has 26-9 as a loss?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "26-9",
+    "select_column": "Loss"
+  },
+  {
+    "question": "Name the Nationality / Opponent of the Competition of welsh rugby union challenge trophy and a Result of 38-29?",
+    "headers": [
+      "Date",
+      "Nationality / Opponent",
+      "Ground",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Competition",
+    "where_value": "welsh rugby union challenge trophy",
+    "select_column": "Nationality / Opponent"
+  },
+  {
+    "question": "what is the region when the location is 49.7462\u00b0n 117.1419\u00b0w?",
+    "headers": [
+      "Rank",
+      "Mountain Peak",
+      "Region",
+      "Mountain Range",
+      "Location"
+    ],
+    "where_column": "Location",
+    "where_value": "49.7462\u00b0n 117.1419\u00b0w",
+    "select_column": "Region"
+  },
+  {
+    "question": "What date did the show with a series larger than 40, production code smaller than 213, and a season number larger than 11 air?",
+    "headers": [
+      "Series no.",
+      "Season no.",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production Code"
+    ],
+    "where_column": "Season no.",
+    "where_value": "11",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "Which category was the berlin file up to win in 2013?",
+    "headers": [
+      "Year",
+      "Award",
+      "Category",
+      "Nominated work",
+      "Result"
+    ],
+    "where_column": "Nominated work",
+    "where_value": "the berlin file",
+    "select_column": "Category"
+  },
+  {
+    "question": "What is the score of the away team when the crowd was larger than 8,000?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Crowd",
+    "where_value": "8,000",
+    "select_column": "Away team score"
+  },
+  {
+    "question": "Who drove for Mathiasen Motorsports with dane cameron as pole position?",
+    "headers": [
+      "Pole Position",
+      "Fastest Lap",
+      "Winning driver",
+      "Winning team",
+      "Report"
+    ],
+    "where_column": "Winning team",
+    "where_value": "mathiasen motorsports",
+    "select_column": "Winning driver"
+  },
+  {
+    "question": "What is the class of the race that takes place on August 25?",
+    "headers": [
+      "Race",
+      "Length",
+      "Class",
+      "Circuit",
+      "Date"
+    ],
+    "where_column": "Date",
+    "where_value": "august 25",
+    "select_column": "Class"
+  },
+  {
+    "question": "what's the\u00a0winner\u00a0with\u00a0purse( $ )\u00a0value of bigger than 964017.2297960471 and\u00a0date\u00a0value of may 28",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Location",
+      "Purse( $ )",
+      "Winner",
+      "Score",
+      "1st Prize( $ )"
+    ],
+    "where_column": "Date",
+    "where_value": "May 28",
+    "select_column": "Winner"
+  },
+  {
+    "question": "When were the years on which warwick had a population greater than 10,956 and allora had a population bigger than 2,439?",
+    "headers": [
+      "Year",
+      "Population (Region total)",
+      "Population (Stanthorpe)",
+      "Population (Warwick)",
+      "Population (Allora)",
+      "Population (Glengallan)",
+      "Population (Rosenthal)"
+    ],
+    "where_column": "Population (Warwick)",
+    "where_value": "10,956",
+    "select_column": "Year"
+  },
+  {
+    "question": "What is the average Episode Number, when Original Airdate is March 21, 2010, and when Season is less than 3?",
+    "headers": [
+      "Year",
+      "Show",
+      "Season",
+      "Episode",
+      "Episode number",
+      "Original airdate"
+    ],
+    "where_column": "Season",
+    "where_value": "3",
+    "select_column": "Episode number"
+  },
+  {
+    "question": "Which Affected area codes have an Effective date of august 30, 2014?",
+    "headers": [
+      "New area code",
+      "Where",
+      "Affected area codes",
+      "Format",
+      "Effective date"
+    ],
+    "where_column": "Effective date",
+    "where_value": "august 30, 2014",
+    "select_column": "Affected area codes"
+  },
+  {
+    "question": "What is the IATA for Ringway Airport in the United Kingdom?",
+    "headers": [
+      "City",
+      "Country",
+      "IATA",
+      "ICAO",
+      "Airport"
+    ],
+    "where_column": "Country",
+    "where_value": "united kingdom",
+    "select_column": "IATA"
+  },
+  {
+    "question": "What year had Kim Gevaert as the female winner and Xavier de Baerdemaeker as the male talent?",
+    "headers": [
+      "Year",
+      "Winner (Male)",
+      "Winner (Female)",
+      "Talent (Male)",
+      "Talent (Female)"
+    ],
+    "where_column": "Talent (Male)",
+    "where_value": "xavier de baerdemaeker",
+    "select_column": "Year"
+  },
+  {
+    "question": "Name the sum of points for chassis of maserati 250f and entrant of officine alfieri maserati",
+    "headers": [
+      "Year",
+      "Entrant",
+      "Chassis",
+      "Engine",
+      "Points"
+    ],
+    "where_column": "Entrant",
+    "where_value": "officine alfieri maserati",
+    "select_column": "Points"
+  },
+  {
+    "question": "Name the runners for longchamp",
+    "headers": [
+      "Race",
+      "Dist (f)",
+      "Course",
+      "Class",
+      "Prize (\u00a3K)",
+      "Odds",
+      "Runners",
+      "Placing",
+      "Margin",
+      "Time",
+      "Jockey",
+      "Trainer"
+    ],
+    "where_column": "Course",
+    "where_value": "longchamp",
+    "select_column": "Runners"
+  },
+  {
+    "question": "What category of the British Soap Awards resulted in nominated?",
+    "headers": [
+      "Awards",
+      "Year",
+      "Category",
+      "Result",
+      "Production",
+      "Roll"
+    ],
+    "where_column": "Awards",
+    "where_value": "british soap awards",
+    "select_column": "Category"
+  }
+]

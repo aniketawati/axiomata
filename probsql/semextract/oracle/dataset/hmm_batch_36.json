@@ -1,0 +1,706 @@
+[
+  {
+    "question": "How many gold are a rank 1 and larger than 16?",
+    "headers": [
+      "Rank",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "16",
+    "select_column": "Gold"
+  },
+  {
+    "question": "What was the 2nd leg score for the tie that had a 5-0 first leg score?",
+    "headers": [
+      "Team 1",
+      "Agg.",
+      "Team 2",
+      "1st leg",
+      "2nd leg"
+    ],
+    "where_column": "1st leg",
+    "where_value": "5-0",
+    "select_column": "2nd leg"
+  },
+  {
+    "question": "What was the result for week 14?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Week",
+    "where_value": "14",
+    "select_column": "Result"
+  },
+  {
+    "question": "What was the score when Fred Couples played in the United States and placed t9?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "fred couples",
+    "select_column": "Score"
+  },
+  {
+    "question": "What was the score for game 2?",
+    "headers": [
+      "Game",
+      "Team",
+      "Score",
+      "Location Attendance",
+      "Series"
+    ],
+    "where_column": "Game",
+    "where_value": "2",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the lowest Total, when Silver is greater than 7, and when Gold is greater than 73?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "7",
+    "select_column": "Total"
+  },
+  {
+    "question": "What is the rank by average where the total was larger than 245 and the average was 27.1 with fewer than 15 dances?",
+    "headers": [
+      "Rank by average",
+      "Place",
+      "Couple",
+      "Total",
+      "Number of dances",
+      "Average"
+    ],
+    "where_column": "Total",
+    "where_value": "245",
+    "select_column": "Rank by average"
+  },
+  {
+    "question": "what television service are in the united kingdom and n\u00b0 is greater than 854.0?",
+    "headers": [
+      "N\u00b0",
+      "Television service",
+      "Country",
+      "Language",
+      "Content",
+      "DAR",
+      "HDTV",
+      "Package/Option"
+    ],
+    "where_column": "Country",
+    "where_value": "United Kingdom",
+    "select_column": "Television service"
+  },
+  {
+    "question": "how many channels were gained in 1997",
+    "headers": [
+      "City",
+      "Station",
+      "Year acquired",
+      "Primary programming source",
+      "Other programming sources",
+      "Current status"
+    ],
+    "where_column": "Year acquired",
+    "where_value": "1997",
+    "select_column": "Other programming sources"
+  },
+  {
+    "question": "What is the highest rank for Peter Symes?",
+    "headers": [
+      "Rank",
+      "Rider",
+      "Team",
+      "Speed",
+      "Time"
+    ],
+    "where_column": "Rider",
+    "where_value": "peter symes",
+    "select_column": "Rank"
+  },
+  {
+    "question": "what is the surface when the championship is rome and the opponent is sergi bruguera?",
+    "headers": [
+      "Outcome",
+      "Year",
+      "Championship",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Championship",
+    "where_value": "rome",
+    "select_column": "Surface"
+  },
+  {
+    "question": "What is the title where the studio was RKO, the role was Dolly, and the year was later than 1943?",
+    "headers": [
+      "Year",
+      "Title",
+      "Role",
+      "Studio",
+      "Director"
+    ],
+    "where_column": "Year",
+    "where_value": "1943",
+    "select_column": "Title"
+  },
+  {
+    "question": "How much were the f/laps if poles is higher than 1.0 during 2008?",
+    "headers": [
+      "Season",
+      "Series",
+      "Team",
+      "Races",
+      "Wins",
+      "Poles",
+      "F/Laps",
+      "Podiums",
+      "Points",
+      "Position"
+    ],
+    "where_column": "Season",
+    "where_value": "2008",
+    "select_column": "F/Laps"
+  },
+  {
+    "question": "If the speaker is R. Muthiah, what is the election year maximum?",
+    "headers": [
+      "Election Year",
+      "Assembly",
+      "Winning Party/Coalition",
+      "Chief Minister",
+      "Speaker"
+    ],
+    "where_column": "Speaker",
+    "where_value": "R. Muthiah",
+    "select_column": "Election Year"
+  },
+  {
+    "question": "What is the sum of the bronze medals when there were more than 2 silver medals and a rank larger than 6?",
+    "headers": [
+      "Rank",
+      "Country",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "2",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "Which Label was cataloged as alca-9013?",
+    "headers": [
+      "Region",
+      "Date",
+      "Label",
+      "Format",
+      "Catalog"
+    ],
+    "where_column": "Catalog",
+    "where_value": "alca-9013",
+    "select_column": "Label"
+  },
+  {
+    "question": "What is the constructor at the United States Grand Prix?",
+    "headers": [
+      "Race",
+      "Circuit",
+      "Date",
+      "Pole position",
+      "Fastest lap",
+      "Winning driver",
+      "Constructor",
+      "Tyre",
+      "Report"
+    ],
+    "where_column": "Race",
+    "where_value": "united states grand prix",
+    "select_column": "Constructor"
+  },
+  {
+    "question": "What year was the match were xavier malisse was the runner-up against lleyton hewitt?",
+    "headers": [
+      "Outcome",
+      "Year",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Opponent",
+    "where_value": "lleyton hewitt",
+    "select_column": "Year"
+  },
+  {
+    "question": "What is the highest 2009 value with a 2006 value smaller than 280.4, a 2007 less than 2.2, and a 2011 less than 3.5?",
+    "headers": [
+      "Geographic Unit",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "where_column": "2006",
+    "where_value": "280.4",
+    "select_column": "2009"
+  },
+  {
+    "question": "What's the average round the position of RB was drafted?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Position",
+    "where_value": "rb",
+    "select_column": "Round"
+  },
+  {
+    "question": "What is the lowest Year, when Co-Driver is Warren Luff, when Position is 7th, and when Laps is less than 161?",
+    "headers": [
+      "Year",
+      "Number",
+      "Team",
+      "Co-driver",
+      "Position",
+      "Laps"
+    ],
+    "where_column": "Laps",
+    "where_value": "161",
+    "select_column": "Year"
+  },
+  {
+    "question": "Name the guest judge for first audition date being july 9, 2009",
+    "headers": [
+      "Episode Air Date",
+      "Audition City",
+      "First Audition Date",
+      "Audition Venue",
+      "Callback Date",
+      "Callback Venue",
+      "Guest Judge",
+      "Golden Tickets"
+    ],
+    "where_column": "First Audition Date",
+    "where_value": "July 9, 2009",
+    "select_column": "Guest Judge"
+  },
+  {
+    "question": "Who is the shirt sponsor for the team Daniel Thioune captains?",
+    "headers": [
+      "Team",
+      "Head coach",
+      "Team captain",
+      "Kitmaker",
+      "Shirt sponsor"
+    ],
+    "where_column": "Team captain",
+    "where_value": "daniel thioune",
+    "select_column": "Shirt sponsor"
+  },
+  {
+    "question": "Which Fleet Series (Quantity) has an Order Year of 2010, and a Model of de40lfr?",
+    "headers": [
+      "Builder",
+      "Model",
+      "Length (ft/m)",
+      "Order Year",
+      "Fuel Propulsion",
+      "Fleet Series (Quantity)"
+    ],
+    "where_column": "Model",
+    "where_value": "de40lfr",
+    "select_column": "Fleet Series (Quantity)"
+  },
+  {
+    "question": "What tournament since 1973 has a result of 1st?",
+    "headers": [
+      "Year",
+      "Tournament",
+      "Venue",
+      "Result",
+      "Extra"
+    ],
+    "where_column": "Result",
+    "where_value": "1st",
+    "select_column": "Tournament"
+  },
+  {
+    "question": "The total goals have a FA Cup Apps larger than 1, and a Total Apps of 37, and a League Apps smaller than 30?, what is the total number?",
+    "headers": [
+      "Division",
+      "League Apps",
+      "League Goals",
+      "FA Cup Apps",
+      "FA Cup Goals",
+      "Total Apps",
+      "Total Goals"
+    ],
+    "where_column": "Total Apps",
+    "where_value": "37",
+    "select_column": "Total Goals"
+  },
+  {
+    "question": "What event was in the 2008 Beijing games?",
+    "headers": [
+      "Medal",
+      "Name",
+      "Games",
+      "Sport",
+      "Event"
+    ],
+    "where_column": "Games",
+    "where_value": "2008 beijing",
+    "select_column": "Event"
+  },
+  {
+    "question": "what is the points against when the losing bonus is 0 and the club is banwen rfc?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Club",
+    "where_value": "banwen rfc",
+    "select_column": "Points against"
+  },
+  {
+    "question": "What is the listed chord for a Minor seventh of F?",
+    "headers": [
+      "Chord",
+      "Root",
+      "Major third",
+      "Augmented fifth",
+      "Minor seventh"
+    ],
+    "where_column": "Minor seventh",
+    "where_value": "f",
+    "select_column": "Chord"
+  },
+  {
+    "question": "what's the\u00a0attribute\u00a0with\u00a0cancelable\u00a0being yes",
+    "headers": [
+      "Category",
+      "Type",
+      "Attribute",
+      "Description",
+      "Bubbles",
+      "Cancelable"
+    ],
+    "where_column": "Cancelable",
+    "where_value": "Yes",
+    "select_column": "Attribute"
+  },
+  {
+    "question": "What Chassis has g Tyres before 1987?",
+    "headers": [
+      "Year",
+      "Entrant",
+      "Chassis",
+      "Engine",
+      "Tyres",
+      "Points"
+    ],
+    "where_column": "Year",
+    "where_value": "1987",
+    "select_column": "Chassis"
+  },
+  {
+    "question": "what is the name of the episode whose writers were jeff astrof & matt goldman? ",
+    "headers": [
+      "Series #",
+      "Season #",
+      "Title",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (millions)"
+    ],
+    "where_column": "Written by",
+    "where_value": "Jeff Astrof & Matt Goldman",
+    "select_column": "Title"
+  },
+  {
+    "question": "what is the rank when the state is colorado and the location is 37.7859\u00b0n 107.7039\u00b0w?",
+    "headers": [
+      "Rank",
+      "Mountain Peak",
+      "State",
+      "Mountain Range",
+      "Location"
+    ],
+    "where_column": "State",
+    "where_value": "colorado",
+    "select_column": "Rank"
+  },
+  {
+    "question": "what is the unemployment rate for wayne county?",
+    "headers": [
+      "County",
+      "Population",
+      "Unemployment Rate",
+      "Market Income Per Capita",
+      "Poverty Rate",
+      "Status"
+    ],
+    "where_column": "County",
+    "where_value": "Wayne",
+    "select_column": "Unemployment Rate"
+  },
+  {
+    "question": "What stadium had an opponent of Cal State Fullerton Titans?",
+    "headers": [
+      "Bowl",
+      "Score",
+      "Season",
+      "Opponent",
+      "Stadium",
+      "Location",
+      "Attendance",
+      "Head coach"
+    ],
+    "where_column": "Opponent",
+    "where_value": "cal state fullerton titans",
+    "select_column": "Stadium"
+  },
+  {
+    "question": "Where did jamie cox & daniel marsh play against queensland?",
+    "headers": [
+      "Wicket",
+      "Runs",
+      "Batsmen",
+      "Opponent",
+      "Venue",
+      "Season"
+    ],
+    "where_column": "Opponent",
+    "where_value": "queensland",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What was the highest Tie no when the home team was the Bolton Wanderers, and the date was Middlesbrough?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Date"
+    ],
+    "where_column": "Date",
+    "where_value": "middlesbrough",
+    "select_column": "Tie no"
+  },
+  {
+    "question": "Which Date has an Opponent of newcastle united, and a Result of 2\u20131?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Result",
+    "where_value": "2\u20131",
+    "select_column": "Date"
+  },
+  {
+    "question": "How many yards for the player with over 0 TDs and an average of 2.9?",
+    "headers": [
+      "Player",
+      "Car.",
+      "Yards",
+      "Avg.",
+      "TD's",
+      "Long"
+    ],
+    "where_column": "TD's",
+    "where_value": "0",
+    "select_column": "Yards"
+  },
+  {
+    "question": "What was the time of the race that was on a grid smaller than 9 with jeremy mcwilliams as the rider doing 21 laps?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "21",
+    "select_column": "Time/Retired"
+  },
+  {
+    "question": "what is drawn when the club is hirwaun rfc?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Club",
+    "where_value": "hirwaun rfc",
+    "select_column": "Drawn"
+  },
+  {
+    "question": "What family was featured in episode us14 of the series?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Family/families",
+      "Location(s)",
+      "Original air date"
+    ],
+    "where_column": "No. in series",
+    "where_value": "US14",
+    "select_column": "Family/families"
+  },
+  {
+    "question": "What is the total number of area listed for cannonvale with a population less than 409?",
+    "headers": [
+      "Place",
+      "Code",
+      "Area (km 2 )",
+      "Population",
+      "Most spoken language"
+    ],
+    "where_column": "Place",
+    "where_value": "cannonvale",
+    "select_column": "Area (km 2 )"
+  },
+  {
+    "question": "Name the tournament for dominican republic",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Location",
+      "Purse ( $ )",
+      "Winner",
+      "Score",
+      "1st Prize ( $ )"
+    ],
+    "where_column": "Location",
+    "where_value": "Dominican Republic",
+    "select_column": "Tournament"
+  },
+  {
+    "question": "Which tournament has marielle bruens for the opponent in the final?",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Surface",
+      "Opponent in the final",
+      "Score"
+    ],
+    "where_column": "Opponent in the final",
+    "where_value": "marielle bruens",
+    "select_column": "Tournament"
+  },
+  {
+    "question": "What is the name of the Event with a venue that was in toronto, canada?",
+    "headers": [
+      "Year",
+      "Competition",
+      "Venue",
+      "Position",
+      "Event"
+    ],
+    "where_column": "Venue",
+    "where_value": "toronto, canada",
+    "select_column": "Event"
+  },
+  {
+    "question": "Which Venue has an Away team of st kilda?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "st kilda",
+    "select_column": "Venue"
+  },
+  {
+    "question": "Who was the away team when the home team was Lincoln City?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Attendance"
+    ],
+    "where_column": "Home team",
+    "where_value": "lincoln city",
+    "select_column": "Away team"
+  },
+  {
+    "question": "What team played in front of 28,536 at an away stadium?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Crowd",
+    "where_value": "28,536",
+    "select_column": "Away team score"
+  },
+  {
+    "question": "How many bronze medals did the team have with 0 total silver and less than 3 total medals?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "3",
+    "select_column": "Bronze"
+  }
+]

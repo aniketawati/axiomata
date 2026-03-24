@@ -1,0 +1,726 @@
+[
+  {
+    "question": "What is the lowest number of wins where the byes are less than 0?",
+    "headers": [
+      "Geelong DFL",
+      "Wins",
+      "Byes",
+      "Losses",
+      "Draws",
+      "Against"
+    ],
+    "where_column": "Byes",
+    "where_value": "0",
+    "select_column": "Wins"
+  },
+  {
+    "question": "What was the name of the race that occurred in Brooklyn, Michigan with a sanctioning of cart?",
+    "headers": [
+      "Sanctioning",
+      "Race Name",
+      "Circuit",
+      "City/Location",
+      "Date"
+    ],
+    "where_column": "City/Location",
+    "where_value": "brooklyn, michigan",
+    "select_column": "Race Name"
+  },
+  {
+    "question": "What is the Fatalities when the tail number was unknown and in Kabul>",
+    "headers": [
+      "Location",
+      "Aircraft",
+      "Tail number",
+      "Aircraft damage",
+      "Fatalities"
+    ],
+    "where_column": "Location",
+    "where_value": "kabul",
+    "select_column": "Fatalities"
+  },
+  {
+    "question": "What is the rank of player Jason Dunstall?",
+    "headers": [
+      "Rank",
+      "Goals",
+      "Player",
+      "Club/Clubs",
+      "Career"
+    ],
+    "where_column": "Player",
+    "where_value": "jason dunstall",
+    "select_column": "Rank"
+  },
+  {
+    "question": "Who got 59.486 for Qual 2?",
+    "headers": [
+      "Name",
+      "Team",
+      "Qual 1",
+      "Qual 2",
+      "Best"
+    ],
+    "where_column": "Qual 2",
+    "where_value": "59.486",
+    "select_column": "Name"
+  },
+  {
+    "question": "What is the purse total for the royal caribbean golf classic?",
+    "headers": [
+      "Date",
+      "Tournament",
+      "Location",
+      "Purse( $ )",
+      "Winner",
+      "Score",
+      "1st Prize( $ )"
+    ],
+    "where_column": "Tournament",
+    "where_value": "royal caribbean golf classic",
+    "select_column": "Purse( $ )"
+  },
+  {
+    "question": "Which venue has more than 19 against?",
+    "headers": [
+      "Opposing Teams",
+      "Against",
+      "Date",
+      "Venue",
+      "Status"
+    ],
+    "where_column": "Against",
+    "where_value": "19",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What is the Date, when the Team Record is 2-0?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance",
+      "Team Record",
+      "Game Site"
+    ],
+    "where_column": "Team Record",
+    "where_value": "2-0",
+    "select_column": "Date"
+  },
+  {
+    "question": "What home team had an attendance record of 16,971?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score 1",
+      "Away team",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "16,971",
+    "select_column": "Home team"
+  },
+  {
+    "question": "What is the number of the round in which Ron Hansen was drafted and the overall is greater than 332?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Overall",
+    "where_value": "332",
+    "select_column": "Round"
+  },
+  {
+    "question": "What year has a Schwante smaller than 2.043, an Eichst\u00e4dt smaller than 848, and a B\u00e4renklau smaller than 1.262?",
+    "headers": [
+      "Year",
+      "B\u00f6tzow",
+      "Schwante",
+      "Vehlefanz",
+      "Neu-Vehlefanz",
+      "Marwitz",
+      "B\u00e4renklau",
+      "Eichst\u00e4dt"
+    ],
+    "where_column": "B\u00e4renklau",
+    "where_value": "1.262",
+    "select_column": "Year"
+  },
+  {
+    "question": "What is the average To Par, when Score is \"72-67-71-72=282\"?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "Score",
+    "where_value": "72-67-71-72=282",
+    "select_column": "To par"
+  },
+  {
+    "question": "What is the television service that has package with sky tv, and it in Italian English?",
+    "headers": [
+      "Television service",
+      "Country",
+      "Language",
+      "Content",
+      "HDTV",
+      "Package/Option"
+    ],
+    "where_column": "Package/Option",
+    "where_value": "sky tv",
+    "select_column": "Television service"
+  },
+  {
+    "question": "What club had 56 points?",
+    "headers": [
+      "Club",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "56",
+    "select_column": "Club"
+  },
+  {
+    "question": "Which tournament had a 2R categorization in 2009 and SF in 2010?",
+    "headers": [
+      "Tournament",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "where_column": "2010",
+    "where_value": "sf",
+    "select_column": "Tournament"
+  },
+  {
+    "question": "What is the average number of conversions for the Cardiff Blues with less than 14 tries?",
+    "headers": [
+      "Team",
+      "Games",
+      "Tries",
+      "Conversions",
+      "Total Points"
+    ],
+    "where_column": "Team",
+    "where_value": "cardiff blues",
+    "select_column": "Conversions"
+  },
+  {
+    "question": "What is the title of the song that received 259 points?",
+    "headers": [
+      "Position",
+      "Artist",
+      "Song title",
+      "Highest position",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "259",
+    "select_column": "Song title"
+  },
+  {
+    "question": "What was the Record during the game with a Score of 113\u2013103?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Result",
+      "Score",
+      "Record",
+      "Streak"
+    ],
+    "where_column": "Score",
+    "where_value": "113\u2013103",
+    "select_column": "Record"
+  },
+  {
+    "question": "Who was the opponent when the head coach was B. Sathianathan?",
+    "headers": [
+      "Date",
+      "Location",
+      "Head coach",
+      "Opponent",
+      "Result"
+    ],
+    "where_column": "Head coach",
+    "where_value": "b. sathianathan",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "What is orthodoxy when x is wehdat?",
+    "headers": [
+      "\u00d7",
+      "Faisaly",
+      "Wehdat",
+      "Ramtha",
+      "Ahli",
+      "Jazeera",
+      "Hussein",
+      "Amman",
+      "Orthodoxy",
+      "Jeel",
+      "Ain Karem"
+    ],
+    "where_column": "\u00d7",
+    "where_value": "Wehdat",
+    "select_column": "Orthodoxy"
+  },
+  {
+    "question": "Which 2011 has a 1999 of A, and a 2004 of 2r, and a Career SR of 0 / 10?",
+    "headers": [
+      "Tournament",
+      "1998",
+      "1999",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "Career SR",
+      "Career Win-Loss"
+    ],
+    "where_column": "Career SR",
+    "where_value": "0 / 10",
+    "select_column": "2011"
+  },
+  {
+    "question": "How many silver medals were won in 1938?",
+    "headers": [
+      "Year",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Year",
+    "where_value": "1938",
+    "select_column": "Silver"
+  },
+  {
+    "question": "What nationality has steve kerr as the player?",
+    "headers": [
+      "Player",
+      "Nationality",
+      "Position",
+      "Years in Orlando",
+      "School/Club Team"
+    ],
+    "where_column": "Player",
+    "where_value": "steve kerr",
+    "select_column": "Nationality"
+  },
+  {
+    "question": "What venue has a weight (kg) greater than 55, and won as the result?",
+    "headers": [
+      "Result",
+      "Date",
+      "Race",
+      "Venue",
+      "Group",
+      "Distance",
+      "Weight (kg)",
+      "Jockey",
+      "Winner/2nd"
+    ],
+    "where_column": "Result",
+    "where_value": "won",
+    "select_column": "Venue"
+  },
+  {
+    "question": "Which Males have a percentage of 0.42?",
+    "headers": [
+      "Language",
+      "Number",
+      "percentage (%)",
+      "males",
+      "females"
+    ],
+    "where_column": "percentage (%)",
+    "where_value": "0.42",
+    "select_column": "males"
+  },
+  {
+    "question": "In what place was the song that had a draw of 3?",
+    "headers": [
+      "Draw",
+      "Artist",
+      "Song",
+      "Points",
+      "Place"
+    ],
+    "where_column": "Draw",
+    "where_value": "3",
+    "select_column": "Place"
+  },
+  {
+    "question": "What Country does Larry Mize play for?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "larry mize",
+    "select_column": "Country"
+  },
+  {
+    "question": "what is the highest podiums when the stage wins is 91 and the points is less than 140?",
+    "headers": [
+      "Constructor",
+      "Chassis",
+      "Starts",
+      "Finishes",
+      "Wins",
+      "Podiums",
+      "Stage wins",
+      "Points"
+    ],
+    "where_column": "Stage wins",
+    "where_value": "91",
+    "select_column": "Podiums"
+  },
+  {
+    "question": "What's the date for HOF week?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Game site",
+      "Record",
+      "Attendance"
+    ],
+    "where_column": "Week",
+    "where_value": "hof",
+    "select_column": "Date"
+  },
+  {
+    "question": "what's the\u00a0party\u00a0with\u00a0candidates\u00a0 jerry weller (r) 51.77% clem balanoff (d) 48.23%",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Candidates",
+    "where_value": "Jerry Weller (R) 51.77% Clem Balanoff (D) 48.23%",
+    "select_column": "Party"
+  },
+  {
+    "question": "What is the highest number of yards recorded for a player that had more than 4 TD's?",
+    "headers": [
+      "Player",
+      "Rec.",
+      "Yards",
+      "Avg.",
+      "TD's",
+      "Long"
+    ],
+    "where_column": "TD's",
+    "where_value": "4",
+    "select_column": "Yards"
+  },
+  {
+    "question": "What scores happened on February 9?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Score",
+      "Location",
+      "Attendance",
+      "Record",
+      "Points"
+    ],
+    "where_column": "Date",
+    "where_value": "February 9",
+    "select_column": "Score"
+  },
+  {
+    "question": "When George H.W. Bush had 81%, and Pat Robertson had 9%, what did Bob Dole have?",
+    "headers": [
+      "Date",
+      "State",
+      "George H.W. Bush",
+      "Bob Dole",
+      "Pat Robertson",
+      "Jack Kemp",
+      "Pete du Pont"
+    ],
+    "where_column": "George H.W. Bush",
+    "where_value": "81%",
+    "select_column": "Bob Dole"
+  },
+  {
+    "question": "Name the date of appointment for sacked and 14th position replaced by marco kostmann",
+    "headers": [
+      "Team",
+      "Outgoing manager",
+      "Manner of departure",
+      "Date of vacancy",
+      "Replaced by",
+      "Date of appointment",
+      "Position in table"
+    ],
+    "where_column": "Position in table",
+    "where_value": "14th",
+    "select_column": "Date of appointment"
+  },
+  {
+    "question": "Which Effic is the average one that has an Avg/G larger than 3.7, and a GP-GS of 13, and a Cmp-Att-Int of 318-521-15?",
+    "headers": [
+      "Name",
+      "GP-GS",
+      "Effic",
+      "Cmp-Att-Int",
+      "Avg/G"
+    ],
+    "where_column": "Avg/G",
+    "where_value": "3.7",
+    "select_column": "Effic"
+  },
+  {
+    "question": "Which player from Scotland has a To Par score of +7?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "To par",
+    "where_value": "+7",
+    "select_column": "Player"
+  },
+  {
+    "question": "Who was the winning team in 2008?",
+    "headers": [
+      "Year",
+      "Series",
+      "Winning team",
+      "Losing team",
+      "Score",
+      "Site"
+    ],
+    "where_column": "Year",
+    "where_value": "2008",
+    "select_column": "Winning team"
+  },
+  {
+    "question": "What week that shows a game record of 0\u20131?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Location",
+      "Time ( ET )",
+      "Result",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "0\u20131",
+    "select_column": "Week"
+  },
+  {
+    "question": "When did Riot Games release their 3D MOBA game?",
+    "headers": [
+      "Developer(s)",
+      "Release date",
+      "Required OS",
+      "Genre",
+      "Type"
+    ],
+    "where_column": "Type",
+    "where_value": "3d",
+    "select_column": "Release date"
+  },
+  {
+    "question": "Who is the Winner of the Nissan Motorsport Australia Team at the Oran Park Raceway?",
+    "headers": [
+      "Date",
+      "Series",
+      "Circuit",
+      "City / State",
+      "Winner",
+      "Team"
+    ],
+    "where_column": "Team",
+    "where_value": "nissan motorsport australia",
+    "select_column": "Winner"
+  },
+  {
+    "question": "How many goals were conceded by the team with more than 21 points more than 5 draws and less than 18 games played?",
+    "headers": [
+      "Place",
+      "Team",
+      "Played",
+      "Draw",
+      "Lost",
+      "Goals Scored",
+      "Goals Conceded",
+      "Points"
+    ],
+    "where_column": "Draw",
+    "where_value": "5",
+    "select_column": "Goals Conceded"
+  },
+  {
+    "question": "Which player did the green bay packers pick?",
+    "headers": [
+      "Pick #",
+      "NFL Team",
+      "Player",
+      "Position",
+      "College"
+    ],
+    "where_column": "NFL Team",
+    "where_value": "Green Bay Packers",
+    "select_column": "Player"
+  },
+  {
+    "question": "What is Opponent, when Event is \"ISCF - Southeast Championships\"?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round",
+      "Location"
+    ],
+    "where_column": "Event",
+    "where_value": "iscf - southeast championships",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "what is the total made with a 3pm-a of 5-5 and a total attempted less than 14",
+    "headers": [
+      "Game",
+      "3PM-A",
+      "Percent Made",
+      "Total Made",
+      "Total Attempted",
+      "Series Percent"
+    ],
+    "where_column": "3PM-A",
+    "where_value": "5-5",
+    "select_column": "Total Made"
+  },
+  {
+    "question": "In what Week was the Attendance 49,097?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "49,097",
+    "select_column": "Week"
+  },
+  {
+    "question": "How many total points did roman Koudelka have",
+    "headers": [
+      "Rank",
+      "Name",
+      "Nationality",
+      "1st (m)",
+      "2nd (m)",
+      "Points",
+      "Overall FHT points",
+      "Overall WC points (Rank)"
+    ],
+    "where_column": "Name",
+    "where_value": "Roman Koudelka",
+    "select_column": "Overall WC points (Rank)"
+  },
+  {
+    "question": "What college or league did the round 2 pick with d position come from?",
+    "headers": [
+      "Round",
+      "Player",
+      "Position",
+      "Nationality",
+      "College/Junior/Club Team (League)"
+    ],
+    "where_column": "Position",
+    "where_value": "d",
+    "select_column": "College/Junior/Club Team (League)"
+  },
+  {
+    "question": "How many opponents points were there on 11/11/01?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Result",
+      "Dolphins' points",
+      "Opponents' Points",
+      "Record",
+      "Streak",
+      "Attendance"
+    ],
+    "where_column": "Date",
+    "where_value": "11/11/01",
+    "select_column": "Opponents' Points"
+  },
+  {
+    "question": "What is the district with the incumbent john nicholas?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Incumbent",
+    "where_value": "John Nicholas",
+    "select_column": "District"
+  },
+  {
+    "question": "Which manufacturer of aprilia wth time of +1:36.557 has the highest lap?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time",
+      "Grid"
+    ],
+    "where_column": "Manufacturer",
+    "where_value": "aprilia",
+    "select_column": "Laps"
+  }
+]

@@ -1,0 +1,716 @@
+[
+  {
+    "question": "What's the total of rank 8 when Silver medals are 0 and gold is more than 1?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "0",
+    "select_column": "Total"
+  },
+  {
+    "question": "What is Elizabeth Simmonds' average lane number?",
+    "headers": [
+      "Rank",
+      "Lane",
+      "Name",
+      "Nationality",
+      "Time"
+    ],
+    "where_column": "Name",
+    "where_value": "elizabeth simmonds",
+    "select_column": "Lane"
+  },
+  {
+    "question": "What team has an against more than 8, lost of 7, and the position is 5?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Against",
+    "where_value": "8",
+    "select_column": "Team"
+  },
+  {
+    "question": "What is the average grid that has a Constructor of brm, tony maggs, and a Laps larger than 102?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "102",
+    "select_column": "Grid"
+  },
+  {
+    "question": "Which Took Office has a District of 29?",
+    "headers": [
+      "Senator",
+      "Party",
+      "District",
+      "Home Town",
+      "Took Office"
+    ],
+    "where_column": "District",
+    "where_value": "29",
+    "select_column": "Took Office"
+  },
+  {
+    "question": "What score has tim duncan (27) as the leading scorer?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Leading scorer",
+      "Record"
+    ],
+    "where_column": "Leading scorer",
+    "where_value": "tim duncan (27)",
+    "select_column": "Score"
+  },
+  {
+    "question": "What player has a score of 69-68-68=205?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Score",
+    "where_value": "69-68-68=205",
+    "select_column": "Player"
+  },
+  {
+    "question": "Which Player has a Score of 67 in united states?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Score",
+    "where_value": "67",
+    "select_column": "Player"
+  },
+  {
+    "question": "What is the date of entry for the UK Albums Top 75 chart?",
+    "headers": [
+      "Chart",
+      "Date of Entry",
+      "Entry Position",
+      "Peak Position",
+      "Weeks on Peak",
+      "Weeks on Chart",
+      "Date of Exit"
+    ],
+    "where_column": "Chart",
+    "where_value": "UK Albums Top 75",
+    "select_column": "Date of Entry"
+  },
+  {
+    "question": "What is the lowest Grid with 25 laps manufactured by Honda with a time of +54.103?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Time/Retired",
+    "where_value": "+54.103",
+    "select_column": "Grid"
+  },
+  {
+    "question": "Which Name (pinyin) is named fu-ching?",
+    "headers": [
+      "Name (pinyin)",
+      "Name (Wade Giles)",
+      "Characters",
+      "Type",
+      "Construction"
+    ],
+    "where_column": "Name (Wade Giles)",
+    "where_value": "fu-ching",
+    "select_column": "Name (pinyin)"
+  },
+  {
+    "question": "What's the English name of the county with a postcode 246400?",
+    "headers": [
+      "English Name",
+      "Chinese Name (Simplified / Traditional)",
+      "Pinyin",
+      "Population",
+      "Post Code"
+    ],
+    "where_column": "Post Code",
+    "where_value": "246400",
+    "select_column": "English Name"
+  },
+  {
+    "question": "What is the amount of renewable electricity without hydrogen power when the percentage of renewable energy is 83.4?",
+    "headers": [
+      "Rank",
+      "Rank w/o Hydropower",
+      "State",
+      "% Renewable",
+      "% Renewable w/o Hydro",
+      "Renewable electricity (GW\u2022h)",
+      "Renewable electricity w/o Hydro (GW\u2022h)",
+      "Total electricity (GW\u2022h)"
+    ],
+    "where_column": "% Renewable",
+    "where_value": "83.4",
+    "select_column": "Renewable electricity w/o Hydro (GW\u2022h)"
+  },
+  {
+    "question": "How many wickets were there when average was 22.66?",
+    "headers": [
+      "Player",
+      "Team",
+      "Matches",
+      "Wickets",
+      "Average",
+      "Best Bowling"
+    ],
+    "where_column": "Average",
+    "where_value": "22.66",
+    "select_column": "Wickets"
+  },
+  {
+    "question": "I want the trailers for 1931 and builder of mccw",
+    "headers": [
+      "Year",
+      "Builder",
+      "Motors",
+      "Trailers",
+      "Control Trailers"
+    ],
+    "where_column": "Year",
+    "where_value": "1931",
+    "select_column": "Trailers"
+  },
+  {
+    "question": "How many blocks have a weight greater than 82, and a height less than 199?",
+    "headers": [
+      "Name",
+      "Date of Birth",
+      "Height",
+      "Weight",
+      "Spike",
+      "Block"
+    ],
+    "where_column": "Weight",
+    "where_value": "82",
+    "select_column": "Block"
+  },
+  {
+    "question": "What is the Republican seat plurality of the state with a ratio of 12/4 Republicans to Democrats?",
+    "headers": [
+      "State ranked in partisan order",
+      "Percentage Republicans",
+      "Percentage Democrats",
+      "Republican/ Democratic",
+      "Republican seat plurality"
+    ],
+    "where_column": "Republican/ Democratic",
+    "where_value": "12/4",
+    "select_column": "Republican seat plurality"
+  },
+  {
+    "question": "What was the profession of the celebrity who was featured on season 15 and finished 7th place?",
+    "headers": [
+      "Season",
+      "Celebrity",
+      "Notability/Profession",
+      "Professional partner",
+      "Finish"
+    ],
+    "where_column": "Finish",
+    "where_value": "7th",
+    "select_column": "Notability/Profession"
+  },
+  {
+    "question": "What is the mode of the Depart de la main gauche of 1st case and a la or mi 3rd string?",
+    "headers": [
+      "Mode",
+      "D\u00e9part de la main gauche",
+      "Accord du 1st string",
+      "2nd string",
+      "3rd string"
+    ],
+    "where_column": "D\u00e9part de la main gauche",
+    "where_value": "1st case",
+    "select_column": "Mode"
+  },
+  {
+    "question": "Name the 2nd leg for boca juniors",
+    "headers": [
+      "Team #1",
+      "Points",
+      "Team #2",
+      "1st leg",
+      "2nd leg"
+    ],
+    "where_column": "Team #1",
+    "where_value": "Boca Juniors",
+    "select_column": "2nd leg"
+  },
+  {
+    "question": "Which house has an abbreviation of D?",
+    "headers": [
+      "House",
+      "Abbr.",
+      "Type",
+      "Colour",
+      "Boarding/Day"
+    ],
+    "where_column": "Abbr.",
+    "where_value": "d",
+    "select_column": "House"
+  },
+  {
+    "question": "What competition was held on the 26th?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance",
+      "Competition",
+      "Man of the Match"
+    ],
+    "where_column": "Date",
+    "where_value": "26th",
+    "select_column": "Competition"
+  },
+  {
+    "question": "Name the most epiosdes when region 4 is march 13, 2008",
+    "headers": [
+      "Volume",
+      "Discs",
+      "Episodes",
+      "Region 1",
+      "Region 2",
+      "Region 4"
+    ],
+    "where_column": "Region 4",
+    "where_value": "March 13, 2008",
+    "select_column": "Episodes"
+  },
+  {
+    "question": "For how many contestants was the background internet dreamer? ",
+    "headers": [
+      "Contestant",
+      "Background",
+      "Original team",
+      "Age",
+      "Hometown",
+      "Result"
+    ],
+    "where_column": "Background",
+    "where_value": "Internet dreamer",
+    "select_column": "Contestant"
+  },
+  {
+    "question": "What is the height of the Tides with less than 34 floors?",
+    "headers": [
+      "Name",
+      "Street address",
+      "Years as tallest",
+      "Height feet / m",
+      "Floors"
+    ],
+    "where_column": "Name",
+    "where_value": "the tides",
+    "select_column": "Height feet / m"
+  },
+  {
+    "question": "WHAT IS THE SCORE WITH A DATE OF NOVEMBER 18?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "november 18",
+    "select_column": "Score"
+  },
+  {
+    "question": "Who was the winner when the finalist was fsv frankfurt?",
+    "headers": [
+      "Year",
+      "Winner",
+      "Finalist",
+      "Result",
+      "Date",
+      "Venue",
+      "Attendance"
+    ],
+    "where_column": "Finalist",
+    "where_value": "fsv frankfurt",
+    "select_column": "Winner"
+  },
+  {
+    "question": "what are the total points agains the score of 63?",
+    "headers": [
+      "Club",
+      "Played",
+      "Won",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "63",
+    "select_column": "Points against"
+  },
+  {
+    "question": "After week 2, how many people attended the game at Rich Stadium against the Miami Dolphins?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Record",
+      "Game Site",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "miami dolphins",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "What is the pick number for position of D from the University of Maine (NCAA)?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Position",
+    "where_value": "d",
+    "select_column": "Pick #"
+  },
+  {
+    "question": "Name the attendance for loss result and salford city reds",
+    "headers": [
+      "Competition",
+      "Round",
+      "Opponent",
+      "Result",
+      "Score",
+      "Home/Away",
+      "Venue",
+      "Attendance",
+      "Date"
+    ],
+    "where_column": "Opponent",
+    "where_value": "Salford City Reds",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "Who won Women's doubles when Nikhil Kanetkar won Men's singles?",
+    "headers": [
+      "Year",
+      "Men's singles",
+      "Women's singles",
+      "Men's doubles",
+      "Women's doubles",
+      "Mixed doubles"
+    ],
+    "where_column": "Men's singles",
+    "where_value": "nikhil kanetkar",
+    "select_column": "Women's doubles"
+  },
+  {
+    "question": "How many silvers for japan (1 gold)?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Gold",
+    "where_value": "1",
+    "select_column": "Silver"
+  },
+  {
+    "question": "In the year 2006, the womens singles had no competition and the mens doubles were roland hilti kilian pfister, what were the womens doubles",
+    "headers": [
+      "Year",
+      "Mens singles",
+      "Womens singles",
+      "Mens doubles",
+      "Womens doubles",
+      "Mixed doubles"
+    ],
+    "where_column": "Year",
+    "where_value": "2006",
+    "select_column": "Womens doubles"
+  },
+  {
+    "question": "What postseason has a win% between 0.40700000000000003 and 108 with a rank of 1?",
+    "headers": [
+      "Year",
+      "Rank",
+      "Games",
+      "Win%",
+      "Postseason"
+    ],
+    "where_column": "Win%",
+    "where_value": "0.40700000000000003",
+    "select_column": "Postseason"
+  },
+  {
+    "question": "What is Score, when Country is \"United States\", and when To Par is \"+4\"?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "To par",
+    "where_value": "+4",
+    "select_column": "Score"
+  },
+  {
+    "question": "What was the opponent when the score was 3 - 2,  and the decision was Raycroft, with a record of 25-29-1?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Decision",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "25-29-1",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "Name the rank for 151 Laps",
+    "headers": [
+      "Year",
+      "Start",
+      "Qual",
+      "Rank",
+      "Finish",
+      "Laps"
+    ],
+    "where_column": "Laps",
+    "where_value": "151",
+    "select_column": "Rank"
+  },
+  {
+    "question": "How many bronze's on average for nations with over 1 total, less than 2 golds, ranked 2nd?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Gold",
+    "where_value": "2",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "What was the home team in the February 22 game that Legace played in for the St. Louis Blues?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Decision",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "february 22",
+    "select_column": "Home"
+  },
+  {
+    "question": "What is the average muslim that has a druze less than 2,534, a year prior to 2005, and a jewish greater than 100,657?",
+    "headers": [
+      "Year",
+      "Jewish",
+      "Muslim",
+      "Christian",
+      "Druze",
+      "Total"
+    ],
+    "where_column": "Year",
+    "where_value": "2005",
+    "select_column": "Muslim"
+  },
+  {
+    "question": "What place had an Away team get a score of 10.17 (77)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team score",
+    "where_value": "10.17 (77)",
+    "select_column": "Venue"
+  },
+  {
+    "question": "Which Year that has Notes of dnf?",
+    "headers": [
+      "Year",
+      "Competition",
+      "Venue",
+      "Position",
+      "Event",
+      "Notes"
+    ],
+    "where_column": "Notes",
+    "where_value": "dnf",
+    "select_column": "Year"
+  },
+  {
+    "question": "What was the nationality of every player that attended Baylor?",
+    "headers": [
+      "Player",
+      "Nationality",
+      "Position",
+      "From",
+      "School/Country"
+    ],
+    "where_column": "School/Country",
+    "where_value": "baylor",
+    "select_column": "Nationality"
+  },
+  {
+    "question": "What are the notes for the person ranked larger than 2, and a time of 1:48.179?",
+    "headers": [
+      "Rank",
+      "Athletes",
+      "Country",
+      "Time",
+      "Notes"
+    ],
+    "where_column": "Rank",
+    "where_value": "2",
+    "select_column": "Notes"
+  },
+  {
+    "question": "What is Postition, when Date of Birth (Age) is Example, and when Player is Mark Spencer?",
+    "headers": [
+      "Player",
+      "Position",
+      "Date of Birth (Age)",
+      "Caps",
+      "Province / Club"
+    ],
+    "where_column": "Date of Birth (Age)",
+    "where_value": "example",
+    "select_column": "Position"
+  },
+  {
+    "question": "What is the country seat for the license plate code 5c?",
+    "headers": [
+      "County",
+      "County seat",
+      "License Plate Code",
+      "Year founded",
+      "Population (2008 est.)",
+      "Population Percentage",
+      "Area (sq.mi.)",
+      "Area %"
+    ],
+    "where_column": "License Plate Code",
+    "where_value": "5c",
+    "select_column": "County seat"
+  },
+  {
+    "question": "How many stolen ends against where there when Thomas Dufour was skip? ",
+    "headers": [
+      "Country",
+      "Skip",
+      "W",
+      "L",
+      "PF",
+      "PA",
+      "Ends Won",
+      "Ends Lost",
+      "Blank Ends F/A",
+      "Stolen Ends For",
+      "Stolen Ends Against",
+      "Shot %"
+    ],
+    "where_column": "Skip",
+    "where_value": "Thomas Dufour",
+    "select_column": "Stolen Ends Against"
+  },
+  {
+    "question": "What is 7:30 am, when 11:00 am is \"The View\"?",
+    "headers": [
+      "7:30 am",
+      "8:00 am",
+      "9:00 am",
+      "11:00 am",
+      "noon",
+      "12:30 pm",
+      "1:00 pm",
+      "1:30 pm",
+      "2:00 pm",
+      "3:00 pm",
+      "3:30 pm",
+      "5:00 pm",
+      "6:30 pm"
+    ],
+    "where_column": "11:00 am",
+    "where_value": "the view",
+    "select_column": "7:30 am"
+  },
+  {
+    "question": "For what country is the skip Andy Kapp?",
+    "headers": [
+      "Team",
+      "Country",
+      "Home",
+      "Skip",
+      "Third",
+      "Second",
+      "Lead"
+    ],
+    "where_column": "Skip",
+    "where_value": "andy kapp",
+    "select_column": "Country"
+  }
+]

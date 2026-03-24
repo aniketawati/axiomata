@@ -1,0 +1,707 @@
+[
+  {
+    "question": "Name the total number of air dates for 102 episode",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "U.S. viewers (million)"
+    ],
+    "where_column": "No. in series",
+    "where_value": "102",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "What is the sum of Gold with Participants that are 4 and a Silver that is smaller than 0?",
+    "headers": [
+      "Rank",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total",
+      "Participants"
+    ],
+    "where_column": "Participants",
+    "where_value": "4",
+    "select_column": "Gold"
+  },
+  {
+    "question": "Who published in Italian with a page size of 8 inches (20cm) x 5.4 inches (14cm)?",
+    "headers": [
+      "Book title",
+      "Author",
+      "Edition/Publisher",
+      "Page count",
+      "Page size",
+      "Language"
+    ],
+    "where_column": "Language",
+    "where_value": "italian",
+    "select_column": "Edition/Publisher"
+  },
+  {
+    "question": "Which Grid has Laps of 25, and a Manufacturer of honda, and a Time/Retired of +1:47.797?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "25",
+    "select_column": "Grid"
+  },
+  {
+    "question": "How many total runners had jockeys of Olivier Peslier with placings under 2?",
+    "headers": [
+      "Race",
+      "Dist (f)",
+      "Course",
+      "Prize (\u00a3K)",
+      "Runners",
+      "Placing",
+      "Margin",
+      "Jockey",
+      "Trainer"
+    ],
+    "where_column": "Jockey",
+    "where_value": "olivier peslier",
+    "select_column": "Runners"
+  },
+  {
+    "question": "What was Larry Nelson's final score?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "Player",
+    "where_value": "larry nelson",
+    "select_column": "Score"
+  },
+  {
+    "question": "Who is the studio host that has a play-by-play announcer of Bob Cole and a colour commentator of Harry Neale?",
+    "headers": [
+      "Year",
+      "Network",
+      "Play-by-play",
+      "Colour commentator(s)",
+      "Studio host"
+    ],
+    "where_column": "Colour commentator(s)",
+    "where_value": "harry neale",
+    "select_column": "Studio host"
+  },
+  {
+    "question": "What is the length of retirement for president Sharma, Shankar Shankar Dayal Sharma?",
+    "headers": [
+      "President",
+      "Date of birth",
+      "Date of inauguration",
+      "Age at inauguration",
+      "End of term",
+      "Length of retirement",
+      "Date of death",
+      "Lifespan"
+    ],
+    "where_column": "President",
+    "where_value": "sharma, shankar shankar dayal sharma",
+    "select_column": "Length of retirement"
+  },
+  {
+    "question": "What province has a v valpara\u00edso region and an area of 927.2?",
+    "headers": [
+      "Region",
+      "Province",
+      "Capital",
+      "No. of Communes",
+      "Area",
+      "2002 Population"
+    ],
+    "where_column": "Area",
+    "where_value": "927.2",
+    "select_column": "Province"
+  },
+  {
+    "question": "What's the WChmp of the race greater than 42 and pole greater than 11?",
+    "headers": [
+      "Class",
+      "Season",
+      "Race",
+      "Podiums",
+      "Pole",
+      "FLap",
+      "WChmp"
+    ],
+    "where_column": "Pole",
+    "where_value": "11",
+    "select_column": "WChmp"
+  },
+  {
+    "question": "What is the average score for the player who is T5 in the United States?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Place",
+    "where_value": "t5",
+    "select_column": "Score"
+  },
+  {
+    "question": "Who built the conant creek pegram truss railroad bridge?",
+    "headers": [
+      "Name",
+      "Built",
+      "Listed",
+      "Location",
+      "County"
+    ],
+    "where_column": "Name",
+    "where_value": "conant creek pegram truss railroad bridge",
+    "select_column": "Built"
+  },
+  {
+    "question": "What is the incumbent for ohio 12?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "District",
+    "where_value": "Ohio 12",
+    "select_column": "Incumbent"
+  },
+  {
+    "question": "In which year did Misaki Doi lose the Australian Open Grand Slam?",
+    "headers": [
+      "Year",
+      "Grand Slam",
+      "Round",
+      "Winner",
+      "Loser"
+    ],
+    "where_column": "Grand Slam",
+    "where_value": "australian open",
+    "select_column": "Year"
+  },
+  {
+    "question": "When Baltimore County, Howard are represented, what's the first elected when the committee is environmental matters (vice-chair)?",
+    "headers": [
+      "District",
+      "Counties Represented",
+      "Delegate",
+      "Party",
+      "First Elected",
+      "Committee"
+    ],
+    "where_column": "Counties Represented",
+    "where_value": "baltimore county, howard",
+    "select_column": "First Elected"
+  },
+  {
+    "question": "How many points did Stuart have when he had 0 extra points?",
+    "headers": [
+      "Player",
+      "Touchdowns",
+      "Extra points",
+      "Field goals",
+      "Points"
+    ],
+    "where_column": "Player",
+    "where_value": "stuart",
+    "select_column": "Points"
+  },
+  {
+    "question": "When were the shares 39.1%?",
+    "headers": [
+      "Show",
+      "Date",
+      "Official ratings (millions)",
+      "Weekly rank",
+      "Share"
+    ],
+    "where_column": "Share",
+    "where_value": "39.1%",
+    "select_column": "Date"
+  },
+  {
+    "question": "How many bronze medals were won when the total was larger than 2 and the more than 2 gold medals were won?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Gold",
+    "where_value": "2",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "What driver has a grid greater than 19?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Grid",
+    "where_value": "19",
+    "select_column": "Driver"
+  },
+  {
+    "question": "What is the smallest area that has a Population Density of 3,216 and a Population larger than 16,650,000?",
+    "headers": [
+      "Rank",
+      "Metropolitan area",
+      "Country",
+      "Population",
+      "Area (km\u00b2)",
+      "Population Density (People/km\u00b2)"
+    ],
+    "where_column": "Population Density (People/km\u00b2)",
+    "where_value": "3,216",
+    "select_column": "Area (km\u00b2)"
+  },
+  {
+    "question": "Which Date has a Catalog of 887 195-2, and a Format of cd maxi?",
+    "headers": [
+      "Date",
+      "Label",
+      "Region",
+      "Format",
+      "Catalog"
+    ],
+    "where_column": "Catalog",
+    "where_value": "887 195-2",
+    "select_column": "Date"
+  },
+  {
+    "question": "Which date has a Surface of carpet (i)?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Tournament",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Surface",
+    "where_value": "carpet (i)",
+    "select_column": "Date"
+  },
+  {
+    "question": "Where the height range is higher than 20000.0 and the shell weight is 12.5, what is the time to feet ratio at 25 degrees?",
+    "headers": [
+      "Gun",
+      "m/v ft/s",
+      "Shell (lb)",
+      "Time to ft (m) at 25\u00b0 (seconds)",
+      "Time to ft (m) at 40\u00b0 (seconds)",
+      "Time to ft (m) at 55\u00b0 (seconds)",
+      "Max. height (ft)"
+    ],
+    "where_column": "Max. height (ft)",
+    "where_value": "20000.0",
+    "select_column": "Time to ft (m) at 25\u00b0 (seconds)"
+  },
+  {
+    "question": "What team(s) did they play on march 9?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "March 9",
+    "select_column": "Team"
+  },
+  {
+    "question": "What is the result of the league/cup competition with the swindon wildcats as the opponent and neil liddiard as the man of the match?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Venue",
+      "Result",
+      "Attendance",
+      "Competition",
+      "Man of the Match"
+    ],
+    "where_column": "Competition",
+    "where_value": "league/cup",
+    "select_column": "Result"
+  },
+  {
+    "question": "what are the dates where democrat john kerry is 63% and poll source is rasmussen reports?",
+    "headers": [
+      "Poll Source",
+      "Dates administered",
+      "Democrat: John Kerry",
+      "Republican: Jeff Beatty",
+      "Lead Margin"
+    ],
+    "where_column": "Democrat: John Kerry",
+    "where_value": "63%",
+    "select_column": "Dates administered"
+  },
+  {
+    "question": "I want the team with assists greater than 118 and rank less than 2",
+    "headers": [
+      "Rank",
+      "Name",
+      "Team",
+      "Games",
+      "Assists"
+    ],
+    "where_column": "Assists",
+    "where_value": "118",
+    "select_column": "Team"
+  },
+  {
+    "question": "Name the week 3 for team of mark/jennifer",
+    "headers": [
+      "Team",
+      "Week 1",
+      "Week 2",
+      "Week 3",
+      "Week 4",
+      "Week 5",
+      "Week 6",
+      "Week 7",
+      "Week 8 Final"
+    ],
+    "where_column": "Team",
+    "where_value": "mark/jennifer",
+    "select_column": "Week 3"
+  },
+  {
+    "question": "Which Supplier has a Year of 2006-2008?",
+    "headers": [
+      "Year",
+      "Supplier",
+      "Chest",
+      "Sleeves",
+      "Back"
+    ],
+    "where_column": "Year",
+    "where_value": "2006-2008",
+    "select_column": "Supplier"
+  },
+  {
+    "question": "Name the Player who has a To par of \u20132 and a Score of 69-73=142?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "To par",
+    "where_value": "\u20132",
+    "select_column": "Player"
+  },
+  {
+    "question": "What is the 3rd day result for years under 2012 and a finish position of 33rd?",
+    "headers": [
+      "Year",
+      "Finish position",
+      "1st day",
+      "2nd day",
+      "3rd day",
+      "4th Day"
+    ],
+    "where_column": "Year",
+    "where_value": "2012",
+    "select_column": "3rd day"
+  },
+  {
+    "question": "What position did the #94 pick play?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Pick #",
+    "where_value": "94",
+    "select_column": "Position"
+  },
+  {
+    "question": "isbn 0-441-01400-3 is book number?",
+    "headers": [
+      "#",
+      "Title",
+      "Publisher",
+      "Release",
+      "Length",
+      "Hardcover",
+      "Paperback"
+    ],
+    "where_column": "Hardcover",
+    "where_value": "ISBN 0-441-01400-3",
+    "select_column": "#"
+  },
+  {
+    "question": "When 21' 18.87 106.209mph is Tuesday August 24th what is Monday August 23rd?",
+    "headers": [
+      "Rank",
+      "Rider",
+      "Sat 21 Aug",
+      "Mon 23 Aug",
+      "Tues 24 Aug",
+      "Wed 25 Aug",
+      "Thurs 26 Aug",
+      "Fri 27 Aug",
+      "Sat 29 Aug"
+    ],
+    "where_column": "Tues 24 Aug",
+    "where_value": "21' 18.87 106.209mph",
+    "select_column": "Mon 23 Aug"
+  },
+  {
+    "question": "What is the sum of all points when number played is less than 18?",
+    "headers": [
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Diff"
+    ],
+    "where_column": "Played",
+    "where_value": "18",
+    "select_column": "Points"
+  },
+  {
+    "question": "On which week was the attendance 74303?",
+    "headers": [
+      "Week",
+      "Date",
+      "Opponent",
+      "Result",
+      "Record",
+      "Game Site",
+      "Attendance"
+    ],
+    "where_column": "Attendance",
+    "where_value": "74303",
+    "select_column": "Week"
+  },
+  {
+    "question": "Name the round 16 for did not advance and light flyweight",
+    "headers": [
+      "Athlete",
+      "Event",
+      "Round of 32",
+      "Round of 16",
+      "Quarterfinals",
+      "Semifinals"
+    ],
+    "where_column": "Quarterfinals",
+    "where_value": "Did not advance",
+    "select_column": "Round of 16"
+  },
+  {
+    "question": "What is the score at valley parade on 10/6/01?",
+    "headers": [
+      "Date",
+      "Competition",
+      "Venue",
+      "Result",
+      "Score",
+      "Goals"
+    ],
+    "where_column": "Venue",
+    "where_value": "valley parade",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the location for the club trophy?",
+    "headers": [
+      "Years",
+      "Type",
+      "Original code",
+      "Current code",
+      "Location"
+    ],
+    "where_column": "Type",
+    "where_value": "club trophy",
+    "select_column": "Location"
+  },
+  {
+    "question": "What did Melbourne score as the home team?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "melbourne",
+    "select_column": "Home team score"
+  },
+  {
+    "question": "What is the Location, when the Score is 38-29?",
+    "headers": [
+      "Date",
+      "Winner",
+      "Score",
+      "Location",
+      "Series"
+    ],
+    "where_column": "Score",
+    "where_value": "38-29",
+    "select_column": "Location"
+  },
+  {
+    "question": "In connecticut the school/club team/country had a set height in ft. what is true for them?",
+    "headers": [
+      "Player",
+      "No.(s)",
+      "Height in Ft.",
+      "Position",
+      "Years for Rockets",
+      "School/Club Team/Country"
+    ],
+    "where_column": "School/Club Team/Country",
+    "where_value": "Connecticut",
+    "select_column": "Height in Ft."
+  },
+  {
+    "question": "What is the full number of Total Seats with a constituency seat number bigger than 0 with the Liberal Democrat party, and the Regional seat number is smaller than 6?",
+    "headers": [
+      "Party",
+      "Constituency Seats",
+      "Regional Seats",
+      "Total Seats",
+      "Seat Change"
+    ],
+    "where_column": "Regional Seats",
+    "where_value": "6",
+    "select_column": "Total Seats"
+  },
+  {
+    "question": "What type has rest day as a course and was on 21 may?",
+    "headers": [
+      "Date",
+      "Course",
+      "Distance",
+      "Type",
+      "Winner"
+    ],
+    "where_column": "Course",
+    "where_value": "rest day",
+    "select_column": "Type"
+  },
+  {
+    "question": "Which grades have students smaller than 430, and a 2007 API of 510?",
+    "headers": [
+      "School name",
+      "address",
+      "students",
+      "grades",
+      "2007 API"
+    ],
+    "where_column": "2007 API",
+    "where_value": "510",
+    "select_column": "grades"
+  },
+  {
+    "question": "How many different items appear in the weight column when Pittsburgh, PA is the hometown?",
+    "headers": [
+      "Name",
+      "#",
+      "Position",
+      "Height",
+      "Weight ( lb. )",
+      "Year",
+      "Hometown",
+      "Previous School"
+    ],
+    "where_column": "Hometown",
+    "where_value": "Pittsburgh, PA",
+    "select_column": "Weight ( lb. )"
+  },
+  {
+    "question": "What's greatest attendance on May 7?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "may 7",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "Who were the  quarterfinalists for the runner-ups of mike de palmer gary donnelly?",
+    "headers": [
+      "Week of",
+      "Tournament",
+      "Champion",
+      "Runner-up",
+      "Semifinalists",
+      "Quarterfinalists"
+    ],
+    "where_column": "Runner-up",
+    "where_value": "Mike De Palmer Gary Donnelly",
+    "select_column": "Quarterfinalists"
+  },
+  {
+    "question": "who is the constructor when the laps is less than 68, the grid is more than 20 and the driver is thierry boutsen?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Grid",
+    "where_value": "20",
+    "select_column": "Constructor"
+  },
+  {
+    "question": "How many Picks have a College of hawaii, and an Overall smaller than 122?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "College",
+    "where_value": "hawaii",
+    "select_column": "Pick"
+  }
+]

@@ -1,0 +1,719 @@
+[
+  {
+    "question": "What Team had 40 Laps in C1 Class?",
+    "headers": [
+      "Class",
+      "Team",
+      "Driver",
+      "Chassis \u2013 Engine",
+      "Laps"
+    ],
+    "where_column": "Class",
+    "where_value": "c1",
+    "select_column": "Team"
+  },
+  {
+    "question": "What's the highest Total when Women's Wheelchair was 2, Men's Wheelchair was smaller than 1, and Women's race was larger than 0?",
+    "headers": [
+      "Country",
+      "Men's race",
+      "Women's race",
+      "Men's wheelchair",
+      "Women's Wheelchair",
+      "Total"
+    ],
+    "where_column": "Men's wheelchair",
+    "where_value": "1",
+    "select_column": "Total"
+  },
+  {
+    "question": "What is the highest neutral losses of the institution with 0 neutral wins, 0 home losses, and less than 0 away losses?",
+    "headers": [
+      "Institution",
+      "Wins",
+      "Loss",
+      "Home Wins",
+      "Home Losses",
+      "Away Wins",
+      "Away Losses",
+      "Neutral Wins",
+      "Neutral Losses"
+    ],
+    "where_column": "Neutral Wins",
+    "where_value": "0",
+    "select_column": "Neutral Losses"
+  },
+  {
+    "question": "In what stage did Jaime Vergara won, Team Classification was given to EPM-Une and Mountain Classification winner was Oscar Solis?",
+    "headers": [
+      "Stage",
+      "Winner",
+      "General classification",
+      "Points classification",
+      "Mountains classification",
+      "Sprints classification",
+      "Team classification"
+    ],
+    "where_column": "Mountains classification",
+    "where_value": "Oscar Solis",
+    "select_column": "Stage"
+  },
+  {
+    "question": "What was Anders Forsbrand's score when the TO par is +4?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "To par",
+    "where_value": "+4",
+    "select_column": "Score"
+  },
+  {
+    "question": "What was the resolution of the fight when Nate Mohr's record was 8-6?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round"
+    ],
+    "where_column": "Record",
+    "where_value": "8-6",
+    "select_column": "Res."
+  },
+  {
+    "question": "What was the Difference of the Team that had a Position less than 2?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Position",
+    "where_value": "2",
+    "select_column": "Difference"
+  },
+  {
+    "question": "Which Home Team had a score of 26.16 (172) and a venue larger than 19,000?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Crowd",
+    "where_value": "19,000",
+    "select_column": "Home team"
+  },
+  {
+    "question": "What date was the game against Toronto which had a game number higher than 53?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Team",
+    "where_value": "toronto",
+    "select_column": "Date"
+  },
+  {
+    "question": "What is the Percentage Lost for the contestant with a starting weight above 102 kg who lost 46.9 kg?",
+    "headers": [
+      "Contestant",
+      "Starting Weight (kg)",
+      "Final Weight (kg)",
+      "Weight Lost (kg)",
+      "Percentage Lost",
+      "Position (out of Eliminated Contestants)"
+    ],
+    "where_column": "Starting Weight (kg)",
+    "where_value": "102",
+    "select_column": "Percentage Lost"
+  },
+  {
+    "question": "Name  the townland for fermoy and ballynoe",
+    "headers": [
+      "Townland",
+      "Area( acres )",
+      "Barony",
+      "Civil parish",
+      "Poor law union"
+    ],
+    "where_column": "Civil parish",
+    "where_value": "Ballynoe",
+    "select_column": "Townland"
+  },
+  {
+    "question": "How much time is required for less than 35 laps and less than 10 grids?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "35",
+    "select_column": "Time/Retired"
+  },
+  {
+    "question": "What was the value in 1995 for A in 2000 at the Indian Wells tournament?",
+    "headers": [
+      "Tournament",
+      "1989",
+      "1990",
+      "1991",
+      "1992",
+      "1993",
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "Career SR",
+      "Career Win-Loss"
+    ],
+    "where_column": "2000",
+    "where_value": "a",
+    "select_column": "1995"
+  },
+  {
+    "question": "When against is more than 1244 with less than 8 losses, what is the average of wins?",
+    "headers": [
+      "Club",
+      "Wins",
+      "Losses",
+      "Draws",
+      "Against"
+    ],
+    "where_column": "Against",
+    "where_value": "1244",
+    "select_column": "Wins"
+  },
+  {
+    "question": "How was Sammy Lee's team doing on the table before being replaced?",
+    "headers": [
+      "Team",
+      "Outgoing manager",
+      "Manner of departure",
+      "Date of vacancy",
+      "Replaced by",
+      "Date of appointment",
+      "Position in table"
+    ],
+    "where_column": "Outgoing manager",
+    "where_value": "sammy lee",
+    "select_column": "Position in table"
+  },
+  {
+    "question": "Who is the presenter of the episode broadcast in the UK on 1996-09-25?",
+    "headers": [
+      "Episode No.",
+      "Episode Title",
+      "UK Broadcast Date",
+      "Presenter",
+      "Countries Visited"
+    ],
+    "where_column": "UK Broadcast Date",
+    "where_value": "1996-09-25",
+    "select_column": "Presenter"
+  },
+  {
+    "question": "what is the competition when the result is won and the date is september 13, 1996?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Result",
+    "where_value": "won",
+    "select_column": "Competition"
+  },
+  {
+    "question": "What is the name of the driver with 6 points?",
+    "headers": [
+      "Driver",
+      "Team",
+      "Laps",
+      "Time/Retired",
+      "Grid",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "6",
+    "select_column": "Driver"
+  },
+  {
+    "question": "What is the grid value which has Time/Retired value of accident?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Time/Retired",
+    "where_value": "accident",
+    "select_column": "Grid"
+  },
+  {
+    "question": "How many persons had immunity in the episode when Wanda was eliminated?",
+    "headers": [
+      "Episode title",
+      "Air date",
+      "Reward",
+      "Immunity",
+      "Eliminated",
+      "Vote",
+      "Finish"
+    ],
+    "where_column": "Eliminated",
+    "where_value": "Wanda",
+    "select_column": "Immunity"
+  },
+  {
+    "question": "Who was the Opponent in the match with a Score of 6\u20133, 6\u20134?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Tournament",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Score",
+    "where_value": "6\u20133, 6\u20134",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "How many people were in attendance when the visiting team was the Nuggets and the leading scorer was J.R. Smith (28)?",
+    "headers": [
+      "Date",
+      "Visitor",
+      "Score",
+      "Home",
+      "Leading scorer",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Visitor",
+    "where_value": "nuggets",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "for milan and the iata of lin what is the airport?",
+    "headers": [
+      "City",
+      "Country",
+      "IATA",
+      "ICAO",
+      "Airport"
+    ],
+    "where_column": "City",
+    "where_value": "milan",
+    "select_column": "Airport"
+  },
+  {
+    "question": "Which publisher released Martial Law: Substitutes?",
+    "headers": [
+      "Release date",
+      "Release title",
+      "Country",
+      "Publisher",
+      "Format",
+      "Language",
+      "Subtitles",
+      "Notes"
+    ],
+    "where_column": "Release title",
+    "where_value": "martial law: substitutes",
+    "select_column": "Publisher"
+  },
+  {
+    "question": "Incumbent Deborah Pryce was a member of what party? ",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Incumbent",
+    "where_value": "Deborah Pryce",
+    "select_column": "Party"
+  },
+  {
+    "question": "What is the date of the performance by Jatin Shah and co-contestant is Shalini Chandran?",
+    "headers": [
+      "Main contestant",
+      "Co-contestant (Yaar vs. Pyaar)",
+      "Date performed",
+      "Scores by each individual judge",
+      "Total score/week",
+      "Position",
+      "Status"
+    ],
+    "where_column": "Main contestant",
+    "where_value": "jatin shah",
+    "select_column": "Date performed"
+  },
+  {
+    "question": "What is the streak for game 16 when the Dolphins had 21 points?",
+    "headers": [
+      "Game",
+      "Date",
+      "Opponent",
+      "Result",
+      "Dolphins' points",
+      "Opponents' Points",
+      "Record",
+      "Streak",
+      "Attendance"
+    ],
+    "where_column": "Game",
+    "where_value": "16",
+    "select_column": "Streak"
+  },
+  {
+    "question": "Which team played their first leg at home with an aggregate score of 3-4?",
+    "headers": [
+      "Home (1st leg)",
+      "Home (2nd leg)",
+      "1st Leg",
+      "2nd leg",
+      "Aggregate"
+    ],
+    "where_column": "Aggregate",
+    "where_value": "3-4",
+    "select_column": "Home (1st leg)"
+  },
+  {
+    "question": "What is Television Service, when Content is Calcio, and when Package/Option is Option?",
+    "headers": [
+      "Television service",
+      "Country",
+      "Language",
+      "Content",
+      "HDTV",
+      "Package/Option"
+    ],
+    "where_column": "Package/Option",
+    "where_value": "option",
+    "select_column": "Television service"
+  },
+  {
+    "question": "Which vehicle has a Grid of 13?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Grid",
+    "where_value": "13",
+    "select_column": "Constructor"
+  },
+  {
+    "question": "How many points are there for rank 5 with more than 34 games?",
+    "headers": [
+      "Rank",
+      "Name",
+      "Team",
+      "Games",
+      "Points"
+    ],
+    "where_column": "Rank",
+    "where_value": "5",
+    "select_column": "Points"
+  },
+  {
+    "question": "What is the largest attendance that has tigers as the opponent and a loss of leiter (0-1)?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record"
+    ],
+    "where_column": "Opponent",
+    "where_value": "tigers",
+    "select_column": "Attendance"
+  },
+  {
+    "question": "Which district is James A. Haley from?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Result",
+      "Candidates"
+    ],
+    "where_column": "Incumbent",
+    "where_value": "James A. Haley",
+    "select_column": "District"
+  },
+  {
+    "question": "What is the city of license when the class is LP and the identifier is CBDK?",
+    "headers": [
+      "City of license",
+      "Identifier",
+      "Frequency",
+      "Power",
+      "Class",
+      "RECNet"
+    ],
+    "where_column": "Identifier",
+    "where_value": "cbdk",
+    "select_column": "City of license"
+  },
+  {
+    "question": "When the carrier is idc, what are the frequencies?",
+    "headers": [
+      "Carrier",
+      "Standard",
+      "Frequency",
+      "Connection speed",
+      "Launch date (dd.mm.yyyy)"
+    ],
+    "where_column": "Carrier",
+    "where_value": "IDC",
+    "select_column": "Frequency"
+  },
+  {
+    "question": "Name the member that has 12 chapters",
+    "headers": [
+      "Member",
+      "Headquarters",
+      "Classification",
+      "Chapters",
+      "Founded",
+      "UCCFS"
+    ],
+    "where_column": "Chapters",
+    "where_value": "12",
+    "select_column": "Member"
+  },
+  {
+    "question": "\u043f\u043b\u043e\u0446\u043a\u0430\u044f \u0433\u0443\u0431\u0435\u0440\u043d\u0438\u044f governs an area with what area (in thousand km 2)?",
+    "headers": [
+      "Governorate",
+      "Name in Russian",
+      "Name in Polish",
+      "Seat",
+      "Area, in thousands of km 2",
+      "Population, in thousands,( 1905 )"
+    ],
+    "where_column": "Name in Russian",
+    "where_value": "\u041f\u043b\u043e\u0446\u043a\u0430\u044f \u0433\u0443\u0431\u0435\u0440\u043d\u0438\u044f",
+    "select_column": "Area, in thousands of km 2"
+  },
+  {
+    "question": "Which home team has an Away team score of 18.21 (129)?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Away team score",
+    "where_value": "18.21 (129)",
+    "select_column": "Home team"
+  },
+  {
+    "question": "Which ride opened after the 2000 Peeking Heights?",
+    "headers": [
+      "Ride name",
+      "Type",
+      "Opened in",
+      "Themed land",
+      "Manufacturer"
+    ],
+    "where_column": "Ride name",
+    "where_value": "peeking heights",
+    "select_column": "Type"
+  },
+  {
+    "question": "What is Player, when To Par is \"+1\", when Country is \"United States\", and when Score is \"71-70=141\"?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "To par",
+    "where_value": "+1",
+    "select_column": "Player"
+  },
+  {
+    "question": "What is the average silver with more than 0 gold, a Rank of 1, and a Total smaller than 30?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Gold",
+    "where_value": "0",
+    "select_column": "Silver"
+  },
+  {
+    "question": "How many apps when the rank was after 13 and having more than 73 goals?",
+    "headers": [
+      "Rank",
+      "Club",
+      "Season",
+      "Goals",
+      "Apps"
+    ],
+    "where_column": "Goals",
+    "where_value": "73",
+    "select_column": "Apps"
+  },
+  {
+    "question": "Which team was played against on the game where Earl Watson (6) had the highest assists on January 19?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Date",
+    "where_value": "january 19",
+    "select_column": "Team"
+  },
+  {
+    "question": "What is the home with a league 3rd liga, and an away of 4-0?",
+    "headers": [
+      "Season",
+      "League",
+      "Teams",
+      "Home",
+      "Away"
+    ],
+    "where_column": "Away",
+    "where_value": "4-0",
+    "select_column": "Home"
+  },
+  {
+    "question": "What was the highest points where there were less than 2 drawn and the games were less than 6?",
+    "headers": [
+      "Games",
+      "Drawn",
+      "Lost",
+      "Points difference",
+      "Points"
+    ],
+    "where_column": "Drawn",
+    "where_value": "2",
+    "select_column": "Points"
+  },
+  {
+    "question": "WHAT MANUFACTURER AFTER 1966 HAD A START SMALLER THAN 5, A WOOD TEAM AND FINISHED 35?",
+    "headers": [
+      "Year",
+      "Manufacturer",
+      "Start",
+      "Finish",
+      "Team"
+    ],
+    "where_column": "Finish",
+    "where_value": "35",
+    "select_column": "Manufacturer"
+  },
+  {
+    "question": "What is the smallest finish time for a race after 1972 with a car manufactured by pontiac?",
+    "headers": [
+      "Year",
+      "Manufacturer",
+      "Start",
+      "Finish",
+      "Team"
+    ],
+    "where_column": "Manufacturer",
+    "where_value": "pontiac",
+    "select_column": "Finish"
+  },
+  {
+    "question": "What was the Population (2011) when the Population (2006) was less than 7083, and the Population density less than 342.8, and the Change (%) of 5, and an Area (km\u00b2) larger than 4.5?",
+    "headers": [
+      "County",
+      "Population (2011)",
+      "Population (2006)",
+      "Change (%)",
+      "Area (km\u00b2)",
+      "Population density"
+    ],
+    "where_column": "Change (%)",
+    "where_value": "5",
+    "select_column": "Population (2011)"
+  },
+  {
+    "question": "What is the total of rank when silver is more than 1, gold is 2, and total is more than 4?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Total",
+    "where_value": "4",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What is \u0433\u04d9 \u0433\u04d9 [\u0261\u02b7] when \u0495 \u0495 [\u0281/\u0263] is \u04bf \u04bf [t\u0361\u0282\u02bc]?",
+    "headers": [
+      "\u0410 \u0430 [a]",
+      "\u0411 \u0431 [b]",
+      "\u0412 \u0432 [v]",
+      "\u0413 \u0433 [\u0261]",
+      "\u0413\u044c \u0433\u044c [\u0261\u02b2]",
+      "\u0413\u04d9 \u0433\u04d9 [\u0261\u02b7]",
+      "\u0494 \u0495 [\u0281/\u0263]",
+      "\u0494\u044c \u0495\u044c [\u0281\u02b2/\u0263\u02b2]"
+    ],
+    "where_column": "\u0494 \u0495 [\u0281/\u0263]",
+    "where_value": "\u04be \u04bf [t\u0361\u0282\u02bc]",
+    "select_column": "\u0413\u04d9 \u0433\u04d9 [\u0261\u02b7]"
+  }
+]

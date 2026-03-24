@@ -1,0 +1,706 @@
+[
+  {
+    "question": "Which nation has a Silver of 1, a Gold of 0, and a Total of 1?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Gold",
+    "where_value": "0",
+    "select_column": "Nation"
+  },
+  {
+    "question": "What is the lowest Total, when Year(s) Won is \"1968 , 1971\", and when To Par is less than 11?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par"
+    ],
+    "where_column": "To par",
+    "where_value": "11",
+    "select_column": "Total"
+  },
+  {
+    "question": "How many touchdowns are there when there were 0 extra points and Hal Weeks had left halfback?",
+    "headers": [
+      "Player",
+      "Position",
+      "Starter",
+      "Touchdowns",
+      "Extra points",
+      "Field goals",
+      "Points"
+    ],
+    "where_column": "Extra points",
+    "where_value": "0",
+    "select_column": "Touchdowns"
+  },
+  {
+    "question": "What is the least silver when the total is more than 2, bronze is 3, gold is more than 0, and rank is 1?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Rank",
+    "where_value": "1",
+    "select_column": "Silver"
+  },
+  {
+    "question": "D'Oyly Carte 1939 Tour of sydney granville had what D'Oyly Carte 1950 Tour",
+    "headers": [
+      "Role",
+      "D'Oyly Carte 1920 Tour",
+      "D'Oyly Carte 1930 Tour",
+      "D'Oyly Carte 1939 Tour",
+      "D'Oyly Carte 1945 Tour",
+      "D'Oyly Carte 1950 Tour"
+    ],
+    "where_column": "D'Oyly Carte 1939 Tour",
+    "where_value": "sydney granville",
+    "select_column": "D'Oyly Carte 1950 Tour"
+  },
+  {
+    "question": "What was the venue when the home team was footscray?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "footscray",
+    "select_column": "Venue"
+  },
+  {
+    "question": "How many people have a Clean & jerk smaller than 142.5, a Bodyweight smaller than 55.58, and a Total (kg) larger than 210?",
+    "headers": [
+      "Name",
+      "Bodyweight",
+      "Snatch",
+      "Clean & jerk",
+      "Total (kg)"
+    ],
+    "where_column": "Bodyweight",
+    "where_value": "55.58",
+    "select_column": "Snatch"
+  },
+  {
+    "question": "What was the 1st leg for Team 2, Slovan Liberec?",
+    "headers": [
+      "Team 1",
+      "Agg.",
+      "Team 2",
+      "1st leg",
+      "2nd leg"
+    ],
+    "where_column": "Team 2",
+    "where_value": "slovan liberec",
+    "select_column": "1st leg"
+  },
+  {
+    "question": "How many million U.S. viewers saw the episode with production code 3X5710?",
+    "headers": [
+      "No. in series",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date",
+      "Production code",
+      "U.S. viewers (million)"
+    ],
+    "where_column": "Production code",
+    "where_value": "3X5710",
+    "select_column": "U.S. viewers (million)"
+  },
+  {
+    "question": "How many episodes have the title \"episode 2\"?",
+    "headers": [
+      "Episode",
+      "Title",
+      "Directed by",
+      "Written by",
+      "UK viewers (million)",
+      "Share (%)",
+      "Original air date"
+    ],
+    "where_column": "Title",
+    "where_value": "\"Episode 2\"",
+    "select_column": "Episode"
+  },
+  {
+    "question": "What is the loss for the game against @ expos, with a save of parrett (2)?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Save"
+    ],
+    "where_column": "Save",
+    "where_value": "parrett (2)",
+    "select_column": "Loss"
+  },
+  {
+    "question": "Which highest period's element is platinum?",
+    "headers": [
+      "element",
+      "group",
+      "period",
+      "reaction",
+      "potential"
+    ],
+    "where_column": "element",
+    "where_value": "platinum",
+    "select_column": "period"
+  },
+  {
+    "question": "Which item resulted in a score of 4-1?",
+    "headers": [
+      "Date",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Result",
+    "where_value": "4-1",
+    "select_column": "Score"
+  },
+  {
+    "question": "Which round has an opponent of Freiburg?",
+    "headers": [
+      "Season",
+      "Competition",
+      "Round",
+      "Opponent",
+      "Home",
+      "Away"
+    ],
+    "where_column": "Opponent",
+    "where_value": "freiburg",
+    "select_column": "Round"
+  },
+  {
+    "question": "What is the record at Palasport Olimpico?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record",
+      "Arena",
+      "Points"
+    ],
+    "where_column": "Arena",
+    "where_value": "palasport olimpico",
+    "select_column": "Record"
+  },
+  {
+    "question": "Which team was the away team when the home team was north melbourne?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Ground",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "North Melbourne",
+    "select_column": "Away team"
+  },
+  {
+    "question": "Name the score for game more than 6 and before october 28",
+    "headers": [
+      "Game",
+      "October",
+      "Opponent",
+      "Score",
+      "Record"
+    ],
+    "where_column": "October",
+    "where_value": "28",
+    "select_column": "Score"
+  },
+  {
+    "question": "Which Draft has a Round of 1, a Nationality of canada, a Pick of 1, and a Player of vincent lecavalier?",
+    "headers": [
+      "Draft",
+      "Round",
+      "Pick",
+      "Player",
+      "Nationality"
+    ],
+    "where_column": "Round",
+    "where_value": "1",
+    "select_column": "Draft"
+  },
+  {
+    "question": "What Country has a Player with Playoff Money with a Score of 72-69-73-73=287?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "Money ( $ )",
+    "where_value": "playoff",
+    "select_column": "Country"
+  },
+  {
+    "question": "What is the average operation beginning with a length of ampang and over 27 stations?",
+    "headers": [
+      "Line",
+      "Began operation",
+      "Stations",
+      "Length (km)",
+      "Terminals"
+    ],
+    "where_column": "Stations",
+    "where_value": "27",
+    "select_column": "Began operation"
+  },
+  {
+    "question": "From what school was the player drafted in round 3?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Player",
+      "Position",
+      "School"
+    ],
+    "where_column": "Round",
+    "where_value": "3",
+    "select_column": "School"
+  },
+  {
+    "question": "What team is based at junction oval?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Venue",
+    "where_value": "junction oval",
+    "select_column": "Home team"
+  },
+  {
+    "question": "What is the highest First Elected, when Results is \"Re-elected\", and when Incumbent is \"Lincoln Davis\"?",
+    "headers": [
+      "District",
+      "Incumbent",
+      "Party",
+      "First elected",
+      "Results"
+    ],
+    "where_column": "Incumbent",
+    "where_value": "lincoln davis",
+    "select_column": "First elected"
+  },
+  {
+    "question": "What is the y = 2011 when the expression is month = floor ((d + e + 114) / 31)?",
+    "headers": [
+      "Expression",
+      "Y = 2008",
+      "Y = 2009",
+      "Y = 2010",
+      "Y = 2011"
+    ],
+    "where_column": "Expression",
+    "where_value": "month = floor ((d + e + 114) / 31)",
+    "select_column": "Y = 2011"
+  },
+  {
+    "question": "Name the current conference for 1974, 1989",
+    "headers": [
+      "Institution",
+      "Location",
+      "Founded",
+      "Type",
+      "Enrollment",
+      "Nickname",
+      "Joined",
+      "Left",
+      "Current Conference"
+    ],
+    "where_column": "Left",
+    "where_value": "1974, 1989",
+    "select_column": "Current Conference"
+  },
+  {
+    "question": "Which Team has a Qualification of entry to the 2004 chinese super league, and a 2002 Position smaller than 6, and a 2003 Position smaller than 9, and a Total Position larger than 3.5?",
+    "headers": [
+      "Team",
+      "2002 Position",
+      "2003 Position",
+      "Total Position",
+      "Qualification"
+    ],
+    "where_column": "2003 Position",
+    "where_value": "9",
+    "select_column": "Team"
+  },
+  {
+    "question": "What is the sum of Overall, when Pick is greater than 5, when Round is less than 11, and when Name is \"Tom Barrington\"?",
+    "headers": [
+      "Round",
+      "Pick",
+      "Overall",
+      "Name",
+      "Position",
+      "College"
+    ],
+    "where_column": "Pick",
+    "where_value": "5",
+    "select_column": "Overall"
+  },
+  {
+    "question": "When has a Record of 9\u20131, and a Tournament Champion of duke?",
+    "headers": [
+      "Year",
+      "Regular Season Champion(s)",
+      "Record",
+      "Tournament Champion",
+      "Tournament venue",
+      "Tournament city"
+    ],
+    "where_column": "Tournament Champion",
+    "where_value": "duke",
+    "select_column": "Year"
+  },
+  {
+    "question": "What Lane has a 0.209 React entered with a Rank entry that is larger than 6?",
+    "headers": [
+      "Rank",
+      "Lane",
+      "Athlete",
+      "Nationality",
+      "Time",
+      "React"
+    ],
+    "where_column": "React",
+    "where_value": "0.209",
+    "select_column": "Lane"
+  },
+  {
+    "question": "Which venues resulted in a draw?",
+    "headers": [
+      "Date",
+      "Home captain",
+      "Away captain",
+      "Venue",
+      "Result"
+    ],
+    "where_column": "Result",
+    "where_value": "draw",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What was the date for the record 23-13?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "Record",
+    "where_value": "23-13",
+    "select_column": "Date"
+  },
+  {
+    "question": "In what year was the movie 8 women up for a C\u00e9sar Award?",
+    "headers": [
+      "Year",
+      "Awards",
+      "Categorie",
+      "Movie",
+      "Result"
+    ],
+    "where_column": "Movie",
+    "where_value": "8 women",
+    "select_column": "Year"
+  },
+  {
+    "question": "When the quiabaya municipality is 2 what is the combaya municipality?",
+    "headers": [
+      "Language",
+      "Sorata Municipality",
+      "Guanay Municipality",
+      "Tacacoma Municipality",
+      "Quiabaya Municipality",
+      "Combaya Municipality",
+      "Tipuani Municipality",
+      "Mapiri Municipality",
+      "Teoponte Municipality"
+    ],
+    "where_column": "Quiabaya Municipality",
+    "where_value": "2",
+    "select_column": "Combaya Municipality"
+  },
+  {
+    "question": "What is the quantity for railway 263?",
+    "headers": [
+      "Class",
+      "Railway number(s)",
+      "Quantity",
+      "Year(s) of manufacture",
+      "Axle arrangement"
+    ],
+    "where_column": "Railway number(s)",
+    "where_value": "263",
+    "select_column": "Quantity"
+  },
+  {
+    "question": "What are the most laps for the Qual position of 7 in the OC class?",
+    "headers": [
+      "Class",
+      "Team",
+      "Drivers",
+      "Laps",
+      "Qual Pos"
+    ],
+    "where_column": "Class",
+    "where_value": "oc",
+    "select_column": "Laps"
+  },
+  {
+    "question": "What was the score on 26 July 1930?",
+    "headers": [
+      "Date",
+      "Round",
+      "Venue",
+      "Score",
+      "Result",
+      "Competition"
+    ],
+    "where_column": "Date",
+    "where_value": "26 july 1930",
+    "select_column": "Score"
+  },
+  {
+    "question": "On which date was Essendon the home team?",
+    "headers": [
+      "Home team",
+      "Home team score",
+      "Away team",
+      "Away team score",
+      "Venue",
+      "Crowd",
+      "Date"
+    ],
+    "where_column": "Home team",
+    "where_value": "essendon",
+    "select_column": "Date"
+  },
+  {
+    "question": "What was the gender for the integrated authority with a roll of 142?",
+    "headers": [
+      "Name",
+      "Years",
+      "Gender",
+      "Area",
+      "Authority",
+      "Decile",
+      "Roll"
+    ],
+    "where_column": "Authority",
+    "where_value": "integrated",
+    "select_column": "Gender"
+  },
+  {
+    "question": "What is the time/retired for the rider with the manufacturuer yamaha, grod of 1 and 21 total laps?",
+    "headers": [
+      "Rider",
+      "Manufacturer",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Laps",
+    "where_value": "21",
+    "select_column": "Time/Retired"
+  },
+  {
+    "question": "Name the try bonus of points against at 430",
+    "headers": [
+      "Club",
+      "Played",
+      "Won",
+      "Drawn",
+      "Lost",
+      "Points for",
+      "Points against",
+      "Tries for",
+      "Tries against",
+      "Try bonus",
+      "Losing bonus",
+      "Points"
+    ],
+    "where_column": "Points against",
+    "where_value": "430",
+    "select_column": "Try bonus"
+  },
+  {
+    "question": "What's the sum of A Score that also has a score lower than 7.3 and an E Score larger than 7.1?",
+    "headers": [
+      "Nation",
+      "T Score",
+      "A Score",
+      "E Score",
+      "Pen.",
+      "Total"
+    ],
+    "where_column": "T Score",
+    "where_value": "7.3",
+    "select_column": "A Score"
+  },
+  {
+    "question": "What year was S.A. Allward's theme that had an issue price of $16.95 released?",
+    "headers": [
+      "Year",
+      "Theme",
+      "Artist",
+      "Mintage",
+      "Issue Price"
+    ],
+    "where_column": "Artist",
+    "where_value": "s.a. allward",
+    "select_column": "Year"
+  },
+  {
+    "question": "I want the constructor for divina galica rounds of 1-2",
+    "headers": [
+      "Entrant",
+      "Constructor",
+      "Chassis",
+      "Engine",
+      "Tyres",
+      "Driver",
+      "Rounds"
+    ],
+    "where_column": "Rounds",
+    "where_value": "1-2",
+    "select_column": "Constructor"
+  },
+  {
+    "question": "Name the location when control is private and founded is 1870",
+    "headers": [
+      "School",
+      "Location",
+      "Control",
+      "Type",
+      "Enrollment",
+      "Founded"
+    ],
+    "where_column": "Founded",
+    "where_value": "1870",
+    "select_column": "Location"
+  },
+  {
+    "question": "Who had the lowest interview score from South Dakota with an evening gown less than 8.513?",
+    "headers": [
+      "State",
+      "Interview",
+      "Swimsuit",
+      "Evening Gown",
+      "Average"
+    ],
+    "where_column": "State",
+    "where_value": "south dakota",
+    "select_column": "Interview"
+  },
+  {
+    "question": "What player has The United States as the country with 70 as the score?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Country",
+    "where_value": "united states",
+    "select_column": "Player"
+  },
+  {
+    "question": "What was the score of the replay game when watford was the away team?",
+    "headers": [
+      "Tie no",
+      "Home team",
+      "Score",
+      "Away team",
+      "Date"
+    ],
+    "where_column": "Away team",
+    "where_value": "watford",
+    "select_column": "Score"
+  },
+  {
+    "question": "Which event had the opponent of shinya aoki and was at 4:56?",
+    "headers": [
+      "Res.",
+      "Record",
+      "Opponent",
+      "Method",
+      "Event",
+      "Round",
+      "Time",
+      "Location"
+    ],
+    "where_column": "Opponent",
+    "where_value": "shinya aoki",
+    "select_column": "Event"
+  },
+  {
+    "question": "What was the capacity for the Denver Broncos?",
+    "headers": [
+      "Team",
+      "Stadium",
+      "Home Games",
+      "Average Attendance",
+      "Total Attendance",
+      "Capacity Percentage"
+    ],
+    "where_column": "Team",
+    "where_value": "Denver Broncos",
+    "select_column": "Capacity Percentage"
+  },
+  {
+    "question": "What is the ICAO in France with an IATA of Ory?",
+    "headers": [
+      "City",
+      "Country",
+      "IATA",
+      "ICAO",
+      "Airport"
+    ],
+    "where_column": "IATA",
+    "where_value": "ory",
+    "select_column": "ICAO"
+  }
+]
