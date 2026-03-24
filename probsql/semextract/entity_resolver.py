@@ -118,6 +118,48 @@ class EntityResolver:
                 for val, etype in self.llm_entities.items():
                     self.entity_kb[val.lower()] = etype
 
+        # Load feature-based type classifier (for unknown entities)
+        cls_path = SEMEXTRACT_KNOWLEDGE / "entity_type_classifier.json"
+        if cls_path.exists():
+            with open(cls_path) as f:
+                cls_data = json.load(f)
+                self._cls_prior = cls_data.get("prior", {})
+                self._cls_features = cls_data.get("feature_probs", {})
+        else:
+            self._cls_prior = {}
+            self._cls_features = {}
+
+    def _infer_entity_type(self, value):
+        """Infer entity type from format features for unknown entities."""
+        import math
+        if not self._cls_prior:
+            return "other"
+        words = value.split()
+        features = {
+            "first_upper": value[0].isupper() if value else False,
+            "all_upper": all(w[0].isupper() for w in words if w.isalpha()) if words else False,
+            "has_digits": bool(re.search(r'\d', value)),
+            "single_word": len(words) == 1,
+            "two_words": len(words) == 2,
+            "multi_word": len(words) >= 3,
+            "short": len(value) < 5,
+            "long": len(value) > 20,
+            "all_lower": value == value.lower(),
+            "has_special": bool(re.search(r'[-/().#]', value)),
+        }
+        scores = {}
+        for etype, prior_p in self._cls_prior.items():
+            log_score = math.log(prior_p + 1e-10)
+            eprobs = self._cls_features.get(etype, {})
+            for fname, fval in features.items():
+                p_true = eprobs.get(fname, 0.5)
+                if fval:
+                    log_score += math.log(p_true + 1e-10)
+                else:
+                    log_score += math.log(1 - p_true + 1e-10)
+            scores[etype] = log_score
+        return max(scores, key=scores.get)
+
     def get_entity_type(self, value):
         """Look up entity type for a value."""
         if not value:
@@ -143,7 +185,9 @@ class EntityResolver:
         except ValueError:
             pass
 
-        return "other"
+        # Infer from features for unknown entities
+        inferred = self._infer_entity_type(value)
+        return inferred
 
     def get_column_type(self, column_name):
         """Classify a column's semantic type from its name."""
