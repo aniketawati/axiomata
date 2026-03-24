@@ -91,12 +91,13 @@ class ProbSQLEngine:
         """
         debug = {"steps": []}
 
-        # Try semantic extraction path first (for lookup-style questions)
-        # Currently disabled — resolver accuracy not high enough yet.
-        # Enable by lowering threshold once resolver is improved.
+        # Try semantic extraction path (for lookup-style questions)
+        # Only use when confidence is very high — the old path is still more
+        # reliable on average. The semextract resolver needs more training data
+        # and better discrimination before it can be the primary path.
         if self._semextract_loaded:
             sem_result = self._try_semextract(english, schema, debug)
-            if sem_result and sem_result.confidence > 0.95:
+            if sem_result and sem_result.confidence > 0.88:
                 return sem_result
 
         # Step 1: Parse compound structure
@@ -292,6 +293,7 @@ class ProbSQLEngine:
                 spotted_val["type"],
                 columns_info,
                 exclude_columns=exclude_cols,
+                question=english,
             )
             if resolved and resolved[0][1] > 0.3:
                 best_col_name, col_confidence = resolved[0]

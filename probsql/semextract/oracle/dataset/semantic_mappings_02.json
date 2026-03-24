@@ -1,0 +1,242 @@
+[
+  {
+    "question": "what's the rank for iceland",
+    "where_column": "Country",
+    "where_value": "Iceland",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "for iceland",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "country|nation|region|territory",
+        "confidence": 0.85,
+        "reasoning": "The preposition 'for' followed by a proper noun (named entity typed as country) signals a filtering condition on a country/region column."
+      }
+    ],
+    "select_column": "Rank",
+    "select_signal": {
+      "signal_phrase": "what's the rank",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "for",
+      "right_boundary": "end of sentence",
+      "boundary_pattern": "for [NAMED_ENTITY]"
+    }
+  },
+  {
+    "question": "What team had a capacity of over 26,542, a home city of milan, and finished the 2011-2012 season 6th in serie a?",
+    "where_column": "Home city",
+    "where_value": "milan",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "home city of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "home city|city|location|base",
+        "confidence": 0.97,
+        "reasoning": "The phrase 'home city of' directly names the column 'Home city' and the preposition 'of' immediately precedes the column value."
+      }
+    ],
+    "select_column": "Team",
+    "select_signal": {
+      "signal_phrase": "What team",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "home city of",
+      "right_boundary": ",",
+      "boundary_pattern": "home city of [VALUE],"
+    }
+  },
+  {
+    "question": "Who was the away team when the VFL played at MCG?",
+    "where_column": "Venue",
+    "where_value": "mcg",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "played at",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "venue|stadium|ground|arena|location",
+        "confidence": 0.92,
+        "reasoning": "The verb-preposition pair 'played at' followed by a proper noun signals a venue/location filtering condition, as 'at' canonically introduces a physical place."
+      }
+    ],
+    "select_column": "Away team",
+    "select_signal": {
+      "signal_phrase": "Who was the away team",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "at",
+      "right_boundary": "?",
+      "boundary_pattern": "at [VENUE_NAME]?"
+    }
+  },
+  {
+    "question": "What was the score of the friendly match at Amman on February 14, 2006?",
+    "where_column": "Venue",
+    "where_value": "amman",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "match at",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "venue|stadium|ground|arena|location|city",
+        "confidence": 0.90,
+        "reasoning": "The preposition 'at' following an event noun ('match') introduces the location/venue where the event occurred, mapping to a venue or location column."
+      }
+    ],
+    "select_column": "Score",
+    "select_signal": {
+      "signal_phrase": "What was the score",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "at",
+      "right_boundary": "on",
+      "boundary_pattern": "at [VENUE] on [DATE]"
+    }
+  },
+  {
+    "question": "What class is the city of black mountain, north carolina?",
+    "where_column": "City of license",
+    "where_value": "black mountain, north carolina",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "city of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "city of license|city|municipality",
+        "confidence": 0.88,
+        "reasoning": "The phrase 'city of' is a direct partial match to the column name 'City of license', and the proper noun phrase following it is the column value."
+      }
+    ],
+    "select_column": "Class",
+    "select_signal": {
+      "signal_phrase": "What class",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "city of",
+      "right_boundary": "?",
+      "boundary_pattern": "city of [CITY, STATE]?"
+    }
+  },
+  {
+    "question": "Which player from Scotland has a To Par score of +7?",
+    "where_column": "Country",
+    "where_value": "scotland",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "from Scotland",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "country|nation|nationality|origin",
+        "confidence": 0.93,
+        "reasoning": "The preposition 'from' followed by a country name signals an origin/nationality filter, reliably mapping to a country or nation column."
+      }
+    ],
+    "select_column": "Player",
+    "select_signal": {
+      "signal_phrase": "Which player",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "from",
+      "right_boundary": "has",
+      "boundary_pattern": "from [COUNTRY] has"
+    }
+  },
+  {
+    "question": "What is Score, when Country is \"United States\", and when To Par is \"+4\"?",
+    "where_column": "Country",
+    "where_value": "united states",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "Country is",
+        "trigger_type": "direct_mention",
+        "column_pattern": "country|nation|region",
+        "confidence": 0.99,
+        "reasoning": "The column name 'Country' appears verbatim followed by the copula 'is', which is a direct equality assertion pattern that unambiguously maps phrase to column."
+      }
+    ],
+    "select_column": "Score",
+    "select_signal": {
+      "signal_phrase": "What is Score",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "Country is \"",
+      "right_boundary": "\"",
+      "boundary_pattern": "[COLUMN] is \"[VALUE]\""
+    }
+  },
+  {
+    "question": "What is the highest capacity for the venue, ticha stadium, located in varna?",
+    "where_column": "Location",
+    "where_value": "varna",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "located in",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "location|city|town|place|site",
+        "confidence": 0.95,
+        "reasoning": "The participial phrase 'located in' explicitly signals a geographical position, making it a strong indicator of a Location or City column."
+      }
+    ],
+    "select_column": "Capacity",
+    "select_signal": {
+      "signal_phrase": "highest capacity",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "located in",
+      "right_boundary": "?",
+      "boundary_pattern": "located in [PLACE_NAME]?"
+    }
+  },
+  {
+    "question": "Which team was the away team when the game was at punt road oval?",
+    "where_column": "Venue",
+    "where_value": "punt road oval",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "game was at",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "venue|stadium|ground|oval|arena",
+        "confidence": 0.92,
+        "reasoning": "The event noun 'game' combined with the locative preposition 'at' introduces the physical venue where the game took place, mapping to a Venue column."
+      }
+    ],
+    "select_column": "Away team",
+    "select_signal": {
+      "signal_phrase": "Which team was the away team",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "at",
+      "right_boundary": "?",
+      "boundary_pattern": "at [VENUE_NAME]?"
+    }
+  },
+  {
+    "question": "What is the status of the Eng Country from the Maynard name?",
+    "where_column": "Country",
+    "where_value": "eng",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "Eng Country",
+        "trigger_type": "direct_mention",
+        "column_pattern": "country|nation|nationality",
+        "confidence": 0.96,
+        "reasoning": "The column name 'Country' appears directly in the question as a post-modifier noun, with the value 'Eng' as its adjectival/attribute qualifier immediately preceding it."
+      }
+    ],
+    "select_column": "Status",
+    "select_signal": {
+      "signal_phrase": "What is the status",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "the",
+      "right_boundary": "Country",
+      "boundary_pattern": "the [VALUE] Country"
+    }
+  }
+]

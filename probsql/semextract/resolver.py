@@ -23,6 +23,8 @@ class ColumnResolver:
         self.type_to_column_patterns = {}
         # Column name keywords that strongly indicate a column's purpose
         self.column_keywords = {}
+        # Semantic trigger rules from LLM extraction
+        self.trigger_rules = []
 
     def load_knowledge(self, knowledge_dir=None):
         kdir = Path(knowledge_dir) if knowledge_dir else KNOWLEDGE_DIR
@@ -32,8 +34,14 @@ class ColumnResolver:
                 data = json.load(f)
                 self.type_to_column_patterns = data.get("type_to_column_patterns", {})
                 self.column_keywords = data.get("column_keywords", {})
+        # Load semantic trigger rules
+        sem_path = kdir / "semantic_rules.json"
+        if sem_path.exists():
+            with open(sem_path) as f:
+                data = json.load(f)
+                self.trigger_rules = data.get("trigger_rules", [])
 
-    def resolve(self, value, value_type, columns, exclude_columns=None):
+    def resolve(self, value, value_type, columns, exclude_columns=None, question=None):
         """Resolve a value to the best matching column.
 
         Args:
@@ -41,6 +49,7 @@ class ColumnResolver:
             value_type: The classified type (person_name, institution, etc.)
             columns: List of {"name": str, "type": str} dicts
             exclude_columns: Set of column names to exclude (e.g., SELECT column)
+            question: The original question text (for trigger phrase matching)
 
         Returns:
             List of (column_name, confidence) tuples, sorted by confidence desc
@@ -48,16 +57,63 @@ class ColumnResolver:
         exclude = set(c.lower() for c in (exclude_columns or []))
         candidates = []
 
+        # First: check semantic trigger rules from LLM extraction
+        trigger_scores = {}
+        if question and self.trigger_rules:
+            trigger_scores = self._score_by_triggers(question, columns, exclude)
+
         for col in columns:
             col_name = col["name"]
             if col_name.lower() in exclude:
                 continue
 
-            score = self._score_column(value, value_type, col_name, col.get("type", "text"))
+            # Combine trigger score with type-based score
+            trigger_score = trigger_scores.get(col_name, 0.0)
+            type_score = self._score_column(value, value_type, col_name, col.get("type", "text"))
+
+            # Trigger rules take priority when they fire
+            if trigger_score > 0.5:
+                score = trigger_score
+            elif trigger_score > 0:
+                score = max(trigger_score, type_score)
+            else:
+                score = type_score
+
             candidates.append((col_name, score))
 
         candidates.sort(key=lambda x: -x[1])
         return candidates
+
+    def _score_by_triggers(self, question, columns, exclude):
+        """Score columns based on semantic trigger rules from LLM extraction."""
+        q_lower = question.lower()
+        scores = {}
+
+        for rule in self.trigger_rules:
+            trigger = rule["trigger"]
+            col_pattern = rule["column_pattern"]
+            confidence = rule.get("confidence", 0.7)
+
+            # Skip overly generic single-word triggers
+            if len(trigger.split()) <= 1 and len(trigger) <= 4:
+                continue
+
+            # Check if trigger phrase appears in question
+            if trigger in q_lower:
+                # Find columns matching the column pattern
+                patterns = [p.strip() for p in col_pattern.split("|")]
+                for col in columns:
+                    col_name = col["name"]
+                    if col_name.lower() in exclude:
+                        continue
+                    col_lower = col_name.lower()
+                    col_words = set(re.findall(r'\b\w+\b', col_lower))
+                    for p in patterns:
+                        if p in col_lower or p in col_words:
+                            current = scores.get(col_name, 0)
+                            scores[col_name] = max(current, confidence)
+
+        return scores
 
     def _score_column(self, value, value_type, col_name, col_type):
         """Score how likely a value belongs to a column."""

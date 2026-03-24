@@ -1,0 +1,284 @@
+[
+  {
+    "question": "Who replaced the manager of Akhisar B.G.S.?",
+    "where_column": "Team",
+    "where_value": "Akhisar B.G.S.",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "manager of",
+        "trigger_type": "verb_relation",
+        "column_pattern": "team|club|organization|side",
+        "confidence": 0.85,
+        "reasoning": "A manager is possessed by a team, so 'manager of [ENTITY]' implies the entity is the value of the Team column."
+      },
+      {
+        "trigger_phrase": "of",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "team|club|organization|side",
+        "confidence": 0.75,
+        "reasoning": "The preposition 'of' following a role noun (manager, coach, captain) signals that the following proper noun is a team or organization value."
+      }
+    ],
+    "select_column": "Replaced by",
+    "select_signal": {
+      "signal_phrase": "Who replaced",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "manager of",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "[ROLE] of [VALUE]"
+    }
+  },
+  {
+    "question": "What is the position of the team player from Aik?",
+    "where_column": "Team from",
+    "where_value": "aik",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "from",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "team from|club from|from team|origin|source team",
+        "confidence": 0.9,
+        "reasoning": "The preposition 'from' preceding a proper noun signals a provenance or origin relationship, which maps to columns named '[X] from' or 'from [X]'."
+      },
+      {
+        "trigger_phrase": "player from",
+        "trigger_type": "verb_relation",
+        "column_pattern": "team from|club from|origin",
+        "confidence": 0.85,
+        "reasoning": "A player's origin team is expressed as 'player from [TEAM]', which corresponds to a 'Team from' column recording where a drafted player came from."
+      }
+    ],
+    "select_column": "Position",
+    "select_signal": {
+      "signal_phrase": "What is the position",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "from",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "from [VALUE]"
+    }
+  },
+  {
+    "question": "What is the largest crowd with Away team score of 13.16 (94)?",
+    "where_column": "Away team score",
+    "where_value": "13.16 (94)",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "Away team score of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "away team score|away score|away goals",
+        "confidence": 0.99,
+        "reasoning": "The full column name 'Away team score' appears verbatim in the question followed by 'of [VALUE]', directly identifying both column and value."
+      }
+    ],
+    "select_column": "Crowd",
+    "select_signal": {
+      "signal_phrase": "largest crowd",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "Away team score of",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "[COLUMN] of [VALUE]"
+    }
+  },
+  {
+    "question": "when was the school/club team for grizzles was maryland",
+    "where_column": "School/Club Team",
+    "where_value": "Maryland",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "school/club team",
+        "trigger_type": "direct_mention",
+        "column_pattern": "school|club team|school/club|college|university",
+        "confidence": 0.97,
+        "reasoning": "The question reproduces the compound column name 'School/Club Team' verbatim, with the copula 'was' introducing the WHERE value."
+      },
+      {
+        "trigger_phrase": "was",
+        "trigger_type": "verb_relation",
+        "column_pattern": "school|club team|school/club|college",
+        "confidence": 0.8,
+        "reasoning": "The copula 'was' following a column-name phrase signals an equality condition where the subsequent noun phrase is the WHERE value."
+      }
+    ],
+    "select_column": "Years for Grizzlies",
+    "select_signal": {
+      "signal_phrase": "when was",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "school/club team for grizzles was",
+      "right_boundary": "end of question",
+      "boundary_pattern": "[COLUMN] was [VALUE]"
+    }
+  },
+  {
+    "question": "On what date did the away team Fremantle play?",
+    "where_column": "Away team",
+    "where_value": "Fremantle",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "the away team",
+        "trigger_type": "direct_mention",
+        "column_pattern": "away team|visiting team|away side",
+        "confidence": 0.97,
+        "reasoning": "The phrase 'the away team' directly names the column, and the proper noun immediately following it is the WHERE value."
+      }
+    ],
+    "select_column": "Date",
+    "select_signal": {
+      "signal_phrase": "On what date",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "the away team",
+      "right_boundary": "play",
+      "boundary_pattern": "the away team [VALUE] play"
+    }
+  },
+  {
+    "question": "Name the date for cleveland",
+    "where_column": "Team",
+    "where_value": "Cleveland",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "for cleveland",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "team|club|opponent|side",
+        "confidence": 0.8,
+        "reasoning": "The preposition 'for' before a proper team name signals a row-filtering constraint on a Team or opponent column."
+      },
+      {
+        "trigger_phrase": "for",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "team|club|organization",
+        "confidence": 0.75,
+        "reasoning": "When 'for [PROPER_NOUN]' appears at the end of a short question and the table has a Team column, the proper noun is the Team value."
+      }
+    ],
+    "select_column": "Date",
+    "select_signal": {
+      "signal_phrase": "the date",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "for",
+      "right_boundary": "end of question",
+      "boundary_pattern": "for [VALUE]"
+    }
+  },
+  {
+    "question": "What is the fastest lap of the Oschersleben circuit with Audi Sport Team ABT as the winning team?",
+    "where_column": "Winning team",
+    "where_value": "audi sport team abt",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "as the winning team",
+        "trigger_type": "direct_mention",
+        "column_pattern": "winning team|winner team|victorious team",
+        "confidence": 0.98,
+        "reasoning": "The appositive construction '[VALUE] as the winning team' uses the column name as a role label, directly identifying the preceding entity as the WHERE value."
+      }
+    ],
+    "select_column": "Fastest Lap",
+    "select_signal": {
+      "signal_phrase": "fastest lap",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "with",
+      "right_boundary": "as the winning team",
+      "boundary_pattern": "with [VALUE] as the winning team"
+    }
+  },
+  {
+    "question": "What was the result of the game played on April 16 with Philadelphia as home team?",
+    "where_column": "Home Team",
+    "where_value": "philadelphia",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "as home team",
+        "trigger_type": "direct_mention",
+        "column_pattern": "home team|home side|home club",
+        "confidence": 0.98,
+        "reasoning": "The appositive construction '[VALUE] as home team' uses the column name as a post-nominal identifier, unambiguously labeling the preceding proper noun as the WHERE value."
+      }
+    ],
+    "select_column": "Result",
+    "select_signal": {
+      "signal_phrase": "What was the result",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "with",
+      "right_boundary": "as home team",
+      "boundary_pattern": "with [VALUE] as home team"
+    }
+  },
+  {
+    "question": "What was North Melbourne's score as the home team?",
+    "where_column": "Home team",
+    "where_value": "north melbourne",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "as the home team",
+        "trigger_type": "direct_mention",
+        "column_pattern": "home team|home side|home club",
+        "confidence": 0.97,
+        "reasoning": "The possessive subject of the question ('[ENTITY]'s score') combined with the appended role phrase 'as the home team' identifies the entity as the Home team column value."
+      },
+      {
+        "trigger_phrase": "'s score as the home team",
+        "trigger_type": "verb_relation",
+        "column_pattern": "home team|home side",
+        "confidence": 0.85,
+        "reasoning": "When an entity's score is asked and the entity is explicitly described as 'the home team', the entity is the WHERE value for the Home team column."
+      }
+    ],
+    "select_column": "Home team score",
+    "select_signal": {
+      "signal_phrase": "score",
+      "signal_type": "context_inference"
+    },
+    "value_boundaries": {
+      "left_boundary": "start of question / What was",
+      "right_boundary": "'s score",
+      "boundary_pattern": "[VALUE]'s score as the home team"
+    }
+  },
+  {
+    "question": "What is the spike for the 2008 club of Lokomotiv Novosibirsk?",
+    "where_column": "2008 club",
+    "where_value": "lokomotiv novosibirsk",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "2008 club of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "[YEAR] club|club [YEAR]|team [YEAR]",
+        "confidence": 0.97,
+        "reasoning": "The year-qualified column name '2008 club' appears verbatim in the question with the genitive 'of [VALUE]', directly naming both column and value."
+      },
+      {
+        "trigger_phrase": "of",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "[YEAR] club|club|team|organization",
+        "confidence": 0.8,
+        "reasoning": "The preposition 'of' following a column-name phrase signals that the subsequent proper noun is the WHERE value for that column."
+      }
+    ],
+    "select_column": "Spike",
+    "select_signal": {
+      "signal_phrase": "the spike",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "2008 club of",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "[COLUMN] of [VALUE]"
+    }
+  }
+]

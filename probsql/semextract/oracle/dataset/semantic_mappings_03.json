@@ -1,0 +1,242 @@
+[
+  {
+    "question": "Which player has a Position of fly-half, and a Caps of 3?",
+    "where_column": "Caps",
+    "where_value": "3",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "Caps of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "caps|appearances|matches|games",
+        "confidence": 0.98,
+        "reasoning": "The column name 'Caps' appears verbatim followed by 'of [VALUE]', which is a direct equality assertion pattern unambiguously naming the column."
+      }
+    ],
+    "select_column": "Player",
+    "select_signal": {
+      "signal_phrase": "Which player",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "Caps of",
+      "right_boundary": "?",
+      "boundary_pattern": "[COLUMN] of [VALUE]?"
+    }
+  },
+  {
+    "question": "What is the average agricultural panel of the composition with a labour panel less than 6, more than 0 nominations by Taoiseach, and a total less than 4?",
+    "where_column": "Total",
+    "where_value": "4",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "total less than",
+        "trigger_type": "direct_mention",
+        "column_pattern": "total|sum|count|aggregate",
+        "confidence": 0.97,
+        "reasoning": "The column name 'Total' appears verbatim followed by a comparison operator phrase ('less than'), directly naming the column as the filter target."
+      }
+    ],
+    "select_column": "Agricultural Panel",
+    "select_signal": {
+      "signal_phrase": "average agricultural panel",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "total less than",
+      "right_boundary": "?",
+      "boundary_pattern": "[COLUMN] less than [VALUE]"
+    }
+  },
+  {
+    "question": "What's the total of rank number 6 with more than 2 silver?",
+    "where_column": "Silver",
+    "where_value": "2",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "more than 2 silver",
+        "trigger_type": "direct_mention",
+        "column_pattern": "silver|gold|bronze|medal",
+        "confidence": 0.96,
+        "reasoning": "The column name 'Silver' appears verbatim with a numeric value and comparison phrase ('more than N'), directly naming the medal-count column as the filter."
+      }
+    ],
+    "select_column": "Total",
+    "select_signal": {
+      "signal_phrase": "What's the total",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "more than",
+      "right_boundary": "silver",
+      "boundary_pattern": "more than [VALUE] [COLUMN]"
+    }
+  },
+  {
+    "question": "What is the to par number of the person who won in 2003?",
+    "where_column": "Year(s) won",
+    "where_value": "2003",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "won in",
+        "trigger_type": "verb_relation",
+        "column_pattern": "year.*won|year|season|date",
+        "confidence": 0.91,
+        "reasoning": "The verb 'won' combined with the temporal preposition 'in' signals a filter on a year/season column that records when a win occurred."
+      }
+    ],
+    "select_column": "To par",
+    "select_signal": {
+      "signal_phrase": "to par number",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "won in",
+      "right_boundary": "?",
+      "boundary_pattern": "won in [YEAR]?"
+    }
+  },
+  {
+    "question": "What position is number 35 whose height is 6-6?",
+    "where_column": "No.(s)",
+    "where_value": "35",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "number 35",
+        "trigger_type": "noun_synonym",
+        "column_pattern": "no\\.|no\\.\\(s\\)|number|num|jersey|shirt",
+        "confidence": 0.93,
+        "reasoning": "The word 'number' is a common synonym for columns named 'No.' or 'No.(s)', so 'number [N]' reliably maps to numeric identifier columns."
+      }
+    ],
+    "select_column": "Position",
+    "select_signal": {
+      "signal_phrase": "What position",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "number",
+      "right_boundary": "whose",
+      "boundary_pattern": "number [VALUE] whose"
+    }
+  },
+  {
+    "question": "What round has a pick less than 189, with arizona cardinals as the NFL club?",
+    "where_column": "Pick",
+    "where_value": "189",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "pick less than",
+        "trigger_type": "direct_mention",
+        "column_pattern": "pick|selection|draft pick",
+        "confidence": 0.97,
+        "reasoning": "The column name 'Pick' appears verbatim followed by a comparison operator phrase, directly naming the column as the filter target."
+      }
+    ],
+    "select_column": "Round",
+    "select_signal": {
+      "signal_phrase": "What round",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "pick less than",
+      "right_boundary": ",",
+      "boundary_pattern": "pick less than [VALUE],"
+    }
+  },
+  {
+    "question": "What's the genre of The Sims before 2002?",
+    "where_column": "Year",
+    "where_value": "2002",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "before 2002",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "year|date|release.*year|season",
+        "confidence": 0.90,
+        "reasoning": "The temporal preposition 'before' followed by a four-digit number signals a comparison filter on a year or date column."
+      }
+    ],
+    "select_column": "Genre",
+    "select_signal": {
+      "signal_phrase": "What's the genre",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "before",
+      "right_boundary": "?",
+      "boundary_pattern": "before [YEAR]?"
+    }
+  },
+  {
+    "question": "It has a FA Cup Goals smaller than 4, and a FA Cup Apps larger than 7, what is the total number of total apps?",
+    "where_column": "FA Cup Apps",
+    "where_value": "7",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "FA Cup Apps larger than",
+        "trigger_type": "direct_mention",
+        "column_pattern": ".*apps|.*appearances|.*games",
+        "confidence": 0.98,
+        "reasoning": "The column name 'FA Cup Apps' appears verbatim followed by a comparison operator phrase, directly naming the column as the inequality filter target."
+      }
+    ],
+    "select_column": "Total Apps",
+    "select_signal": {
+      "signal_phrase": "total number of total apps",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "FA Cup Apps larger than",
+      "right_boundary": ",",
+      "boundary_pattern": "[COLUMN] larger than [VALUE],"
+    }
+  },
+  {
+    "question": "Which Team has a Total Pld smaller than 114, and a 2004\u201305 Pts of 49?",
+    "where_column": "2004\u201305 Pts",
+    "where_value": "49",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "2004\u201305 Pts of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "\\d{4}.*pts|.*pts|points",
+        "confidence": 0.98,
+        "reasoning": "The season-year and abbreviated column name '2004-05 Pts' appears verbatim followed by 'of [VALUE]', which is a direct equality assertion pattern naming the column."
+      }
+    ],
+    "select_column": "Team",
+    "select_signal": {
+      "signal_phrase": "Which Team",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "2004\u201305 Pts of",
+      "right_boundary": "?",
+      "boundary_pattern": "[COLUMN] of [VALUE]?"
+    }
+  },
+  {
+    "question": "What player has a total of 290 points?",
+    "where_column": "Total",
+    "where_value": "290",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "total of",
+        "trigger_type": "noun_synonym",
+        "column_pattern": "total|sum|aggregate|points",
+        "confidence": 0.91,
+        "reasoning": "The noun 'total' is a direct synonym for columns named 'Total', and the preposition 'of' immediately preceding a numeric value forms a value assertion pattern."
+      }
+    ],
+    "select_column": "Player",
+    "select_signal": {
+      "signal_phrase": "What player",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "total of",
+      "right_boundary": "points",
+      "boundary_pattern": "total of [VALUE] points"
+    }
+  }
+]

@@ -1,0 +1,263 @@
+[
+  {
+    "question": "What is the total pick # for the D position from a team from Chilliwack Bruins?",
+    "where_column": "Position",
+    "where_value": "d",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "D position",
+        "trigger_type": "value_type_match",
+        "column_pattern": "position|pos|role",
+        "confidence": 0.85,
+        "reasoning": "A single letter or short role label immediately followed by the word 'position' identifies a value whose type (positional abbreviation) matches the Purpose of a Position column."
+      },
+      {
+        "trigger_phrase": "for the D position",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "position|pos|role",
+        "confidence": 0.8,
+        "reasoning": "The preposition 'for' preceding a role label signals a filtering constraint on the Position column, not a team or player column."
+      }
+    ],
+    "select_column": "Pick #",
+    "select_signal": {
+      "signal_phrase": "total pick #",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "for the",
+      "right_boundary": "position",
+      "boundary_pattern": "for the [VALUE] position"
+    }
+  },
+  {
+    "question": "What are all the different descriptions for the buttonholer with cardboard box for storage and a low shank type?",
+    "where_column": "For shank type",
+    "where_value": "low",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "shank type",
+        "trigger_type": "direct_mention",
+        "column_pattern": "shank type|for shank type",
+        "confidence": 0.95,
+        "reasoning": "The phrase 'shank type' directly appears as a suffix in the column name 'For shank type', making it a near-exact lexical match."
+      },
+      {
+        "trigger_phrase": "low shank type",
+        "trigger_type": "value_type_match",
+        "column_pattern": "shank type|for shank type",
+        "confidence": 0.9,
+        "reasoning": "An adjective ('low') immediately preceding a column-name fragment ('shank type') signals that the adjective is the WHERE value for that column."
+      }
+    ],
+    "select_column": "Description",
+    "select_signal": {
+      "signal_phrase": "descriptions",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "a",
+      "right_boundary": "shank type",
+      "boundary_pattern": "a [VALUE] shank type"
+    }
+  },
+  {
+    "question": "Name the most extra points for right tackle",
+    "where_column": "Position",
+    "where_value": "Right tackle",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "for right tackle",
+        "trigger_type": "value_type_match",
+        "column_pattern": "position|pos|role",
+        "confidence": 0.85,
+        "reasoning": "A recognized sports positional term ('right tackle') following 'for' is typed as a positional role, which maps to a Position column."
+      },
+      {
+        "trigger_phrase": "for",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "position|pos|role",
+        "confidence": 0.75,
+        "reasoning": "The preposition 'for' before a role noun signals a constraint on the entity's Position, distinguishing it from team or name columns."
+      }
+    ],
+    "select_column": "Extra points",
+    "select_signal": {
+      "signal_phrase": "extra points",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "for",
+      "right_boundary": "end of question",
+      "boundary_pattern": "for [VALUE]"
+    }
+  },
+  {
+    "question": "What is NiCd, when Type is \"Capacity under 500mA constant Drain\"?",
+    "where_column": "Type",
+    "where_value": "capacity under 500ma constant drain",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "Type is",
+        "trigger_type": "direct_mention",
+        "column_pattern": "type|kind|category|class",
+        "confidence": 0.99,
+        "reasoning": "The column name 'Type' is explicitly stated in the question followed by 'is', forming a direct equality condition."
+      }
+    ],
+    "select_column": "NiCd",
+    "select_signal": {
+      "signal_phrase": "What is NiCd",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "Type is",
+      "right_boundary": "end of question / closing quote",
+      "boundary_pattern": "Type is \"[VALUE]\""
+    }
+  },
+  {
+    "question": "Away result of 0\u20133, and a Season of 1969-70 is what competition?",
+    "where_column": "Away result",
+    "where_value": "0\u20133",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "Away result of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "away result|away score|away goals",
+        "confidence": 0.99,
+        "reasoning": "The exact column name 'Away result' appears in the question immediately before 'of [VALUE]', providing an unambiguous direct-mention mapping."
+      }
+    ],
+    "select_column": "Competition",
+    "select_signal": {
+      "signal_phrase": "is what competition",
+      "signal_type": "question_word"
+    },
+    "value_boundaries": {
+      "left_boundary": "Away result of",
+      "right_boundary": ", and",
+      "boundary_pattern": "[COLUMN] of [VALUE],"
+    }
+  },
+  {
+    "question": "What is the lowest attendance that has a week less than 4, and w 13-7 as the result?",
+    "where_column": "Result",
+    "where_value": "w 13-7",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "as the result",
+        "trigger_type": "direct_mention",
+        "column_pattern": "result|outcome|score",
+        "confidence": 0.97,
+        "reasoning": "The phrase '[VALUE] as the result' uses the column name 'result' as a post-nominal identifier, directly labeling the preceding token as the WHERE value."
+      }
+    ],
+    "select_column": "Attendance",
+    "select_signal": {
+      "signal_phrase": "lowest attendance",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "and",
+      "right_boundary": "as the result",
+      "boundary_pattern": "[VALUE] as the result"
+    }
+  },
+  {
+    "question": "Which Kickoff (ET) has a Result of w 34\u201323?",
+    "where_column": "Result",
+    "where_value": "w 34\u201323",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "a Result of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "result|outcome|score",
+        "confidence": 0.99,
+        "reasoning": "The column name 'Result' is stated with the indefinite article and 'of', which is a standard template for direct-mention WHERE clauses."
+      }
+    ],
+    "select_column": "Kickoff (ET)",
+    "select_signal": {
+      "signal_phrase": "Which Kickoff (ET)",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "a Result of",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "a [COLUMN] of [VALUE]"
+    }
+  },
+  {
+    "question": "what is the 2001 % for the status widowed or surviving partner?",
+    "where_column": "Status",
+    "where_value": "Widowed or surviving partner",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "the status",
+        "trigger_type": "direct_mention",
+        "column_pattern": "status|state|condition|category",
+        "confidence": 0.98,
+        "reasoning": "The word 'status' directly names the column, and the noun phrase following it is the WHERE value."
+      }
+    ],
+    "select_column": "2001 %",
+    "select_signal": {
+      "signal_phrase": "the 2001 %",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "the status",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "the status [VALUE]"
+    }
+  },
+  {
+    "question": "Which race has a position of 3rd and a speed of 126.452?",
+    "where_column": "Position",
+    "where_value": "3rd",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "a position of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "position|pos|rank|place",
+        "confidence": 0.99,
+        "reasoning": "The column name 'position' is used with the partitive construction 'a position of [VALUE]', unambiguously identifying both column and value."
+      }
+    ],
+    "select_column": "Race",
+    "select_signal": {
+      "signal_phrase": "Which race",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "a position of",
+      "right_boundary": "and",
+      "boundary_pattern": "a position of [VALUE]"
+    }
+  },
+  {
+    "question": "What is the total stellar mass of the type m0?",
+    "where_column": "Type",
+    "where_value": "m0",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "of the type",
+        "trigger_type": "direct_mention",
+        "column_pattern": "type|kind|category|class",
+        "confidence": 0.98,
+        "reasoning": "The construction 'of the type [VALUE]' uses the column name 'type' as a classifier, making the following token the WHERE value."
+      }
+    ],
+    "select_column": "Stellar mass ( M\u2609 )",
+    "select_signal": {
+      "signal_phrase": "total stellar mass",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "of the type",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "of the type [VALUE]"
+    }
+  }
+]

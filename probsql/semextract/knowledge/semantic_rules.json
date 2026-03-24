@@ -1,0 +1,1211 @@
+{
+  "trigger_rules": [
+    {
+      "trigger": "d position",
+      "trigger_type": "value_type_match",
+      "column_pattern": "position|pos|role",
+      "confidence": 0.85,
+      "reasoning": "A single letter or short role label immediately followed by the word 'position' identifies a value whose type (positional abbreviation) matches the Purpose of a Position column."
+    },
+    {
+      "trigger": "for the d position",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "position|pos|role",
+      "confidence": 0.8,
+      "reasoning": "The preposition 'for' preceding a role label signals a filtering constraint on the Position column, not a team or player column."
+    },
+    {
+      "trigger": "shank type",
+      "trigger_type": "direct_mention",
+      "column_pattern": "shank type|for shank type",
+      "confidence": 0.95,
+      "reasoning": "The phrase 'shank type' directly appears as a suffix in the column name 'For shank type', making it a near-exact lexical match."
+    },
+    {
+      "trigger": "low shank type",
+      "trigger_type": "value_type_match",
+      "column_pattern": "shank type|for shank type",
+      "confidence": 0.9,
+      "reasoning": "An adjective ('low') immediately preceding a column-name fragment ('shank type') signals that the adjective is the WHERE value for that column."
+    },
+    {
+      "trigger": "for right tackle",
+      "trigger_type": "value_type_match",
+      "column_pattern": "position|pos|role",
+      "confidence": 0.85,
+      "reasoning": "A recognized sports positional term ('right tackle') following 'for' is typed as a positional role, which maps to a Position column."
+    },
+    {
+      "trigger": "for",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "position|pos|role",
+      "confidence": 0.75,
+      "reasoning": "The preposition 'for' before a role noun signals a constraint on the entity's Position, distinguishing it from team or name columns."
+    },
+    {
+      "trigger": "type is",
+      "trigger_type": "direct_mention",
+      "column_pattern": "type|kind|category|class",
+      "confidence": 0.99,
+      "reasoning": "The column name 'Type' is explicitly stated in the question followed by 'is', forming a direct equality condition."
+    },
+    {
+      "trigger": "away result of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "away result|away score|away goals",
+      "confidence": 0.99,
+      "reasoning": "The exact column name 'Away result' appears in the question immediately before 'of [VALUE]', providing an unambiguous direct-mention mapping."
+    },
+    {
+      "trigger": "as the result",
+      "trigger_type": "direct_mention",
+      "column_pattern": "result|outcome|score",
+      "confidence": 0.97,
+      "reasoning": "The phrase '[VALUE] as the result' uses the column name 'result' as a post-nominal identifier, directly labeling the preceding token as the WHERE value."
+    },
+    {
+      "trigger": "a result of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "result|outcome|score",
+      "confidence": 0.99,
+      "reasoning": "The column name 'Result' is stated with the indefinite article and 'of', which is a standard template for direct-mention WHERE clauses."
+    },
+    {
+      "trigger": "the status",
+      "trigger_type": "direct_mention",
+      "column_pattern": "status|state|condition|category",
+      "confidence": 0.98,
+      "reasoning": "The word 'status' directly names the column, and the noun phrase following it is the WHERE value."
+    },
+    {
+      "trigger": "a position of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "position|pos|rank|place",
+      "confidence": 0.99,
+      "reasoning": "The column name 'position' is used with the partitive construction 'a position of [VALUE]', unambiguously identifying both column and value."
+    },
+    {
+      "trigger": "of the type",
+      "trigger_type": "direct_mention",
+      "column_pattern": "type|kind|category|class",
+      "confidence": 0.98,
+      "reasoning": "The construction 'of the type [VALUE]' uses the column name 'type' as a classifier, making the following token the WHERE value."
+    },
+    {
+      "trigger": "manager of",
+      "trigger_type": "verb_relation",
+      "column_pattern": "team|club|organization|side",
+      "confidence": 0.85,
+      "reasoning": "A manager is possessed by a team, so 'manager of [ENTITY]' implies the entity is the value of the Team column."
+    },
+    {
+      "trigger": "of",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "team|club|organization|side",
+      "confidence": 0.75,
+      "reasoning": "The preposition 'of' following a role noun (manager, coach, captain) signals that the following proper noun is a team or organization value."
+    },
+    {
+      "trigger": "from",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "team from|club from|from team|origin|source team",
+      "confidence": 0.9,
+      "reasoning": "The preposition 'from' preceding a proper noun signals a provenance or origin relationship, which maps to columns named '[X] from' or 'from [X]'."
+    },
+    {
+      "trigger": "player from",
+      "trigger_type": "verb_relation",
+      "column_pattern": "team from|club from|origin",
+      "confidence": 0.85,
+      "reasoning": "A player's origin team is expressed as 'player from [TEAM]', which corresponds to a 'Team from' column recording where a drafted player came from."
+    },
+    {
+      "trigger": "away team score of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "away team score|away score|away goals",
+      "confidence": 0.99,
+      "reasoning": "The full column name 'Away team score' appears verbatim in the question followed by 'of [VALUE]', directly identifying both column and value."
+    },
+    {
+      "trigger": "school/club team",
+      "trigger_type": "direct_mention",
+      "column_pattern": "school|club team|school/club|college|university",
+      "confidence": 0.97,
+      "reasoning": "The question reproduces the compound column name 'School/Club Team' verbatim, with the copula 'was' introducing the WHERE value."
+    },
+    {
+      "trigger": "was",
+      "trigger_type": "verb_relation",
+      "column_pattern": "school|club team|school/club|college",
+      "confidence": 0.8,
+      "reasoning": "The copula 'was' following a column-name phrase signals an equality condition where the subsequent noun phrase is the WHERE value."
+    },
+    {
+      "trigger": "the away team",
+      "trigger_type": "direct_mention",
+      "column_pattern": "away team|visiting team|away side",
+      "confidence": 0.97,
+      "reasoning": "The phrase 'the away team' directly names the column, and the proper noun immediately following it is the WHERE value."
+    },
+    {
+      "trigger": "for cleveland",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "team|club|opponent|side",
+      "confidence": 0.8,
+      "reasoning": "The preposition 'for' before a proper team name signals a row-filtering constraint on a Team or opponent column."
+    },
+    {
+      "trigger": "for",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "team|club|organization",
+      "confidence": 0.75,
+      "reasoning": "When 'for [PROPER_NOUN]' appears at the end of a short question and the table has a Team column, the proper noun is the Team value."
+    },
+    {
+      "trigger": "as the winning team",
+      "trigger_type": "direct_mention",
+      "column_pattern": "winning team|winner team|victorious team",
+      "confidence": 0.98,
+      "reasoning": "The appositive construction '[VALUE] as the winning team' uses the column name as a role label, directly identifying the preceding entity as the WHERE value."
+    },
+    {
+      "trigger": "as home team",
+      "trigger_type": "direct_mention",
+      "column_pattern": "home team|home side|home club",
+      "confidence": 0.98,
+      "reasoning": "The appositive construction '[VALUE] as home team' uses the column name as a post-nominal identifier, unambiguously labeling the preceding proper noun as the WHERE value."
+    },
+    {
+      "trigger": "as the home team",
+      "trigger_type": "direct_mention",
+      "column_pattern": "home team|home side|home club",
+      "confidence": 0.97,
+      "reasoning": "The possessive subject of the question ('[ENTITY]'s score') combined with the appended role phrase 'as the home team' identifies the entity as the Home team column value."
+    },
+    {
+      "trigger": "'s score as the home team",
+      "trigger_type": "verb_relation",
+      "column_pattern": "home team|home side",
+      "confidence": 0.85,
+      "reasoning": "When an entity's score is asked and the entity is explicitly described as 'the home team', the entity is the WHERE value for the Home team column."
+    },
+    {
+      "trigger": "2008 club of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "[year] club|club [year]|team [year]",
+      "confidence": 0.97,
+      "reasoning": "The year-qualified column name '2008 club' appears verbatim in the question with the genitive 'of [VALUE]', directly naming both column and value."
+    },
+    {
+      "trigger": "of",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "[year] club|club|team|organization",
+      "confidence": 0.8,
+      "reasoning": "The preposition 'of' following a column-name phrase signals that the subsequent proper noun is the WHERE value for that column."
+    },
+    {
+      "trigger": "for iceland",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "country|nation|region|territory",
+      "confidence": 0.85,
+      "reasoning": "The preposition 'for' followed by a proper noun (named entity typed as country) signals a filtering condition on a country/region column."
+    },
+    {
+      "trigger": "home city of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "home city|city|location|base",
+      "confidence": 0.97,
+      "reasoning": "The phrase 'home city of' directly names the column 'Home city' and the preposition 'of' immediately precedes the column value."
+    },
+    {
+      "trigger": "played at",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "venue|stadium|ground|arena|location",
+      "confidence": 0.92,
+      "reasoning": "The verb-preposition pair 'played at' followed by a proper noun signals a venue/location filtering condition, as 'at' canonically introduces a physical place."
+    },
+    {
+      "trigger": "match at",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "venue|stadium|ground|arena|location|city",
+      "confidence": 0.9,
+      "reasoning": "The preposition 'at' following an event noun ('match') introduces the location/venue where the event occurred, mapping to a venue or location column."
+    },
+    {
+      "trigger": "city of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "city of license|city|municipality",
+      "confidence": 0.88,
+      "reasoning": "The phrase 'city of' is a direct partial match to the column name 'City of license', and the proper noun phrase following it is the column value."
+    },
+    {
+      "trigger": "from scotland",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "country|nation|nationality|origin",
+      "confidence": 0.93,
+      "reasoning": "The preposition 'from' followed by a country name signals an origin/nationality filter, reliably mapping to a country or nation column."
+    },
+    {
+      "trigger": "country is",
+      "trigger_type": "direct_mention",
+      "column_pattern": "country|nation|region",
+      "confidence": 0.99,
+      "reasoning": "The column name 'Country' appears verbatim followed by the copula 'is', which is a direct equality assertion pattern that unambiguously maps phrase to column."
+    },
+    {
+      "trigger": "located in",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "location|city|town|place|site",
+      "confidence": 0.95,
+      "reasoning": "The participial phrase 'located in' explicitly signals a geographical position, making it a strong indicator of a Location or City column."
+    },
+    {
+      "trigger": "game was at",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "venue|stadium|ground|oval|arena",
+      "confidence": 0.92,
+      "reasoning": "The event noun 'game' combined with the locative preposition 'at' introduces the physical venue where the game took place, mapping to a Venue column."
+    },
+    {
+      "trigger": "eng country",
+      "trigger_type": "direct_mention",
+      "column_pattern": "country|nation|nationality",
+      "confidence": 0.96,
+      "reasoning": "The column name 'Country' appears directly in the question as a post-modifier noun, with the value 'Eng' as its adjectival/attribute qualifier immediately preceding it."
+    },
+    {
+      "trigger": "caps of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "caps|appearances|matches|games",
+      "confidence": 0.98,
+      "reasoning": "The column name 'Caps' appears verbatim followed by 'of [VALUE]', which is a direct equality assertion pattern unambiguously naming the column."
+    },
+    {
+      "trigger": "total less than",
+      "trigger_type": "direct_mention",
+      "column_pattern": "total|sum|count|aggregate",
+      "confidence": 0.97,
+      "reasoning": "The column name 'Total' appears verbatim followed by a comparison operator phrase ('less than'), directly naming the column as the filter target."
+    },
+    {
+      "trigger": "more than 2 silver",
+      "trigger_type": "direct_mention",
+      "column_pattern": "silver|gold|bronze|medal",
+      "confidence": 0.96,
+      "reasoning": "The column name 'Silver' appears verbatim with a numeric value and comparison phrase ('more than N'), directly naming the medal-count column as the filter."
+    },
+    {
+      "trigger": "won in",
+      "trigger_type": "verb_relation",
+      "column_pattern": "year.*won|year|season|date",
+      "confidence": 0.91,
+      "reasoning": "The verb 'won' combined with the temporal preposition 'in' signals a filter on a year/season column that records when a win occurred."
+    },
+    {
+      "trigger": "number 35",
+      "trigger_type": "noun_synonym",
+      "column_pattern": "no\\.|no\\.\\(s\\)|number|num|jersey|shirt",
+      "confidence": 0.93,
+      "reasoning": "The word 'number' is a common synonym for columns named 'No.' or 'No.(s)', so 'number [N]' reliably maps to numeric identifier columns."
+    },
+    {
+      "trigger": "pick less than",
+      "trigger_type": "direct_mention",
+      "column_pattern": "pick|selection|draft pick",
+      "confidence": 0.97,
+      "reasoning": "The column name 'Pick' appears verbatim followed by a comparison operator phrase, directly naming the column as the filter target."
+    },
+    {
+      "trigger": "before 2002",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "year|date|release.*year|season",
+      "confidence": 0.9,
+      "reasoning": "The temporal preposition 'before' followed by a four-digit number signals a comparison filter on a year or date column."
+    },
+    {
+      "trigger": "fa cup apps larger than",
+      "trigger_type": "direct_mention",
+      "column_pattern": ".*apps|.*appearances|.*games",
+      "confidence": 0.98,
+      "reasoning": "The column name 'FA Cup Apps' appears verbatim followed by a comparison operator phrase, directly naming the column as the inequality filter target."
+    },
+    {
+      "trigger": "2004\u201305 pts of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "\\d{4}.*pts|.*pts|points",
+      "confidence": 0.98,
+      "reasoning": "The season-year and abbreviated column name '2004-05 Pts' appears verbatim followed by 'of [VALUE]', which is a direct equality assertion pattern naming the column."
+    },
+    {
+      "trigger": "total of",
+      "trigger_type": "noun_synonym",
+      "column_pattern": "total|sum|aggregate|points",
+      "confidence": 0.91,
+      "reasoning": "The noun 'total' is a direct synonym for columns named 'Total', and the preposition 'of' immediately preceding a numeric value forms a value assertion pattern."
+    },
+    {
+      "trigger": "when name is",
+      "trigger_type": "direct_mention",
+      "column_pattern": "name|player|person|athlete",
+      "confidence": 0.99,
+      "reasoning": "The column name 'Name' appears verbatim in the question followed by 'is', directly identifying the WHERE column and its value."
+    },
+    {
+      "trigger": "lybrant robinson",
+      "trigger_type": "value_type_match",
+      "column_pattern": "name|player|person|athlete",
+      "confidence": 0.9,
+      "reasoning": "A proper noun in Title Case that is a full human name maps to any column representing a person's identity (Name, Player, Athlete, etc.)."
+    },
+    {
+      "trigger": "had",
+      "trigger_type": "verb_relation",
+      "column_pattern": "name|player|person|athlete|member",
+      "confidence": 0.8,
+      "reasoning": "'had [person name]' implies the entity (season, team, roster) possessed/included that named person, making the named person a filter on a Name-type column."
+    },
+    {
+      "trigger": "marcio lassiter",
+      "trigger_type": "value_type_match",
+      "column_pattern": "name|player|person|athlete",
+      "confidence": 0.92,
+      "reasoning": "A proper noun forming a full human name (first + last) matches a Name/Player column even without explicit column mention."
+    },
+    {
+      "trigger": "the player is",
+      "trigger_type": "direct_mention",
+      "column_pattern": "player|name|athlete|competitor",
+      "confidence": 0.99,
+      "reasoning": "The phrase 'the player is [VALUE]' directly names the column 'Player' and signals an equality filter."
+    },
+    {
+      "trigger": "matt kuchar",
+      "trigger_type": "value_type_match",
+      "column_pattern": "player|name|person|athlete",
+      "confidence": 0.9,
+      "reasoning": "A full proper noun (first + last name) matches person-identity columns such as Player or Name."
+    },
+    {
+      "trigger": "the winner was",
+      "trigger_type": "direct_mention",
+      "column_pattern": "winner|champion|first place",
+      "confidence": 0.99,
+      "reasoning": "The column name 'Winner' appears verbatim followed by 'was', directly identifying the WHERE column and its value."
+    },
+    {
+      "trigger": "new york jets",
+      "trigger_type": "value_type_match",
+      "column_pattern": "winner|team|club|franchise",
+      "confidence": 0.85,
+      "reasoning": "A proper-noun sports team name matches columns representing competitive outcomes like Winner or Team."
+    },
+    {
+      "trigger": "for theo robinson",
+      "trigger_type": "verb_relation",
+      "column_pattern": "name|player|person|athlete",
+      "confidence": 0.88,
+      "reasoning": "'for [full person name]' introduces the subject of the query, mapping the name to a Name/Person identity column as a WHERE filter."
+    },
+    {
+      "trigger": "theo robinson",
+      "trigger_type": "value_type_match",
+      "column_pattern": "name|player|person|athlete",
+      "confidence": 0.91,
+      "reasoning": "A full proper noun (first + last) is a strong signal for a Name-type column even without an explicit column label."
+    },
+    {
+      "trigger": "is the winner",
+      "trigger_type": "direct_mention",
+      "column_pattern": "winner|champion|first place",
+      "confidence": 0.97,
+      "reasoning": "The phrase '[VALUE] is the winner' signals an equality filter on the Winner column, with the column name appearing as a predicate noun."
+    },
+    {
+      "trigger": "gary player",
+      "trigger_type": "value_type_match",
+      "column_pattern": "winner|name|player|person",
+      "confidence": 0.87,
+      "reasoning": "A proper noun full name adjacent to 'is the winner' confirms this maps to the Winner (person-name) column."
+    },
+    {
+      "trigger": "of eddie guerrero",
+      "trigger_type": "verb_relation",
+      "column_pattern": "name|person|athlete|competitor",
+      "confidence": 0.88,
+      "reasoning": "'of [full person name]' at the end of a question establishes the named person as the filter subject, mapping to a Name/Person column."
+    },
+    {
+      "trigger": "eddie guerrero",
+      "trigger_type": "value_type_match",
+      "column_pattern": "name|player|person|athlete",
+      "confidence": 0.91,
+      "reasoning": "A full proper noun (first + last) strongly indicates a Name-type identity column."
+    },
+    {
+      "trigger": "gary player's",
+      "trigger_type": "verb_relation",
+      "column_pattern": "player|name|person|athlete",
+      "confidence": 0.93,
+      "reasoning": "The possessive form '[Name]'s' at the start of a question identifies the named entity as the WHERE filter subject on a Player/Name column."
+    },
+    {
+      "trigger": "gary player",
+      "trigger_type": "value_type_match",
+      "column_pattern": "player|name|person|athlete",
+      "confidence": 0.9,
+      "reasoning": "A full proper noun (first + last) in possessive form maps to a Player or Name column as a WHERE equality filter."
+    },
+    {
+      "trigger": "in the tournament",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "tournament|competition|event|championship",
+      "confidence": 0.96,
+      "reasoning": "The preposition 'in' followed by 'the tournament' explicitly introduces a Tournament column filter."
+    },
+    {
+      "trigger": "2010 fiba world championship",
+      "trigger_type": "value_type_match",
+      "column_pattern": "tournament|competition|event|championship",
+      "confidence": 0.93,
+      "reasoning": "A named sporting event string (year + organization + competition type) matches a Tournament/Event column."
+    },
+    {
+      "trigger": "a player of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "player|name|person|athlete",
+      "confidence": 0.99,
+      "reasoning": "The phrase 'a Player of [VALUE]' directly names the 'Player' column and signals an equality filter."
+    },
+    {
+      "trigger": "gibril wilson",
+      "trigger_type": "value_type_match",
+      "column_pattern": "player|name|person|athlete",
+      "confidence": 0.88,
+      "reasoning": "A full proper noun (first + last) is characteristic of a Player/Name column value."
+    },
+    {
+      "trigger": "a date of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "date|day|schedule",
+      "confidence": 0.99,
+      "reasoning": "The phrase 'a Date of [VALUE]' directly names the 'Date' column and signals an equality filter."
+    },
+    {
+      "trigger": "september 7",
+      "trigger_type": "value_type_match",
+      "column_pattern": "date|day|schedule",
+      "confidence": 0.92,
+      "reasoning": "A month-name + day-number string is a calendar date literal that maps to a Date/Day column."
+    },
+    {
+      "trigger": "with d 41 \u221a of",
+      "trigger_type": "direct_mention",
+      "column_pattern": ".*",
+      "confidence": 0.98,
+      "reasoning": "The pattern 'with [COLUMN_NAME] of [VALUE]' directly names the WHERE column regardless of how opaque or symbolic the column name is."
+    },
+    {
+      "trigger": "d 41 \u221a",
+      "trigger_type": "value_type_match",
+      "column_pattern": "d 41 \u221a",
+      "confidence": 0.97,
+      "reasoning": "The value is a direct string match of the column name itself, indicating a self-referential equality filter."
+    },
+    {
+      "trigger": "with a record of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "record|w-l|win-loss|standing",
+      "confidence": 0.99,
+      "reasoning": "The phrase 'with a Record of [VALUE]' directly names the 'Record' column and signals an equality filter."
+    },
+    {
+      "trigger": "3\u20132",
+      "trigger_type": "value_type_match",
+      "column_pattern": "record|w-l|win-loss|standing",
+      "confidence": 0.91,
+      "reasoning": "A win-loss format string (digits separated by an en-dash) is a characteristic value for a Record/Standing column."
+    },
+    {
+      "trigger": "for age band being",
+      "trigger_type": "direct_mention",
+      "column_pattern": "age band|age group|age range|age bracket",
+      "confidence": 0.97,
+      "reasoning": "The phrase 'for [COLUMN] being [VALUE]' directly names the column 'Age band' and introduces its equality filter value."
+    },
+    {
+      "trigger": "under 20",
+      "trigger_type": "value_type_match",
+      "column_pattern": "age band|age group|age range|age bracket",
+      "confidence": 0.89,
+      "reasoning": "A comparative threshold phrase ('under N') is a characteristic literal for age-band or range columns."
+    },
+    {
+      "trigger": "with a length of",
+      "trigger_type": "direct_mention",
+      "column_pattern": "length|distance|km|miles|size",
+      "confidence": 0.88,
+      "reasoning": "The phrase 'with a length of [VALUE]' directly names the 'Length' column and signals an equality filter, even when the value appears non-numeric (e.g., a line name used as a label)."
+    },
+    {
+      "trigger": "ampang",
+      "trigger_type": "value_type_match",
+      "column_pattern": "length|line|route|name",
+      "confidence": 0.7,
+      "reasoning": "A place or line name following 'length of' maps to a Length column that uses named-route identifiers as values rather than pure numerics."
+    },
+    {
+      "trigger": "n/a in 1982",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "\\d{4}|year|season",
+      "confidence": 0.88,
+      "reasoning": "The pattern '[VALUE] in [YEAR]' signals that the year is a column name and the value before 'in' is the cell content to filter on."
+    },
+    {
+      "trigger": "in 1982",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "\\d{4}|year_column",
+      "confidence": 0.85,
+      "reasoning": "When a 4-digit year follows 'in' and matches a column header, it functions as the WHERE column name rather than a value."
+    },
+    {
+      "trigger": "in 2000-2001",
+      "trigger_type": "preposition_signal",
+      "column_pattern": "year|season|period|term",
+      "confidence": 0.94,
+      "reasoning": "The preposition 'in' followed by a year or academic year range signals a filter on a Year/Season/Period column."
+    },
+    {
+      "trigger": "2000-2001",
+      "trigger_type": "value_type_match",
+      "column_pattern": "year|season|academic year|period",
+      "confidence": 0.92,
+      "reasoning": "A hyphenated two-year range (YYYY-YYYY) is a canonical academic or fiscal year value matching a Year/Season column."
+    },
+    {
+      "trigger": "ended with an accident",
+      "trigger_type": "verb_relation",
+      "column_pattern": "time|status|result|finish|reason",
+      "confidence": 0.75,
+      "reasoning": "The phrase 'ended with [STATUS_VALUE]' indicates a terminal-state value stored in a Time/Status column that records race-ending conditions alongside numeric times."
+    },
+    {
+      "trigger": "accident",
+      "trigger_type": "value_type_match",
+      "column_pattern": "time|status|result|finish",
+      "confidence": 0.72,
+      "reasoning": "A non-numeric race-termination word ('accident', 'retirement', 'DNF') stored in a Time column indicates the column accepts categorical status values, not just timestamps."
+    },
+    {
+      "trigger": "is the subject",
+      "trigger_type": "direct_mention",
+      "column_pattern": "subject|topic|theme|category",
+      "confidence": 0.97,
+      "reasoning": "The phrase '[VALUE] is the subject' names the 'Subject' column as a predicate noun, signalling an equality filter."
+    },
+    {
+      "trigger": "interjection",
+      "trigger_type": "value_type_match",
+      "column_pattern": "subject|topic|theme|category",
+      "confidence": 0.82,
+      "reasoning": "A grammatical or thematic category word appearing before 'is the subject' maps to the Subject column as its filter value."
+    },
+    {
+      "trigger": "of kelis's song",
+      "trigger_type": "verb_relation",
+      "column_pattern": "main artist|artist|performer|singer|musician",
+      "confidence": 0.85,
+      "reasoning": "The possessive 'of [Artist]'s song' implies the named person is the main artist/creator, mapping the name to a Main Artist column."
+    },
+    {
+      "trigger": "kelis",
+      "trigger_type": "value_type_match",
+      "column_pattern": "main artist|artist|performer|singer",
+      "confidence": 0.83,
+      "reasoning": "A single-word proper noun in a music context (artist mononym) followed by possessive \"'s song\" signals the Main Artist column."
+    }
+  ],
+  "select_signals": [
+    {
+      "signal_phrase": "total pick #",
+      "signal_type": "direct_mention",
+      "select_column": "Pick #"
+    },
+    {
+      "signal_phrase": "descriptions",
+      "signal_type": "direct_mention",
+      "select_column": "Description"
+    },
+    {
+      "signal_phrase": "extra points",
+      "signal_type": "direct_mention",
+      "select_column": "Extra points"
+    },
+    {
+      "signal_phrase": "what is nicd",
+      "signal_type": "direct_mention",
+      "select_column": "NiCd"
+    },
+    {
+      "signal_phrase": "is what competition",
+      "signal_type": "question_word",
+      "select_column": "Competition"
+    },
+    {
+      "signal_phrase": "lowest attendance",
+      "signal_type": "direct_mention",
+      "select_column": "Attendance"
+    },
+    {
+      "signal_phrase": "which kickoff (et)",
+      "signal_type": "direct_mention",
+      "select_column": "Kickoff (ET)"
+    },
+    {
+      "signal_phrase": "the 2001 %",
+      "signal_type": "direct_mention",
+      "select_column": "2001 %"
+    },
+    {
+      "signal_phrase": "which race",
+      "signal_type": "direct_mention",
+      "select_column": "Race"
+    },
+    {
+      "signal_phrase": "total stellar mass",
+      "signal_type": "direct_mention",
+      "select_column": "Stellar mass ( M\u2609 )"
+    },
+    {
+      "signal_phrase": "who replaced",
+      "signal_type": "question_word",
+      "select_column": "Replaced by"
+    },
+    {
+      "signal_phrase": "what is the position",
+      "signal_type": "direct_mention",
+      "select_column": "Position"
+    },
+    {
+      "signal_phrase": "largest crowd",
+      "signal_type": "direct_mention",
+      "select_column": "Crowd"
+    },
+    {
+      "signal_phrase": "when was",
+      "signal_type": "question_word",
+      "select_column": "Years for Grizzlies"
+    },
+    {
+      "signal_phrase": "on what date",
+      "signal_type": "question_word",
+      "select_column": "Date"
+    },
+    {
+      "signal_phrase": "the date",
+      "signal_type": "direct_mention",
+      "select_column": "Date"
+    },
+    {
+      "signal_phrase": "fastest lap",
+      "signal_type": "direct_mention",
+      "select_column": "Fastest Lap"
+    },
+    {
+      "signal_phrase": "what was the result",
+      "signal_type": "direct_mention",
+      "select_column": "Result"
+    },
+    {
+      "signal_phrase": "score",
+      "signal_type": "context_inference",
+      "select_column": "Home team score"
+    },
+    {
+      "signal_phrase": "the spike",
+      "signal_type": "direct_mention",
+      "select_column": "Spike"
+    },
+    {
+      "signal_phrase": "what's the rank",
+      "signal_type": "direct_mention",
+      "select_column": "Rank"
+    },
+    {
+      "signal_phrase": "what team",
+      "signal_type": "question_word",
+      "select_column": "Team"
+    },
+    {
+      "signal_phrase": "who was the away team",
+      "signal_type": "question_word",
+      "select_column": "Away team"
+    },
+    {
+      "signal_phrase": "what was the score",
+      "signal_type": "direct_mention",
+      "select_column": "Score"
+    },
+    {
+      "signal_phrase": "what class",
+      "signal_type": "direct_mention",
+      "select_column": "Class"
+    },
+    {
+      "signal_phrase": "which player",
+      "signal_type": "question_word",
+      "select_column": "Player"
+    },
+    {
+      "signal_phrase": "what is score",
+      "signal_type": "direct_mention",
+      "select_column": "Score"
+    },
+    {
+      "signal_phrase": "highest capacity",
+      "signal_type": "direct_mention",
+      "select_column": "Capacity"
+    },
+    {
+      "signal_phrase": "which team was the away team",
+      "signal_type": "question_word",
+      "select_column": "Away team"
+    },
+    {
+      "signal_phrase": "what is the status",
+      "signal_type": "direct_mention",
+      "select_column": "Status"
+    },
+    {
+      "signal_phrase": "average agricultural panel",
+      "signal_type": "direct_mention",
+      "select_column": "Agricultural Panel"
+    },
+    {
+      "signal_phrase": "what's the total",
+      "signal_type": "direct_mention",
+      "select_column": "Total"
+    },
+    {
+      "signal_phrase": "to par number",
+      "signal_type": "direct_mention",
+      "select_column": "To par"
+    },
+    {
+      "signal_phrase": "what position",
+      "signal_type": "direct_mention",
+      "select_column": "Position"
+    },
+    {
+      "signal_phrase": "what round",
+      "signal_type": "direct_mention",
+      "select_column": "Round"
+    },
+    {
+      "signal_phrase": "what's the genre",
+      "signal_type": "direct_mention",
+      "select_column": "Genre"
+    },
+    {
+      "signal_phrase": "total number of total apps",
+      "signal_type": "direct_mention",
+      "select_column": "Total Apps"
+    },
+    {
+      "signal_phrase": "which team",
+      "signal_type": "question_word",
+      "select_column": "Team"
+    },
+    {
+      "signal_phrase": "what player",
+      "signal_type": "question_word",
+      "select_column": "Player"
+    },
+    {
+      "signal_phrase": "what is the average pick",
+      "signal_type": "direct_mention",
+      "select_column": "Pick"
+    },
+    {
+      "signal_phrase": "what season",
+      "signal_type": "direct_mention",
+      "select_column": "Season"
+    },
+    {
+      "signal_phrase": "what is the score",
+      "signal_type": "direct_mention",
+      "select_column": "Score"
+    },
+    {
+      "signal_phrase": "what is the year",
+      "signal_type": "direct_mention",
+      "select_column": "Year"
+    },
+    {
+      "signal_phrase": "what was the date from",
+      "signal_type": "direct_mention",
+      "select_column": "Date From"
+    },
+    {
+      "signal_phrase": "what is the lowest winners share in dollars",
+      "signal_type": "direct_mention",
+      "select_column": "Winners share ( $ )"
+    },
+    {
+      "signal_phrase": "what are the rank/s",
+      "signal_type": "noun_synonym",
+      "select_column": "#"
+    },
+    {
+      "signal_phrase": "highest total",
+      "signal_type": "direct_mention",
+      "select_column": "Total"
+    },
+    {
+      "signal_phrase": "how many assists per game",
+      "signal_type": "direct_mention",
+      "select_column": "Assists per game"
+    },
+    {
+      "signal_phrase": "which position",
+      "signal_type": "direct_mention",
+      "select_column": "Position"
+    },
+    {
+      "signal_phrase": "which attendance",
+      "signal_type": "direct_mention",
+      "select_column": "Attendance"
+    },
+    {
+      "signal_phrase": "name the d 48 o",
+      "signal_type": "direct_mention",
+      "select_column": "D 48 O"
+    },
+    {
+      "signal_phrase": "what is the average week",
+      "signal_type": "direct_mention",
+      "select_column": "Week"
+    },
+    {
+      "signal_phrase": "name the median income",
+      "signal_type": "direct_mention",
+      "select_column": "Median income"
+    },
+    {
+      "signal_phrase": "what is the average operation beginning",
+      "signal_type": "noun_synonym",
+      "select_column": "Began operation"
+    },
+    {
+      "signal_phrase": "what is the points total",
+      "signal_type": "noun_synonym",
+      "select_column": "Total points"
+    },
+    {
+      "signal_phrase": "how many middlesex principals",
+      "signal_type": "direct_mention",
+      "select_column": "Middlesex Principal"
+    },
+    {
+      "signal_phrase": "what is the driver",
+      "signal_type": "noun_synonym",
+      "select_column": "Rider"
+    },
+    {
+      "signal_phrase": "how many performers",
+      "signal_type": "noun_synonym",
+      "select_column": "Performed by"
+    },
+    {
+      "signal_phrase": "what was the peak date",
+      "signal_type": "direct_mention",
+      "select_column": "Peak date"
+    }
+  ],
+  "value_boundaries": [
+    {
+      "left_boundary": "for the",
+      "right_boundary": "position",
+      "boundary_pattern": "for the [value] position"
+    },
+    {
+      "left_boundary": "a",
+      "right_boundary": "shank type",
+      "boundary_pattern": "a [value] shank type"
+    },
+    {
+      "left_boundary": "for",
+      "right_boundary": "end of question",
+      "boundary_pattern": "for [value]"
+    },
+    {
+      "left_boundary": "type is",
+      "right_boundary": "end of question / closing quote",
+      "boundary_pattern": "type is \"[value]\""
+    },
+    {
+      "left_boundary": "away result of",
+      "right_boundary": ", and",
+      "boundary_pattern": "[column] of [value],"
+    },
+    {
+      "left_boundary": "and",
+      "right_boundary": "as the result",
+      "boundary_pattern": "[value] as the result"
+    },
+    {
+      "left_boundary": "a result of",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "a [column] of [value]"
+    },
+    {
+      "left_boundary": "the status",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "the status [value]"
+    },
+    {
+      "left_boundary": "a position of",
+      "right_boundary": "and",
+      "boundary_pattern": "a position of [value]"
+    },
+    {
+      "left_boundary": "of the type",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "of the type [value]"
+    },
+    {
+      "left_boundary": "manager of",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "[role] of [value]"
+    },
+    {
+      "left_boundary": "from",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "from [value]"
+    },
+    {
+      "left_boundary": "away team score of",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "[column] of [value]"
+    },
+    {
+      "left_boundary": "school/club team for grizzles was",
+      "right_boundary": "end of question",
+      "boundary_pattern": "[column] was [value]"
+    },
+    {
+      "left_boundary": "the away team",
+      "right_boundary": "play",
+      "boundary_pattern": "the away team [value] play"
+    },
+    {
+      "left_boundary": "with",
+      "right_boundary": "as the winning team",
+      "boundary_pattern": "with [value] as the winning team"
+    },
+    {
+      "left_boundary": "with",
+      "right_boundary": "as home team",
+      "boundary_pattern": "with [value] as home team"
+    },
+    {
+      "left_boundary": "start of question / what was",
+      "right_boundary": "'s score",
+      "boundary_pattern": "[value]'s score as the home team"
+    },
+    {
+      "left_boundary": "2008 club of",
+      "right_boundary": "end of question / ?",
+      "boundary_pattern": "[column] of [value]"
+    },
+    {
+      "left_boundary": "for",
+      "right_boundary": "end of sentence",
+      "boundary_pattern": "for [named_entity]"
+    },
+    {
+      "left_boundary": "home city of",
+      "right_boundary": ",",
+      "boundary_pattern": "home city of [value],"
+    },
+    {
+      "left_boundary": "at",
+      "right_boundary": "?",
+      "boundary_pattern": "at [venue_name]?"
+    },
+    {
+      "left_boundary": "at",
+      "right_boundary": "on",
+      "boundary_pattern": "at [venue] on [date]"
+    },
+    {
+      "left_boundary": "city of",
+      "right_boundary": "?",
+      "boundary_pattern": "city of [city, state]?"
+    },
+    {
+      "left_boundary": "from",
+      "right_boundary": "has",
+      "boundary_pattern": "from [country] has"
+    },
+    {
+      "left_boundary": "country is \"",
+      "right_boundary": "\"",
+      "boundary_pattern": "[column] is \"[value]\""
+    },
+    {
+      "left_boundary": "located in",
+      "right_boundary": "?",
+      "boundary_pattern": "located in [place_name]?"
+    },
+    {
+      "left_boundary": "the",
+      "right_boundary": "country",
+      "boundary_pattern": "the [value] country"
+    },
+    {
+      "left_boundary": "caps of",
+      "right_boundary": "?",
+      "boundary_pattern": "[column] of [value]?"
+    },
+    {
+      "left_boundary": "total less than",
+      "right_boundary": "?",
+      "boundary_pattern": "[column] less than [value]"
+    },
+    {
+      "left_boundary": "more than",
+      "right_boundary": "silver",
+      "boundary_pattern": "more than [value] [column]"
+    },
+    {
+      "left_boundary": "won in",
+      "right_boundary": "?",
+      "boundary_pattern": "won in [year]?"
+    },
+    {
+      "left_boundary": "number",
+      "right_boundary": "whose",
+      "boundary_pattern": "number [value] whose"
+    },
+    {
+      "left_boundary": "pick less than",
+      "right_boundary": ",",
+      "boundary_pattern": "pick less than [value],"
+    },
+    {
+      "left_boundary": "before",
+      "right_boundary": "?",
+      "boundary_pattern": "before [year]?"
+    },
+    {
+      "left_boundary": "fa cup apps larger than",
+      "right_boundary": ",",
+      "boundary_pattern": "[column] larger than [value],"
+    },
+    {
+      "left_boundary": "2004\u201305 pts of",
+      "right_boundary": "?",
+      "boundary_pattern": "[column] of [value]?"
+    },
+    {
+      "left_boundary": "total of",
+      "right_boundary": "points",
+      "boundary_pattern": "total of [value] points"
+    },
+    {
+      "left_boundary": "name is \"",
+      "right_boundary": "\"",
+      "boundary_pattern": "column_name is \"[value]\" | column_name is [value],"
+    },
+    {
+      "left_boundary": "had",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "verb [value]? | verb [value] (end)"
+    },
+    {
+      "left_boundary": "player is",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "column_noun is [value]?"
+    },
+    {
+      "left_boundary": "winner was",
+      "right_boundary": ", with a",
+      "boundary_pattern": "column_name was [value], | column_name was [value] (end)"
+    },
+    {
+      "left_boundary": "for",
+      "right_boundary": ", who",
+      "boundary_pattern": "for [value], who | for [value] (end)"
+    },
+    {
+      "left_boundary": "when",
+      "right_boundary": "is the winner",
+      "boundary_pattern": "when [value] is the column_noun"
+    },
+    {
+      "left_boundary": "of",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "of [value]?"
+    },
+    {
+      "left_boundary": "what was",
+      "right_boundary": "'s highest",
+      "boundary_pattern": "[value]'s [aggregation] [select_column]"
+    },
+    {
+      "left_boundary": "in the tournament",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "in the tournament [value]?"
+    },
+    {
+      "left_boundary": "a player of",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "a column_name of [value]?"
+    },
+    {
+      "left_boundary": "a date of",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "a column_name of [value]?"
+    },
+    {
+      "left_boundary": "with d 41 \u221a of",
+      "right_boundary": "(end of question)",
+      "boundary_pattern": "with [column] of [value] (end)"
+    },
+    {
+      "left_boundary": "with a record of",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "with a column_name of [value]?"
+    },
+    {
+      "left_boundary": "age band being",
+      "right_boundary": "(end of question)",
+      "boundary_pattern": "column_name being [value] (end)"
+    },
+    {
+      "left_boundary": "with a length of",
+      "right_boundary": "and over",
+      "boundary_pattern": "with a length of [value] and | with a length of [value] (end)"
+    },
+    {
+      "left_boundary": "and",
+      "right_boundary": "in 1982",
+      "boundary_pattern": "[value] in [column_year]"
+    },
+    {
+      "left_boundary": "in",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "in [value]?"
+    },
+    {
+      "left_boundary": "ended with an",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "ended with [a/an] [value]?"
+    },
+    {
+      "left_boundary": "of",
+      "right_boundary": "'s song",
+      "boundary_pattern": "of [value]'s song | of [value]'s [entity_type]"
+    }
+  ]
+}

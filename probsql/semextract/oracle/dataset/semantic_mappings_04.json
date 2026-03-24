@@ -1,0 +1,312 @@
+[
+  {
+    "question": "What is the average Pick, when Name is \"Lybrant Robinson\", and when Overall is less than 139?",
+    "where_column": "Name",
+    "where_value": "lybrant robinson",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "when Name is",
+        "trigger_type": "direct_mention",
+        "column_pattern": "name|player|person|athlete",
+        "confidence": 0.99,
+        "reasoning": "The column name 'Name' appears verbatim in the question followed by 'is', directly identifying the WHERE column and its value."
+      },
+      {
+        "trigger_phrase": "Lybrant Robinson",
+        "trigger_type": "value_type_match",
+        "column_pattern": "name|player|person|athlete",
+        "confidence": 0.90,
+        "reasoning": "A proper noun in Title Case that is a full human name maps to any column representing a person's identity (Name, Player, Athlete, etc.)."
+      }
+    ],
+    "select_column": "Pick",
+    "select_signal": {
+      "signal_phrase": "What is the average Pick",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "Name is \"",
+      "right_boundary": "\"",
+      "boundary_pattern": "column_name is \"[VALUE]\" | column_name is [VALUE],"
+    }
+  },
+  {
+    "question": "What season had Marcio Lassiter?",
+    "where_column": "Name",
+    "where_value": "marcio lassiter",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "had",
+        "trigger_type": "verb_relation",
+        "column_pattern": "name|player|person|athlete|member",
+        "confidence": 0.80,
+        "reasoning": "'had [person name]' implies the entity (season, team, roster) possessed/included that named person, making the named person a filter on a Name-type column."
+      },
+      {
+        "trigger_phrase": "Marcio Lassiter",
+        "trigger_type": "value_type_match",
+        "column_pattern": "name|player|person|athlete",
+        "confidence": 0.92,
+        "reasoning": "A proper noun forming a full human name (first + last) matches a Name/Player column even without explicit column mention."
+      }
+    ],
+    "select_column": "Season",
+    "select_signal": {
+      "signal_phrase": "What season",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "had ",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "verb [VALUE]? | verb [VALUE] (end)"
+    }
+  },
+  {
+    "question": "What is the score when the player is Matt Kuchar?",
+    "where_column": "Player",
+    "where_value": "Matt Kuchar",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "the player is",
+        "trigger_type": "direct_mention",
+        "column_pattern": "player|name|athlete|competitor",
+        "confidence": 0.99,
+        "reasoning": "The phrase 'the player is [VALUE]' directly names the column 'Player' and signals an equality filter."
+      },
+      {
+        "trigger_phrase": "Matt Kuchar",
+        "trigger_type": "value_type_match",
+        "column_pattern": "player|name|person|athlete",
+        "confidence": 0.90,
+        "reasoning": "A full proper noun (first + last name) matches person-identity columns such as Player or Name."
+      }
+    ],
+    "select_column": "Score",
+    "select_signal": {
+      "signal_phrase": "What is the score",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "player is ",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "column_noun is [VALUE]?"
+    }
+  },
+  {
+    "question": "What is the year when the Winner was the new york jets, with a Result of 24–17, played at giants stadium?",
+    "where_column": "Winner",
+    "where_value": "new york jets",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "the Winner was",
+        "trigger_type": "direct_mention",
+        "column_pattern": "winner|champion|first place",
+        "confidence": 0.99,
+        "reasoning": "The column name 'Winner' appears verbatim followed by 'was', directly identifying the WHERE column and its value."
+      },
+      {
+        "trigger_phrase": "new york jets",
+        "trigger_type": "value_type_match",
+        "column_pattern": "winner|team|club|franchise",
+        "confidence": 0.85,
+        "reasoning": "A proper-noun sports team name matches columns representing competitive outcomes like Winner or Team."
+      }
+    ],
+    "select_column": "Year",
+    "select_signal": {
+      "signal_phrase": "What is the year",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "Winner was ",
+      "right_boundary": ", with a",
+      "boundary_pattern": "column_name was [VALUE], | column_name was [VALUE] (end)"
+    }
+  },
+  {
+    "question": "What was the Date From for Theo Robinson, who was with the team until the end of season?",
+    "where_column": "Name",
+    "where_value": "theo robinson",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "for Theo Robinson",
+        "trigger_type": "verb_relation",
+        "column_pattern": "name|player|person|athlete",
+        "confidence": 0.88,
+        "reasoning": "'for [full person name]' introduces the subject of the query, mapping the name to a Name/Person identity column as a WHERE filter."
+      },
+      {
+        "trigger_phrase": "Theo Robinson",
+        "trigger_type": "value_type_match",
+        "column_pattern": "name|player|person|athlete",
+        "confidence": 0.91,
+        "reasoning": "A full proper noun (first + last) is a strong signal for a Name-type column even without an explicit column label."
+      }
+    ],
+    "select_column": "Date From",
+    "select_signal": {
+      "signal_phrase": "What was the Date From",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "for ",
+      "right_boundary": ", who",
+      "boundary_pattern": "for [VALUE], who | for [VALUE] (end)"
+    }
+  },
+  {
+    "question": "When gary player is the winner what is the lowest winners share in dollars?",
+    "where_column": "Winner",
+    "where_value": "Gary Player",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "is the winner",
+        "trigger_type": "direct_mention",
+        "column_pattern": "winner|champion|first place",
+        "confidence": 0.97,
+        "reasoning": "The phrase '[VALUE] is the winner' signals an equality filter on the Winner column, with the column name appearing as a predicate noun."
+      },
+      {
+        "trigger_phrase": "gary player",
+        "trigger_type": "value_type_match",
+        "column_pattern": "winner|name|player|person",
+        "confidence": 0.87,
+        "reasoning": "A proper noun full name adjacent to 'is the winner' confirms this maps to the Winner (person-name) column."
+      }
+    ],
+    "select_column": "Winners share ( $ )",
+    "select_signal": {
+      "signal_phrase": "what is the lowest winners share in dollars",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "When ",
+      "right_boundary": " is the winner",
+      "boundary_pattern": "When [VALUE] is the column_noun"
+    }
+  },
+  {
+    "question": "What are the rank/s of Eddie Guerrero?",
+    "where_column": "Name",
+    "where_value": "Eddie Guerrero",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "of Eddie Guerrero",
+        "trigger_type": "verb_relation",
+        "column_pattern": "name|person|athlete|competitor",
+        "confidence": 0.88,
+        "reasoning": "'of [full person name]' at the end of a question establishes the named person as the filter subject, mapping to a Name/Person column."
+      },
+      {
+        "trigger_phrase": "Eddie Guerrero",
+        "trigger_type": "value_type_match",
+        "column_pattern": "name|player|person|athlete",
+        "confidence": 0.91,
+        "reasoning": "A full proper noun (first + last) strongly indicates a Name-type identity column."
+      }
+    ],
+    "select_column": "#",
+    "select_signal": {
+      "signal_phrase": "What are the rank/s",
+      "signal_type": "noun_synonym"
+    },
+    "value_boundaries": {
+      "left_boundary": "of ",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "of [VALUE]?"
+    }
+  },
+  {
+    "question": "What was Gary Player's highest total when his To par was over 15?",
+    "where_column": "Player",
+    "where_value": "gary player",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "Gary Player's",
+        "trigger_type": "verb_relation",
+        "column_pattern": "player|name|person|athlete",
+        "confidence": 0.93,
+        "reasoning": "The possessive form '[Name]'s' at the start of a question identifies the named entity as the WHERE filter subject on a Player/Name column."
+      },
+      {
+        "trigger_phrase": "Gary Player",
+        "trigger_type": "value_type_match",
+        "column_pattern": "player|name|person|athlete",
+        "confidence": 0.90,
+        "reasoning": "A full proper noun (first + last) in possessive form maps to a Player or Name column as a WHERE equality filter."
+      }
+    ],
+    "select_column": "Total",
+    "select_signal": {
+      "signal_phrase": "highest total",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "What was ",
+      "right_boundary": "'s highest",
+      "boundary_pattern": "[VALUE]'s [aggregation] [select_column]"
+    }
+  },
+  {
+    "question": "How many assists per game in the tournament 2010 fiba world championship?",
+    "where_column": "Tournament",
+    "where_value": "2010 FIBA World Championship",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "in the tournament",
+        "trigger_type": "preposition_signal",
+        "column_pattern": "tournament|competition|event|championship",
+        "confidence": 0.96,
+        "reasoning": "The preposition 'in' followed by 'the tournament' explicitly introduces a Tournament column filter."
+      },
+      {
+        "trigger_phrase": "2010 fiba world championship",
+        "trigger_type": "value_type_match",
+        "column_pattern": "tournament|competition|event|championship",
+        "confidence": 0.93,
+        "reasoning": "A named sporting event string (year + organization + competition type) matches a Tournament/Event column."
+      }
+    ],
+    "select_column": "Assists per game",
+    "select_signal": {
+      "signal_phrase": "How many assists per game",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "in the tournament ",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "in the tournament [VALUE]?"
+    }
+  },
+  {
+    "question": "Which Position has a Player of gibril wilson?",
+    "where_column": "Player",
+    "where_value": "gibril wilson",
+    "semantic_mappings": [
+      {
+        "trigger_phrase": "a Player of",
+        "trigger_type": "direct_mention",
+        "column_pattern": "player|name|person|athlete",
+        "confidence": 0.99,
+        "reasoning": "The phrase 'a Player of [VALUE]' directly names the 'Player' column and signals an equality filter."
+      },
+      {
+        "trigger_phrase": "gibril wilson",
+        "trigger_type": "value_type_match",
+        "column_pattern": "player|name|person|athlete",
+        "confidence": 0.88,
+        "reasoning": "A full proper noun (first + last) is characteristic of a Player/Name column value."
+      }
+    ],
+    "select_column": "Position",
+    "select_signal": {
+      "signal_phrase": "Which Position",
+      "signal_type": "direct_mention"
+    },
+    "value_boundaries": {
+      "left_boundary": "a Player of ",
+      "right_boundary": "? (end of question)",
+      "boundary_pattern": "a column_name of [VALUE]?"
+    }
+  }
+]
