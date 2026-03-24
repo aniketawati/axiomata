@@ -428,11 +428,18 @@ class MarkovResolver:
         }
         # Type → column keyword mappings
         self.type_keywords = {}
-        # Trigger → column keyword mappings
         self.trigger_keywords = {}
+        self.entity_resolver = None
 
     def load_knowledge(self, knowledge_dir=None):
         kdir = Path(knowledge_dir) if knowledge_dir else KNOWLEDGE_DIR
+        # Load entity resolver for world knowledge
+        try:
+            from probsql.semextract.entity_resolver import EntityResolver
+            self.entity_resolver = EntityResolver()
+            self.entity_resolver.load_knowledge(str(kdir))
+        except Exception:
+            self.entity_resolver = None
         # Load compiled tables
         path = kdir / "bayesian_compiled.json"
         if path.exists():
@@ -481,6 +488,10 @@ class MarkovResolver:
         # State 1: Prior from value type
         probs, explanation = self._update_vtype(probs, value_type, headers)
         chain.append(("prior_vtype", dict(probs), explanation))
+
+        # State 1.5: Entity knowledge update (world knowledge "attention")
+        probs, explanation = self._update_entity_knowledge(probs, value, headers)
+        chain.append(("entity_knowledge", dict(probs), explanation))
 
         # State 2: Proximity update
         probs, explanation = self._update_proximity(probs, val_lower, q_lower, headers)
@@ -536,6 +547,36 @@ class MarkovResolver:
             matched = [h for h in headers if set(re.findall(r'\b\w+\b', h.lower())) & keywords]
             explanation += f" → boosted {matched}"
 
+        return probs, explanation
+
+    def _update_entity_knowledge(self, probs, value, headers):
+        """Bayesian update from entity world knowledge.
+
+        Uses the compatibility table ("probabilistic attention"):
+        P(column | entity_type(value), column_semantic_type)
+        """
+        if not self.entity_resolver or not value:
+            return probs, "no entity resolver"
+
+        entity_type = self.entity_resolver.get_entity_type(value)
+        if entity_type == "other":
+            return probs, f"entity_type=other (no KB entry for '{value[:20]}')"
+
+        # Apply entity compatibility scores as Bayesian update
+        w = 0.20  # entity knowledge weight
+        updated = {}
+        for h in headers:
+            compat = self.entity_resolver.score_compatibility(value, h)
+            # Boost columns with high compatibility, penalize low
+            if compat > 0.5:
+                updated[h] = probs[h] * (1 + w * (compat * 3))
+            else:
+                updated[h] = probs[h] * (1 - w * (1 - compat) * 0.5)
+
+        total = sum(updated.values()) or 1
+        probs = {h: v / total for h, v in updated.items()}
+
+        explanation = f"entity_type={entity_type}"
         return probs, explanation
 
     def _update_proximity(self, probs, val_lower, q_lower, headers):
@@ -785,11 +826,10 @@ class ProbabilisticResolver:
         else:
             select_col = identify_select(token_roles, headers, question)
 
-        # Step 4-8: JOINT value-column resolution
-        # Instead of sequential (find value → resolve column),
-        # score (value, column) pairs together using match_reason probabilities
+        # Step 4-8: Sequential value-column resolution via Markov chain
+        # (Joint resolver disabled — Markov chain with entity knowledge performs better)
         conditions = []
-        if self.joint_resolver:
+        if False and self.joint_resolver:
             joint_results = self.joint_resolver.resolve(
                 question, headers,
                 n_conditions=max_spans,
