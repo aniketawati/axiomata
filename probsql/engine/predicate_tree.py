@@ -95,6 +95,11 @@ def _atomic_to_sql(node):
         return f"{col} {op} {formatted}"
 
     formatted = _format_value(val)
+
+    # Case-insensitive string comparison
+    if op == "=" and isinstance(val, str) and not val.startswith("date("):
+        return f"LOWER({col}) = LOWER({formatted})"
+
     return f"{col} {op} {formatted}"
 
 

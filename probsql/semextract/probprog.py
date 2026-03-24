@@ -734,9 +734,29 @@ class ProbabilisticResolver:
         token_roles = self.hmm_parser.parse(question, headers)
 
         # Use span boundary detector for value extraction
+        # Estimate number of conditions from question structure
+        # Multi-condition signals: explicit conjunctions between clauses
+        q_lower = question.lower()
+        multi_signals = [", and ", " and a ", " and an ", " and the ",
+                         ", a ", ", with ", " with a ", " with an ",
+                         ", when ", ", where "]
+        has_conjunction = any(sig in q_lower for sig in multi_signals)
+        # Also check for comma-separated column references
+        if not has_conjunction and headers:
+            # Count how many column names appear in the question
+            col_mentions = sum(1 for h in headers
+                              if h.lower() in q_lower and len(h) > 3)
+            has_conjunction = col_mentions >= 3  # 1 for SELECT + 2 for WHERE conditions
+        max_spans = 3 if has_conjunction else 1
+
         value_spans = []
         if self.span_detector:
-            value_spans = self.span_detector.detect_multiple(question, headers, max_spans=4)
+            if max_spans == 1:
+                single = self.span_detector.detect(question, headers)
+                if single:
+                    value_spans = [single]
+            else:
+                value_spans = self.span_detector.detect_multiple(question, headers, max_spans=max_spans)
         if not value_spans:
             # Fallback to single span or HMM
             if self.span_detector:
