@@ -150,8 +150,10 @@ class ProbSQLEngine:
             "enum_values": best_col.enum_values,
         }
 
-        # Check if temporal
-        if self.temporal_parser.is_temporal(working_phrase):
+        # Check if temporal — only for TIMESTAMP/DATE columns, not TEXT/REAL
+        col_type_upper = best_col.column_type.upper().split("(")[0]
+        is_temporal_column = col_type_upper in ("TIMESTAMP", "DATE")
+        if is_temporal_column and self.temporal_parser.is_temporal(working_phrase):
             temporal_result = self.temporal_parser.parse(working_phrase, best_col.column_name)
             # Temporal parser returns a complete SQL condition
             pred = AtomicPredicate(

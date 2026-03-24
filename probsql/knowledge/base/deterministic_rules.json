@@ -7,6 +7,41 @@
     "sample_count": 189
   },
   {
+    "table": "operator_given_type",
+    "condition": "lookup_proper_noun",
+    "result": "=",
+    "probability": 1.0,
+    "sample_count": 682
+  },
+  {
+    "table": "operator_given_type",
+    "condition": "lookup_number",
+    "result": "=",
+    "probability": 1.0,
+    "sample_count": 278
+  },
+  {
+    "table": "operator_given_type",
+    "condition": "lookup_category",
+    "result": "=",
+    "probability": 1.0,
+    "sample_count": 323
+  },
+  {
+    "table": "operator_given_type",
+    "condition": "year_as_string",
+    "result": "=",
+    "probability": 1.0,
+    "sample_count": 129
+  },
+  {
+    "table": "operator_given_type",
+    "condition": "reverse_lookup",
+    "result": "=",
+    "probability": 1.0,
+    "sample_count": 213
+  },
+  {
     "table": "conjunction_given_type",
     "condition": "comparison",
     "result": "none",
@@ -35,6 +70,34 @@
     "sample_count": 189
   },
   {
+    "table": "conjunction_given_type",
+    "condition": "lookup_proper_noun",
+    "result": "none",
+    "probability": 0.9853372434017595,
+    "sample_count": 682
+  },
+  {
+    "table": "conjunction_given_type",
+    "condition": "lookup_number",
+    "result": "none",
+    "probability": 1.0,
+    "sample_count": 278
+  },
+  {
+    "table": "conjunction_given_type",
+    "condition": "year_as_string",
+    "result": "none",
+    "probability": 1.0,
+    "sample_count": 129
+  },
+  {
+    "table": "conjunction_given_type",
+    "condition": "reverse_lookup",
+    "result": "none",
+    "probability": 1.0,
+    "sample_count": 213
+  },
+  {
     "table": "temporal_given_domain",
     "condition": "flat_education",
     "result": "False",
@@ -46,35 +109,35 @@
     "condition": "flat_entertainment",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 240
+    "sample_count": 470
   },
   {
     "table": "temporal_given_domain",
     "condition": "flat_geography",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 243
+    "sample_count": 412
   },
   {
     "table": "temporal_given_domain",
     "condition": "flat_military_history",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 220
+    "sample_count": 379
   },
   {
     "table": "temporal_given_domain",
     "condition": "flat_politics_elections",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 195
+    "sample_count": 402
   },
   {
     "table": "temporal_given_domain",
     "condition": "flat_rankings_awards",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 243
+    "sample_count": 479
   },
   {
     "table": "temporal_given_domain",
@@ -88,28 +151,28 @@
     "condition": "flat_sports_results",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 219
+    "sample_count": 414
   },
   {
     "table": "temporal_given_domain",
     "condition": "flat_sports_roster",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 237
+    "sample_count": 481
   },
   {
     "table": "temporal_given_domain",
     "condition": "flat_transportation",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 242
+    "sample_count": 424
   },
   {
     "table": "negation_given_type",
     "condition": "simple",
     "result": "False",
     "probability": 1.0,
-    "sample_count": 2126
+    "sample_count": 2123
   },
   {
     "table": "negation_given_type",
@@ -161,11 +224,46 @@
     "sample_count": 189
   },
   {
+    "table": "negation_given_type",
+    "condition": "lookup_proper_noun",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 682
+  },
+  {
+    "table": "negation_given_type",
+    "condition": "lookup_number",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 278
+  },
+  {
+    "table": "negation_given_type",
+    "condition": "lookup_category",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 323
+  },
+  {
+    "table": "negation_given_type",
+    "condition": "year_as_string",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 129
+  },
+  {
+    "table": "negation_given_type",
+    "condition": "reverse_lookup",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 213
+  },
+  {
     "table": "join_given_type",
     "condition": "simple",
     "result": "False",
-    "probability": 0.9948259642521167,
-    "sample_count": 2126
+    "probability": 0.9948186528497409,
+    "sample_count": 2123
   },
   {
     "table": "join_given_type",
@@ -208,5 +306,40 @@
     "result": "False",
     "probability": 1.0,
     "sample_count": 189
+  },
+  {
+    "table": "join_given_type",
+    "condition": "lookup_proper_noun",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 682
+  },
+  {
+    "table": "join_given_type",
+    "condition": "lookup_number",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 278
+  },
+  {
+    "table": "join_given_type",
+    "condition": "lookup_category",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 323
+  },
+  {
+    "table": "join_given_type",
+    "condition": "year_as_string",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 129
+  },
+  {
+    "table": "join_given_type",
+    "condition": "reverse_lookup",
+    "result": "False",
+    "probability": 1.0,
+    "sample_count": 213
   }
 ]

@@ -1,18 +1,18 @@
 {
   "operator_given_type": {
     "simple": {
-      "=": 0.8063348416289593,
-      ">": 0.12036199095022625,
-      "IS NOT NULL": 0.019909502262443438,
-      ">=": 0.021266968325791856,
-      "<": 0.018552036199095023,
-      "<=": 0.0009049773755656109,
-      "IS NULL": 0.0018099547511312218,
-      "BETWEEN": 0.003167420814479638,
-      "IN": 0.0022624434389140274,
-      "LIKE": 0.005429864253393665,
-      "_count": 2126,
-      "_total_observations": 2210
+      "=": 0.8060715903942003,
+      ">": 0.12052560036248301,
+      "IS NOT NULL": 0.01993656547349343,
+      ">=": 0.021295876755777075,
+      "<": 0.018577254191209785,
+      "<=": 0.0009062075215224287,
+      "IS NULL": 0.0018124150430448573,
+      "BETWEEN": 0.0031717263253285004,
+      "IN": 0.0022655188038060714,
+      "LIKE": 0.005437245129134572,
+      "_count": 2123,
+      "_total_observations": 2207
     },
     "compound": {
       "=": 0.47035040431266845,
@@ -112,16 +112,41 @@
       "AND": 0.0051813471502590676,
       "_count": 189,
       "_total_observations": 193
+    },
+    "lookup_proper_noun": {
+      "=": 1.0,
+      "_count": 682,
+      "_total_observations": 692
+    },
+    "lookup_number": {
+      "=": 1.0,
+      "_count": 278,
+      "_total_observations": 278
+    },
+    "lookup_category": {
+      "=": 1.0,
+      "_count": 323,
+      "_total_observations": 350
+    },
+    "year_as_string": {
+      "=": 1.0,
+      "_count": 129,
+      "_total_observations": 129
+    },
+    "reverse_lookup": {
+      "=": 1.0,
+      "_count": 213,
+      "_total_observations": 213
     }
   },
   "conjunction_given_type": {
     "simple": {
-      "none": 0.6674506114769521,
-      "and": 0.00658513640639699,
-      "null": 0.29350893697083724,
-      "AND": 0.032455315145813735,
-      "_count": 2126,
-      "_total_observations": 2126
+      "none": 0.6669806877060763,
+      "and": 0.00659444182760245,
+      "null": 0.2939236928874235,
+      "AND": 0.03250117757889778,
+      "_count": 2123,
+      "_total_observations": 2123
     },
     "compound": {
       "and": 0.15858668857847166,
@@ -186,6 +211,33 @@
       "and": 0.021164021164021163,
       "_count": 189,
       "_total_observations": 189
+    },
+    "lookup_proper_noun": {
+      "none": 0.9853372434017595,
+      "and": 0.01466275659824047,
+      "_count": 682,
+      "_total_observations": 682
+    },
+    "lookup_number": {
+      "none": 1.0,
+      "_count": 278,
+      "_total_observations": 278
+    },
+    "lookup_category": {
+      "none": 0.8854489164086687,
+      "and": 0.11455108359133127,
+      "_count": 323,
+      "_total_observations": 323
+    },
+    "year_as_string": {
+      "none": 1.0,
+      "_count": 129,
+      "_total_observations": 129
+    },
+    "reverse_lookup": {
+      "none": 1.0,
+      "_count": 213,
+      "_total_observations": 213
     }
   },
   "temporal_given_domain": {
@@ -214,28 +266,28 @@
     },
     "flat_entertainment": {
       "False": 1.0,
-      "_count": 240,
-      "_total_observations": 240
+      "_count": 470,
+      "_total_observations": 470
     },
     "flat_geography": {
       "False": 1.0,
-      "_count": 243,
-      "_total_observations": 243
+      "_count": 412,
+      "_total_observations": 412
     },
     "flat_military_history": {
       "False": 1.0,
-      "_count": 220,
-      "_total_observations": 220
+      "_count": 379,
+      "_total_observations": 379
     },
     "flat_politics_elections": {
       "False": 1.0,
-      "_count": 195,
-      "_total_observations": 195
+      "_count": 402,
+      "_total_observations": 402
     },
     "flat_rankings_awards": {
       "False": 1.0,
-      "_count": 243,
-      "_total_observations": 243
+      "_count": 479,
+      "_total_observations": 479
     },
     "flat_science_tech": {
       "False": 1.0,
@@ -244,18 +296,18 @@
     },
     "flat_sports_results": {
       "False": 1.0,
-      "_count": 219,
-      "_total_observations": 219
+      "_count": 414,
+      "_total_observations": 414
     },
     "flat_sports_roster": {
       "False": 1.0,
-      "_count": 237,
-      "_total_observations": 237
+      "_count": 481,
+      "_total_observations": 481
     },
     "flat_transportation": {
       "False": 1.0,
-      "_count": 242,
-      "_total_observations": 242
+      "_count": 424,
+      "_total_observations": 424
     },
     "healthcare": {
       "False": 0.6622222222222223,
@@ -303,8 +355,8 @@
   "negation_given_type": {
     "simple": {
       "False": 1.0,
-      "_count": 2126,
-      "_total_observations": 2126
+      "_count": 2123,
+      "_total_observations": 2123
     },
     "compound": {
       "False": 0.9704190632703369,
@@ -348,14 +400,39 @@
       "False": 1.0,
       "_count": 189,
       "_total_observations": 189
+    },
+    "lookup_proper_noun": {
+      "False": 1.0,
+      "_count": 682,
+      "_total_observations": 682
+    },
+    "lookup_number": {
+      "False": 1.0,
+      "_count": 278,
+      "_total_observations": 278
+    },
+    "lookup_category": {
+      "False": 1.0,
+      "_count": 323,
+      "_total_observations": 323
+    },
+    "year_as_string": {
+      "False": 1.0,
+      "_count": 129,
+      "_total_observations": 129
+    },
+    "reverse_lookup": {
+      "False": 1.0,
+      "_count": 213,
+      "_total_observations": 213
     }
   },
   "join_given_type": {
     "simple": {
-      "False": 0.9948259642521167,
-      "True": 0.0051740357478833494,
-      "_count": 2126,
-      "_total_observations": 2126
+      "False": 0.9948186528497409,
+      "True": 0.0051813471502590676,
+      "_count": 2123,
+      "_total_observations": 2123
     },
     "compound": {
       "False": 0.7682826622843056,
@@ -400,6 +477,31 @@
       "False": 1.0,
       "_count": 189,
       "_total_observations": 189
+    },
+    "lookup_proper_noun": {
+      "False": 1.0,
+      "_count": 682,
+      "_total_observations": 682
+    },
+    "lookup_number": {
+      "False": 1.0,
+      "_count": 278,
+      "_total_observations": 278
+    },
+    "lookup_category": {
+      "False": 1.0,
+      "_count": 323,
+      "_total_observations": 323
+    },
+    "year_as_string": {
+      "False": 1.0,
+      "_count": 129,
+      "_total_observations": 129
+    },
+    "reverse_lookup": {
+      "False": 1.0,
+      "_count": 213,
+      "_total_observations": 213
     }
   },
   "temporal_type_dist": {

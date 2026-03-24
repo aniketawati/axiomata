@@ -168,54 +168,84 @@ class ValueExtractor:
         """Extract string value from English phrase."""
         phrase_lower = phrase.lower()
 
+        # Strip question words and common prefixes
+        cleaned = re.sub(
+            r'^(what|who|where|when|how many|how much|how|which|the|is|are|was|were|did|does|do)\s+',
+            '', phrase_lower, flags=re.IGNORECASE
+        ).strip().rstrip("?. ")
+
         # Quoted strings (highest priority)
         m = re.search(r'["\']([^"\']+)["\']', phrase)
         if m:
             return m.group(1), "string_literal", 0.95
 
-        # Value after "is", "equals", "named", "called", "titled", "for", "of", "played for"
-        for keyword in ["is", "equals", "named", "called", "titled", "labeled",
-                        "played for", "plays for", "played at", "from"]:
-            m = re.search(rf'\b{keyword}\s+["\']?(.+?)["\']?(?:\s*\??\s*)$', phrase_lower)
+        # Number-like strings first (e.g., "number 42", "player 3", "#15")
+        m = re.search(r'\b(?:number|no\.?|#)\s*(\d+)', phrase_lower)
+        if m:
+            return m.group(1), "string_literal", 0.85
+
+        # Value after preposition keywords — extract up to next common verb/preposition
+        stop_words = r'(?:\s+(?:play|plays|played|have|has|had|do|does|did|is|are|was|were|get|got|go|went|come|came|in|on|at|for|from|with|by)\b)'
+        for keyword in ["played for", "plays for", "played at", "plays at",
+                        "is from", "comes from", "located in", "based in",
+                        "called", "named", "titled", "labeled",
+                        "is", "equals", "was"]:
+            pattern = rf'\b{keyword}\s+(.+?)(?:{stop_words}|\s*\??\s*$)'
+            m = re.search(pattern, phrase_lower)
             if m:
-                val = m.group(1).strip().rstrip("?. ")
-                if len(val) > 1:
+                val = m.group(1).strip().rstrip("?., ")
+                if len(val) > 1 and len(val) < len(phrase_lower) * 0.8:
                     return val, "string_literal", 0.8
 
         # Proper noun sequences (capitalized multi-word: "Butler CC (KS)", "Amir Johnson")
-        # Match sequences of capitalized words possibly with special chars between them
+        # Match capitalized word(s) possibly followed by more capitalized/uppercase words or parens
         proper_nouns = re.findall(
-            r'(?:^|\s)([A-Z][a-zA-Z]*(?:[\s\-/()]+[A-Za-z0-9.()]+)*)',
+            r'(?<!\w)([A-Z][a-z]+(?:\s+(?:[A-Z][a-z]+|[A-Z]{2,}|[A-Z][a-z]*\.|\([^)]+\)))*)',
             phrase
         )
-        # Filter out sentence-initial words by checking if they're at position > 0
+        # Also match all-caps sequences like "CC", "G8", etc. attached to names
+        # and sequences with special connectors
+        proper_nouns2 = re.findall(
+            r'(?<!\w)([A-Z][a-zA-Z]*(?:\s+[A-Z][a-zA-Z]*)+)',
+            phrase
+        )
+        all_proper = proper_nouns + proper_nouns2
+
+        skip_words = {"What", "Who", "Where", "When", "How", "Which", "The", "That",
+                      "This", "Are", "Is", "Was", "Were", "Did", "Does", "Do", "Has",
+                      "Have", "Had", "Can", "Could", "Would", "Should", "May", "Will"}
         candidates = []
-        for pn in proper_nouns:
-            pn = pn.strip()
-            start_pos = phrase.find(pn)
-            # Skip if it's the very first word and only one word
-            if start_pos == 0 and " " not in pn and len(pn.split()) == 1:
-                # Could be sentence start — check if it looks like a question word
-                first_word = pn.split()[0].lower()
-                if first_word in ("what", "who", "where", "when", "how", "which", "the"):
-                    continue
+        for pn in all_proper:
+            pn = pn.strip().rstrip(".,?! ")
+            first_word = pn.split()[0] if pn.split() else pn
+            if first_word in skip_words:
+                continue
             if len(pn) > 1:
                 candidates.append(pn)
 
         if candidates:
-            # Prefer longer proper nouns (more specific)
-            best = max(candidates, key=len)
-            return best, "string_literal", 0.7
-
-        # Number-like strings that should stay as strings (e.g., "number 42", "player 3")
-        m = re.search(r'\b(?:number|no\.?|#)\s*(\d+)', phrase_lower)
-        if m:
-            return m.group(1), "string_literal", 0.8
+            # Prefer longer proper nouns (more specific), deduplicate
+            seen = set()
+            unique = []
+            for c in sorted(candidates, key=len, reverse=True):
+                if c not in seen:
+                    seen.add(c)
+                    unique.append(c)
+            best = unique[0]
+            return best, "string_literal", 0.75
 
         # Bare numbers at end of phrase for text columns
-        m = re.search(r'\b(\d+)\s*\??$', phrase_lower)
+        m = re.search(r'\b(\d[\d\-./]*\d*)\s*\??$', phrase_lower)
         if m:
-            return m.group(1), "string_literal", 0.5
+            return m.group(1), "string_literal", 0.6
+
+        # Last resort: try to extract value after "on the", "on", "for the"
+        for prep in [r"on the\s+", r"for the\s+", r"on\s+", r"for\s+", r"in\s+"]:
+            m = re.search(rf'\b{prep}(.+?)(?:\s+(?:club|team|school|division|league|season))?\s*\??\s*$', phrase_lower)
+            if m:
+                val = m.group(1).strip().rstrip("?., ")
+                if 2 < len(val) < len(phrase_lower) * 0.7:
+                    return val, "string_literal", 0.6
 
         return None, "unknown", 0.3
 
