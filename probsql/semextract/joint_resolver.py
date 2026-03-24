@@ -94,9 +94,10 @@ class JointResolver:
     """
 
     def __init__(self):
-        self.match_reason_probs = {}     # P(match_reason | value_classification)
-        self.disambig_probs = {}         # P(disambig_feature | correct_column)
+        self.match_reason_probs = {}
+        self.disambig_probs = {}
         self.span_detector = ValueSpanDetector()
+        self.entity_resolver = None  # entity-aware "attention" scoring
 
     def load_knowledge(self, knowledge_dir=None):
         kdir = Path(knowledge_dir) if knowledge_dir else KNOWLEDGE_DIR
@@ -106,6 +107,10 @@ class JointResolver:
                 data = json.load(f)
                 self.match_reason_probs = data.get("match_reason_probs", {})
                 self.disambig_probs = data.get("disambig_probs", {})
+        # Load entity resolver
+        from probsql.semextract.entity_resolver import EntityResolver
+        self.entity_resolver = EntityResolver()
+        self.entity_resolver.load_knowledge(str(kdir))
 
     def resolve(self, question, headers, n_conditions=1, select_col=None):
         """Find the best (value_span, column) pairs jointly.
@@ -144,10 +149,20 @@ class JointResolver:
                 h_lower = h.lower()
                 h_words = set(re.findall(r'\b\w+\b', h_lower))
 
-                # Score each possible match_reason
-                score, reason = self._score_pair(
+                # Score: match_reason + entity compatibility ("attention")
+                match_score, reason = self._score_pair(
                     span, value_class, h, h_words, q_lower
                 )
+
+                # Entity-aware "attention" — additive bonus when KB has knowledge
+                entity_bonus = 0.0
+                if self.entity_resolver:
+                    entity_type = self.entity_resolver.get_entity_type(span.text)
+                    if entity_type != "other":
+                        entity_score = self.entity_resolver.score_compatibility(span.text, h)
+                        entity_bonus = entity_score * 0.3  # boost, not replacement
+
+                score = match_score + entity_bonus
 
                 if score > best_score:
                     best_score = score
