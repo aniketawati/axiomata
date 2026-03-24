@@ -104,20 +104,27 @@ class ColumnResolver:
     def resolve(self, value, value_type, columns, question=None, exclude_columns=None):
         """Resolve a value to the best matching column using Bayesian chaining.
 
-        P(col) = P(col|type) × P(col|trigger) × P(col≠SELECT) × P(col|direct)
+        Empirical base rates from 500 LLM-labeled examples:
+          76% column_name_mentioned (proximity to value in question)
+          13% trigger_phrase_indicates (verb/prep pattern)
+           7% value_type_match (proper noun → person column)
+           4% other
+
+        P(col) = 0.76 * P(proximity) + 0.13 * P(trigger) + 0.07 * P(type) + 0.04 * base
 
         Args:
             value: The extracted value string
-            value_type: The classified type (person_name, institution, etc.)
+            value_type: The classified type
             columns: List of {"name": str, "type": str} dicts
-            question: The original question (for trigger matching and SELECT identification)
-            exclude_columns: Explicit columns to exclude
+            question: The original question text
+            exclude_columns: Columns to exclude (e.g., SELECT column)
 
         Returns:
             List of (column_name, confidence) tuples, sorted desc
         """
         exclude = set(c.lower() for c in (exclude_columns or []))
         q_lower = (question or "").lower()
+        val_lower = str(value).lower()
 
         scores = {}
         for col in columns:
@@ -128,33 +135,74 @@ class ColumnResolver:
             col_lower = col_name.lower()
             col_words = set(re.findall(r'\b\w+\b', col_lower))
 
-            # Factor 1: P(col | value_type) — type compatibility
-            f_type = self._score_type_compat(value_type, col_words)
+            # Factor 1 (base rate 0.76): Column name proximity to value
+            f_prox = self._score_proximity(col_name, val_lower, q_lower)
 
-            # Factor 2: P(col | direct_mention) — column name in question
-            f_direct = self._score_direct_mention(col_name, q_lower)
-
-            # Factor 3: P(col | trigger_phrase) — verb/prep patterns
+            # Factor 2 (base rate 0.13): Trigger phrase
             f_trigger = self._score_triggers(q_lower, col_words)
 
-            # Factor 4: P(col | col_type_compat) — SQL type vs value type
-            f_sqltype = self._score_sql_type(value_type, col.get("type", "text"))
+            # Factor 3 (base rate 0.07): Value type compatibility
+            f_type = self._score_type_compat(value_type, col_words)
 
-            # Combine: take the max of (type_compat, trigger) as primary signal,
-            # then boost with direct mention
-            primary = max(f_type, f_trigger)
-            if f_direct > 0.5:
-                # Direct mention of column name — strong but could be SELECT
-                primary = max(primary, f_direct * 0.5)
-
-            # Ensure minimum from sql type compatibility
-            score = max(primary, f_sqltype * 0.3)
+            # Weighted combination using empirical base rates
+            score = 0.76 * f_prox + 0.13 * f_trigger + 0.07 * f_type + 0.04 * 0.3
 
             scores[col_name] = score
 
-        # Sort and return
         result = sorted(scores.items(), key=lambda x: -x[1])
         return result
+
+    def _score_proximity(self, col_name, val_lower, q_lower):
+        """P(column | proximity to value in question).
+
+        The dominant signal (76% of cases). Checks if column name
+        or its significant words appear near the value in the question.
+        """
+        col_lower = col_name.lower()
+
+        # Find value position in question
+        val_pos = q_lower.find(val_lower)
+        if val_pos < 0:
+            # Try numeric match
+            for num in re.findall(r'\d+', val_lower):
+                pos = q_lower.find(num)
+                if pos >= 0:
+                    val_pos = pos
+                    break
+
+        # Get significant column words
+        col_words = re.findall(r'\b\w+\b', col_lower)
+        sig_words = [w for w in col_words if len(w) > 2 and w not in
+                     {"the", "and", "for", "from", "with", "of", "in", "at", "by", "to"}]
+
+        if not sig_words:
+            return 0.0
+
+        # Exact full column name in question
+        if col_lower in q_lower:
+            col_pos = q_lower.find(col_lower)
+            if val_pos >= 0:
+                distance = abs(col_pos - val_pos)
+                return 0.95 if distance < 50 else 0.7
+            return 0.6
+
+        # Significant words near value
+        best = 0.0
+        for w in sig_words:
+            w_pos = q_lower.find(w)
+            if w_pos >= 0:
+                if val_pos >= 0:
+                    distance = abs(w_pos - val_pos)
+                    if distance < 30:
+                        best = max(best, 0.8)
+                    elif distance < 60:
+                        best = max(best, 0.5)
+                    else:
+                        best = max(best, 0.3)
+                else:
+                    best = max(best, 0.3)
+
+        return best
 
     def identify_select_column(self, question, headers):
         """Identify which column the question is asking about (SELECT target).

@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Can you tell me the Nationality that has the Round smaller than 5, and the Player of bruce affleck?",
+    "where_column": "Round",
+    "where_value": "5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Round smaller than",
+    "column_keyword": "round",
+    "value_span": "5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the sum of Total, when Rank is 8, and when Bronze is less than 1?",
+    "where_column": "Rank",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "when Rank is",
+    "column_keyword": "rank",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the Place of england with a Score larger than 66?",
+    "where_column": "Country",
+    "where_value": "england",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "Place of england",
+    "column_keyword": "country",
+    "value_span": "england",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was Choong Tan Fook's opponent in 1999?",
+    "where_column": "Partner",
+    "where_value": "choong tan fook",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "Choong Tan Fook's opponent",
+    "column_keyword": "partner",
+    "value_span": "Choong Tan Fook",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which team replaced their manager with Serhat G\u00fcller?",
+    "where_column": "Replaced by",
+    "where_value": "Serhat G\u00fcller",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "replaced their manager with",
+    "column_keyword": "replaced",
+    "value_span": "Serhat G\u00fcller",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the studio host for the year 2006-07?",
+    "where_column": "Year",
+    "where_value": "2006-07",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "for the year",
+    "column_keyword": "year",
+    "value_span": "2006-07",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who lost on August 27?",
+    "where_column": "Date",
+    "where_value": "august 27",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "lost on August",
+    "column_keyword": "date",
+    "value_span": "August 27",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "when did no. 32 play for grizzles",
+    "where_column": "No.",
+    "where_value": "32",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "no. 32 play",
+    "column_keyword": "no",
+    "value_span": "32",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the lowest 7th runner-up of the country with a top 18/20/24/30 greater than 5, a 1st runner-up greater than 0, and an 11th runner-up less than 0?",
+    "where_column": "11th runner-up",
+    "where_value": "0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "11th runner-up less than",
+    "column_keyword": "runner-up",
+    "value_span": "0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the Country with Reteconomy as the Television service?",
+    "where_column": "Television service",
+    "where_value": "reteconomy",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as the Television service",
+    "column_keyword": "television",
+    "value_span": "Reteconomy",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "WHAT IS THE HOME TEAM, RESULT 99-112?",
+    "where_column": "Result",
+    "where_value": "99-112",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "RESULT 99-112",
+    "column_keyword": "result",
+    "value_span": "99-112",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the amount of laps for the vehicle manufactured by honda with a grid of 9?",
+    "where_column": "Manufacturer",
+    "where_value": "honda",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "manufactured by honda",
+    "column_keyword": "manufacturer",
+    "value_span": "honda",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Dependencia Sexual's film title that was used in its nomination?",
+    "where_column": "Original title",
+    "where_value": "dependencia sexual",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Dependencia Sexual's film title",
+    "column_keyword": "title",
+    "value_span": "Dependencia Sexual",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the production code for theresa rebeck",
+    "where_column": "Written by",
+    "where_value": "Theresa Rebeck",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "production code for theresa rebeck",
+    "column_keyword": "written",
+    "value_span": "theresa rebeck",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the percentage for first time 2011 when the first time in 2009 is 68%?",
+    "where_column": "2009 All",
+    "where_value": "68%",
+    "why_this_column": "process_of_elimination",
+    "trigger_phrase": "first time in 2009 is",
+    "column_keyword": "2009",
+    "value_span": "68%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What were the points in the year when his Wins were 0, his Podiums were 0, and he drove in 4 races?",
+    "where_column": "Podiums",
+    "where_value": "0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Podiums were 0",
+    "column_keyword": "podiums",
+    "value_span": "0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the average silver medals a team that has 1 gold and more than 5 bronze has?",
+    "where_column": "Bronze",
+    "where_value": "5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "more than 5 bronze",
+    "column_keyword": "bronze",
+    "value_span": "5 bronze",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest Kerry#, when Others# is \"106\", and when Bush# is less than 3,188?",
+    "where_column": "Bush#",
+    "where_value": "3,188",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Bush# is less than",
+    "column_keyword": "bush",
+    "value_span": "3,188",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the Rank of Rank Mountain Peak of crested butte pb?",
+    "where_column": "Mountain Peak",
+    "where_value": "crested butte pb",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Mountain Peak of crested butte",
+    "column_keyword": "mountain",
+    "value_span": "crested butte pb",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the score on december 10?",
+    "where_column": "Date",
+    "where_value": "december 10",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "on december 10",
+    "column_keyword": "date",
+    "value_span": "december 10",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the area when the Iga name is Ahoada East?",
+    "where_column": "LGA Name",
+    "where_value": "Ahoada East",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Iga name is Ahoada East",
+    "column_keyword": "name",
+    "value_span": "Ahoada East",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Player has a Pick # lower than 223 and a Defensive End Position?",
+    "where_column": "Pick #",
+    "where_value": "223",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Pick # lower than",
+    "column_keyword": "pick",
+    "value_span": "223",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Avg/G of 2.7 is what effic?",
+    "where_column": "Avg/G",
+    "where_value": "2.7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Avg/G of 2.7",
+    "column_keyword": "avg",
+    "value_span": "2.7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name who wrote 5ajn11",
+    "where_column": "Production code",
+    "where_value": "5AJN11",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "wrote 5ajn11",
+    "column_keyword": "production",
+    "value_span": "5ajn11",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the result for thomas s. mcmillan?",
+    "where_column": "Incumbent",
+    "where_value": "Thomas S. McMillan",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "result for thomas s. mcmillan",
+    "column_keyword": "incumbent",
+    "value_span": "thomas s. mcmillan",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

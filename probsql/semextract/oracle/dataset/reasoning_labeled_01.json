@@ -1,0 +1,252 @@
+[
+  {
+    "question": "The total goals have a FA Cup Apps larger than 1, and a Total Apps of 37, and a League Apps smaller than 30?, what is the total number?",
+    "where_column": "FA Cup Apps",
+    "where_value": "1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "FA Cup Apps larger than",
+    "column_keyword": "Apps",
+    "value_span": "1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What location did the event kotc: mortal sins take place?",
+    "where_column": "Event",
+    "where_value": "kotc: mortal sins",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "event kotc",
+    "column_keyword": "Event",
+    "value_span": "kotc: mortal sins",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was the candidate in 1791?",
+    "where_column": "First elected",
+    "where_value": "1791",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "candidate in 1791",
+    "column_keyword": "elected",
+    "value_span": "1791",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the publication date of the book that is narrated by Michael Maloney?",
+    "where_column": "Audiobook narrator",
+    "where_value": "Michael Maloney",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "narrated by",
+    "column_keyword": "narrator",
+    "value_span": "Michael Maloney",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Name the chassis for 1970 and tyres of d",
+    "where_column": "Year",
+    "where_value": "1970",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "for 1970",
+    "column_keyword": "Year",
+    "value_span": "1970",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What wa the date of the North Melbourne home game?",
+    "where_column": "Home team",
+    "where_value": "north melbourne",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "North Melbourne home game",
+    "column_keyword": "Home",
+    "value_span": "North Melbourne",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What's the sum of the total congregation in the manitoba province with less than 1,208,268 population?",
+    "where_column": "Population",
+    "where_value": "1,208,268",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "population?",
+    "column_keyword": "Population",
+    "value_span": "1,208,268",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many rewards are there for air date October 6, 2005?",
+    "where_column": "Air date",
+    "where_value": "October 6, 2005",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "air date",
+    "column_keyword": "date",
+    "value_span": "October 6, 2005",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the avg/g of Rhines, Chris, who has an effic greater than 73.95?",
+    "where_column": "Effic",
+    "where_value": "73.95",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "effic greater than",
+    "column_keyword": "Effic",
+    "value_span": "73.95",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If played is 22 and the tries against are 43, what are the points?",
+    "where_column": "Played",
+    "where_value": "22",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "played is",
+    "column_keyword": "Played",
+    "value_span": "22",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "What event has a $248,004 prize?",
+    "where_column": "Prize",
+    "where_value": "$248,004",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "$248,004 prize",
+    "column_keyword": "Prize",
+    "value_span": "$248,004",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the result for week 16?",
+    "where_column": "Week",
+    "where_value": "16",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for week",
+    "column_keyword": "Week",
+    "value_span": "16",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Jillian Evans highest number of seats?",
+    "where_column": "Leader",
+    "where_value": "jillian evans",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "Leader",
+    "value_span": "Jillian Evans",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "From which region is the album with release date of 19 June 2007?",
+    "where_column": "Date",
+    "where_value": "19 june 2007",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "release date of",
+    "column_keyword": "Date",
+    "value_span": "19 June 2007",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "How many snatches were there with a total of 267.5?",
+    "where_column": "Total",
+    "where_value": "267.5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "total of",
+    "column_keyword": "Total",
+    "value_span": "267.5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Tell me the highest matches for point 43 and final rank less than 7",
+    "where_column": "Final rank",
+    "where_value": "7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "final rank less than",
+    "column_keyword": "rank",
+    "value_span": "7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "If the highest score is 88, what are the 50s?",
+    "where_column": "Highest Score",
+    "where_value": "88",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "highest score is",
+    "column_keyword": "Score",
+    "value_span": "88",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What are the racing teams for which the average finish is 23.3?",
+    "where_column": "Avg. Finish",
+    "where_value": "23.3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "average finish is",
+    "column_keyword": "Finish",
+    "value_span": "23.3",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "What is the average played for entries with fewer than 65 goals against, points 1 of 19 2, and a position higher than 15?",
+    "where_column": "Points 1",
+    "where_value": "19 2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "points 1 of",
+    "column_keyword": "Points",
+    "value_span": "19 2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the highest swimsuit score of the contestant with an evening gown larger than 9.175 and an interview score less than 8.425?",
+    "where_column": "Evening Gown",
+    "where_value": "9.175",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "evening gown larger than",
+    "column_keyword": "Gown",
+    "value_span": "9.175",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the visitor team of game 19 with Los Angeles as the home team?",
+    "where_column": "Home",
+    "where_value": "los angeles",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "home team",
+    "column_keyword": "Home",
+    "value_span": "Los Angeles",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the Year which has a Label of atco records and a Type of album? Question 2",
+    "where_column": "Type",
+    "where_value": "album",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Type of",
+    "column_keyword": "Type",
+    "value_span": "album",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Tell me the outgoing manager for 22 november date of vacancy",
+    "where_column": "Date of vacancy",
+    "where_value": "22 november",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "date of vacancy",
+    "column_keyword": "vacancy",
+    "value_span": "22 november",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest total when the rank is 14 and the gold medals is larger than 0?",
+    "where_column": "Rank",
+    "where_value": "14",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "rank is",
+    "column_keyword": "Rank",
+    "value_span": "14",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How long is the XXX track used by the Minnesota Vikings?",
+    "where_column": "Artist(s)",
+    "where_value": "xxx",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "Artist",
+    "value_span": "XXX",
+    "select_reasoning": "context_implies"
+  }
+]

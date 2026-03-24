@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What is Davis Love III's total?",
+    "where_column": "Player",
+    "where_value": "davis love iii",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "Player",
+    "value_span": "Davis Love III",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Andy North with a To par greater than 8 Country?",
+    "where_column": "To par",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "To par greater than",
+    "column_keyword": "par",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "who had the high assists when the game was less than 13 and the score was w 75-66?",
+    "where_column": "Score",
+    "where_value": "w 75-66",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "score was w 75-66",
+    "column_keyword": "Score",
+    "value_span": "w 75-66",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who did the Tampa Bay Buccaneers play on december 23, 1995?",
+    "where_column": "Date",
+    "where_value": "december 23, 1995",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "play on december 23, 1995",
+    "column_keyword": "Date",
+    "value_span": "december 23, 1995",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the latest season number for a show with a production code of 816?",
+    "where_column": "Production code",
+    "where_value": "816",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "production code of 816",
+    "column_keyword": "code",
+    "value_span": "816",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many people were in the crowd when Essendon was the home team?",
+    "where_column": "Home team",
+    "where_value": "essendon",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Essendon was the home team",
+    "column_keyword": "Home",
+    "value_span": "Essendon",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest facility ID that's in Beckley?",
+    "where_column": "City of license",
+    "where_value": "beckley",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "that's in Beckley",
+    "column_keyword": "City",
+    "value_span": "Beckley",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the number of bronze medals when the total medals were 78 and there were less than 12 golds?",
+    "where_column": "Total",
+    "where_value": "78",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "total medals were 78",
+    "column_keyword": "Total",
+    "value_span": "78",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the ranking for the United States when the money is $200?",
+    "where_column": "Money ( $ )",
+    "where_value": "200",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "money is $200",
+    "column_keyword": "Money",
+    "value_span": "$200",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the 3rd runner-up of the country with more than 0 9th runner-up, an 11th runner-up of 0, and the 1st runner-up greater than 0?",
+    "where_column": "9th runner-up",
+    "where_value": "0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "more than 0 9th runner-up",
+    "column_keyword": "runner-up",
+    "value_span": "0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Provide me with the names of all the villages (German) that has 76.3% of Slovenes in 1951.",
+    "where_column": "Percent of Slovenes 1951",
+    "where_value": "76.3%",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Slovenes in 1951",
+    "column_keyword": "Slovenes",
+    "value_span": "76.3%",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the system called that is named ELKJS?",
+    "where_column": "Name",
+    "where_value": "elkjs",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "that is named ELKJS",
+    "column_keyword": "Name",
+    "value_span": "ELKJS",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which season did jackie stewart enter with entries less than 215?",
+    "where_column": "Driver",
+    "where_value": "jackie stewart",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "jackie stewart enter",
+    "column_keyword": "Driver",
+    "value_span": "jackie stewart",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What game number is the Washington team.",
+    "where_column": "Team",
+    "where_value": "Washington",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the Washington team",
+    "column_keyword": "Team",
+    "value_span": "Washington",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many goals did each team score in the first leg of the match between Liverpool and Steaua Bucure\u015fti?",
+    "where_column": "Opponent",
+    "where_value": "Steaua Bucure\u015fti",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "match between Liverpool and Steaua Bucure\u015fti",
+    "column_keyword": "Opponent",
+    "value_span": "Steaua Bucure\u015fti",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What away team played Footscray?",
+    "where_column": "Home team",
+    "where_value": "footscray",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "played Footscray",
+    "column_keyword": "Home",
+    "value_span": "Footscray",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total Rank that has a Municipality of Winnipeg, an Area (KM 2) that's larger than 464.01?",
+    "where_column": "Municipality",
+    "where_value": "winnipeg",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Municipality of Winnipeg",
+    "column_keyword": "Municipality",
+    "value_span": "Winnipeg",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which ride opened after the 2000 Peeking Heights?",
+    "where_column": "Opened in",
+    "where_value": "2000",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "opened after the 2000",
+    "column_keyword": "Opened",
+    "value_span": "2000",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What were the sets when Federer had 6 and a nadal of 13?",
+    "where_column": "Nadal",
+    "where_value": "13",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "nadal of 13",
+    "column_keyword": "Nadal",
+    "value_span": "13",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the most gold medals a team with less than 2 silvers, more than 7 total medals, and less than 8 bronze medals has?",
+    "where_column": "Total",
+    "where_value": "7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "more than 7 total medals",
+    "column_keyword": "Total",
+    "value_span": "7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the ranking for NSW open 66 racing boat. ",
+    "where_column": "State/country",
+    "where_value": "NSW",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "NSW open 66",
+    "column_keyword": "State",
+    "value_span": "NSW",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the country that has a music writer of Angelo Francesco Lavagnino, written in 1969?",
+    "where_column": "Music",
+    "where_value": "angelo francesco lavagnino",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "music writer of Angelo Francesco Lavagnino",
+    "column_keyword": "Music",
+    "value_span": "Angelo Francesco Lavagnino",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the highest field goals when there were more than 1 touchdown and 0 extra points?",
+    "where_column": "Touchdowns",
+    "where_value": "1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "more than 1 touchdown",
+    "column_keyword": "Touchdowns",
+    "value_span": "1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the college/junior team of player tyler myers, who has a pick less than 44?",
+    "where_column": "Pick",
+    "where_value": "44",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "pick less than 44",
+    "column_keyword": "Pick",
+    "value_span": "44",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What's the total against for opposing team scotland at twickenham, london venue with a status of five nations?",
+    "where_column": "Opposing Teams",
+    "where_value": "scotland",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "opposing team scotland",
+    "column_keyword": "Opposing",
+    "value_span": "scotland",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

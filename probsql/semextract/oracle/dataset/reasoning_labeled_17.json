@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What engine is used by Colin Bennett Racing with an 811 chassis?",
+    "where_column": "Chassis",
+    "where_value": "811",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "811 chassis",
+    "column_keyword": "Chassis",
+    "value_span": "811",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Game smaller than 34, and a December smaller than 14, and a Score of 10 - 6 has what opponent?",
+    "where_column": "Score",
+    "where_value": "10 - 6",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Score of 10 - 6",
+    "column_keyword": "Score",
+    "value_span": "10 - 6",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "In what Country is Haugesund?",
+    "where_column": "City",
+    "where_value": "haugesund",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "City",
+    "value_span": "Haugesund",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What team did Russ Wiechnik, on the centre position, come from?",
+    "where_column": "Position",
+    "where_value": "Centre",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "centre position",
+    "column_keyword": "Position",
+    "value_span": "centre",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "What is the Release Date for Model Number c7 1.8?",
+    "where_column": "Model Number",
+    "where_value": "c7 1.8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Model Number c7 1.8",
+    "column_keyword": "Model",
+    "value_span": "c7 1.8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the number of year for 6\u20133, 6\u20132 hard surface",
+    "where_column": "Score in the final",
+    "where_value": "6\u20133, 6\u20132",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "Score",
+    "value_span": "6\u20133, 6\u20132",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest number of wins where the losses are more than 12 and the draws are less than 0?",
+    "where_column": "Losses",
+    "where_value": "12",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "losses are more than",
+    "column_keyword": "Losses",
+    "value_span": "12",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many areas have a population of 703379?",
+    "where_column": "Population",
+    "where_value": "703379",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "population of 703379",
+    "column_keyword": "Population",
+    "value_span": "703379",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which team does David O'leary manage?",
+    "where_column": "Manager",
+    "where_value": "david o'leary",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "does David O'leary manage",
+    "column_keyword": "Manager",
+    "value_span": "David O'leary",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Brown's transfer window?",
+    "where_column": "Name",
+    "where_value": "brown",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "Name",
+    "value_span": "Brown",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "To what party does Ralph Jacobi belong?",
+    "where_column": "Member",
+    "where_value": "ralph jacobi",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "does Ralph Jacobi belong",
+    "column_keyword": "Member",
+    "value_span": "Ralph Jacobi",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many laps for a grid larger than 1 with a Time/Retired of halfshaft?",
+    "where_column": "Time/Retired",
+    "where_value": "halfshaft",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Time/Retired of halfshaft",
+    "column_keyword": "Retired",
+    "value_span": "halfshaft",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What score has charlton athletic as the away team?",
+    "where_column": "Away team",
+    "where_value": "charlton athletic",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "charlton athletic as the away team",
+    "column_keyword": "Away",
+    "value_span": "charlton athletic",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the main span feet from opening year of 1936 in the United States with a rank greater than 47 and 421 main span metres?",
+    "where_column": "Country",
+    "where_value": "united states",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "in the United States",
+    "column_keyword": "Country",
+    "value_span": "United States",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What are the largest cuts made when the events are less than 21?",
+    "where_column": "Events",
+    "where_value": "21",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "events are less than",
+    "column_keyword": "Events",
+    "value_span": "21",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Tell me the lowest kazakhstan for kyrghizstan of 4.62 and belarus less than 2.46",
+    "where_column": "Kyrghizstan",
+    "where_value": "4.62",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "kyrghizstan of 4.62",
+    "column_keyword": "Kyrghizstan",
+    "value_span": "4.62",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Height, when Rank is less than 20, when Floors is greater than 9, when Built is 2005, and when Name is The Edge (C)?",
+    "where_column": "Name",
+    "where_value": "the edge (c)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Name is The Edge (C)",
+    "column_keyword": "Name",
+    "value_span": "The Edge (C)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the first episode in the season directed by nelson mccormick?",
+    "where_column": "Directed by",
+    "where_value": "Nelson McCormick",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "directed by nelson mccormick",
+    "column_keyword": "Directed",
+    "value_span": "nelson mccormick",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "How many total cuts were made in events with more than 0 wins and exactly 0 top-5s?",
+    "where_column": "Top-5",
+    "where_value": "0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "exactly 0 top-5s",
+    "column_keyword": "Top-5",
+    "value_span": "0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the most pos for west bromwich albion club",
+    "where_column": "Club",
+    "where_value": "West Bromwich Albion",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "west bromwich albion club",
+    "column_keyword": "Club",
+    "value_span": "west bromwich albion",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "List all candidates in the democratic party where the election had the incumbent Frank Chelf running.",
+    "where_column": "Party",
+    "where_value": "Democratic",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "democratic party",
+    "column_keyword": "Party",
+    "value_span": "democratic",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which city includes the Target Center arena?",
+    "where_column": "Home Arena",
+    "where_value": "target center",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "includes the Target Center arena",
+    "column_keyword": "Arena",
+    "value_span": "Target Center",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which driver won the Phillip Island Grand Prix Circuit?",
+    "where_column": "Circuit",
+    "where_value": "phillip island grand prix circuit",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "won the Phillip Island Grand Prix Circuit",
+    "column_keyword": "Circuit",
+    "value_span": "Phillip Island Grand Prix Circuit",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What rank did the chassis reynard 94i have in 1996?",
+    "where_column": "Year",
+    "where_value": "1996",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "have in 1996",
+    "column_keyword": "Year",
+    "value_span": "1996",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What shareholder has 2.55 percent of votes? ",
+    "where_column": "Percent of votes",
+    "where_value": "2.55",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "percent of votes",
+    "column_keyword": "votes",
+    "value_span": "2.55",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

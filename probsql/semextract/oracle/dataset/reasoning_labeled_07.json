@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What is the highest Area (KM 2) for the Province of Ontario, that has the Status of Town, a Municipality of Minto, and a Rank that's smaller than 84?",
+    "where_column": "Rank",
+    "where_value": "84",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Rank that's smaller than",
+    "column_keyword": "rank",
+    "value_span": "84",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What city is the school that had less than 17 titles in boys basketball with the last title being after 2005?",
+    "where_column": "# of Titles",
+    "where_value": "17",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "less than 17 titles",
+    "column_keyword": "titles",
+    "value_span": "17 titles",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who ran the fastest lap in the team that competed in Zolder, in which Ferrari was the Constructor?",
+    "where_column": "Location",
+    "where_value": "zolder",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "competed in Zolder",
+    "column_keyword": "location",
+    "value_span": "Zolder",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the result for passing in the country driving challenge?",
+    "where_column": "Challenge",
+    "where_value": "country driving",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "country driving challenge",
+    "column_keyword": "challenge",
+    "value_span": "country driving",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When did Manchester United play against Bristol City with an H/A of A?",
+    "where_column": "H / A",
+    "where_value": "a",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "H/A of A",
+    "column_keyword": "h/a",
+    "value_span": "A",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What was eliminated on the air date of November 3, 2005?",
+    "where_column": "Air date",
+    "where_value": "November 3, 2005",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "air date of November",
+    "column_keyword": "date",
+    "value_span": "November 3, 2005",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what score has the opponent of tigers and a record of 78-64?",
+    "where_column": "Opponent",
+    "where_value": "tigers",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "opponent of tigers",
+    "column_keyword": "opponent",
+    "value_span": "tigers",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the sum of the year for 5 february?",
+    "where_column": "Date",
+    "where_value": "5 february",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "for 5 february",
+    "column_keyword": "date",
+    "value_span": "5 february",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Thirds (Under 17's) have a Reserve of barnawartha?",
+    "where_column": "Reserves",
+    "where_value": "barnawartha",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Reserve of barnawartha",
+    "column_keyword": "reserves",
+    "value_span": "barnawartha",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the 2011 when 2010 is 2r",
+    "where_column": "2010",
+    "where_value": "2r",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "when 2010 is",
+    "column_keyword": "2010",
+    "value_span": "2r",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What team has tony parker (10) as the high assists, kurt thomas (12) as the high rebounds?",
+    "where_column": "High assists",
+    "where_value": "tony parker (10)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as the high assists",
+    "column_keyword": "assists",
+    "value_span": "tony parker (10)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Total has a County of kilkenny, and a Tally of 1\u20134, and a Rank larger than 10?",
+    "where_column": "Tally",
+    "where_value": "1\u20134",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Tally of 1\u20134",
+    "column_keyword": "tally",
+    "value_span": "1\u20134",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Case type has a Base diameter of 13.03 (.513), and a Case length of 63.5 (2.5)?",
+    "where_column": "Base diameter",
+    "where_value": "13.03 (.513)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Base diameter of 13.03",
+    "column_keyword": "diameter",
+    "value_span": "13.03 (.513)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who had pole position in round 7?",
+    "where_column": "Round",
+    "where_value": "7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in round 7",
+    "column_keyword": "round",
+    "value_span": "round 7",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "what team has a drive name emmanuel de graffenried and a position larger than 1 as well as the date of 9/1953?",
+    "where_column": "Date",
+    "where_value": "9/1953",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the date of 9/1953",
+    "column_keyword": "date",
+    "value_span": "9/1953",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When was the event in the City of Baden?",
+    "where_column": "City",
+    "where_value": "baden",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "City of Baden",
+    "column_keyword": "city",
+    "value_span": "Baden",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the name of the plaza where the told for heavy vehicles with 2 axles is r20.50?",
+    "where_column": "Heavy vehicle (2 axles)",
+    "where_value": "R20.50",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "heavy vehicles with 2 axles",
+    "column_keyword": "heavy",
+    "value_span": "r20.50",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Bronze, when Silver is 2, and when Nation is Italy?",
+    "where_column": "Silver",
+    "where_value": "2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "when Silver is",
+    "column_keyword": "silver",
+    "value_span": "2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What Mountain Pass has an Elevation of 10,001 feet 3048 m?",
+    "where_column": "Elevation",
+    "where_value": "10,001 feet 3048 m",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Elevation of 10,001 feet",
+    "column_keyword": "elevation",
+    "value_span": "10,001 feet 3048 m",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which female artist has an album named elephant?",
+    "where_column": "Album",
+    "where_value": "elephant",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "album named elephant",
+    "column_keyword": "album",
+    "value_span": "elephant",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which US air date had 4.4 million viewers?",
+    "where_column": "Viewers (millions)",
+    "where_value": "4.4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "million viewers",
+    "column_keyword": "viewers",
+    "value_span": "4.4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the constituency when the swing to gain is less than 4.16, the winning party 2007 is snp and ld's place 2007 is 2nd?",
+    "where_column": "Winning party 2007",
+    "where_value": "snp",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "winning party 2007 is snp",
+    "column_keyword": "winning",
+    "value_span": "snp",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total number of losses with less than 73 goals for, less than 11 wins, more than 24 points, and a position greater than 15?",
+    "where_column": "Points",
+    "where_value": "24",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "more than 24 points",
+    "column_keyword": "points",
+    "value_span": "24 points",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What record has w as the result, with January 2 as the date?",
+    "where_column": "Result",
+    "where_value": "w",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "w as the result",
+    "column_keyword": "result",
+    "value_span": "w",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Parent has height smaller than 756 and a Prom of 39?",
+    "where_column": "Height (m)",
+    "where_value": "756",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "height smaller than",
+    "column_keyword": "height",
+    "value_span": "756",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

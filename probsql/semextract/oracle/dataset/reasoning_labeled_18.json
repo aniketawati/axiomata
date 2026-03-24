@@ -1,0 +1,252 @@
+[
+  {
+    "question": "If 4 went to iran and the amount that survived was less than 12.0 how many were there in 1990?",
+    "where_column": "to Iran",
+    "where_value": "4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "4 went to iran",
+    "column_keyword": "Iran",
+    "value_span": "4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the ICAO of Douala city?",
+    "where_column": "City",
+    "where_value": "douala",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Douala city",
+    "column_keyword": "City",
+    "value_span": "Douala",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total sum of 50m splits for josefin lillhage in lanes above 8?",
+    "where_column": "Lane",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in lanes above 8",
+    "column_keyword": "Lane",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest Lane, when Country is France, and when React is less than 0.14100000000000001?",
+    "where_column": "Country",
+    "where_value": "france",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Country is France",
+    "column_keyword": "Country",
+    "value_span": "France",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is x when faisaly is 0-0?",
+    "where_column": "Faisaly",
+    "where_value": "0-0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "faisaly is 0-0",
+    "column_keyword": "Faisaly",
+    "value_span": "0-0",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "What was the score for south melbourne at home?",
+    "where_column": "Home team",
+    "where_value": "south melbourne",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "south melbourne at home",
+    "column_keyword": "Home",
+    "value_span": "south melbourne",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many points against did the club with a losing bonus of 3 and 84 tries have?",
+    "where_column": "Losing bonus",
+    "where_value": "3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "losing bonus of 3",
+    "column_keyword": "bonus",
+    "value_span": "3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the 1987 results when the results of 1989 is 3R, and the 1986 results is F?",
+    "where_column": "1986",
+    "where_value": "f",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "1986 results is F",
+    "column_keyword": "1986",
+    "value_span": "F",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Year is the highest one that has a Bronze of south korea, and a Silver of philippines?",
+    "where_column": "Silver",
+    "where_value": "philippines",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Silver of philippines",
+    "column_keyword": "Silver",
+    "value_span": "philippines",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who replaced the outgoing manager H\u00fcsn\u00fc \u00d6zkara? ",
+    "where_column": "Outgoing manager",
+    "where_value": "H\u00fcsn\u00fc \u00d6zkara",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "outgoing manager H\u00fcsn\u00fc \u00d6zkara",
+    "column_keyword": "manager",
+    "value_span": "H\u00fcsn\u00fc \u00d6zkara",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What number has an acquisition via the Rookie Draft, and is part of a School/club team at Cal State Fullerton?",
+    "where_column": "Acquisition via",
+    "where_value": "rookie draft",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "acquisition via the Rookie Draft",
+    "column_keyword": "Acquisition",
+    "value_span": "Rookie Draft",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What event has a 122.5 snatch rate?",
+    "where_column": "Snatch",
+    "where_value": "122.5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "122.5 snatch rate",
+    "column_keyword": "Snatch",
+    "value_span": "122.5",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the FCC info for the radio station in West Lafayette, Indiana?",
+    "where_column": "State",
+    "where_value": "indiana",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "in West Lafayette, Indiana",
+    "column_keyword": "State",
+    "value_span": "Indiana",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Lost is the highest one that has a Drawn smaller than 4, and a Played smaller than 9?",
+    "where_column": "Played",
+    "where_value": "9",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Played smaller than 9",
+    "column_keyword": "Played",
+    "value_span": "9",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which birthplace's height in inches was more than 192 when the position was d and the birthday was April 5, 1983?",
+    "where_column": "Birthdate",
+    "where_value": "april 5, 1983",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "birthday was April 5, 1983",
+    "column_keyword": "Birthdate",
+    "value_span": "April 5, 1983",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the inclination when the alt name is OPS-1584?",
+    "where_column": "Alt name",
+    "where_value": "OPS-1584",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "alt name is OPS-1584",
+    "column_keyword": "name",
+    "value_span": "OPS-1584",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "On channel 32, when the power is 32 kW horizontal, what is the modulation?",
+    "where_column": "Power",
+    "where_value": "32 kw horizontal",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "power is 32 kW horizontal",
+    "column_keyword": "Power",
+    "value_span": "32 kW horizontal",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the height for the player born 1989 and height 2.11",
+    "where_column": "Height (m)",
+    "where_value": "2.11",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "height 2.11",
+    "column_keyword": "Height",
+    "value_span": "2.11",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "WHAT IS THE DATE WITH BOSTON ROAD TEAM AND 126-105 RESULT?",
+    "where_column": "Result",
+    "where_value": "126-105",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "126-105 RESULT",
+    "column_keyword": "Result",
+    "value_span": "126-105",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many different outcomes did the final with Paul McNamee as a partner have?",
+    "where_column": "Partner",
+    "where_value": "Paul McNamee",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Paul McNamee as a partner",
+    "column_keyword": "Partner",
+    "value_span": "Paul McNamee",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the date when the site is memorial stadium \u2022 minneapolis, mn, and the Attendance is 53,192?",
+    "where_column": "Attendance",
+    "where_value": "53,192",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Attendance is 53,192",
+    "column_keyword": "Attendance",
+    "value_span": "53,192",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the artist of the Seattle Seahawks track?",
+    "where_column": "Team(s)",
+    "where_value": "seattle seahawks",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "Seattle Seahawks track",
+    "column_keyword": "Team",
+    "value_span": "Seattle Seahawks",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "How many NBA years did the player from the United States who was previously on the los angeles lakers have?",
+    "where_column": "Nationality",
+    "where_value": "united states",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "from the United States",
+    "column_keyword": "Nationality",
+    "value_span": "United States",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What's the score for a game over 56 with a record of 29-24-7 with a lundqvist decision?",
+    "where_column": "Game",
+    "where_value": "56",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "game over 56",
+    "column_keyword": "Game",
+    "value_span": "56",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is heaton chapel's capacity?",
+    "where_column": "Locality",
+    "where_value": "heaton chapel",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "Locality",
+    "value_span": "heaton chapel",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

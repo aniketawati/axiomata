@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Which substrate has an OMIM of 176000?",
+    "where_column": "OMIM",
+    "where_value": "176000",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "OMIM of 176000",
+    "column_keyword": "omim",
+    "value_span": "176000",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Position in Table, when Replaced by is \"Jos\u00e9 Pekerman\"?",
+    "where_column": "Replaced by",
+    "where_value": "jos\u00e9 pekerman",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Replaced by is",
+    "column_keyword": "replaced",
+    "value_span": "Jos\u00e9 Pekerman",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who had the most high assists with a record of 32-19?",
+    "where_column": "Record",
+    "where_value": "32-19",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "record of 32-19",
+    "column_keyword": "record",
+    "value_span": "32-19",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Name the total number of chapter for chinese of \u91cb\u5bae",
+    "where_column": "Chinese",
+    "where_value": "\u91cb\u5bae",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "chinese of \u91cb\u5bae",
+    "column_keyword": "chinese",
+    "value_span": "\u91cb\u5bae",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Can you tell me the lowest Pts/game that has the Name of philippa tuttiett, and the Points larger then 6?",
+    "where_column": "Name",
+    "where_value": "philippa tuttiett",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Name of philippa tuttiett",
+    "column_keyword": "name",
+    "value_span": "philippa tuttiett",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the ground for away team essendon?",
+    "where_column": "Away team",
+    "where_value": "essendon",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "away team essendon",
+    "column_keyword": "away",
+    "value_span": "essendon",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the date of injury when the injury is sustained posterior thigh strains in his left leg?",
+    "where_column": "Injury",
+    "where_value": "Sustained posterior thigh strains in his left leg",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "when the injury is",
+    "column_keyword": "injury",
+    "value_span": "sustained posterior thigh strains in his left leg",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What player has E as the to par, and The United States as the country?",
+    "where_column": "Country",
+    "where_value": "united states",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as the country",
+    "column_keyword": "country",
+    "value_span": "The United States",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was the opponent when the fight had a time of 0:10?",
+    "where_column": "Time",
+    "where_value": "0:10",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "had a time of",
+    "column_keyword": "time",
+    "value_span": "0:10",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the reign for super kendo who held it for 35 days?",
+    "where_column": "Wrestler",
+    "where_value": "super kendo",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "reign for super kendo",
+    "column_keyword": "wrestler",
+    "value_span": "super kendo",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What were the lowest laps of Luigi Musso driving a Ferrari with a Grid larger than 2?",
+    "where_column": "Constructor",
+    "where_value": "ferrari",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "driving a Ferrari",
+    "column_keyword": "constructor",
+    "value_span": "Ferrari",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the international use of the 1 \u0435\u0434\u0438\u043d\u0438\u0446\u0430 flag?",
+    "where_column": "Flag Name",
+    "where_value": "1 \u0435\u0434\u0438\u043d\u0438\u0446\u0430",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "of the 1 \u0435\u0434\u0438\u043d\u0438\u0446\u0430 flag",
+    "column_keyword": "flag",
+    "value_span": "1 \u0435\u0434\u0438\u043d\u0438\u0446\u0430",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the original title that was directed by Alain Resnais in France before 1986?",
+    "where_column": "Director(s)",
+    "where_value": "alain resnais",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "directed by Alain Resnais",
+    "column_keyword": "director",
+    "value_span": "Alain Resnais",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Little League World Series took place in Parsippany?",
+    "where_column": "City",
+    "where_value": "parsippany",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "took place in",
+    "column_keyword": "city",
+    "value_span": "Parsippany",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Score has a Record of 0-1?",
+    "where_column": "Record",
+    "where_value": "0-1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Record of 0-1",
+    "column_keyword": "record",
+    "value_span": "0-1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the Score of the Chicago Black Hawks Home game with the Visiting Vancouver Canucks on November 17?",
+    "where_column": "Date",
+    "where_value": "november 17",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "on November 17",
+    "column_keyword": "date",
+    "value_span": "November 17",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What were the lowest laps of Luigi Musso driving a Ferrari with a Grid larger than 2?",
+    "where_column": "Grid",
+    "where_value": "2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Grid larger than",
+    "column_keyword": "grid",
+    "value_span": "2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What position is the player who went to Regina? ",
+    "where_column": "College",
+    "where_value": "Regina",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "went to Regina",
+    "column_keyword": "college",
+    "value_span": "Regina",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many games are shown for the game where andre iguodala (9) had the high rebounds?",
+    "where_column": "High rebounds",
+    "where_value": "Andre Iguodala (9)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "had the high rebounds",
+    "column_keyword": "rebounds",
+    "value_span": "andre iguodala (9)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When the away team scored 16.21 (117), what was the home teams score?",
+    "where_column": "Away team score",
+    "where_value": "16.21 (117)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "away team scored",
+    "column_keyword": "away",
+    "value_span": "16.21 (117)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what number of people went to the tiger stadium",
+    "where_column": "Venue",
+    "where_value": "tiger stadium",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "went to the tiger stadium",
+    "column_keyword": "venue",
+    "value_span": "tiger stadium",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "what is the Sydney that has Adelaide, Gold Coast, Melbourne, and Auckland are all yes?",
+    "where_column": "Gold Coast",
+    "where_value": "yes",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Gold Coast, Melbourne",
+    "column_keyword": "gold",
+    "value_span": "yes",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What engine is used by Colin Bennett Racing with an 811 chassis?",
+    "where_column": "Entrant",
+    "where_value": "colin bennett racing",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "used by Colin Bennett Racing",
+    "column_keyword": "entrant",
+    "value_span": "Colin Bennett Racing",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who constructed the car that Derek Warwick raced in with a TG181 chassis?",
+    "where_column": "Chassis",
+    "where_value": "tg181",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "with a TG181 chassis",
+    "column_keyword": "chassis",
+    "value_span": "TG181",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Which Avg/G has a Name of josh freeman, and a Loss smaller than 134?",
+    "where_column": "Name",
+    "where_value": "josh freeman",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Name of josh freeman",
+    "column_keyword": "name",
+    "value_span": "josh freeman",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

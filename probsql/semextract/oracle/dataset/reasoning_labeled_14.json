@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What's the Termination of Mission listed that has a Presentation of Credentials for August 29, 1859?",
+    "where_column": "Presentation of Credentials",
+    "where_value": "august 29, 1859",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Presentation of Credentials for",
+    "column_keyword": "credentials",
+    "value_span": "August 29, 1859",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the score on May 3?",
+    "where_column": "Date",
+    "where_value": "may 3",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "on May 3",
+    "column_keyword": "date",
+    "value_span": "May 3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "on august 16, 1963, what is the velocity?",
+    "where_column": "Date",
+    "where_value": "august 16, 1963",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "on august 16, 1963",
+    "column_keyword": "date",
+    "value_span": "august 16, 1963",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What season had Marcio Lassiter?",
+    "where_column": "Name",
+    "where_value": "marcio lassiter",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "had Marcio Lassiter",
+    "column_keyword": "name",
+    "value_span": "Marcio Lassiter",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was North Melbourne's score as the home team?",
+    "where_column": "Home team",
+    "where_value": "north melbourne",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as the home team",
+    "column_keyword": "home",
+    "value_span": "North Melbourne",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the acceleration 0-100km/h that was produced in 2002-2006?",
+    "where_column": "Production",
+    "where_value": "2002-2006",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "was produced in",
+    "column_keyword": "production",
+    "value_span": "2002-2006",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which college has a pick less than 25, an overall greater than 159, a round less than 10, and wr as the position?",
+    "where_column": "Position",
+    "where_value": "wr",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as the position",
+    "column_keyword": "position",
+    "value_span": "wr",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest attendance that has a week less than 4, and w 13-7 as the result?",
+    "where_column": "Result",
+    "where_value": "w 13-7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as the result",
+    "column_keyword": "result",
+    "value_span": "w 13-7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "College of lsu has how many rounds?",
+    "where_column": "College",
+    "where_value": "lsu",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "College of lsu",
+    "column_keyword": "college",
+    "value_span": "lsu",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Achievement of m (ft), and a Type of mi-10r, and a Pilot of v.p. koloshenko, and a Date of 28 may 1965 had what record description?",
+    "where_column": "Date",
+    "where_value": "28 may 1965",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "a Date of",
+    "column_keyword": "date",
+    "value_span": "28 may 1965",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the status of the torre reforma building that is over 44 stories in mexico city?",
+    "where_column": "City",
+    "where_value": "mexico city",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "in mexico city",
+    "column_keyword": "city",
+    "value_span": "mexico city",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the result at the Berlin International Film Festival in a year greater than 1987?",
+    "where_column": "Year",
+    "where_value": "1987",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in a year greater than",
+    "column_keyword": "year",
+    "value_span": "1987",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which director had not nominated as a result, and had Bayan Ko: Kapit Sa Patalim as an original title?",
+    "where_column": "Original title",
+    "where_value": "bayan ko: kapit sa patalim",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as an original title",
+    "column_keyword": "title",
+    "value_span": "Bayan Ko: Kapit Sa Patalim",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Which Tournament has an Outcome of winner on 19 october 2008?",
+    "where_column": "Outcome",
+    "where_value": "winner",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "an Outcome of",
+    "column_keyword": "outcome",
+    "value_span": "winner",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Year(s) Won, when Total is less than 285?",
+    "where_column": "Total",
+    "where_value": "285",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Total is less than",
+    "column_keyword": "total",
+    "value_span": "285",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the mountain range when the state is colorado, rank is higher than 90 and mountain peak is whetstone mountain?",
+    "where_column": "Rank",
+    "where_value": "90",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "rank is higher than",
+    "column_keyword": "rank",
+    "value_span": "90",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How big is the area that has a population density of 113 and a population larger than 184,531?",
+    "where_column": "Population",
+    "where_value": "184,531",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "population larger than",
+    "column_keyword": "population",
+    "value_span": "184,531",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest code number for the remainder of the municipality that has an area bigger than 15.34 squared kilometers, a population greater than 762 and a language of xhosa spoken?",
+    "where_column": "Population",
+    "where_value": "762",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "population greater than",
+    "column_keyword": "population",
+    "value_span": "762",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Bronze is the lowest one that has a Rank of 3, and a Silver smaller than 2?",
+    "where_column": "Silver",
+    "where_value": "2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Silver smaller than",
+    "column_keyword": "silver",
+    "value_span": "2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the smallest number of goals against when 8 games were lost, and the goals for are 60?",
+    "where_column": "Lost",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "games were lost",
+    "column_keyword": "lost",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the full amount of Total for Austria when the number of gold is less than 0?",
+    "where_column": "Gold",
+    "where_value": "0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "number of gold is",
+    "column_keyword": "gold",
+    "value_span": "0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Bronze has a Rank of 3, and a Silver larger than 0?",
+    "where_column": "Rank",
+    "where_value": "3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "a Rank of",
+    "column_keyword": "rank",
+    "value_span": "3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the week 1 with candice hunnicutt in week 3?",
+    "where_column": "Week 3",
+    "where_value": "candice hunnicutt",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "hunnicutt in week 3",
+    "column_keyword": "week",
+    "value_span": "candice hunnicutt",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total number of bronzes associated with 1 silver, ranks under 6 and under 6 golds?",
+    "where_column": "Gold",
+    "where_value": "6",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "under 6 golds",
+    "column_keyword": "gold",
+    "value_span": "6",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which award-winning film has a closing date of September 4?",
+    "where_column": "Date (Closing)",
+    "where_value": "September 4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "closing date of",
+    "column_keyword": "closing",
+    "value_span": "September 4",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

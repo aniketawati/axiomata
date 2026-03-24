@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Which region is associated with the catalog value of 512335?",
+    "where_column": "Catalog",
+    "where_value": "512335",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "catalog value of",
+    "column_keyword": "catalog",
+    "value_span": "512335",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Finish, when Year(s) Won is \"1991\"?",
+    "where_column": "Year(s) won",
+    "where_value": "1991",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Year(s) Won is",
+    "column_keyword": "year",
+    "value_span": "1991",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the average silver with more than 0 gold, a Rank of 1, and a Total smaller than 30?",
+    "where_column": "Total",
+    "where_value": "30",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Total smaller than",
+    "column_keyword": "total",
+    "value_span": "30",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the sum of drawn that has a played more than 12?",
+    "where_column": "Played",
+    "where_value": "12",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "played more than",
+    "column_keyword": "played",
+    "value_span": "12",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What were the goal conceded that had a lost greater than 8 and more than 17 points?",
+    "where_column": "Lost",
+    "where_value": "8",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "a lost greater than",
+    "column_keyword": "lost",
+    "value_span": "8",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who is the away side when north melbourne is at home and has a score of 9.10 (64)?",
+    "where_column": "Home team score",
+    "where_value": "9.10 (64)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "a score of",
+    "column_keyword": "score",
+    "value_span": "9.10 (64)",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Which title has xbox as the platform with a year prior to 2006?",
+    "where_column": "Year",
+    "where_value": "2006",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "year prior to",
+    "column_keyword": "year",
+    "value_span": "2006",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the nationality of the player from the University of Michigan (NCAA)?",
+    "where_column": "College/junior/club team",
+    "where_value": "University of Michigan (NCAA)",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "player from the University",
+    "column_keyword": "college",
+    "value_span": "University of Michigan (NCAA)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the hawthorn score at the year 2000?",
+    "where_column": "Year",
+    "where_value": "2000",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "at the year",
+    "column_keyword": "year",
+    "value_span": "2000",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Streak, when Heat Points is \"101\", and when Game is \"16\"?",
+    "where_column": "Game",
+    "where_value": "16",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "when Game is",
+    "column_keyword": "game",
+    "value_span": "16",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the country of player ed sneed with a to par of +3?",
+    "where_column": "To par",
+    "where_value": "+3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "to par of",
+    "column_keyword": "par",
+    "value_span": "+3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many episodes did the actor David Faustino appear in?",
+    "where_column": "Actor",
+    "where_value": "david faustino",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the actor David",
+    "column_keyword": "actor",
+    "value_span": "David Faustino",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the value scored when there were 19 points for the team 3 de Febrero?",
+    "where_column": "Points",
+    "where_value": "19",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "19 points for",
+    "column_keyword": "points",
+    "value_span": "19",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Votes (%), when First Broadcast is \"13 March 1998\"?",
+    "where_column": "First broadcast",
+    "where_value": "13 march 1998",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "First Broadcast is",
+    "column_keyword": "broadcast",
+    "value_span": "13 March 1998",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the Away with a Ground that is humber college north?",
+    "where_column": "Ground",
+    "where_value": "humber college north",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "a Ground that is",
+    "column_keyword": "ground",
+    "value_span": "humber college north",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What name has 118 as the apps?",
+    "where_column": "Apps",
+    "where_value": "118",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "as the apps",
+    "column_keyword": "apps",
+    "value_span": "118",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total Decile that has a state authority, fairlie area and roll smarter than 206?",
+    "where_column": "Roll",
+    "where_value": "206",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "roll smarter than",
+    "column_keyword": "roll",
+    "value_span": "206",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the district for the party federalist and the candidates are william craik (f) 51.0% benjamin edwards 49.0%?",
+    "where_column": "Party",
+    "where_value": "Federalist",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "the party federalist",
+    "column_keyword": "party",
+    "value_span": "federalist",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the total number of swimsuits for evening gowns less than 8.21 and average of 8.453 with interview less than 9.09",
+    "where_column": "Interview",
+    "where_value": "9.09",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "interview less than",
+    "column_keyword": "interview",
+    "value_span": "9.09",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the highest November that has a game less than 12, and @ detroit red wings as the opponent?",
+    "where_column": "Game",
+    "where_value": "12",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "game less than",
+    "column_keyword": "game",
+    "value_span": "12",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the original air date when the u.s. viewers in millions was 5.39?",
+    "where_column": "U.S. viewers (million)",
+    "where_value": "5.39",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "viewers in millions was",
+    "column_keyword": "viewers",
+    "value_span": "5.39",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the average total of the country with a 4th runner-up of 0 and a Nuestra Bellaza Latina less than 0?",
+    "where_column": "Nuestra Belleza Latina",
+    "where_value": "0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Nuestra Bellaza Latina less than",
+    "column_keyword": "latina",
+    "value_span": "0",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the result of the Oregon 5 District incumbent who was first elected in 1996?",
+    "where_column": "District",
+    "where_value": "oregon 5",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Oregon 5 District",
+    "column_keyword": "district",
+    "value_span": "Oregon 5 District",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what team has a drive name emmanuel de graffenried and a position larger than 1 as well as the date of 9/1953?",
+    "where_column": "Driver",
+    "where_value": "emmanuel de graffenried",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "drive name emmanuel",
+    "column_keyword": "driver",
+    "value_span": "emmanuel de graffenried",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "The qual of totals took place during what year?",
+    "where_column": "Qual",
+    "where_value": "totals",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "The qual of",
+    "column_keyword": "qual",
+    "value_span": "totals",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

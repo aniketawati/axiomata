@@ -97,7 +97,7 @@ class ProbSQLEngine:
         # and better discrimination before it can be the primary path.
         if self._semextract_loaded:
             sem_result = self._try_semextract(english, schema, debug)
-            if sem_result and sem_result.confidence > 0.95:
+            if sem_result and sem_result.confidence > 0.6:
                 return sem_result
 
         # Step 1: Parse compound structure

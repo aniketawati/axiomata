@@ -1,0 +1,355 @@
+[
+  {
+    "question": "Which average Played has a Drawn smaller than 1, and Points larger than 4?",
+    "headers": [
+      "Position",
+      "Team",
+      "Points",
+      "Played",
+      "Drawn",
+      "Lost",
+      "Against",
+      "Difference"
+    ],
+    "where_column": "Points",
+    "where_value": "4",
+    "select_column": "Played"
+  },
+  {
+    "question": "What is the average Gold when the rank is less than 3 and the bronze is less than 1?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Bronze",
+    "where_value": "1",
+    "select_column": "Gold"
+  },
+  {
+    "question": "What is the lowest First Year, when Model is \"Quattroporte (2.8)\"?",
+    "headers": [
+      "Model",
+      "First Year",
+      "Distribution",
+      "Engine",
+      "Displacement cc",
+      "Power hp (kW)"
+    ],
+    "where_column": "Model",
+    "where_value": "quattroporte (2.8)",
+    "select_column": "First Year"
+  },
+  {
+    "question": "Who was the opponent for the match were the outcome was runner-up and the score was 5-7, 1-6?",
+    "headers": [
+      "Outcome",
+      "Date",
+      "Tournament",
+      "Surface",
+      "Opponent",
+      "Score"
+    ],
+    "where_column": "Outcome",
+    "where_value": "runner-up",
+    "select_column": "Opponent"
+  },
+  {
+    "question": "born on 1973-08-21, what is the cf's name?",
+    "headers": [
+      "Name",
+      "Pos.",
+      "Height",
+      "Weight",
+      "Date of Birth"
+    ],
+    "where_column": "Pos.",
+    "where_value": "cf",
+    "select_column": "Name"
+  },
+  {
+    "question": "How many blockings occured in the game with 198 rebounds?",
+    "headers": [
+      "Player",
+      "Games Played",
+      "Minutes",
+      "Field Goals",
+      "Three Pointers",
+      "Free Throws",
+      "Rebounds",
+      "Assists",
+      "Blocks",
+      "Steals",
+      "Points"
+    ],
+    "where_column": "Rebounds",
+    "where_value": "198",
+    "select_column": "Blocks"
+  },
+  {
+    "question": "Which team is in the Southeast with a home at Philips Arena?",
+    "headers": [
+      "Conference",
+      "Division",
+      "Team",
+      "City",
+      "Home Arena"
+    ],
+    "where_column": "Home Arena",
+    "where_value": "philips arena",
+    "select_column": "Team"
+  },
+  {
+    "question": "What is the sum number of Pl GP when the pick number is 178 and the road number is bigger than 9?",
+    "headers": [
+      "Rd #",
+      "Pick #",
+      "Player",
+      "Team (League)",
+      "Reg GP",
+      "Pl GP"
+    ],
+    "where_column": "Rd #",
+    "where_value": "9",
+    "select_column": "Pl GP"
+  },
+  {
+    "question": "Which NHL team has a Player of steve durbano?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Player",
+    "where_value": "steve durbano",
+    "select_column": "NHL team"
+  },
+  {
+    "question": "Which team had a start of 8 in years under 2008?",
+    "headers": [
+      "Year",
+      "Team",
+      "Manufacturer",
+      "Start",
+      "Finish"
+    ],
+    "where_column": "Year",
+    "where_value": "2008",
+    "select_column": "Team"
+  },
+  {
+    "question": "Which slope length has a type of surface lift, and an elevation groundstation smaller than 1974, and a construction year(s) of 1971, and a Name or route of alpmatten 1?",
+    "headers": [
+      "Name or route",
+      "type",
+      "elevation groundstation",
+      "elevation mountainstation",
+      "slope length",
+      "capacity in persons/hour",
+      "construction year(s)"
+    ],
+    "where_column": "Name or route",
+    "where_value": "alpmatten 1",
+    "select_column": "slope length"
+  },
+  {
+    "question": "What position did the #94 pick play?",
+    "headers": [
+      "Pick #",
+      "Player",
+      "Position",
+      "Nationality",
+      "NHL team",
+      "College/junior/club team"
+    ],
+    "where_column": "Pick #",
+    "where_value": "94",
+    "select_column": "Position"
+  },
+  {
+    "question": "When Matt Ware won the mens singles, who won the mixed restricted?",
+    "headers": [
+      "Date/Location",
+      "Mens singles",
+      "Womens Singles",
+      "U21 Mens",
+      "U21 Womens",
+      "Mixed Restricted",
+      "Mixed Veteran"
+    ],
+    "where_column": "Mens singles",
+    "where_value": "Matt Ware",
+    "select_column": "Mixed Restricted"
+  },
+  {
+    "question": "What is the average total pld with 45 points in 2005-06, and more than 52 points in 2006-07?",
+    "headers": [
+      "Team",
+      "2004\u201305 Pts",
+      "2005\u201306 Pts",
+      "2006\u201307 Pts",
+      "Total Pts",
+      "Total Pld"
+    ],
+    "where_column": "2005\u201306 Pts",
+    "where_value": "45",
+    "select_column": "Total Pld"
+  },
+  {
+    "question": "How many grids does dave walker have?",
+    "headers": [
+      "Driver",
+      "Constructor",
+      "Laps",
+      "Time/Retired",
+      "Grid"
+    ],
+    "where_column": "Driver",
+    "where_value": "dave walker",
+    "select_column": "Grid"
+  },
+  {
+    "question": "How many Points have a Score of 3\u20132, and an Attendance larger than 17,398?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Attendance",
+      "Record",
+      "Arena",
+      "Points"
+    ],
+    "where_column": "Attendance",
+    "where_value": "17,398",
+    "select_column": "Points"
+  },
+  {
+    "question": "What was the date of the game against North Carolina?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Location",
+      "Result",
+      "Attendance"
+    ],
+    "where_column": "Opponent",
+    "where_value": "north carolina",
+    "select_column": "Date"
+  },
+  {
+    "question": "Which nation had a time of 48.38?",
+    "headers": [
+      "Sport",
+      "Record",
+      "Nation",
+      "Date",
+      "Time (sec.)"
+    ],
+    "where_column": "Time (sec.)",
+    "where_value": "48.38",
+    "select_column": "Nation"
+  },
+  {
+    "question": "What is the total of all to par with player Bob Rosburg?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par",
+      "Money ( $ )"
+    ],
+    "where_column": "Player",
+    "where_value": "bob rosburg",
+    "select_column": "To par"
+  },
+  {
+    "question": "Which song has more than 66 points, a draw greater than 3, and is ranked 3rd?",
+    "headers": [
+      "Draw",
+      "Song",
+      "Performer",
+      "Points",
+      "Rank"
+    ],
+    "where_column": "Rank",
+    "where_value": "3rd",
+    "select_column": "Song"
+  },
+  {
+    "question": "What was the venue for the game played on 13/02/1954?",
+    "headers": [
+      "Opposing Teams",
+      "Against",
+      "Date",
+      "Venue",
+      "Status"
+    ],
+    "where_column": "Date",
+    "where_value": "13/02/1954",
+    "select_column": "Venue"
+  },
+  {
+    "question": "What is the average Regional Finals score when the record is 3-2 and there are more than 3 bids?",
+    "headers": [
+      "Conference",
+      "# of Bids",
+      "Record",
+      "Win %",
+      "Regional Finals"
+    ],
+    "where_column": "# of Bids",
+    "where_value": "3",
+    "select_column": "Regional Finals"
+  },
+  {
+    "question": "What is the most number of touchdowns that have fewer than 105 points, averages over 4.7, and fewer than 487 rushing yards?",
+    "headers": [
+      "Year",
+      "Carries",
+      "Rushing Yards",
+      "Average",
+      "Touchdowns",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "105",
+    "select_column": "Touchdowns"
+  },
+  {
+    "question": "Who wrote episode number 28?",
+    "headers": [
+      "No.",
+      "#",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Patient Portrayer",
+      "Original air date",
+      "Production code"
+    ],
+    "where_column": "No.",
+    "where_value": "28",
+    "select_column": "Written by"
+  },
+  {
+    "question": "What number of Yards has 32 as an In 20?",
+    "headers": [
+      "Year",
+      "Yards",
+      "Avg.",
+      "Net Avg.",
+      "In 20"
+    ],
+    "where_column": "In 20",
+    "where_value": "32",
+    "select_column": "Yards"
+  }
+]

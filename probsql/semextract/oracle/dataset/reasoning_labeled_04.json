@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What are the Colt model numbers of the models named GAU-5A/A, with no bayonet lug, no case deflector and stock of 2nd generation? ",
+    "where_column": "Bayonet Lug",
+    "where_value": "No",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "no bayonet lug",
+    "column_keyword": "lug",
+    "value_span": "no bayonet lug",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest tries the player with more than 0 goals, 28 points, and more than 0 field goals have?",
+    "where_column": "Points",
+    "where_value": "28",
+    "why_this_column": "number_matches_numeric_column",
+    "trigger_phrase": "28 points",
+    "column_keyword": "points",
+    "value_span": "28 points",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What round has the highest Res loss, and a time of 40:00?",
+    "where_column": "Res.",
+    "where_value": "loss",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Res loss",
+    "column_keyword": "res",
+    "value_span": "loss",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the name of the tournament where outcome is runner-up",
+    "where_column": "Outcome",
+    "where_value": "Runner-up",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "outcome is runner-up",
+    "column_keyword": "outcome",
+    "value_span": "runner-up",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which album debuted in season 2 (2005)?",
+    "where_column": "Season",
+    "where_value": "season 2 (2005)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "debuted in season",
+    "column_keyword": "season",
+    "value_span": "season 2 (2005)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many pole positions for round 20?",
+    "where_column": "Round",
+    "where_value": "20",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "for round",
+    "column_keyword": "round",
+    "value_span": "round 20",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "WHAT COLLEGE HAS A ROUND LARGER THAN 9, WITH BUTCH WEBSTER?",
+    "where_column": "Player",
+    "where_value": "butch webster",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "with butch webster",
+    "column_keyword": "player",
+    "value_span": "BUTCH WEBSTER",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the verb meaning of the word with part 2 \"bant\"?",
+    "where_column": "Part 2",
+    "where_value": "bant",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "with part 2",
+    "column_keyword": "part",
+    "value_span": "bant",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the land area in sqmi that has a latitude of 48.763937?",
+    "where_column": "Latitude",
+    "where_value": "48.763937",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "latitude of 48.763937",
+    "column_keyword": "latitude",
+    "value_span": "48.763937",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Wha is the average number of bronze of hungary, which has less than 1 silver?",
+    "where_column": "Nation",
+    "where_value": "hungary",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "bronze of hungary",
+    "column_keyword": "nation",
+    "value_span": "hungary",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What time did team kawasaki zx10 1000cc have?",
+    "where_column": "Team",
+    "where_value": "kawasaki zx10 1000cc",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "team kawasaki zx10",
+    "column_keyword": "team",
+    "value_span": "kawasaki zx10 1000cc",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "In what category was Herself nominated?",
+    "where_column": "Nominated",
+    "where_value": "herself",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "was Herself nominated",
+    "column_keyword": "nominated",
+    "value_span": "Herself",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the year opened for Chicagoland Speedway with a seating smaller than 75,000?",
+    "where_column": "Seating",
+    "where_value": "75,000",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "seating smaller than",
+    "column_keyword": "seating",
+    "value_span": "75,000",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "who received gold when silver is wolfgang eibeck austria (aut)?",
+    "where_column": "Silver",
+    "where_value": "wolfgang eibeck austria (aut)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "when silver is",
+    "column_keyword": "silver",
+    "value_span": "wolfgang eibeck austria (aut)",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Avg/G smaller than 225.5, and a GP-GS of 8\u20130 has what name?",
+    "where_column": "GP-GS",
+    "where_value": "8\u20130",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "GP-GS of 8",
+    "column_keyword": "gp-gs",
+    "value_span": "8\u20130",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the rank when there was less than 1 gold, 0 bronze, and more than 1 total?",
+    "where_column": "Bronze",
+    "where_value": "0",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "0 bronze",
+    "column_keyword": "bronze",
+    "value_span": "0 bronze",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many Points have a Record of 40\u201321\u201312\u20133, and a March larger than 28?",
+    "where_column": "March",
+    "where_value": "28",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "March larger than",
+    "column_keyword": "march",
+    "value_span": "28",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the average number of laps with an accident time/retired, aprilia manufacturer and a grid of 27?",
+    "where_column": "Time/Retired",
+    "where_value": "accident",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "accident time/retired",
+    "column_keyword": "time",
+    "value_span": "accident",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the driver with the laps under 16, grid of 10, a bike of Yamaha YZF-R6, and ended with an accident?",
+    "where_column": "Bike",
+    "where_value": "yamaha yzf-r6",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "bike of Yamaha",
+    "column_keyword": "bike",
+    "value_span": "Yamaha YZF-R6",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When is the appointment date for outgoing manager Petrik Sander?",
+    "where_column": "Outgoing manager",
+    "where_value": "petrik sander",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "outgoing manager Petrik Sander",
+    "column_keyword": "manager",
+    "value_span": "Petrik Sander",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Which Rank has a Bronze of 1, and a Nation of lithuania?",
+    "where_column": "Nation",
+    "where_value": "lithuania",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Nation of lithuania",
+    "column_keyword": "nation",
+    "value_span": "lithuania",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What Date has the Region Europe and a Catalog of 74321 45851 2?",
+    "where_column": "Catalog",
+    "where_value": "74321 45851 2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Catalog of 74321",
+    "column_keyword": "catalog",
+    "value_span": "74321 45851 2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "On what date the footscray's away game?",
+    "where_column": "Away team",
+    "where_value": "footscray",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "footscray's away game",
+    "column_keyword": "away",
+    "value_span": "footscray",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the score when the record was 5-4-2?",
+    "where_column": "Record",
+    "where_value": "5-4-2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "when the record was",
+    "column_keyword": "record",
+    "value_span": "5-4-2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What are the classes for the circuit that has the Mazda Raceway Laguna Seca race.",
+    "where_column": "Circuit",
+    "where_value": "mazda raceway laguna seca",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "circuit that has",
+    "column_keyword": "circuit",
+    "value_span": "Mazda Raceway Laguna Seca",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "question": "What years did the sdrive16d model have a Torque of n·m (lb·ft)@1750-3000?",
+    "where_column": "Torque",
+    "where_value": "n·m (lb·ft)@1750-3000",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Torque of",
+    "column_keyword": "Torque",
+    "value_span": "n·m (lb·ft)@1750-3000",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the total number of Score, when Country is \"United States\", and when Player is \"Lee Trevino\"?",
+    "where_column": "Country",
+    "where_value": "united states",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Country is",
+    "column_keyword": "Country",
+    "value_span": "United States",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "From what school was the linebacker that had a pick less than 245 and was drafted in round 6?",
+    "where_column": "Position",
+    "where_value": "linebacker",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "Position",
+    "value_span": "linebacker",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Which score's game was less than 69 when the march was bigger than 2 and the opponents were the New York Islanders?",
+    "where_column": "March",
+    "where_value": "2",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "march was bigger than",
+    "column_keyword": "March",
+    "value_span": "2",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the host city of the 8th edition in the the host country of Croatia?",
+    "where_column": "Edition",
+    "where_value": "8th",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "8th edition",
+    "column_keyword": "Edition",
+    "value_span": "8th edition",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the title that was written by r. scott gemmill",
+    "where_column": "Written by",
+    "where_value": "R. Scott Gemmill",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "written by",
+    "column_keyword": "Written",
+    "value_span": "r. scott gemmill",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the average clean and jerk for snatch of 140 and total kg less than 315",
+    "where_column": "Snatch",
+    "where_value": "140",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "snatch of",
+    "column_keyword": "Snatch",
+    "value_span": "140",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What's the total that the position is less than 1?",
+    "where_column": "Position",
+    "where_value": "1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "position is less than",
+    "column_keyword": "Position",
+    "value_span": "1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who had the most rebounds and how many did they have on October 16?",
+    "where_column": "Date",
+    "where_value": "October 16",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "on October 16",
+    "column_keyword": "Date",
+    "value_span": "October 16",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Opponent of edmonton oilers, and a Game of 3 is what series?",
+    "where_column": "Game",
+    "where_value": "3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Game of",
+    "column_keyword": "Game",
+    "value_span": "3",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "the episode directed by art dielhenn was what number in the series? ",
+    "where_column": "Directed by",
+    "where_value": "Art Dielhenn",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "directed by",
+    "column_keyword": "Directed",
+    "value_span": "art dielhenn",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Name the sum of year for engine of brm p202 3.0 v12 brm p200 3.0 v12",
+    "where_column": "Engine(s)",
+    "where_value": "brm p202 3.0 v12 brm p200 3.0 v12",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "engine of",
+    "column_keyword": "Engine",
+    "value_span": "brm p202 3.0 v12 brm p200 3.0 v12",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What were the matches where the teams finished in the first group stage, in 1998?",
+    "where_column": "Year",
+    "where_value": "1998",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "in 1998",
+    "column_keyword": "Year",
+    "value_span": "1998",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "The original artist Joan Osborne has what result?",
+    "where_column": "Original artist",
+    "where_value": "Joan Osborne",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "original artist",
+    "column_keyword": "artist",
+    "value_span": "Joan Osborne",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Which sport was held in Huntsville at the Von Braun Center as part of the Southern Indoor Football League?",
+    "where_column": "City",
+    "where_value": "huntsville",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": "held in Huntsville",
+    "column_keyword": "City",
+    "value_span": "Huntsville",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total number of rank with losses less than 992, North Carolina State College and a season greater than 101?",
+    "where_column": "Seasons",
+    "where_value": "101",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "season greater than",
+    "column_keyword": "Seasons",
+    "value_span": "101",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is 2011, when 2006 is \"A\", when 2008 is \"A\", and when Tournament is \"Rome\"?",
+    "where_column": "2008",
+    "where_value": "a",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "2008 is",
+    "column_keyword": "2008",
+    "value_span": "A",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Name the league for 2003",
+    "where_column": "Year",
+    "where_value": "2003",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": "for 2003",
+    "column_keyword": "Year",
+    "value_span": "2003",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is latitude when 2010 population is 24 and water is more than 0.319?",
+    "where_column": "Pop. (2010)",
+    "where_value": "24",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "2010 population is",
+    "column_keyword": "population",
+    "value_span": "24",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the season 4 # for the production code of 4abb07?",
+    "where_column": "Production code",
+    "where_value": "4ABB07",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "production code of",
+    "column_keyword": "code",
+    "value_span": "4abb07",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "When the position is less than 7, what is the appeared on album?",
+    "where_column": "Position",
+    "where_value": "7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "position is less than",
+    "column_keyword": "Position",
+    "value_span": "7",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the high lap total for cards with a grid larger than 21, and a Time/Retired of +2 laps?",
+    "where_column": "Time/Retired",
+    "where_value": "+2 laps",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Time/Retired of",
+    "column_keyword": "Time",
+    "value_span": "+2 laps",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the location of the game when the record was 2-1?",
+    "where_column": "Record",
+    "where_value": "2-1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "record was",
+    "column_keyword": "Record",
+    "value_span": "2-1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the largest total for a team with 1 bronze, 0 gold medals and ranking of 7?",
+    "where_column": "Bronze",
+    "where_value": "1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "1 bronze",
+    "column_keyword": "Bronze",
+    "value_span": "1 bronze",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the name of the winner or 2nd when the result was –, and weight was 6.7?",
+    "where_column": "Weight",
+    "where_value": "6.7",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "weight was",
+    "column_keyword": "Weight",
+    "value_span": "6.7",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

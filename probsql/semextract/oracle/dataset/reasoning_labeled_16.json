@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Which average Played has a Drawn smaller than 1, and Points larger than 4?",
+    "where_column": "Points",
+    "where_value": "4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Points larger than",
+    "column_keyword": "Points",
+    "value_span": "4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the average Gold when the rank is less than 3 and the bronze is less than 1?",
+    "where_column": "Bronze",
+    "where_value": "1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "bronze is less than",
+    "column_keyword": "Bronze",
+    "value_span": "1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest First Year, when Model is \"Quattroporte (2.8)\"?",
+    "where_column": "Model",
+    "where_value": "quattroporte (2.8)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Model is",
+    "column_keyword": "Model",
+    "value_span": "Quattroporte (2.8)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who was the opponent for the match were the outcome was runner-up and the score was 5-7, 1-6?",
+    "where_column": "Outcome",
+    "where_value": "runner-up",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "outcome was runner-up",
+    "column_keyword": "Outcome",
+    "value_span": "runner-up",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "born on 1973-08-21, what is the cf's name?",
+    "where_column": "Pos.",
+    "where_value": "cf",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "Pos",
+    "value_span": "cf",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "How many blockings occured in the game with 198 rebounds?",
+    "where_column": "Rebounds",
+    "where_value": "198",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "198 rebounds",
+    "column_keyword": "Rebounds",
+    "value_span": "198",
+    "select_reasoning": "context_implies"
+  },
+  {
+    "question": "Which team is in the Southeast with a home at Philips Arena?",
+    "where_column": "Home Arena",
+    "where_value": "philips arena",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "home at Philips Arena",
+    "column_keyword": "Arena",
+    "value_span": "Philips Arena",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the sum number of Pl GP when the pick number is 178 and the road number is bigger than 9?",
+    "where_column": "Rd #",
+    "where_value": "9",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "road number is bigger than",
+    "column_keyword": "Rd",
+    "value_span": "9",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which NHL team has a Player of steve durbano?",
+    "where_column": "Player",
+    "where_value": "steve durbano",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Player of steve durbano",
+    "column_keyword": "Player",
+    "value_span": "steve durbano",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which team had a start of 8 in years under 2008?",
+    "where_column": "Year",
+    "where_value": "2008",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "years under 2008",
+    "column_keyword": "Year",
+    "value_span": "2008",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which slope length has a type of surface lift, and an elevation groundstation smaller than 1974, and a construction year(s) of 1971, and a Name or route of alpmatten 1?",
+    "where_column": "Name or route",
+    "where_value": "alpmatten 1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Name or route of alpmatten 1",
+    "column_keyword": "route",
+    "value_span": "alpmatten 1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What position did the #94 pick play?",
+    "where_column": "Pick #",
+    "where_value": "94",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "#94 pick",
+    "column_keyword": "Pick",
+    "value_span": "94",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "When Matt Ware won the mens singles, who won the mixed restricted?",
+    "where_column": "Mens singles",
+    "where_value": "Matt Ware",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "won the mens singles",
+    "column_keyword": "singles",
+    "value_span": "Matt Ware",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the average total pld with 45 points in 2005-06, and more than 52 points in 2006-07?",
+    "where_column": "2005\u201306 Pts",
+    "where_value": "45",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "45 points in 2005-06",
+    "column_keyword": "Pts",
+    "value_span": "45",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many grids does dave walker have?",
+    "where_column": "Driver",
+    "where_value": "dave walker",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "Driver",
+    "value_span": "dave walker",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many Points have a Score of 3\u20132, and an Attendance larger than 17,398?",
+    "where_column": "Attendance",
+    "where_value": "17,398",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Attendance larger than",
+    "column_keyword": "Attendance",
+    "value_span": "17,398",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the date of the game against North Carolina?",
+    "where_column": "Opponent",
+    "where_value": "north carolina",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "game against North Carolina",
+    "column_keyword": "Opponent",
+    "value_span": "North Carolina",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which nation had a time of 48.38?",
+    "where_column": "Time (sec.)",
+    "where_value": "48.38",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "time of 48.38",
+    "column_keyword": "Time",
+    "value_span": "48.38",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the total of all to par with player Bob Rosburg?",
+    "where_column": "Player",
+    "where_value": "bob rosburg",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "player Bob Rosburg",
+    "column_keyword": "Player",
+    "value_span": "Bob Rosburg",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which song has more than 66 points, a draw greater than 3, and is ranked 3rd?",
+    "where_column": "Rank",
+    "where_value": "3rd",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "ranked 3rd",
+    "column_keyword": "Rank",
+    "value_span": "3rd",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What was the venue for the game played on 13/02/1954?",
+    "where_column": "Date",
+    "where_value": "13/02/1954",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "played on 13/02/1954",
+    "column_keyword": "Date",
+    "value_span": "13/02/1954",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the average Regional Finals score when the record is 3-2 and there are more than 3 bids?",
+    "where_column": "# of Bids",
+    "where_value": "3",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "more than 3 bids",
+    "column_keyword": "Bids",
+    "value_span": "3",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the most number of touchdowns that have fewer than 105 points, averages over 4.7, and fewer than 487 rushing yards?",
+    "where_column": "Points",
+    "where_value": "105",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "fewer than 105 points",
+    "column_keyword": "Points",
+    "value_span": "105",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Who wrote episode number 28?",
+    "where_column": "No.",
+    "where_value": "28",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "episode number 28",
+    "column_keyword": "No",
+    "value_span": "28",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What number of Yards has 32 as an In 20?",
+    "where_column": "In 20",
+    "where_value": "32",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "32 as an In 20",
+    "column_keyword": "In 20",
+    "value_span": "32",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

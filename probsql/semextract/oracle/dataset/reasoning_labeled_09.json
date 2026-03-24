@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Which player has a total of more than 290 and +4 to par.",
+    "where_column": "To par",
+    "where_value": "+4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "+4 to par",
+    "column_keyword": "par",
+    "value_span": "+4",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "Tell me the model with fuel or propulsion of diesel and orion manufacturer in 2005",
+    "where_column": "Fuel or Propulsion",
+    "where_value": "diesel",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "fuel or propulsion of",
+    "column_keyword": "fuel",
+    "value_span": "diesel",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the Sydney that has Adelaide, Gold Coast, Melbourne, and Auckland are all yes?",
+    "where_column": "Melbourne",
+    "where_value": "yes",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Melbourne, and Auckland are all yes",
+    "column_keyword": "melbourne",
+    "value_span": "yes",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What's the total of Sweden (SWE) having less than 1 silver?",
+    "where_column": "Silver",
+    "where_value": "1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "less than 1 silver",
+    "column_keyword": "silver",
+    "value_span": "1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the name of the driver with a rotax max engine, in the rotax heavy class, with arrow as chassis and on the TWR Raceline Seating team?",
+    "where_column": "Chassis",
+    "where_value": "arrow",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "with arrow as chassis",
+    "column_keyword": "chassis",
+    "value_span": "arrow",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the listed for the bridge at Daniel in Sublette county?",
+    "where_column": "County",
+    "where_value": "sublette",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "in Sublette county",
+    "column_keyword": "county",
+    "value_span": "Sublette",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which tier is for football at Tianhe Stadium?",
+    "where_column": "Sport",
+    "where_value": "football",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "is for football",
+    "column_keyword": "sport",
+    "value_span": "football",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the lowest total that had less than 170 snatches, 56 kg events and less than 145 clean & jerk?",
+    "where_column": "Snatch",
+    "where_value": "170",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "less than 170 snatches",
+    "column_keyword": "snatch",
+    "value_span": "170",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the highest game that has 32 points and a team rank larger than 4 named montepaschi siena",
+    "where_column": "Points",
+    "where_value": "32",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "has 32 points",
+    "column_keyword": "points",
+    "value_span": "32",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Greg Norman's place?",
+    "where_column": "Player",
+    "where_value": "greg norman",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "player",
+    "value_span": "Greg Norman",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the highest enrollment for rochester community school?",
+    "where_column": "School",
+    "where_value": "rochester community",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "enrollment for rochester community school",
+    "column_keyword": "school",
+    "value_span": "rochester community",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is Wasim Akram's rank?",
+    "where_column": "Player",
+    "where_value": "wasim akram",
+    "why_this_column": "value_is_entity_name",
+    "trigger_phrase": null,
+    "column_keyword": "player",
+    "value_span": "Wasim Akram",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What shows as Content for the Television service of nickelodeon +1?",
+    "where_column": "Television service",
+    "where_value": "nickelodeon +1",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Television service of",
+    "column_keyword": "service",
+    "value_span": "nickelodeon +1",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what builder is now retired",
+    "where_column": "Current status",
+    "where_value": "retired",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "is now retired",
+    "column_keyword": "status",
+    "value_span": "retired",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which player won in 1993?",
+    "where_column": "Year(s) won",
+    "where_value": "1993",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "won in 1993",
+    "column_keyword": "won",
+    "value_span": "1993",
+    "select_reasoning": "question_word_implies"
+  },
+  {
+    "question": "What is the name of the driver with a rotax max engine, in the rotax heavy class, with arrow as chassis and on the TWR Raceline Seating team?",
+    "where_column": "Team",
+    "where_value": "twr raceline seating",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "on the TWR Raceline Seating team",
+    "column_keyword": "team",
+    "value_span": "TWR Raceline Seating",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": " what's the\u00a0original air date\u00a0where\u00a0written by\u00a0is iain morris & damon beesley",
+    "where_column": "Written by",
+    "where_value": "Iain Morris & Damon Beesley",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "written by is",
+    "column_keyword": "written",
+    "value_span": "iain morris & damon beesley",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the winning team of the race on 31 August with Audi as the winning manufacturer and Timo Scheider as the winning driver?",
+    "where_column": "Winning driver",
+    "where_value": "timo scheider",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Timo Scheider as the winning driver",
+    "column_keyword": "driver",
+    "value_span": "Timo Scheider",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "which round is u.s. open cup division semifinals",
+    "where_column": "Playoffs",
+    "where_value": "Division Semifinals",
+    "why_this_column": "value_matches_column_type",
+    "trigger_phrase": null,
+    "column_keyword": "playoffs",
+    "value_span": "division semifinals",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What were the points in the year when his Wins were 0, his Podiums were 0, and he drove in 4 races?",
+    "where_column": "Races",
+    "where_value": "4",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "drove in 4 races",
+    "column_keyword": "races",
+    "value_span": "4",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "How many public is there for the couple that got eliminated?",
+    "where_column": "Result",
+    "where_value": "Eliminated",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "couple that got eliminated",
+    "column_keyword": "result",
+    "value_span": "eliminated",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "what is the total number of\u00a0average\u00a0where\u00a0evening gown\u00a0is 8.988",
+    "where_column": "Evening Gown",
+    "where_value": "8.988",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "evening gown is",
+    "column_keyword": "gown",
+    "value_span": "8.988",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the 1944 result for the U.S. Championships?",
+    "where_column": "Tournament",
+    "where_value": "u.s. championships",
+    "why_this_column": "trigger_phrase_indicates",
+    "trigger_phrase": "result for the U.S. Championships",
+    "column_keyword": "tournament",
+    "value_span": "U.S. Championships",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "Which Bullet diameter has a Neck diameter of 12.17 (.479)?",
+    "where_column": "Neck diameter",
+    "where_value": "12.17 (.479)",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Neck diameter of",
+    "column_keyword": "neck",
+    "value_span": "12.17 (.479)",
+    "select_reasoning": "column_name_after_question_word"
+  },
+  {
+    "question": "What is the Capacity of the Venue of Head Coach Ali Asghar Modir Roosta?",
+    "where_column": "Head Coach",
+    "where_value": "ali asghar modir roosta",
+    "why_this_column": "column_name_mentioned",
+    "trigger_phrase": "Head Coach Ali Asghar Modir Roosta",
+    "column_keyword": "coach",
+    "value_span": "Ali Asghar Modir Roosta",
+    "select_reasoning": "column_name_after_question_word"
+  }
+]

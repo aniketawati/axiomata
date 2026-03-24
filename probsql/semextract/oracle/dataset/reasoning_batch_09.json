@@ -1,0 +1,369 @@
+[
+  {
+    "question": "Which player has a total of more than 290 and +4 to par.",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par",
+      "Finish"
+    ],
+    "where_column": "To par",
+    "where_value": "+4",
+    "select_column": "Player"
+  },
+  {
+    "question": "Tell me the model with fuel or propulsion of diesel and orion manufacturer in 2005",
+    "headers": [
+      "Year",
+      "Manufacturer",
+      "Model",
+      "Length (ft.)",
+      "Fuel or Propulsion",
+      "Fleet series",
+      "Quantity"
+    ],
+    "where_column": "Fuel or Propulsion",
+    "where_value": "diesel",
+    "select_column": "Model"
+  },
+  {
+    "question": "what is the Sydney that has Adelaide, Gold Coast, Melbourne, and Auckland are all yes?",
+    "headers": [
+      "Sydney",
+      "Melbourne",
+      "Perth",
+      "Adelaide",
+      "Gold Coast",
+      "Auckland"
+    ],
+    "where_column": "Melbourne",
+    "where_value": "yes",
+    "select_column": "Sydney"
+  },
+  {
+    "question": "What's the total of Sweden (SWE) having less than 1 silver?",
+    "headers": [
+      "Rank",
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "1",
+    "select_column": "Total"
+  },
+  {
+    "question": "What is the name of the driver with a rotax max engine, in the rotax heavy class, with arrow as chassis and on the TWR Raceline Seating team?",
+    "headers": [
+      "Team",
+      "Class",
+      "Chassis",
+      "Engine",
+      "Driver"
+    ],
+    "where_column": "Chassis",
+    "where_value": "arrow",
+    "select_column": "Driver"
+  },
+  {
+    "question": "What is the listed for the bridge at Daniel in Sublette county?",
+    "headers": [
+      "Name",
+      "Built",
+      "Listed",
+      "Location",
+      "County"
+    ],
+    "where_column": "County",
+    "where_value": "sublette",
+    "select_column": "Listed"
+  },
+  {
+    "question": "Which tier is for football at Tianhe Stadium?",
+    "headers": [
+      "Sport",
+      "League",
+      "Tier",
+      "Club",
+      "Stadium"
+    ],
+    "where_column": "Sport",
+    "where_value": "football",
+    "select_column": "Tier"
+  },
+  {
+    "question": "What is the lowest total that had less than 170 snatches, 56 kg events and less than 145 clean & jerk?",
+    "headers": [
+      "Athlete",
+      "Event",
+      "Snatch",
+      "Clean & Jerk",
+      "Total"
+    ],
+    "where_column": "Snatch",
+    "where_value": "170",
+    "select_column": "Total"
+  },
+  {
+    "question": "What is the highest game that has 32 points and a team rank larger than 4 named montepaschi siena",
+    "headers": [
+      "Rank",
+      "Name",
+      "Team",
+      "Games",
+      "Points"
+    ],
+    "where_column": "Points",
+    "where_value": "32",
+    "select_column": "Games"
+  },
+  {
+    "question": "What is Greg Norman's place?",
+    "headers": [
+      "Place",
+      "Player",
+      "Country",
+      "Score",
+      "To par"
+    ],
+    "where_column": "Player",
+    "where_value": "greg norman",
+    "select_column": "Place"
+  },
+  {
+    "question": "What is the highest enrollment for rochester community school?",
+    "headers": [
+      "School",
+      "Location",
+      "Mascot",
+      "# / County",
+      "Enrollment",
+      "IHSAA Class /Football/Soccer",
+      "Year joined",
+      "Previous Conference",
+      "Year Left",
+      "Conference Joined"
+    ],
+    "where_column": "School",
+    "where_value": "rochester community",
+    "select_column": "Enrollment"
+  },
+  {
+    "question": "What is Wasim Akram's rank?",
+    "headers": [
+      "Rank",
+      "Games",
+      "Player",
+      "Nationality",
+      "Career Span"
+    ],
+    "where_column": "Player",
+    "where_value": "wasim akram",
+    "select_column": "Rank"
+  },
+  {
+    "question": "What shows as Content for the Television service of nickelodeon +1?",
+    "headers": [
+      "Television service",
+      "Country",
+      "Language",
+      "Content",
+      "HDTV",
+      "Package/Option"
+    ],
+    "where_column": "Television service",
+    "where_value": "nickelodeon +1",
+    "select_column": "Content"
+  },
+  {
+    "question": "what builder is now retired",
+    "headers": [
+      "Name",
+      "Pennant number",
+      "Builder",
+      "Laid Down",
+      "Launched",
+      "Commissioned",
+      "Current status"
+    ],
+    "where_column": "Current status",
+    "where_value": "retired",
+    "select_column": "Pennant number"
+  },
+  {
+    "question": "Which player won in 1993?",
+    "headers": [
+      "Player",
+      "Country",
+      "Year(s) won",
+      "Total",
+      "To par"
+    ],
+    "where_column": "Year(s) won",
+    "where_value": "1993",
+    "select_column": "Player"
+  },
+  {
+    "question": "What is the name of the driver with a rotax max engine, in the rotax heavy class, with arrow as chassis and on the TWR Raceline Seating team?",
+    "headers": [
+      "Team",
+      "Class",
+      "Chassis",
+      "Engine",
+      "Driver"
+    ],
+    "where_column": "Team",
+    "where_value": "twr raceline seating",
+    "select_column": "Driver"
+  },
+  {
+    "question": " what's the\u00a0original air date\u00a0where\u00a0written by\u00a0is iain morris & damon beesley",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original air date"
+    ],
+    "where_column": "Written by",
+    "where_value": "Iain Morris & Damon Beesley",
+    "select_column": "Original air date"
+  },
+  {
+    "question": "What is the winning team of the race on 31 August with Audi as the winning manufacturer and Timo Scheider as the winning driver?",
+    "headers": [
+      "Circuit",
+      "Date",
+      "Pole position",
+      "Fastest Lap",
+      "Winning driver",
+      "Winning team",
+      "Winning manufacturer"
+    ],
+    "where_column": "Winning driver",
+    "where_value": "timo scheider",
+    "select_column": "Winning team"
+  },
+  {
+    "question": "which round is u.s. open cup division semifinals",
+    "headers": [
+      "Year",
+      "Division",
+      "League",
+      "Regular Season",
+      "Playoffs",
+      "U.S. Open Cup"
+    ],
+    "where_column": "Playoffs",
+    "where_value": "Division Semifinals",
+    "select_column": "U.S. Open Cup"
+  },
+  {
+    "question": "What were the points in the year when his Wins were 0, his Podiums were 0, and he drove in 4 races?",
+    "headers": [
+      "Season",
+      "Series",
+      "Team",
+      "Races",
+      "Wins",
+      "Poles",
+      "F/Laps",
+      "Podiums",
+      "Points",
+      "Position"
+    ],
+    "where_column": "Races",
+    "where_value": "4",
+    "select_column": "Points"
+  },
+  {
+    "question": "How many public is there for the couple that got eliminated?",
+    "headers": [
+      "Rank",
+      "Couple",
+      "Judges",
+      "Public",
+      "Total",
+      "Vote percentage",
+      "Result"
+    ],
+    "where_column": "Result",
+    "where_value": "Eliminated",
+    "select_column": "Public"
+  },
+  {
+    "question": "what is the total number of\u00a0average\u00a0where\u00a0evening gown\u00a0is 8.988",
+    "headers": [
+      "State",
+      "Preliminaries",
+      "Interview",
+      "Swimsuit",
+      "Evening Gown",
+      "Average"
+    ],
+    "where_column": "Evening Gown",
+    "where_value": "8.988",
+    "select_column": "Average"
+  },
+  {
+    "question": "What is the 1944 result for the U.S. Championships?",
+    "headers": [
+      "Tournament",
+      "1940",
+      "1941",
+      "1942",
+      "1943",
+      "1944",
+      "1945",
+      "1946 1",
+      "1947 1",
+      "1948",
+      "1949",
+      "1950",
+      "1951",
+      "1952",
+      "1953",
+      "1954",
+      "Career SR"
+    ],
+    "where_column": "Tournament",
+    "where_value": "u.s. championships",
+    "select_column": "1944"
+  },
+  {
+    "question": "Which Bullet diameter has a Neck diameter of 12.17 (.479)?",
+    "headers": [
+      "Name",
+      "Case type",
+      "Bullet diameter",
+      "Neck diameter",
+      "Base diameter",
+      "Rim diameter",
+      "Case length",
+      "Cartridge length"
+    ],
+    "where_column": "Neck diameter",
+    "where_value": "12.17 (.479)",
+    "select_column": "Bullet diameter"
+  },
+  {
+    "question": "What is the Capacity of the Venue of Head Coach Ali Asghar Modir Roosta?",
+    "headers": [
+      "Team",
+      "City",
+      "Venue",
+      "Capacity",
+      "Head Coach",
+      "Team Captain",
+      "Past Season"
+    ],
+    "where_column": "Head Coach",
+    "where_value": "ali asghar modir roosta",
+    "select_column": "Capacity"
+  }
+]

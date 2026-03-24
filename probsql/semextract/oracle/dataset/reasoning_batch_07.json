@@ -1,0 +1,358 @@
+[
+  {
+    "question": "What is the highest Area (KM 2) for the Province of Ontario, that has the Status of Town, a Municipality of Minto, and a Rank that's smaller than 84?",
+    "headers": [
+      "Rank",
+      "Municipality",
+      "Province",
+      "Status",
+      "Area (km 2 )"
+    ],
+    "where_column": "Rank",
+    "where_value": "84",
+    "select_column": "Area (km 2 )"
+  },
+  {
+    "question": "What city is the school that had less than 17 titles in boys basketball with the last title being after 2005?",
+    "headers": [
+      "Rank",
+      "# of Titles",
+      "School",
+      "City",
+      "Sport",
+      "First",
+      "Last"
+    ],
+    "where_column": "# of Titles",
+    "where_value": "17",
+    "select_column": "City"
+  },
+  {
+    "question": "Who ran the fastest lap in the team that competed in Zolder, in which Ferrari was the Constructor?",
+    "headers": [
+      "Race",
+      "Date",
+      "Location",
+      "Pole Position",
+      "Fastest Lap",
+      "Race Winner",
+      "Constructor",
+      "Report"
+    ],
+    "where_column": "Location",
+    "where_value": "zolder",
+    "select_column": "Fastest Lap"
+  },
+  {
+    "question": "What is the result for passing in the country driving challenge?",
+    "headers": [
+      "Air Date",
+      "Challenge",
+      "Winner",
+      "Test-taker",
+      "Passed?"
+    ],
+    "where_column": "Challenge",
+    "where_value": "country driving",
+    "select_column": "Passed?"
+  },
+  {
+    "question": "When did Manchester United play against Bristol City with an H/A of A?",
+    "headers": [
+      "Date",
+      "Opponents",
+      "H / A",
+      "Result F \u2013 A",
+      "Attendance"
+    ],
+    "where_column": "H / A",
+    "where_value": "a",
+    "select_column": "Date"
+  },
+  {
+    "question": "What was eliminated on the air date of November 3, 2005?",
+    "headers": [
+      "Episode title",
+      "Air date",
+      "Reward",
+      "Immunity",
+      "Eliminated",
+      "Vote",
+      "Finish"
+    ],
+    "where_column": "Air date",
+    "where_value": "November 3, 2005",
+    "select_column": "Eliminated"
+  },
+  {
+    "question": "what score has the opponent of tigers and a record of 78-64?",
+    "headers": [
+      "Date",
+      "Opponent",
+      "Score",
+      "Loss",
+      "Record"
+    ],
+    "where_column": "Opponent",
+    "where_value": "tigers",
+    "select_column": "Score"
+  },
+  {
+    "question": "What is the sum of the year for 5 february?",
+    "headers": [
+      "Year",
+      "Competition",
+      "Date",
+      "Location",
+      "Score",
+      "Result"
+    ],
+    "where_column": "Date",
+    "where_value": "5 february",
+    "select_column": "Year"
+  },
+  {
+    "question": "Which Thirds (Under 17's) have a Reserve of barnawartha?",
+    "headers": [
+      "YEAR",
+      "Seniors",
+      "Reserves",
+      "Thirds (Under 17's)",
+      "Fourths (Under 14's)"
+    ],
+    "where_column": "Reserves",
+    "where_value": "barnawartha",
+    "select_column": "Thirds (Under 17's)"
+  },
+  {
+    "question": "Name the 2011 when 2010 is 2r",
+    "headers": [
+      "Tournament",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "where_column": "2010",
+    "where_value": "2r",
+    "select_column": "2011"
+  },
+  {
+    "question": "What team has tony parker (10) as the high assists, kurt thomas (12) as the high rebounds?",
+    "headers": [
+      "Game",
+      "Date",
+      "Team",
+      "Score",
+      "High points",
+      "High rebounds",
+      "High assists",
+      "Location Attendance",
+      "Record"
+    ],
+    "where_column": "High assists",
+    "where_value": "tony parker (10)",
+    "select_column": "Team"
+  },
+  {
+    "question": "Which Total has a County of kilkenny, and a Tally of 1\u20134, and a Rank larger than 10?",
+    "headers": [
+      "Rank",
+      "Player",
+      "County",
+      "Tally",
+      "Total",
+      "Opposition"
+    ],
+    "where_column": "Tally",
+    "where_value": "1\u20134",
+    "select_column": "Total"
+  },
+  {
+    "question": "Which Case type has a Base diameter of 13.03 (.513), and a Case length of 63.5 (2.5)?",
+    "headers": [
+      "Name",
+      "Case type",
+      "Bullet diameter",
+      "Neck diameter",
+      "Base diameter",
+      "Rim diameter",
+      "Case length",
+      "Cartridge length"
+    ],
+    "where_column": "Base diameter",
+    "where_value": "13.03 (.513)",
+    "select_column": "Case type"
+  },
+  {
+    "question": "Who had pole position in round 7?",
+    "headers": [
+      "Round",
+      "Circuit",
+      "Date",
+      "Pole Position",
+      "Fastest Lap",
+      "Winning Driver",
+      "Winning Team"
+    ],
+    "where_column": "Round",
+    "where_value": "7",
+    "select_column": "Pole Position"
+  },
+  {
+    "question": "what team has a drive name emmanuel de graffenried and a position larger than 1 as well as the date of 9/1953?",
+    "headers": [
+      "Class",
+      "Date",
+      "Race",
+      "Driver",
+      "Position",
+      "Team"
+    ],
+    "where_column": "Date",
+    "where_value": "9/1953",
+    "select_column": "Team"
+  },
+  {
+    "question": "When was the event in the City of Baden?",
+    "headers": [
+      "Date",
+      "City",
+      "Event",
+      "Winner",
+      "Prize"
+    ],
+    "where_column": "City",
+    "where_value": "baden",
+    "select_column": "Date"
+  },
+  {
+    "question": "What is the name of the plaza where the told for heavy vehicles with 2 axles is r20.50?",
+    "headers": [
+      "Name",
+      "Location",
+      "Light vehicle",
+      "Heavy vehicle (2 axles)",
+      "Heavy vehicle (3/4 axles)",
+      "Heavy vehicle (5+ axles)"
+    ],
+    "where_column": "Heavy vehicle (2 axles)",
+    "where_value": "R20.50",
+    "select_column": "Name"
+  },
+  {
+    "question": "What is Bronze, when Silver is 2, and when Nation is Italy?",
+    "headers": [
+      "Nation",
+      "Gold",
+      "Silver",
+      "Bronze",
+      "Total"
+    ],
+    "where_column": "Silver",
+    "where_value": "2",
+    "select_column": "Bronze"
+  },
+  {
+    "question": "What Mountain Pass has an Elevation of 10,001 feet 3048 m?",
+    "headers": [
+      "Rank",
+      "Mountain Pass",
+      "Elevation",
+      "Surface",
+      "Route"
+    ],
+    "where_column": "Elevation",
+    "where_value": "10,001 feet 3048 m",
+    "select_column": "Mountain Pass"
+  },
+  {
+    "question": "Which female artist has an album named elephant?",
+    "headers": [
+      "Year",
+      "Male",
+      "Female",
+      "Album",
+      "Live Performance"
+    ],
+    "where_column": "Album",
+    "where_value": "elephant",
+    "select_column": "Female"
+  },
+  {
+    "question": "Which US air date had 4.4 million viewers?",
+    "headers": [
+      "No. in series",
+      "No. in season",
+      "Title",
+      "Directed by",
+      "Written by",
+      "Original U.S. air date",
+      "Prod. code",
+      "Viewers (millions)"
+    ],
+    "where_column": "Viewers (millions)",
+    "where_value": "4.4",
+    "select_column": "Original U.S. air date"
+  },
+  {
+    "question": "what is the constituency when the swing to gain is less than 4.16, the winning party 2007 is snp and ld's place 2007 is 2nd?",
+    "headers": [
+      "Rank",
+      "Constituency",
+      "Winning party 2007",
+      "Swing to gain",
+      "LD's place 2007",
+      "Result"
+    ],
+    "where_column": "Winning party 2007",
+    "where_value": "snp",
+    "select_column": "Constituency"
+  },
+  {
+    "question": "What is the total number of losses with less than 73 goals for, less than 11 wins, more than 24 points, and a position greater than 15?",
+    "headers": [
+      "Position",
+      "Club",
+      "Played",
+      "Points",
+      "Wins",
+      "Draws",
+      "Losses",
+      "Goals for",
+      "Goals against",
+      "Goal Difference"
+    ],
+    "where_column": "Points",
+    "where_value": "24",
+    "select_column": "Losses"
+  },
+  {
+    "question": "What record has w as the result, with January 2 as the date?",
+    "headers": [
+      "Date",
+      "Result",
+      "Score",
+      "Opponent",
+      "Record",
+      "Attendance"
+    ],
+    "where_column": "Result",
+    "where_value": "w",
+    "select_column": "Record"
+  },
+  {
+    "question": "Which Parent has height smaller than 756 and a Prom of 39?",
+    "headers": [
+      "Peak",
+      "Height (m)",
+      "Prom. (m)",
+      "Class",
+      "Parent"
+    ],
+    "where_column": "Height (m)",
+    "where_value": "756",
+    "select_column": "Parent"
+  }
+]
