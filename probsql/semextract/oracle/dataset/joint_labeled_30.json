@@ -1,0 +1,184 @@
+[
+  {
+    "question": "How many games have a score of 85-92?",
+    "value_column_pairs": [
+      {"value_span": "85-92", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["text_to_matching_column"]
+  },
+  {
+    "question": "What is the greatest area when the Poor Law Union is Skibbereen and the Civil Parish is Tullagh?",
+    "value_column_pairs": [
+      {"value_span": "Skibbereen", "column": "Poor law union", "match_reason": "place_to_location_column"},
+      {"value_span": "Tullagh", "column": "Civil parish", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What number is shown for november 3 where january 15-16 is 151?",
+    "value_column_pairs": [
+      {"value_span": "151", "column": "January 15-16", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the lowest Frequency where the Hemholtz pitch is d?",
+    "value_column_pairs": [
+      {"value_span": "d", "column": "Helmholtz pitch", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "The theme Auditioner's Choice\thas what song choice?",
+    "value_column_pairs": [
+      {"value_span": "Auditioner's Choice", "column": "Theme", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What Event has an Outcome of other open tournaments?",
+    "value_column_pairs": [
+      {"value_span": "other open tournaments", "column": "Outcome", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Absorbtion (in nanometers) of the color Orange?",
+    "value_column_pairs": [
+      {"value_span": "Orange", "column": "Color", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What kind of surface was the tournament at Pune played on?",
+    "value_column_pairs": [
+      {"value_span": "Pune", "column": "Tournament", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "value_type_excludes"]
+  },
+  {
+    "question": "What are the results of the incumbent who was first elected in 1996?",
+    "value_column_pairs": [
+      {"value_span": "1996", "column": "First elected", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What was the Indians record during the game that had 19,823 fans attending?",
+    "value_column_pairs": [
+      {"value_span": "19,823", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "verb_phrase_links"]
+  },
+  {
+    "question": "Who wrote episode 23 in the season?",
+    "value_column_pairs": [
+      {"value_span": "23", "column": "Season #", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "How much is the sum of every crowd in attendance when the away score was 7.13 (55) for Richmond?",
+    "value_column_pairs": [
+      {"value_span": "7.13 (55)", "column": "Away team score", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Richmond", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the wins number when the points were smaller than 27, and goals against was 41?",
+    "value_column_pairs": [
+      {"value_span": "27", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "41", "column": "Goals against", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many position does Teodor Salparov play on? ",
+    "value_column_pairs": [
+      {"value_span": "Teodor Salparov", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which date has Total Holocaust records in the ed Remaster cassette format?",
+    "value_column_pairs": [
+      {"value_span": "Total Holocaust records", "column": "Label", "match_reason": "text_to_matching_column"},
+      {"value_span": "ed Remaster cassette", "column": "Format", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the location of the game that has a number smaller than 2?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "Can you tell me the Rank that has the Lane of 6, and the Heat of 2?",
+    "value_column_pairs": [
+      {"value_span": "6", "column": "Lane", "match_reason": "number_to_id_column"},
+      {"value_span": "2", "column": "Heat", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who is the pregame host when the pregame analysts is  Dave Campbell and the year is 2001?",
+    "value_column_pairs": [
+      {"value_span": "Dave Campbell", "column": "Pregame analysts", "match_reason": "name_to_name_column"},
+      {"value_span": "2001", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "who directed the episode that have 0.25 million u.s viewers",
+    "value_column_pairs": [
+      {"value_span": "0.25", "column": "U.S. viewers (million)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["text_to_matching_column", "context_implies"]
+  },
+  {
+    "question": "What was the score in game 81?",
+    "value_column_pairs": [
+      {"value_span": "81", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the winning score for the runner-up Ernie Els?",
+    "value_column_pairs": [
+      {"value_span": "Ernie Els", "column": "Runner(s)-up", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Name who directed the production code 1l10",
+    "value_column_pairs": [
+      {"value_span": "1l10", "column": "Production code", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was the 2007 actor from Moscow for the voyage of Varenka Bakunin?",
+    "value_column_pairs": [
+      {"value_span": "Varenka Bakunin", "column": "Voyage", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the Qaxmu\u011fal village with a Fistiqli village ke\u015fqutan?",
+    "value_column_pairs": [
+      {"value_span": "ke\u015fqutan", "column": "F\u0131st\u0131ql\u0131", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Nationality has a Heat smaller than 2, and a Rank of 15?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Heat", "match_reason": "number_to_numeric_column"},
+      {"value_span": "15", "column": "Rank", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  }
+]

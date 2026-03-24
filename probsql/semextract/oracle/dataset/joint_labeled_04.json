@@ -1,0 +1,181 @@
+[
+  {
+    "question": "how much prize money (in USD) did bob lutz win",
+    "value_column_pairs": [
+      {"value_span": "bob lutz", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the home team's score at mcg?",
+    "value_column_pairs": [
+      {"value_span": "mcg", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "How many episodes are numbered 4 in the season?",
+    "value_column_pairs": [
+      {"value_span": "4", "column": "#", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "How many grids does dave walker have?",
+    "value_column_pairs": [
+      {"value_span": "dave walker", "column": "Driver", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the number of Games for the Maccabi Tel Aviv Team with less than 208 Rebounds?",
+    "value_column_pairs": [
+      {"value_span": "Maccabi Tel Aviv", "column": "Team", "match_reason": "team_to_team_column"},
+      {"value_span": "208", "column": "Rebounds", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which Format has a Label of toy's factory records?",
+    "value_column_pairs": [
+      {"value_span": "toy's factory records", "column": "Label", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is buffalo's pick #?",
+    "value_column_pairs": [
+      {"value_span": "buffalo", "column": "College", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What shows for 2002 when the 1991 is w?",
+    "value_column_pairs": [
+      {"value_span": "w", "column": "1991", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Name the candidates for illinois 15",
+    "value_column_pairs": [
+      {"value_span": "illinois 15", "column": "District", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What was the capacity percentage when attendance was 71080?",
+    "value_column_pairs": [
+      {"value_span": "71080", "column": "Average Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the position for outgoing manager alfredo merino",
+    "value_column_pairs": [
+      {"value_span": "alfredo merino", "column": "Outgoing manager", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the HDTV when the Package/Option is sky famiglia, and a Television service of boomerang +1?",
+    "value_column_pairs": [
+      {"value_span": "sky famiglia", "column": "Package/Option", "match_reason": "text_to_matching_column"},
+      {"value_span": "boomerang +1", "column": "Television service", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Record description of maximum load to m (ft), and a Date of 23 september 1961 is what pilot?",
+    "value_column_pairs": [
+      {"value_span": "maximum load to m (ft)", "column": "Record description", "match_reason": "text_to_matching_column"},
+      {"value_span": "23 september 1961", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What was the maximum perigee on 1969-01-09?",
+    "value_column_pairs": [
+      {"value_span": "1969-01-09", "column": "Decay date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the highest pick for a player from auburn?",
+    "value_column_pairs": [
+      {"value_span": "auburn", "column": "School", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Against when the drawn is 5?",
+    "value_column_pairs": [
+      {"value_span": "5", "column": "Drawn", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Input/output operations per second for the emlc flash?",
+    "value_column_pairs": [
+      {"value_span": "emlc flash", "column": "Storage Medium", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the location of the game with a 6-11-8 record?",
+    "value_column_pairs": [
+      {"value_span": "6-11-8", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "When did tav\u00e1rez lose?",
+    "value_column_pairs": [
+      {"value_span": "tav\u00e1rez", "column": "Loss", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "what's the\u00a0attribute\u00a0with\u00a0cancelable\u00a0being yes",
+    "value_column_pairs": [
+      {"value_span": "yes", "column": "Cancelable", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the weight of the person born in 1980?",
+    "value_column_pairs": [
+      {"value_span": "1980", "column": "Born", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which country is George Archer from?",
+    "value_column_pairs": [
+      {"value_span": "George Archer", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which Opponent has an Away of 1\u20131, and a Home of 3\u20133?",
+    "value_column_pairs": [
+      {"value_span": "1\u20131", "column": "Away", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3\u20133", "column": "Home", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the sum of NGC numbers for Constellation vela?",
+    "value_column_pairs": [
+      {"value_span": "vela", "column": "Constellation", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many values for attendance on the date of August 26?",
+    "value_column_pairs": [
+      {"value_span": "August 26", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  }
+]

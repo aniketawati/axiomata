@@ -1,0 +1,183 @@
+[
+  {
+    "question": "What was the week number when the opponent was the New York Jets?",
+    "value_column_pairs": [
+      {"value_span": "New York Jets", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many season have an average attendance league of 2.456?",
+    "value_column_pairs": [
+      {"value_span": "2.456", "column": "Average Attendance League", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the money won by Frank Nobilo?",
+    "value_column_pairs": [
+      {"value_span": "Frank Nobilo", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What television service is in italy and is in english?",
+    "value_column_pairs": [
+      {"value_span": "italy", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "english", "column": "Language", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the largest crowd where the home team was Fitzroy?",
+    "value_column_pairs": [
+      {"value_span": "Fitzroy", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the production code for number in season being 21",
+    "value_column_pairs": [
+      {"value_span": "21", "column": "No. in season", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What place is David Graham in?",
+    "value_column_pairs": [
+      {"value_span": "David Graham", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What gender has a local board of albert\u2013eden with a roll of more than 232 and Decile of 5?",
+    "value_column_pairs": [
+      {"value_span": "albert\u2013eden", "column": "Local board", "match_reason": "place_to_location_column"},
+      {"value_span": "232", "column": "Roll", "match_reason": "number_to_numeric_column"},
+      {"value_span": "5", "column": "Decile", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What shows for Southbridge when the Model number is amd-640 chipset?",
+    "value_column_pairs": [
+      {"value_span": "amd-640 chipset", "column": "Model", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is High Points, when Game is \"5\"?",
+    "value_column_pairs": [
+      {"value_span": "5", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was their opponent in game 4?",
+    "value_column_pairs": [
+      {"value_span": "4", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the production code of the episode directed by Rondell Sheridan? ",
+    "value_column_pairs": [
+      {"value_span": "Rondell Sheridan", "column": "Directed by", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "Which pick has a school/club team that is kentucky?",
+    "value_column_pairs": [
+      {"value_span": "kentucky", "column": "School/Club Team", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which player has montana as the school/club team?",
+    "value_column_pairs": [
+      {"value_span": "montana", "column": "School/Club Team", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many viewers in millions for episode \"sokka's master\"?",
+    "value_column_pairs": [
+      {"value_span": "sokka's master", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "Which Against is the highest one that has a Difference of 12?",
+    "value_column_pairs": [
+      {"value_span": "12", "column": "Difference", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total stellar mass of the type m0?",
+    "value_column_pairs": [
+      {"value_span": "m0", "column": "Type", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the music for choreographer sabina dalfj\u00e4ll?",
+    "value_column_pairs": [
+      {"value_span": "sabina dalfj\u00e4ll", "column": "Choreographer(s)", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many points for the cooper car company after 1959?",
+    "value_column_pairs": [
+      {"value_span": "cooper car company", "column": "Entrant", "match_reason": "name_to_name_column"},
+      {"value_span": "1959", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the sum of the prominence in m of moussa ali terara peak?",
+    "value_column_pairs": [
+      {"value_span": "moussa ali terara", "column": "Peak", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which College has a Position of ol, and a Pick # smaller than 32?",
+    "value_column_pairs": [
+      {"value_span": "ol", "column": "Position", "match_reason": "category_to_category_column"},
+      {"value_span": "32", "column": "Pick #", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What are the japanese title(s) for tv asahi?",
+    "value_column_pairs": [
+      {"value_span": "tv asahi", "column": "TV Station", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the number of the crowd when the Wollongong Hawks were the home team?",
+    "value_column_pairs": [
+      {"value_span": "Wollongong Hawks", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "List the weight for 56.5 kilograms.",
+    "value_column_pairs": [
+      {"value_span": "56.5", "column": "Weight (kg)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the sum of golds for ranks of 6 and totals over 3?",
+    "value_column_pairs": [
+      {"value_span": "6", "column": "Rank", "match_reason": "number_to_id_column"},
+      {"value_span": "3", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  }
+]

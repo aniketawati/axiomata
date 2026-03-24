@@ -1,0 +1,188 @@
+[
+  {
+    "question": "How many viewers (in millions) did episode 1 have?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Series #", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links"]
+  },
+  {
+    "question": "Who has the low lap total in a maserati with grid 2?",
+    "value_column_pairs": [
+      {"value_span": "maserati", "column": "Constructor", "match_reason": "text_to_matching_column"},
+      {"value_span": "2", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Score has Opponents in the final of john bromwich frank sedgman?",
+    "value_column_pairs": [
+      {"value_span": "john bromwich frank sedgman", "column": "Opponents in the final", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the home team's score at the game attended by more than 24,637?",
+    "value_column_pairs": [
+      {"value_span": "24,637", "column": "Crowd", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the average week of the game on November 22, 1964 attended by 48,065?",
+    "value_column_pairs": [
+      {"value_span": "November 22, 1964", "column": "Date", "match_reason": "year_to_year_column"},
+      {"value_span": "48,065", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["value_type_excludes", "verb_phrase_links"]
+  },
+  {
+    "question": "Which class had a machine of RS125R, points over 113, and a rank of 4th?",
+    "value_column_pairs": [
+      {"value_span": "RS125R", "column": "Machine", "match_reason": "text_to_matching_column"},
+      {"value_span": "113", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "4th", "column": "Rank", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Where did the away team score 8.7 (55)?",
+    "value_column_pairs": [
+      {"value_span": "8.7 (55)", "column": "Away team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the total number of field goals for a player that had less than 3 touchdowns, had 4 points, and had less than 4 extra points?",
+    "value_column_pairs": [
+      {"value_span": "3", "column": "Touchdowns", "match_reason": "number_to_numeric_column"},
+      {"value_span": "4", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "4", "column": "Extra points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the height of the player from Las Vegas, NV?",
+    "value_column_pairs": [
+      {"value_span": "Las Vegas, NV", "column": "Home Town", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the time of Troy Bayliss with less than 8 grids?",
+    "value_column_pairs": [
+      {"value_span": "Troy Bayliss", "column": "Rider", "match_reason": "name_to_name_column"},
+      {"value_span": "8", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which Score has a Place of 3?",
+    "value_column_pairs": [
+      {"value_span": "3", "column": "Place", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "When was the show 9 to 5 returning?",
+    "value_column_pairs": [
+      {"value_span": "9 to 5", "column": "Show", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the population in \u0441\u0442\u0430\u0440\u0438 \u0436\u0435\u0434\u043d\u0438\u043a (croatian: stari \u017eednik)?",
+    "value_column_pairs": [
+      {"value_span": "\u0441\u0442\u0430\u0440\u0438 \u0436\u0435\u0434\u043d\u0438\u043a (croatian: stari \u017eednik)", "column": "Cyrillic Name Other Names", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What was the away team's score when Fitzroy's score was 16.27 (123) on May 13, 1950.",
+    "value_column_pairs": [
+      {"value_span": "16.27 (123)", "column": "Home team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the title with an average rating of 22.4%?",
+    "value_column_pairs": [
+      {"value_span": "22.4%", "column": "Average Ratings", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the venue for friendly competition october 16, 2012",
+    "value_column_pairs": [
+      {"value_span": "friendly", "column": "Competition", "match_reason": "category_to_category_column"},
+      {"value_span": "october 16, 2012", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Where is Hip 4872?",
+    "value_column_pairs": [
+      {"value_span": "Hip 4872", "column": "Designation", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Record of 21\u201329\u201310 had what total number of points?",
+    "value_column_pairs": [
+      {"value_span": "21\u201329\u201310", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What year is the Grim Fandango with a windows platform?",
+    "value_column_pairs": [
+      {"value_span": "Grim Fandango", "column": "Game", "match_reason": "text_to_matching_column"},
+      {"value_span": "windows", "column": "Platform(s)", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Label was cataloged as alca-9013?",
+    "value_column_pairs": [
+      {"value_span": "alca-9013", "column": "Catalog", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "What is the population with an area of 1,126.84?",
+    "value_column_pairs": [
+      {"value_span": "1,126.84", "column": "Area", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What Score has a time of 14:10?",
+    "value_column_pairs": [
+      {"value_span": "14:10", "column": "Time", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was the opponent at the qf(r) round?",
+    "value_column_pairs": [
+      {"value_span": "qf(r)", "column": "Round", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "For Pope Paul VI, what is the declension of his papal name?",
+    "value_column_pairs": [
+      {"value_span": "Paul VI", "column": "Papal Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How much Time has a Reaction of 0.155, and an Athlete of kristof beyens, and a Rank smaller than 3?",
+    "value_column_pairs": [
+      {"value_span": "0.155", "column": "React", "match_reason": "number_to_numeric_column"},
+      {"value_span": "kristof beyens", "column": "Athlete", "match_reason": "name_to_name_column"},
+      {"value_span": "3", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]

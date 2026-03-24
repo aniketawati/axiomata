@@ -1,0 +1,186 @@
+[
+  {
+    "question": "Who was sent to the third island in week 1?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Week Sent To Third Island", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the home team at Victoria Park with an Away team score of 7.12 (54) and more than 12,000 people?",
+    "value_column_pairs": [
+      {"value_span": "Victoria Park", "column": "Venue", "match_reason": "place_to_location_column"},
+      {"value_span": "7.12 (54)", "column": "Away team score", "match_reason": "number_to_numeric_column"},
+      {"value_span": "12,000", "column": "Crowd", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the literacy rate published in the 2001 census for the state that saw a 12.66% increase?",
+    "value_column_pairs": [
+      {"value_span": "12.66%", "column": "% Increase", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many games have an Attendance of 19,190?",
+    "value_column_pairs": [
+      {"value_span": "19,190", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which rank's country is the US when the accolade is 40 best albums of the year?",
+    "value_column_pairs": [
+      {"value_span": "US", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "40 best albums of the year", "column": "Accolade", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is City of License, when Frequency MHz is less than 102.5?",
+    "value_column_pairs": [
+      {"value_span": "102.5", "column": "Frequency MHz", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the figure for Pasadena when Tujunga is 36?",
+    "value_column_pairs": [
+      {"value_span": "36", "column": "Tujunga", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the largest money for a t4 place, for Tiger Woods?",
+    "value_column_pairs": [
+      {"value_span": "t4", "column": "Place", "match_reason": "category_to_category_column"},
+      {"value_span": "Tiger Woods", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What company made the chassis when Ferrari made the engine and there were 25 points?",
+    "value_column_pairs": [
+      {"value_span": "Ferrari", "column": "Engine", "match_reason": "team_to_team_column"},
+      {"value_span": "25", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "Name the number of year for 6\u20133, 6\u20132 hard surface",
+    "value_column_pairs": [
+      {"value_span": "6\u20133, 6\u20132", "column": "Score in the final", "match_reason": "number_to_numeric_column"},
+      {"value_span": "hard", "column": "Surface", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the maximum folded value of the team whose stadium is Fraser Field?",
+    "value_column_pairs": [
+      {"value_span": "Fraser Field", "column": "Stadium", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Tell me the highest point with lost point being 33 and league point less than 52",
+    "value_column_pairs": [
+      {"value_span": "33", "column": "Lost point", "match_reason": "number_to_numeric_column"},
+      {"value_span": "52", "column": "league point", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the name of the team whose class is Rotax Light?",
+    "value_column_pairs": [
+      {"value_span": "Rotax Light", "column": "Class", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Calendar has a User-selectable themes of user-selectable themes?",
+    "value_column_pairs": [
+      {"value_span": "user-selectable themes", "column": "User-selectable themes", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "When Tujunga is moderate, what is La Crescenta-Montrose?",
+    "value_column_pairs": [
+      {"value_span": "moderate", "column": "Tujunga", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Player has a Round smaller than 5, and a School/Club Team of florida state?",
+    "value_column_pairs": [
+      {"value_span": "5", "column": "Round", "match_reason": "number_to_id_column"},
+      {"value_span": "florida state", "column": "School/Club Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "what is the total number of\u00a0round\u00a0where\u00a0opponents\u00a0is haugar",
+    "value_column_pairs": [
+      {"value_span": "haugar", "column": "Opponents", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "With a total of 11, and 10 rank points, what are the score points?",
+    "value_column_pairs": [
+      {"value_span": "11", "column": "Total", "match_reason": "number_to_numeric_column"},
+      {"value_span": "10", "column": "Rank points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the class for Appleton, Wisconsin?",
+    "value_column_pairs": [
+      {"value_span": "Appleton, Wisconsin", "column": "City of license", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the title of episode No. 65?",
+    "value_column_pairs": [
+      {"value_span": "65", "column": "\u2116", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "List the pictorals from issues when lindsey roeper was the cover model.",
+    "value_column_pairs": [
+      {"value_span": "lindsey roeper", "column": "Cover model", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average interview score from Kentucky?",
+    "value_column_pairs": [
+      {"value_span": "Kentucky", "column": "State", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the percentage for all in 2007 when all in 2006 was 65%?",
+    "value_column_pairs": [
+      {"value_span": "65%", "column": "2006 All", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which tournament had a partner of Erika Sema?",
+    "value_column_pairs": [
+      {"value_span": "Erika Sema", "column": "Partner", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which college does Peyton Siva play for?",
+    "value_column_pairs": [
+      {"value_span": "Peyton Siva", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  }
+]

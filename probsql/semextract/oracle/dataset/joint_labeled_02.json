@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Which Examples has Australian of \u0259m?",
+    "value_column_pairs": [
+      {"value_span": "\u0259m", "column": "Australian", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Name the date successor seated for delegate seat established",
+    "value_column_pairs": [
+      {"value_span": "delegate seat established", "column": "Reason for change", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Who is the Winning Applicant of Block 10B in Derbyshire Area?",
+    "value_column_pairs": [
+      {"value_span": "10B", "column": "Block", "match_reason": "number_to_id_column"},
+      {"value_span": "Derbyshire", "column": "Area", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What position did Pranita Sahu's team get?",
+    "value_column_pairs": [
+      {"value_span": "Pranita Sahu", "column": "Co-contestant (Yaar vs. Pyaar)", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "On which date was the result w20-0?",
+    "value_column_pairs": [
+      {"value_span": "w20-0", "column": "Result", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who scored the most points in Game 49?",
+    "value_column_pairs": [
+      {"value_span": "49", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What role did Pick # 10 have?",
+    "value_column_pairs": [
+      {"value_span": "10", "column": "Pick #", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What's the description of the buttonholer whose singer part number is 121795 kit 121908 buttonholer?",
+    "value_column_pairs": [
+      {"value_span": "121795 kit 121908 buttonholer", "column": "Singer part number", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the position of the player with 57 goals?",
+    "value_column_pairs": [
+      {"value_span": "57", "column": "Goals", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the sum of Bronze when the total is more than 27?",
+    "value_column_pairs": [
+      {"value_span": "27", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the average 2007 value for a 2006 of 2.8 and 2009 under 20?",
+    "value_column_pairs": [
+      {"value_span": "2.8", "column": "2006", "match_reason": "number_to_numeric_column"},
+      {"value_span": "20", "column": "2009", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "what's the\u00a0points\u00a0with\u00a0tries for\u00a0being 64",
+    "value_column_pairs": [
+      {"value_span": "64", "column": "Tries for", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the box score during a home game of the Adelaide 36ers?",
+    "value_column_pairs": [
+      {"value_span": "Adelaide 36ers", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "What selection was the springfield olympics (nejhl)?",
+    "value_column_pairs": [
+      {"value_span": "springfield olympics (nejhl)", "column": "College/junior/club team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the Tennessee that Georgia of kevin butler is in?",
+    "value_column_pairs": [
+      {"value_span": "kevin butler", "column": "Georgia", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "Name the label for january 24, 2005",
+    "value_column_pairs": [
+      {"value_span": "january 24, 2005", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the total stories that rank number 10?",
+    "value_column_pairs": [
+      {"value_span": "10", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What school did player number 21 play for?",
+    "value_column_pairs": [
+      {"value_span": "21", "column": "No.", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "What is the rank of the candidate with more than 2,211 votes?",
+    "value_column_pairs": [
+      {"value_span": "2,211", "column": "Votes", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which MLS team has the #41 pick?",
+    "value_column_pairs": [
+      {"value_span": "41", "column": "Pick #", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many resorts have 118 runs?",
+    "value_column_pairs": [
+      {"value_span": "118", "column": "Runs", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the fleet number with a 4-6-0 wheel arrangement made in 1890?",
+    "value_column_pairs": [
+      {"value_span": "4-6-0", "column": "Wheel arrangement", "match_reason": "text_to_matching_column"},
+      {"value_span": "1890", "column": "Year made", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which Total is the lowest one that has a Rank smaller than 1?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What grid has 78 laps, and Ronnie Bremer as driver?",
+    "value_column_pairs": [
+      {"value_span": "78", "column": "Laps", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Ronnie Bremer", "column": "Driver", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What percent is the lead margin of 25 that Republican: Jeff Beatty has according to poll source Rasmussen Reports?",
+    "value_column_pairs": [
+      {"value_span": "25", "column": "Lead Margin", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Rasmussen Reports", "column": "Poll Source", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  }
+]

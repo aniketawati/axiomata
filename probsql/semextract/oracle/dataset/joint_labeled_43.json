@@ -1,0 +1,186 @@
+[
+  {
+    "question": "What was the record at the game against the Indians with a loss of Camacho (1-4)?",
+    "value_column_pairs": [
+      {"value_span": "Indians", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "Camacho (1-4)", "column": "Loss", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Little League World Series took place in Parsippany?",
+    "value_column_pairs": [
+      {"value_span": "Parsippany", "column": "City", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "What was the theme for the Top 11 week?",
+    "value_column_pairs": [
+      {"value_span": "Top 11", "column": "Week", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which athlete from Brazil has 2.20 O and 2.25 of XXX?",
+    "value_column_pairs": [
+      {"value_span": "Brazil", "column": "Nationality", "match_reason": "place_to_location_column"},
+      {"value_span": "O", "column": "2.20", "match_reason": "category_to_category_column"},
+      {"value_span": "XXX", "column": "2.25", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which builder completed before 1890 and launched on 9 june 1888?",
+    "value_column_pairs": [
+      {"value_span": "1890", "column": "Completed", "match_reason": "year_to_year_column"},
+      {"value_span": "9 june 1888", "column": "Launched", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "Which Captain 2 has a Result of final?",
+    "value_column_pairs": [
+      {"value_span": "final", "column": "Result", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What all capacities have turbines between 50-60?",
+    "value_column_pairs": [
+      {"value_span": "50-60", "column": "Turbines", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was the judge for the state SD?",
+    "value_column_pairs": [
+      {"value_span": "SD", "column": "State", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many dar are in germany?",
+    "value_column_pairs": [
+      {"value_span": "germany", "column": "Country", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Name the city of license with resolution of sd 480i and official website of telemundo.com",
+    "value_column_pairs": [
+      {"value_span": "sd 480i", "column": "Resolution", "match_reason": "text_to_matching_column"},
+      {"value_span": "telemundo.com", "column": "Official Website", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "what is x when faisaly is 0-0?",
+    "value_column_pairs": [
+      {"value_span": "0-0", "column": "Faisaly", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "In 2010-11, what was the League name?",
+    "value_column_pairs": [
+      {"value_span": "2010-11", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "what is the rounds when the engine is mercedes fo110m?",
+    "value_column_pairs": [
+      {"value_span": "mercedes fo110m", "column": "Engine \u2020", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Skip has a Third of tony angiboust?",
+    "value_column_pairs": [
+      {"value_span": "tony angiboust", "column": "Third", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is Pronunciation Spelled Checked, when Example Spelled Checked is \"tin /t\u026an/ (\"tin\")\"",
+    "value_column_pairs": [
+      {"value_span": "tin /t\u026an/ (\"tin\")", "column": "Example spelled checked", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the Position of the Player, Britton Johnsen?",
+    "value_column_pairs": [
+      {"value_span": "Britton Johnsen", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which class corresponds to more than 2 points, wins greater than 0, and a year earlier than 1973?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "0", "column": "Wins", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1973", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "The original artist Joan Osborne has what result?",
+    "value_column_pairs": [
+      {"value_span": "Joan Osborne", "column": "Original artist", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the enrollment for Ashland University?",
+    "value_column_pairs": [
+      {"value_span": "Ashland", "column": "Location (all in Ohio)", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "context_implies"]
+  },
+  {
+    "question": "Which Features have Yes listed under Datacenter?",
+    "value_column_pairs": [
+      {"value_span": "Yes", "column": "Datacenter", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the Player who has a Country of united states, and a To par of \u20135?",
+    "value_column_pairs": [
+      {"value_span": "united states", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "\u20135", "column": "To par", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Wha is the average number of bronze of hungary, which has less than 1 silver?",
+    "value_column_pairs": [
+      {"value_span": "hungary", "column": "Nation", "match_reason": "place_to_location_column"},
+      {"value_span": "1", "column": "Silver", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "column_name_near_value"]
+  },
+  {
+    "question": "How many viewers did the episode directed by David Nutter draw in?",
+    "value_column_pairs": [
+      {"value_span": "David Nutter", "column": "Directed by", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "what is the City of license that has a 1,400 watts Power",
+    "value_column_pairs": [
+      {"value_span": "1,400 watts", "column": "Power", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the total number of serial number for 24 wd no",
+    "value_column_pairs": [
+      {"value_span": "24", "column": "WD No.", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  }
+]

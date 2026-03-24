@@ -1,0 +1,185 @@
+[
+  {
+    "question": "What is the call sign for 90.9 FM which is in Florida?",
+    "value_column_pairs": [
+      {"value_span": "90.9 FM", "column": "Frequency", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Florida", "column": "State", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the average To Par, when Score is \"72-67-71-72=282\"?",
+    "value_column_pairs": [
+      {"value_span": "72-67-71-72=282", "column": "Score", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Draw that has Points larger than 44 and a Place larger than 1?",
+    "value_column_pairs": [
+      {"value_span": "44", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1", "column": "Place", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Which Result has a Captain 2 of louis burger?",
+    "value_column_pairs": [
+      {"value_span": "louis burger", "column": "Captain 2", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Outcome of the Singles Event in London, England?",
+    "value_column_pairs": [
+      {"value_span": "Singles", "column": "Event", "match_reason": "category_to_category_column"},
+      {"value_span": "London, England", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the series with a North American release date on 2013-09-03?",
+    "value_column_pairs": [
+      {"value_span": "2013-09-03", "column": "North American Release Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Game site week 1?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Week", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which country has a Youth (15-24) Literacy Rate Total of 100% and has an Adult Women Literacy rate of 92%?",
+    "value_column_pairs": [
+      {"value_span": "100%", "column": "Youth (15-24) Literacy Rate Total", "match_reason": "number_to_numeric_column"},
+      {"value_span": "92%", "column": "Adult Women", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "The game with a loss of smith (2-4) ended with what score?",
+    "value_column_pairs": [
+      {"value_span": "smith (2-4)", "column": "Loss", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the total grid with laps less than 2?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Laps", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the total number of chapter for chinese of \u91cb\u5bae",
+    "value_column_pairs": [
+      {"value_span": "\u91cb\u5bae", "column": "Chinese", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the value for the item \"Lost\" when the value \"Tries\" is 47?",
+    "value_column_pairs": [
+      {"value_span": "47", "column": "Tries For", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the score of the game attended by 25,034?",
+    "value_column_pairs": [
+      {"value_span": "25,034", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Away result of 1-2 has what season?",
+    "value_column_pairs": [
+      {"value_span": "1-2", "column": "Away result", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What's the sum of all average yards gained when the gained yards is under 1,276 and lost more than 3 yards?",
+    "value_column_pairs": [
+      {"value_span": "1,276", "column": "Gain", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3", "column": "Loss", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the largest crowd with Away team score of 13.16 (94)?",
+    "value_column_pairs": [
+      {"value_span": "13.16 (94)", "column": "Away team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the score at Tiger Stadium on October 12?",
+    "value_column_pairs": [
+      {"value_span": "Tiger Stadium", "column": "Location", "match_reason": "place_to_location_column"},
+      {"value_span": "October 12", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is listed as the highest Rank that has a Gold that's larger than 0, and Participants that's smaller than 10?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Gold", "match_reason": "number_to_numeric_column"},
+      {"value_span": "10", "column": "Participants", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "How many times is  a to par listed when the player is phil mickelson?",
+    "value_column_pairs": [
+      {"value_span": "phil mickelson", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which event is in the 1952 summer olympics?",
+    "value_column_pairs": [
+      {"value_span": "1952 summer olympics", "column": "Olympics", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Who was the star for the Vara network?",
+    "value_column_pairs": [
+      {"value_span": "Vara", "column": "Network", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was the 2007 actor from Moscow for the shipwreck of Leonty Ibayev?",
+    "value_column_pairs": [
+      {"value_span": "Leonty Ibayev", "column": "Shipwreck", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "How many schools did player number 3 play at?",
+    "value_column_pairs": [
+      {"value_span": "3", "column": "No.", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Datacenter for the Memory modules: hot addition Feature that has Yes listed for Itanium?",
+    "value_column_pairs": [
+      {"value_span": "Yes", "column": "Itanium", "match_reason": "category_to_category_column"},
+      {"value_span": "Memory modules: hot addition", "column": "Features", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many opponents points were there on 11/11/01?",
+    "value_column_pairs": [
+      {"value_span": "11/11/01", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  }
+]

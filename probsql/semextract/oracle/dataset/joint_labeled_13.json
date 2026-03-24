@@ -1,0 +1,190 @@
+[
+  {
+    "question": "How did the ship named proletarij finish its service?",
+    "value_column_pairs": [
+      {"value_span": "proletarij", "column": "Name of ship", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "On what date was game 2 played?",
+    "value_column_pairs": [
+      {"value_span": "game 2", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Player has position of power forward and School/Club Team of Depaul?",
+    "value_column_pairs": [
+      {"value_span": "power forward", "column": "Position", "match_reason": "category_to_category_column"},
+      {"value_span": "Depaul", "column": "School/Club Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many attended the game with an opponent of bye?",
+    "value_column_pairs": [
+      {"value_span": "bye", "column": "Opponent", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average Draw when the Place is larger than 5?",
+    "value_column_pairs": [
+      {"value_span": "5", "column": "Place", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What nationality is the draft pick player going to Minnesota North Stars?",
+    "value_column_pairs": [
+      {"value_span": "Minnesota North Stars", "column": "NHL team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What was Marty Furgol's place when he was paid less than $3,000?",
+    "value_column_pairs": [
+      {"value_span": "Marty Furgol", "column": "Player", "match_reason": "name_to_name_column"},
+      {"value_span": "$3,000", "column": "Money ( $ )", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the sum of Total Passengers when the annual change is 9.7% and the rank is less than 6?",
+    "value_column_pairs": [
+      {"value_span": "9.7%", "column": "Annual change", "match_reason": "number_to_numeric_column"},
+      {"value_span": "6", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which away team played the home team when they scored 14.21 (105)?",
+    "value_column_pairs": [
+      {"value_span": "14.21 (105)", "column": "Home team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What was the total number of Points when the value Difference was 13, and when the value Lost was greater than 3?",
+    "value_column_pairs": [
+      {"value_span": "13", "column": "Difference", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3", "column": "Lost", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the candidates for john boyle",
+    "value_column_pairs": [
+      {"value_span": "john boyle", "column": "Incumbent", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "what's the\u00a0u.s. open cup status\u00a0for regular season\u00a0of 4th, atlantic division ",
+    "value_column_pairs": [
+      {"value_span": "4th, atlantic division", "column": "Regular Season", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which was the district that had first elected greater than 2006 and is democratic?",
+    "value_column_pairs": [
+      {"value_span": "2006", "column": "First Elected", "match_reason": "year_to_year_column"},
+      {"value_span": "democratic", "column": "Party", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What's the acting segment of \u6797\u4f69\u742a lin peiqi's events that are eliminated?",
+    "value_column_pairs": [
+      {"value_span": "\u6797\u4f69\u742a lin peiqi", "column": "Name", "match_reason": "name_to_name_column"},
+      {"value_span": "eliminated", "column": "Status", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "On June 17 in Tiger stadium, what was the average home run?",
+    "value_column_pairs": [
+      {"value_span": "June 17", "column": "Date", "match_reason": "year_to_year_column"},
+      {"value_span": "Tiger stadium", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What date had a tie no of replay, and an away team of watford?",
+    "value_column_pairs": [
+      {"value_span": "replay", "column": "Tie no", "match_reason": "category_to_category_column"},
+      {"value_span": "watford", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which player from Scotland has a To Par score of +7?",
+    "value_column_pairs": [
+      {"value_span": "Scotland", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "+7", "column": "To par", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the current status of the person named Nicholls?",
+    "value_column_pairs": [
+      {"value_span": "Nicholls", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many values of powershell (cmdlet) are valid when unix shell is env, export, set, setenv?",
+    "value_column_pairs": [
+      {"value_span": "env, export, set, setenv", "column": "Unix shell", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who is the poll source that has Republican: Jeff Beatty behind at 27%?",
+    "value_column_pairs": [
+      {"value_span": "27%", "column": "Republican: Jeff Beatty", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which date was game 35 on?",
+    "value_column_pairs": [
+      {"value_span": "35", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Incumbent has a District of California 8?",
+    "value_column_pairs": [
+      {"value_span": "California 8", "column": "District", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the figure for La Crescenta-Montrose when Gelndale is $57,112?",
+    "value_column_pairs": [
+      {"value_span": "$57,112", "column": "Glendale", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What's the total number of points when the vancouver burrards have fewer than 9 losses and more than 24 games?",
+    "value_column_pairs": [
+      {"value_span": "vancouver burrards", "column": "Team Name", "match_reason": "team_to_team_column"},
+      {"value_span": "9", "column": "Losses", "match_reason": "number_to_numeric_column"},
+      {"value_span": "24", "column": "Games", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many Assets (billion $) has an Industry of oil and gas, and a Rank of 9, and a Market Value (billion $) larger than 121.7?",
+    "value_column_pairs": [
+      {"value_span": "oil and gas", "column": "Industry", "match_reason": "category_to_category_column"},
+      {"value_span": "9", "column": "Rank", "match_reason": "number_to_id_column"},
+      {"value_span": "121.7", "column": "Market Value (billion $)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  }
+]

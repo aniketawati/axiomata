@@ -1,0 +1,186 @@
+[
+  {
+    "question": "Name the least touchdowns for joe rogers",
+    "value_column_pairs": [
+      {"value_span": "joe rogers", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "After 1996, what is the average position?",
+    "value_column_pairs": [
+      {"value_span": "1996", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "With a tonnage of 225 what is the ship type?",
+    "value_column_pairs": [
+      {"value_span": "225", "column": "Tonnage", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Losses have a Goal Difference of -16, and less than 8 wins?",
+    "value_column_pairs": [
+      {"value_span": "-16", "column": "Goal Difference", "match_reason": "number_to_numeric_column"},
+      {"value_span": "8", "column": "Wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average Pick when the round was less than 6 for kenneth green?",
+    "value_column_pairs": [
+      {"value_span": "6", "column": "Round", "match_reason": "number_to_id_column"},
+      {"value_span": "kenneth green", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What was the record of the game where the Rockets were the visiting team?",
+    "value_column_pairs": [
+      {"value_span": "Rockets", "column": "Visitor", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "If points against was 371, what is the drawn?",
+    "value_column_pairs": [
+      {"value_span": "371", "column": "Points against", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What farm has a capacity of 70 and is operational?",
+    "value_column_pairs": [
+      {"value_span": "70", "column": "Capacity (MW)", "match_reason": "number_to_numeric_column"},
+      {"value_span": "operational", "column": "Status", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Name the distrct for thomas wilson",
+    "value_column_pairs": [
+      {"value_span": "thomas wilson", "column": "Incumbent", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "what is the total number of goals for when the ties is more than 0, the goals against is more than 35 and the wins is less than 2?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Ties", "match_reason": "number_to_numeric_column"},
+      {"value_span": "35", "column": "Goals Against", "match_reason": "number_to_numeric_column"},
+      {"value_span": "2", "column": "Wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the average number of weeks that the opponent was the Denver Broncos?",
+    "value_column_pairs": [
+      {"value_span": "Denver Broncos", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "When did the episode that had 5.09 million total viewers (both Live and SD types) first air?",
+    "value_column_pairs": [
+      {"value_span": "5.09 million", "column": "Live+SD Total viewers", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "After 2009, who was the player that has a nationality of Canada?",
+    "value_column_pairs": [
+      {"value_span": "Canada", "column": "Nationality", "match_reason": "place_to_location_column"},
+      {"value_span": "2009", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the percentage of Glendale when Pasadena is 14%?",
+    "value_column_pairs": [
+      {"value_span": "14%", "column": "Pasadena", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What were the points on February 10?",
+    "value_column_pairs": [
+      {"value_span": "February 10", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Name the performance nominated for a Capif Award.",
+    "value_column_pairs": [
+      {"value_span": "Capif Award", "column": "Award", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Runs has a Rank of =5 and an Opponent of south australia?",
+    "value_column_pairs": [
+      {"value_span": "=5", "column": "Rank", "match_reason": "number_to_id_column"},
+      {"value_span": "south australia", "column": "Opponent", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "The New York Jets picked someone from what college?",
+    "value_column_pairs": [
+      {"value_span": "New York Jets", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How much is per capita income when median household income is $42,845?",
+    "value_column_pairs": [
+      {"value_span": "$42,845", "column": "Median household income", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average against score of all teams with less than 7 losses, more than 6 draws, and 25 points?",
+    "value_column_pairs": [
+      {"value_span": "7", "column": "Lost", "match_reason": "number_to_numeric_column"},
+      {"value_span": "6", "column": "Drawn", "match_reason": "number_to_numeric_column"},
+      {"value_span": "25", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What was the result of the Top 3 episode?",
+    "value_column_pairs": [
+      {"value_span": "Top 3", "column": "Episode", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the largest rank with 2,080 area?",
+    "value_column_pairs": [
+      {"value_span": "2,080", "column": "Area (sqmi)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is 1996, when 1992 is \"ATP Masters Series\"?",
+    "value_column_pairs": [
+      {"value_span": "ATP Masters Series", "column": "1992", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "At what venue was there a competition with a score reported as 7.14 (56) - 4.5 (29)?",
+    "value_column_pairs": [
+      {"value_span": "7.14 (56) - 4.5 (29)", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the surface when he played with John Alexander?",
+    "value_column_pairs": [
+      {"value_span": "John Alexander", "column": "Partner", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  }
+]

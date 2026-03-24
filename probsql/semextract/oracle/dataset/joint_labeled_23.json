@@ -1,0 +1,185 @@
+[
+  {
+    "question": "Which player from the United States plays defence and was chosen before round 5?",
+    "value_column_pairs": [
+      {"value_span": "defence", "column": "Position", "match_reason": "category_to_category_column"},
+      {"value_span": "5", "column": "Round", "match_reason": "number_to_id_column"},
+      {"value_span": "United States", "column": "Nationality", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes", "position_in_question"]
+  },
+  {
+    "question": "What are the womens singles of imam sodikin irawan andi tandaputra?",
+    "value_column_pairs": [
+      {"value_span": "imam sodikin irawan andi tandaputra", "column": "Mens doubles", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the time for Screen Your Friend?",
+    "value_column_pairs": [
+      {"value_span": "Screen Your Friend", "column": "Winner", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "If the average is 50.16, who is the player?",
+    "value_column_pairs": [
+      {"value_span": "50.16", "column": "Average", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Date has a Runner(s)-up of fred funk?",
+    "value_column_pairs": [
+      {"value_span": "fred funk", "column": "Runner(s)-up", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the Venue of the North Melbourne Away Team?",
+    "value_column_pairs": [
+      {"value_span": "North Melbourne", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the result for a friendly match?",
+    "value_column_pairs": [
+      {"value_span": "friendly match", "column": "Competition", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the resolution of the camera that has 6726 x 5040 pixels and a model of afi 7?",
+    "value_column_pairs": [
+      {"value_span": "6726 x 5040", "column": "Active Pixels", "match_reason": "number_to_numeric_column"},
+      {"value_span": "afi 7", "column": "Model", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the figure for La Canada Flintridge when Pasadena is 34?",
+    "value_column_pairs": [
+      {"value_span": "34", "column": "Pasadena", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "what episode is called jewboy",
+    "value_column_pairs": [
+      {"value_span": "jewboy", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "For the catalog title DP068-07, what formats are available?",
+    "value_column_pairs": [
+      {"value_span": "DP068-07", "column": "Catalog", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many caps have a Date of Birth (Age) of 15 july 1981?",
+    "value_column_pairs": [
+      {"value_span": "15 july 1981", "column": "Date of Birth (Age)", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Name the catalog number for am/pm callanetics",
+    "value_column_pairs": [
+      {"value_span": "am/pm callanetics", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the capacity percentage when the total attendance is 509940?",
+    "value_column_pairs": [
+      {"value_span": "509940", "column": "Total Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the most bronze can be when silver is larger than 2, and the nation is germany, and gold is more than 8?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Silver", "match_reason": "number_to_numeric_column"},
+      {"value_span": "germany", "column": "Nation", "match_reason": "place_to_location_column"},
+      {"value_span": "8", "column": "Gold", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question", "value_type_excludes"]
+  },
+  {
+    "question": "Which space agency launched the herschel space observatory?",
+    "value_column_pairs": [
+      {"value_span": "herschel space observatory", "column": "Name", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the date of the game between Melbourne and Footscray?",
+    "value_column_pairs": [
+      {"value_span": "Melbourne", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "position_in_question"]
+  },
+  {
+    "question": "What is the Coach with a Big Ten that is 2nd (79)?",
+    "value_column_pairs": [
+      {"value_span": "2nd (79)", "column": "Big Ten", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Place of the half marathon Event?",
+    "value_column_pairs": [
+      {"value_span": "half marathon", "column": "Event", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the organisation in 2011 that was nominated and the award of best info-ed programme host?",
+    "value_column_pairs": [
+      {"value_span": "2011", "column": "Year", "match_reason": "year_to_year_column"},
+      {"value_span": "nominated", "column": "Result", "match_reason": "category_to_category_column"},
+      {"value_span": "best info-ed programme host", "column": "Award", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes", "position_in_question"]
+  },
+  {
+    "question": "Where did Essendon play as the home team?",
+    "value_column_pairs": [
+      {"value_span": "Essendon", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "What is the total where the gold is larger than 2?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Gold", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who was the actor in Moscow who did the part done by John Carlisle in London in 2002?",
+    "value_column_pairs": [
+      {"value_span": "John Carlisle", "column": "Actor in London, 2002", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "In which year(s) did the person who has a total of 291 win?",
+    "value_column_pairs": [
+      {"value_span": "291", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Name of the stage with a Length of 16.62km and Time of 15:10?",
+    "value_column_pairs": [
+      {"value_span": "16.62km", "column": "Length", "match_reason": "number_to_numeric_column"},
+      {"value_span": "15:10", "column": "Time", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]

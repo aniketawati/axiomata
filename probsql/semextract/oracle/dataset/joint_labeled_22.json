@@ -1,0 +1,184 @@
+[
+  {
+    "question": "What country joined before 1976, with IHSSA class of 5a, and a size larger than 1,112?",
+    "value_column_pairs": [
+      {"value_span": "1,112", "column": "Size", "match_reason": "number_to_numeric_column"},
+      {"value_span": "5a", "column": "IHSAA Class", "match_reason": "category_to_category_column"},
+      {"value_span": "1976", "column": "Year Joined", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the quantity made of the e-22 class, which has a quantity preserved of 0?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Quantity preserved", "match_reason": "number_to_numeric_column"},
+      {"value_span": "e-22", "column": "Class", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "under belles, which is the most possible created?",
+    "value_column_pairs": [
+      {"value_span": "belles", "column": "Nickname", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the location of the game when the record was 2-1?",
+    "value_column_pairs": [
+      {"value_span": "2-1", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "what is the location/attendance when the record is 9-2?",
+    "value_column_pairs": [
+      {"value_span": "9-2", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is year Built of the Moulin de Momalle Mill?",
+    "value_column_pairs": [
+      {"value_span": "Moulin de Momalle", "column": "Name of mill", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the sum of poverty (2009) HPI-1 % when the GDP (PPP) (2012) US$ per capita of 11,284?",
+    "value_column_pairs": [
+      {"value_span": "11,284", "column": "GDP (PPP) (2012) US$ per capita", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "How many cuts did he make at the PGA championship in 3 events?",
+    "value_column_pairs": [
+      {"value_span": "PGA championship", "column": "Tournament", "match_reason": "text_to_matching_column"},
+      {"value_span": "3", "column": "Events", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What artist's song was performed in the week with theme of Billboard #1?",
+    "value_column_pairs": [
+      {"value_span": "Billboard #1", "column": "Theme", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the date of the game after week 5 against the Houston Oilers?",
+    "value_column_pairs": [
+      {"value_span": "5", "column": "Week", "match_reason": "number_to_id_column"},
+      {"value_span": "Houston Oilers", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which manager has sheffield wednesday as the team?",
+    "value_column_pairs": [
+      {"value_span": "sheffield wednesday", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Name the best director for mother",
+    "value_column_pairs": [
+      {"value_span": "mother", "column": "Best Film", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the average number of podiums in the 32nd position with less than 0 wins?",
+    "value_column_pairs": [
+      {"value_span": "32nd", "column": "Position", "match_reason": "category_to_category_column"},
+      {"value_span": "0", "column": "Wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which college had an overall pick of 9?",
+    "value_column_pairs": [
+      {"value_span": "9", "column": "Overall", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Ofsted has a Capacity of 1677?",
+    "value_column_pairs": [
+      {"value_span": "1677", "column": "Capacity", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "who directed s01e13",
+    "value_column_pairs": [
+      {"value_span": "s01e13", "column": "Television order", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Name the candidate for south carolina 1?",
+    "value_column_pairs": [
+      {"value_span": "south carolina 1", "column": "District", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many elverum are tehre for et sted i scandinavia?",
+    "value_column_pairs": [
+      {"value_span": "et sted i scandinavia", "column": "Song", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What position does the player from arkansas play?",
+    "value_column_pairs": [
+      {"value_span": "arkansas", "column": "School/Country", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "Name the perfect stem for jo",
+    "value_column_pairs": [
+      {"value_span": "jo", "column": "Short stem", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Who had the fastest lap in the Dutch TT Grand Prix? ",
+    "value_column_pairs": [
+      {"value_span": "Dutch TT", "column": "Grand Prix", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "During what period were parliament 11th?",
+    "value_column_pairs": [
+      {"value_span": "11th", "column": "Parliament", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many Draws have a South West DFL of tyrendarra, and less than 10 wins?",
+    "value_column_pairs": [
+      {"value_span": "tyrendarra", "column": "South West DFL", "match_reason": "text_to_matching_column"},
+      {"value_span": "10", "column": "Wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Who was the away team with a tie of 14?",
+    "value_column_pairs": [
+      {"value_span": "14", "column": "Tie no", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Date of October 1 has what average game?",
+    "value_column_pairs": [
+      {"value_span": "October 1", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  }
+]

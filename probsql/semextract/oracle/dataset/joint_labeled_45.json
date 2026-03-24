@@ -1,0 +1,183 @@
+[
+  {
+    "question": "What is the location of the race on 11 November?",
+    "value_column_pairs": [
+      {"value_span": "11 November", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "context_implies"]
+  },
+  {
+    "question": "Name the subject of shiyan",
+    "value_column_pairs": [
+      {"value_span": "shiyan", "column": "Pinyin", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What is the total grid number when Fonsi Nieto had more than 22 laps?",
+    "value_column_pairs": [
+      {"value_span": "Fonsi Nieto", "column": "Rider", "match_reason": "name_to_name_column"},
+      {"value_span": "22", "column": "Laps", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "column_name_near_value"]
+  },
+  {
+    "question": "What Country is Player Sam Snead with a To par of less than 5 from?",
+    "value_column_pairs": [
+      {"value_span": "Sam Snead", "column": "Player", "match_reason": "name_to_name_column"},
+      {"value_span": "5", "column": "To par", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What episode number in the season is titled \"stray\"?",
+    "value_column_pairs": [
+      {"value_span": "stray", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What team used the BRM built car?",
+    "value_column_pairs": [
+      {"value_span": "BRM", "column": "Constructor", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What rnds were there for the phoenix international raceway?",
+    "value_column_pairs": [
+      {"value_span": "phoenix international raceway", "column": "Circuit", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Name the most touchdowns for norcross",
+    "value_column_pairs": [
+      {"value_span": "norcross", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What team with a goals conceded smaller than 25, and a place smaller than 3?",
+    "value_column_pairs": [
+      {"value_span": "25", "column": "Goals Conceded", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3", "column": "Place", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the lowest average of the contestant with an interview of 8.275 and an evening gown bigger than 8.7?",
+    "value_column_pairs": [
+      {"value_span": "8.275", "column": "Interview", "match_reason": "number_to_numeric_column"},
+      {"value_span": "8.7", "column": "Evening Gown", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "How many in lost renomination results were elected first?",
+    "value_column_pairs": [
+      {"value_span": "Lost renomination", "column": "Result", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "context_implies"]
+  },
+  {
+    "question": "What is Opponent, when Game is \"37\"?",
+    "value_column_pairs": [
+      {"value_span": "37", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Pick # for Ryan Strong?",
+    "value_column_pairs": [
+      {"value_span": "Ryan Strong", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which position did Michael Lee play?",
+    "value_column_pairs": [
+      {"value_span": "Michael Lee", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which school has the player that started in 1958?",
+    "value_column_pairs": [
+      {"value_span": "1958", "column": "From", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "context_implies"]
+  },
+  {
+    "question": "How much time is required for less than 35 laps and less than 10 grids?",
+    "value_column_pairs": [
+      {"value_span": "35", "column": "Laps", "match_reason": "number_to_numeric_column"},
+      {"value_span": "10", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the team #2 with Deport as team #1?",
+    "value_column_pairs": [
+      {"value_span": "Deport", "column": "Team #1", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What's the largest amount of wins Texas has? ",
+    "value_column_pairs": [
+      {"value_span": "Texas", "column": "School", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What team played on the road against the Buffalo Bills at home ?",
+    "value_column_pairs": [
+      {"value_span": "Buffalo Bills", "column": "Host Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the protein name of the protein with a sequence identity to human protein of 32%?",
+    "value_column_pairs": [
+      {"value_span": "32%", "column": "sequence identity to human protein", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the goals for when played is larger than 30?",
+    "value_column_pairs": [
+      {"value_span": "30", "column": "Played", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the tyre on the race where Bruce Mclaren had the fastest lap?",
+    "value_column_pairs": [
+      {"value_span": "Bruce Mclaren", "column": "Fastest lap", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the average operation beginning with a length of ampang and over 27 stations?",
+    "value_column_pairs": [
+      {"value_span": "ampang", "column": "Length (km)", "match_reason": "text_to_matching_column"},
+      {"value_span": "27", "column": "Stations", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": " how many\u00a0candidates\u00a0with\u00a0result\u00a0being new seat democratic gain",
+    "value_column_pairs": [
+      {"value_span": "new seat democratic gain", "column": "Result", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the date of the circuit of Monaco?",
+    "value_column_pairs": [
+      {"value_span": "Monaco", "column": "Circuit", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  }
+]

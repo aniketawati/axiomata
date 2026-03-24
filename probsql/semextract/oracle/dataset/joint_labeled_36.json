@@ -1,0 +1,183 @@
+[
+  {
+    "question": "Which batter has the last name Graham?",
+    "value_column_pairs": [
+      {"value_span": "Graham", "column": "Surname", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "On what date the footscray's away game?",
+    "value_column_pairs": [
+      {"value_span": "footscray", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What was the total number of weeks on peak for the Ireland Albums Top 75 chart?",
+    "value_column_pairs": [
+      {"value_span": "Ireland Albums Top 75", "column": "Chart", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What grad has a Time/Retired of + 1:24.3?",
+    "value_column_pairs": [
+      {"value_span": "+ 1:24.3", "column": "Time/Retired", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Record has an Opponent of twins, and a Date of july 25?",
+    "value_column_pairs": [
+      {"value_span": "twins", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "july 25", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "How many million viewers watched episode 6?",
+    "value_column_pairs": [
+      {"value_span": "6", "column": "No. in season", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Results\u00b9 that was a friendly game and played on June 25?",
+    "value_column_pairs": [
+      {"value_span": "friendly", "column": "Type of game", "match_reason": "category_to_category_column"},
+      {"value_span": "June 25", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the lowest Floors, when Built is greater than 1970, and when Name is NV Building 3?",
+    "value_column_pairs": [
+      {"value_span": "1970", "column": "Built", "match_reason": "year_to_year_column"},
+      {"value_span": "NV Building 3", "column": "Name", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total number of 3rd place entries that have exactly 8 total placings?",
+    "value_column_pairs": [
+      {"value_span": "8", "column": "Total placing(s)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "How many dates for the week of 4?",
+    "value_column_pairs": [
+      {"value_span": "4", "column": "Week", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Kickoff (ET) has a Result of w 34\u201323?",
+    "value_column_pairs": [
+      {"value_span": "w 34\u201323", "column": "Result", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total number of dates of successor formal installation when the vacator was Joshua Clayton ( F )?",
+    "value_column_pairs": [
+      {"value_span": "Joshua Clayton ( F )", "column": "Vacator", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What did the away team score when the home team was south melbourne?",
+    "value_column_pairs": [
+      {"value_span": "south melbourne", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "Who was the home team on April 13, 2008 when Itabuna was the away team?",
+    "value_column_pairs": [
+      {"value_span": "April 13, 2008", "column": "Date", "match_reason": "year_to_year_column"},
+      {"value_span": "Itabuna", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "If the skip is Kelly Scott, what is the PF total number?",
+    "value_column_pairs": [
+      {"value_span": "Kelly Scott", "column": "Skip", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Frequency MHz for the station with a call sign of w224bn?",
+    "value_column_pairs": [
+      {"value_span": "w224bn", "column": "Call sign", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the runners for longchamp",
+    "value_column_pairs": [
+      {"value_span": "longchamp", "column": "Course", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the value of D 45 O when the value of D 44 O is \u2190 majority?",
+    "value_column_pairs": [
+      {"value_span": "\u2190 majority", "column": "D 44 O", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the number of public that was there when the vote percentage was 22.9%?",
+    "value_column_pairs": [
+      {"value_span": "22.9%", "column": "Vote percentage", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Where was the game and what was the attendance on April 3?",
+    "value_column_pairs": [
+      {"value_span": "April 3", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Name the least weeks for year less than 2000",
+    "value_column_pairs": [
+      {"value_span": "2000", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which home team had a visitor of Ottawa Senators with a score of 1\u20135?",
+    "value_column_pairs": [
+      {"value_span": "Ottawa Senators", "column": "Visitor", "match_reason": "team_to_team_column"},
+      {"value_span": "1\u20135", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What was the profit before tax when the turnover was 431.06?",
+    "value_column_pairs": [
+      {"value_span": "431.06", "column": "Turnover (\u00a3m)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "Which venue had an extra of Junior Race?",
+    "value_column_pairs": [
+      {"value_span": "Junior Race", "column": "Extra", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the sum of Overall, when College is \"Arkansas State\", and when Pick is less than 17?",
+    "value_column_pairs": [
+      {"value_span": "Arkansas State", "column": "College", "match_reason": "place_to_location_column"},
+      {"value_span": "17", "column": "Pick", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]

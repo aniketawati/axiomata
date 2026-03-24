@@ -1,0 +1,186 @@
+[
+  {
+    "question": "Which country in the 2008 summer olympics is vadim devyatovskiy from?",
+    "value_column_pairs": [
+      {"value_span": "2008 summer olympics", "column": "Olympics", "match_reason": "text_to_matching_column"},
+      {"value_span": "vadim devyatovskiy", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What bowl game was played on Dec. 26, 2007?",
+    "value_column_pairs": [
+      {"value_span": "Dec. 26, 2007", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What district is nick lampson from?",
+    "value_column_pairs": [
+      {"value_span": "nick lampson", "column": "Incumbent", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Who is the winning driver of the race on 5 May?",
+    "value_column_pairs": [
+      {"value_span": "5 May", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Name the represents for los alcarrizos",
+    "value_column_pairs": [
+      {"value_span": "los alcarrizos", "column": "Hometown", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What day were the results 3:2?",
+    "value_column_pairs": [
+      {"value_span": "3:2", "column": "Results\u00b9", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the record for May 31?",
+    "value_column_pairs": [
+      {"value_span": "May 31", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Name the attendance with result of won 1-0",
+    "value_column_pairs": [
+      {"value_span": "won 1-0", "column": "Result", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "On songs with track numbers smaller than number 17 and catalogues of LSP 2231, who are the writer(s)?",
+    "value_column_pairs": [
+      {"value_span": "17", "column": "Track", "match_reason": "number_to_id_column"},
+      {"value_span": "LSP 2231", "column": "Catalogue", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "How many numbers are ending in 1 year?",
+    "value_column_pairs": [
+      {"value_span": "1 year", "column": "Ends", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "Where was the California bowl played with 30,000 attending?",
+    "value_column_pairs": [
+      {"value_span": "California bowl", "column": "Bowl", "match_reason": "text_to_matching_column"},
+      {"value_span": "30,000", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which party had a member from the state of Vic and an Electorate called Wannon?",
+    "value_column_pairs": [
+      {"value_span": "Vic", "column": "State", "match_reason": "place_to_location_column"},
+      {"value_span": "Wannon", "column": "Electorate", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the lowest position with 32-6 points and less then 59 goals when there are more than 38 played?",
+    "value_column_pairs": [
+      {"value_span": "32-6", "column": "Points", "match_reason": "text_to_matching_column"},
+      {"value_span": "59", "column": "Goals against", "match_reason": "number_to_numeric_column"},
+      {"value_span": "38", "column": "Played", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question", "value_type_excludes"]
+  },
+  {
+    "question": "What is Venezuela's total rank?",
+    "value_column_pairs": [
+      {"value_span": "Venezuela", "column": "Country/Territory", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the sum of bronzes for teams with more than 2 gold, ranked under 3, and less than 22 silver?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Gold", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3", "column": "Rank", "match_reason": "number_to_id_column"},
+      {"value_span": "22", "column": "Silver", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question", "value_type_excludes"]
+  },
+  {
+    "question": "Which population areas have \"replaced by us 83\" listed in their remarks section?",
+    "value_column_pairs": [
+      {"value_span": "replaced by us 83", "column": "Remarks", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the average place for a couple with the rank by average of 9 and total smaller than 83?",
+    "value_column_pairs": [
+      {"value_span": "9", "column": "Rank by average", "match_reason": "number_to_id_column"},
+      {"value_span": "83", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the highest number of rounds for a 3:16 fight?",
+    "value_column_pairs": [
+      {"value_span": "3:16", "column": "Time", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What year was the ranking 1?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is galway county's total?",
+    "value_column_pairs": [
+      {"value_span": "galway", "column": "County", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Opponent of the game with a Score of 74-66?",
+    "value_column_pairs": [
+      {"value_span": "74-66", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What did carlton score while away?",
+    "value_column_pairs": [
+      {"value_span": "carlton", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What score has houston texans as the opponent?",
+    "value_column_pairs": [
+      {"value_span": "houston texans", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who is the captain of Middlesbrough?",
+    "value_column_pairs": [
+      {"value_span": "Middlesbrough", "column": "Club", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Who was the winner in the 2008 season?",
+    "value_column_pairs": [
+      {"value_span": "2008", "column": "Season", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  }
+]

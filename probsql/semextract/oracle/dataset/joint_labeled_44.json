@@ -1,0 +1,186 @@
+[
+  {
+    "question": "What is the number of goals with less than 14 wins and a goal difference less than -4?",
+    "value_column_pairs": [
+      {"value_span": "14", "column": "Wins", "match_reason": "number_to_numeric_column"},
+      {"value_span": "-4", "column": "Goal Difference", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What area is Central Takaka School in?",
+    "value_column_pairs": [
+      {"value_span": "Central Takaka School", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the attendance for the home team of Walsall?",
+    "value_column_pairs": [
+      {"value_span": "Walsall", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Where does center Joakim Andersson come from?",
+    "value_column_pairs": [
+      {"value_span": "center", "column": "Position", "match_reason": "category_to_category_column"},
+      {"value_span": "Joakim Andersson", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What state did Hon David Beddall belong to?",
+    "value_column_pairs": [
+      {"value_span": "Hon David Beddall", "column": "Member", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Who were all of the skippers with a corrected time of 3:15:07:27?",
+    "value_column_pairs": [
+      {"value_span": "3:15:07:27", "column": "Corrected time d:hh:mm:ss", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which royal house corresponds to Polyxenos Epiphanes Soter?",
+    "value_column_pairs": [
+      {"value_span": "Polyxenos Epiphanes Soter", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the date of the game when the away team was south melbourne?",
+    "value_column_pairs": [
+      {"value_span": "south melbourne", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the nhl team when the college, junior, club team is toronto marlboros (ohl) and the position is centre?",
+    "value_column_pairs": [
+      {"value_span": "toronto marlboros (ohl)", "column": "College/junior/club team", "match_reason": "team_to_team_column"},
+      {"value_span": "centre", "column": "Position", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which quarterback had an Avg/G of 195.8?",
+    "value_column_pairs": [
+      {"value_span": "195.8", "column": "Avg/G", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was his position in 2009 with 1 win?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Wins", "match_reason": "number_to_numeric_column"},
+      {"value_span": "2009", "column": "Season", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Name the Visitor that has a Home of chicago black hawks on april 20?",
+    "value_column_pairs": [
+      {"value_span": "chicago black hawks", "column": "Home", "match_reason": "team_to_team_column"},
+      {"value_span": "april 20", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Position has a Played larger than 9?",
+    "value_column_pairs": [
+      {"value_span": "9", "column": "Played", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the lowest level of Earnings($) to have a Wins value of 22 and a Rank lower than 2?",
+    "value_column_pairs": [
+      {"value_span": "22", "column": "Wins", "match_reason": "number_to_numeric_column"},
+      {"value_span": "2", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What country is Adam Scott from?",
+    "value_column_pairs": [
+      {"value_span": "Adam Scott", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is Fitzroy's Home team Crowd?",
+    "value_column_pairs": [
+      {"value_span": "Fitzroy", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was Maxim Podoprigora's lowest rank?",
+    "value_column_pairs": [
+      {"value_span": "Maxim Podoprigora", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What game number did the Wildcats play Purdue?",
+    "value_column_pairs": [
+      {"value_span": "Purdue", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many annual interchanges in the millions occurred in 2011-12 when the number of annual entry/exits was 36.609 million? ",
+    "value_column_pairs": [
+      {"value_span": "36.609", "column": "Annual entry/exit (millions) 2011\u201312", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the total number of wickets that have runs under 4600 and matches under 44?",
+    "value_column_pairs": [
+      {"value_span": "4600", "column": "Runs", "match_reason": "number_to_numeric_column"},
+      {"value_span": "44", "column": "Matches", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is Cynthia Mobumba's height?",
+    "value_column_pairs": [
+      {"value_span": "Cynthia Mobumba", "column": "Contestant", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What show has a boar?",
+    "value_column_pairs": [
+      {"value_span": "boar", "column": "Species", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "When the total score is 740, what is tromso?",
+    "value_column_pairs": [
+      {"value_span": "740", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who is the player from the Buffalo Braves with the previous team Los Angeles Lakers and a career with the franchase in 1970?",
+    "value_column_pairs": [
+      {"value_span": "Buffalo Braves", "column": "Team", "match_reason": "team_to_team_column"},
+      {"value_span": "Los Angeles Lakers", "column": "Previous team", "match_reason": "team_to_team_column"},
+      {"value_span": "1970", "column": "Career with the franchise [b ]", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links", "position_in_question"]
+  },
+  {
+    "question": "which Score has a Location of mex cancun?",
+    "value_column_pairs": [
+      {"value_span": "mex cancun", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "question": "What was the nadal in Miami in the final round?",
+    "value_column_pairs": [
+      {
+        "value_span": "final",
+        "column": "Round",
+        "match_reason": "category_to_category_column"
+      },
+      {
+        "value_span": "Miami",
+        "column": "Tournament",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What is the smallest number of goals against when 8 games were lost, and the goals for are 60?",
+    "value_column_pairs": [
+      {
+        "value_span": "8",
+        "column": "Lost",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "60",
+        "column": "Goals For",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What are the Odds for Trainer Barclay Tagg?",
+    "value_column_pairs": [
+      {
+        "value_span": "Barclay Tagg",
+        "column": "Trainer",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What was the conference when Arizona State won the regular season?",
+    "value_column_pairs": [
+      {
+        "value_span": "Arizona State",
+        "column": "Regular Season Winner",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "verb_phrase_links",
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "How many years were there for the 62nd golden globe awards?",
+    "value_column_pairs": [
+      {
+        "value_span": "62nd golden globe awards",
+        "column": "Awards",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "The episode with the title \"Bait\" has what original air date?",
+    "value_column_pairs": [
+      {
+        "value_span": "Bait",
+        "column": "Title",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Name the number of games on june 12",
+    "value_column_pairs": [
+      {
+        "value_span": "june 12",
+        "column": "Date",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What is the party of the maryland 6 district?",
+    "value_column_pairs": [
+      {
+        "value_span": "maryland 6",
+        "column": "District",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the value for congi core 1 if the code name is Redwood and core clock(mhz) is 500?",
+    "value_column_pairs": [
+      {
+        "value_span": "Redwood",
+        "column": "Code name",
+        "match_reason": "text_to_matching_column"
+      },
+      {
+        "value_span": "500",
+        "column": "Core clock ( MHz )",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What Player is a Wide Receiver?",
+    "value_column_pairs": [
+      {
+        "value_span": "Wide Receiver",
+        "column": "Position",
+        "match_reason": "category_to_category_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "In the game where the home team scored 12.17 (89), who was the home team?",
+    "value_column_pairs": [
+      {
+        "value_span": "12.17 (89)",
+        "column": "Home team score",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the tries against when the points are 475?",
+    "value_column_pairs": [
+      {
+        "value_span": "475",
+        "column": "Points for",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What is the name of the network in the United Kingdom which aired in 1985–1992?",
+    "value_column_pairs": [
+      {
+        "value_span": "United Kingdom",
+        "column": "Region/Country",
+        "match_reason": "place_to_location_column"
+      },
+      {
+        "value_span": "1985–1992",
+        "column": "Dates aired",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "Who was the away team playing the home team North Melbourne?",
+    "value_column_pairs": [
+      {
+        "value_span": "North Melbourne",
+        "column": "Home team",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the date where the round is R3?",
+    "value_column_pairs": [
+      {
+        "value_span": "R3",
+        "column": "Round",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the smallest number of Matches with less than 97 losses and a Win rate of 28.68%?",
+    "value_column_pairs": [
+      {
+        "value_span": "28.68%",
+        "column": "Win %",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "97",
+        "column": "Lost",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "value_type_excludes"
+    ]
+  },
+  {
+    "question": "Which Week has an Air Date of august 30, 2008?",
+    "value_column_pairs": [
+      {
+        "value_span": "august 30, 2008",
+        "column": "Air Date",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Which city is Alianza?",
+    "value_column_pairs": [
+      {
+        "value_span": "Alianza",
+        "column": "Name",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "Which Goals For has a Lost of 12, and a Played larger than 34?",
+    "value_column_pairs": [
+      {
+        "value_span": "12",
+        "column": "Lost",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "34",
+        "column": "Played",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Who were the men's doubles champions when the men's singles champion was muljadi?",
+    "value_column_pairs": [
+      {
+        "value_span": "muljadi",
+        "column": "Men's singles",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Name the away team score for lake oval",
+    "value_column_pairs": [
+      {
+        "value_span": "lake oval",
+        "column": "Venue",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What is the highest Pick, when Round is greater than 15, and when College is \"Tennessee\"?",
+    "value_column_pairs": [
+      {
+        "value_span": "15",
+        "column": "Round",
+        "match_reason": "number_to_id_column"
+      },
+      {
+        "value_span": "Tennessee",
+        "column": "College",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "On what date did a home team score 16.10 (106)?",
+    "value_column_pairs": [
+      {
+        "value_span": "16.10 (106)",
+        "column": "Home team score",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "When Australian open is the championship what is the lowest year?",
+    "value_column_pairs": [
+      {
+        "value_span": "Australian open",
+        "column": "Championship",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "what is the average top-5 when the cuts made is more than 34?",
+    "value_column_pairs": [
+      {
+        "value_span": "34",
+        "column": "Cuts made",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  }
+]

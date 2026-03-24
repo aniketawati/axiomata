@@ -1,0 +1,367 @@
+[
+  {
+    "question": "How many average wins for players ranked below 2 with earnings greater than $7,676,552?",
+    "value_column_pairs": [
+      {
+        "value_span": "2",
+        "column": "Rank",
+        "match_reason": "number_to_id_column"
+      },
+      {
+        "value_span": "$7,676,552",
+        "column": "Earnings( $ )",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "value_type_excludes"
+    ]
+  },
+  {
+    "question": "if there are 30 lifts, what is the name of the ski resort?",
+    "value_column_pairs": [
+      {
+        "value_span": "30",
+        "column": "Lifts",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Which result's venue was in Rotterdam, Netherlands?",
+    "value_column_pairs": [
+      {
+        "value_span": "Rotterdam, Netherlands",
+        "column": "Venue",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the lowest number of draws of the NTFA Div 2 Lilydale?",
+    "value_column_pairs": [
+      {
+        "value_span": "Lilydale",
+        "column": "NTFA Div 2",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "Which Notes have a Competition of world championships, and a Position of 2nd?",
+    "value_column_pairs": [
+      {
+        "value_span": "world championships",
+        "column": "Competition",
+        "match_reason": "category_to_category_column"
+      },
+      {
+        "value_span": "2nd",
+        "column": "Position",
+        "match_reason": "category_to_category_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Provide me with the names of all the villages (German) that has 76.3% of Slovenes in 1951.",
+    "value_column_pairs": [
+      {
+        "value_span": "76.3%",
+        "column": "Percent of Slovenes 1951",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "value_type_excludes"
+    ]
+  },
+  {
+    "question": "What is the lowest Top-25 with Wins less than 0?",
+    "value_column_pairs": [
+      {
+        "value_span": "0",
+        "column": "Wins",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the Year of the Coin with an Issue Price of $1089.95 and Mintage less than 900?",
+    "value_column_pairs": [
+      {
+        "value_span": "$1089.95",
+        "column": "Issue Price",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "900",
+        "column": "Mintage",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the team's record on april 23?",
+    "value_column_pairs": [
+      {
+        "value_span": "april 23",
+        "column": "Date",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "When was the game when Footscray was the away team?",
+    "value_column_pairs": [
+      {
+        "value_span": "Footscray",
+        "column": "Away team",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "With the Type is game of friendly and the City Belgrade and November 2 as the Date what were the Results¹?",
+    "value_column_pairs": [
+      {
+        "value_span": "friendly",
+        "column": "Type of game",
+        "match_reason": "category_to_category_column"
+      },
+      {
+        "value_span": "Belgrade",
+        "column": "City",
+        "match_reason": "place_to_location_column"
+      },
+      {
+        "value_span": "November 2",
+        "column": "Date",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What party is Mick Young a member of?",
+    "value_column_pairs": [
+      {
+        "value_span": "Mick Young",
+        "column": "Member",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "verb_phrase_links"
+    ]
+  },
+  {
+    "question": "what is the earliest founded when the home city is mayagüez?",
+    "value_column_pairs": [
+      {
+        "value_span": "mayagüez",
+        "column": "Home city",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the hawthorn score at the year 2000?",
+    "value_column_pairs": [
+      {
+        "value_span": "2000",
+        "column": "Year",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Name the result for new york 8",
+    "value_column_pairs": [
+      {
+        "value_span": "new york 8",
+        "column": "District",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "who directed the episode that 6.3 million u.s. viewers saw?",
+    "value_column_pairs": [
+      {
+        "value_span": "6.3",
+        "column": "U.S. viewers (millions)",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What is the Year of the Film Belle of the Nineties?",
+    "value_column_pairs": [
+      {
+        "value_span": "Belle of the Nineties",
+        "column": "Film",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "WHAT IS THE DATE WITH BOSTON ROAD TEAM AND 126-105 RESULT?",
+    "value_column_pairs": [
+      {
+        "value_span": "BOSTON",
+        "column": "Road Team",
+        "match_reason": "team_to_team_column"
+      },
+      {
+        "value_span": "126-105",
+        "column": "Result",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "How many people were in the crowd with the away team being collingwood?",
+    "value_column_pairs": [
+      {
+        "value_span": "collingwood",
+        "column": "Away team",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What year was the building completed that has 10 floors?",
+    "value_column_pairs": [
+      {
+        "value_span": "10",
+        "column": "Floors",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What party does William J. Jefferson?",
+    "value_column_pairs": [
+      {
+        "value_span": "William J. Jefferson",
+        "column": "Incumbent",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility",
+      "value_type_excludes"
+    ]
+  },
+  {
+    "question": "Which Date has a Game of game 3?",
+    "value_column_pairs": [
+      {
+        "value_span": "game 3",
+        "column": "Game",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "HOw many no votes were there when there were 45.60% yes votes",
+    "value_column_pairs": [
+      {
+        "value_span": "45.60%",
+        "column": "% YES",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "How many results are listed for week 13?",
+    "value_column_pairs": [
+      {
+        "value_span": "13",
+        "column": "Week",
+        "match_reason": "number_to_id_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the sum for the int yards that has an assts more than 3, and player Jay Alford?",
+    "value_column_pairs": [
+      {
+        "value_span": "3",
+        "column": "Assts",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "Jay Alford",
+        "column": "Player",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "value_type_excludes"
+    ]
+  }
+]

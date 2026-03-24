@@ -1,0 +1,182 @@
+[
+  {
+    "question": "What is the result when the 3rd throw is not 8?",
+    "value_column_pairs": [
+      {"value_span": "not 8", "column": "3rd throw", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which season has the regionalliga s\u00fcd (iii) league?",
+    "value_column_pairs": [
+      {"value_span": "regionalliga s\u00fcd (iii)", "column": "League", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who is the visitor on the date december 31?",
+    "value_column_pairs": [
+      {"value_span": "december 31", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the length and duration of the race on April 19?",
+    "value_column_pairs": [
+      {"value_span": "April 19", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the position of the player from Beaumont, Texas?",
+    "value_column_pairs": [
+      {"value_span": "Beaumont, Texas", "column": "Hometown", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the date for the game 35?",
+    "value_column_pairs": [
+      {"value_span": "35", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Tell me the sum of year for 5th result",
+    "value_column_pairs": [
+      {"value_span": "5th", "column": "Result", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What week that shows a game record of 0\u20131?",
+    "value_column_pairs": [
+      {"value_span": "0\u20131", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "HOW MANY YEARS WAS IT FOR THE SCORE (76-73-79-72=300)?",
+    "value_column_pairs": [
+      {"value_span": "(76-73-79-72=300)", "column": "Winning score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "Loss of postponed (rain) rescheduled for may 10 had what record?",
+    "value_column_pairs": [
+      {"value_span": "postponed (rain) rescheduled for may 10", "column": "Loss", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the download of the varies catch-up period?",
+    "value_column_pairs": [
+      {"value_span": "varies", "column": "Catch-up period", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who did the high points in game number 1?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What football stadium has a school enrollment of 43579?",
+    "value_column_pairs": [
+      {"value_span": "43579", "column": "Enrollment", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Nationality for alexandre jacques?",
+    "value_column_pairs": [
+      {"value_span": "alexandre jacques", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What name has Fakel New Urengoy as the 2008 club?",
+    "value_column_pairs": [
+      {"value_span": "Fakel New Urengoy", "column": "2008 club", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total number of Total Congregations, when % LDS is 0.54%, and when Population is greater than 105,275?",
+    "value_column_pairs": [
+      {"value_span": "0.54%", "column": "% LDS", "match_reason": "number_to_numeric_column"},
+      {"value_span": "105,275", "column": "Population", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What percentage of the votes in Oneida did Kerry win?",
+    "value_column_pairs": [
+      {"value_span": "Oneida", "column": "County", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the entrant earlier than 1956 with a Vanwall Special chassis?",
+    "value_column_pairs": [
+      {"value_span": "1956", "column": "Year", "match_reason": "year_to_year_column"},
+      {"value_span": "Vanwall Special", "column": "Chassis", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What character did Vicky Versavel play for 13 years?",
+    "value_column_pairs": [
+      {"value_span": "Vicky Versavel", "column": "Actor", "match_reason": "name_to_name_column"},
+      {"value_span": "13 years", "column": "Duration", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["value_type_excludes", "schema_compatibility"]
+  },
+  {
+    "question": "What is the latest first year with 0 total medals and over 0 golds?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Total", "match_reason": "number_to_numeric_column"},
+      {"value_span": "0", "column": "Gold", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Which teams were in the 2006-07 season?",
+    "value_column_pairs": [
+      {"value_span": "2006-07", "column": "Season", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Country of the Half Marathon Event?",
+    "value_column_pairs": [
+      {"value_span": "Half Marathon", "column": "Event", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the title for episode 2?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Episode #", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the recipient of much ado about nothing for 1973",
+    "value_column_pairs": [
+      {"value_span": "much ado about nothing", "column": "Play", "match_reason": "text_to_matching_column"},
+      {"value_span": "1973", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many election results in 2012 had a Cook PVI of D+16?",
+    "value_column_pairs": [
+      {"value_span": "D+16", "column": "Cook PVI", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  }
+]

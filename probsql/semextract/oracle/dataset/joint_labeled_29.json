@@ -1,0 +1,184 @@
+[
+  {
+    "question": "What is 2011, when 2010 is \"WTA Premier 5 Tournaments\"?",
+    "value_column_pairs": [
+      {"value_span": "WTA Premier 5 Tournaments", "column": "2010", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What tournament had a victory of a 1 stroke margin and the final winning score 69-75-71-70?",
+    "value_column_pairs": [
+      {"value_span": "1 stroke", "column": "Margin of victory", "match_reason": "text_to_matching_column"},
+      {"value_span": "69-75-71-70", "column": "Winning score", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "WhichScore has a Location Attendance of seattle center coliseum 11,497?",
+    "value_column_pairs": [
+      {"value_span": "seattle center coliseum 11,497", "column": "Location Attendance", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "With a Col (m) larger than 2012, what is Mount Kazbek's Prominence (m)?",
+    "value_column_pairs": [
+      {"value_span": "2012", "column": "Col (m)", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Mount Kazbek", "column": "Peak", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What's the highest First Elected with a Result of Re-elected and DIstrict of California 5?",
+    "value_column_pairs": [
+      {"value_span": "Re-elected", "column": "Result", "match_reason": "category_to_category_column"},
+      {"value_span": "California 5", "column": "District", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What building in Louisville had more than 35 floors?",
+    "value_column_pairs": [
+      {"value_span": "Louisville", "column": "City", "match_reason": "place_to_location_column"},
+      {"value_span": "35", "column": "Floors", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the Wins of the Top-25 of 1 and 7 Events?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Top-25", "match_reason": "number_to_numeric_column"},
+      {"value_span": "7", "column": "Events", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What day has a callback Venue of total tickets to hollywood? Question",
+    "value_column_pairs": [
+      {"value_span": "total tickets to hollywood", "column": "Callback Venue", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Full Word, when Case Suffix (case) is \"-sa (dative)\"?",
+    "value_column_pairs": [
+      {"value_span": "-sa (dative)", "column": "case suffix (case)", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the To Par score for the player from South Africa?",
+    "value_column_pairs": [
+      {"value_span": "South Africa", "column": "Country", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "what is the winning score when the tournament is safeco classic?",
+    "value_column_pairs": [
+      {"value_span": "safeco classic", "column": "Tournament", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What position does Mario Kasun play?",
+    "value_column_pairs": [
+      {"value_span": "Mario Kasun", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the date of Game 50?",
+    "value_column_pairs": [
+      {"value_span": "50", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the connection for the proxyconn web accelerator web client accelerator?",
+    "value_column_pairs": [
+      {"value_span": "proxyconn web accelerator", "column": "Web client accelerator", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which player is from Tampa, Florida?",
+    "value_column_pairs": [
+      {"value_span": "Tampa, Florida", "column": "Hometown", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Which manager has Manchester City as the team?",
+    "value_column_pairs": [
+      {"value_span": "Manchester City", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What Nation of citizenship has a stock car vehicle with a year of 1999?",
+    "value_column_pairs": [
+      {"value_span": "stock car", "column": "Type of vehicle", "match_reason": "category_to_category_column"},
+      {"value_span": "1999", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the sum of drawn that has a played more than 12?",
+    "value_column_pairs": [
+      {"value_span": "12", "column": "Played", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the 2007 for the 2003 desert prince?",
+    "value_column_pairs": [
+      {"value_span": "desert prince", "column": "2003", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the attendance when the st kilda score is 13.10.88?",
+    "value_column_pairs": [
+      {"value_span": "13.10.88", "column": "St Kilda score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who had the most the most rebounds and how many did they have on April 1?",
+    "value_column_pairs": [
+      {"value_span": "April 1", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Name the report on 20 may",
+    "value_column_pairs": [
+      {"value_span": "20 may", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What is the tie no for the home team swansea city?",
+    "value_column_pairs": [
+      {"value_span": "swansea city", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "what's the\u00a0computing mechanbeingm\u00a0with\u00a0name\u00a0being atanasoff\u2013berry computer (us)",
+    "value_column_pairs": [
+      {"value_span": "atanasoff\u2013berry computer (us)", "column": "Name", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is 2006/07, when 2008/09 is LQ, and when 2010/11 is Not Held?",
+    "value_column_pairs": [
+      {"value_span": "LQ", "column": "2008/ 09", "match_reason": "category_to_category_column"},
+      {"value_span": "Not Held", "column": "2010/ 11", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "question": "What year was incumbent Claude Fuller first elected? ",
+    "value_column_pairs": [
+      {"value_span": "Claude Fuller", "column": "Incumbent", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many positions have 14 wins, goals against of 61 and fewer than 19 losses?",
+    "value_column_pairs": [
+      {"value_span": "14", "column": "Wins", "match_reason": "number_to_numeric_column"},
+      {"value_span": "61", "column": "Goals against", "match_reason": "number_to_numeric_column"},
+      {"value_span": "19", "column": "Losses", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the original Danish air date of \"Episode 17\"? ",
+    "value_column_pairs": [
+      {"value_span": "Episode 17", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What is the date of the poll with Goldberg at 26%?",
+    "value_column_pairs": [
+      {"value_span": "26%", "column": "Goldberg", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Position has a Player of gibril wilson?",
+    "value_column_pairs": [
+      {"value_span": "gibril wilson", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What's the i_{high} value when C_{low} is 250.5?",
+    "value_column_pairs": [
+      {"value_span": "250.5", "column": "C_{low}", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total number of field goals of Denan Kemp, who has more than 4 tries, more than 32 points, and 0 goals?",
+    "value_column_pairs": [
+      {"value_span": "Denan Kemp", "column": "Player", "match_reason": "name_to_name_column"},
+      {"value_span": "4", "column": "Tries", "match_reason": "number_to_numeric_column"},
+      {"value_span": "32", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "0", "column": "Goals", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question", "value_type_excludes"]
+  },
+  {
+    "question": "What was the time of the games that took place at the cassell coliseum \u2022 blacksburg, va?",
+    "value_column_pairs": [
+      {"value_span": "cassell coliseum \u2022 blacksburg, va", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Name the hits for years before 1883",
+    "value_column_pairs": [
+      {"value_span": "1883", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What model is the n\u00b7m (lb\u00b7ft)@1500-2500 torque?",
+    "value_column_pairs": [
+      {"value_span": "n\u00b7m (lb\u00b7ft)@1500-2500", "column": "Torque", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Score has a December smaller than 14, and a Game of 12?",
+    "value_column_pairs": [
+      {"value_span": "14", "column": "December", "match_reason": "number_to_numeric_column"},
+      {"value_span": "12", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the Result for Goal 3?",
+    "value_column_pairs": [
+      {"value_span": "3", "column": "Goal", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Height (cm) has a Birthplace of new canaan, connecticut?",
+    "value_column_pairs": [
+      {"value_span": "new canaan, connecticut", "column": "Birthplace", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the score in the year 2004?",
+    "value_column_pairs": [
+      {"value_span": "2004", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "When did Manchester United play against Bristol City with an H/A of A?",
+    "value_column_pairs": [
+      {"value_span": "Bristol City", "column": "Opponents", "match_reason": "team_to_team_column"},
+      {"value_span": "A", "column": "H / A", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is Call Sign, when ERP W is greater than 50?",
+    "value_column_pairs": [
+      {"value_span": "50", "column": "ERP W", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total of Caps when player born 13 December 1977?",
+    "value_column_pairs": [
+      {"value_span": "13 December 1977", "column": "Date of Birth (Age)", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What did United States place when the player was Raymond Floyd?",
+    "value_column_pairs": [
+      {"value_span": "United States", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "Raymond Floyd", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What were the losses when the byes were less than 0?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Byes", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many locations hosted Claudia Kohde-Kilsch Eva Pfaff?",
+    "value_column_pairs": [
+      {"value_span": "Claudia Kohde-Kilsch Eva Pfaff", "column": "Opponents", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the capacity of code f4r?",
+    "value_column_pairs": [
+      {"value_span": "f4r", "column": "Code", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was Gary Player's highest total when his To par was over 15?",
+    "value_column_pairs": [
+      {"value_span": "Gary Player", "column": "Player", "match_reason": "name_to_name_column"},
+      {"value_span": "15", "column": "To par", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "How many civil liberties 2013 values are associated with a 2010 political rights value of 6, civil liberties 2012 values over 5, and political rights 2011 under 6?",
+    "value_column_pairs": [
+      {"value_span": "6", "column": "Political Rights 2010", "match_reason": "number_to_numeric_column"},
+      {"value_span": "5", "column": "Civil Liberties 2012", "match_reason": "number_to_numeric_column"},
+      {"value_span": "6", "column": "Political Rights 2011", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the Name of the Grondzeiler Mill?",
+    "value_column_pairs": [
+      {"value_span": "Grondzeiler", "column": "Type", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What is the average number of silver medals for countries with 0 gold and rank under 3?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Gold", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3", "column": "Rank", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  }
+]

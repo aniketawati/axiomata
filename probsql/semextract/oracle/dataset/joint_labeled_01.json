@@ -1,0 +1,186 @@
+[
+  {
+    "question": "Who had the high rebounds on January 24?",
+    "value_column_pairs": [
+      {"value_span": "January 24", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What's the time/retired for a grid of 14?",
+    "value_column_pairs": [
+      {"value_span": "14", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "what is the special edition where the english version is nick stewart?",
+    "value_column_pairs": [
+      {"value_span": "nick stewart", "column": "English version", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the total average for Rank entries where the Lane listed is smaller than 4 and the Nationality listed is San Marino?",
+    "value_column_pairs": [
+      {"value_span": "4", "column": "Lane", "match_reason": "number_to_id_column"},
+      {"value_span": "San Marino", "column": "Nationality", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "How many overalls have charley barnes as the name, with a pick less than 3?",
+    "value_column_pairs": [
+      {"value_span": "charley barnes", "column": "Name", "match_reason": "name_to_name_column"},
+      {"value_span": "3", "column": "Pick", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "List the population density per kilometer for the city of calintaan?",
+    "value_column_pairs": [
+      {"value_span": "calintaan", "column": "Municipality", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the round in Finland with a draw for method?",
+    "value_column_pairs": [
+      {"value_span": "Finland", "column": "Location", "match_reason": "place_to_location_column"},
+      {"value_span": "draw", "column": "Method", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is Country, when Total is less than 290, and when Year(s) Won is 1960?",
+    "value_column_pairs": [
+      {"value_span": "290", "column": "Total", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1960", "column": "Year(s) won", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "When was the status test match with an opposing team of south africa?",
+    "value_column_pairs": [
+      {"value_span": "test match", "column": "Status", "match_reason": "category_to_category_column"},
+      {"value_span": "south africa", "column": "Opposing Teams", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the date of the game with a score of 2\u20131?",
+    "value_column_pairs": [
+      {"value_span": "2\u20131", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Attendance has a Date of september 29, 1968, and a Week smaller than 3?",
+    "value_column_pairs": [
+      {"value_span": "september 29, 1968", "column": "Date", "match_reason": "year_to_year_column"},
+      {"value_span": "3", "column": "Week", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "When danilo di luca is the winner who is the general classification? ",
+    "value_column_pairs": [
+      {"value_span": "danilo di luca", "column": "Winner", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the result in the voting district Kentucky 2?",
+    "value_column_pairs": [
+      {"value_span": "Kentucky 2", "column": "District", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the loss for the game against @ expos, with a save of parrett (2)?",
+    "value_column_pairs": [
+      {"value_span": "@ expos", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "parrett (2)", "column": "Save", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "Who were the away team in tie number 20?",
+    "value_column_pairs": [
+      {"value_span": "20", "column": "Tie no", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What type has a population of 370?",
+    "value_column_pairs": [
+      {"value_span": "370", "column": "Population", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Date with an Opponent that is indiana state college?",
+    "value_column_pairs": [
+      {"value_span": "indiana state college", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the total number of agriculatural panels of the composition with more than 3 National Universities of Ireland?",
+    "value_column_pairs": [
+      {"value_span": "3", "column": "National University of Ireland", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who was the centerfold model in the issue where Fergie answered the \"20 questions\"?",
+    "value_column_pairs": [
+      {"value_span": "Fergie", "column": "20 Questions", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "Where was the game played on 20 may?",
+    "value_column_pairs": [
+      {"value_span": "20 may", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the episode number of  \"you gonna do that the rest of your life?\"",
+    "value_column_pairs": [
+      {"value_span": "you gonna do that the rest of your life?", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "If the height order is 1 and the soundfield type is mixed-order, what are all the channels?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Height order", "match_reason": "number_to_numeric_column"},
+      {"value_span": "mixed-order", "column": "Soundfield type", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the Depart de la main gauche of the do Mode?",
+    "value_column_pairs": [
+      {"value_span": "do", "column": "Mode", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Name the team for january 17",
+    "value_column_pairs": [
+      {"value_span": "january 17", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "what is the total tonnage grt of the cargo ship(s) sunk or captured on 4 feb 16?",
+    "value_column_pairs": [
+      {"value_span": "cargo ship", "column": "Type", "match_reason": "category_to_category_column"},
+      {"value_span": "4 feb 16", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]

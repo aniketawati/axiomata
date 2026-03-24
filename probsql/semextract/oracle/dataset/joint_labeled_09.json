@@ -1,0 +1,372 @@
+[
+  {
+    "question": "What was the team's score on April 1?",
+    "value_column_pairs": [
+      {
+        "value_span": "April 1",
+        "column": "Date",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "WHAT YEAR HAS A SILVER FOR MATTHIAS MERZ?",
+    "value_column_pairs": [
+      {
+        "value_span": "MATTHIAS MERZ",
+        "column": "Silver",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the sum of week number(s) had an attendance of 61,985?",
+    "value_column_pairs": [
+      {
+        "value_span": "61,985",
+        "column": "Attendance",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What are the notes in 1981?",
+    "value_column_pairs": [
+      {
+        "value_span": "1981",
+        "column": "Year",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What source has a cardwell of 20%?",
+    "value_column_pairs": [
+      {
+        "value_span": "20%",
+        "column": "Cardwell",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "How many games played have 4.7 as points per game?",
+    "value_column_pairs": [
+      {
+        "value_span": "4.7",
+        "column": "Points per game",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Which episode had an official ITV1 HD rating of 1.185 million? ",
+    "value_column_pairs": [
+      {
+        "value_span": "1.185",
+        "column": "Official ITV1 HD rating (millions)",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "How many production codes had a total number in the season of 8?",
+    "value_column_pairs": [
+      {
+        "value_span": "8",
+        "column": "No. in season",
+        "match_reason": "number_to_id_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "Name the constructor for number 10",
+    "value_column_pairs": [
+      {
+        "value_span": "10",
+        "column": "No",
+        "match_reason": "number_to_id_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "In 2011 which sport had the year award?",
+    "value_column_pairs": [
+      {
+        "value_span": "2011",
+        "column": "Year of award",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is Season, when Goals is less than 6, and when Team is \"Tarbiat Yazd\"?",
+    "value_column_pairs": [
+      {
+        "value_span": "6",
+        "column": "Goals",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "Tarbiat Yazd",
+        "column": "Team",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "On what date was the attendance at TD Garden 18,624?",
+    "value_column_pairs": [
+      {
+        "value_span": "TD Garden 18,624",
+        "column": "Location Attendance",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What day does the team play at punt road oval?",
+    "value_column_pairs": [
+      {
+        "value_span": "punt road oval",
+        "column": "Venue",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "verb_phrase_links",
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What is the production number for the episode directed by Robert McKimson named Mice Follies?",
+    "value_column_pairs": [
+      {
+        "value_span": "Robert McKimson",
+        "column": "Director",
+        "match_reason": "name_to_name_column"
+      },
+      {
+        "value_span": "Mice Follies",
+        "column": "Title",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "verb_phrase_links"
+    ]
+  },
+  {
+    "question": "What is the lowest decile with a state authority and Midhirst school?",
+    "value_column_pairs": [
+      {
+        "value_span": "state",
+        "column": "Authority",
+        "match_reason": "category_to_category_column"
+      },
+      {
+        "value_span": "Midhirst school",
+        "column": "Name",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "How many against have a status of first test?",
+    "value_column_pairs": [
+      {
+        "value_span": "first test",
+        "column": "Status",
+        "match_reason": "category_to_category_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "When bergen is 88, what is the alesund?",
+    "value_column_pairs": [
+      {
+        "value_span": "88",
+        "column": "Bergen",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What was the home team when the Geelong away team had a score of 7.13 (55)?",
+    "value_column_pairs": [
+      {
+        "value_span": "7.13 (55)",
+        "column": "Away team score",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "Geelong",
+        "column": "Away team",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "After the March 15 game, what was the team's record?",
+    "value_column_pairs": [
+      {
+        "value_span": "March 15",
+        "column": "Date",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "For teams that won exactly 15, how many points were scored?",
+    "value_column_pairs": [
+      {
+        "value_span": "15",
+        "column": "Won",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What is the total championships of James Henry that has a league cup more than 1?",
+    "value_column_pairs": [
+      {
+        "value_span": "James Henry",
+        "column": "Name",
+        "match_reason": "name_to_name_column"
+      },
+      {
+        "value_span": "1",
+        "column": "League Cup",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "value_type_excludes"
+    ]
+  },
+  {
+    "question": "What date has 2006 fifa world cup qualification as the competition, and alamodome, san antonio, united States as the venue?",
+    "value_column_pairs": [
+      {
+        "value_span": "2006 fifa world cup qualification",
+        "column": "Competition",
+        "match_reason": "text_to_matching_column"
+      },
+      {
+        "value_span": "alamodome, san antonio, united States",
+        "column": "Venue",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Which competition was held at Addis Ababa?",
+    "value_column_pairs": [
+      {
+        "value_span": "Addis Ababa",
+        "column": "Location",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "verb_phrase_links",
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "Which of the lowest FA Trophys involved the Forest Green Rovers club when the play-offs number was bigger than 0?",
+    "value_column_pairs": [
+      {
+        "value_span": "Forest Green Rovers",
+        "column": "Club",
+        "match_reason": "team_to_team_column"
+      },
+      {
+        "value_span": "0",
+        "column": "Play-offs",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Which label released the catalog Magik Muzik CD 07 on 28 March 2007?",
+    "value_column_pairs": [
+      {
+        "value_span": "28 March 2007",
+        "column": "Date",
+        "match_reason": "year_to_year_column"
+      },
+      {
+        "value_span": "Magik Muzik CD 07",
+        "column": "Catalog",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "question": "Which slope length has a type of surface lift, and an elevation groundstation smaller than 1974, and a construction year(s) of 1971, and a Name or route of alpmatten 1?",
+    "value_column_pairs": [
+      {"value_span": "surface lift", "column": "type", "match_reason": "category_to_category_column"},
+      {"value_span": "1974", "column": "elevation groundstation", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1971", "column": "construction year(s)", "match_reason": "year_to_year_column"},
+      {"value_span": "alpmatten 1", "column": "Name or route", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "If there were 14 in 1990 and 6 survived how many were destroyed?",
+    "value_column_pairs": [
+      {"value_span": "14", "column": "1990", "match_reason": "number_to_numeric_column"},
+      {"value_span": "6", "column": "survived", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What is Votes (%), when Episode is \"1x03\"?",
+    "value_column_pairs": [
+      {"value_span": "1x03", "column": "Episode", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average rank when the bronze is larger than 1, and silver is less than 0?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Bronze", "match_reason": "number_to_numeric_column"},
+      {"value_span": "0", "column": "Silver", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the name of the plaza where the told for heavy vehicles with 2 axles is r20.50?",
+    "value_column_pairs": [
+      {"value_span": "r20.50", "column": "Heavy vehicle (2 axles)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "What is Class Pos., when Year is before 2013, and when Laps is greater than 175?",
+    "value_column_pairs": [
+      {"value_span": "2013", "column": "Year", "match_reason": "year_to_year_column"},
+      {"value_span": "175", "column": "Laps", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "where has a Score of match reports?",
+    "value_column_pairs": [
+      {"value_span": "match reports", "column": "Score", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the lowest total when the rank is 14 and the gold medals is larger than 0?",
+    "value_column_pairs": [
+      {"value_span": "14", "column": "Rank", "match_reason": "number_to_id_column"},
+      {"value_span": "0", "column": "Gold", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "List the player that scored 4 times.",
+    "value_column_pairs": [
+      {"value_span": "4", "column": "Goals\u00b9", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What was the record after game 37?",
+    "value_column_pairs": [
+      {"value_span": "37", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the highest percent of Bruce Arena when he loses more than 11 games?",
+    "value_column_pairs": [
+      {"value_span": "Bruce Arena", "column": "Coach", "match_reason": "name_to_name_column"},
+      {"value_span": "11", "column": "Loss", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "What was the 2nd leg score between Patronage Sainte-Anne and Asante Kotoko?",
+    "value_column_pairs": [
+      {"value_span": "Asante Kotoko", "column": "Team 1", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What was the year of Meg\u00e1ll az Id\u00f6?",
+    "value_column_pairs": [
+      {"value_span": "Meg\u00e1ll az Id\u00f6", "column": "Original title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What percentage of browsers were using Internet Explorer during the period in which 27.85% were using Firefox?",
+    "value_column_pairs": [
+      {"value_span": "27.85%", "column": "Firefox", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many Seat Orders (Right to Left) have a Series 3 of deborah meaden?",
+    "value_column_pairs": [
+      {"value_span": "deborah meaden", "column": "Series 3", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What number identifies Chris Gatling?",
+    "value_column_pairs": [
+      {"value_span": "Chris Gatling", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What are the remarks for 8 October 2008?",
+    "value_column_pairs": [
+      {"value_span": "8 October 2008", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many people attended when Wake Forest played Virginia Tech?",
+    "value_column_pairs": [
+      {"value_span": "Virginia Tech", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "For teams in the Sun Belt conference, what is the conference record?",
+    "value_column_pairs": [
+      {"value_span": "Sun Belt", "column": "Conference", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many goals did each one of the teams score in the first leg of the match between Liverpool and Trabzonspor?",
+    "value_column_pairs": [
+      {"value_span": "Trabzonspor", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is 1992, when 1999 is \"Year-End Championship\"?",
+    "value_column_pairs": [
+      {"value_span": "Year-End Championship", "column": "1999", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the maximum percentage grown 2000-2008 in burundi",
+    "value_column_pairs": [
+      {"value_span": "burundi", "column": "Nation", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How manywins for dunfermline athletic that has a total final appearances less than 2?",
+    "value_column_pairs": [
+      {"value_span": "dunfermline athletic", "column": "Club", "match_reason": "team_to_team_column"},
+      {"value_span": "2", "column": "Total final appearances", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is stanford's average overall?",
+    "value_column_pairs": [
+      {"value_span": "stanford", "column": "College", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which player has a cap larger than 12 and Clubs of Toulouse?",
+    "value_column_pairs": [
+      {"value_span": "12", "column": "Caps", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Toulouse", "column": "Club/province", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]

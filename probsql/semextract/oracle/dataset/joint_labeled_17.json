@@ -1,0 +1,186 @@
+[
+  {
+    "question": "On January 29, who had the decision of Mason?",
+    "value_column_pairs": [
+      {"value_span": "Mason", "column": "Decision", "match_reason": "name_to_name_column"},
+      {"value_span": "January 29", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which sign has a modern house title of House of Partnerships?",
+    "value_column_pairs": [
+      {"value_span": "House of Partnerships", "column": "Modern title of house", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "In which country is the city of Netanya?",
+    "value_column_pairs": [
+      {"value_span": "Netanya", "column": "City", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is hemophilia's bleeding time?",
+    "value_column_pairs": [
+      {"value_span": "hemophilia", "column": "Condition", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Who is the Winner on June 2, 2007?",
+    "value_column_pairs": [
+      {"value_span": "June 2, 2007", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Name the total number of fin pos for 12 points of accident",
+    "value_column_pairs": [
+      {"value_span": "12", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "accident", "column": "Time/Retired", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the total of laps run by the driver with a grid under 17 and a time of +5.088?",
+    "value_column_pairs": [
+      {"value_span": "+5.088", "column": "Time", "match_reason": "number_to_numeric_column"},
+      {"value_span": "17", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What Area (km 2) is lowest with a type being Apostolic Administration?",
+    "value_column_pairs": [
+      {"value_span": "Apostolic Administration", "column": "Type", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "how many matches did the player that played 23 matches win",
+    "value_column_pairs": [
+      {"value_span": "23", "column": "Matches Played", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "How many total laps did the Chevrolet that won $97,508 make?",
+    "value_column_pairs": [
+      {"value_span": "Chevrolet", "column": "Make", "match_reason": "team_to_team_column"},
+      {"value_span": "$97,508", "column": "Winnings", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What was the competition on 7 June 1999?",
+    "value_column_pairs": [
+      {"value_span": "7 June 1999", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Who was the runner-up when the margin was 1 stroke?",
+    "value_column_pairs": [
+      {"value_span": "1 stroke", "column": "Margin", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What year was Sam Kazman a producer?",
+    "value_column_pairs": [
+      {"value_span": "Sam Kazman", "column": "Producer", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the result in 2000?",
+    "value_column_pairs": [
+      {"value_span": "2000", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What is the total of blank ends at Prince Edward Island?",
+    "value_column_pairs": [
+      {"value_span": "Prince Edward Island", "column": "Locale", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What scores happened on February 9?",
+    "value_column_pairs": [
+      {"value_span": "February 9", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Name the delay when scientific linux release is 5.10",
+    "value_column_pairs": [
+      {"value_span": "5.10", "column": "Scientific Linux Release", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the Place of england with a Score larger than 66?",
+    "value_column_pairs": [
+      {"value_span": "england", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "66", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "column_name_near_value"]
+  },
+  {
+    "question": "Which Country has the Director Chen Kaige?",
+    "value_column_pairs": [
+      {"value_span": "Chen Kaige", "column": "Director", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the average cuts for top-25 more than 13 and top-5 less than 11",
+    "value_column_pairs": [
+      {"value_span": "13", "column": "Top-25", "match_reason": "number_to_numeric_column"},
+      {"value_span": "11", "column": "Top-5", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the lowest attendance for week 2?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Week", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Away team has a Crowd larger than 14,000, and a Home team of melbourne?",
+    "value_column_pairs": [
+      {"value_span": "14,000", "column": "Crowd", "match_reason": "number_to_numeric_column"},
+      {"value_span": "melbourne", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Nation has Points of 300.38?",
+    "value_column_pairs": [
+      {"value_span": "300.38", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average Draws, when Goal Difference is greater than -3, when Goals Against is 30, and when Points is greater than 45?",
+    "value_column_pairs": [
+      {"value_span": "-3", "column": "Goal Difference", "match_reason": "number_to_numeric_column"},
+      {"value_span": "30", "column": "Goals against", "match_reason": "number_to_numeric_column"},
+      {"value_span": "45", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "In what Country is Haugesund?",
+    "value_column_pairs": [
+      {"value_span": "Haugesund", "column": "City", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  }
+]

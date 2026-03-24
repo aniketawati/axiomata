@@ -1,0 +1,187 @@
+[
+  {
+    "question": "What date was the opponent the Boston Yanks?",
+    "value_column_pairs": [
+      {"value_span": "Boston Yanks", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "When was the event in Dublin?",
+    "value_column_pairs": [
+      {"value_span": "Dublin", "column": "City", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the average Episode # with a 7 share and 18\u201349 is less than 2 and the Air Date of may 21, 2009?",
+    "value_column_pairs": [
+      {"value_span": "7", "column": "Share", "match_reason": "number_to_numeric_column"},
+      {"value_span": "2", "column": "18\u201349", "match_reason": "number_to_numeric_column"},
+      {"value_span": "may 21, 2009", "column": "Air Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Score of the Chicago Black Hawks Home game with the Visiting Vancouver Canucks on November 17?",
+    "value_column_pairs": [
+      {"value_span": "Chicago Black Hawks", "column": "Home", "match_reason": "team_to_team_column"},
+      {"value_span": "Vancouver Canucks", "column": "Visitor", "match_reason": "team_to_team_column"},
+      {"value_span": "November 17", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "What is Points, when Points For is \"562\"?",
+    "value_column_pairs": [
+      {"value_span": "562", "column": "Points for", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What Format has the Region of Europe and a Catalog of 74321 45851 2?",
+    "value_column_pairs": [
+      {"value_span": "Europe", "column": "Region", "match_reason": "place_to_location_column"},
+      {"value_span": "74321 45851 2", "column": "Catalog", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "On how many dates was the complete 4th series released?",
+    "value_column_pairs": [
+      {"value_span": "complete 4th series", "column": "Season", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "Which round happened on 10 april 2007?",
+    "value_column_pairs": [
+      {"value_span": "10 april 2007", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the total attendance for a result of 7-23 before 1960?",
+    "value_column_pairs": [
+      {"value_span": "7-23", "column": "Result", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1960", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the title of the single with the peak position of 10 and weeks on chart is less than 19?",
+    "value_column_pairs": [
+      {"value_span": "10", "column": "Peak position", "match_reason": "number_to_numeric_column"},
+      {"value_span": "19", "column": "Weeks on chart", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who are all winning drivers if winning team is Carlin Motorsport and circuit is Croft?",
+    "value_column_pairs": [
+      {"value_span": "Carlin Motorsport", "column": "Winning team", "match_reason": "team_to_team_column"},
+      {"value_span": "Croft", "column": "Circuit", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What visitor has December 14 as the date?",
+    "value_column_pairs": [
+      {"value_span": "December 14", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the score of the game played on May 9?",
+    "value_column_pairs": [
+      {"value_span": "May 9", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "WHAT IS THE RESULT OF THE GAME ON APRIL 23?",
+    "value_column_pairs": [
+      {"value_span": "APRIL 23", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the size of the team that was previously from Central Indiana conference, and is in IHSSA Class 4a?",
+    "value_column_pairs": [
+      {"value_span": "4a", "column": "IHSAA Class", "match_reason": "category_to_category_column"},
+      {"value_span": "Central Indiana", "column": "Previous Conference", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "What is the verb meaning of the word with part 2 \"bant\"?",
+    "value_column_pairs": [
+      {"value_span": "bant", "column": "Part 2", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the per capital income for Charles county?",
+    "value_column_pairs": [
+      {"value_span": "Charles", "column": "County", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the name of the Deputy when the Name was elizabeth black?",
+    "value_column_pairs": [
+      {"value_span": "elizabeth black", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "what's the\u00a0club\u00a0with\u00a0losing bonus\u00a0being 1",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Losing bonus", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the name when the local board is albert\u2013eden, and a Decile of 9?",
+    "value_column_pairs": [
+      {"value_span": "albert\u2013eden", "column": "Local board", "match_reason": "place_to_location_column"},
+      {"value_span": "9", "column": "Decile", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "what is the highest goals against when the wins is less than 1?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the tie no of the game where exeter city was the home team?",
+    "value_column_pairs": [
+      {"value_span": "exeter city", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What is Date of Birth, when Height is \"Head Coach: Adel Shamala\"?",
+    "value_column_pairs": [
+      {"value_span": "Head Coach: Adel Shamala", "column": "Height", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the first episode in the season directed by nelson mccormick?",
+    "value_column_pairs": [
+      {"value_span": "nelson mccormick", "column": "Directed by", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the title of every song, and how many weeks was each song at #1 for One Direction?",
+    "value_column_pairs": [
+      {"value_span": "One Direction", "column": "Artist(s)", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  }
+]

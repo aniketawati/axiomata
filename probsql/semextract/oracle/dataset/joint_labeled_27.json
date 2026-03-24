@@ -1,0 +1,183 @@
+[
+  {
+    "question": "What is the average total in 1969?",
+    "value_column_pairs": [
+      {"value_span": "1969", "column": "Year(s) won", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "The player for which country had a score of 66-72=138?",
+    "value_column_pairs": [
+      {"value_span": "66-72=138", "column": "Score", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many episodes had a production code 120?",
+    "value_column_pairs": [
+      {"value_span": "120", "column": "Production code", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many tries against did the club with 1 drawn and 41 points have?",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Drawn", "match_reason": "number_to_numeric_column"},
+      {"value_span": "41", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "How many weeks had an attendance larger than 84,816?",
+    "value_column_pairs": [
+      {"value_span": "84,816", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How much money has been won by Stephen Ames?",
+    "value_column_pairs": [
+      {"value_span": "Stephen Ames", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many games are shown for the game where andre iguodala (9) had the high rebounds?",
+    "value_column_pairs": [
+      {"value_span": "andre iguodala (9)", "column": "High rebounds", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Points have an Opponent of new york islanders, and a Game smaller than 65?",
+    "value_column_pairs": [
+      {"value_span": "new york islanders", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "65", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "How many F.L. are listed for Formula Three Euroseries?",
+    "value_column_pairs": [
+      {"value_span": "Formula Three Euroseries", "column": "Series", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "How many games were played where the height of the player is 1.92m?",
+    "value_column_pairs": [
+      {"value_span": "1.92m", "column": "Height", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the round for Villa Park?",
+    "value_column_pairs": [
+      {"value_span": "Villa Park", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Which Rank is the lowest one that has Points larger than 52, and a Year larger than 1970?",
+    "value_column_pairs": [
+      {"value_span": "52", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1970", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "For the event with index f9, what's the talent segment?",
+    "value_column_pairs": [
+      {"value_span": "f9", "column": "Index", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which venues resulted in a draw?",
+    "value_column_pairs": [
+      {"value_span": "draw", "column": "Result", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "Which is the year with Mundubbera being smaller than 2,395, and Biggenden smaller than 1,506?",
+    "value_column_pairs": [
+      {"value_span": "2,395", "column": "Mundubbera", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1,506", "column": "Biggenden", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What's the Game SIte with an Opponent of San Diego Chargers?",
+    "value_column_pairs": [
+      {"value_span": "San Diego Chargers", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the result of the game against the Miami Dolphins held at the Riverfront Stadium?",
+    "value_column_pairs": [
+      {"value_span": "Miami Dolphins", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "Riverfront Stadium", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "value_type_excludes"]
+  },
+  {
+    "question": "What is the average year of the Fantasia Section Award?",
+    "value_column_pairs": [
+      {"value_span": "Fantasia Section Award", "column": "Award", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many total cuts were made in events with more than 0 wins and exactly 0 top-5s?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Top-5", "match_reason": "number_to_numeric_column"},
+      {"value_span": "0", "column": "Wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the toll for light vehicles at the plaza between bela bela and modimolle?",
+    "value_column_pairs": [
+      {"value_span": "between bela bela and modimolle", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What position does Antti-Jussi Niemi play?",
+    "value_column_pairs": [
+      {"value_span": "Antti-Jussi Niemi", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "When 1999 is the year how many tournaments are there?",
+    "value_column_pairs": [
+      {"value_span": "1999", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the stadium of the NK Zagreb?",
+    "value_column_pairs": [
+      {"value_span": "NK Zagreb", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "Which venue held a basketball team?",
+    "value_column_pairs": [
+      {"value_span": "basketball", "column": "Sport", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "when the writer is Brad Kern, how many u.s viewers (in millions) had the episode?",
+    "value_column_pairs": [
+      {"value_span": "Brad Kern", "column": "Written by", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  }
+]

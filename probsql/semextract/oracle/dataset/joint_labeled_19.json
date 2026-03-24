@@ -1,0 +1,183 @@
+[
+  {
+    "question": "Who had the high rebounds of the game that Deron Williams (5) had the high assists?",
+    "value_column_pairs": [
+      {"value_span": "Deron Williams (5)", "column": "High assists", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What competition has June 19, 2004 as the date?",
+    "value_column_pairs": [
+      {"value_span": "June 19, 2004", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Tell me the rider that had round 1 points of 7.465 and total more than 16.615",
+    "value_column_pairs": [
+      {"value_span": "7.465", "column": "Round 1 Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "16.615", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the original air date when \"poison ivy\" is the title?",
+    "value_column_pairs": [
+      {"value_span": "\"poison ivy\"", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What was the lowest production code value in series #10?",
+    "value_column_pairs": [
+      {"value_span": "10", "column": "Series #", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the lowest effic with a 58.9 avg/g?",
+    "value_column_pairs": [
+      {"value_span": "58.9", "column": "Avg/G", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What party did incumbent Brooks Hays belong to? ",
+    "value_column_pairs": [
+      {"value_span": "Brooks Hays", "column": "Incumbent", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Name the average ends for weston",
+    "value_column_pairs": [
+      {"value_span": "weston", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the score for Spain?",
+    "value_column_pairs": [
+      {"value_span": "Spain", "column": "Country", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the grid for the Minardi Team USA with laps smaller than 90?",
+    "value_column_pairs": [
+      {"value_span": "Minardi Team USA", "column": "Team", "match_reason": "team_to_team_column"},
+      {"value_span": "90", "column": "Laps", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What was the crowd size at Victoria Park?",
+    "value_column_pairs": [
+      {"value_span": "Victoria Park", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "what team has a score of 11",
+    "value_column_pairs": [
+      {"value_span": "11", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "When was the venue named nassau veterans memorial coliseum established??",
+    "value_column_pairs": [
+      {"value_span": "nassau veterans memorial coliseum", "column": "Venue", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many overalls have a pick greater than 19, with florida as the college?",
+    "value_column_pairs": [
+      {"value_span": "19", "column": "Pick", "match_reason": "number_to_id_column"},
+      {"value_span": "florida", "column": "College", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the purse for the tournament with a winning score of 212 (-4), and a 1st prize of under $105,000?",
+    "value_column_pairs": [
+      {"value_span": "212 (-4)", "column": "Score", "match_reason": "number_to_numeric_column"},
+      {"value_span": "$105,000", "column": "1st Prize( $ )", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "what is the record where the opponent is central connecticut?",
+    "value_column_pairs": [
+      {"value_span": "central connecticut", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Rank of the player with 362 Matches?",
+    "value_column_pairs": [
+      {"value_span": "362", "column": "Matches", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "How many writers write the episode whose director is Jonathan Herron?",
+    "value_column_pairs": [
+      {"value_span": "Jonathan Herron", "column": "Directed by", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the lowest round of the position de player with an overall less than 84?",
+    "value_column_pairs": [
+      {"value_span": "de", "column": "Position", "match_reason": "category_to_category_column"},
+      {"value_span": "84", "column": "Overall", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the country of the player with a t6 place?",
+    "value_column_pairs": [
+      {"value_span": "t6", "column": "Place", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Date has a Week smaller than 8, and an Opponent of atlanta falcons?",
+    "value_column_pairs": [
+      {"value_span": "8", "column": "Week", "match_reason": "number_to_id_column"},
+      {"value_span": "atlanta falcons", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "When the away team scored 11.12 (78), what was the date of the game?",
+    "value_column_pairs": [
+      {"value_span": "11.12 (78)", "column": "Away team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What was the Attendance high on August 28?",
+    "value_column_pairs": [
+      {"value_span": "August 28", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the combined attendance of all games that had a result of w 35-14?",
+    "value_column_pairs": [
+      {"value_span": "w 35-14", "column": "Result", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": " What is the result for the district Maryland 7?",
+    "value_column_pairs": [
+      {"value_span": "Maryland 7", "column": "District", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  }
+]

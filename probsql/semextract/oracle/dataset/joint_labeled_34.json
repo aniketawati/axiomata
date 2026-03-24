@@ -1,0 +1,190 @@
+[
+  {
+    "question": "How many years did the role of Steve Rhoades last?",
+    "value_column_pairs": [
+      {"value_span": "Steve Rhoades", "column": "Role", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What's the IHSAA Class when the school is Seymour?",
+    "value_column_pairs": [
+      {"value_span": "Seymour", "column": "School", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Pick # of 25, and an Overall of 207 has what name?",
+    "value_column_pairs": [
+      {"value_span": "25", "column": "Pick #", "match_reason": "number_to_id_column"},
+      {"value_span": "207", "column": "Overall", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the most october for game less than 1",
+    "value_column_pairs": [
+      {"value_span": "1", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Week has an Opponent of pittsburgh steelers, and an Attendance larger than 47,727?",
+    "value_column_pairs": [
+      {"value_span": "pittsburgh steelers", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "47,727", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "When was Hon Les Johnson in office?",
+    "value_column_pairs": [
+      {"value_span": "Hon Les Johnson", "column": "Member", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "name the title of the episode that ed sherin directed.",
+    "value_column_pairs": [
+      {"value_span": "ed sherin", "column": "Directed by", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the total 60 to 64 when the Oblast\\Age is Nenets in Yamal AO, and the 45 to 49 is bigger than 3,883?",
+    "value_column_pairs": [
+      {"value_span": "Nenets in Yamal AO", "column": "Oblast\\Age", "match_reason": "place_to_location_column"},
+      {"value_span": "3,883", "column": "45 to 49", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average value for Rd 8 in a position less than 2 for Audi Sport Australia?",
+    "value_column_pairs": [
+      {"value_span": "Audi Sport Australia", "column": "Team", "match_reason": "team_to_team_column"},
+      {"value_span": "2", "column": "Position", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "What is Headquarter, when Language is English, and when Type is Independent Online News Portal?",
+    "value_column_pairs": [
+      {"value_span": "English", "column": "Language", "match_reason": "category_to_category_column"},
+      {"value_span": "Independent Online News Portal", "column": "Type", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the wheel arrangement made in 1890?",
+    "value_column_pairs": [
+      {"value_span": "1890", "column": "Year made", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is Turkey's average Gold entry that also has a Bronze entry that is smaller than 2 and the Total is greater than 1?",
+    "value_column_pairs": [
+      {"value_span": "Turkey", "column": "Nation", "match_reason": "place_to_location_column"},
+      {"value_span": "2", "column": "Bronze", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1", "column": "Total", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "It has a FA Cup Goals smaller than 4, and a FA Cup Apps larger than 7, what is the total number of total apps?",
+    "value_column_pairs": [
+      {"value_span": "4", "column": "FA Cup Goals", "match_reason": "number_to_numeric_column"},
+      {"value_span": "7", "column": "FA Cup Apps", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the nickname of the Adrian, Michigan team?",
+    "value_column_pairs": [
+      {"value_span": "Adrian, Michigan", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What date was the episode originally aired that was directed by James Widdoes and the production code is 320?",
+    "value_column_pairs": [
+      {"value_span": "James Widdoes", "column": "Directed by", "match_reason": "name_to_name_column"},
+      {"value_span": "320", "column": "Production code", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "When did the party elected in jun. 1959 enter office?",
+    "value_column_pairs": [
+      {"value_span": "jun. 1959", "column": "Election", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "context_implies"]
+  },
+  {
+    "question": "What year has the vehicle of open wheel and a racing series of formula one with a Nation of citizenship in Germany.",
+    "value_column_pairs": [
+      {"value_span": "open wheel", "column": "Type of vehicle", "match_reason": "category_to_category_column"},
+      {"value_span": "formula one", "column": "Racing series", "match_reason": "text_to_matching_column"},
+      {"value_span": "Germany", "column": "Nation of citizenship", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the result when the score is 0-2?",
+    "value_column_pairs": [
+      {"value_span": "0-2", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Tell me the 2.4km run for points less than 2",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the profession of the celebrity who was featured on season 15 and finished 7th place?",
+    "value_column_pairs": [
+      {"value_span": "15", "column": "Season", "match_reason": "number_to_id_column"},
+      {"value_span": "7th", "column": "Finish", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "How many goals against have 58 points?",
+    "value_column_pairs": [
+      {"value_span": "58", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many new entries this round are there with more than 16 matches and a third round qualifying?",
+    "value_column_pairs": [
+      {"value_span": "16", "column": "Matches", "match_reason": "number_to_numeric_column"},
+      {"value_span": "third round qualifying", "column": "Round", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which athlete, has an 18.55 result",
+    "value_column_pairs": [
+      {"value_span": "18.55", "column": "Result", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "how many categories fall under the category of britons?",
+    "value_column_pairs": [
+      {"value_span": "britons", "column": "Nickname", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "Tell me the aircraft for pzl-104",
+    "value_column_pairs": [
+      {"value_span": "pzl-104", "column": "Versions", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  }
+]

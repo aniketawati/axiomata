@@ -1,0 +1,189 @@
+[
+  {
+    "question": "In what year had the oldest winner?",
+    "value_column_pairs": [
+      {"value_span": "oldest winner", "column": "Superlative", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "How many electronvolts is 3,600 joules?",
+    "value_column_pairs": [
+      {"value_span": "3,600", "column": "joule", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total score when 7 is the average ranking?",
+    "value_column_pairs": [
+      {"value_span": "7", "column": "Average Ranking", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the pinyin for \u062a\u0649\u0632\u0646\u0627\u067e",
+    "value_column_pairs": [
+      {"value_span": "\u062a\u0649\u0632\u0646\u0627\u067e", "column": "Uyghur ( K\u0322ona Yezik\u0322 )", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many number of screenings have an opening film of the journey of vaan nguyen?",
+    "value_column_pairs": [
+      {"value_span": "the journey of vaan nguyen", "column": "Opening Film", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total of the roll with a Decile of 8, and an Area of hororata?",
+    "value_column_pairs": [
+      {"value_span": "8", "column": "Decile", "match_reason": "number_to_numeric_column"},
+      {"value_span": "hororata", "column": "Area", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the total prominence number in m of ethiopia, which has a col in m of 1728 and an elevation less than 3,358?",
+    "value_column_pairs": [
+      {"value_span": "ethiopia", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "1728", "column": "Col (m)", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3,358", "column": "Elevation (m)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Event has 5th Position in the European Championships Competition?",
+    "value_column_pairs": [
+      {"value_span": "5th", "column": "Position", "match_reason": "number_to_numeric_column"},
+      {"value_span": "European Championships", "column": "Competition", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the number of people in attendance at Oakland-Alameda County Coliseum, and game is 2?",
+    "value_column_pairs": [
+      {"value_span": "Oakland-Alameda County Coliseum", "column": "Location", "match_reason": "place_to_location_column"},
+      {"value_span": "2", "column": "Game", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What team has an against more than 8, lost of 7, and the position is 5?",
+    "value_column_pairs": [
+      {"value_span": "8", "column": "Against", "match_reason": "number_to_numeric_column"},
+      {"value_span": "7", "column": "Lost", "match_reason": "number_to_numeric_column"},
+      {"value_span": "5", "column": "Position", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What was the surface for finalist Justine Henin?",
+    "value_column_pairs": [
+      {"value_span": "Justine Henin", "column": "Finalist", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the stadium that had the regular season game?",
+    "value_column_pairs": [
+      {"value_span": "regular season game", "column": "Type of Record", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What is the result with an attendance larger than 10,107 and Celtic as the opponent?",
+    "value_column_pairs": [
+      {"value_span": "10,107", "column": "Attendance", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Celtic", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is Domenik Hixon's average rush?",
+    "value_column_pairs": [
+      {"value_span": "Domenik Hixon", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the most elevated Position that has a Points of 257, and a Bike No littler than 19?",
+    "value_column_pairs": [
+      {"value_span": "257", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "19", "column": "Bike No", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the affiliation when the institution was ohio christian university?",
+    "value_column_pairs": [
+      {"value_span": "ohio christian university", "column": "Institution", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average number of points when the ranking is 7th and the draw is less than 4?",
+    "value_column_pairs": [
+      {"value_span": "7th", "column": "Rank", "match_reason": "number_to_numeric_column"},
+      {"value_span": "4", "column": "Draw", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is Stephen Thompson's School/Club Team?",
+    "value_column_pairs": [
+      {"value_span": "Stephen Thompson", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which date has roma as opponent and a H/A of A?",
+    "value_column_pairs": [
+      {"value_span": "roma", "column": "Opponents", "match_reason": "team_to_team_column"},
+      {"value_span": "A", "column": "H / A", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "In what year was the feature at a 33.3S latitude named? ",
+    "value_column_pairs": [
+      {"value_span": "33.3S", "column": "Latitude", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the number of candidates for # of seats won being 43",
+    "value_column_pairs": [
+      {"value_span": "43", "column": "# of seats won", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "When Essendon was the Home Team, what was the Away Team score?",
+    "value_column_pairs": [
+      {"value_span": "Essendon", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "what is the mountain peak when the location is 37.5775\u00b0n 105.4856\u00b0w?",
+    "value_column_pairs": [
+      {"value_span": "37.5775\u00b0n 105.4856\u00b0w", "column": "Location", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "what is the weeks on chart for the single from france?",
+    "value_column_pairs": [
+      {"value_span": "france", "column": "Country", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "verb_phrase_links"]
+  },
+  {
+    "question": "what is the average tries for the season 2008 warrington wolves with an appearance more than 7?",
+    "value_column_pairs": [
+      {"value_span": "2008 warrington wolves", "column": "Season", "match_reason": "text_to_matching_column"},
+      {"value_span": "7", "column": "Appearance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  }
+]

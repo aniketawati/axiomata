@@ -1,0 +1,187 @@
+[
+  {
+    "question": "at most what number in the series was the episode \"chet episode\"?",
+    "value_column_pairs": [
+      {"value_span": "chet episode", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What team was the opponent in a week earlier than 17 on June 17, 2006?",
+    "value_column_pairs": [
+      {"value_span": "17", "column": "Week", "match_reason": "number_to_id_column"},
+      {"value_span": "June 17, 2006", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the the name of the winner or 2nd  with a weight more than 7.3, and the result was \u2013?",
+    "value_column_pairs": [
+      {"value_span": "7.3", "column": "Weight", "match_reason": "number_to_numeric_column"},
+      {"value_span": "\u2013", "column": "Result", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the highest Points+ number when the Points- number is larger than 1385, a Sets+ number smaller than 37 and a Sets- number larger than 41?",
+    "value_column_pairs": [
+      {"value_span": "1385", "column": "Points\u2013", "match_reason": "number_to_numeric_column"},
+      {"value_span": "37", "column": "Sets+", "match_reason": "number_to_numeric_column"},
+      {"value_span": "41", "column": "Sets\u2013", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the Date of the Competition with a Result of 3\u20130?",
+    "value_column_pairs": [
+      {"value_span": "3\u20130", "column": "Result", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "what's the total number of\u00a0species in the peruvian amazon\u00a0with\u00a08411 species in the world\u00a0",
+    "value_column_pairs": [
+      {"value_span": "8411", "column": "Species in the world", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the latest week with an attendance of 74,162?",
+    "value_column_pairs": [
+      {"value_span": "74,162", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was the on the cover when Bob Vila did the 20 Questions?",
+    "value_column_pairs": [
+      {"value_span": "Bob Vila", "column": "20 Questions", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What Municipality has a Rank of 44?",
+    "value_column_pairs": [
+      {"value_span": "44", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "who are all the visitor with a record of 25\u201318",
+    "value_column_pairs": [
+      {"value_span": "25\u201318", "column": "Record", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the away team of the match with a 356 attendance?",
+    "value_column_pairs": [
+      {"value_span": "356", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "How many winning drivers were the for the rnd equalling 5?",
+    "value_column_pairs": [
+      {"value_span": "5", "column": "Rnd", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "In episode Top 16 (8 Men), what are the themes?",
+    "value_column_pairs": [
+      {"value_span": "Top 16 (8 Men)", "column": "Episode", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the sum of draw with a lost smaller than 6, and a place of 5, and a goals scored less than 29?",
+    "value_column_pairs": [
+      {"value_span": "6", "column": "Lost", "match_reason": "number_to_numeric_column"},
+      {"value_span": "5", "column": "Place", "match_reason": "number_to_id_column"},
+      {"value_span": "29", "column": "Goals Scored", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the points when the lost was 11?",
+    "value_column_pairs": [
+      {"value_span": "11", "column": "Lost", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "what is the date when the round is sf?",
+    "value_column_pairs": [
+      {"value_span": "sf", "column": "Round", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who's the athlete with a wind of 1.7 and from the United States?",
+    "value_column_pairs": [
+      {"value_span": "1.7", "column": "Wind", "match_reason": "number_to_numeric_column"},
+      {"value_span": "United States", "column": "Nationality", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is Beohari's highest number of electorates?",
+    "value_column_pairs": [
+      {"value_span": "Beohari", "column": "Name", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "When Treasurer was treasurer, who was the highway commissioner?",
+    "value_column_pairs": [
+      {"value_span": "Treasurer", "column": "Treasurer", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "At what venue did the team from Collingwood score 7.14 (56) - 4.5 (29)?",
+    "value_column_pairs": [
+      {"value_span": "Collingwood", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "7.14 (56) - 4.5 (29)", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "column_name_near_value"]
+  },
+  {
+    "question": "On what Date was the Score 6\u20134, 6\u20132?",
+    "value_column_pairs": [
+      {"value_span": "6\u20134, 6\u20132", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the quantity preserved of the e-1 class?",
+    "value_column_pairs": [
+      {"value_span": "e-1", "column": "Class", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What year was the b n2t axle arrangement, which has a quantity of 31, manufactured?",
+    "value_column_pairs": [
+      {"value_span": "31", "column": "Quantity", "match_reason": "number_to_numeric_column"},
+      {"value_span": "b n2t", "column": "Axle arrangement ( UIC )", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the lowest number of bronze a short track athlete with 0 gold medals has?",
+    "value_column_pairs": [
+      {"value_span": "short track", "column": "Sport", "match_reason": "category_to_category_column"},
+      {"value_span": "0", "column": "Gold", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "When looking at new entries this round and seeing 8; what number in total is there for clubs remaining?",
+    "value_column_pairs": [
+      {"value_span": "8", "column": "New entries this round", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  }
+]

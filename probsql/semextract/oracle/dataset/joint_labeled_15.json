@@ -1,0 +1,188 @@
+[
+  {
+    "question": "What is the lowest for top-25 with events smaller than 42 in a U.S. Open with a top-10 smaller than 5?",
+    "value_column_pairs": [
+      {"value_span": "42", "column": "Events", "match_reason": "number_to_numeric_column"},
+      {"value_span": "U.S. Open", "column": "Tournament", "match_reason": "text_to_matching_column"},
+      {"value_span": "5", "column": "Top-10", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "what's the\u00a0bubbles\u00a0with\u00a0attribute\u00a0being onpopuphidden",
+    "value_column_pairs": [
+      {"value_span": "onpopuphidden", "column": "Attribute", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the highest Week when the opponent was the los angeles rams, with more than 37,382 in Attendance?",
+    "value_column_pairs": [
+      {"value_span": "los angeles rams", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "37,382", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the lengths behind of Jeremy Rose?",
+    "value_column_pairs": [
+      {"value_span": "Jeremy Rose", "column": "Jockey", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Name the date successor seated for pennsylvania 17th",
+    "value_column_pairs": [
+      {"value_span": "pennsylvania 17th", "column": "District", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "What mean total had a league number of 18, Richard Logan as a player, and a play-offs number smaller than 1?",
+    "value_column_pairs": [
+      {"value_span": "18", "column": "League", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Richard Logan", "column": "Player", "match_reason": "name_to_name_column"},
+      {"value_span": "1", "column": "Play-offs", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the 2007 with ch callaway's copyright in 2003?",
+    "value_column_pairs": [
+      {"value_span": "ch callaway's copyright", "column": "2003", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Where does South Melbourne play?",
+    "value_column_pairs": [
+      {"value_span": "South Melbourne", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the average round score of the player who won in 1978?",
+    "value_column_pairs": [
+      {"value_span": "1978", "column": "Year(s) won", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What was the away team that played against Fitzroy?",
+    "value_column_pairs": [
+      {"value_span": "Fitzroy", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is Oxfordshire Area's Ensemble Name?",
+    "value_column_pairs": [
+      {"value_span": "Oxfordshire", "column": "Area", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Game is the highest one that has Points smaller than 92, and a Score of 1\u20133?",
+    "value_column_pairs": [
+      {"value_span": "92", "column": "Points", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1\u20133", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who won third place in season four?",
+    "value_column_pairs": [
+      {"value_span": "four", "column": "Season", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average Heat Points, when Result is \"Loss\", when Game is greater than 72, and when Date is \"April 21\"?",
+    "value_column_pairs": [
+      {"value_span": "Loss", "column": "Result", "match_reason": "category_to_category_column"},
+      {"value_span": "72", "column": "Game", "match_reason": "number_to_id_column"},
+      {"value_span": "April 21", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "In 1939, what was the finish?",
+    "value_column_pairs": [
+      {"value_span": "1939", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility"]
+  },
+  {
+    "question": "If the away team scored 7.3 (45), what was the home team score?",
+    "value_column_pairs": [
+      {"value_span": "7.3 (45)", "column": "Away team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Platelet count has a Condition of factor v deficiency?",
+    "value_column_pairs": [
+      {"value_span": "factor v deficiency", "column": "Condition", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "When did the High Park Demons play Away?",
+    "value_column_pairs": [
+      {"value_span": "High Park Demons", "column": "Away", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the home team that scored 10.8 (68)?",
+    "value_column_pairs": [
+      {"value_span": "10.8 (68)", "column": "Home team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Number of electorates (2009) has a Constituency number of 46?",
+    "value_column_pairs": [
+      {"value_span": "46", "column": "Constituency number", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the format for super callanetics",
+    "value_column_pairs": [
+      {"value_span": "super callanetics", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is Lost, when Drawn is \"2\", and when Points is \"36\"?",
+    "value_column_pairs": [
+      {"value_span": "2", "column": "Drawn", "match_reason": "number_to_numeric_column"},
+      {"value_span": "36", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the earlier round where Takashi Kogure got the fastest lap?",
+    "value_column_pairs": [
+      {"value_span": "Takashi Kogure", "column": "Fastest Lap", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Home has a Round of r1, and an Opponent of dundee united?",
+    "value_column_pairs": [
+      {"value_span": "r1", "column": "Round", "match_reason": "category_to_category_column"},
+      {"value_span": "dundee united", "column": "Opponent", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Score of the Tournament played on Clay Surface on May 5, 1999?",
+    "value_column_pairs": [
+      {"value_span": "Clay", "column": "Surface", "match_reason": "category_to_category_column"},
+      {"value_span": "May 5, 1999", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  }
+]

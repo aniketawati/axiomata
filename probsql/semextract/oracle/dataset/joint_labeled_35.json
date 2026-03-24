@@ -1,0 +1,186 @@
+[
+  {
+    "question": "Name the D 41 \u221a with D 44 O of r 13",
+    "value_column_pairs": [
+      {"value_span": "r 13", "column": "D 44 O", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What year did the finish of 15 happen in?",
+    "value_column_pairs": [
+      {"value_span": "15", "column": "Finish", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the number of dances total number if the average is 22.3?",
+    "value_column_pairs": [
+      {"value_span": "22.3", "column": "Average", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which Opponent has a Result of l 14\u201310?",
+    "value_column_pairs": [
+      {"value_span": "l 14\u201310", "column": "Result", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Which week was the game on December 14, 1967?",
+    "value_column_pairs": [
+      {"value_span": "December 14, 1967", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What season was Norwich Union League promoted?",
+    "value_column_pairs": [
+      {"value_span": "Norwich Union League", "column": "Promoted", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "Which draft number did the new jersey devils get?",
+    "value_column_pairs": [
+      {"value_span": "new jersey devils", "column": "NHL team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Who was the Man of the Match when the opponent was Milton Keynes Lightning and the venue was Away?",
+    "value_column_pairs": [
+      {"value_span": "Milton Keynes Lightning", "column": "Opponent", "match_reason": "team_to_team_column"},
+      {"value_span": "Away", "column": "Venue", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "List all winning scores from 1982.",
+    "value_column_pairs": [
+      {"value_span": "1982", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many attendances have 9 as the week?",
+    "value_column_pairs": [
+      {"value_span": "9", "column": "Week", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who was the Player that spent the Year 2005 in Orlando?",
+    "value_column_pairs": [
+      {"value_span": "2005", "column": "Years in Orlando", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "column_name_near_value"]
+  },
+  {
+    "question": "What is the total number of rounds that had draft pick 97, duncan mccoll?",
+    "value_column_pairs": [
+      {"value_span": "97", "column": "Pick", "match_reason": "number_to_id_column"},
+      {"value_span": "duncan mccoll", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the frequency of the radio station with a call sign of WGNR-FM?",
+    "value_column_pairs": [
+      {"value_span": "WGNR-FM", "column": "Call sign", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the date of the game when attendance is more than 20,682?",
+    "value_column_pairs": [
+      {"value_span": "20,682", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the average grid for competitors who had more than 22 laps and time/retired of +17.276?",
+    "value_column_pairs": [
+      {"value_span": "+17.276", "column": "Time/Retired", "match_reason": "number_to_numeric_column"},
+      {"value_span": "22", "column": "Laps", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "what tims is wed may 28 and mon may 26 is 17' 58.34 125.960mph?",
+    "value_column_pairs": [
+      {"value_span": "17' 58.34 125.960mph", "column": "Mon 26 May", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Who is the Director of the Original title of The Crying Game?",
+    "value_column_pairs": [
+      {"value_span": "The Crying Game", "column": "Original title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the top grid that roger williamson lapped less than 7?",
+    "value_column_pairs": [
+      {"value_span": "roger williamson", "column": "Driver", "match_reason": "name_to_name_column"},
+      {"value_span": "7", "column": "Laps", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What the is the first city listed on the route that had 6.6+ passengers in 2011 and a distance of 1075km?",
+    "value_column_pairs": [
+      {"value_span": "6.6+", "column": "2011 Passengers (in millions)", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1075km", "column": "Distance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the nationality of the draft pick player who plays centre position and is going to Calgary Flames?",
+    "value_column_pairs": [
+      {"value_span": "centre", "column": "Position", "match_reason": "category_to_category_column"},
+      {"value_span": "Calgary Flames", "column": "NHL team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "Name the points for paulistano",
+    "value_column_pairs": [
+      {"value_span": "paulistano", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "On what date was the venue Away and the result was lost 6-4 (lost 9-7 on agg)?",
+    "value_column_pairs": [
+      {"value_span": "Away", "column": "Venue", "match_reason": "category_to_category_column"},
+      {"value_span": "lost 6-4 (lost 9-7 on agg)", "column": "Result", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the name of the boat that was built by Chatham and Laid down of 25 april 1887?",
+    "value_column_pairs": [
+      {"value_span": "Chatham", "column": "Builder", "match_reason": "text_to_matching_column"},
+      {"value_span": "25 april 1887", "column": "Laid down", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What character was portrayed by the same actor for 12 years on Neighbours?",
+    "value_column_pairs": [
+      {"value_span": "12 years", "column": "Duration", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Neighbours", "column": "Soap Opera", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What year did actor Richard Farnsworth get nominated for an award?",
+    "value_column_pairs": [
+      {"value_span": "Richard Farnsworth", "column": "Actor", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  }
+]

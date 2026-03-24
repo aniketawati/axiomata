@@ -1,0 +1,192 @@
+[
+  {
+    "question": "Which Score has a Visitor of buffalo sabres and a Record of 1-3?",
+    "value_column_pairs": [
+      {"value_span": "buffalo sabres", "column": "Visitor", "match_reason": "team_to_team_column"},
+      {"value_span": "1-3", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What position does the player with jersey number 22 play?",
+    "value_column_pairs": [
+      {"value_span": "22", "column": "Jersey Number(s)", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "What constructor has under 62 laps, a Time/Retired of gearbox, a Grid larger than 1, and pedro diniz driving?",
+    "value_column_pairs": [
+      {"value_span": "62", "column": "Laps", "match_reason": "number_to_numeric_column"},
+      {"value_span": "gearbox", "column": "Time/Retired", "match_reason": "category_to_category_column"},
+      {"value_span": "1", "column": "Grid", "match_reason": "number_to_numeric_column"},
+      {"value_span": "pedro diniz", "column": "Driver", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "what is the play when the company is national theatre of greece?",
+    "value_column_pairs": [
+      {"value_span": "national theatre of greece", "column": "company", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "what is the highest podiums when the stage wins is 91 and the points is less than 140?",
+    "value_column_pairs": [
+      {"value_span": "91", "column": "Stage wins", "match_reason": "number_to_numeric_column"},
+      {"value_span": "140", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "How many years did aivaras kvedarauskas juozas spelveris participate in the men's doubles?",
+    "value_column_pairs": [
+      {"value_span": "aivaras kvedarauskas juozas spelveris", "column": "Mens doubles", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "What away team scored 9.18 (72)?",
+    "value_column_pairs": [
+      {"value_span": "9.18 (72)", "column": "Away team score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "Name the number of points defending for 1075",
+    "value_column_pairs": [
+      {"value_span": "1075", "column": "New points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "context_implies"]
+  },
+  {
+    "question": "What was the position in 1997?",
+    "value_column_pairs": [
+      {"value_span": "1997", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "How many incumbents had a district of Arkansas 3?",
+    "value_column_pairs": [
+      {"value_span": "Arkansas 3", "column": "District", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who made the highest assist in the game that scored 79-88?",
+    "value_column_pairs": [
+      {"value_span": "79-88", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the number of successes for rockets that have more than 3 launches, were based in Russia, are type soyuz and a rocket type of soyuz-u?",
+    "value_column_pairs": [
+      {"value_span": "3", "column": "Launches", "match_reason": "number_to_numeric_column"},
+      {"value_span": "Russia", "column": "Country", "match_reason": "place_to_location_column"},
+      {"value_span": "soyuz", "column": "Type", "match_reason": "category_to_category_column"},
+      {"value_span": "soyuz-u", "column": "Rocket", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "what is the sum of appearance when goals is more than 0?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Goals", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who is the player with a t5 place and a 75-70=145 score?",
+    "value_column_pairs": [
+      {"value_span": "t5", "column": "Place", "match_reason": "category_to_category_column"},
+      {"value_span": "75-70=145", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Who drove the grid 10 car?",
+    "value_column_pairs": [
+      {"value_span": "10", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Game smaller than 34, and a December smaller than 14, and a Score of 10 - 6 has what opponent?",
+    "value_column_pairs": [
+      {"value_span": "34", "column": "Game", "match_reason": "number_to_id_column"},
+      {"value_span": "14", "column": "December", "match_reason": "number_to_numeric_column"},
+      {"value_span": "10 - 6", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Which episode had 2.75 million viewers in the U.S.?",
+    "value_column_pairs": [
+      {"value_span": "2.75", "column": "U.S. viewers (million)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What 1st leg has Alense Vivaldi (Trentino) as Agg.?",
+    "value_column_pairs": [
+      {"value_span": "Alense Vivaldi (Trentino)", "column": "Agg.", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many incoming managers were there after Roy Hodgson left the position for the Fulham team?",
+    "value_column_pairs": [
+      {"value_span": "Roy Hodgson", "column": "Outgoing manager", "match_reason": "name_to_name_column"},
+      {"value_span": "Fulham", "column": "Team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the highest number of bronzes for teams ranked number 7 with more than 0 silver?",
+    "value_column_pairs": [
+      {"value_span": "0", "column": "Silver", "match_reason": "number_to_numeric_column"},
+      {"value_span": "7", "column": "Rank", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Where was the epicenter of the quake on December 1, 2012?",
+    "value_column_pairs": [
+      {"value_span": "December 1, 2012", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What was the value in 1995 for A in 2000 at the Indian Wells tournament?",
+    "value_column_pairs": [
+      {"value_span": "A", "column": "2000", "match_reason": "category_to_category_column"},
+      {"value_span": "Indian Wells", "column": "Tournament", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "Which Live births have a Natural change (per 1000) of 12.0?",
+    "value_column_pairs": [
+      {"value_span": "12.0", "column": "Natural change (per 1000)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who is the Jockey that has Nick Zito as Trainer and Odds of 34-1?",
+    "value_column_pairs": [
+      {"value_span": "Nick Zito", "column": "Trainer", "match_reason": "name_to_name_column"},
+      {"value_span": "34-1", "column": "Odds", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the Result of the game with 72,949 in attendance?",
+    "value_column_pairs": [
+      {"value_span": "72,949", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  }
+]

@@ -700,7 +700,8 @@ class ProbabilisticResolver:
         self.feature_hmm = None
         self.span_detector = None
         self.condition_estimator = None
-        self.bayesian = None  # fully Bayesian components
+        self.bayesian = None
+        self.joint_resolver = None  # Joint (value, column) resolver
         self.markov_resolver = MarkovResolver()
 
     def load_knowledge(self, knowledge_dir=None):
@@ -718,6 +719,10 @@ class ProbabilisticResolver:
         from probsql.semextract.bayesian_probprog import FullBayesianProbProg
         self.bayesian = FullBayesianProbProg()
         self.bayesian.load_knowledge(kdir)
+        # Load joint (value, column) resolver
+        from probsql.semextract.joint_resolver import JointResolver
+        self.joint_resolver = JointResolver()
+        self.joint_resolver.load_knowledge(kdir)
         # Try to load feature-based HMM (fallback)
         from probsql.semextract.feature_hmm import FeatureHMM
         fhmm = FeatureHMM()
@@ -780,58 +785,57 @@ class ProbabilisticResolver:
         else:
             select_col = identify_select(token_roles, headers, question)
 
-        # Step 4-8: Resolve each value span to a (column, operator, value) condition
+        # Step 4-8: JOINT value-column resolution
+        # Instead of sequential (find value → resolve column),
+        # score (value, column) pairs together using match_reason probabilities
         conditions = []
-        used_columns = set()
-        if select_col:
-            used_columns.add(select_col)
-
-        for span in value_spans:
-            value = span.text
-            # Classify value type — BAYESIAN
-            if self.bayesian and self.bayesian.tables_loaded and value:
-                v_type, vt_conf = self.bayesian.classify_value_type(value)
-            else:
-                v_type = classify_value_type(value) if value else "unknown"
-
-            # Extract trigger from tokens near this span
-            trigger_tokens = [t.token.lower() for t in token_roles if t.role == "TRIGGER"]
-            trigger_phrase = " ".join(trigger_tokens) if trigger_tokens else None
-
-            # Resolve column (exclude SELECT and already-used columns)
-            resolved = self.markov_resolver.resolve(
-                value=value,
-                value_type=v_type,
-                headers=headers,
-                question=question,
+        if self.joint_resolver:
+            joint_results = self.joint_resolver.resolve(
+                question, headers,
+                n_conditions=max_spans,
                 select_col=select_col,
-                trigger_phrase=trigger_phrase,
             )
-
-            # Skip if best column was already used (avoid duplicate conditions)
-            best_col = resolved.column
-            if best_col in used_columns:
-                # Try second-best
-                chain = resolved.reasoning_chain
-                if chain:
-                    last_probs = chain[-1][1]
-                    sorted_cols = sorted(last_probs.items(), key=lambda x: -x[1])
-                    for col, _ in sorted_cols:
-                        if col not in used_columns:
-                            best_col = col
-                            break
-
-            used_columns.add(best_col)
-            operator, op_confidence = determine_operator(question, q_type, v_type)
-
-            conditions.append({
-                "column": best_col,
-                "value": value,
-                "operator": operator,
-                "confidence": resolved.confidence * op_confidence,
-                "value_type": v_type,
-                "reasoning_chain": resolved.reasoning_chain,
-            })
+            from probsql.semextract.joint_resolver import classify_value_for_matching
+            for jr in joint_results:
+                v_type = classify_value_for_matching(jr["value"]) if jr["value"] else "unknown"
+                operator, op_confidence = determine_operator(question, q_type, v_type)
+                conditions.append({
+                    "column": jr["column"],
+                    "value": jr["value"],
+                    "operator": operator,
+                    "confidence": jr["score"] * op_confidence,
+                    "value_type": v_type,
+                    "match_reason": jr.get("match_reason", "unknown"),
+                })
+        else:
+            # Fallback: sequential span → resolver
+            used_columns = set()
+            if select_col:
+                used_columns.add(select_col)
+            for span in value_spans:
+                value = span.text
+                v_type = classify_value_type(value) if value else "unknown"
+                trigger_tokens = [t.token.lower() for t in token_roles if t.role == "TRIGGER"]
+                trigger_phrase = " ".join(trigger_tokens) if trigger_tokens else None
+                resolved = self.markov_resolver.resolve(
+                    value=value, value_type=v_type, headers=headers,
+                    question=question, select_col=select_col, trigger_phrase=trigger_phrase,
+                )
+                best_col = resolved.column
+                if best_col in used_columns:
+                    chain = resolved.reasoning_chain
+                    if chain:
+                        last_probs = chain[-1][1]
+                        for col, _ in sorted(last_probs.items(), key=lambda x: -x[1]):
+                            if col not in used_columns:
+                                best_col = col
+                                break
+                used_columns.add(best_col)
+                operator, op_confidence = determine_operator(question, q_type, v_type)
+                conditions.append({
+                    "column": best_col, "value": value, "operator": operator,
+                    "confidence": resolved.confidence * op_confidence, "value_type": v_type,
+                })
 
         if not conditions:
             return {
@@ -855,7 +859,7 @@ class ProbabilisticResolver:
             "value_type": primary["value_type"],
             "q_type": q_type,
             "conditions": conditions,
-            "reasoning_chain": primary["reasoning_chain"],
+            "reasoning_chain": primary.get("reasoning_chain", []),
             "token_roles": [(t.token, t.role) for t in token_roles],
         }
 

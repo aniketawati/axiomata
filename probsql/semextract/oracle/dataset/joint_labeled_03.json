@@ -1,0 +1,190 @@
+[
+  {
+    "question": "What's the title for the release date of 1953-01-31 in the MM series, no reissue, and a director of I. Freleng?",
+    "value_column_pairs": [
+      {"value_span": "1953-01-31", "column": "Release date", "match_reason": "year_to_year_column"},
+      {"value_span": "MM", "column": "Series", "match_reason": "category_to_category_column"},
+      {"value_span": "no", "column": "reissue?", "match_reason": "category_to_category_column"},
+      {"value_span": "I. Freleng", "column": "Director", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which series airs Saturday on Channel 5?",
+    "value_column_pairs": [
+      {"value_span": "channel 5", "column": "Saturday", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "column_name_near_value"]
+  },
+  {
+    "question": "How many years was the building with 24 floors the tallest?",
+    "value_column_pairs": [
+      {"value_span": "24", "column": "Floors", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What year was Zona Sur nominated?",
+    "value_column_pairs": [
+      {"value_span": "Zona Sur", "column": "Original title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What was the average finish the year Bodine finished 3rd?",
+    "value_column_pairs": [
+      {"value_span": "3rd", "column": "Position", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the share of the 18-49 (Rating/Share) of 0.8/3?",
+    "value_column_pairs": [
+      {"value_span": "0.8/3", "column": "18\u201349 (Rating/Share)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who publishes Wolverine?",
+    "value_column_pairs": [
+      {"value_span": "Wolverine", "column": "Character(s)", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the lowest Kerry#, when Others# is \"106\", and when Bush# is less than 3,188?",
+    "value_column_pairs": [
+      {"value_span": "106", "column": "Others#", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3,188", "column": "Bush#", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the lowest Draws, when Alianza Goals is less than 317, when U Goals is less than 3, and when Alianza Wins is less than 2?",
+    "value_column_pairs": [
+      {"value_span": "317", "column": "Alianza goals", "match_reason": "number_to_numeric_column"},
+      {"value_span": "3", "column": "U goals", "match_reason": "number_to_numeric_column"},
+      {"value_span": "2", "column": "Alianza wins", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "In 2011, which city is listed first along the route that had 7.6+ million passengers?",
+    "value_column_pairs": [
+      {"value_span": "7.6+", "column": "2011 Passengers (in millions)", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "column_name_near_value"]
+  },
+  {
+    "question": "Where did Ra'fat Ali play on August 17, 1999?",
+    "value_column_pairs": [
+      {"value_span": "August 17, 1999", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is Studio, when Title is \"Do Not Disturb\"?",
+    "value_column_pairs": [
+      {"value_span": "Do Not Disturb", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What audition city has a Callback Date of october 5\u20136, 2007?",
+    "value_column_pairs": [
+      {"value_span": "october 5\u20136, 2007", "column": "Callback Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who manufactured the motorcycle that did 24 laps and 9 grids?",
+    "value_column_pairs": [
+      {"value_span": "24", "column": "Laps", "match_reason": "number_to_numeric_column"},
+      {"value_span": "9", "column": "Grid", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the largest vote result if loss/gain is -0.5%?",
+    "value_column_pairs": [
+      {"value_span": "-0.5%", "column": "Loss/gain", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Where did Geelong play as the away team?",
+    "value_column_pairs": [
+      {"value_span": "Geelong", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "column_name_near_value"]
+  },
+  {
+    "question": "What is the number of losses when the goal difference was -8, and position is smaller than 10?",
+    "value_column_pairs": [
+      {"value_span": "-8", "column": "Goal Difference", "match_reason": "number_to_numeric_column"},
+      {"value_span": "10", "column": "Position", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the name for the 2008 club of Azs olsztyn?",
+    "value_column_pairs": [
+      {"value_span": "Azs olsztyn", "column": "2008 club", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "How many laps was qualifier of 138.212?",
+    "value_column_pairs": [
+      {"value_span": "138.212", "column": "Qual", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the college/junior/club team name of player Mats Lindgren?",
+    "value_column_pairs": [
+      {"value_span": "Mats Lindgren", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Who was the away team in a tie no larger than 16 with forest green rovers at home?",
+    "value_column_pairs": [
+      {"value_span": "16", "column": "Tie no", "match_reason": "number_to_id_column"},
+      {"value_span": "forest green rovers", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "verb_phrase_links"]
+  },
+  {
+    "question": "How much Loss has a Gain smaller than 1571, and a Long smaller than 47, and an Avg/G of 36.4?",
+    "value_column_pairs": [
+      {"value_span": "1571", "column": "Gain", "match_reason": "number_to_numeric_column"},
+      {"value_span": "47", "column": "Long", "match_reason": "number_to_numeric_column"},
+      {"value_span": "36.4", "column": "Avg/G", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "What is the Netflix number having a series episode of 1-01?",
+    "value_column_pairs": [
+      {"value_span": "1-01", "column": "Series Ep.", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which Competition has a Venue of estadio alfonso lastras, san luis potos\u00ed, mexico, and a Goal larger than 15?",
+    "value_column_pairs": [
+      {"value_span": "estadio alfonso lastras, san luis potos\u00ed, mexico", "column": "Venue", "match_reason": "place_to_location_column"},
+      {"value_span": "15", "column": "Goal", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "what is the highest draw when the place is less than 3 and the percentage is 30.71%?",
+    "value_column_pairs": [
+      {"value_span": "3", "column": "Place", "match_reason": "number_to_id_column"},
+      {"value_span": "30.71%", "column": "Percentage", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]

@@ -1,0 +1,379 @@
+[
+  {
+    "question": "Name the typed for formed from 6-pul trailer third in res unit",
+    "value_column_pairs": [
+      {
+        "value_span": "6-pul trailer third in res unit",
+        "column": "Formed from",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "Which opponent has a score of 84-88 (ot)?",
+    "value_column_pairs": [
+      {
+        "value_span": "84-88 (ot)",
+        "column": "Score",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "When did the match take place that had a home team score of 7.9 (51)?",
+    "value_column_pairs": [
+      {
+        "value_span": "7.9 (51)",
+        "column": "Home team score",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is Nation, when Rank is greater than 2, when Total is greater than 1, and when Bronze is less than 3?",
+    "value_column_pairs": [
+      {
+        "value_span": "2",
+        "column": "Rank",
+        "match_reason": "number_to_id_column"
+      },
+      {
+        "value_span": "1",
+        "column": "Total",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "3",
+        "column": "Bronze",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What lead has the third David Nedohin?",
+    "value_column_pairs": [
+      {
+        "value_span": "David Nedohin",
+        "column": "Third",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "How many reports were the for the cleveland burke lakefront airport circut?",
+    "value_column_pairs": [
+      {
+        "value_span": "cleveland burke lakefront airport",
+        "column": "Circuit",
+        "match_reason": "place_to_location_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Which captain has howard wilkinson as the manager?",
+    "value_column_pairs": [
+      {
+        "value_span": "howard wilkinson",
+        "column": "Manager",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "When Interpol is in 6th, who is in 7th?",
+    "value_column_pairs": [
+      {
+        "value_span": "Interpol",
+        "column": "Sixth",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the Nation when there is a total less than 27, gold is less than 1, and bronze is more than 1?",
+    "value_column_pairs": [
+      {
+        "value_span": "27",
+        "column": "Total",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "1",
+        "column": "Gold",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "1",
+        "column": "Bronze",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "position_in_question"
+    ]
+  },
+  {
+    "question": "Which County has a Rank larger than 8, and a Player of joe mckenna?",
+    "value_column_pairs": [
+      {
+        "value_span": "8",
+        "column": "Rank",
+        "match_reason": "number_to_id_column"
+      },
+      {
+        "value_span": "joe mckenna",
+        "column": "Player",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "How many deciles have Years of 9–13?",
+    "value_column_pairs": [
+      {
+        "value_span": "9–13",
+        "column": "Years",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the number of wins with a 0 F.L., 0 poles, a position of 7th, and 35 points?",
+    "value_column_pairs": [
+      {
+        "value_span": "0",
+        "column": "F.L.",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "0",
+        "column": "Poles",
+        "match_reason": "number_to_numeric_column"
+      },
+      {
+        "value_span": "7th",
+        "column": "Position",
+        "match_reason": "category_to_category_column"
+      },
+      {
+        "value_span": "35",
+        "column": "Points",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value",
+      "position_in_question"
+    ]
+  },
+  {
+    "question": "What was the result associated with the cinemaa awards, and gabbar singh film?",
+    "value_column_pairs": [
+      {
+        "value_span": "cinemaa awards",
+        "column": "Award",
+        "match_reason": "text_to_matching_column"
+      },
+      {
+        "value_span": "gabbar singh",
+        "column": "Film",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Which publisher has release year of 2000 and an original dreamcast platform?",
+    "value_column_pairs": [
+      {
+        "value_span": "2000",
+        "column": "Year of release",
+        "match_reason": "year_to_year_column"
+      },
+      {
+        "value_span": "dreamcast",
+        "column": "Original platforms",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What category was in 1964?",
+    "value_column_pairs": [
+      {
+        "value_span": "1964",
+        "column": "Year",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What was the date when the away team was carlisle united?",
+    "value_column_pairs": [
+      {
+        "value_span": "carlisle united",
+        "column": "Away team",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What did the away team score when playing Footscray?",
+    "value_column_pairs": [
+      {
+        "value_span": "Footscray",
+        "column": "Home team",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What was the highest SaffirSimpson with an NHC advisory of 18?",
+    "value_column_pairs": [
+      {
+        "value_span": "18",
+        "column": "NHC Advisory Number",
+        "match_reason": "number_to_id_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "How many winning drivers were there in the race that had a fastest lap time of 56.920?",
+    "value_column_pairs": [
+      {
+        "value_span": "56.920",
+        "column": "Fastest Lap",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the word count that is named omega dot?",
+    "value_column_pairs": [
+      {
+        "value_span": "omega dot",
+        "column": "Name",
+        "match_reason": "text_to_matching_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "Who is the s color commentator when the pregame host is jon sciambi?",
+    "value_column_pairs": [
+      {
+        "value_span": "jon sciambi",
+        "column": "Pregame hosts",
+        "match_reason": "name_to_name_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the highest Pick, when Position is \"G/F\"?",
+    "value_column_pairs": [
+      {
+        "value_span": "G/F",
+        "column": "Position",
+        "match_reason": "category_to_category_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What was the name of the competition that took place on may 31, 2008?",
+    "value_column_pairs": [
+      {
+        "value_span": "may 31, 2008",
+        "column": "Date",
+        "match_reason": "year_to_year_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "schema_compatibility"
+    ]
+  },
+  {
+    "question": "What was the date of the game that had a score of 3 – 1?",
+    "value_column_pairs": [
+      {
+        "value_span": "3 – 1",
+        "column": "Score",
+        "match_reason": "number_to_numeric_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  },
+  {
+    "question": "What is the highest position of the Bangor City team?",
+    "value_column_pairs": [
+      {
+        "value_span": "Bangor City",
+        "column": "Team",
+        "match_reason": "team_to_team_column"
+      }
+    ],
+    "column_disambiguation_features": [
+      "column_name_near_value"
+    ]
+  }
+]

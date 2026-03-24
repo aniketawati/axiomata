@@ -1,0 +1,189 @@
+[
+  {
+    "question": "Which Original air date has a Season # smaller than 21, and a Title of \"palimpsest\"?",
+    "value_column_pairs": [
+      {"value_span": "21", "column": "Season #", "match_reason": "number_to_id_column"},
+      {"value_span": "\"palimpsest\"", "column": "Title", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the route/via when the destination is listed as Madurai?",
+    "value_column_pairs": [
+      {"value_span": "Madurai", "column": "Destination", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Who has a former name of nordpr\u00f8ven?",
+    "value_column_pairs": [
+      {"value_span": "nordpr\u00f8ven", "column": "Former Name", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the venue for the friendly competition and score of 4-0?",
+    "value_column_pairs": [
+      {"value_span": "friendly", "column": "Competition", "match_reason": "category_to_category_column"},
+      {"value_span": "4-0", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which Tournament has a Margin of victory of 7 strokes",
+    "value_column_pairs": [
+      {"value_span": "7 strokes", "column": "Margin of victory", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the winning score when there were 9 strokes advantage?",
+    "value_column_pairs": [
+      {"value_span": "9 strokes", "column": "Margin of victory", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the outcome on a hard surface, when the score in the final was 4\u20136, 3\u20136?",
+    "value_column_pairs": [
+      {"value_span": "hard", "column": "Surface", "match_reason": "category_to_category_column"},
+      {"value_span": "4\u20136, 3\u20136", "column": "Score in the final", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "In what venue was the hosted away team Essendon?",
+    "value_column_pairs": [
+      {"value_span": "Essendon", "column": "Away team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "verb_phrase_links"]
+  },
+  {
+    "question": "What is the percent of capital for the shareholder that has a s B share of 8256534? ",
+    "value_column_pairs": [
+      {"value_span": "8256534", "column": "s B share", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the total number of losses for a draw of 7, and 1 points less than 33?",
+    "value_column_pairs": [
+      {"value_span": "7", "column": "Drawn", "match_reason": "number_to_numeric_column"},
+      {"value_span": "33", "column": "Points 1", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "Name the least number of episodes for the panelists of reggie yates and kelly osbourne",
+    "value_column_pairs": [
+      {"value_span": "reggie yates and kelly osbourne", "column": "Who knows the most about the guest host? Panelists", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the score when the tie is 9?",
+    "value_column_pairs": [
+      {"value_span": "9", "column": "Tie no", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What is the Location of the Old Bedians Pitch?",
+    "value_column_pairs": [
+      {"value_span": "Old Bedians", "column": "Pitch", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the top first place prize in 1997?",
+    "value_column_pairs": [
+      {"value_span": "1997", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What is the least number of penalties he got when his point total was over 1419 in more than 98 games?",
+    "value_column_pairs": [
+      {"value_span": "1419", "column": "Points total", "match_reason": "number_to_numeric_column"},
+      {"value_span": "98", "column": "Played", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "Where was the tournament dated nov 3, 2002?",
+    "value_column_pairs": [
+      {"value_span": "nov 3, 2002", "column": "Date", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["verb_phrase_links", "schema_compatibility"]
+  },
+  {
+    "question": "What is the sum of bronzes having silvers over 5 and golds under 20?",
+    "value_column_pairs": [
+      {"value_span": "5", "column": "Silver", "match_reason": "number_to_numeric_column"},
+      {"value_span": "20", "column": "Gold", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Name the record for score of  l 93\u2013104 (ot)",
+    "value_column_pairs": [
+      {"value_span": "l 93\u2013104 (ot)", "column": "Score", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "Where is the longest arch with a length in meters of 63?",
+    "value_column_pairs": [
+      {"value_span": "63", "column": "Length ( m )", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "What was the results of the 71st Academy Awards show?",
+    "value_column_pairs": [
+      {"value_span": "71st Academy Awards", "column": "Awards show", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "What was the evening gown score when the swimsuit was 9.61?",
+    "value_column_pairs": [
+      {"value_span": "9.61", "column": "Swimsuit", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value"]
+  },
+  {
+    "question": "WHAT IS THE TO PAR WITH A FINISH OF T11, FOR DAVID GRAHAM?",
+    "value_column_pairs": [
+      {"value_span": "T11", "column": "Finish", "match_reason": "category_to_category_column"},
+      {"value_span": "DAVID GRAHAM", "column": "Player", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Who won in 1979 with +8 to par?",
+    "value_column_pairs": [
+      {"value_span": "+8", "column": "To par", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1979", "column": "Year(s) won", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "context_implies"]
+  },
+  {
+    "question": "What was the average number of attendance for the game on November 29, 1981 played after week 13?",
+    "value_column_pairs": [
+      {"value_span": "November 29, 1981", "column": "Date", "match_reason": "year_to_year_column"},
+      {"value_span": "13", "column": "Week", "match_reason": "number_to_id_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the time/retired of the honda manufacturer with a grid less than 26, 18 laps, and joan oliv\u00e9 as the rider?",
+    "value_column_pairs": [
+      {"value_span": "honda", "column": "Manufacturer", "match_reason": "text_to_matching_column"},
+      {"value_span": "26", "column": "Grid", "match_reason": "number_to_numeric_column"},
+      {"value_span": "18", "column": "Laps", "match_reason": "number_to_numeric_column"},
+      {"value_span": "joan oliv\u00e9", "column": "Rider", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]

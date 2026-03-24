@@ -1,0 +1,190 @@
+[
+  {
+    "question": "Name the starter for position being left end",
+    "value_column_pairs": [
+      {"value_span": "left end", "column": "Position", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which title has a year prior to 2008 and xbox 360 as the platform?",
+    "value_column_pairs": [
+      {"value_span": "2008", "column": "Year", "match_reason": "year_to_year_column"},
+      {"value_span": "xbox 360", "column": "Platform", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What result is found for the round that has f?",
+    "value_column_pairs": [
+      {"value_span": "f", "column": "Round", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the highest goals entry with drawn larger than 6 and goals against 85?",
+    "value_column_pairs": [
+      {"value_span": "85", "column": "Goals Against", "match_reason": "number_to_numeric_column"},
+      {"value_span": "6", "column": "Drawn", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Which Medal had a Name of f\u00e9lix s\u00e1nchez, and a Games of 2012 london?",
+    "value_column_pairs": [
+      {"value_span": "f\u00e9lix s\u00e1nchez", "column": "Name", "match_reason": "name_to_name_column"},
+      {"value_span": "2012 london", "column": "Games", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "Name the amount of Map Key which has a Pop (2004) smaller than 433,819, and a Capital City of hajjah, and an Area km\u00b2 smaller than 9,376? Question 1",
+    "value_column_pairs": [
+      {"value_span": "433,819", "column": "Pop (2004)", "match_reason": "number_to_numeric_column"},
+      {"value_span": "hajjah", "column": "Capital City", "match_reason": "place_to_location_column"},
+      {"value_span": "9,376", "column": "Area km\u00b2", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What week number was the kickoff time cbs 1:00pm, with 60,473 people in attendance?",
+    "value_column_pairs": [
+      {"value_span": "cbs 1:00pm", "column": "Kickoff Time", "match_reason": "text_to_matching_column"},
+      {"value_span": "60,473", "column": "Attendance", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What are the number of floors for the building of td building redevelopment (office)?",
+    "value_column_pairs": [
+      {"value_span": "td building redevelopment (office)", "column": "Building", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Which team has 7757 as the average?",
+    "value_column_pairs": [
+      {"value_span": "7757", "column": "Average", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the highest Game, when Opponents is less than 80, and when Record is \"1-0\"?",
+    "value_column_pairs": [
+      {"value_span": "80", "column": "Opponents", "match_reason": "number_to_numeric_column"},
+      {"value_span": "1-0", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the Place of the Player with a To par of \u20131?",
+    "value_column_pairs": [
+      {"value_span": "\u20131", "column": "To par", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the Cook PVI for the location that has a representative of Mike Thompson?",
+    "value_column_pairs": [
+      {"value_span": "Mike Thompson", "column": "Representative", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the location and attendance for the game where b. benjamin (10) had the high rebounds?",
+    "value_column_pairs": [
+      {"value_span": "b. benjamin (10)", "column": "High rebounds", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Avg/G smaller than 225.5, and a GP-GS of 8\u20130 has what name?",
+    "value_column_pairs": [
+      {"value_span": "225.5", "column": "Avg/G", "match_reason": "number_to_numeric_column"},
+      {"value_span": "8\u20130", "column": "GP-GS", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "what is the number of opponents where the location is syracuse, ny?",
+    "value_column_pairs": [
+      {"value_span": "syracuse, ny", "column": "Location", "match_reason": "place_to_location_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the score of the game when the record was 39\u201321\u20134?",
+    "value_column_pairs": [
+      {"value_span": "39\u201321\u20134", "column": "Record", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "Where were the Mediterranean games after 2005?",
+    "value_column_pairs": [
+      {"value_span": "Mediterranean games", "column": "Competition", "match_reason": "category_to_category_column"},
+      {"value_span": "2005", "column": "Year", "match_reason": "year_to_year_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "What did the away team score when playing North Melbourne?",
+    "value_column_pairs": [
+      {"value_span": "North Melbourne", "column": "Home team", "match_reason": "team_to_team_column"}
+    ],
+    "column_disambiguation_features": ["context_implies", "schema_compatibility"]
+  },
+  {
+    "question": "What is the score of the match with a 3-2 result?",
+    "value_column_pairs": [
+      {"value_span": "3-2", "column": "Result", "match_reason": "text_to_matching_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What Career has a Parallel of \u2013, a Combined of \u2013, and a Giant Slalom of 5?",
+    "value_column_pairs": [
+      {"value_span": "\u2013", "column": "Parallel", "match_reason": "text_to_matching_column"},
+      {"value_span": "\u2013", "column": "Combined", "match_reason": "text_to_matching_column"},
+      {"value_span": "5", "column": "Giant Slalom", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "position_in_question"]
+  },
+  {
+    "question": "Who was the opponent when the fight had a time of 2:01?",
+    "value_column_pairs": [
+      {"value_span": "2:01", "column": "Time", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What is the number of the round in which Ron Hansen was drafted and the overall is greater than 332?",
+    "value_column_pairs": [
+      {"value_span": "Ron Hansen", "column": "Name", "match_reason": "name_to_name_column"},
+      {"value_span": "332", "column": "Overall", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  },
+  {
+    "question": "What is the highest Rank, when Director is \"Henry Hathaway\"?",
+    "value_column_pairs": [
+      {"value_span": "Henry Hathaway", "column": "Director", "match_reason": "name_to_name_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "schema_compatibility"]
+  },
+  {
+    "question": "What was the highest guard picked?",
+    "value_column_pairs": [
+      {"value_span": "guard", "column": "Position", "match_reason": "category_to_category_column"}
+    ],
+    "column_disambiguation_features": ["schema_compatibility", "value_type_excludes"]
+  },
+  {
+    "question": "Which Wins is the highest one that has a Class of 500cc, and Points smaller than 6?",
+    "value_column_pairs": [
+      {"value_span": "500cc", "column": "Class", "match_reason": "category_to_category_column"},
+      {"value_span": "6", "column": "Points", "match_reason": "number_to_numeric_column"}
+    ],
+    "column_disambiguation_features": ["column_name_near_value", "value_type_excludes"]
+  }
+]
